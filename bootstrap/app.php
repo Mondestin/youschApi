@@ -11,8 +11,16 @@ return Application::configure(basePath: dirname(__DIR__))
         health: '/up',
     )
     ->withMiddleware(function (Middleware $middleware): void {
-        //
+        $middleware->alias([
+            'academic.api.rate.limit' => \App\Http\Middleware\AcademicApiRateLimit::class,
+        ]);
     })
     ->withExceptions(function (Exceptions $exceptions): void {
         //
-    })->create();
+    })
+    ->withProviders([
+        App\Providers\ApiRouteServiceProvider::class,
+        App\Providers\AcademicRouteServiceProvider::class,
+        App\Providers\RepositoryServiceProvider::class,
+    ])
+    ->create();
