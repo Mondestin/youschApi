@@ -73,7 +73,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"status":"healthy","timestamp":"2025-08-24T01:14:56.291904Z","version":"1.0.0"}'
+        content: '{"status":"healthy","timestamp":"2025-08-24T02:10:22.966119Z","version":"1.0.0"}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -1327,7 +1327,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"success":true,"data":{"total_students":8,"total_subjects":4,"total_grades":10,"is_current":false,"days_remaining":247.0520423736111},"message":"Term statistics retrieved successfully"}'
+        content: '{"success":true,"data":{"total_students":8,"total_subjects":4,"total_grades":10,"is_current":false,"days_remaining":247.09054584700232},"message":"Term statistics retrieved successfully"}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -3679,11 +3679,8 @@ endpoints:
     fileParameters: []
     responses:
       -
-        status: 500
-        content: |-
-          {
-              "message": "Server Error"
-          }
+        status: 200
+        content: '{"success":true,"data":{"total_students":2,"total_grades_recorded":2,"average_score":"75.500000","highest_score":"80.00","lowest_score":"71.00","days_until_exam":74.90945025766203,"is_past":false},"message":"Exam statistics retrieved successfully"}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json

@@ -21,7 +21,9 @@ return new class extends Migration
             $table->boolean('is_primary')->default(false);
             $table->boolean('is_active')->default(true);
             $table->foreignId('assigned_by')->nullable()->constrained('users')->onDelete('set null');
-            $table->timestamp('assigned_at')->nullable();
+            $table->date('assignment_date');
+            $table->date('end_date')->nullable();
+            $table->integer('weekly_hours')->default(0);
             $table->text('notes')->nullable();
             $table->foreignId('school_id')->constrained()->onDelete('cascade');
             $table->timestamps();

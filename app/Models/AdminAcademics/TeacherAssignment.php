@@ -24,7 +24,9 @@ class TeacherAssignment extends Model
         'is_primary',
         'is_active',
         'assigned_by',
-        'assigned_at',
+        'assignment_date',
+        'end_date',
+        'weekly_hours',
         'notes',
         'school_id',
     ];
@@ -32,7 +34,9 @@ class TeacherAssignment extends Model
     protected $casts = [
         'is_primary' => 'boolean',
         'is_active' => 'boolean',
-        'assigned_at' => 'datetime',
+        'assignment_date' => 'date',
+        'end_date' => 'date',
+        'weekly_hours' => 'integer',
     ];
 
     const ROLE_TEACHER = 'teacher';

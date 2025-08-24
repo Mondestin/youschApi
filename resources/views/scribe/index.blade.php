@@ -702,7 +702,7 @@ access-control-allow-origin: *
 
 <code class="language-json" style="max-height: 300px;">{
     &quot;status&quot;: &quot;healthy&quot;,
-    &quot;timestamp&quot;: &quot;2025-08-24T01:14:56.291904Z&quot;,
+    &quot;timestamp&quot;: &quot;2025-08-24T02:10:22.966119Z&quot;,
     &quot;version&quot;: &quot;1.0.0&quot;
 }</code>
  </pre>
@@ -6468,7 +6468,7 @@ access-control-allow-origin: *
         &quot;total_subjects&quot;: 4,
         &quot;total_grades&quot;: 10,
         &quot;is_current&quot;: false,
-        &quot;days_remaining&quot;: 247.0520423736111
+        &quot;days_remaining&quot;: 247.09054584700232
     },
     &quot;message&quot;: &quot;Term statistics retrieved successfully&quot;
 }</code>
@@ -20085,7 +20085,7 @@ fetch(url, {
 
 <span id="example-responses-GETapi-admin-academics-exams--exam_id--statistics">
             <blockquote>
-            <p>Example response (500):</p>
+            <p>Example response (200):</p>
         </blockquote>
                 <details class="annotation">
             <summary style="cursor: pointer;">
@@ -20097,7 +20097,17 @@ access-control-allow-origin: *
  </code></pre></details>         <pre>
 
 <code class="language-json" style="max-height: 300px;">{
-    &quot;message&quot;: &quot;Server Error&quot;
+    &quot;success&quot;: true,
+    &quot;data&quot;: {
+        &quot;total_students&quot;: 2,
+        &quot;total_grades_recorded&quot;: 2,
+        &quot;average_score&quot;: &quot;75.500000&quot;,
+        &quot;highest_score&quot;: &quot;80.00&quot;,
+        &quot;lowest_score&quot;: &quot;71.00&quot;,
+        &quot;days_until_exam&quot;: 74.90945025766203,
+        &quot;is_past&quot;: false
+    },
+    &quot;message&quot;: &quot;Exam statistics retrieved successfully&quot;
 }</code>
  </pre>
     </span>
