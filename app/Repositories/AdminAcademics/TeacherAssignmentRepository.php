@@ -86,7 +86,7 @@ class TeacherAssignmentRepository extends BaseRepository
      */
     public function getAssignmentsByDateRange(string $startDate, string $endDate): Collection
     {
-        return $this->model->whereBetween('assigned_at', [$startDate, $endDate])->get();
+        return $this->model->whereBetween('assignment_date', [$startDate, $endDate])->get();
     }
 
     /**
@@ -95,7 +95,7 @@ class TeacherAssignmentRepository extends BaseRepository
     public function getTodayAssignments(): Collection
     {
         $today = Carbon::today()->toDateString();
-        return $this->model->whereDate('assigned_at', $today)->get();
+        return $this->model->whereDate('assignment_date', $today)->get();
     }
 
     /**
@@ -105,7 +105,7 @@ class TeacherAssignmentRepository extends BaseRepository
     {
         $startOfWeek = Carbon::now()->startOfWeek()->toDateString();
         $endOfWeek = Carbon::now()->endOfWeek()->toDateString();
-        return $this->model->whereBetween('assigned_at', [$startOfWeek, $endOfWeek])->get();
+        return $this->model->whereBetween('assignment_date', [$startOfWeek, $endOfWeek])->get();
     }
 
     /**
@@ -115,7 +115,7 @@ class TeacherAssignmentRepository extends BaseRepository
     {
         $startOfMonth = Carbon::now()->startOfMonth()->toDateString();
         $endOfMonth = Carbon::now()->endOfMonth()->toDateString();
-        return $this->model->whereBetween('assigned_at', [$startOfMonth, $endOfMonth])->get();
+        return $this->model->whereBetween('assignment_date', [$startOfMonth, $endOfMonth])->get();
     }
 
     /**
