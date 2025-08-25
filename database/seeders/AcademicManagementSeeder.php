@@ -631,7 +631,7 @@ class AcademicManagementSeeder extends Seeder
                 'is_primary' => true,
                 'is_active' => true,
                 'assigned_by' => User::where('email', 'admin@yousch.edu')->first()->id,
-                'assigned_at' => now(),
+                'assignment_date' => now(),
                 'notes' => 'Primary teacher assignment',
                 'school_id' => $school->id,
             ]);

@@ -38,5 +38,16 @@ class Faculty extends Model
     public function departments(): HasMany
     {
         return $this->hasMany(Department::class);
+    }   
+
+    /**
+     * Get the statistics for this faculty.
+     */
+    public function statistics(): array
+    {
+        return [
+            'total_departments' => $this->departments()->count(),
+            'total_courses' => $this->departments()->sum('courses_count'),
+        ];
     }
 } 

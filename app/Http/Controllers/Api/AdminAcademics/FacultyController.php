@@ -161,4 +161,15 @@ class FacultyController extends Controller
             'message' => 'Faculties retrieved successfully'
         ]);
     }
+
+    public function statistics(Faculty $faculty): JsonResponse
+    {
+        $statistics = $faculty->statistics();
+
+        return response()->json([
+            'success' => true,
+            'data' => $statistics,
+            'message' => 'Faculty statistics retrieved successfully'
+        ]);
+    }
 } 

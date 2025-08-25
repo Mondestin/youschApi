@@ -14,7 +14,7 @@ class AcademicRouteServiceProvider extends ServiceProvider
     public function boot(): void
     {
         $this->routes(function () {
-            Route::middleware(['api', 'academic.api.rate.limit'])
+            Route::middleware(['api'])
                 ->prefix('api/admin/academics')
                 ->name('admin.academics.')
                 ->group(function () {

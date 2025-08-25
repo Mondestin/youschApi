@@ -48,4 +48,15 @@ class Department extends Model
     {
         return $this->hasMany(Course::class);
     }
+
+    /**
+     * Get the statistics for this department.
+     */
+    public function statistics(): array
+    {
+        return [
+            'total_courses' => $this->courses()->count(),
+            'total_subjects' => $this->courses()->sum('subjects_count'),
+        ];
+    }
 } 

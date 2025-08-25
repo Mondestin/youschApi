@@ -202,4 +202,18 @@ class DepartmentController extends Controller
             'message' => 'Departments retrieved successfully'
         ]);
     }
+
+    /**
+     * Get statistics for a department.
+     */
+    public function statistics(Department $department): JsonResponse
+    {
+        $statistics = $department->statistics();
+
+        return response()->json([
+            'success' => true,
+            'data' => $statistics,
+            'message' => 'Department statistics retrieved successfully'
+        ]);
+    }
 } 

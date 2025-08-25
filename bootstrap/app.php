@@ -21,6 +21,7 @@ return Application::configure(basePath: dirname(__DIR__))
     ->withProviders([
         App\Providers\ApiRouteServiceProvider::class,
         App\Providers\AcademicRouteServiceProvider::class,
+        App\Providers\StudentsRouteServiceProvider::class, // Added
         App\Providers\RepositoryServiceProvider::class,
     ])
     ->create();
