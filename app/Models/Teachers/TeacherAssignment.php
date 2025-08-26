@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use App\Models\AdminAcademics\Subject;
+use App\Models\AdminAcademics\ClassRoom;
 
 class TeacherAssignment extends Model
 {
@@ -45,7 +47,7 @@ class TeacherAssignment extends Model
      */
     public function class(): BelongsTo
     {
-        return $this->belongsTo(\App\Models\Academic\Class::class, 'class_id');
+        return $this->belongsTo(ClassRoom::class, 'class_id');
     }
 
     /**
@@ -53,7 +55,7 @@ class TeacherAssignment extends Model
      */
     public function subject(): BelongsTo
     {
-        return $this->belongsTo(\App\Models\Academic\Subject::class);
+        return $this->belongsTo(Subject::class);
     }
 
     /**
