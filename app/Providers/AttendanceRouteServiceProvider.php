@@ -4,9 +4,9 @@ namespace App\Providers;
 
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
 use Illuminate\Support\Facades\Route;
-use App\Services\TeachersRouteService;
+use App\Services\AttendanceRouteService;
 
-class TeachersRouteServiceProvider extends ServiceProvider
+class AttendanceRouteServiceProvider extends ServiceProvider
 {
     /**
      * Define your route model bindings, pattern filters, and other route configuration.
@@ -15,10 +15,10 @@ class TeachersRouteServiceProvider extends ServiceProvider
     {
         $this->routes(function () {
             Route::middleware(['api'])
-                ->prefix('api/teachers')
-                ->name('teachers.')
+                ->prefix('api/attendance')
+                ->name('attendance.')
                 ->group(function () {
-                    TeachersRouteService::registerRoutes();
+                    AttendanceRouteService::registerRoutes();
                 });
         });
     }

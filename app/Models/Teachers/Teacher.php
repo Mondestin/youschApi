@@ -99,6 +99,7 @@ class Teacher extends Model
         return $this->status === self::STATUS_RESIGNED;
     }
 
+
     /**
      * Check if teacher is suspended.
      */
