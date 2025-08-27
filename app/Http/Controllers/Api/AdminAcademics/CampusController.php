@@ -29,7 +29,7 @@ class CampusController extends Controller
             $query->where('is_active', $request->boolean('is_active'));
         }
 
-        $campuses = $query->paginate(15);
+        $campuses = $query->get();
 
         return response()->json([
             'success' => true,

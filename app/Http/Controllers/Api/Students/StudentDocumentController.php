@@ -44,7 +44,7 @@ class StudentDocumentController extends Controller
                 $query->where('mime_type', 'like', '%' . $request->mime_type . '%');
             }
 
-            $documents = $query->orderBy('uploaded_at', 'desc')->paginate(15);
+            $documents = $query->orderBy('uploaded_at', 'desc')->get();
 
             Log::info('Student documents retrieved successfully', [
                 'count' => $documents->count(),
@@ -53,13 +53,8 @@ class StudentDocumentController extends Controller
 
             return response()->json([
                 'success' => true,
-                'data' => $documents->items(),
-                'pagination' => [
-                    'current_page' => $documents->currentPage(),
-                    'last_page' => $documents->lastPage(),
-                    'per_page' => $documents->perPage(),
-                    'total' => $documents->total(),
-                ]
+                'data' => $documents,
+                'message' => 'Student documents retrieved successfully'
             ]);
 
         } catch (\Exception $e) {

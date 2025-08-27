@@ -60,6 +60,55 @@ class StudentRepository extends BaseRepository implements StudentRepositoryInter
         return $query->orderBy('created_at', 'desc')->paginate($perPage);
     }
 
+    /**
+     * Get all students with filters (without pagination)
+     */
+    public function getAllStudents(array $filters): Collection
+    {
+        $query = $this->model->with(['school', 'campus', 'classRoom']);
+
+        if (isset($filters['status'])) {
+            $query->where('status', $filters['status']);
+        }
+
+        if (isset($filters['school_id'])) {
+            $query->where('school_id', $filters['school_id']);
+        }
+
+        if (isset($filters['campus_id'])) {
+            $query->where('campus_id', $filters['campus_id']);
+        }
+
+        if (isset($filters['class_id'])) {
+            $query->where('class_id', $filters['class_id']);
+        }
+
+        if (isset($filters['gender'])) {
+            $query->where('gender', $filters['gender']);
+        }
+
+        if (isset($filters['enrollment_date_from'])) {
+            $query->whereDate('enrollment_date', '>=', $filters['enrollment_date_from']);
+        }
+
+        if (isset($filters['enrollment_date_to'])) {
+            $query->whereDate('enrollment_date', '<=', $filters['enrollment_date_to']);
+        }
+
+        if (isset($filters['search'])) {
+            $search = $filters['search'];
+            $query->where(function($q) use ($search) {
+                $q->where('first_name', 'like', "%{$search}%")
+                  ->orWhere('last_name', 'like', "%{$search}%")
+                  ->orWhere('student_number', 'like', "%{$search}%")
+                  ->orWhere('email', 'like', "%{$search}%")
+                  ->orWhere('parent_name', 'like', "%{$search}%");
+            });
+        }
+
+        return $query->orderBy('created_at', 'desc')->get();
+    }
+
     public function getStudentById(int $id, array $relationships = []): ?Student
     {
         $query = $this->model->where('id', $id);

@@ -57,6 +57,50 @@ class StudentApplicationRepository extends BaseRepository implements StudentAppl
         return $query->orderBy('applied_on', 'desc')->paginate($perPage);
     }
 
+    /**
+     * Get all applications with filters (without pagination)
+     */
+    public function getAllApplications(array $filters): Collection
+    {
+        $query = $this->model->with(['school', 'campus', 'reviewer']);
+
+        if (isset($filters['status'])) {
+            $query->where('status', $filters['status']);
+        }
+
+        if (isset($filters['school_id'])) {
+            $query->where('school_id', $filters['school_id']);
+        }
+
+        if (isset($filters['campus_id'])) {
+            $query->where('campus_id', $filters['campus_id']);
+        }
+
+        if (isset($filters['reviewer_id'])) {
+            $query->where('reviewer_id', $filters['reviewer_id']);
+        }
+
+        if (isset($filters['date_from'])) {
+            $query->whereDate('applied_on', '>=', $filters['date_from']);
+        }
+
+        if (isset($filters['date_to'])) {
+            $query->whereDate('applied_on', '<=', $filters['date_to']);
+        }
+
+        if (isset($filters['search'])) {
+            $search = $filters['search'];
+            $query->where(function($q) use ($search) {
+                $q->where('first_name', 'like', "%{$search}%")
+                  ->orWhere('last_name', 'like', "%{$search}%")
+                  ->orWhere('email', 'like', "%{$search}%")
+                  ->orWhere('parent_name', 'like', "%{$search}%");
+            });
+        }
+
+        return $query->orderBy('applied_on', 'desc')->get();
+    }
+
     public function getApplicationById(int $id, array $relationships = []): ?StudentApplication
     {
         $query = $this->model->where('id', $id);

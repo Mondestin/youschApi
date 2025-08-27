@@ -43,7 +43,7 @@ class StudentGraduationController extends Controller
                 $query->where('diploma_number', 'like', '%' . $request->diploma_number . '%');
             }
 
-            $graduations = $query->orderBy('graduation_date', 'desc')->paginate(15);
+            $graduations = $query->orderBy('graduation_date', 'desc')->get();
 
             Log::info('Student graduations retrieved successfully', [
                 'count' => $graduations->count(),
@@ -52,13 +52,8 @@ class StudentGraduationController extends Controller
 
             return response()->json([
                 'success' => true,
-                'data' => $graduations->items(),
-                'pagination' => [
-                    'current_page' => $graduations->currentPage(),
-                    'last_page' => $graduations->lastPage(),
-                    'per_page' => $graduations->perPage(),
-                    'total' => $graduations->total(),
-                ]
+                'data' => $graduations,
+                'message' => 'Student graduations retrieved successfully'
             ]);
 
         } catch (\Exception $e) {

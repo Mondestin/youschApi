@@ -9,6 +9,7 @@ use Illuminate\Database\Eloquent\Collection;
 interface TeacherTimetableRepositoryInterface
 {
     public function getPaginatedTimetables(array $filters): LengthAwarePaginator;
+    public function getAllTimetables(array $filters): Collection;
     public function getTimetableById(int $id): ?TeacherTimetable;
     public function createTimetable(array $data): TeacherTimetable;
     public function updateTimetable(TeacherTimetable $timetable, array $data): bool;

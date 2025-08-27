@@ -64,22 +64,16 @@ class AcademicHistoryController extends Controller
                 $query->where('gpa', '<=', $request->max_gpa);
             }
 
-            $records = $query->orderBy('created_at', 'desc')->paginate(15);
+            $records = $query->orderBy('created_at', 'desc')->get();
 
             Log::info('Academic history records fetched successfully', [
-                'total_records' => $records->total(),
-                'current_page' => $records->currentPage()
+                'total_records' => $records->count()
             ]);
 
             return response()->json([
                 'success' => true,
-                'data' => $records->items(),
-                'pagination' => [
-                    'current_page' => $records->currentPage(),
-                    'last_page' => $records->lastPage(),
-                    'per_page' => $records->perPage(),
-                    'total' => $records->total(),
-                ]
+                'data' => $records,
+                'message' => 'Academic history records retrieved successfully'
             ]);
 
         } catch (\Exception $e) {

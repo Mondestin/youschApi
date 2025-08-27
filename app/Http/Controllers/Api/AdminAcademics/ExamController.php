@@ -60,7 +60,7 @@ class ExamController extends Controller
 
         $exams = $query->orderBy('exam_date', 'asc')
                       ->orderBy('start_time', 'asc')
-                      ->paginate(15);
+                      ->get();
 
         return response()->json([
             'success' => true,

@@ -29,7 +29,7 @@ class TeacherTimetableController extends Controller
     {
         try {
             $filters = $request->only(['teacher_id', 'class_id', 'subject_id', 'day_of_week', 'academic_year_id', 'term_id', 'per_page']);
-            $timetables = $this->timetableRepository->getPaginatedTimetables($filters);
+            $timetables = $this->timetableRepository->getAllTimetables($filters);
             
             return response()->json([
                 'success' => true,

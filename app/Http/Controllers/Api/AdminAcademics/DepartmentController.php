@@ -32,7 +32,7 @@ class DepartmentController extends Controller
             });
         }
 
-        $departments = $query->paginate(15);
+        $departments = $query->get();
 
         return response()->json([
             'success' => true,

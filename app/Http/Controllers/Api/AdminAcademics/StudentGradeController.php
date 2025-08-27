@@ -69,7 +69,7 @@ class StudentGradeController extends Controller
             });
         }
 
-        $grades = $query->orderBy('created_at', 'desc')->paginate(15);
+        $grades = $query->orderBy('created_at', 'desc')->get();
 
         return response()->json([
             'success' => true,

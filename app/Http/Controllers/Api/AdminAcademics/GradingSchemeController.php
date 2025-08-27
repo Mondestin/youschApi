@@ -30,7 +30,7 @@ class GradingSchemeController extends Controller
             $query->where('is_active', $request->boolean('is_active'));
         }
 
-        $gradingSchemes = $query->paginate(15);
+        $gradingSchemes = $query->get();
 
         return response()->json([
             'success' => true,

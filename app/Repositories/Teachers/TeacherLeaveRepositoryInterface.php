@@ -9,6 +9,7 @@ use Illuminate\Database\Eloquent\Collection;
 interface TeacherLeaveRepositoryInterface
 {
     public function getPaginatedLeaves(array $filters): LengthAwarePaginator;
+    public function getAllLeaves(array $filters): Collection;
     public function getLeaveById(int $id): ?TeacherLeave;
     public function createLeave(array $data): TeacherLeave;
     public function updateLeave(TeacherLeave $leave, array $data): bool;

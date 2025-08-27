@@ -31,7 +31,7 @@ class StudentTransferController extends Controller
                 'reviewer_id', 'date_from', 'date_to'
             ]);
 
-            $transfers = $this->transferRepository->getPaginatedTransfers($filters);
+            $transfers = $this->transferRepository->getAllTransfers($filters);
 
             Log::info('Student transfers retrieved successfully', [
                 'count' => $transfers->count(),
@@ -40,13 +40,8 @@ class StudentTransferController extends Controller
 
             return response()->json([
                 'success' => true,
-                'data' => $transfers->items(),
-                'pagination' => [
-                    'current_page' => $transfers->currentPage(),
-                    'last_page' => $transfers->lastPage(),
-                    'per_page' => $transfers->perPage(),
-                    'total' => $transfers->total(),
-                ]
+                'data' => $transfers,
+                'message' => 'Student transfers retrieved successfully'
             ]);
 
         } catch (\Exception $e) {

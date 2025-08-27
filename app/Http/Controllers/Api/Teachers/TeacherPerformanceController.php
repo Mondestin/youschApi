@@ -30,7 +30,7 @@ class TeacherPerformanceController extends Controller
     {
         try {
             $filters = $request->only(['teacher_id', 'evaluation_period', 'evaluator_id', 'rating_min', 'rating_max', 'per_page']);
-            $performances = $this->performanceRepository->getPaginatedPerformances($filters);
+            $performances = $this->performanceRepository->getAllPerformances($filters);
             
             return response()->json([
                 'success' => true,

@@ -31,7 +31,7 @@ class StudentController extends Controller
                 'enrollment_date_from', 'enrollment_date_to', 'search'
             ]);
 
-            $students = $this->studentRepository->getPaginatedStudents($filters);
+            $students = $this->studentRepository->getAllStudents($filters);
 
             Log::info('Students retrieved successfully', [
                 'count' => $students->count(),
@@ -40,13 +40,8 @@ class StudentController extends Controller
 
             return response()->json([
                 'success' => true,
-                'data' => $students->items(),
-                'pagination' => [
-                    'current_page' => $students->currentPage(),
-                    'last_page' => $students->lastPage(),
-                    'per_page' => $students->perPage(),
-                    'total' => $students->total(),
-                ]
+                'data' => $students,
+                'message' => 'Students retrieved successfully'
             ]);
 
         } catch (\Exception $e) {

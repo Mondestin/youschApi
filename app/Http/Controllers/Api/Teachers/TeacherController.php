@@ -30,7 +30,7 @@ class TeacherController extends Controller
     {
         try {
             $filters = $request->only(['search', 'department_id', 'faculty_id', 'status', 'per_page']);
-            $teachers = $this->teacherRepository->getPaginatedTeachers($filters);
+            $teachers = $this->teacherRepository->getAllTeachers($filters);
             
             return response()->json([
                 'success' => true,

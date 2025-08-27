@@ -9,6 +9,7 @@ use Illuminate\Database\Eloquent\Collection;
 interface TeacherPerformanceRepositoryInterface
 {
     public function getPaginatedPerformance(array $filters): LengthAwarePaginator;
+    public function getAllPerformances(array $filters): Collection;
     public function getPerformanceById(int $id): ?TeacherPerformance;
     public function createPerformance(array $data): TeacherPerformance;
     public function updatePerformance(TeacherPerformance $performance, array $data): bool;

@@ -30,7 +30,7 @@ class AcademicYearController extends Controller
             $query->where('is_active', $request->boolean('is_active'));
         }
 
-        $academicYears = $query->orderBy('start_date', 'desc')->paginate(15);
+        $academicYears = $query->orderBy('start_date', 'desc')->get();
 
         return response()->json([
             'success' => true,

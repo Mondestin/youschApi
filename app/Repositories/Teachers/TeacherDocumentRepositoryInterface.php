@@ -9,6 +9,7 @@ use Illuminate\Database\Eloquent\Collection;
 interface TeacherDocumentRepositoryInterface
 {
     public function getPaginatedDocuments(array $filters): LengthAwarePaginator;
+    public function getAllDocuments(array $filters): Collection;
     public function getDocumentById(int $id): ?TeacherDocument;
     public function createDocument(array $data): TeacherDocument;
     public function updateDocument(TeacherDocument $document, array $data): bool;

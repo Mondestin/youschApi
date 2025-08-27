@@ -37,7 +37,7 @@ class TermController extends Controller
             $query->where('is_active', $request->boolean('is_active'));
         }
 
-        $terms = $query->orderBy('start_date', 'asc')->paginate(15);
+        $terms = $query->orderBy('start_date', 'asc')->get();
 
         return response()->json([
             'success' => true,

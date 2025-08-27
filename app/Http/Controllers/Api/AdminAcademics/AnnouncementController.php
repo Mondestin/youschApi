@@ -74,7 +74,7 @@ class AnnouncementController extends Controller
 
         $announcements = $query->orderBy('publish_date', 'desc')
                               ->orderBy('priority', 'desc')
-                              ->paginate(15);
+                              ->get();
 
         return response()->json([
             'success' => true,
@@ -119,7 +119,7 @@ class AnnouncementController extends Controller
             }
 
             // Set created_by to current authenticated user
-            $validated['created_by'] = auth()->id();
+            $validated['created_by'] = Request()->user()->id;
 
             $announcement = Announcement::create($validated);
 

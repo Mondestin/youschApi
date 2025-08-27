@@ -66,7 +66,7 @@ class TeacherAssignmentController extends Controller
             });
         }
 
-        $assignments = $query->orderBy('assignment_date', 'desc')->paginate(15);
+        $assignments = $query->orderBy('assignment_date', 'desc')->get();
 
         return response()->json([
             'success' => true,

@@ -44,6 +44,32 @@ class TeacherDocumentRepository extends BaseRepository implements TeacherDocumen
     }
 
     /**
+     * Get all documents with filters (without pagination)
+     *
+     * @param array $filters
+     * @return Collection
+     */
+    public function getAllDocuments(array $filters): Collection
+    {
+        $query = $this->model->with(['teacher']);
+
+        // Apply filters
+        if (isset($filters['teacher_id'])) {
+            $query->where('teacher_id', $filters['teacher_id']);
+        }
+
+        if (isset($filters['document_type'])) {
+            $query->where('document_type', $filters['document_type']);
+        }
+
+        if (isset($filters['status'])) {
+            $query->where('status', $filters['status']);
+        }
+
+        return $query->orderBy('created_at', 'desc')->get();
+    }
+
+    /**
      * Get document by ID
      *
      * @param int $id

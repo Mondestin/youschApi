@@ -31,7 +31,7 @@ class TeacherLeaveRepository extends BaseRepository implements TeacherLeaveRepos
         }
 
         if (isset($filters['type'])) {
-            $query->where('leave_type', $filters['type']);
+            $query->where('type', $filters['type']);
         }
 
         if (isset($filters['status'])) {
@@ -48,7 +48,41 @@ class TeacherLeaveRepository extends BaseRepository implements TeacherLeaveRepos
 
         $perPage = $filters['per_page'] ?? 15;
 
-        return $query->orderBy('created_at', 'desc')->paginate($perPage);
+        return $query->orderBy('start_date', 'desc')->paginate($perPage);
+    }
+
+    /**
+     * Get all leaves with filters (without pagination)
+     *
+     * @param array $filters
+     * @return Collection
+     */
+    public function getAllLeaves(array $filters): Collection
+    {
+        $query = $this->model->with(['teacher', 'reviewer']);
+
+        // Apply filters
+        if (isset($filters['teacher_id'])) {
+            $query->where('teacher_id', $filters['teacher_id']);
+        }
+
+        if (isset($filters['type'])) {
+            $query->where('type', $filters['type']);
+        }
+
+        if (isset($filters['status'])) {
+            $query->where('status', $filters['status']);
+        }
+
+        if (isset($filters['start_date'])) {
+            $query->where('start_date', '>=', $filters['start_date']);
+        }
+
+        if (isset($filters['end_date'])) {
+            $query->where('end_date', '<=', $filters['end_date']);
+        }
+
+        return $query->orderBy('start_date', 'desc')->get();
     }
 
     /**

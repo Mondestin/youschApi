@@ -52,6 +52,40 @@ class TeacherPerformanceRepository extends BaseRepository implements TeacherPerf
     }
 
     /**
+     * Get all performances with filters (without pagination)
+     *
+     * @param array $filters
+     * @return Collection
+     */
+    public function getAllPerformances(array $filters): Collection
+    {
+        $query = $this->model->with(['teacher', 'evaluator']);
+
+        // Apply filters
+        if (isset($filters['teacher_id'])) {
+            $query->where('teacher_id', $filters['teacher_id']);
+        }
+
+        if (isset($filters['evaluation_period'])) {
+            $query->where('evaluation_period', 'like', '%' . $filters['evaluation_period'] . '%');
+        }
+
+        if (isset($filters['evaluator_id'])) {
+            $query->where('evaluator_id', $filters['evaluator_id']);
+        }
+
+        if (isset($filters['rating_min'])) {
+            $query->where('overall_rating', '>=', $filters['rating_min']);
+        }
+
+        if (isset($filters['rating_max'])) {
+            $query->where('overall_rating', '<=', $filters['rating_max']);
+        }
+
+        return $query->orderBy('evaluation_date', 'desc')->get();
+    }
+
+    /**
      * Get performance by ID
      *
      * @param int $id

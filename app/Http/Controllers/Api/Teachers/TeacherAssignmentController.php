@@ -27,17 +27,12 @@ class TeacherAssignmentController extends Controller
     {
         $filters = $request->only(['teacher_id', 'class_id', 'subject_id', 'academic_year', 'term']);
         
-        $assignments = $this->assignmentRepository->getPaginatedAssignments($filters);
+        $assignments = $this->assignmentRepository->getAllAssignments($filters);
         
         return response()->json([
             'success' => true,
-            'data' => $assignments->items(),
-            'pagination' => [
-                'current_page' => $assignments->currentPage(),
-                'last_page' => $assignments->lastPage(),
-                'per_page' => $assignments->perPage(),
-                'total' => $assignments->total(),
-            ]
+            'data' => $assignments,
+            'message' => 'Teacher assignments retrieved successfully'
         ]);
     }
 

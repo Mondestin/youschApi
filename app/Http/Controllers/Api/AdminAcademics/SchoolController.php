@@ -18,7 +18,7 @@ class SchoolController extends Controller
     {
         $schools = School::with(['campuses', 'faculties', 'academicYears'])
                         ->where('is_active', true)
-                        ->paginate(15);
+                        ->get();
 
         return response()->json([
             'success' => true,

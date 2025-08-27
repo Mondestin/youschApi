@@ -30,7 +30,7 @@ class TeacherDocumentController extends Controller
     {
         try {
             $filters = $request->only(['teacher_id', 'document_type', 'status', 'per_page']);
-            $documents = $this->documentRepository->getPaginatedDocuments($filters);
+            $documents = $this->documentRepository->getAllDocuments($filters);
             
             return response()->json([
                 'success' => true,

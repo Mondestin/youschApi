@@ -230,7 +230,10 @@ class TeacherAssignmentRepository implements TeacherAssignmentRepositoryInterfac
         return $results;
     }
 
-    public function getAllAssignments(array $filters = []): Collection
+    /**
+     * Get all assignments with filters (without pagination)
+     */
+    public function getAllAssignments(array $filters): Collection
     {
         $query = TeacherAssignment::with(['teacher', 'class', 'subject']);
 
@@ -254,7 +257,7 @@ class TeacherAssignmentRepository implements TeacherAssignmentRepositoryInterfac
             $query->where('term', $filters['term']);
         }
 
-        return $query->orderBy('academic_year', 'desc')->orderBy('term')->get();
+        return $query->orderBy('created_at', 'desc')->get();
     }
 
     public function getAssignmentStatistics(): array

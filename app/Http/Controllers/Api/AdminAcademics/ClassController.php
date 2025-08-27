@@ -40,7 +40,7 @@ class ClassController extends Controller
             });
         }
 
-        $classes = $query->paginate(15);
+        $classes = $query->get();
 
         return response()->json([
             'success' => true,

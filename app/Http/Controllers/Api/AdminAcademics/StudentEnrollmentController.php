@@ -54,7 +54,7 @@ class StudentEnrollmentController extends Controller
             });
         }
 
-        $enrollments = $query->orderBy('enrollment_date', 'desc')->paginate(15);
+        $enrollments = $query->orderBy('enrollment_date', 'desc')->get();
 
         return response()->json([
             'success' => true,

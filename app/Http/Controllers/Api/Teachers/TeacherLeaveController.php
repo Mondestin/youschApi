@@ -30,7 +30,7 @@ class TeacherLeaveController extends Controller
     {
         try {
             $filters = $request->only(['teacher_id', 'type', 'status', 'start_date', 'end_date', 'per_page']);
-            $leaves = $this->leaveRepository->getPaginatedLeaves($filters);
+            $leaves = $this->leaveRepository->getAllLeaves($filters);
             
             return response()->json([
                 'success' => true,

@@ -55,7 +55,7 @@ class TimetableController extends Controller
 
         $timetables = $query->orderBy('date', 'asc')
                            ->orderBy('start_time', 'asc')
-                           ->paginate(15);
+                           ->get();
 
         return response()->json([
             'success' => true,

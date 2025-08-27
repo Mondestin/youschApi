@@ -47,7 +47,7 @@ class SubjectController extends Controller
             });
         }
 
-        $subjects = $query->paginate(15);
+        $subjects = $query->get();
 
         return response()->json([
             'success' => true,

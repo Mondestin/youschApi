@@ -58,6 +58,46 @@ class TeacherTimetableRepository extends BaseRepository implements TeacherTimeta
     }
 
     /**
+     * Get all timetables with filters (without pagination)
+     *
+     * @param array $filters
+     * @return Collection
+     */
+    public function getAllTimetables(array $filters): Collection
+    {
+        $query = $this->model->with(['teacher', 'class', 'subject', 'academicYear', 'term']);
+
+        // Apply filters
+        if (isset($filters['teacher_id'])) {
+            $query->where('teacher_id', $filters['teacher_id']);
+        }
+
+        if (isset($filters['class_id'])) {
+            $query->where('class_id', $filters['class_id']);
+        }
+
+        if (isset($filters['subject_id'])) {
+            $query->where('subject_id', $filters['subject_id']);
+        }
+
+        if (isset($filters['day_of_week'])) {
+            $query->where('day_of_week', $filters['day_of_week']);
+        }
+
+        if (isset($filters['academic_year_id'])) {
+            $query->where('academic_year_id', $filters['academic_year_id']);
+        }
+
+        if (isset($filters['term_id'])) {
+            $query->where('term_id', $filters['term_id']);
+        }
+
+        return $query->orderBy('day_of_week')
+            ->orderBy('start_time')
+            ->get();
+    }
+
+    /**
      * Get timetable by ID
      *
      * @param int $id

@@ -31,7 +31,7 @@ class StudentApplicationController extends Controller
                 'date_from', 'date_to', 'search'
             ]);
 
-            $applications = $this->applicationRepository->getPaginatedApplications($filters);
+            $applications = $this->applicationRepository->getAllApplications($filters);
 
             Log::info('Student applications retrieved successfully', [
                 'count' => $applications->count(),
@@ -40,13 +40,8 @@ class StudentApplicationController extends Controller
 
             return response()->json([
                 'success' => true,
-                'data' => $applications->items(),
-                'pagination' => [
-                    'current_page' => $applications->currentPage(),
-                    'last_page' => $applications->lastPage(),
-                    'per_page' => $applications->perPage(),
-                    'total' => $applications->total(),
-                ]
+                'data' => $applications,
+                'message' => 'Student applications retrieved successfully'
             ]);
 
         } catch (\Exception $e) {

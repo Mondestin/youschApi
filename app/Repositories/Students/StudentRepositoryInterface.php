@@ -14,6 +14,11 @@ interface StudentRepositoryInterface
     public function getPaginatedStudents(array $filters, int $perPage = 15): LengthAwarePaginator;
 
     /**
+     * Get all students with filters (without pagination)
+     */
+    public function getAllStudents(array $filters): Collection;
+
+    /**
      * Get student by ID with relationships
      */
     public function getStudentById(int $id, array $relationships = []): ?Student;

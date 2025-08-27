@@ -24,7 +24,7 @@ class FacultyController extends Controller
             $query->where('school_id', $request->school_id);
         }
 
-        $faculties = $query->paginate(15);
+        $faculties = $query->get();
 
         return response()->json([
             'success' => true,

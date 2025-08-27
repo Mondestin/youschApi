@@ -60,6 +60,49 @@ class TeacherRepository extends BaseRepository implements TeacherRepositoryInter
     }
 
     /**
+     * Get all teachers with filters (without pagination).
+     */
+    public function getAllTeachers(array $filters): Collection
+    {
+        $query = $this->model->with(['school', 'campus']);
+
+        if (isset($filters['school_id'])) {
+            $query->where('school_id', $filters['school_id']);
+        }
+
+        if (isset($filters['campus_id'])) {
+            $query->where('campus_id', $filters['campus_id']);
+        }
+
+        if (isset($filters['status'])) {
+            $query->where('status', $filters['status']);
+        }
+
+        if (isset($filters['gender'])) {
+            $query->where('gender', $filters['gender']);
+        }
+
+        if (isset($filters['hire_date_from'])) {
+            $query->where('hire_date', '>=', $filters['hire_date_from']);
+        }
+
+        if (isset($filters['hire_date_to'])) {
+            $query->where('hire_date', '<=', $filters['hire_date_to']);
+        }
+
+        if (isset($filters['search'])) {
+            $search = $filters['search'];
+            $query->where(function ($q) use ($search) {
+                $q->where('first_name', 'like', "%{$search}%")
+                  ->orWhere('last_name', 'like', "%{$search}%")
+                  ->orWhere('email', 'like', "%{$search}%");
+            });
+        }
+
+        return $query->orderBy('created_at', 'desc')->get();
+    }
+
+    /**
      * Get teacher by ID with relationships.
      */
     public function getTeacherById(int $id, array $with = []): ?Teacher

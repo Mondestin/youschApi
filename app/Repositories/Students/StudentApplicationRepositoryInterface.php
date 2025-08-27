@@ -14,6 +14,11 @@ interface StudentApplicationRepositoryInterface
     public function getPaginatedApplications(array $filters, int $perPage = 15): LengthAwarePaginator;
 
     /**
+     * Get all applications with filters (without pagination)
+     */
+    public function getAllApplications(array $filters): Collection;
+
+    /**
      * Get application by ID with relationships
      */
     public function getApplicationById(int $id, array $relationships = []): ?StudentApplication;
