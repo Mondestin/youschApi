@@ -368,7 +368,7 @@ class StudentDocumentController extends Controller
             return response()->json([
                 'success' => true,
                 'data' => [
-                    'download_url' => Storage::disk('public')->url($document->document_path),
+                    'download_url' => Storage::url($document->document_path),
                     'file_name' => $fileName,
                     'mime_type' => $document->mime_type,
                     'file_size' => $document->file_size

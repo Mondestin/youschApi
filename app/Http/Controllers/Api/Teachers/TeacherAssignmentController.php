@@ -5,13 +5,15 @@ namespace App\Http\Controllers\Api\Teachers;
 use App\Http\Controllers\Controller;
 use App\Models\Teachers\TeacherAssignment;
 use App\Models\Teachers\Teacher;
-use App\Models\Academic\Class as AcademicClass;
-use App\Models\Academic\Subject;
+use App\Models\AdminAcademics\ClassRoom as AcademicClass;
+use App\Models\AdminAcademics\Subject;
 use App\Repositories\Teachers\TeacherAssignmentRepositoryInterface;
 use Illuminate\Http\Request;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Support\Facades\Validator;
-use Illuminate\Validation\ValidationException;
+
+
+
 
 class TeacherAssignmentController extends Controller
 {
