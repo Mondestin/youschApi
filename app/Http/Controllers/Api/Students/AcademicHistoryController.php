@@ -19,7 +19,8 @@ class AcademicHistoryController extends Controller
 {
     /**
      * Display a listing of academic history records.
-     */
+     * @group Students
+    */
     public function index(Request $request): JsonResponse
     {
         try {
@@ -97,7 +98,8 @@ class AcademicHistoryController extends Controller
 
     /**
      * Store a newly created academic history record.
-     */
+     * @group Students
+    */
     public function store(Request $request): JsonResponse
     {
         try {
@@ -180,7 +182,8 @@ class AcademicHistoryController extends Controller
 
     /**
      * Display the specified academic history record.
-     */
+     * @group Students
+    */
     public function show(AcademicHistory $academicHistory): JsonResponse
     {
         try {
@@ -213,7 +216,8 @@ class AcademicHistoryController extends Controller
 
     /**
      * Update the specified academic history record.
-     */
+     * @group Students
+    */
     public function update(Request $request, AcademicHistory $academicHistory): JsonResponse
     {
         try {
@@ -269,7 +273,8 @@ class AcademicHistoryController extends Controller
 
     /**
      * Remove the specified academic history record.
-     */
+     * @group Students
+    */
     public function destroy(AcademicHistory $academicHistory): JsonResponse
     {
         try {
@@ -306,7 +311,8 @@ class AcademicHistoryController extends Controller
 
     /**
      * Get academic history records by student.
-     */
+     * @group Students
+    */
     public function byStudent(Student $student): JsonResponse
     {
         try {
@@ -353,7 +359,8 @@ class AcademicHistoryController extends Controller
 
     /**
      * Get academic history records by subject.
-     */
+     * @group Students
+    */
     public function bySubject(Subject $subject): JsonResponse
     {
         try {
@@ -400,7 +407,8 @@ class AcademicHistoryController extends Controller
 
     /**
      * Get academic history records by class.
-     */
+     * @group Students
+    */
     public function byClass(ClassRoom $classRoom): JsonResponse
     {
         try {
@@ -448,7 +456,8 @@ class AcademicHistoryController extends Controller
 
     /**
      * Get academic history records by term.
-     */
+     * @group Students
+    */
     public function byTerm(Term $term): JsonResponse
     {
         try {
@@ -496,7 +505,8 @@ class AcademicHistoryController extends Controller
 
     /**
      * Get academic history records by academic year.
-     */
+     * @group Students
+    */
     public function byAcademicYear(AcademicYear $academicYear): JsonResponse
     {
         try {
@@ -545,7 +555,8 @@ class AcademicHistoryController extends Controller
 
     /**
      * Get academic history statistics.
-     */
+     * @group Students
+    */
     public function statistics(Request $request): JsonResponse
     {
         try {
@@ -614,7 +625,8 @@ class AcademicHistoryController extends Controller
 
     /**
      * Bulk import academic history records.
-     */
+     * @group Students
+    */
     public function bulkImport(Request $request): JsonResponse
     {
         try {
@@ -658,7 +670,8 @@ class AcademicHistoryController extends Controller
 
     /**
      * Bulk export academic history records.
-     */
+     * @group Students
+    */
     public function bulkExport(Request $request): JsonResponse
     {
         try {
@@ -703,7 +716,8 @@ class AcademicHistoryController extends Controller
 
     /**
      * Get academic performance report.
-     */
+     * @group Students
+    */
     public function academicPerformanceReport(Request $request): JsonResponse
     {
         try {

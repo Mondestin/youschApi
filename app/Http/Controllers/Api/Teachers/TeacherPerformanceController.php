@@ -24,6 +24,7 @@ class TeacherPerformanceController extends Controller
      *
      * @param Request $request
      * @return JsonResponse
+     * @group Teachers
      */
     public function index(Request $request): JsonResponse
     {
@@ -49,6 +50,7 @@ class TeacherPerformanceController extends Controller
      *
      * @param Request $request
      * @return JsonResponse
+     * @group Teachers
      */
     public function store(Request $request): JsonResponse
     {
@@ -114,6 +116,7 @@ class TeacherPerformanceController extends Controller
      *
      * @param int $id
      * @return JsonResponse
+     * @group Teachers
      */
     public function show(int $id): JsonResponse
     {
@@ -146,6 +149,7 @@ class TeacherPerformanceController extends Controller
      * @param Request $request
      * @param int $id
      * @return JsonResponse
+     * @group Teachers
      */
     public function update(Request $request, int $id): JsonResponse
     {
@@ -219,6 +223,7 @@ class TeacherPerformanceController extends Controller
      *
      * @param int $id
      * @return JsonResponse
+     * @group Teachers
      */
     public function destroy(int $id): JsonResponse
     {
@@ -266,6 +271,7 @@ class TeacherPerformanceController extends Controller
      *
      * @param int $id
      * @return JsonResponse
+     * @group Teachers
      */
     public function publish(int $id): JsonResponse
     {
@@ -314,6 +320,7 @@ class TeacherPerformanceController extends Controller
      *
      * @param int $id
      * @return JsonResponse
+     * @group Teachers
      */
     public function archive(int $id): JsonResponse
     {
@@ -362,6 +369,7 @@ class TeacherPerformanceController extends Controller
      *
      * @param int $teacherId
      * @return JsonResponse
+     * @group Teachers
      */
     public function getByTeacher(int $teacherId): JsonResponse
     {
@@ -386,6 +394,7 @@ class TeacherPerformanceController extends Controller
      *
      * @param int $evaluatorId
      * @return JsonResponse
+     * @group Teachers
      */
     public function getByEvaluator(int $evaluatorId): JsonResponse
     {
@@ -410,6 +419,7 @@ class TeacherPerformanceController extends Controller
      *
      * @param string $period
      * @return JsonResponse
+     * @group Teachers
      */
     public function getByPeriod(string $period): JsonResponse
     {
@@ -434,6 +444,7 @@ class TeacherPerformanceController extends Controller
      *
      * @param Request $request
      * @return JsonResponse
+     * @group Teachers
      */
     public function getByRatingRange(Request $request): JsonResponse
     {
@@ -473,7 +484,8 @@ class TeacherPerformanceController extends Controller
      * Get performance statistics
      *
      * @return JsonResponse
-     */
+     * @group Teachers
+    */
     public function getStatistics(): JsonResponse
     {
         try {
@@ -497,7 +509,8 @@ class TeacherPerformanceController extends Controller
      *
      * @param int $teacherId
      * @return JsonResponse
-     */
+     * @group Teachers
+    */
     public function getPerformanceTrends(int $teacherId): JsonResponse
     {
         try {

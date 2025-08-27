@@ -16,7 +16,8 @@ class StudentEnrollmentController extends Controller
 {
     /**
      * Display a listing of student enrollments.
-     */
+     * @group Admin Academics
+    */
     public function index(Request $request): JsonResponse
     {
         $query = StudentEnrollment::with([
@@ -64,7 +65,8 @@ class StudentEnrollmentController extends Controller
 
     /**
      * Store a newly created student enrollment.
-     */
+     * @group Admin Academics
+    */
     public function store(Request $request): JsonResponse
     {
         try {
@@ -136,7 +138,8 @@ class StudentEnrollmentController extends Controller
 
     /**
      * Display the specified student enrollment.
-     */
+     * @group Admin Academics
+    */
     public function show(StudentEnrollment $enrollment): JsonResponse
     {
         $enrollment->load([
@@ -156,7 +159,8 @@ class StudentEnrollmentController extends Controller
 
     /**
      * Update the specified student enrollment.
-     */
+     * @group Admin Academics
+    */
     public function update(Request $request, StudentEnrollment $enrollment): JsonResponse
     {
         try {
@@ -220,7 +224,8 @@ class StudentEnrollmentController extends Controller
 
     /**
      * Remove the specified student enrollment.
-     */
+     * @group Admin Academics
+    */
     public function destroy(StudentEnrollment $enrollment): JsonResponse
     {
         try {
@@ -242,7 +247,8 @@ class StudentEnrollmentController extends Controller
 
     /**
      * Change enrollment status.
-     */
+     * @group Admin Academics
+    */
     public function changeStatus(Request $request, StudentEnrollment $enrollment): JsonResponse
     {
         try {
@@ -282,7 +288,8 @@ class StudentEnrollmentController extends Controller
 
     /**
      * Bulk enroll students.
-     */
+     * @group Admin Academics
+    */
     public function bulkEnroll(Request $request): JsonResponse
     {
         try {
@@ -370,7 +377,8 @@ class StudentEnrollmentController extends Controller
 
     /**
      * Get enrollments by class.
-     */
+     * @group Admin Academics
+    */
     public function byClass(ClassRoom $class, Request $request): JsonResponse
     {
         $query = $class->studentEnrollments()
@@ -397,7 +405,8 @@ class StudentEnrollmentController extends Controller
 
     /**
      * Get enrollments by student.
-     */
+     * @group Admin Academics
+    */
     public function byStudent(User $student, Request $request): JsonResponse
     {
         $query = StudentEnrollment::where('student_id', $student->id)

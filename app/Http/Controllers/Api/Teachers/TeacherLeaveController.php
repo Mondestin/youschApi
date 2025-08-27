@@ -24,6 +24,7 @@ class TeacherLeaveController extends Controller
      *
      * @param Request $request
      * @return JsonResponse
+     * @group Teachers
      */
     public function index(Request $request): JsonResponse
     {
@@ -49,6 +50,7 @@ class TeacherLeaveController extends Controller
      *
      * @param Request $request
      * @return JsonResponse
+     * @group Teachers
      */
     public function store(Request $request): JsonResponse
     {
@@ -110,6 +112,7 @@ class TeacherLeaveController extends Controller
      *
      * @param int $id
      * @return JsonResponse
+     * @group Teachers
      */
     public function show(int $id): JsonResponse
     {
@@ -142,6 +145,7 @@ class TeacherLeaveController extends Controller
      * @param Request $request
      * @param int $id
      * @return JsonResponse
+     * @group Teachers
      */
     public function update(Request $request, int $id): JsonResponse
     {
@@ -207,6 +211,7 @@ class TeacherLeaveController extends Controller
      *
      * @param int $id
      * @return JsonResponse
+     * @group Teachers
      */
     public function destroy(int $id): JsonResponse
     {
@@ -254,6 +259,7 @@ class TeacherLeaveController extends Controller
      *
      * @param int $id
      * @return JsonResponse
+     * @group Teachers
      */
     public function approve(int $id): JsonResponse
     {
@@ -304,6 +310,7 @@ class TeacherLeaveController extends Controller
      * @param Request $request
      * @param int $id
      * @return JsonResponse
+     * @group Teachers
      */
     public function reject(Request $request, int $id): JsonResponse
     {
@@ -368,6 +375,7 @@ class TeacherLeaveController extends Controller
      *
      * @param int $teacherId
      * @return JsonResponse
+     * @group Teachers
      */
     public function getByTeacher(int $teacherId): JsonResponse
     {
@@ -392,6 +400,7 @@ class TeacherLeaveController extends Controller
      *
      * @param string $type
      * @return JsonResponse
+     * @group Teachers
      */
     public function getByType(string $type): JsonResponse
     {
@@ -416,6 +425,7 @@ class TeacherLeaveController extends Controller
      *
      * @param string $status
      * @return JsonResponse
+     * @group Teachers
      */
     public function getByStatus(string $status): JsonResponse
     {
@@ -439,6 +449,7 @@ class TeacherLeaveController extends Controller
      * Get pending leaves
      *
      * @return JsonResponse
+     * @group Teachers
      */
     public function getPending(): JsonResponse
     {
@@ -462,7 +473,8 @@ class TeacherLeaveController extends Controller
      * Get leave statistics
      *
      * @return JsonResponse
-     */
+     * @group Teachers
+    */
     public function getStatistics(): JsonResponse
     {
         try {

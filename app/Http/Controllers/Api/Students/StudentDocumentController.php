@@ -16,7 +16,8 @@ class StudentDocumentController extends Controller
 {
     /**
      * Display a listing of student documents.
-     */
+     * @group Students
+    */
     public function index(Request $request): JsonResponse
     {
         try {
@@ -76,7 +77,8 @@ class StudentDocumentController extends Controller
 
     /**
      * Store a newly created student document.
-     */
+     * @group Students
+    */
     public function store(Request $request): JsonResponse
     {
         try {
@@ -131,7 +133,8 @@ class StudentDocumentController extends Controller
 
     /**
      * Display the specified student document.
-     */
+     * @group Students
+    */
     public function show(StudentDocument $document): JsonResponse
     {
         try {
@@ -164,7 +167,8 @@ class StudentDocumentController extends Controller
 
     /**
      * Update the specified student document.
-     */
+     * @group Students
+    */
     public function update(Request $request, StudentDocument $document): JsonResponse
     {
         try {
@@ -218,7 +222,8 @@ class StudentDocumentController extends Controller
 
     /**
      * Remove the specified student document.
-     */
+     * @group Students
+    */
     public function destroy(StudentDocument $document): JsonResponse
     {
         try {
@@ -260,7 +265,8 @@ class StudentDocumentController extends Controller
 
     /**
      * Upload a new document file.
-     */
+     * @group Students
+    */
     public function upload(Request $request): JsonResponse
     {
         try {
@@ -338,7 +344,8 @@ class StudentDocumentController extends Controller
 
     /**
      * Download the specified document.
-     */
+     * @group Students
+    */
     public function download(StudentDocument $document): JsonResponse
     {
         try {
@@ -389,7 +396,8 @@ class StudentDocumentController extends Controller
 
     /**
      * Get documents by student.
-     */
+     * @group Students
+    */
     public function byStudent(int $studentId): JsonResponse
     {
         try {
@@ -423,7 +431,8 @@ class StudentDocumentController extends Controller
 
     /**
      * Get documents by type.
-     */
+     * @group Students
+    */
     public function byType(string $type): JsonResponse
     {
         try {
@@ -458,7 +467,8 @@ class StudentDocumentController extends Controller
 
     /**
      * Get document statistics.
-     */
+     * @group Students
+    */
     public function statistics(Request $request): JsonResponse
     {
         try {

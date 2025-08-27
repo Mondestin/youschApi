@@ -15,7 +15,8 @@ class SubjectController extends Controller
 {
     /**
      * Display a listing of subjects.
-     */
+     * @group Admin Academics
+    */
     public function index(Request $request): JsonResponse
     {
         $query = Subject::with(['course.department.faculty.school', 'coordinator', 'labs']);
@@ -57,7 +58,8 @@ class SubjectController extends Controller
 
     /**
      * Store a newly created subject.
-     */
+     * @group Admin Academics
+    */
     public function store(Request $request): JsonResponse
     {
         try {
@@ -94,7 +96,8 @@ class SubjectController extends Controller
 
     /**
      * Display the specified subject.
-     */
+     * @group Admin Academics
+    */
     public function show(Subject $subject): JsonResponse
     {
         $subject->load([
@@ -117,7 +120,8 @@ class SubjectController extends Controller
 
     /**
      * Update the specified subject.
-     */
+     * @group Admin Academics
+    */
     public function update(Request $request, Subject $subject): JsonResponse
     {
         try {
@@ -154,7 +158,8 @@ class SubjectController extends Controller
 
     /**
      * Remove the specified subject.
-     */
+     * @group Admin Academics
+    */
     public function destroy(Subject $subject): JsonResponse
     {
         try {
@@ -184,7 +189,8 @@ class SubjectController extends Controller
 
     /**
      * Assign a subject coordinator.
-     */
+     * @group Admin Academics
+    */
     public function assignCoordinator(Request $request, Subject $subject): JsonResponse
     {
         try {
@@ -217,7 +223,8 @@ class SubjectController extends Controller
 
     /**
      * Add prerequisites to a subject.
-     */
+     * @group Admin Academics
+    */
     public function addPrerequisites(Request $request, Subject $subject): JsonResponse
     {
         try {
@@ -261,7 +268,8 @@ class SubjectController extends Controller
 
     /**
      * Remove a prerequisite from a subject.
-     */
+     * @group Admin Academics
+    */
     public function removePrerequisite(Subject $subject, Subject $prerequisite): JsonResponse
     {
         try {
@@ -283,7 +291,8 @@ class SubjectController extends Controller
 
     /**
      * Get subjects by course.
-     */
+     * @group Admin Academics
+    */
     public function byCourse(Course $course): JsonResponse
     {
         $subjects = $course->subjects()
@@ -299,7 +308,8 @@ class SubjectController extends Controller
 
     /**
      * Get subject statistics.
-     */
+     * @group Admin Academics
+    */
     public function statistics(Subject $subject): JsonResponse
     {
         $stats = [

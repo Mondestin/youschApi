@@ -15,7 +15,8 @@ class StudentGraduationController extends Controller
 {
     /**
      * Display a listing of student graduations.
-     */
+     * @group Students
+    */
     public function index(Request $request): JsonResponse
     {
         try {
@@ -75,7 +76,8 @@ class StudentGraduationController extends Controller
 
     /**
      * Store a newly created student graduation.
-     */
+     * @group Students
+    */
     public function store(Request $request): JsonResponse
     {
         try {
@@ -146,7 +148,8 @@ class StudentGraduationController extends Controller
 
     /**
      * Display the specified student graduation.
-     */
+     * @group Students
+    */
     public function show(StudentGraduation $graduation): JsonResponse
     {
         try {
@@ -178,7 +181,8 @@ class StudentGraduationController extends Controller
 
     /**
      * Update the specified student graduation.
-     */
+     * @group Students
+    */
     public function update(Request $request, StudentGraduation $graduation): JsonResponse
     {
         try {
@@ -231,7 +235,8 @@ class StudentGraduationController extends Controller
 
     /**
      * Remove the specified student graduation.
-     */
+     * @group Students
+    */
     public function destroy(StudentGraduation $graduation): JsonResponse
     {
         try {
@@ -266,7 +271,8 @@ class StudentGraduationController extends Controller
 
     /**
      * Issue the diploma.
-     */
+     * @group Students
+    */
     public function issue(Request $request, StudentGraduation $graduation): JsonResponse
     {
         try {
@@ -313,7 +319,8 @@ class StudentGraduationController extends Controller
 
     /**
      * Get graduations by student.
-     */
+     * @group Students
+    */
     public function byStudent(int $studentId): JsonResponse
     {
         try {
@@ -347,7 +354,8 @@ class StudentGraduationController extends Controller
 
     /**
      * Get graduations by date range.
-     */
+     * @group Students
+    */
     public function byDateRange(Request $request): JsonResponse
     {
         try {
@@ -402,7 +410,8 @@ class StudentGraduationController extends Controller
 
     /**
      * Get graduation statistics.
-     */
+     * @group Students
+    */
     public function statistics(Request $request): JsonResponse
     {
         try {
@@ -461,7 +470,8 @@ class StudentGraduationController extends Controller
 
     /**
      * Get graduation analysis report.
-     */
+     * @group Students
+    */
     public function graduationAnalysis(Request $request): JsonResponse
     {
         try {

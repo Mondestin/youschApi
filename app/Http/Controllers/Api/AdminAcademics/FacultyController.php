@@ -13,7 +13,8 @@ class FacultyController extends Controller
 {
     /**
      * Display a listing of faculties.
-     */
+     * @group Admin Academics
+    */
     public function index(Request $request): JsonResponse
     {
         $query = Faculty::with(['school', 'departments']);
@@ -34,7 +35,8 @@ class FacultyController extends Controller
 
     /**
      * Store a newly created faculty.
-     */
+     * @group Admin Academics
+    */
     public function store(Request $request): JsonResponse
     {
         try {
@@ -69,7 +71,8 @@ class FacultyController extends Controller
 
     /**
      * Display the specified faculty.
-     */
+     * @group Admin Academics
+    */
     public function show(Faculty $faculty): JsonResponse
     {
         $faculty->load(['school', 'departments.head', 'departments.courses']);
@@ -83,7 +86,8 @@ class FacultyController extends Controller
 
     /**
      * Update the specified faculty.
-     */
+     * @group Admin Academics
+    */
     public function update(Request $request, Faculty $faculty): JsonResponse
     {
         try {
@@ -118,7 +122,8 @@ class FacultyController extends Controller
 
     /**
      * Remove the specified faculty.
-     */
+     * @group Admin Academics
+    */
     public function destroy(Faculty $faculty): JsonResponse
     {
         try {
@@ -148,7 +153,8 @@ class FacultyController extends Controller
 
     /**
      * Get faculties by school.
-     */
+     * @group Admin Academics
+    */
     public function bySchool(School $school): JsonResponse
     {
         $faculties = $school->faculties()
@@ -162,6 +168,10 @@ class FacultyController extends Controller
         ]);
     }
 
+    /**
+     * Get faculty statistics.
+     * @group Admin Academics
+    */
     public function statistics(Faculty $faculty): JsonResponse
     {
         $statistics = $faculty->statistics();

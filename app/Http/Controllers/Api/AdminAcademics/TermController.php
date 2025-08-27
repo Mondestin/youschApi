@@ -14,7 +14,8 @@ class TermController extends Controller
 {
     /**
      * Display a listing of terms.
-     */
+     * @group Admin Academics
+    */
     public function index(Request $request): JsonResponse
     {
         $query = Term::with(['academicYear.school']);
@@ -47,7 +48,8 @@ class TermController extends Controller
 
     /**
      * Store a newly created term.
-     */
+     * @group Admin Academics
+    */
     public function store(Request $request): JsonResponse
     {
         try {
@@ -114,7 +116,8 @@ class TermController extends Controller
 
     /**
      * Display the specified term.
-     */
+     * @group Admin Academics
+    */
     public function show(Term $term): JsonResponse
     {
         $term->load([
@@ -132,7 +135,8 @@ class TermController extends Controller
 
     /**
      * Update the specified term.
-     */
+     * @group Admin Academics
+    */
     public function update(Request $request, Term $term): JsonResponse
     {
         try {
@@ -206,7 +210,8 @@ class TermController extends Controller
 
     /**
      * Remove the specified term.
-     */
+     * @group Admin Academics
+    */
     public function destroy(Term $term): JsonResponse
     {
         try {
@@ -236,7 +241,8 @@ class TermController extends Controller
 
     /**
      * Activate a term (deactivate others in the same academic year).
-     */
+     * @group Admin Academics
+    */
     public function activate(Term $term): JsonResponse
     {
         try {
@@ -267,7 +273,8 @@ class TermController extends Controller
 
     /**
      * Get terms by academic year.
-     */
+     * @group Admin Academics
+    */
     public function byAcademicYear(AcademicYear $academicYear): JsonResponse
     {
         $terms = $academicYear->terms()
@@ -283,7 +290,8 @@ class TermController extends Controller
 
     /**
      * Get term statistics.
-     */
+     * @group Admin Academics
+    */
     public function statistics(Term $term): JsonResponse
     {
         $stats = [

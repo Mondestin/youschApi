@@ -17,7 +17,8 @@ class ClassController extends Controller
 {
     /**
      * Display a listing of classes.
-     */
+     * @group Admin Academics
+    */
     public function index(Request $request): JsonResponse
     {
         $query = ClassRoom::with(['campus.school', 'course.department.faculty', 'subjects', 'teachers']);
@@ -50,7 +51,8 @@ class ClassController extends Controller
 
     /**
      * Store a newly created class.
-     */
+     * @group Admin Academics
+    */
     public function store(Request $request): JsonResponse
     {
         try {
@@ -86,7 +88,8 @@ class ClassController extends Controller
 
     /**
      * Display the specified class.
-     */
+     * @group Admin Academics
+    */
     public function show(ClassRoom $class): JsonResponse
     {
         $class->load([
@@ -109,7 +112,8 @@ class ClassController extends Controller
 
     /**
      * Update the specified class.
-     */
+     * @group Admin Academics
+    */
     public function update(Request $request, ClassRoom $class): JsonResponse
     {
         try {
@@ -145,7 +149,8 @@ class ClassController extends Controller
 
     /**
      * Remove the specified class.
-     */
+     * @group Admin Academics
+    */
     public function destroy(ClassRoom $class): JsonResponse
     {
         try {
@@ -176,7 +181,8 @@ class ClassController extends Controller
 
     /**
      * Assign a subject to a class.
-     */
+     * @group Admin Academics
+    */
     public function assignSubject(Request $request, ClassRoom $class): JsonResponse
     {
         try {
@@ -220,7 +226,8 @@ class ClassController extends Controller
 
     /**
      * Remove a subject from a class.
-     */
+     * @group Admin Academics
+    */
     public function removeSubject(ClassRoom $class, Subject $subject): JsonResponse
     {
         try {
@@ -242,7 +249,8 @@ class ClassController extends Controller
 
     /**
      * Assign a teacher to a class.
-     */
+     * @group Admin Academics
+    */
     public function assignTeacher(Request $request, ClassRoom $class): JsonResponse
     {
         try {
@@ -287,7 +295,8 @@ class ClassController extends Controller
 
     /**
      * Get class statistics.
-     */
+     * @group Admin Academics
+    */
     public function statistics(ClassRoom $class): JsonResponse
     {
         $stats = [

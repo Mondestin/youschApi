@@ -122,6 +122,12 @@ class RepositoryServiceProvider extends ServiceProvider
         $this->app->bind(\App\Repositories\Attendance\TeacherAttendanceRepositoryInterface::class, \App\Repositories\Attendance\TeacherAttendanceRepository::class);
         $this->app->bind(\App\Repositories\Attendance\StudentAttendanceExcuseRepositoryInterface::class, \App\Repositories\Attendance\StudentAttendanceExcuseRepository::class);
         $this->app->bind(\App\Repositories\Attendance\TeacherAttendanceExcuseRepositoryInterface::class, \App\Repositories\Attendance\TeacherAttendanceExcuseRepository::class);
+
+        // Bind Exams & Gradings Repository Interfaces
+        $this->app->bind(\App\Repositories\ExamsGradings\ExamTypeRepositoryInterface::class, \App\Repositories\ExamsGradings\ExamTypeRepository::class);
+        $this->app->bind(\App\Repositories\ExamsGradings\ExamMarkRepositoryInterface::class, \App\Repositories\ExamsGradings\ExamMarkRepository::class);
+        $this->app->bind(\App\Repositories\ExamsGradings\StudentGPARepositoryInterface::class, \App\Repositories\ExamsGradings\StudentGPARepository::class);
+        $this->app->bind(\App\Repositories\ExamsGradings\ReportCardRepositoryInterface::class, \App\Repositories\ExamsGradings\ReportCardRepository::class);
     }
 
     /**

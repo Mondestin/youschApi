@@ -21,7 +21,8 @@ class StudentApplicationController extends Controller
 
     /**
      * Display a listing of student applications.
-     */
+     * @group Students
+    */
     public function index(Request $request): JsonResponse
     {
         try {
@@ -63,7 +64,8 @@ class StudentApplicationController extends Controller
 
     /**
      * Store a newly created student application.
-     */
+     * @group Students
+    */
     public function store(Request $request): JsonResponse
     {
         try {
@@ -138,7 +140,8 @@ class StudentApplicationController extends Controller
 
     /**
      * Display the specified student application.
-     */
+     * @group Students
+    */
     public function show(StudentApplication $application): JsonResponse
     {
         try {
@@ -177,7 +180,8 @@ class StudentApplicationController extends Controller
 
     /**
      * Update the specified student application.
-     */
+     * @group Students
+    */
     public function update(Request $request, StudentApplication $application): JsonResponse
     {
         try {
@@ -249,7 +253,8 @@ class StudentApplicationController extends Controller
 
     /**
      * Remove the specified student application.
-     */
+     * @group Students
+    */
     public function destroy(StudentApplication $application): JsonResponse
     {
         try {
@@ -297,7 +302,8 @@ class StudentApplicationController extends Controller
 
     /**
      * Approve a student application.
-     */
+     * @group Students
+    */
     public function approve(Request $request, StudentApplication $application): JsonResponse
     {
         try {
@@ -354,7 +360,8 @@ class StudentApplicationController extends Controller
 
     /**
      * Reject a student application.
-     */
+     * @group Students
+    */
     public function reject(Request $request, StudentApplication $application): JsonResponse
     {
         try {
@@ -413,7 +420,8 @@ class StudentApplicationController extends Controller
 
     /**
      * Get application statistics.
-     */
+     * @group Students
+    */
     public function statistics(Request $request): JsonResponse
     {
         try {
@@ -447,7 +455,8 @@ class StudentApplicationController extends Controller
 
     /**
      * Generate a unique student number.
-     */
+     * @group Students
+    */
     private function generateStudentNumber(int $schoolId): string
     {
         $prefix = config('students.student_number.prefix', 'STU');

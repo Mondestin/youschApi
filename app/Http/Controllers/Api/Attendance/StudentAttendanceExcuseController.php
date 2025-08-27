@@ -20,6 +20,7 @@ class StudentAttendanceExcuseController extends Controller
 
     /**
      * Display a listing of student attendance excuses.
+     * @group Attendance
      */
     public function index(Request $request): JsonResponse
     {
@@ -37,6 +38,7 @@ class StudentAttendanceExcuseController extends Controller
 
     /**
      * Store a newly created student attendance excuse.
+     * @group Attendance
      */
     public function store(Request $request): JsonResponse
     {
@@ -73,6 +75,7 @@ class StudentAttendanceExcuseController extends Controller
 
     /**
      * Display the specified student attendance excuse.
+     * @group Attendance
      */
     public function show(StudentAttendanceExcuse $excuse): JsonResponse
     {
@@ -86,6 +89,7 @@ class StudentAttendanceExcuseController extends Controller
 
     /**
      * Update the specified student attendance excuse.
+     * @group Attendance
      */
     public function update(Request $request, StudentAttendanceExcuse $excuse): JsonResponse
     {
@@ -132,6 +136,7 @@ class StudentAttendanceExcuseController extends Controller
 
     /**
      * Remove the specified student attendance excuse.
+     * @group Attendance
      */
     public function destroy(StudentAttendanceExcuse $excuse): JsonResponse
     {
@@ -157,6 +162,7 @@ class StudentAttendanceExcuseController extends Controller
 
     /**
      * Get excuses by student.
+     * @group Attendance
      */
     public function byStudent(Request $request, int $studentId): JsonResponse
     {
@@ -172,6 +178,7 @@ class StudentAttendanceExcuseController extends Controller
 
     /**
      * Get excuses by class.
+     * @group Attendance
      */
     public function byClass(Request $request, int $classId): JsonResponse
     {
@@ -187,6 +194,7 @@ class StudentAttendanceExcuseController extends Controller
 
     /**
      * Get excuses by subject.
+     * @group Attendance
      */
     public function bySubject(Request $request, int $subjectId): JsonResponse
     {
@@ -202,6 +210,7 @@ class StudentAttendanceExcuseController extends Controller
 
     /**
      * Get excuses by date.
+     * @group Attendance
      */
     public function byDate(Request $request, string $date): JsonResponse
     {
@@ -217,6 +226,7 @@ class StudentAttendanceExcuseController extends Controller
 
     /**
      * Get excuses by date range.
+     * @group Attendance
      */
     public function byDateRange(Request $request): JsonResponse
     {
@@ -245,6 +255,7 @@ class StudentAttendanceExcuseController extends Controller
 
     /**
      * Get pending excuses.
+     * @group Attendance
      */
     public function pending(Request $request): JsonResponse
     {
@@ -260,7 +271,8 @@ class StudentAttendanceExcuseController extends Controller
 
     /**
      * Get approved excuses.
-     */
+     * @group Attendance
+    */
     public function approved(Request $request): JsonResponse
     {
         $filters = $request->only(['class_id', 'subject_id', 'date']);
@@ -275,7 +287,8 @@ class StudentAttendanceExcuseController extends Controller
 
     /**
      * Get rejected excuses.
-     */
+     * @group Attendance
+    */
     public function rejected(Request $request): JsonResponse
     {
         $filters = $request->only(['class_id', 'subject_id', 'date']);
@@ -290,7 +303,8 @@ class StudentAttendanceExcuseController extends Controller
 
     /**
      * Approve an excuse request.
-     */
+     * @group Attendance
+    */
     public function approve(StudentAttendanceExcuse $excuse): JsonResponse
     {
         $reviewerId = Auth::id();
@@ -316,7 +330,8 @@ class StudentAttendanceExcuseController extends Controller
 
     /**
      * Reject an excuse request.
-     */
+     * @group Attendance
+    */
     public function reject(StudentAttendanceExcuse $excuse): JsonResponse
     {
         $reviewerId = Auth::id();
@@ -342,7 +357,8 @@ class StudentAttendanceExcuseController extends Controller
 
     /**
      * Get excuse statistics.
-     */
+     * @group Attendance
+    */
     public function statistics(Request $request): JsonResponse
     {
         $filters = $request->only(['start_date', 'end_date', 'class_id', 'subject_id']);
@@ -357,7 +373,8 @@ class StudentAttendanceExcuseController extends Controller
 
     /**
      * Generate excuse report.
-     */
+     * @group Attendance
+    */
     public function report(Request $request): JsonResponse
     {
         $filters = $request->only(['start_date', 'end_date', 'class_id', 'subject_id']);
@@ -372,7 +389,8 @@ class StudentAttendanceExcuseController extends Controller
 
     /**
      * Get excuse trends for a student.
-     */
+     * @group Attendance
+    */
     public function trends(Request $request, int $studentId): JsonResponse
     {
         $validator = Validator::make($request->all(), [

@@ -16,6 +16,7 @@ class ExamController extends Controller
 {
     /**
      * Display a listing of exams.
+     * @group Admin Academics
      */
     public function index(Request $request): JsonResponse
     {
@@ -70,6 +71,7 @@ class ExamController extends Controller
 
     /**
      * Store a newly created exam.
+     * @group Admin Academics
      */
     public function store(Request $request): JsonResponse
     {
@@ -153,6 +155,7 @@ class ExamController extends Controller
 
     /**
      * Display the specified exam.
+     * @group Admin Academics
      */
     public function show(Exam $exam): JsonResponse
     {
@@ -171,6 +174,7 @@ class ExamController extends Controller
 
     /**
      * Update the specified exam.
+     * @group Admin Academics
      */
     public function update(Request $request, Exam $exam): JsonResponse
     {
@@ -267,6 +271,7 @@ class ExamController extends Controller
 
     /**
      * Remove the specified exam.
+     * @group Admin Academics
      */
     public function destroy(Exam $exam): JsonResponse
     {
@@ -297,6 +302,7 @@ class ExamController extends Controller
 
     /**
      * Get exams by subject.
+     * @group Admin Academics
      */
     public function bySubject(Subject $subject, Request $request): JsonResponse
     {
@@ -325,6 +331,7 @@ class ExamController extends Controller
 
     /**
      * Get exams by class.
+     * @group Admin Academics
      */
     public function byClass(ClassRoom $class, Request $request): JsonResponse
     {
@@ -353,6 +360,7 @@ class ExamController extends Controller
 
     /**
      * Get upcoming exams.
+     * @group Admin Academics
      */
     public function upcoming(Request $request): JsonResponse
     {
@@ -385,7 +393,8 @@ class ExamController extends Controller
 
     /**
      * Get exam statistics.
-     */
+     * @group Admin Academics
+    */
     public function statistics(Exam $exam): JsonResponse
     {
         $stats = [

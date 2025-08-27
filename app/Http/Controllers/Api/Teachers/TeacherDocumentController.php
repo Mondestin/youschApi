@@ -24,7 +24,8 @@ class TeacherDocumentController extends Controller
      *
      * @param Request $request
      * @return JsonResponse
-     */
+     * @group Teachers
+    */
     public function index(Request $request): JsonResponse
     {
         try {
@@ -49,7 +50,8 @@ class TeacherDocumentController extends Controller
      *
      * @param Request $request
      * @return JsonResponse
-     */
+     * @group Teachers
+    */
     public function store(Request $request): JsonResponse
     {
         try {
@@ -110,7 +112,8 @@ class TeacherDocumentController extends Controller
      *
      * @param int $id
      * @return JsonResponse
-     */
+     * @group Teachers
+    */
     public function show(int $id): JsonResponse
     {
         try {
@@ -142,7 +145,8 @@ class TeacherDocumentController extends Controller
      * @param Request $request
      * @param int $id
      * @return JsonResponse
-     */
+     * @group Teachers
+    */
     public function update(Request $request, int $id): JsonResponse
     {
         try {
@@ -199,7 +203,8 @@ class TeacherDocumentController extends Controller
      *
      * @param int $id
      * @return JsonResponse
-     */
+     * @group Teachers
+    */
     public function destroy(int $id): JsonResponse
     {
         try {
@@ -243,7 +248,8 @@ class TeacherDocumentController extends Controller
      *
      * @param int $id
      * @return JsonResponse|\Symfony\Component\HttpFoundation\StreamedResponse
-     */
+     * @group Teachers
+    */
     public function download(int $id)
     {
         try {
@@ -280,7 +286,8 @@ class TeacherDocumentController extends Controller
      *
      * @param int $id
      * @return JsonResponse
-     */
+     * @group Teachers
+    */
     public function approve(int $id): JsonResponse
     {
         try {
@@ -329,7 +336,8 @@ class TeacherDocumentController extends Controller
      * @param Request $request
      * @param int $id
      * @return JsonResponse
-     */
+     * @group Teachers
+    */
     public function reject(Request $request, int $id): JsonResponse
     {
         try {
@@ -392,7 +400,8 @@ class TeacherDocumentController extends Controller
      *
      * @param int $teacherId
      * @return JsonResponse
-     */
+     * @group Teachers
+    */
     public function getByTeacher(int $teacherId): JsonResponse
     {
         try {
@@ -416,7 +425,8 @@ class TeacherDocumentController extends Controller
      *
      * @param string $type
      * @return JsonResponse
-     */
+     * @group Teachers
+    */
     public function getByType(string $type): JsonResponse
     {
         try {
@@ -440,7 +450,8 @@ class TeacherDocumentController extends Controller
      *
      * @param string $status
      * @return JsonResponse
-     */
+     * @group Teachers
+    */
     public function getByStatus(string $status): JsonResponse
     {
         try {
@@ -463,7 +474,8 @@ class TeacherDocumentController extends Controller
      * Get pending documents
      *
      * @return JsonResponse
-     */
+     * @group Teachers
+    */
     public function getPending(): JsonResponse
     {
         try {
@@ -486,7 +498,8 @@ class TeacherDocumentController extends Controller
      * Get expired documents
      *
      * @return JsonResponse
-     */
+     * @group Teachers
+    */
     public function getExpired(): JsonResponse
     {
         try {
@@ -509,7 +522,8 @@ class TeacherDocumentController extends Controller
      * Get document statistics
      *
      * @return JsonResponse
-     */
+     * @group Teachers
+    */
     public function getStatistics(): JsonResponse
     {
         try {

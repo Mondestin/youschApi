@@ -21,7 +21,8 @@ class TeacherAssignmentController extends Controller
 
     /**
      * Display a listing of teacher assignments.
-     */
+     * @group Teachers
+    */  
     public function index(Request $request): JsonResponse
     {
         $filters = $request->only(['teacher_id', 'class_id', 'subject_id', 'academic_year', 'term']);
@@ -42,7 +43,8 @@ class TeacherAssignmentController extends Controller
 
     /**
      * Store a newly created teacher assignment.
-     */
+     * @group Teachers
+    */
     public function store(Request $request): JsonResponse
     {
         $validator = Validator::make($request->all(), [
@@ -96,7 +98,8 @@ class TeacherAssignmentController extends Controller
 
     /**
      * Display the specified teacher assignment.
-     */
+     * @group Teachers
+    */
     public function show(TeacherAssignment $assignment): JsonResponse
     {
         return response()->json([
@@ -107,7 +110,8 @@ class TeacherAssignmentController extends Controller
 
     /**
      * Update the specified teacher assignment.
-     */
+     * @group Teachers
+    */
     public function update(Request $request, TeacherAssignment $assignment): JsonResponse
     {
         $validator = Validator::make($request->all(), [
@@ -171,7 +175,8 @@ class TeacherAssignmentController extends Controller
 
     /**
      * Remove the specified teacher assignment.
-     */
+     * @group Teachers
+    */
     public function destroy(TeacherAssignment $assignment): JsonResponse
     {
         $deleted = $this->assignmentRepository->deleteAssignment($assignment);
@@ -191,7 +196,8 @@ class TeacherAssignmentController extends Controller
 
     /**
      * Get assignments by teacher.
-     */
+     * @group Teachers
+    */
     public function byTeacher(Teacher $teacher): JsonResponse
     {
         $assignments = $this->assignmentRepository->getAssignmentsByTeacher($teacher->id);
@@ -204,7 +210,8 @@ class TeacherAssignmentController extends Controller
 
     /**
      * Get assignments by class.
-     */
+     * @group Teachers
+    */
     public function byClass(AcademicClass $class): JsonResponse
     {
         $assignments = $this->assignmentRepository->getAssignmentsByClass($class->id);
@@ -217,7 +224,8 @@ class TeacherAssignmentController extends Controller
 
     /**
      * Get assignments by subject.
-     */
+     * @group Teachers
+    */
     public function bySubject(Subject $subject): JsonResponse
     {
         $assignments = $this->assignmentRepository->getAssignmentsBySubject($subject->id);
@@ -230,7 +238,8 @@ class TeacherAssignmentController extends Controller
 
     /**
      * Bulk import assignments.
-     */
+     * @group Teachers
+    */
     public function bulkImport(Request $request): JsonResponse
     {
         $validator = Validator::make($request->all(), [
@@ -264,7 +273,8 @@ class TeacherAssignmentController extends Controller
 
     /**
      * Bulk export assignments.
-     */
+     * @group Teachers
+    */
     public function bulkExport(Request $request): JsonResponse
     {
         $filters = $request->only(['teacher_id', 'class_id', 'subject_id', 'academic_year', 'term']);
@@ -280,7 +290,8 @@ class TeacherAssignmentController extends Controller
 
     /**
      * Get assignment statistics.
-     */
+     * @group Teachers
+    */
     public function statistics(): JsonResponse
     {
         $stats = $this->assignmentRepository->getAssignmentStatistics();
@@ -293,7 +304,8 @@ class TeacherAssignmentController extends Controller
 
     /**
      * Generate assignment analysis report.
-     */
+     * @group Teachers
+    */
     public function assignmentReport(Request $request): JsonResponse
     {
         $filters = $request->only(['academic_year', 'term', 'department_id', 'faculty_id']);

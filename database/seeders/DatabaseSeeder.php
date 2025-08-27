@@ -27,6 +27,7 @@ class DatabaseSeeder extends Seeder
             StudentsManagementSeeder::class,
             TeachersManagementSeeder::class,
             AttendanceManagementSeeder::class,
+            ExamsGradingsSeeder::class,
         ]);
     }
 }

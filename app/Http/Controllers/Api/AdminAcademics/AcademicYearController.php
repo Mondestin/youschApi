@@ -14,6 +14,7 @@ class AcademicYearController extends Controller
 {
     /**
      * Display a listing of academic years.
+     * @group Admin Academics
      */
     public function index(Request $request): JsonResponse
     {
@@ -40,6 +41,7 @@ class AcademicYearController extends Controller
 
     /**
      * Store a newly created academic year.
+     * @group Admin Academics
      */
     public function store(Request $request): JsonResponse
     {
@@ -96,6 +98,7 @@ class AcademicYearController extends Controller
 
     /**
      * Display the specified academic year.
+     * @group Admin Academics
      */
     public function show(AcademicYear $academicYear): JsonResponse
     {
@@ -116,6 +119,7 @@ class AcademicYearController extends Controller
 
     /**
      * Update the specified academic year.
+     * @group Admin Academics
      */
     public function update(Request $request, AcademicYear $academicYear): JsonResponse
     {
@@ -178,6 +182,7 @@ class AcademicYearController extends Controller
 
     /**
      * Remove the specified academic year.
+     * @group Admin Academics
      */
     public function destroy(AcademicYear $academicYear): JsonResponse
     {
@@ -209,6 +214,7 @@ class AcademicYearController extends Controller
 
     /**
      * Activate an academic year (deactivate others).
+     * @group Admin Academics
      */
     public function activate(AcademicYear $academicYear): JsonResponse
     {
@@ -240,7 +246,8 @@ class AcademicYearController extends Controller
 
     /**
      * Get academic year statistics.
-     */
+     * @group Admin Academics
+    */
     public function statistics(AcademicYear $academicYear): JsonResponse
     {
         $stats = [

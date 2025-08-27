@@ -21,7 +21,8 @@ class StudentController extends Controller
 
     /**
      * Display a listing of students.
-     */
+     * @group Students
+    */
     public function index(Request $request): JsonResponse
     {
         try {
@@ -63,7 +64,8 @@ class StudentController extends Controller
 
     /**
      * Store a newly created student.
-     */
+     * @group Students
+    */
     public function store(Request $request): JsonResponse
     {
         try {
@@ -144,7 +146,8 @@ class StudentController extends Controller
 
     /**
      * Display the specified student.
-     */
+     * @group Students
+    */
     public function show(Student $student): JsonResponse
     {
         try {
@@ -184,7 +187,8 @@ class StudentController extends Controller
 
     /**
      * Update the specified student.
-     */
+     * @group Students
+    */
     public function update(Request $request, Student $student): JsonResponse
     {
         try {
@@ -247,7 +251,8 @@ class StudentController extends Controller
 
     /**
      * Remove the specified student.
-     */
+     * @group Students
+    */
     public function destroy(Student $student): JsonResponse
     {
         try {
@@ -299,7 +304,8 @@ class StudentController extends Controller
 
     /**
      * Change student status.
-     */
+     * @group Students
+    */
     public function changeStatus(Request $request, Student $student): JsonResponse
     {
         try {
@@ -352,7 +358,8 @@ class StudentController extends Controller
 
     /**
      * Assign student to class.
-     */
+     * @group Students
+    */
     public function assignToClass(Request $request, Student $student): JsonResponse
     {
         try {
@@ -405,7 +412,8 @@ class StudentController extends Controller
 
     /**
      * Get student academic performance.
-     */
+     * @group Students
+    */
     public function academicPerformance(Student $student): JsonResponse
     {
         try {
@@ -443,7 +451,8 @@ class StudentController extends Controller
 
     /**
      * Get student statistics.
-     */
+     * @group Students
+    */
     public function statistics(Request $request): JsonResponse
     {
         try {
@@ -480,7 +489,8 @@ class StudentController extends Controller
 
     /**
      * Bulk import students.
-     */
+     * @group Students
+    */
     public function bulkImport(Request $request): JsonResponse
     {
         try {
@@ -529,7 +539,8 @@ class StudentController extends Controller
 
     /**
      * Bulk export students.
-     */
+     * @group Students
+    */
     public function bulkExport(Request $request): JsonResponse
     {
         try {
@@ -578,7 +589,8 @@ class StudentController extends Controller
 
     /**
      * Get enrollment trends report.
-     */
+     * @group Students
+    */
     public function enrollmentTrends(Request $request): JsonResponse
     {
         try {
@@ -612,7 +624,8 @@ class StudentController extends Controller
 
     /**
      * Get student demographics report.
-     */
+     * @group Students
+    */
     public function demographicsReport(Request $request): JsonResponse
     {
         try {

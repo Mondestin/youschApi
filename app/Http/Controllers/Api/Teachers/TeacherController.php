@@ -24,6 +24,7 @@ class TeacherController extends Controller
      *
      * @param Request $request
      * @return JsonResponse
+     * @group Teachers
      */
     public function index(Request $request): JsonResponse
     {
@@ -49,6 +50,7 @@ class TeacherController extends Controller
      *
      * @param Request $request
      * @return JsonResponse
+     * @group Teachers
      */
     public function store(Request $request): JsonResponse
     {
@@ -98,6 +100,7 @@ class TeacherController extends Controller
      *
      * @param int $id
      * @return JsonResponse
+     * @group Teachers
      */
     public function show(int $id): JsonResponse
     {
@@ -130,6 +133,7 @@ class TeacherController extends Controller
      * @param Request $request
      * @param int $id
      * @return JsonResponse
+     * @group Teachers
      */
     public function update(Request $request, int $id): JsonResponse
     {
@@ -201,6 +205,7 @@ class TeacherController extends Controller
      *
      * @param int $id
      * @return JsonResponse
+     * @group Teachers
      */
     public function destroy(int $id): JsonResponse
     {
@@ -240,6 +245,7 @@ class TeacherController extends Controller
      *
      * @param int $departmentId
      * @return JsonResponse
+     * @group Teachers
      */
     public function getByDepartment(int $departmentId): JsonResponse
     {
@@ -264,6 +270,7 @@ class TeacherController extends Controller
      *
      * @param int $facultyId
      * @return JsonResponse
+     * @group Teachers
      */
     public function getByFaculty(int $facultyId): JsonResponse
     {
@@ -287,7 +294,8 @@ class TeacherController extends Controller
      * Get teacher statistics
      *
      * @return JsonResponse
-     */
+     * @group Teachers
+    */
     public function getStatistics(): JsonResponse
     {
         try {

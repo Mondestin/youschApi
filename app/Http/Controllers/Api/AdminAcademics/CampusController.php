@@ -13,6 +13,7 @@ class CampusController extends Controller
 {
     /**
      * Display a listing of campuses.
+     * @group Admin Academics
      */
     public function index(Request $request): JsonResponse
     {
@@ -39,6 +40,7 @@ class CampusController extends Controller
 
     /**
      * Store a newly created campus.
+     * @group Admin Academics
      */
     public function store(Request $request): JsonResponse
     {
@@ -77,6 +79,7 @@ class CampusController extends Controller
 
     /**
      * Display the specified campus.
+     * @group Admin Academics
      */
     public function show(Campus $campus): JsonResponse
     {
@@ -91,6 +94,7 @@ class CampusController extends Controller
 
     /**
      * Update the specified campus.
+     * @group Admin Academics
      */
     public function update(Request $request, Campus $campus): JsonResponse
     {
@@ -129,6 +133,7 @@ class CampusController extends Controller
 
     /**
      * Remove the specified campus.
+     * @group Admin Academics
      */
     public function destroy(Campus $campus): JsonResponse
     {
@@ -159,6 +164,7 @@ class CampusController extends Controller
 
     /**
      * Get campus statistics.
+     * @group Admin Academics
      */
     public function statistics(Campus $campus): JsonResponse
     {
@@ -178,7 +184,8 @@ class CampusController extends Controller
 
     /**
      * Get campuses by school.
-     */
+     * @group Admin Academics
+    */
     public function bySchool(School $school): JsonResponse
     {
         $campuses = $school->campuses()

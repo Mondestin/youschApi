@@ -23,6 +23,7 @@ class TeacherTimetableController extends Controller
      *
      * @param Request $request
      * @return JsonResponse
+     * @group Teachers
      */
     public function index(Request $request): JsonResponse
     {
@@ -48,6 +49,7 @@ class TeacherTimetableController extends Controller
      *
      * @param Request $request
      * @return JsonResponse
+     * @group Teachers
      */
     public function store(Request $request): JsonResponse
     {
@@ -112,6 +114,7 @@ class TeacherTimetableController extends Controller
      *
      * @param int $id
      * @return JsonResponse
+     * @group Teachers
      */
     public function show(int $id): JsonResponse
     {
@@ -144,6 +147,7 @@ class TeacherTimetableController extends Controller
      * @param Request $request
      * @param int $id
      * @return JsonResponse
+     * @group Teachers
      */
     public function update(Request $request, int $id): JsonResponse
     {
@@ -225,6 +229,7 @@ class TeacherTimetableController extends Controller
      *
      * @param int $id
      * @return JsonResponse
+     * @group Teachers
      */
     public function destroy(int $id): JsonResponse
     {
@@ -264,6 +269,7 @@ class TeacherTimetableController extends Controller
      *
      * @param int $teacherId
      * @return JsonResponse
+     * @group Teachers
      */
     public function getByTeacher(int $teacherId): JsonResponse
     {
@@ -288,6 +294,7 @@ class TeacherTimetableController extends Controller
      *
      * @param int $classId
      * @return JsonResponse
+     * @group Teachers
      */
     public function getByClass(int $classId): JsonResponse
     {
@@ -312,6 +319,7 @@ class TeacherTimetableController extends Controller
      *
      * @param int $subjectId
      * @return JsonResponse
+     * @group Teachers
      */
     public function getBySubject(int $subjectId): JsonResponse
     {
@@ -336,6 +344,7 @@ class TeacherTimetableController extends Controller
      *
      * @param string $dayOfWeek
      * @return JsonResponse
+     * @group Teachers
      */
     public function getByDay(string $dayOfWeek): JsonResponse
     {
@@ -373,6 +382,7 @@ class TeacherTimetableController extends Controller
      * @param int $academicYearId
      * @param int $termId
      * @return JsonResponse
+     * @group Teachers
      */
     public function getByAcademicYearAndTerm(int $academicYearId, int $termId): JsonResponse
     {
@@ -399,6 +409,7 @@ class TeacherTimetableController extends Controller
      * @param int $academicYearId
      * @param int $termId
      * @return JsonResponse
+     * @group Teachers
      */
     public function getWeeklySchedule(int $teacherId, int $academicYearId, int $termId): JsonResponse
     {
@@ -425,7 +436,8 @@ class TeacherTimetableController extends Controller
      * @param int $academicYearId
      * @param int $termId
      * @return JsonResponse
-     */
+     * @group Teachers
+    */
     public function getClassWeeklySchedule(int $classId, int $academicYearId, int $termId): JsonResponse
     {
         try {
@@ -449,7 +461,8 @@ class TeacherTimetableController extends Controller
      *
      * @param Request $request
      * @return JsonResponse
-     */
+     * @group Teachers
+    */
     public function checkConflicts(Request $request): JsonResponse
     {
         try {
@@ -501,7 +514,8 @@ class TeacherTimetableController extends Controller
      * Get timetable statistics
      *
      * @return JsonResponse
-     */
+     * @group Teachers
+    */
     public function getStatistics(): JsonResponse
     {
         try {

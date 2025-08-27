@@ -14,7 +14,8 @@ class DepartmentController extends Controller
 {
     /**
      * Display a listing of departments.
-     */
+     * @group Admin Academics
+    */
     public function index(Request $request): JsonResponse
     {
         $query = Department::with(['faculty.school', 'head', 'courses']);
@@ -42,7 +43,8 @@ class DepartmentController extends Controller
 
     /**
      * Store a newly created department.
-     */
+     * @group Admin Academics
+    */
     public function store(Request $request): JsonResponse
     {
         try {
@@ -77,7 +79,8 @@ class DepartmentController extends Controller
 
     /**
      * Display the specified department.
-     */
+     * @group Admin Academics
+    */
     public function show(Department $department): JsonResponse
     {
         $department->load(['faculty.school', 'head', 'courses.subjects']);
@@ -91,7 +94,8 @@ class DepartmentController extends Controller
 
     /**
      * Update the specified department.
-     */
+     * @group Admin Academics
+    */
     public function update(Request $request, Department $department): JsonResponse
     {
         try {
@@ -126,7 +130,8 @@ class DepartmentController extends Controller
 
     /**
      * Remove the specified department.
-     */
+     * @group Admin Academics
+    */
     public function destroy(Department $department): JsonResponse
     {
         try {
@@ -156,7 +161,8 @@ class DepartmentController extends Controller
 
     /**
      * Assign a department head.
-     */
+     * @group Admin Academics
+    */
     public function assignHead(Request $request, Department $department): JsonResponse
     {
         try {
@@ -189,7 +195,8 @@ class DepartmentController extends Controller
 
     /**
      * Get departments by faculty.
-     */
+     * @group Admin Academics
+    */
     public function byFaculty(Faculty $faculty): JsonResponse
     {
         $departments = $faculty->departments()
@@ -205,7 +212,8 @@ class DepartmentController extends Controller
 
     /**
      * Get statistics for a department.
-     */
+     * @group Admin Academics
+    */
     public function statistics(Department $department): JsonResponse
     {
         $statistics = $department->statistics();

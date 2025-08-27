@@ -166,13 +166,48 @@ return [
 
     'groups' => [
         // Endpoints which don't have a @group will be placed in this default group.
-        'default' => 'Endpoints',
+        'default' => 'General',
 
         // By default, Scribe will sort groups alphabetically, and endpoints in the order their routes are defined.
         // You can override this by listing the groups, subgroups and endpoints here in the order you want them.
         // See https://scribe.knuckles.wtf/blog/laravel-v4#easier-sorting and https://scribe.knuckles.wtf/laravel/reference/config#order for details
         // Note: does not work for `external` docs types
-        'order' => [],
+        'order' => [
+            'academic',
+            'students', 
+            'teachers',
+            'attendance',
+            'exams-gradings',
+        ],
+    ],
+
+    // Service-based grouping for API documentation
+    'service_groups' => [
+        'academic' => [
+            'routes' => ['api/academic/*'],
+            'title' => 'Academic Management',
+            'description' => 'Academic year, terms, classes, subjects, and timetables management',
+        ],
+        'students' => [
+            'routes' => ['api/students/*'],
+            'title' => 'Student Management',
+            'description' => 'Student profiles, enrollments, and academic history',
+        ],
+        'teachers' => [
+            'routes' => ['api/teachers/*'],
+            'title' => 'Teacher Management',
+            'description' => 'Teacher profiles, assignments, and performance tracking',
+        ],
+        'attendance' => [
+            'routes' => ['api/attendance/*'],
+            'title' => 'Attendance Management',
+            'description' => 'Student and teacher attendance tracking and excuses',
+        ],
+        'exams-gradings' => [
+            'routes' => ['api/exams-gradings/*'],
+            'title' => 'Exams & Gradings',
+            'description' => 'Exam management, marks entry, GPA calculation, and report cards',
+        ],
     ],
 
     // Custom logo path. This will be used as the value of the src attribute for the <img> tag,

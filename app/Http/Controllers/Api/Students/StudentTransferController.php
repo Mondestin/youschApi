@@ -21,7 +21,8 @@ class StudentTransferController extends Controller
 
     /**
      * Display a listing of student transfers.
-     */
+     * @group Students
+    */
     public function index(Request $request): JsonResponse
     {
         try {
@@ -63,7 +64,8 @@ class StudentTransferController extends Controller
 
     /**
      * Store a newly created student transfer.
-     */
+     * @group Students
+    */
     public function store(Request $request): JsonResponse
     {
         try {
@@ -130,7 +132,8 @@ class StudentTransferController extends Controller
 
     /**
      * Display the specified student transfer.
-     */
+     * @group Students
+    */
     public function show(StudentTransfer $transfer): JsonResponse
     {
         try {
@@ -162,7 +165,8 @@ class StudentTransferController extends Controller
 
     /**
      * Update the specified student transfer.
-     */
+     * @group Students
+    */
     public function update(Request $request, StudentTransfer $transfer): JsonResponse
     {
         try {
@@ -223,7 +227,8 @@ class StudentTransferController extends Controller
 
     /**
      * Remove the specified student transfer.
-     */
+     * @group Students
+    */
     public function destroy(StudentTransfer $transfer): JsonResponse
     {
         try {
@@ -266,7 +271,8 @@ class StudentTransferController extends Controller
 
     /**
      * Approve a student transfer.
-     */
+     * @group Students
+    */
     public function approve(Request $request, StudentTransfer $transfer): JsonResponse
     {
         try {
@@ -323,7 +329,8 @@ class StudentTransferController extends Controller
 
     /**
      * Reject a student transfer.
-     */
+     * @group Students
+    */
     public function reject(Request $request, StudentTransfer $transfer): JsonResponse
     {
         try {
@@ -364,7 +371,8 @@ class StudentTransferController extends Controller
 
     /**
      * Get transfers by student.
-     */
+     * @group Students
+    */
     public function byStudent(int $studentId): JsonResponse
     {
         try {
@@ -399,7 +407,8 @@ class StudentTransferController extends Controller
 
     /**
      * Get transfers by campus.
-     */
+     * @group Students
+    */
     public function byCampus(int $campusId): JsonResponse
     {
         try {
@@ -437,7 +446,8 @@ class StudentTransferController extends Controller
 
     /**
      * Get transfer statistics.
-     */
+     * @group Students
+    */
     public function statistics(Request $request): JsonResponse
     {
         try {
@@ -471,7 +481,8 @@ class StudentTransferController extends Controller
 
     /**
      * Get transfer analysis report.
-     */
+     * @group Students
+    */
     public function transferAnalysis(Request $request): JsonResponse
     {
         try {

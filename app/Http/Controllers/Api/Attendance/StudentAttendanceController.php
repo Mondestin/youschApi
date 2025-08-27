@@ -18,6 +18,7 @@ class StudentAttendanceController extends Controller
 
     /**
      * Display a listing of student attendance records.
+     * @group Attendance
      */
     public function index(Request $request): JsonResponse
     {
@@ -35,6 +36,7 @@ class StudentAttendanceController extends Controller
 
     /**
      * Store a newly created student attendance record.
+     * @group Attendance
      */
     public function store(Request $request): JsonResponse
     {
@@ -64,6 +66,7 @@ class StudentAttendanceController extends Controller
 
     /**
      * Display the specified student attendance record.
+     * @group Attendance
      */
     public function show(StudentAttendance $attendance): JsonResponse
     {
@@ -77,6 +80,7 @@ class StudentAttendanceController extends Controller
 
     /**
      * Update the specified student attendance record.
+     * @group Attendance
      */
     public function update(Request $request, StudentAttendance $attendance): JsonResponse
     {
@@ -110,6 +114,7 @@ class StudentAttendanceController extends Controller
 
     /**
      * Remove the specified student attendance record.
+     * @group Attendance
      */
     public function destroy(StudentAttendance $attendance): JsonResponse
     {
@@ -130,6 +135,7 @@ class StudentAttendanceController extends Controller
 
     /**
      * Get attendance by student.
+     * @group Attendance
      */
     public function byStudent(Request $request, int $studentId): JsonResponse
     {
@@ -145,6 +151,7 @@ class StudentAttendanceController extends Controller
 
     /**
      * Get attendance by class.
+     * @group Attendance
      */
     public function byClass(Request $request, int $classId): JsonResponse
     {
@@ -160,6 +167,7 @@ class StudentAttendanceController extends Controller
 
     /**
      * Get attendance by subject.
+     * @group Attendance
      */
     public function bySubject(Request $request, int $subjectId): JsonResponse
     {
@@ -175,6 +183,7 @@ class StudentAttendanceController extends Controller
 
     /**
      * Get attendance by date.
+     * @group Attendance
      */
     public function byDate(Request $request, string $date): JsonResponse
     {
@@ -190,6 +199,7 @@ class StudentAttendanceController extends Controller
 
     /**
      * Get attendance by date range.
+     * @group Attendance
      */
     public function byDateRange(Request $request): JsonResponse
     {
@@ -218,6 +228,7 @@ class StudentAttendanceController extends Controller
 
     /**
      * Bulk create attendance records.
+     * @group Attendance
      */
     public function bulkCreate(Request $request): JsonResponse
     {
@@ -247,7 +258,8 @@ class StudentAttendanceController extends Controller
 
     /**
      * Bulk update attendance records.
-     */
+     * @group Attendance
+    */
     public function bulkUpdate(Request $request): JsonResponse
     {
         $validator = Validator::make($request->all(), [
@@ -272,7 +284,8 @@ class StudentAttendanceController extends Controller
 
     /**
      * Get attendance statistics.
-     */
+     * @group Attendance
+    */
     public function statistics(Request $request): JsonResponse
     {
         $filters = $request->only(['start_date', 'end_date', 'class_id', 'subject_id']);
@@ -287,7 +300,8 @@ class StudentAttendanceController extends Controller
 
     /**
      * Generate attendance report.
-     */
+     * @group Attendance
+    */
     public function report(Request $request): JsonResponse
     {
         $filters = $request->only(['start_date', 'end_date', 'class_id', 'subject_id']);
@@ -302,7 +316,8 @@ class StudentAttendanceController extends Controller
 
     /**
      * Get attendance trends for a student.
-     */
+     * @group Attendance
+    */
     public function trends(Request $request, int $studentId): JsonResponse
     {
         $validator = Validator::make($request->all(), [
@@ -328,7 +343,8 @@ class StudentAttendanceController extends Controller
 
     /**
      * Get class attendance summary for a specific date.
-     */
+     * @group Attendance
+    */
     public function classSummary(Request $request, int $classId): JsonResponse
     {
         $validator = Validator::make($request->all(), [
@@ -349,7 +365,8 @@ class StudentAttendanceController extends Controller
 
     /**
      * Get student attendance summary for a date range.
-     */
+     * @group Attendance
+    */
     public function studentSummary(Request $request, int $studentId): JsonResponse
     {
         $validator = Validator::make($request->all(), [

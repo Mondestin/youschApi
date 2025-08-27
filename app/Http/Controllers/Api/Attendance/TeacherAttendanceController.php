@@ -18,7 +18,8 @@ class TeacherAttendanceController extends Controller
 
     /**
      * Display a listing of teacher attendance records.
-     */
+     * @group Attendance
+    */
     public function index(Request $request): JsonResponse
     {
         $filters = $request->only([
@@ -35,7 +36,8 @@ class TeacherAttendanceController extends Controller
 
     /**
      * Store a newly created teacher attendance record.
-     */
+     * @group Attendance
+    */
     public function store(Request $request): JsonResponse
     {
         $validator = Validator::make($request->all(), [
@@ -64,7 +66,8 @@ class TeacherAttendanceController extends Controller
 
     /**
      * Display the specified teacher attendance record.
-     */
+     * @group Attendance
+    */
     public function show(TeacherAttendance $attendance): JsonResponse
     {
         $attendance->load(['teacher', 'class', 'subject', 'lab', 'timetable']);
@@ -77,7 +80,8 @@ class TeacherAttendanceController extends Controller
 
     /**
      * Update the specified teacher attendance record.
-     */
+     * @group Attendance
+    */
     public function update(Request $request, TeacherAttendance $attendance): JsonResponse
     {
         $validator = Validator::make($request->all(), [
@@ -110,7 +114,8 @@ class TeacherAttendanceController extends Controller
 
     /**
      * Remove the specified teacher attendance record.
-     */
+     * @group Attendance
+    */
     public function destroy(TeacherAttendance $attendance): JsonResponse
     {
         $deleted = $this->attendanceRepository->deleteAttendance($attendance);
@@ -130,7 +135,8 @@ class TeacherAttendanceController extends Controller
 
     /**
      * Get attendance by teacher.
-     */
+     * @group Attendance
+    */
     public function byTeacher(Request $request, int $teacherId): JsonResponse
     {
         $filters = $request->only(['start_date', 'end_date', 'status']);
@@ -145,7 +151,8 @@ class TeacherAttendanceController extends Controller
 
     /**
      * Get attendance by class.
-     */
+     * @group Attendance
+    */
     public function byClass(Request $request, int $classId): JsonResponse
     {
         $filters = $request->only(['date', 'status']);
@@ -160,7 +167,8 @@ class TeacherAttendanceController extends Controller
 
     /**
      * Get attendance by subject.
-     */
+     * @group Attendance
+    */
     public function bySubject(Request $request, int $subjectId): JsonResponse
     {
         $filters = $request->only(['date', 'status']);
@@ -175,7 +183,8 @@ class TeacherAttendanceController extends Controller
 
     /**
      * Get attendance by date.
-     */
+     * @group Attendance
+    */
     public function byDate(Request $request, string $date): JsonResponse
     {
         $filters = $request->only(['class_id', 'subject_id', 'status']);
@@ -190,7 +199,8 @@ class TeacherAttendanceController extends Controller
 
     /**
      * Get attendance by date range.
-     */
+     * @group Attendance
+    */
     public function byDateRange(Request $request): JsonResponse
     {
         $validator = Validator::make($request->all(), [
@@ -218,7 +228,8 @@ class TeacherAttendanceController extends Controller
 
     /**
      * Bulk create attendance records.
-     */
+     * @group Attendance
+    */
     public function bulkCreate(Request $request): JsonResponse
     {
         $validator = Validator::make($request->all(), [
@@ -247,7 +258,8 @@ class TeacherAttendanceController extends Controller
 
     /**
      * Bulk update attendance records.
-     */
+     * @group Attendance
+    */
     public function bulkUpdate(Request $request): JsonResponse
     {
         $validator = Validator::make($request->all(), [
@@ -272,7 +284,8 @@ class TeacherAttendanceController extends Controller
 
     /**
      * Get attendance statistics.
-     */
+     * @group Attendance
+    */
     public function statistics(Request $request): JsonResponse
     {
         $filters = $request->only(['start_date', 'end_date', 'class_id', 'subject_id']);
@@ -287,7 +300,8 @@ class TeacherAttendanceController extends Controller
 
     /**
      * Generate attendance report.
-     */
+     * @group Attendance
+    */
     public function report(Request $request): JsonResponse
     {
         $filters = $request->only(['start_date', 'end_date', 'class_id', 'subject_id']);
@@ -302,7 +316,8 @@ class TeacherAttendanceController extends Controller
 
     /**
      * Get attendance trends for a teacher.
-     */
+     * @group Attendance
+    */
     public function trends(Request $request, int $teacherId): JsonResponse
     {
         $validator = Validator::make($request->all(), [
@@ -328,7 +343,8 @@ class TeacherAttendanceController extends Controller
 
     /**
      * Get class attendance summary for a specific date.
-     */
+     * @group Attendance
+    */
     public function classSummary(Request $request, int $classId): JsonResponse
     {
         $validator = Validator::make($request->all(), [
@@ -349,7 +365,8 @@ class TeacherAttendanceController extends Controller
 
     /**
      * Get teacher attendance summary for a date range.
-     */
+     * @group Attendance
+    */
     public function teacherSummary(Request $request, int $teacherId): JsonResponse
     {
         $validator = Validator::make($request->all(), [
