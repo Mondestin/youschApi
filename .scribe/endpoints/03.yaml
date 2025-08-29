@@ -1124,7 +1124,7 @@ endpoints:
         name: start_date
         description: 'Must be a valid date.'
         required: true
-        example: '2025-08-26T15:01:31'
+        example: '2025-08-27T16:38:55'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -1134,7 +1134,7 @@ endpoints:
         name: end_date
         description: 'Must be a valid date. Must be a date after <code>start_date</code>.'
         required: true
-        example: '2051-09-19'
+        example: '2051-09-20'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -1154,7 +1154,7 @@ endpoints:
         name: is_active
         description: ''
         required: false
-        example: false
+        example: true
         type: boolean
         enumValues: []
         exampleWasSpecified: false
@@ -1176,10 +1176,10 @@ endpoints:
       subject_id: architecto
       academic_year: ngzmiyv
       term: dljnikhwaykcmyuw
-      start_date: '2025-08-26T15:01:31'
-      end_date: '2051-09-19'
+      start_date: '2025-08-27T16:38:55'
+      end_date: '2051-09-20'
       hours_per_week: 22
-      is_active: false
+      is_active: true
       notes: g
     fileParameters: []
     responses: []
@@ -1330,7 +1330,7 @@ endpoints:
         name: start_date
         description: 'Must be a valid date.'
         required: false
-        example: '2025-08-26T15:01:31'
+        example: '2025-08-27T16:38:55'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -1340,7 +1340,7 @@ endpoints:
         name: end_date
         description: 'Must be a valid date. Must be a date after <code>start_date</code>.'
         required: false
-        example: '2051-09-19'
+        example: '2051-09-20'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -1360,7 +1360,7 @@ endpoints:
         name: is_active
         description: ''
         required: false
-        example: false
+        example: true
         type: boolean
         enumValues: []
         exampleWasSpecified: false
@@ -1379,10 +1379,10 @@ endpoints:
     cleanBodyParameters:
       academic_year: bngzmiy
       term: vdljnikhwaykcmyu
-      start_date: '2025-08-26T15:01:31'
-      end_date: '2051-09-19'
+      start_date: '2025-08-27T16:38:55'
+      end_date: '2051-09-20'
       hours_per_week: 22
-      is_active: false
+      is_active: true
       notes: g
     fileParameters: []
     responses: []
@@ -1491,7 +1491,7 @@ endpoints:
   -
     httpMethods:
       - GET
-    uri: 'api/teachers/assignments/class/{class}'
+    uri: 'api/teachers/assignments/class/{class_id}'
     metadata:
       groupName: Teachers
       groupDescription: ''
@@ -1506,18 +1506,18 @@ endpoints:
       Content-Type: application/json
       Accept: application/json
     urlParameters:
-      class:
-        name: class
-        description: 'The class.'
+      class_id:
+        name: class_id
+        description: 'The ID of the class.'
         required: true
-        example: architecto
-        type: string
+        example: 1
+        type: integer
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanUrlParameters:
-      class: architecto
+      class_id: 1
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -1545,7 +1545,7 @@ endpoints:
   -
     httpMethods:
       - GET
-    uri: 'api/teachers/assignments/subject/{subject}'
+    uri: 'api/teachers/assignments/subject/{subject_id}'
     metadata:
       groupName: Teachers
       groupDescription: ''
@@ -1560,18 +1560,18 @@ endpoints:
       Content-Type: application/json
       Accept: application/json
     urlParameters:
-      subject:
-        name: subject
-        description: 'The subject.'
+      subject_id:
+        name: subject_id
+        description: 'The ID of the subject.'
         required: true
-        example: architecto
-        type: string
+        example: 1
+        type: integer
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanUrlParameters:
-      subject: architecto
+      subject_id: 1
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -3575,7 +3575,7 @@ endpoints:
         name: 'assignments[].start_date'
         description: 'Must be a valid date.'
         required: true
-        example: '2025-08-26T15:01:31'
+        example: '2025-08-27T16:38:55'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -3585,7 +3585,7 @@ endpoints:
         name: 'assignments[].end_date'
         description: 'Must be a valid date. Must be a date after <code>assignments.*.start_date</code>.'
         required: true
-        example: '2051-09-19'
+        example: '2051-09-20'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -3609,8 +3609,8 @@ endpoints:
           subject_id: architecto
           academic_year: ngzmiyv
           term: dljnikhwaykcmyuw
-          start_date: '2025-08-26T15:01:31'
-          end_date: '2051-09-19'
+          start_date: '2025-08-27T16:38:55'
+          end_date: '2051-09-20'
           hours_per_week: 22
     fileParameters: []
     responses: []

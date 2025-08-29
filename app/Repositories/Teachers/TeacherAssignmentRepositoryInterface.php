@@ -8,7 +8,6 @@ use Illuminate\Database\Eloquent\Collection;
 
 interface TeacherAssignmentRepositoryInterface
 {
-    public function getPaginatedAssignments(array $filters): LengthAwarePaginator;
     public function getAssignmentById(int $id): ?TeacherAssignment;
     public function createAssignment(array $data): TeacherAssignment;
     public function updateAssignment(TeacherAssignment $assignment, array $data): bool;

@@ -10,7 +10,12 @@ use Carbon\Carbon;
 
 class TeacherAssignmentRepository implements TeacherAssignmentRepositoryInterface
 {
-    public function getPaginatedAssignments(array $filters): LengthAwarePaginator
+    /**
+     * Get all assignments with filters
+     * @param array $filters The filters for the assignments
+     * @return Collection The assignments
+     */
+    public function getAllAssignments(array $filters = []): Collection
     {
         $query = TeacherAssignment::with(['teacher', 'class', 'subject']);
 
@@ -34,29 +39,59 @@ class TeacherAssignmentRepository implements TeacherAssignmentRepositoryInterfac
             $query->where('term', $filters['term']);
         }
 
-        return $query->orderBy('created_at', 'desc')->paginate(15);
+        $assignments = $query->orderBy('created_at', 'desc')->get();    
+
+        return $assignments;
+
     }
 
+
+    /**
+     * Get an assignment by its ID
+     * @param int $id The ID of the assignment
+     * @return TeacherAssignment|null The assignment if found, null otherwise
+     */
     public function getAssignmentById(int $id): ?TeacherAssignment
     {
         return TeacherAssignment::with(['teacher', 'class', 'subject'])->find($id);
     }
 
+    /**
+     * Create a new assignment
+     * @param array $data The data for the assignment
+     * @return TeacherAssignment The created assignment
+     */
     public function createAssignment(array $data): TeacherAssignment
     {
         return TeacherAssignment::create($data);
     }
 
+    /**
+     * Update an existing assignment
+     * @param TeacherAssignment $assignment The assignment to update
+     * @param array $data The data to update
+     * @return bool True if the update was successful, false otherwise
+     */
     public function updateAssignment(TeacherAssignment $assignment, array $data): bool
     {
         return $assignment->update($data);
     }
 
+    /**
+     * Delete an assignment
+     * @param TeacherAssignment $assignment The assignment to delete
+     * @return bool True if the deletion was successful, false otherwise
+     */
     public function deleteAssignment(TeacherAssignment $assignment): bool
     {
         return $assignment->delete();
     }
 
+    /**
+     * Get all assignments for a specific teacher
+     * @param int $teacherId The ID of the teacher
+     * @return Collection The assignments for the teacher
+     */
     public function getAssignmentsByTeacher(int $teacherId): Collection
     {
         return TeacherAssignment::with(['class', 'subject'])
@@ -67,6 +102,11 @@ class TeacherAssignmentRepository implements TeacherAssignmentRepositoryInterfac
             ->get();
     }
 
+    /**
+     * Get all assignments for a specific class
+     * @param int $classId The ID of the class
+     * @return Collection The assignments for the class
+     */
     public function getAssignmentsByClass(int $classId): Collection
     {
         return TeacherAssignment::with(['teacher', 'subject'])
@@ -77,6 +117,11 @@ class TeacherAssignmentRepository implements TeacherAssignmentRepositoryInterfac
             ->get();
     }
 
+    /**
+     * Get all assignments for a specific subject
+     * @param int $subjectId The ID of the subject
+     * @return Collection The assignments for the subject
+     */
     public function getAssignmentsBySubject(int $subjectId): Collection
     {
         return TeacherAssignment::with(['teacher', 'class'])
@@ -87,6 +132,11 @@ class TeacherAssignmentRepository implements TeacherAssignmentRepositoryInterfac
             ->get();
     }
 
+    /**
+     * Get all assignments for a specific academic year
+     * @param string $academicYear The academic year
+     * @return Collection The assignments for the academic year
+     */
     public function getAssignmentsByAcademicYear(string $academicYear): Collection
     {
         return TeacherAssignment::with(['teacher', 'class', 'subject'])
@@ -96,6 +146,11 @@ class TeacherAssignmentRepository implements TeacherAssignmentRepositoryInterfac
             ->get();
     }
 
+    /**
+     * Get all assignments for a specific term
+     * @param string $term The term
+     * @return Collection The assignments for the term
+     */
     public function getAssignmentsByTerm(string $term): Collection
     {
         return TeacherAssignment::with(['teacher', 'class', 'subject'])
@@ -105,6 +160,10 @@ class TeacherAssignmentRepository implements TeacherAssignmentRepositoryInterfac
             ->get();
     }
 
+    /**
+     * Get all active assignments
+     * @return Collection The active assignments
+     */
     public function getActiveAssignments(): Collection
     {
         return TeacherAssignment::with(['teacher', 'class', 'subject'])
@@ -116,6 +175,12 @@ class TeacherAssignmentRepository implements TeacherAssignmentRepositoryInterfac
             ->get();
     }
 
+    /**
+     * Get all assignments within a date range
+     * @param string $startDate The start date
+     * @param string $endDate The end date
+     * @return Collection The assignments within the date range
+     */
     public function getAssignmentsByDateRange(string $startDate, string $endDate): Collection
     {
         return TeacherAssignment::with(['teacher', 'class', 'subject'])
@@ -132,6 +197,18 @@ class TeacherAssignmentRepository implements TeacherAssignmentRepositoryInterfac
             ->get();
     }
 
+    /**
+     * Check for assignment conflicts
+     * @param int $teacherId The ID of the teacher
+     * @param int $classId The ID of the class
+     * @param int $subjectId The ID of the subject
+     * @param string $academicYear The academic year
+     * @param string $term The term
+     * @param string $startDate The start date
+     * @param string $endDate The end date
+     * @param int|null $excludeId The ID of the assignment to exclude from the check
+     * @return array The conflicts found
+     */
     public function checkAssignmentConflicts(
         int $teacherId, 
         int $classId, 
@@ -177,6 +254,11 @@ class TeacherAssignmentRepository implements TeacherAssignmentRepositoryInterfac
         return $conflictDetails;
     }
 
+    /**
+     * Bulk import assignments
+     * @param array $assignments The assignments to import
+     * @return array The results of the import
+     */
     public function bulkImportAssignments(array $assignments): array
     {
         $results = [
@@ -230,36 +312,11 @@ class TeacherAssignmentRepository implements TeacherAssignmentRepositoryInterfac
         return $results;
     }
 
+
     /**
-     * Get all assignments with filters (without pagination)
+     * Get assignment statistics
+     * @return array The statistics
      */
-    public function getAllAssignments(array $filters): Collection
-    {
-        $query = TeacherAssignment::with(['teacher', 'class', 'subject']);
-
-        if (isset($filters['teacher_id'])) {
-            $query->where('teacher_id', $filters['teacher_id']);
-        }
-
-        if (isset($filters['class_id'])) {
-            $query->where('class_id', $filters['class_id']);
-        }
-
-        if (isset($filters['subject_id'])) {
-            $query->where('subject_id', $filters['subject_id']);
-        }
-
-        if (isset($filters['academic_year'])) {
-            $query->where('academic_year', $filters['academic_year']);
-        }
-
-        if (isset($filters['term'])) {
-            $query->where('term', $filters['term']);
-        }
-
-        return $query->orderBy('created_at', 'desc')->get();
-    }
-
     public function getAssignmentStatistics(): array
     {
         $totalAssignments = TeacherAssignment::count();
@@ -291,6 +348,11 @@ class TeacherAssignmentRepository implements TeacherAssignmentRepositoryInterfac
         ];
     }
 
+    /**
+     * Generate an assignment report
+     * @param array $filters The filters for the report
+     * @return array The report
+     */
     public function generateAssignmentReport(array $filters): array
     {
         $query = TeacherAssignment::with(['teacher.department.faculty', 'class', 'subject']);

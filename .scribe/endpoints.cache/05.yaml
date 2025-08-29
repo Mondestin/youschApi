@@ -430,7 +430,7 @@ endpoints:
     responses:
       -
         status: 500
-        content: '{"success":false,"message":"Failed to retrieve upcoming exams","error":"SQLSTATE[42S22]: Column not found: 1054 Unknown column ''status'' in ''where clause'' (Connection: mysql, SQL: select count(*) as aggregate from `exams` where `exam_date` >= 2025-08-26 and `status` = scheduled)"}'
+        content: '{"success":false,"message":"Failed to retrieve upcoming exams","error":"SQLSTATE[42S22]: Column not found: 1054 Unknown column ''status'' in ''where clause'' (Connection: mysql, SQL: select count(*) as aggregate from `exams` where `exam_date` >= 2025-08-27 and `status` = scheduled)"}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
