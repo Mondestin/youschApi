@@ -11,6 +11,7 @@ class TeacherLeave extends Model
     use HasFactory;
 
     protected $table = 'teacher_leaves';
+    public $timestamps = false;
 
     protected $fillable = [
         'teacher_id',

@@ -11,6 +11,7 @@ class TeacherPerformance extends Model
     use HasFactory;
 
     protected $table = 'teacher_performance';
+    public $timestamps = false;
 
     protected $fillable = [
         'teacher_id',

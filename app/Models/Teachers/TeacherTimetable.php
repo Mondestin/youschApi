@@ -14,6 +14,7 @@ class TeacherTimetable extends Model
     use HasFactory;
 
     protected $table = 'teacher_timetables';
+    public $timestamps = false;
 
     protected $fillable = [
         'teacher_id',

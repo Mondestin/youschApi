@@ -175,29 +175,6 @@ class TeachersManagementSeeder extends Seeder
                 ]
             );
 
-            // Create sample performance evaluations
-            TeacherPerformance::firstOrCreate(
-                [
-                    'teacher_id' => $teacher->id,
-                    'evaluation_period' => 'Fall 2024'
-                ],
-                [
-                    'evaluation_date' => '2024-12-01',
-                    'evaluated_by' => 1, // Assuming user ID 1 exists
-                    'teaching_quality' => 4.5,
-                    'classroom_management' => 4.5,
-                    'student_engagement' => 4.5,
-                    'communication_skills' => 4.5,
-                    'professional_development' => 4.5,
-                    'attendance_punctuality' => 4.5,
-                    'student_feedback_score' => 4.5,
-                    'peer_review_score' => 4.5,
-                    'supervisor_rating' => 4.5,
-                    'overall_rating' => 4.5,
-                    'comments' => 'Excellent subject knowledge and communication skills. Could incorporate more interactive activities.',
-                    'recommendations' => 'Continue professional development in online teaching methods'
-                ]
-            );
 
             // Create sample timetable entries
             TeacherTimetable::firstOrCreate(

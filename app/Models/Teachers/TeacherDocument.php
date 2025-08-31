@@ -11,6 +11,7 @@ class TeacherDocument extends Model
     use HasFactory;
 
     protected $table = 'teacher_documents';
+    public $timestamps = false;
 
     protected $fillable = [
         'teacher_id',
