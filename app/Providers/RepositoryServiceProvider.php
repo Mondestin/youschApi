@@ -94,6 +94,11 @@ class RepositoryServiceProvider extends ServiceProvider
             return new TeacherRepository(new Teacher());
         });
 
+        // Bind Teacher Repository Interface
+        $this->app->bind(\App\Repositories\Teachers\TeacherRepositoryInterface::class, function ($app) {
+            return new \App\Repositories\Teachers\TeacherRepository(new \App\Models\Teachers\Teacher());
+        });
+
         $this->app->bind(TeacherLeaveRepository::class, function ($app) {
             return new TeacherLeaveRepository(new TeacherLeave());
         });

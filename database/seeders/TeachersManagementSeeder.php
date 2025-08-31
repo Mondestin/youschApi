@@ -252,7 +252,8 @@ class TeachersManagementSeeder extends Seeder
 
         $teachers = [
             [
-                'name' => 'Dr. Sarah Johnson',
+                'first_name' => 'Dr. Sarah',
+                'last_name' => 'Johnson',
                 'email' => 'sarah.johnson@yousch.edu',
                 'phone' => '+1-555-0101',
                 'address' => '123 Rue des Enseignants, Cité du Savoir',
@@ -269,7 +270,8 @@ class TeachersManagementSeeder extends Seeder
                 'status' => 'active',
             ],
             [
-                'name' => 'Prof. Michael Chen',
+                'first_name' => 'Prof. Michael',
+                'last_name' => 'Chen',
                 'email' => 'michael.chen@yousch.edu',
                 'phone' => '+1-555-0102',
                 'address' => '456 Avenue des Mathématiciens, District Nord',
@@ -286,7 +288,8 @@ class TeachersManagementSeeder extends Seeder
                 'status' => 'active',
             ],
             [
-                'name' => 'Dr. Emily Rodriguez',
+                'first_name' => 'Dr. Emily',
+                'last_name' => 'Rodriguez',
                 'email' => 'emily.rodriguez@yousch.edu',
                 'phone' => '+1-555-0103',
                 'address' => '789 Route des Gestionnaires, Quartier Est',
@@ -303,7 +306,8 @@ class TeachersManagementSeeder extends Seeder
                 'status' => 'active',
             ],
             [
-                'name' => 'Prof. David Thompson',
+                'first_name' => 'Prof. David',
+                'last_name' => 'Thompson',
                 'email' => 'david.thompson@yousch.edu',
                 'phone' => '+1-555-0104',
                 'address' => '321 Boulevard des Littéraires, Zone Ouest',
@@ -320,7 +324,8 @@ class TeachersManagementSeeder extends Seeder
                 'status' => 'active',
             ],
             [
-                'name' => 'Dr. Lisa Wang',
+                'first_name' => 'Dr. Lisa',
+                'last_name' => 'Wang',
                 'email' => 'lisa.wang@yousch.edu',
                 'phone' => '+1-555-0105',
                 'address' => '654 Chemin des Chercheurs, Secteur Sud',
