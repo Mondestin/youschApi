@@ -26,7 +26,8 @@ class AnalyticsController extends Controller
 {
     /**
      * Get comprehensive school analytics.
-     */
+     * @group Admin Academics
+    */
     public function schoolAnalytics(School $school, Request $request): JsonResponse
     {
         try {
@@ -81,7 +82,8 @@ class AnalyticsController extends Controller
 
     /**
      * Get campus analytics.
-     */
+     * @group Admin Academics
+    */
     public function campusAnalytics(Campus $campus, Request $request): JsonResponse
     {
         try {
@@ -129,7 +131,8 @@ class AnalyticsController extends Controller
 
     /**
      * Get faculty analytics.
-     */
+     * @group Admin Academics
+    */
     public function facultyAnalytics(Faculty $faculty, Request $request): JsonResponse
     {
         try {
@@ -173,7 +176,8 @@ class AnalyticsController extends Controller
 
     /**
      * Get department analytics.
-     */
+     * @group Admin Academics
+    */
     public function departmentAnalytics(Department $department, Request $request): JsonResponse
     {
         try {
@@ -225,7 +229,8 @@ class AnalyticsController extends Controller
 
     /**
      * Get course analytics.
-     */
+     * @group Admin Academics
+    */
     public function courseAnalytics(Course $course, Request $request): JsonResponse
     {
         try {
@@ -269,7 +274,8 @@ class AnalyticsController extends Controller
 
     /**
      * Get class analytics.
-     */
+     * @group Admin Academics
+    */
     public function classAnalytics(ClassRoom $class, Request $request): JsonResponse
     {
         try {
@@ -320,7 +326,8 @@ class AnalyticsController extends Controller
 
     /**
      * Get teacher workload analytics.
-     */
+     * @group Admin Academics
+    */
     public function teacherWorkloadAnalytics(Request $request): JsonResponse
     {
         try {
@@ -383,7 +390,8 @@ class AnalyticsController extends Controller
 
     /**
      * Get student performance analytics.
-     */
+     * @group Admin Academics
+    */
     public function studentPerformanceAnalytics(Request $request): JsonResponse
     {
         try {
@@ -458,7 +466,8 @@ class AnalyticsController extends Controller
 
     /**
      * Get system-wide analytics.
-     */
+     * @group Admin Academics
+    */
     public function systemAnalytics(Request $request): JsonResponse
     {
         try {
@@ -513,7 +522,11 @@ class AnalyticsController extends Controller
             ], 500);
         }
     }
-
+    
+    /**
+     * Helper methods for analytics calculations
+     * @group Admin Academics
+    */
     // Helper methods for analytics calculations
     private function getEnrollmentTrends($school, $academicYearId)
     {
@@ -556,6 +569,10 @@ class AnalyticsController extends Controller
         ];
     }
 
+    /**
+     * Get faculty distribution
+     * @group Admin Academics
+    */
     private function getFacultyDistribution($school)
     {
         return $school->faculties()->withCount(['departments', 'courses', 'subjects'])->get()
@@ -569,6 +586,10 @@ class AnalyticsController extends Controller
             });
     }
 
+    /**
+     * Get department performance
+     * @group Admin Academics
+    */
     private function getDepartmentPerformance($school, $academicYearId)
     {
         return $school->departments()->with(['faculty'])->get()
@@ -588,6 +609,10 @@ class AnalyticsController extends Controller
             });
     }
 
+    /**
+     * Get class distribution
+     * @group Admin Academics
+    */
     private function getClassDistribution($campus)
     {
         return $campus->classes()->with(['course.department.faculty'])->get()
@@ -602,6 +627,10 @@ class AnalyticsController extends Controller
             });
     }
 
+    /**
+     * Get enrollment capacity
+     * @group Admin Academics
+    */
     private function getEnrollmentCapacity($campus, $academicYearId)
     {
         $classes = $campus->classes()->get();
@@ -621,6 +650,10 @@ class AnalyticsController extends Controller
         ];
     }
 
+    /**
+     * Get department distribution
+     * @group Admin Academics
+    */
     private function getDepartmentDistribution($faculty)
     {
         return $faculty->departments()->withCount(['courses', 'subjects'])->get()
@@ -633,6 +666,10 @@ class AnalyticsController extends Controller
             });
     }
 
+    /**
+     * Get course enrollment
+     * @group Admin Academics
+    */
     private function getCourseEnrollment($faculty, $academicYearId)
     {
         return $faculty->courses()->with(['department'])->get()
@@ -652,6 +689,10 @@ class AnalyticsController extends Controller
             });
     }
 
+    /**
+     * Get course performance
+     * @group Admin Academics
+    */
     private function getCoursePerformance($department, $academicYearId)
     {
         return $department->courses()->get()
@@ -670,6 +711,10 @@ class AnalyticsController extends Controller
             });
     }
 
+    /**
+     * Get teacher workload
+     * @group Admin Academics
+    */
     private function getTeacherWorkload($department, $academicYearId)
     {
         return $department->teacherAssignments()
@@ -690,6 +735,10 @@ class AnalyticsController extends Controller
             });
     }
 
+    /**
+     * Get subject distribution
+     * @group Admin Academics
+    */
     private function getSubjectDistribution($course)
     {
         return $course->subjects()->withCount(['labs', 'exams'])->get()
@@ -703,6 +752,10 @@ class AnalyticsController extends Controller
             });
     }
 
+    /**
+     * Get course enrollment trends
+     * @group Admin Academics
+    */
     private function getCourseEnrollmentTrends($course)
     {
         return $course->studentEnrollments()
@@ -718,6 +771,10 @@ class AnalyticsController extends Controller
             });
     }
 
+    /**
+     * Calculate enrollment rate
+     * @group Admin Academics
+    */
     private function calculateEnrollmentRate($class, $academicYearId)
     {
         $enrollments = $class->studentEnrollments()
@@ -730,6 +787,10 @@ class AnalyticsController extends Controller
         return $class->capacity > 0 ? ($enrollments / $class->capacity) * 100 : 0;
     }
 
+    /**
+     * Get class subject performance
+     * @group Admin Academics
+    */
     private function getClassSubjectPerformance($class, $academicYearId)
     {
         return $class->studentGrades()
@@ -748,6 +809,10 @@ class AnalyticsController extends Controller
             });
     }
 
+    /**
+     * Get timetable coverage
+     * @group Admin Academics
+    */
     private function getTimetableCoverage($class, $academicYearId)
     {
         $timetables = $class->timetables()
@@ -762,6 +827,10 @@ class AnalyticsController extends Controller
         ];
     }
 
+    /**
+     * Get academic year summary
+     * @group Admin Academics
+    */
     private function getAcademicYearSummary($academicYearId)
     {
         if (!$academicYearId) {
@@ -784,6 +853,10 @@ class AnalyticsController extends Controller
         ];
     }
 
+    /**
+     * Get system enrollment summary
+     * @group Admin Academics
+    */
     private function getSystemEnrollmentSummary($academicYearId)
     {
         $query = StudentEnrollment::where('status', 'enrolled');
@@ -803,6 +876,10 @@ class AnalyticsController extends Controller
         ];
     }
 
+    /**
+     * Get system performance summary
+     * @group Admin Academics
+    */
     private function getSystemPerformanceSummary($academicYearId)
     {
         $query = StudentGrade::query();

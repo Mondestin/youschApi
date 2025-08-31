@@ -14,7 +14,8 @@ class GradingSchemeController extends Controller
 {
     /**
      * Display a listing of grading schemes.
-     */
+     * @group Admin Academics
+    */
     public function index(Request $request): JsonResponse
     {
         $query = GradingScheme::with(['school', 'gradeScales']);
@@ -29,7 +30,7 @@ class GradingSchemeController extends Controller
             $query->where('is_active', $request->boolean('is_active'));
         }
 
-        $gradingSchemes = $query->paginate(15);
+        $gradingSchemes = $query->get();
 
         return response()->json([
             'success' => true,
@@ -40,7 +41,8 @@ class GradingSchemeController extends Controller
 
     /**
      * Store a newly created grading scheme.
-     */
+     * @group Admin Academics
+    */
     public function store(Request $request): JsonResponse
     {
         try {
@@ -101,7 +103,8 @@ class GradingSchemeController extends Controller
 
     /**
      * Display the specified grading scheme.
-     */
+     * @group Admin Academics
+    */
     public function show(GradingScheme $gradingScheme): JsonResponse
     {
         $gradingScheme->load(['school', 'gradeScales']);
@@ -115,7 +118,8 @@ class GradingSchemeController extends Controller
 
     /**
      * Update the specified grading scheme.
-     */
+     * @group Admin Academics
+    */
     public function update(Request $request, GradingScheme $gradingScheme): JsonResponse
     {
         try {
@@ -177,7 +181,8 @@ class GradingSchemeController extends Controller
 
     /**
      * Remove the specified grading scheme.
-     */
+     * @group Admin Academics
+    */
     public function destroy(GradingScheme $gradingScheme): JsonResponse
     {
         try {
@@ -207,7 +212,8 @@ class GradingSchemeController extends Controller
 
     /**
      * Activate a grading scheme (deactivate others in the same school).
-     */
+     * @group Admin Academics
+    */
     public function activate(GradingScheme $gradingScheme): JsonResponse
     {
         try {
@@ -238,7 +244,8 @@ class GradingSchemeController extends Controller
 
     /**
      * Get grading schemes by school.
-     */
+     * @group Admin Academics
+    */
     public function bySchool(School $school): JsonResponse
     {
         $gradingSchemes = $school->gradingSchemes()
@@ -254,7 +261,8 @@ class GradingSchemeController extends Controller
 
     /**
      * Calculate grade based on percentage.
-     */
+     * @group Admin Academics
+    */
     public function calculateGrade(GradingScheme $gradingScheme, Request $request): JsonResponse
     {
         try {
@@ -306,7 +314,8 @@ class GradingSchemeController extends Controller
 
     /**
      * Get grading scheme statistics.
-     */
+     * @group Admin Academics
+    */
     public function statistics(GradingScheme $gradingScheme): JsonResponse
     {
         $stats = [

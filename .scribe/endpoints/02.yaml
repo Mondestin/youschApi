@@ -1,0 +1,2795 @@
+name: Students
+description: ''
+endpoints:
+  -
+    httpMethods:
+      - GET
+    uri: api/admin/students/applications
+    metadata:
+      groupName: Students
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Display a listing of student applications.'
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"success":true,"data":[{"id":1,"school_id":1,"campus_id":1,"first_name":"John","last_name":"Doe","dob":"2008-05-15T00:00:00.000000Z","gender":"male","email":"john.doe@example.com","phone":"+1234567890","parent_name":"Robert Doe","parent_email":"robert.doe@example.com","parent_phone":"+1234567891","status":"pending","applied_on":"2025-08-20T16:09:23.000000Z","reviewed_on":null,"reviewer_id":null,"created_at":"2025-08-25T16:09:23.000000Z","updated_at":"2025-08-25T16:09:23.000000Z","school":{"id":1,"name":"Yousch International School","domain":"yousch.edu","contact_info":"Contact us for more information","address":"123 Education Street, Knowledge City","phone":"+1-555-0123","email":"info@yousch.edu","website":"https:\/\/www.yousch.edu","is_active":true,"created_at":"2025-08-25T16:09:23.000000Z","updated_at":"2025-08-25T16:09:23.000000Z"},"campus":{"id":1,"school_id":1,"name":"Main Campus","address":"123 Education Street, Knowledge City","phone":"+1-555-0123","email":"main@yousch.edu","is_active":true,"created_at":"2025-08-25T16:09:23.000000Z","updated_at":"2025-08-25T16:09:23.000000Z"},"reviewer":null},{"id":2,"school_id":1,"campus_id":1,"first_name":"Jane","last_name":"Smith","dob":"2007-08-22T00:00:00.000000Z","gender":"female","email":"jane.smith@example.com","phone":"+1234567892","parent_name":"Mary Smith","parent_email":"mary.smith@example.com","parent_phone":"+1234567893","status":"approved","applied_on":"2025-08-15T16:09:23.000000Z","reviewed_on":"2025-08-17T16:09:23.000000Z","reviewer_id":1,"created_at":"2025-08-25T16:09:23.000000Z","updated_at":"2025-08-25T16:09:23.000000Z","school":{"id":1,"name":"Yousch International School","domain":"yousch.edu","contact_info":"Contact us for more information","address":"123 Education Street, Knowledge City","phone":"+1-555-0123","email":"info@yousch.edu","website":"https:\/\/www.yousch.edu","is_active":true,"created_at":"2025-08-25T16:09:23.000000Z","updated_at":"2025-08-25T16:09:23.000000Z"},"campus":{"id":1,"school_id":1,"name":"Main Campus","address":"123 Education Street, Knowledge City","phone":"+1-555-0123","email":"main@yousch.edu","is_active":true,"created_at":"2025-08-25T16:09:23.000000Z","updated_at":"2025-08-25T16:09:23.000000Z"},"reviewer":{"id":1,"name":"Test User","email":"test@example.com","email_verified_at":"2025-08-25T16:09:20.000000Z","created_at":"2025-08-25T16:09:20.000000Z","updated_at":"2025-08-25T16:09:20.000000Z"}},{"id":3,"school_id":1,"campus_id":1,"first_name":"Michael","last_name":"Johnson","dob":"2006-12-03T00:00:00.000000Z","gender":"male","email":"michael.johnson@example.com","phone":"+1234567894","parent_name":"David Johnson","parent_email":"david.johnson@example.com","parent_phone":"+1234567895","status":"rejected","applied_on":"2025-08-10T16:09:23.000000Z","reviewed_on":"2025-08-13T16:09:23.000000Z","reviewer_id":1,"created_at":"2025-08-25T16:09:23.000000Z","updated_at":"2025-08-25T16:09:23.000000Z","school":{"id":1,"name":"Yousch International School","domain":"yousch.edu","contact_info":"Contact us for more information","address":"123 Education Street, Knowledge City","phone":"+1-555-0123","email":"info@yousch.edu","website":"https:\/\/www.yousch.edu","is_active":true,"created_at":"2025-08-25T16:09:23.000000Z","updated_at":"2025-08-25T16:09:23.000000Z"},"campus":{"id":1,"school_id":1,"name":"Main Campus","address":"123 Education Street, Knowledge City","phone":"+1-555-0123","email":"main@yousch.edu","is_active":true,"created_at":"2025-08-25T16:09:23.000000Z","updated_at":"2025-08-25T16:09:23.000000Z"},"reviewer":{"id":1,"name":"Test User","email":"test@example.com","email_verified_at":"2025-08-25T16:09:20.000000Z","created_at":"2025-08-25T16:09:20.000000Z","updated_at":"2025-08-25T16:09:20.000000Z"}}],"message":"Student applications retrieved successfully"}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/admin/students/applications
+    metadata:
+      groupName: Students
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Store a newly created student application.'
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/admin/students/applications/{id}'
+    metadata:
+      groupName: Students
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Display the specified student application.'
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the application.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"success":true,"data":{"id":1,"school_id":1,"campus_id":1,"first_name":"John","last_name":"Doe","dob":"2008-05-15T00:00:00.000000Z","gender":"male","email":"john.doe@example.com","phone":"+1234567890","parent_name":"Robert Doe","parent_email":"robert.doe@example.com","parent_phone":"+1234567891","status":"pending","applied_on":"2025-08-20T16:09:23.000000Z","reviewed_on":null,"reviewer_id":null,"created_at":"2025-08-25T16:09:23.000000Z","updated_at":"2025-08-25T16:09:23.000000Z","school":{"id":1,"name":"Yousch International School","domain":"yousch.edu","contact_info":"Contact us for more information","address":"123 Education Street, Knowledge City","phone":"+1-555-0123","email":"info@yousch.edu","website":"https:\/\/www.yousch.edu","is_active":true,"created_at":"2025-08-25T16:09:23.000000Z","updated_at":"2025-08-25T16:09:23.000000Z"},"campus":{"id":1,"school_id":1,"name":"Main Campus","address":"123 Education Street, Knowledge City","phone":"+1-555-0123","email":"main@yousch.edu","is_active":true,"created_at":"2025-08-25T16:09:23.000000Z","updated_at":"2025-08-25T16:09:23.000000Z"},"reviewer":null}}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - PUT
+    uri: 'api/admin/students/applications/{id}'
+    metadata:
+      groupName: Students
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Update the specified student application.'
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the application.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - DELETE
+    uri: 'api/admin/students/applications/{id}'
+    metadata:
+      groupName: Students
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Remove the specified student application.'
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the application.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: 'api/admin/students/applications/{application_id}/approve'
+    metadata:
+      groupName: Students
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Approve a student application.'
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      application_id:
+        name: application_id
+        description: 'The ID of the application.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      application_id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: 'api/admin/students/applications/{application_id}/reject'
+    metadata:
+      groupName: Students
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Reject a student application.'
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      application_id:
+        name: application_id
+        description: 'The ID of the application.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      application_id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/admin/students/applications/statistics/overview
+    metadata:
+      groupName: Students
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Get application statistics.'
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"success":true,"data":{"total_applications":3,"pending_applications":1,"approved_applications":0,"rejected_applications":0,"recent_applications":0,"approval_rate":0,"applications_by_gender":[]}}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/admin/students/students
+    metadata:
+      groupName: Students
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Display a listing of students.'
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"success":true,"data":[{"id":1,"school_id":1,"campus_id":1,"class_id":1,"student_number":"STU2025001","first_name":"Sarah","last_name":"Wilson","dob":"2006-03-18T00:00:00.000000Z","gender":"female","email":"sarah.wilson@example.com","phone":"+1234567896","parent_name":"James Wilson","parent_email":"james.wilson@example.com","parent_phone":"+1234567897","enrollment_date":"2024-09-01T00:00:00.000000Z","status":"active","profile_picture":null,"created_at":"2025-08-25T16:09:23.000000Z","updated_at":"2025-08-25T16:09:23.000000Z","school":{"id":1,"name":"Yousch International School","domain":"yousch.edu","contact_info":"Contact us for more information","address":"123 Education Street, Knowledge City","phone":"+1-555-0123","email":"info@yousch.edu","website":"https:\/\/www.yousch.edu","is_active":true,"created_at":"2025-08-25T16:09:23.000000Z","updated_at":"2025-08-25T16:09:23.000000Z"},"campus":{"id":1,"school_id":1,"name":"Main Campus","address":"123 Education Street, Knowledge City","phone":"+1-555-0123","email":"main@yousch.edu","is_active":true,"created_at":"2025-08-25T16:09:23.000000Z","updated_at":"2025-08-25T16:09:23.000000Z"},"class_room":{"id":1,"campus_id":1,"course_id":1,"name":"BCS - Class A","capacity":30,"created_at":"2025-08-25T16:09:23.000000Z","updated_at":"2025-08-25T16:09:23.000000Z"}},{"id":2,"school_id":1,"campus_id":1,"class_id":1,"student_number":"STU2025002","first_name":"David","last_name":"Brown","dob":"2005-11-25T00:00:00.000000Z","gender":"male","email":"david.brown@example.com","phone":"+1234567898","parent_name":"Patricia Brown","parent_email":"patricia.brown@example.com","parent_phone":"+1234567899","enrollment_date":"2024-09-01T00:00:00.000000Z","status":"active","profile_picture":null,"created_at":"2025-08-25T16:09:23.000000Z","updated_at":"2025-08-25T16:09:23.000000Z","school":{"id":1,"name":"Yousch International School","domain":"yousch.edu","contact_info":"Contact us for more information","address":"123 Education Street, Knowledge City","phone":"+1-555-0123","email":"info@yousch.edu","website":"https:\/\/www.yousch.edu","is_active":true,"created_at":"2025-08-25T16:09:23.000000Z","updated_at":"2025-08-25T16:09:23.000000Z"},"campus":{"id":1,"school_id":1,"name":"Main Campus","address":"123 Education Street, Knowledge City","phone":"+1-555-0123","email":"main@yousch.edu","is_active":true,"created_at":"2025-08-25T16:09:23.000000Z","updated_at":"2025-08-25T16:09:23.000000Z"},"class_room":{"id":1,"campus_id":1,"course_id":1,"name":"BCS - Class A","capacity":30,"created_at":"2025-08-25T16:09:23.000000Z","updated_at":"2025-08-25T16:09:23.000000Z"}},{"id":3,"school_id":1,"campus_id":1,"class_id":1,"student_number":"STU2025003","first_name":"Emily","last_name":"Davis","dob":"2004-07-12T00:00:00.000000Z","gender":"female","email":"emily.davis@example.com","phone":"+1234567900","parent_name":"Thomas Davis","parent_email":"thomas.davis@example.com","parent_phone":"+1234567901","enrollment_date":"2023-09-01T00:00:00.000000Z","status":"graduated","profile_picture":null,"created_at":"2025-08-25T16:09:23.000000Z","updated_at":"2025-08-25T16:09:23.000000Z","school":{"id":1,"name":"Yousch International School","domain":"yousch.edu","contact_info":"Contact us for more information","address":"123 Education Street, Knowledge City","phone":"+1-555-0123","email":"info@yousch.edu","website":"https:\/\/www.yousch.edu","is_active":true,"created_at":"2025-08-25T16:09:23.000000Z","updated_at":"2025-08-25T16:09:23.000000Z"},"campus":{"id":1,"school_id":1,"name":"Main Campus","address":"123 Education Street, Knowledge City","phone":"+1-555-0123","email":"main@yousch.edu","is_active":true,"created_at":"2025-08-25T16:09:23.000000Z","updated_at":"2025-08-25T16:09:23.000000Z"},"class_room":{"id":1,"campus_id":1,"course_id":1,"name":"BCS - Class A","capacity":30,"created_at":"2025-08-25T16:09:23.000000Z","updated_at":"2025-08-25T16:09:23.000000Z"}}],"message":"Students retrieved successfully"}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/admin/students/students
+    metadata:
+      groupName: Students
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Store a newly created student.'
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/admin/students/students/{id}'
+    metadata:
+      groupName: Students
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Display the specified student.'
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the student.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"success":true,"data":{"id":1,"school_id":1,"campus_id":1,"class_id":1,"student_number":"STU2025001","first_name":"Sarah","last_name":"Wilson","dob":"2006-03-18T00:00:00.000000Z","gender":"female","email":"sarah.wilson@example.com","phone":"+1234567896","parent_name":"James Wilson","parent_email":"james.wilson@example.com","parent_phone":"+1234567897","enrollment_date":"2024-09-01T00:00:00.000000Z","status":"active","profile_picture":null,"created_at":"2025-08-25T16:09:23.000000Z","updated_at":"2025-08-25T16:09:23.000000Z","school":{"id":1,"name":"Yousch International School","domain":"yousch.edu","contact_info":"Contact us for more information","address":"123 Education Street, Knowledge City","phone":"+1-555-0123","email":"info@yousch.edu","website":"https:\/\/www.yousch.edu","is_active":true,"created_at":"2025-08-25T16:09:23.000000Z","updated_at":"2025-08-25T16:09:23.000000Z"},"campus":{"id":1,"school_id":1,"name":"Main Campus","address":"123 Education Street, Knowledge City","phone":"+1-555-0123","email":"main@yousch.edu","is_active":true,"created_at":"2025-08-25T16:09:23.000000Z","updated_at":"2025-08-25T16:09:23.000000Z"},"class_room":{"id":1,"campus_id":1,"course_id":1,"name":"BCS - Class A","capacity":30,"created_at":"2025-08-25T16:09:23.000000Z","updated_at":"2025-08-25T16:09:23.000000Z"},"academic_history":[{"id":1,"student_id":1,"subject_id":1,"class_id":1,"term_id":1,"academic_year_id":1,"marks":"85.50","grade":"B+","gpa":"3.30","created_at":"2025-08-25T16:09:23.000000Z","updated_at":"2025-08-25T16:09:23.000000Z"},{"id":2,"student_id":1,"subject_id":2,"class_id":1,"term_id":1,"academic_year_id":1,"marks":"92.00","grade":"A-","gpa":"3.70","created_at":"2025-08-25T16:09:23.000000Z","updated_at":"2025-08-25T16:09:23.000000Z"}],"documents":[{"id":1,"student_id":1,"document_type":"Birth Certificate","document_path":"students\/documents\/birth_cert_001.pdf","original_filename":"birth_certificate.pdf","mime_type":"application\/pdf","file_size":1024000,"uploaded_at":"2025-08-15T16:09:23.000000Z","created_at":"2025-08-25T16:09:23.000000Z","updated_at":"2025-08-25T16:09:23.000000Z"},{"id":2,"student_id":1,"document_type":"ID Card","document_path":"students\/documents\/id_card_001.jpg","original_filename":"student_id_card.jpg","mime_type":"image\/jpeg","file_size":512000,"uploaded_at":"2025-08-20T16:09:23.000000Z","created_at":"2025-08-25T16:09:23.000000Z","updated_at":"2025-08-25T16:09:23.000000Z"}]}}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - PUT
+    uri: 'api/admin/students/students/{id}'
+    metadata:
+      groupName: Students
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Update the specified student.'
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the student.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - DELETE
+    uri: 'api/admin/students/students/{id}'
+    metadata:
+      groupName: Students
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Remove the specified student.'
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the student.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - PATCH
+    uri: 'api/admin/students/students/{student_id}/status'
+    metadata:
+      groupName: Students
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Change student status.'
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      student_id:
+        name: student_id
+        description: 'The ID of the student.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      student_id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - PATCH
+    uri: 'api/admin/students/students/{student_id}/class'
+    metadata:
+      groupName: Students
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Assign student to class.'
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      student_id:
+        name: student_id
+        description: 'The ID of the student.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      student_id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/admin/students/students/{student_id}/academic-performance'
+    metadata:
+      groupName: Students
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Get student academic performance.'
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      student_id:
+        name: student_id
+        description: 'The ID of the student.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      student_id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"success":true,"data":{"student":{"id":1,"school_id":1,"campus_id":1,"class_id":1,"student_number":"STU2025001","first_name":"Sarah","last_name":"Wilson","dob":"2006-03-18T00:00:00.000000Z","gender":"female","email":"sarah.wilson@example.com","phone":"+1234567896","parent_name":"James Wilson","parent_email":"james.wilson@example.com","parent_phone":"+1234567897","enrollment_date":"2024-09-01T00:00:00.000000Z","status":"active","profile_picture":null,"created_at":"2025-08-25T16:09:23.000000Z","updated_at":"2025-08-25T16:09:23.000000Z","school":{"id":1,"name":"Yousch International School","domain":"yousch.edu","contact_info":"Contact us for more information","address":"123 Education Street, Knowledge City","phone":"+1-555-0123","email":"info@yousch.edu","website":"https:\/\/www.yousch.edu","is_active":true,"created_at":"2025-08-25T16:09:23.000000Z","updated_at":"2025-08-25T16:09:23.000000Z"},"campus":{"id":1,"school_id":1,"name":"Main Campus","address":"123 Education Street, Knowledge City","phone":"+1-555-0123","email":"main@yousch.edu","is_active":true,"created_at":"2025-08-25T16:09:23.000000Z","updated_at":"2025-08-25T16:09:23.000000Z"},"class_room":{"id":1,"campus_id":1,"course_id":1,"name":"BCS - Class A","capacity":30,"created_at":"2025-08-25T16:09:23.000000Z","updated_at":"2025-08-25T16:09:23.000000Z"}},"academic_history":[{"id":1,"student_id":1,"subject_id":1,"class_id":1,"term_id":1,"academic_year_id":1,"marks":"85.50","grade":"B+","gpa":"3.30","created_at":"2025-08-25T16:09:23.000000Z","updated_at":"2025-08-25T16:09:23.000000Z","subject":{"id":1,"course_id":1,"name":"Introduction to Programming","code":"CS101","description":"Basic programming concepts and practices","coordinator_id":4,"created_at":"2025-08-25T16:09:23.000000Z","updated_at":"2025-08-25T16:09:23.000000Z"},"class_room":{"id":1,"campus_id":1,"course_id":1,"name":"BCS - Class A","capacity":30,"created_at":"2025-08-25T16:09:23.000000Z","updated_at":"2025-08-25T16:09:23.000000Z"},"term":{"id":1,"academic_year_id":1,"name":"Fall Semester","start_date":"2024-09-01T00:00:00.000000Z","end_date":"2024-12-20T00:00:00.000000Z","is_active":true,"created_at":"2025-08-25T16:09:23.000000Z","updated_at":"2025-08-25T16:09:23.000000Z"},"academic_year":{"id":1,"school_id":1,"name":"2024-2025","start_date":"2024-09-01T00:00:00.000000Z","end_date":"2025-06-30T00:00:00.000000Z","is_active":true,"created_at":"2025-08-25T16:09:23.000000Z","updated_at":"2025-08-25T16:09:23.000000Z"}},{"id":2,"student_id":1,"subject_id":2,"class_id":1,"term_id":1,"academic_year_id":1,"marks":"92.00","grade":"A-","gpa":"3.70","created_at":"2025-08-25T16:09:23.000000Z","updated_at":"2025-08-25T16:09:23.000000Z","subject":{"id":2,"course_id":1,"name":"Data Structures and Algorithms","code":"CS201","description":"Advanced programming concepts","coordinator_id":4,"created_at":"2025-08-25T16:09:23.000000Z","updated_at":"2025-08-25T16:09:23.000000Z"},"class_room":{"id":1,"campus_id":1,"course_id":1,"name":"BCS - Class A","capacity":30,"created_at":"2025-08-25T16:09:23.000000Z","updated_at":"2025-08-25T16:09:23.000000Z"},"term":{"id":1,"academic_year_id":1,"name":"Fall Semester","start_date":"2024-09-01T00:00:00.000000Z","end_date":"2024-12-20T00:00:00.000000Z","is_active":true,"created_at":"2025-08-25T16:09:23.000000Z","updated_at":"2025-08-25T16:09:23.000000Z"},"academic_year":{"id":1,"school_id":1,"name":"2024-2025","start_date":"2024-09-01T00:00:00.000000Z","end_date":"2025-06-30T00:00:00.000000Z","is_active":true,"created_at":"2025-08-25T16:09:23.000000Z","updated_at":"2025-08-25T16:09:23.000000Z"}}],"performance_summary":{"overall_gpa":3.5,"total_subjects":2,"passing_subjects":2,"failing_subjects":0,"pass_rate":100}}}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/admin/students/students/statistics/overview
+    metadata:
+      groupName: Students
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Get student statistics.'
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"success":true,"data":{"total_students":3,"active_students":2,"graduated_students":0,"transferred_students":0,"suspended_students":0,"inactive_students":0,"recent_enrollments":0,"students_by_gender":[],"students_by_class":[]}}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/admin/students/academic-history
+    metadata:
+      groupName: Students
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Display a listing of academic history records.'
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"success":true,"data":[{"id":1,"student_id":1,"subject_id":1,"class_id":1,"term_id":1,"academic_year_id":1,"marks":"85.50","grade":"B+","gpa":"3.30","created_at":"2025-08-25T16:09:23.000000Z","updated_at":"2025-08-25T16:09:23.000000Z","student":{"id":1,"school_id":1,"campus_id":1,"class_id":1,"student_number":"STU2025001","first_name":"Sarah","last_name":"Wilson","dob":"2006-03-18T00:00:00.000000Z","gender":"female","email":"sarah.wilson@example.com","phone":"+1234567896","parent_name":"James Wilson","parent_email":"james.wilson@example.com","parent_phone":"+1234567897","enrollment_date":"2024-09-01T00:00:00.000000Z","status":"active","profile_picture":null,"created_at":"2025-08-25T16:09:23.000000Z","updated_at":"2025-08-25T16:09:23.000000Z"},"subject":{"id":1,"course_id":1,"name":"Introduction to Programming","code":"CS101","description":"Basic programming concepts and practices","coordinator_id":4,"created_at":"2025-08-25T16:09:23.000000Z","updated_at":"2025-08-25T16:09:23.000000Z"},"class_room":{"id":1,"campus_id":1,"course_id":1,"name":"BCS - Class A","capacity":30,"created_at":"2025-08-25T16:09:23.000000Z","updated_at":"2025-08-25T16:09:23.000000Z"},"term":{"id":1,"academic_year_id":1,"name":"Fall Semester","start_date":"2024-09-01T00:00:00.000000Z","end_date":"2024-12-20T00:00:00.000000Z","is_active":true,"created_at":"2025-08-25T16:09:23.000000Z","updated_at":"2025-08-25T16:09:23.000000Z"},"academic_year":{"id":1,"school_id":1,"name":"2024-2025","start_date":"2024-09-01T00:00:00.000000Z","end_date":"2025-06-30T00:00:00.000000Z","is_active":true,"created_at":"2025-08-25T16:09:23.000000Z","updated_at":"2025-08-25T16:09:23.000000Z"}},{"id":2,"student_id":1,"subject_id":2,"class_id":1,"term_id":1,"academic_year_id":1,"marks":"92.00","grade":"A-","gpa":"3.70","created_at":"2025-08-25T16:09:23.000000Z","updated_at":"2025-08-25T16:09:23.000000Z","student":{"id":1,"school_id":1,"campus_id":1,"class_id":1,"student_number":"STU2025001","first_name":"Sarah","last_name":"Wilson","dob":"2006-03-18T00:00:00.000000Z","gender":"female","email":"sarah.wilson@example.com","phone":"+1234567896","parent_name":"James Wilson","parent_email":"james.wilson@example.com","parent_phone":"+1234567897","enrollment_date":"2024-09-01T00:00:00.000000Z","status":"active","profile_picture":null,"created_at":"2025-08-25T16:09:23.000000Z","updated_at":"2025-08-25T16:09:23.000000Z"},"subject":{"id":2,"course_id":1,"name":"Data Structures and Algorithms","code":"CS201","description":"Advanced programming concepts","coordinator_id":4,"created_at":"2025-08-25T16:09:23.000000Z","updated_at":"2025-08-25T16:09:23.000000Z"},"class_room":{"id":1,"campus_id":1,"course_id":1,"name":"BCS - Class A","capacity":30,"created_at":"2025-08-25T16:09:23.000000Z","updated_at":"2025-08-25T16:09:23.000000Z"},"term":{"id":1,"academic_year_id":1,"name":"Fall Semester","start_date":"2024-09-01T00:00:00.000000Z","end_date":"2024-12-20T00:00:00.000000Z","is_active":true,"created_at":"2025-08-25T16:09:23.000000Z","updated_at":"2025-08-25T16:09:23.000000Z"},"academic_year":{"id":1,"school_id":1,"name":"2024-2025","start_date":"2024-09-01T00:00:00.000000Z","end_date":"2025-06-30T00:00:00.000000Z","is_active":true,"created_at":"2025-08-25T16:09:23.000000Z","updated_at":"2025-08-25T16:09:23.000000Z"}},{"id":3,"student_id":2,"subject_id":1,"class_id":1,"term_id":1,"academic_year_id":1,"marks":"78.50","grade":"C+","gpa":"2.30","created_at":"2025-08-25T16:09:23.000000Z","updated_at":"2025-08-25T16:09:23.000000Z","student":{"id":2,"school_id":1,"campus_id":1,"class_id":1,"student_number":"STU2025002","first_name":"David","last_name":"Brown","dob":"2005-11-25T00:00:00.000000Z","gender":"male","email":"david.brown@example.com","phone":"+1234567898","parent_name":"Patricia Brown","parent_email":"patricia.brown@example.com","parent_phone":"+1234567899","enrollment_date":"2024-09-01T00:00:00.000000Z","status":"active","profile_picture":null,"created_at":"2025-08-25T16:09:23.000000Z","updated_at":"2025-08-25T16:09:23.000000Z"},"subject":{"id":1,"course_id":1,"name":"Introduction to Programming","code":"CS101","description":"Basic programming concepts and practices","coordinator_id":4,"created_at":"2025-08-25T16:09:23.000000Z","updated_at":"2025-08-25T16:09:23.000000Z"},"class_room":{"id":1,"campus_id":1,"course_id":1,"name":"BCS - Class A","capacity":30,"created_at":"2025-08-25T16:09:23.000000Z","updated_at":"2025-08-25T16:09:23.000000Z"},"term":{"id":1,"academic_year_id":1,"name":"Fall Semester","start_date":"2024-09-01T00:00:00.000000Z","end_date":"2024-12-20T00:00:00.000000Z","is_active":true,"created_at":"2025-08-25T16:09:23.000000Z","updated_at":"2025-08-25T16:09:23.000000Z"},"academic_year":{"id":1,"school_id":1,"name":"2024-2025","start_date":"2024-09-01T00:00:00.000000Z","end_date":"2025-06-30T00:00:00.000000Z","is_active":true,"created_at":"2025-08-25T16:09:23.000000Z","updated_at":"2025-08-25T16:09:23.000000Z"}}],"message":"Academic history records retrieved successfully"}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/admin/students/academic-history
+    metadata:
+      groupName: Students
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Store a newly created academic history record.'
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/admin/students/academic-history/{academicHistory_id}'
+    metadata:
+      groupName: Students
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Display the specified academic history record.'
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      academicHistory_id:
+        name: academicHistory_id
+        description: 'The ID of the academicHistory.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      academicHistory_id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"success":true,"data":{"id":1,"student_id":1,"subject_id":1,"class_id":1,"term_id":1,"academic_year_id":1,"marks":"85.50","grade":"B+","gpa":"3.30","created_at":"2025-08-25T16:09:23.000000Z","updated_at":"2025-08-25T16:09:23.000000Z","student":{"id":1,"school_id":1,"campus_id":1,"class_id":1,"student_number":"STU2025001","first_name":"Sarah","last_name":"Wilson","dob":"2006-03-18T00:00:00.000000Z","gender":"female","email":"sarah.wilson@example.com","phone":"+1234567896","parent_name":"James Wilson","parent_email":"james.wilson@example.com","parent_phone":"+1234567897","enrollment_date":"2024-09-01T00:00:00.000000Z","status":"active","profile_picture":null,"created_at":"2025-08-25T16:09:23.000000Z","updated_at":"2025-08-25T16:09:23.000000Z"},"subject":{"id":1,"course_id":1,"name":"Introduction to Programming","code":"CS101","description":"Basic programming concepts and practices","coordinator_id":4,"created_at":"2025-08-25T16:09:23.000000Z","updated_at":"2025-08-25T16:09:23.000000Z"},"class_room":{"id":1,"campus_id":1,"course_id":1,"name":"BCS - Class A","capacity":30,"created_at":"2025-08-25T16:09:23.000000Z","updated_at":"2025-08-25T16:09:23.000000Z"},"term":{"id":1,"academic_year_id":1,"name":"Fall Semester","start_date":"2024-09-01T00:00:00.000000Z","end_date":"2024-12-20T00:00:00.000000Z","is_active":true,"created_at":"2025-08-25T16:09:23.000000Z","updated_at":"2025-08-25T16:09:23.000000Z"},"academic_year":{"id":1,"school_id":1,"name":"2024-2025","start_date":"2024-09-01T00:00:00.000000Z","end_date":"2025-06-30T00:00:00.000000Z","is_active":true,"created_at":"2025-08-25T16:09:23.000000Z","updated_at":"2025-08-25T16:09:23.000000Z"}}}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - PUT
+    uri: 'api/admin/students/academic-history/{academicHistory_id}'
+    metadata:
+      groupName: Students
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Update the specified academic history record.'
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      academicHistory_id:
+        name: academicHistory_id
+        description: 'The ID of the academicHistory.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      academicHistory_id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - DELETE
+    uri: 'api/admin/students/academic-history/{academicHistory_id}'
+    metadata:
+      groupName: Students
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Remove the specified academic history record.'
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      academicHistory_id:
+        name: academicHistory_id
+        description: 'The ID of the academicHistory.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      academicHistory_id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/admin/students/academic-history/student/{student_id}'
+    metadata:
+      groupName: Students
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Get academic history records by student.'
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      student_id:
+        name: student_id
+        description: 'The ID of the student.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      student_id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"success":true,"data":{"student":{"id":1,"first_name":"Sarah","last_name":"Wilson","student_number":"STU2025001"},"academic_records":[{"id":1,"student_id":1,"subject_id":1,"class_id":1,"term_id":1,"academic_year_id":1,"marks":"85.50","grade":"B+","gpa":"3.30","created_at":"2025-08-25T16:09:23.000000Z","updated_at":"2025-08-25T16:09:23.000000Z","subject":{"id":1,"course_id":1,"name":"Introduction to Programming","code":"CS101","description":"Basic programming concepts and practices","coordinator_id":4,"created_at":"2025-08-25T16:09:23.000000Z","updated_at":"2025-08-25T16:09:23.000000Z"},"class_room":{"id":1,"campus_id":1,"course_id":1,"name":"BCS - Class A","capacity":30,"created_at":"2025-08-25T16:09:23.000000Z","updated_at":"2025-08-25T16:09:23.000000Z"},"term":{"id":1,"academic_year_id":1,"name":"Fall Semester","start_date":"2024-09-01T00:00:00.000000Z","end_date":"2024-12-20T00:00:00.000000Z","is_active":true,"created_at":"2025-08-25T16:09:23.000000Z","updated_at":"2025-08-25T16:09:23.000000Z"},"academic_year":{"id":1,"school_id":1,"name":"2024-2025","start_date":"2024-09-01T00:00:00.000000Z","end_date":"2025-06-30T00:00:00.000000Z","is_active":true,"created_at":"2025-08-25T16:09:23.000000Z","updated_at":"2025-08-25T16:09:23.000000Z"}},{"id":2,"student_id":1,"subject_id":2,"class_id":1,"term_id":1,"academic_year_id":1,"marks":"92.00","grade":"A-","gpa":"3.70","created_at":"2025-08-25T16:09:23.000000Z","updated_at":"2025-08-25T16:09:23.000000Z","subject":{"id":2,"course_id":1,"name":"Data Structures and Algorithms","code":"CS201","description":"Advanced programming concepts","coordinator_id":4,"created_at":"2025-08-25T16:09:23.000000Z","updated_at":"2025-08-25T16:09:23.000000Z"},"class_room":{"id":1,"campus_id":1,"course_id":1,"name":"BCS - Class A","capacity":30,"created_at":"2025-08-25T16:09:23.000000Z","updated_at":"2025-08-25T16:09:23.000000Z"},"term":{"id":1,"academic_year_id":1,"name":"Fall Semester","start_date":"2024-09-01T00:00:00.000000Z","end_date":"2024-12-20T00:00:00.000000Z","is_active":true,"created_at":"2025-08-25T16:09:23.000000Z","updated_at":"2025-08-25T16:09:23.000000Z"},"academic_year":{"id":1,"school_id":1,"name":"2024-2025","start_date":"2024-09-01T00:00:00.000000Z","end_date":"2025-06-30T00:00:00.000000Z","is_active":true,"created_at":"2025-08-25T16:09:23.000000Z","updated_at":"2025-08-25T16:09:23.000000Z"}}],"total_records":2,"overall_gpa":3.5}}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/admin/students/academic-history/subject/{subject_id}'
+    metadata:
+      groupName: Students
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Get academic history records by subject.'
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      subject_id:
+        name: subject_id
+        description: 'The ID of the subject.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      subject_id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"success":true,"data":{"subject":{"id":1,"name":"Introduction to Programming","code":"CS101"},"academic_records":[{"id":1,"student_id":1,"subject_id":1,"class_id":1,"term_id":1,"academic_year_id":1,"marks":"85.50","grade":"B+","gpa":"3.30","created_at":"2025-08-25T16:09:23.000000Z","updated_at":"2025-08-25T16:09:23.000000Z","student":{"id":1,"school_id":1,"campus_id":1,"class_id":1,"student_number":"STU2025001","first_name":"Sarah","last_name":"Wilson","dob":"2006-03-18T00:00:00.000000Z","gender":"female","email":"sarah.wilson@example.com","phone":"+1234567896","parent_name":"James Wilson","parent_email":"james.wilson@example.com","parent_phone":"+1234567897","enrollment_date":"2024-09-01T00:00:00.000000Z","status":"active","profile_picture":null,"created_at":"2025-08-25T16:09:23.000000Z","updated_at":"2025-08-25T16:09:23.000000Z"},"class_room":{"id":1,"campus_id":1,"course_id":1,"name":"BCS - Class A","capacity":30,"created_at":"2025-08-25T16:09:23.000000Z","updated_at":"2025-08-25T16:09:23.000000Z"},"term":{"id":1,"academic_year_id":1,"name":"Fall Semester","start_date":"2024-09-01T00:00:00.000000Z","end_date":"2024-12-20T00:00:00.000000Z","is_active":true,"created_at":"2025-08-25T16:09:23.000000Z","updated_at":"2025-08-25T16:09:23.000000Z"},"academic_year":{"id":1,"school_id":1,"name":"2024-2025","start_date":"2024-09-01T00:00:00.000000Z","end_date":"2025-06-30T00:00:00.000000Z","is_active":true,"created_at":"2025-08-25T16:09:23.000000Z","updated_at":"2025-08-25T16:09:23.000000Z"}},{"id":3,"student_id":2,"subject_id":1,"class_id":1,"term_id":1,"academic_year_id":1,"marks":"78.50","grade":"C+","gpa":"2.30","created_at":"2025-08-25T16:09:23.000000Z","updated_at":"2025-08-25T16:09:23.000000Z","student":{"id":2,"school_id":1,"campus_id":1,"class_id":1,"student_number":"STU2025002","first_name":"David","last_name":"Brown","dob":"2005-11-25T00:00:00.000000Z","gender":"male","email":"david.brown@example.com","phone":"+1234567898","parent_name":"Patricia Brown","parent_email":"patricia.brown@example.com","parent_phone":"+1234567899","enrollment_date":"2024-09-01T00:00:00.000000Z","status":"active","profile_picture":null,"created_at":"2025-08-25T16:09:23.000000Z","updated_at":"2025-08-25T16:09:23.000000Z"},"class_room":{"id":1,"campus_id":1,"course_id":1,"name":"BCS - Class A","capacity":30,"created_at":"2025-08-25T16:09:23.000000Z","updated_at":"2025-08-25T16:09:23.000000Z"},"term":{"id":1,"academic_year_id":1,"name":"Fall Semester","start_date":"2024-09-01T00:00:00.000000Z","end_date":"2024-12-20T00:00:00.000000Z","is_active":true,"created_at":"2025-08-25T16:09:23.000000Z","updated_at":"2025-08-25T16:09:23.000000Z"},"academic_year":{"id":1,"school_id":1,"name":"2024-2025","start_date":"2024-09-01T00:00:00.000000Z","end_date":"2025-06-30T00:00:00.000000Z","is_active":true,"created_at":"2025-08-25T16:09:23.000000Z","updated_at":"2025-08-25T16:09:23.000000Z"}}],"total_records":2,"average_marks":82,"average_gpa":2.8}}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/admin/students/academic-history/class/{class}'
+    metadata:
+      groupName: Students
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Get academic history records by class.'
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      class:
+        name: class
+        description: 'The class.'
+        required: true
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      class: architecto
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"success":true,"data":{"class":{"id":null,"name":null},"academic_records":[],"total_records":0,"unique_students":0,"unique_subjects":0,"average_gpa":0}}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/admin/students/academic-history/term/{term_id}'
+    metadata:
+      groupName: Students
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Get academic history records by term.'
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      term_id:
+        name: term_id
+        description: 'The ID of the term.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      term_id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"success":true,"data":{"term":{"id":1,"name":"Fall Semester","start_date":"2024-09-01T00:00:00.000000Z","end_date":"2024-12-20T00:00:00.000000Z"},"academic_records":[{"id":1,"student_id":1,"subject_id":1,"class_id":1,"term_id":1,"academic_year_id":1,"marks":"85.50","grade":"B+","gpa":"3.30","created_at":"2025-08-25T16:09:23.000000Z","updated_at":"2025-08-25T16:09:23.000000Z","student":{"id":1,"school_id":1,"campus_id":1,"class_id":1,"student_number":"STU2025001","first_name":"Sarah","last_name":"Wilson","dob":"2006-03-18T00:00:00.000000Z","gender":"female","email":"sarah.wilson@example.com","phone":"+1234567896","parent_name":"James Wilson","parent_email":"james.wilson@example.com","parent_phone":"+1234567897","enrollment_date":"2024-09-01T00:00:00.000000Z","status":"active","profile_picture":null,"created_at":"2025-08-25T16:09:23.000000Z","updated_at":"2025-08-25T16:09:23.000000Z"},"subject":{"id":1,"course_id":1,"name":"Introduction to Programming","code":"CS101","description":"Basic programming concepts and practices","coordinator_id":4,"created_at":"2025-08-25T16:09:23.000000Z","updated_at":"2025-08-25T16:09:23.000000Z"},"class_room":{"id":1,"campus_id":1,"course_id":1,"name":"BCS - Class A","capacity":30,"created_at":"2025-08-25T16:09:23.000000Z","updated_at":"2025-08-25T16:09:23.000000Z"},"academic_year":{"id":1,"school_id":1,"name":"2024-2025","start_date":"2024-09-01T00:00:00.000000Z","end_date":"2025-06-30T00:00:00.000000Z","is_active":true,"created_at":"2025-08-25T16:09:23.000000Z","updated_at":"2025-08-25T16:09:23.000000Z"}},{"id":2,"student_id":1,"subject_id":2,"class_id":1,"term_id":1,"academic_year_id":1,"marks":"92.00","grade":"A-","gpa":"3.70","created_at":"2025-08-25T16:09:23.000000Z","updated_at":"2025-08-25T16:09:23.000000Z","student":{"id":1,"school_id":1,"campus_id":1,"class_id":1,"student_number":"STU2025001","first_name":"Sarah","last_name":"Wilson","dob":"2006-03-18T00:00:00.000000Z","gender":"female","email":"sarah.wilson@example.com","phone":"+1234567896","parent_name":"James Wilson","parent_email":"james.wilson@example.com","parent_phone":"+1234567897","enrollment_date":"2024-09-01T00:00:00.000000Z","status":"active","profile_picture":null,"created_at":"2025-08-25T16:09:23.000000Z","updated_at":"2025-08-25T16:09:23.000000Z"},"subject":{"id":2,"course_id":1,"name":"Data Structures and Algorithms","code":"CS201","description":"Advanced programming concepts","coordinator_id":4,"created_at":"2025-08-25T16:09:23.000000Z","updated_at":"2025-08-25T16:09:23.000000Z"},"class_room":{"id":1,"campus_id":1,"course_id":1,"name":"BCS - Class A","capacity":30,"created_at":"2025-08-25T16:09:23.000000Z","updated_at":"2025-08-25T16:09:23.000000Z"},"academic_year":{"id":1,"school_id":1,"name":"2024-2025","start_date":"2024-09-01T00:00:00.000000Z","end_date":"2025-06-30T00:00:00.000000Z","is_active":true,"created_at":"2025-08-25T16:09:23.000000Z","updated_at":"2025-08-25T16:09:23.000000Z"}},{"id":3,"student_id":2,"subject_id":1,"class_id":1,"term_id":1,"academic_year_id":1,"marks":"78.50","grade":"C+","gpa":"2.30","created_at":"2025-08-25T16:09:23.000000Z","updated_at":"2025-08-25T16:09:23.000000Z","student":{"id":2,"school_id":1,"campus_id":1,"class_id":1,"student_number":"STU2025002","first_name":"David","last_name":"Brown","dob":"2005-11-25T00:00:00.000000Z","gender":"male","email":"david.brown@example.com","phone":"+1234567898","parent_name":"Patricia Brown","parent_email":"patricia.brown@example.com","parent_phone":"+1234567899","enrollment_date":"2024-09-01T00:00:00.000000Z","status":"active","profile_picture":null,"created_at":"2025-08-25T16:09:23.000000Z","updated_at":"2025-08-25T16:09:23.000000Z"},"subject":{"id":1,"course_id":1,"name":"Introduction to Programming","code":"CS101","description":"Basic programming concepts and practices","coordinator_id":4,"created_at":"2025-08-25T16:09:23.000000Z","updated_at":"2025-08-25T16:09:23.000000Z"},"class_room":{"id":1,"campus_id":1,"course_id":1,"name":"BCS - Class A","capacity":30,"created_at":"2025-08-25T16:09:23.000000Z","updated_at":"2025-08-25T16:09:23.000000Z"},"academic_year":{"id":1,"school_id":1,"name":"2024-2025","start_date":"2024-09-01T00:00:00.000000Z","end_date":"2025-06-30T00:00:00.000000Z","is_active":true,"created_at":"2025-08-25T16:09:23.000000Z","updated_at":"2025-08-25T16:09:23.000000Z"}}],"total_records":3,"unique_students":2,"unique_subjects":2,"average_gpa":3.1}}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/admin/students/academic-history/academic-year/{academicYear_id}'
+    metadata:
+      groupName: Students
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Get academic history records by academic year.'
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      academicYear_id:
+        name: academicYear_id
+        description: 'The ID of the academicYear.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      academicYear_id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"success":true,"data":{"academic_year":{"id":1,"name":"2024-2025","start_date":"2024-09-01T00:00:00.000000Z","end_date":"2025-06-30T00:00:00.000000Z"},"academic_records":[{"id":1,"student_id":1,"subject_id":1,"class_id":1,"term_id":1,"academic_year_id":1,"marks":"85.50","grade":"B+","gpa":"3.30","created_at":"2025-08-25T16:09:23.000000Z","updated_at":"2025-08-25T16:09:23.000000Z","student":{"id":1,"school_id":1,"campus_id":1,"class_id":1,"student_number":"STU2025001","first_name":"Sarah","last_name":"Wilson","dob":"2006-03-18T00:00:00.000000Z","gender":"female","email":"sarah.wilson@example.com","phone":"+1234567896","parent_name":"James Wilson","parent_email":"james.wilson@example.com","parent_phone":"+1234567897","enrollment_date":"2024-09-01T00:00:00.000000Z","status":"active","profile_picture":null,"created_at":"2025-08-25T16:09:23.000000Z","updated_at":"2025-08-25T16:09:23.000000Z"},"subject":{"id":1,"course_id":1,"name":"Introduction to Programming","code":"CS101","description":"Basic programming concepts and practices","coordinator_id":4,"created_at":"2025-08-25T16:09:23.000000Z","updated_at":"2025-08-25T16:09:23.000000Z"},"class_room":{"id":1,"campus_id":1,"course_id":1,"name":"BCS - Class A","capacity":30,"created_at":"2025-08-25T16:09:23.000000Z","updated_at":"2025-08-25T16:09:23.000000Z"},"term":{"id":1,"academic_year_id":1,"name":"Fall Semester","start_date":"2024-09-01T00:00:00.000000Z","end_date":"2024-12-20T00:00:00.000000Z","is_active":true,"created_at":"2025-08-25T16:09:23.000000Z","updated_at":"2025-08-25T16:09:23.000000Z"}},{"id":2,"student_id":1,"subject_id":2,"class_id":1,"term_id":1,"academic_year_id":1,"marks":"92.00","grade":"A-","gpa":"3.70","created_at":"2025-08-25T16:09:23.000000Z","updated_at":"2025-08-25T16:09:23.000000Z","student":{"id":1,"school_id":1,"campus_id":1,"class_id":1,"student_number":"STU2025001","first_name":"Sarah","last_name":"Wilson","dob":"2006-03-18T00:00:00.000000Z","gender":"female","email":"sarah.wilson@example.com","phone":"+1234567896","parent_name":"James Wilson","parent_email":"james.wilson@example.com","parent_phone":"+1234567897","enrollment_date":"2024-09-01T00:00:00.000000Z","status":"active","profile_picture":null,"created_at":"2025-08-25T16:09:23.000000Z","updated_at":"2025-08-25T16:09:23.000000Z"},"subject":{"id":2,"course_id":1,"name":"Data Structures and Algorithms","code":"CS201","description":"Advanced programming concepts","coordinator_id":4,"created_at":"2025-08-25T16:09:23.000000Z","updated_at":"2025-08-25T16:09:23.000000Z"},"class_room":{"id":1,"campus_id":1,"course_id":1,"name":"BCS - Class A","capacity":30,"created_at":"2025-08-25T16:09:23.000000Z","updated_at":"2025-08-25T16:09:23.000000Z"},"term":{"id":1,"academic_year_id":1,"name":"Fall Semester","start_date":"2024-09-01T00:00:00.000000Z","end_date":"2024-12-20T00:00:00.000000Z","is_active":true,"created_at":"2025-08-25T16:09:23.000000Z","updated_at":"2025-08-25T16:09:23.000000Z"}},{"id":3,"student_id":2,"subject_id":1,"class_id":1,"term_id":1,"academic_year_id":1,"marks":"78.50","grade":"C+","gpa":"2.30","created_at":"2025-08-25T16:09:23.000000Z","updated_at":"2025-08-25T16:09:23.000000Z","student":{"id":2,"school_id":1,"campus_id":1,"class_id":1,"student_number":"STU2025002","first_name":"David","last_name":"Brown","dob":"2005-11-25T00:00:00.000000Z","gender":"male","email":"david.brown@example.com","phone":"+1234567898","parent_name":"Patricia Brown","parent_email":"patricia.brown@example.com","parent_phone":"+1234567899","enrollment_date":"2024-09-01T00:00:00.000000Z","status":"active","profile_picture":null,"created_at":"2025-08-25T16:09:23.000000Z","updated_at":"2025-08-25T16:09:23.000000Z"},"subject":{"id":1,"course_id":1,"name":"Introduction to Programming","code":"CS101","description":"Basic programming concepts and practices","coordinator_id":4,"created_at":"2025-08-25T16:09:23.000000Z","updated_at":"2025-08-25T16:09:23.000000Z"},"class_room":{"id":1,"campus_id":1,"course_id":1,"name":"BCS - Class A","capacity":30,"created_at":"2025-08-25T16:09:23.000000Z","updated_at":"2025-08-25T16:09:23.000000Z"},"term":{"id":1,"academic_year_id":1,"name":"Fall Semester","start_date":"2024-09-01T00:00:00.000000Z","end_date":"2024-12-20T00:00:00.000000Z","is_active":true,"created_at":"2025-08-25T16:09:23.000000Z","updated_at":"2025-08-25T16:09:23.000000Z"}}],"total_records":3,"unique_students":2,"unique_subjects":2,"unique_classes":1,"average_gpa":3.1}}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/admin/students/academic-history/statistics/overview
+    metadata:
+      groupName: Students
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Get academic history statistics.'
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"success":true,"data":{"total_records":3,"records_with_grades":3,"records_with_gpa":3,"passing_records":3,"failing_records":0,"pass_rate":100,"average_marks":0,"average_gpa":0,"grade_distribution":[]}}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/admin/students/transfers
+    metadata:
+      groupName: Students
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Display a listing of student transfers.'
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"success":true,"data":[{"id":1,"student_id":1,"from_campus_id":1,"to_campus_id":2,"request_date":"2025-07-26T00:00:00.000000Z","approved_date":null,"status":"pending","reviewer_id":null,"created_at":"2025-08-25T16:09:23.000000Z","updated_at":"2025-08-25T16:09:23.000000Z","student":{"id":1,"school_id":1,"campus_id":1,"class_id":1,"student_number":"STU2025001","first_name":"Sarah","last_name":"Wilson","dob":"2006-03-18T00:00:00.000000Z","gender":"female","email":"sarah.wilson@example.com","phone":"+1234567896","parent_name":"James Wilson","parent_email":"james.wilson@example.com","parent_phone":"+1234567897","enrollment_date":"2024-09-01T00:00:00.000000Z","status":"active","profile_picture":null,"created_at":"2025-08-25T16:09:23.000000Z","updated_at":"2025-08-25T16:09:23.000000Z"},"from_campus":{"id":1,"school_id":1,"name":"Main Campus","address":"123 Education Street, Knowledge City","phone":"+1-555-0123","email":"main@yousch.edu","is_active":true,"created_at":"2025-08-25T16:09:23.000000Z","updated_at":"2025-08-25T16:09:23.000000Z"},"to_campus":{"id":2,"school_id":1,"name":"North Campus","address":"456 Learning Avenue, North District","phone":"+1-555-0124","email":"north@yousch.edu","is_active":true,"created_at":"2025-08-25T16:09:23.000000Z","updated_at":"2025-08-25T16:09:23.000000Z"},"reviewer":null},{"id":2,"student_id":2,"from_campus_id":1,"to_campus_id":2,"request_date":"2025-07-11T00:00:00.000000Z","approved_date":"2025-07-16T00:00:00.000000Z","status":"approved","reviewer_id":1,"created_at":"2025-08-25T16:09:23.000000Z","updated_at":"2025-08-25T16:09:23.000000Z","student":{"id":2,"school_id":1,"campus_id":1,"class_id":1,"student_number":"STU2025002","first_name":"David","last_name":"Brown","dob":"2005-11-25T00:00:00.000000Z","gender":"male","email":"david.brown@example.com","phone":"+1234567898","parent_name":"Patricia Brown","parent_email":"patricia.brown@example.com","parent_phone":"+1234567899","enrollment_date":"2024-09-01T00:00:00.000000Z","status":"active","profile_picture":null,"created_at":"2025-08-25T16:09:23.000000Z","updated_at":"2025-08-25T16:09:23.000000Z"},"from_campus":{"id":1,"school_id":1,"name":"Main Campus","address":"123 Education Street, Knowledge City","phone":"+1-555-0123","email":"main@yousch.edu","is_active":true,"created_at":"2025-08-25T16:09:23.000000Z","updated_at":"2025-08-25T16:09:23.000000Z"},"to_campus":{"id":2,"school_id":1,"name":"North Campus","address":"456 Learning Avenue, North District","phone":"+1-555-0124","email":"north@yousch.edu","is_active":true,"created_at":"2025-08-25T16:09:23.000000Z","updated_at":"2025-08-25T16:09:23.000000Z"},"reviewer":{"id":1,"name":"Test User","email":"test@example.com","email_verified_at":"2025-08-25T16:09:20.000000Z","created_at":"2025-08-25T16:09:20.000000Z","updated_at":"2025-08-25T16:09:20.000000Z"}}],"message":"Student transfers retrieved successfully"}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/admin/students/transfers
+    metadata:
+      groupName: Students
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Store a newly created student transfer.'
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/admin/students/transfers/{id}'
+    metadata:
+      groupName: Students
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Display the specified student transfer.'
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the transfer.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"success":true,"data":{"id":1,"student_id":1,"from_campus_id":1,"to_campus_id":2,"request_date":"2025-07-26T00:00:00.000000Z","approved_date":null,"status":"pending","reviewer_id":null,"created_at":"2025-08-25T16:09:23.000000Z","updated_at":"2025-08-25T16:09:23.000000Z","student":{"id":1,"school_id":1,"campus_id":1,"class_id":1,"student_number":"STU2025001","first_name":"Sarah","last_name":"Wilson","dob":"2006-03-18T00:00:00.000000Z","gender":"female","email":"sarah.wilson@example.com","phone":"+1234567896","parent_name":"James Wilson","parent_email":"james.wilson@example.com","parent_phone":"+1234567897","enrollment_date":"2024-09-01T00:00:00.000000Z","status":"active","profile_picture":null,"created_at":"2025-08-25T16:09:23.000000Z","updated_at":"2025-08-25T16:09:23.000000Z"},"from_campus":{"id":1,"school_id":1,"name":"Main Campus","address":"123 Education Street, Knowledge City","phone":"+1-555-0123","email":"main@yousch.edu","is_active":true,"created_at":"2025-08-25T16:09:23.000000Z","updated_at":"2025-08-25T16:09:23.000000Z"},"to_campus":{"id":2,"school_id":1,"name":"North Campus","address":"456 Learning Avenue, North District","phone":"+1-555-0124","email":"north@yousch.edu","is_active":true,"created_at":"2025-08-25T16:09:23.000000Z","updated_at":"2025-08-25T16:09:23.000000Z"},"reviewer":null}}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - PUT
+    uri: 'api/admin/students/transfers/{id}'
+    metadata:
+      groupName: Students
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Update the specified student transfer.'
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the transfer.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - DELETE
+    uri: 'api/admin/students/transfers/{id}'
+    metadata:
+      groupName: Students
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Remove the specified student transfer.'
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the transfer.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: 'api/admin/students/transfers/{transfer_id}/approve'
+    metadata:
+      groupName: Students
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Approve a student transfer.'
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      transfer_id:
+        name: transfer_id
+        description: 'The ID of the transfer.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      transfer_id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: 'api/admin/students/transfers/{transfer_id}/reject'
+    metadata:
+      groupName: Students
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Reject a student transfer.'
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      transfer_id:
+        name: transfer_id
+        description: 'The ID of the transfer.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      transfer_id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/admin/students/transfers/student/{student}'
+    metadata:
+      groupName: Students
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Get transfers by student.'
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      student:
+        name: student
+        description: 'The student.'
+        required: true
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      student: architecto
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 500
+        content: |-
+          {
+              "message": "Server Error"
+          }
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/admin/students/transfers/campus/{campus}'
+    metadata:
+      groupName: Students
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Get transfers by campus.'
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      campus:
+        name: campus
+        description: 'The campus.'
+        required: true
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      campus: architecto
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 500
+        content: |-
+          {
+              "message": "Server Error"
+          }
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/admin/students/transfers/statistics/overview
+    metadata:
+      groupName: Students
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Get transfer statistics.'
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"success":true,"data":{"total_transfers":2,"pending_transfers":1,"approved_transfers":0,"rejected_transfers":0,"recent_transfers":0,"approval_rate":0,"average_processing_days":5}}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/admin/students/graduation
+    metadata:
+      groupName: Students
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Display a listing of student graduations.'
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"success":true,"data":[{"id":1,"student_id":3,"graduation_date":"2024-06-15T00:00:00.000000Z","diploma_number":"DIP2024001","status":"issued","created_at":"2025-08-25T16:09:23.000000Z","updated_at":"2025-08-25T16:09:23.000000Z","student":{"id":3,"school_id":1,"campus_id":1,"class_id":1,"student_number":"STU2025003","first_name":"Emily","last_name":"Davis","dob":"2004-07-12T00:00:00.000000Z","gender":"female","email":"emily.davis@example.com","phone":"+1234567900","parent_name":"Thomas Davis","parent_email":"thomas.davis@example.com","parent_phone":"+1234567901","enrollment_date":"2023-09-01T00:00:00.000000Z","status":"graduated","profile_picture":null,"created_at":"2025-08-25T16:09:23.000000Z","updated_at":"2025-08-25T16:09:23.000000Z"}}],"message":"Student graduations retrieved successfully"}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/admin/students/graduation
+    metadata:
+      groupName: Students
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Store a newly created student graduation.'
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/admin/students/graduation/{id}'
+    metadata:
+      groupName: Students
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Display the specified student graduation.'
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the graduation.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"success":true,"data":{"id":1,"student_id":3,"graduation_date":"2024-06-15T00:00:00.000000Z","diploma_number":"DIP2024001","status":"issued","created_at":"2025-08-25T16:09:23.000000Z","updated_at":"2025-08-25T16:09:23.000000Z","student":{"id":3,"school_id":1,"campus_id":1,"class_id":1,"student_number":"STU2025003","first_name":"Emily","last_name":"Davis","dob":"2004-07-12T00:00:00.000000Z","gender":"female","email":"emily.davis@example.com","phone":"+1234567900","parent_name":"Thomas Davis","parent_email":"thomas.davis@example.com","parent_phone":"+1234567901","enrollment_date":"2023-09-01T00:00:00.000000Z","status":"graduated","profile_picture":null,"created_at":"2025-08-25T16:09:23.000000Z","updated_at":"2025-08-25T16:09:23.000000Z"}}}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - PUT
+    uri: 'api/admin/students/graduation/{id}'
+    metadata:
+      groupName: Students
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Update the specified student graduation.'
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the graduation.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - DELETE
+    uri: 'api/admin/students/graduation/{id}'
+    metadata:
+      groupName: Students
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Remove the specified student graduation.'
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the graduation.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: 'api/admin/students/graduation/{graduation_id}/issue'
+    metadata:
+      groupName: Students
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Issue the diploma.'
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      graduation_id:
+        name: graduation_id
+        description: 'The ID of the graduation.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      graduation_id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/admin/students/graduation/student/{student}'
+    metadata:
+      groupName: Students
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Get graduations by student.'
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      student:
+        name: student
+        description: 'The student.'
+        required: true
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      student: architecto
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 500
+        content: |-
+          {
+              "message": "Server Error"
+          }
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/admin/students/graduation/date-range
+    metadata:
+      groupName: Students
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Get graduations by date range.'
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 404
+        content: |-
+          {
+              "message": "No query results for model [App\\Models\\Students\\StudentGraduation] date-range"
+          }
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/admin/students/graduation/statistics/overview
+    metadata:
+      groupName: Students
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Get graduation statistics.'
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"success":true,"data":{"total_graduations":1,"pending_graduations":0,"issued_graduations":0,"recent_graduations":0,"issuance_rate":0,"graduations_by_year":[]}}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/admin/students/documents
+    metadata:
+      groupName: Students
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Display a listing of student documents.'
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"success":true,"data":[{"id":2,"student_id":1,"document_type":"ID Card","document_path":"students\/documents\/id_card_001.jpg","original_filename":"student_id_card.jpg","mime_type":"image\/jpeg","file_size":512000,"uploaded_at":"2025-08-20T16:09:23.000000Z","created_at":"2025-08-25T16:09:23.000000Z","updated_at":"2025-08-25T16:09:23.000000Z","student":{"id":1,"school_id":1,"campus_id":1,"class_id":1,"student_number":"STU2025001","first_name":"Sarah","last_name":"Wilson","dob":"2006-03-18T00:00:00.000000Z","gender":"female","email":"sarah.wilson@example.com","phone":"+1234567896","parent_name":"James Wilson","parent_email":"james.wilson@example.com","parent_phone":"+1234567897","enrollment_date":"2024-09-01T00:00:00.000000Z","status":"active","profile_picture":null,"created_at":"2025-08-25T16:09:23.000000Z","updated_at":"2025-08-25T16:09:23.000000Z"}},{"id":1,"student_id":1,"document_type":"Birth Certificate","document_path":"students\/documents\/birth_cert_001.pdf","original_filename":"birth_certificate.pdf","mime_type":"application\/pdf","file_size":1024000,"uploaded_at":"2025-08-15T16:09:23.000000Z","created_at":"2025-08-25T16:09:23.000000Z","updated_at":"2025-08-25T16:09:23.000000Z","student":{"id":1,"school_id":1,"campus_id":1,"class_id":1,"student_number":"STU2025001","first_name":"Sarah","last_name":"Wilson","dob":"2006-03-18T00:00:00.000000Z","gender":"female","email":"sarah.wilson@example.com","phone":"+1234567896","parent_name":"James Wilson","parent_email":"james.wilson@example.com","parent_phone":"+1234567897","enrollment_date":"2024-09-01T00:00:00.000000Z","status":"active","profile_picture":null,"created_at":"2025-08-25T16:09:23.000000Z","updated_at":"2025-08-25T16:09:23.000000Z"}},{"id":3,"student_id":2,"document_type":"Transcript","document_path":"students\/documents\/transcript_001.pdf","original_filename":"academic_transcript.pdf","mime_type":"application\/pdf","file_size":2048000,"uploaded_at":"2025-08-10T16:09:23.000000Z","created_at":"2025-08-25T16:09:23.000000Z","updated_at":"2025-08-25T16:09:23.000000Z","student":{"id":2,"school_id":1,"campus_id":1,"class_id":1,"student_number":"STU2025002","first_name":"David","last_name":"Brown","dob":"2005-11-25T00:00:00.000000Z","gender":"male","email":"david.brown@example.com","phone":"+1234567898","parent_name":"Patricia Brown","parent_email":"patricia.brown@example.com","parent_phone":"+1234567899","enrollment_date":"2024-09-01T00:00:00.000000Z","status":"active","profile_picture":null,"created_at":"2025-08-25T16:09:23.000000Z","updated_at":"2025-08-25T16:09:23.000000Z"}}],"message":"Student documents retrieved successfully"}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/admin/students/documents
+    metadata:
+      groupName: Students
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Store a newly created student document.'
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/admin/students/documents/{id}'
+    metadata:
+      groupName: Students
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Display the specified student document.'
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the document.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"success":true,"data":{"id":1,"student_id":1,"document_type":"Birth Certificate","document_path":"students\/documents\/birth_cert_001.pdf","original_filename":"birth_certificate.pdf","mime_type":"application\/pdf","file_size":1024000,"uploaded_at":"2025-08-15T16:09:23.000000Z","created_at":"2025-08-25T16:09:23.000000Z","updated_at":"2025-08-25T16:09:23.000000Z","student":{"id":1,"school_id":1,"campus_id":1,"class_id":1,"student_number":"STU2025001","first_name":"Sarah","last_name":"Wilson","dob":"2006-03-18T00:00:00.000000Z","gender":"female","email":"sarah.wilson@example.com","phone":"+1234567896","parent_name":"James Wilson","parent_email":"james.wilson@example.com","parent_phone":"+1234567897","enrollment_date":"2024-09-01T00:00:00.000000Z","status":"active","profile_picture":null,"created_at":"2025-08-25T16:09:23.000000Z","updated_at":"2025-08-25T16:09:23.000000Z"}}}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - PUT
+    uri: 'api/admin/students/documents/{id}'
+    metadata:
+      groupName: Students
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Update the specified student document.'
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the document.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - DELETE
+    uri: 'api/admin/students/documents/{id}'
+    metadata:
+      groupName: Students
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Remove the specified student document.'
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the document.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/admin/students/documents/student/{student}'
+    metadata:
+      groupName: Students
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Get documents by student.'
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      student:
+        name: student
+        description: 'The student.'
+        required: true
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      student: architecto
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 500
+        content: |-
+          {
+              "message": "Server Error"
+          }
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/admin/students/documents/type/{type}'
+    metadata:
+      groupName: Students
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Get documents by type.'
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      type:
+        name: type
+        description: 'The type.'
+        required: true
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      type: architecto
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"success":true,"data":[]}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/admin/students/documents/upload
+    metadata:
+      groupName: Students
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Upload a new document file.'
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/admin/students/documents/download/{document_id}'
+    metadata:
+      groupName: Students
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Download the specified document.'
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      document_id:
+        name: document_id
+        description: 'The ID of the document.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      document_id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 404
+        content: '{"success":false,"message":"Document file not found"}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/admin/students/documents/statistics/overview
+    metadata:
+      groupName: Students
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Get document statistics.'
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 500
+        content: '{"success":false,"message":"Unable to retrieve statistics"}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/admin/students/bulk/students/import
+    metadata:
+      groupName: Students
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Bulk import students.'
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/admin/students/bulk/students/export
+    metadata:
+      groupName: Students
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Bulk export students.'
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/admin/students/bulk/academic-history/import
+    metadata:
+      groupName: Students
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Bulk import academic history records.'
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/admin/students/bulk/academic-history/export
+    metadata:
+      groupName: Students
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Bulk export academic history records.'
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/admin/students/reports/enrollment-trends
+    metadata:
+      groupName: Students
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Get enrollment trends report.'
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"success":true,"data":{"trends":[],"summary":[]}}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/admin/students/reports/academic-performance
+    metadata:
+      groupName: Students
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Get academic performance report.'
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"success":true,"data":{"performance":[],"summary":[]}}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/admin/students/reports/transfer-analysis
+    metadata:
+      groupName: Students
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Get transfer analysis report.'
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"success":true,"data":{"analysis":[],"summary":[]}}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/admin/students/reports/graduation-analysis
+    metadata:
+      groupName: Students
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Get graduation analysis report.'
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"success":true,"data":{"analysis":[],"summary":[]}}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/admin/students/reports/student-demographics
+    metadata:
+      groupName: Students
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Get student demographics report.'
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"success":true,"data":{"demographics":[],"summary":[]}}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []

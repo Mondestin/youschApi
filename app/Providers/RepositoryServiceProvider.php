@@ -9,10 +9,33 @@ use App\Repositories\AdminAcademics\ExamRepository;
 use App\Repositories\AdminAcademics\StudentGradeRepository;
 use App\Repositories\AdminAcademics\StudentEnrollmentRepository;
 use App\Repositories\AdminAcademics\TeacherAssignmentRepository;
+use App\Repositories\Students\StudentRepository;
+use App\Repositories\Students\StudentApplicationRepository;
+use App\Repositories\Students\StudentTransferRepository;
+use App\Repositories\Students\StudentGraduationRepository;
+use App\Repositories\Students\StudentDocumentRepository;
+use App\Repositories\Students\AcademicHistoryRepository;
+use App\Repositories\Teachers\TeacherRepository;
+use App\Repositories\Teachers\TeacherLeaveRepository;
+use App\Repositories\Teachers\TeacherDocumentRepository;
+use App\Repositories\Teachers\TeacherPerformanceRepository;
+use App\Repositories\Teachers\TeacherTimetableRepository;
+use App\Repositories\Teachers\TeacherAssignmentRepository as TeachersTeacherAssignmentRepository;
 use App\Models\AdminAcademics\Exam;
 use App\Models\AdminAcademics\StudentGrade;
 use App\Models\AdminAcademics\StudentEnrollment;
 use App\Models\AdminAcademics\TeacherAssignment;
+use App\Models\Students\Student;
+use App\Models\Students\StudentApplication;
+use App\Models\Students\StudentTransfer;
+use App\Models\Students\StudentGraduation;
+use App\Models\Students\StudentDocument;
+use App\Models\Students\AcademicHistory;
+use App\Models\Teachers\Teacher;
+use App\Models\Teachers\TeacherLeave;
+use App\Models\Teachers\TeacherDocument;
+use App\Models\Teachers\TeacherPerformance;
+use App\Models\Teachers\TeacherTimetable;
 
 class RepositoryServiceProvider extends ServiceProvider
 {
@@ -40,6 +63,71 @@ class RepositoryServiceProvider extends ServiceProvider
         $this->app->bind(TeacherAssignmentRepository::class, function ($app) {
             return new TeacherAssignmentRepository(new TeacherAssignment());
         });
+
+        // Bind Students repositories
+        $this->app->bind(StudentRepository::class, function ($app) {
+            return new StudentRepository(new Student());
+        });
+
+        $this->app->bind(StudentApplicationRepository::class, function ($app) {
+            return new StudentApplicationRepository(new StudentApplication());
+        });
+
+        $this->app->bind(StudentTransferRepository::class, function ($app) {
+            return new StudentTransferRepository(new StudentTransfer());
+        });
+
+        $this->app->bind(StudentGraduationRepository::class, function ($app) {
+            return new StudentGraduationRepository(new StudentGraduation());
+        });
+
+        $this->app->bind(StudentDocumentRepository::class, function ($app) {
+            return new StudentDocumentRepository(new StudentDocument());
+        });
+
+        $this->app->bind(AcademicHistoryRepository::class, function ($app) {
+            return new AcademicHistoryRepository(new AcademicHistory());
+        });
+
+        // Bind Teachers repositories
+        $this->app->bind(TeacherRepository::class, function ($app) {
+            return new TeacherRepository(new Teacher());
+        });
+
+        $this->app->bind(TeacherLeaveRepository::class, function ($app) {
+            return new TeacherLeaveRepository(new TeacherLeave());
+        });
+
+        $this->app->bind(TeacherDocumentRepository::class, function ($app) {
+            return new TeacherDocumentRepository(new TeacherDocument());
+        });
+
+        $this->app->bind(TeacherPerformanceRepository::class, function ($app) {
+            return new TeacherPerformanceRepository(new TeacherPerformance());
+        });
+
+        $this->app->bind(TeacherTimetableRepository::class, function ($app) {
+            return new TeacherTimetableRepository(new TeacherTimetable());
+        });
+
+        $this->app->bind(TeachersTeacherAssignmentRepository::class, function ($app) {
+            return new TeachersTeacherAssignmentRepository(new \App\Models\Teachers\TeacherAssignment());
+        });
+
+        // Bind Teacher Assignment Repository Interface
+        $this->app->bind(\App\Repositories\Teachers\TeacherAssignmentRepositoryInterface::class, TeachersTeacherAssignmentRepository::class);
+
+        // Bind Attendance Repository Interfaces
+        $this->app->bind(\App\Repositories\Attendance\StudentAttendanceRepositoryInterface::class, \App\Repositories\Attendance\StudentAttendanceRepository::class);
+        $this->app->bind(\App\Repositories\Attendance\TeacherAttendanceRepositoryInterface::class, \App\Repositories\Attendance\TeacherAttendanceRepository::class);
+        $this->app->bind(\App\Repositories\Attendance\StudentAttendanceExcuseRepositoryInterface::class, \App\Repositories\Attendance\StudentAttendanceExcuseRepository::class);
+        $this->app->bind(\App\Repositories\Attendance\TeacherAttendanceExcuseRepositoryInterface::class, \App\Repositories\Attendance\TeacherAttendanceExcuseRepository::class);
+
+        // Bind Exams & Gradings Repository Interfaces
+        $this->app->bind(\App\Repositories\ExamsGradings\ExamTypeRepositoryInterface::class, \App\Repositories\ExamsGradings\ExamTypeRepository::class);
+        $this->app->bind(\App\Repositories\ExamsGradings\ExamMarkRepositoryInterface::class, \App\Repositories\ExamsGradings\ExamMarkRepository::class);
+        $this->app->bind(\App\Repositories\ExamsGradings\StudentGPARepositoryInterface::class, \App\Repositories\ExamsGradings\StudentGPARepository::class);
+        $this->app->bind(\App\Repositories\ExamsGradings\ReportCardRepositoryInterface::class, \App\Repositories\ExamsGradings\ReportCardRepository::class);
     }
 
     /**

@@ -12,12 +12,13 @@ class SchoolController extends Controller
 {
     /**
      * Display a listing of schools.
-     */
+     * @group Admin Academics
+    */
     public function index(): JsonResponse
     {
         $schools = School::with(['campuses', 'faculties', 'academicYears'])
                         ->where('is_active', true)
-                        ->paginate(15);
+                        ->get();
 
         return response()->json([
             'success' => true,
@@ -28,7 +29,8 @@ class SchoolController extends Controller
 
     /**
      * Store a newly created school.
-     */
+     * @group Admin Academics
+    */
     public function store(Request $request): JsonResponse
     {
         try {
@@ -68,7 +70,8 @@ class SchoolController extends Controller
 
     /**
      * Display the specified school.
-     */
+     * @group Admin Academics
+    */
     public function show(School $school): JsonResponse
     {
         $school->load(['campuses', 'faculties', 'academicYears', 'gradingSchemes', 'schoolAdmins']);
@@ -82,7 +85,8 @@ class SchoolController extends Controller
 
     /**
      * Update the specified school.
-     */
+     * @group Admin Academics
+    */
     public function update(Request $request, School $school): JsonResponse
     {
         try {
@@ -122,7 +126,8 @@ class SchoolController extends Controller
 
     /**
      * Remove the specified school.
-     */
+     * @group Admin Academics
+    */
     public function destroy(School $school): JsonResponse
     {
         try {
@@ -152,7 +157,8 @@ class SchoolController extends Controller
 
     /**
      * Get school statistics.
-     */
+     * @group Admin Academics
+    */
     public function statistics(School $school): JsonResponse
     {
         $stats = [

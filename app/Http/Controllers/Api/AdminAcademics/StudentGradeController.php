@@ -19,7 +19,8 @@ class StudentGradeController extends Controller
 {
     /**
      * Display a listing of student grades.
-     */
+     * @group Admin Academics
+    */
     public function index(Request $request): JsonResponse
     {
         $query = StudentGrade::with([
@@ -68,7 +69,7 @@ class StudentGradeController extends Controller
             });
         }
 
-        $grades = $query->orderBy('created_at', 'desc')->paginate(15);
+        $grades = $query->orderBy('created_at', 'desc')->get();
 
         return response()->json([
             'success' => true,
@@ -79,7 +80,8 @@ class StudentGradeController extends Controller
 
     /**
      * Store a newly created student grade.
-     */
+     * @group Admin Academics
+    */
     public function store(Request $request): JsonResponse
     {
         try {
@@ -172,7 +174,8 @@ class StudentGradeController extends Controller
 
     /**
      * Display the specified student grade.
-     */
+     * @group Admin Academics
+    */
     public function show(StudentGrade $grade): JsonResponse
     {
         $grade->load([
@@ -193,7 +196,8 @@ class StudentGradeController extends Controller
 
     /**
      * Update the specified student grade.
-     */
+     * @group Admin Academics
+    */
     public function update(Request $request, StudentGrade $grade): JsonResponse
     {
         try {
@@ -275,7 +279,8 @@ class StudentGradeController extends Controller
 
     /**
      * Remove the specified student grade.
-     */
+     * @group Admin Academics
+    */
     public function destroy(StudentGrade $grade): JsonResponse
     {
         try {
@@ -297,7 +302,8 @@ class StudentGradeController extends Controller
 
     /**
      * Bulk create grades.
-     */
+     * @group Admin Academics
+    */
     public function bulkCreate(Request $request): JsonResponse
     {
         try {
@@ -402,7 +408,8 @@ class StudentGradeController extends Controller
 
     /**
      * Get grades by student.
-     */
+     * @group Admin Academics
+    */
     public function byStudent(User $student, Request $request): JsonResponse
     {
         $query = StudentGrade::where('student_id', $student->id)
@@ -440,7 +447,8 @@ class StudentGradeController extends Controller
 
     /**
      * Get grades by class.
-     */
+     * @group Admin Academics
+    */
     public function byClass(ClassRoom $class, Request $request): JsonResponse
     {
         $query = $class->studentGrades()
@@ -478,7 +486,8 @@ class StudentGradeController extends Controller
 
     /**
      * Get student transcript.
-     */
+     * @group Admin Academics
+    */
     public function transcript(User $student, Request $request): JsonResponse
     {
         $query = StudentGrade::where('student_id', $student->id)

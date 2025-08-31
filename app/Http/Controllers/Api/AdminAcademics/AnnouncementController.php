@@ -17,6 +17,7 @@ class AnnouncementController extends Controller
 {
     /**
      * Display a listing of announcements.
+     * @group Admin Academics
      */
     public function index(Request $request): JsonResponse
     {
@@ -73,7 +74,7 @@ class AnnouncementController extends Controller
 
         $announcements = $query->orderBy('publish_date', 'desc')
                               ->orderBy('priority', 'desc')
-                              ->paginate(15);
+                              ->get();
 
         return response()->json([
             'success' => true,
@@ -84,6 +85,7 @@ class AnnouncementController extends Controller
 
     /**
      * Store a newly created announcement.
+     * @group Admin Academics
      */
     public function store(Request $request): JsonResponse
     {
@@ -117,7 +119,7 @@ class AnnouncementController extends Controller
             }
 
             // Set created_by to current authenticated user
-            $validated['created_by'] = auth()->id();
+            $validated['created_by'] = Request()->user()->id;
 
             $announcement = Announcement::create($validated);
 
@@ -149,6 +151,7 @@ class AnnouncementController extends Controller
 
     /**
      * Display the specified announcement.
+     * @group Admin Academics
      */
     public function show(Announcement $announcement): JsonResponse
     {
@@ -168,6 +171,7 @@ class AnnouncementController extends Controller
 
     /**
      * Update the specified announcement.
+     * @group Admin Academics
      */
     public function update(Request $request, Announcement $announcement): JsonResponse
     {
@@ -236,6 +240,7 @@ class AnnouncementController extends Controller
 
     /**
      * Remove the specified announcement.
+     * @group Admin Academics
      */
     public function destroy(Announcement $announcement): JsonResponse
     {
@@ -258,6 +263,7 @@ class AnnouncementController extends Controller
 
     /**
      * Activate/deactivate an announcement.
+     * @group Admin Academics
      */
     public function toggleStatus(Announcement $announcement): JsonResponse
     {
@@ -288,6 +294,7 @@ class AnnouncementController extends Controller
 
     /**
      * Get announcements by school.
+     * @group Admin Academics
      */
     public function bySchool(School $school, Request $request): JsonResponse
     {
@@ -332,6 +339,7 @@ class AnnouncementController extends Controller
 
     /**
      * Get announcements by campus.
+     * @group Admin Academics
      */
     public function byCampus(Campus $campus, Request $request): JsonResponse
     {
@@ -371,6 +379,7 @@ class AnnouncementController extends Controller
 
     /**
      * Get announcements by class.
+     * @group Admin Academics
      */
     public function byClass(ClassRoom $class, Request $request): JsonResponse
     {
@@ -405,6 +414,7 @@ class AnnouncementController extends Controller
 
     /**
      * Get urgent announcements.
+     * @group Admin Academics
      */
     public function urgent(Request $request): JsonResponse
     {
@@ -445,7 +455,8 @@ class AnnouncementController extends Controller
 
     /**
      * Get announcement statistics.
-     */
+     * @group Admin Academics
+    */
     public function statistics(Request $request): JsonResponse
     {
         $query = Announcement::query();

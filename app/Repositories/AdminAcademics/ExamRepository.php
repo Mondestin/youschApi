@@ -19,19 +19,19 @@ class ExamRepository extends BaseRepository
     }
 
     /**
-     * Get active exams
+     * Get scheduled exams
      */
-    public function getActiveExams(): Collection
+    public function getScheduledExams(): Collection
     {
-        return $this->model->active()->get();
+        return $this->model->byStatus('scheduled')->get();
     }
 
     /**
-     * Get exams by type
+     * Get exams by exam type
      */
-    public function getExamsByType(string $type): Collection
+    public function getExamsByExamType(int $examTypeId): Collection
     {
-        return $this->model->byType($type)->get();
+        return $this->model->byExamType($examTypeId)->get();
     }
 
     /**
@@ -67,19 +67,11 @@ class ExamRepository extends BaseRepository
     }
 
     /**
-     * Get exams for a specific school
+     * Get exams by examiner
      */
-    public function getExamsBySchool(int $schoolId): Collection
+    public function getExamsByExaminer(int $examinerId): Collection
     {
-        return $this->model->where('school_id', $schoolId)->get();
-    }
-
-    /**
-     * Get exams by coordinator
-     */
-    public function getExamsByCoordinator(int $coordinatorId): Collection
-    {
-        return $this->model->where('coordinator_id', $coordinatorId)->get();
+        return $this->model->where('examiner_id', $examinerId)->get();
     }
 
     /**
@@ -164,12 +156,12 @@ class ExamRepository extends BaseRepository
     }
 
     /**
-     * Search exams by name or description
+     * Search exams by name or instructions
      */
     public function searchExams(string $searchTerm): Collection
     {
         return $this->model->where('name', 'like', "%{$searchTerm}%")
-                          ->orWhere('description', 'like', "%{$searchTerm}%")
+                          ->orWhere('instructions', 'like', "%{$searchTerm}%")
                           ->get();
     }
 
@@ -181,8 +173,9 @@ class ExamRepository extends BaseRepository
         return $this->model->with([
             'subject',
             'classRoom',
-            'coordinator',
-            'school',
+            'examiner',
+            'examType',
+            'lab',
             'studentGrades'
         ])->get();
     }
@@ -195,8 +188,9 @@ class ExamRepository extends BaseRepository
         return $this->model->with([
             'subject',
             'classRoom',
-            'coordinator',
-            'school',
+            'examiner',
+            'examType',
+            'lab',
             'studentGrades'
         ])->find($id);
     }

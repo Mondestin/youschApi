@@ -6,6 +6,8 @@ use App\Http\Controllers\Controller;
 use App\Models\AdminAcademics\Exam;
 use App\Models\AdminAcademics\Subject;
 use App\Models\AdminAcademics\ClassRoom;
+use App\Models\AdminAcademics\Lab;
+use App\Models\ExamsGradings\ExamType;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Http\JsonResponse;
@@ -16,10 +18,11 @@ class ExamController extends Controller
 {
     /**
      * Display a listing of exams.
+     * @group Admin Academics
      */
     public function index(Request $request): JsonResponse
     {
-        $query = Exam::with(['subject.course.department.faculty.school', 'classRoom.campus', 'coordinator']);
+        $query = Exam::with(['subject.course.department.faculty.school', 'classRoom.campus', 'examiner', 'examType', 'lab']);
 
         // Filter by subject if provided
         if ($request->has('subject_id')) {
@@ -31,14 +34,19 @@ class ExamController extends Controller
             $query->where('class_id', $request->class_id);
         }
 
-        // Filter by coordinator if provided
-        if ($request->has('coordinator_id')) {
-            $query->where('coordinator_id', $request->coordinator_id);
+        // Filter by examiner if provided
+        if ($request->has('examiner_id')) {
+            $query->where('examiner_id', $request->examiner_id);
         }
 
-        // Filter by type if provided
-        if ($request->has('type')) {
-            $query->where('type', $request->type);
+        // Filter by exam type if provided
+        if ($request->has('exam_type_id')) {
+            $query->where('exam_type_id', $request->exam_type_id);
+        }
+
+        // Filter by status if provided
+        if ($request->has('status')) {
+            $query->where('status', $request->status);
         }
 
         // Filter by date range if provided
@@ -59,7 +67,7 @@ class ExamController extends Controller
 
         $exams = $query->orderBy('exam_date', 'asc')
                       ->orderBy('start_time', 'asc')
-                      ->paginate(15);
+                      ->get();
 
         return response()->json([
             'success' => true,
@@ -70,22 +78,23 @@ class ExamController extends Controller
 
     /**
      * Store a newly created exam.
+     * @group Admin Academics
      */
     public function store(Request $request): JsonResponse
     {
         try {
             $validated = $request->validate([
+                'name' => 'required|string|max:255',
                 'subject_id' => 'required|exists:subjects,id',
                 'class_id' => 'required|exists:classes,id',
-                'coordinator_id' => 'required|exists:users,id',
-                'type' => 'required|in:internal,midterm,final,quiz,assignment',
-                'title' => 'required|string|max:255',
+                'examiner_id' => 'required|exists:users,id',
+                'exam_type_id' => 'required|exists:exam_types,id',
                 'exam_date' => 'required|date',
                 'start_time' => 'required|date_format:H:i',
                 'end_time' => 'required|date_format:H:i|after:start_time',
-                'room' => 'nullable|string|max:50',
+                'lab_id' => 'nullable|exists:labs,id',
                 'instructions' => 'nullable|string',
-                'weightage' => 'nullable|numeric|min:0|max:100',
+                'status' => 'nullable|in:scheduled,completed,cancelled',
             ]);
 
             // Check for time conflicts in the same class on the same date
@@ -108,8 +117,8 @@ class ExamController extends Controller
                 ], 422);
             }
 
-            // Check for coordinator conflicts on the same date and time
-            $coordinatorConflict = Exam::where('coordinator_id', $validated['coordinator_id'])
+            // Check for examiner conflicts on the same date and time
+            $examinerConflict = Exam::where('examiner_id', $validated['examiner_id'])
                 ->where('exam_date', $validated['exam_date'])
                 ->where(function($query) use ($validated) {
                     $query->whereBetween('start_time', [$validated['start_time'], $validated['end_time']])
@@ -121,10 +130,10 @@ class ExamController extends Controller
                 })
                 ->exists();
 
-            if ($coordinatorConflict) {
+            if ($examinerConflict) {
                 return response()->json([
                     'success' => false,
-                    'message' => 'Coordinator has a conflicting exam at this time'
+                    'message' => 'Examiner has a conflicting exam at this time'
                 ], 422);
             }
 
@@ -132,7 +141,7 @@ class ExamController extends Controller
 
             return response()->json([
                 'success' => true,
-                'data' => $exam->load(['subject.course.department.faculty.school', 'classRoom.campus', 'coordinator']),
+                'data' => $exam->load(['subject.course.department.faculty.school', 'classRoom.campus', 'examiner', 'examType', 'lab']),
                 'message' => 'Exam created successfully'
             ], 201);
 
@@ -153,13 +162,16 @@ class ExamController extends Controller
 
     /**
      * Display the specified exam.
+     * @group Admin Academics
      */
     public function show(Exam $exam): JsonResponse
     {
         $exam->load([
             'subject.course.department.faculty.school',
             'classRoom.campus',
-            'coordinator'
+            'examiner',
+            'examType',
+            'lab'
         ]);
 
         return response()->json([
@@ -171,33 +183,34 @@ class ExamController extends Controller
 
     /**
      * Update the specified exam.
+     * @group Admin Academics
      */
     public function update(Request $request, Exam $exam): JsonResponse
     {
         try {
             $validated = $request->validate([
+                'name' => 'sometimes|required|string|max:255',
                 'subject_id' => 'sometimes|required|exists:subjects,id',
                 'class_id' => 'sometimes|required|exists:classes,id',
-                'coordinator_id' => 'sometimes|required|exists:users,id',
-                'type' => 'sometimes|required|in:internal,midterm,final,quiz,assignment',
-                'title' => 'sometimes|required|string|max:255',
+                'examiner_id' => 'sometimes|required|exists:users,id',
+                'exam_type_id' => 'sometimes|required|exists:exam_types,id',
                 'exam_date' => 'sometimes|required|date',
                 'start_time' => 'sometimes|required|date_format:H:i',
                 'end_time' => 'sometimes|required|date_format:H:i|after:start_time',
-                'room' => 'nullable|string|max:50',
+                'lab_id' => 'nullable|exists:labs,id',
                 'instructions' => 'nullable|string',
-                'weightage' => 'nullable|numeric|min:0|max:100',
+                'status' => 'sometimes|required|in:scheduled,completed,cancelled',
             ]);
 
-            // Check for conflicts if time/date/class/coordinator is being changed
+            // Check for conflicts if time/date/class/examiner is being changed
             if (isset($validated['exam_date']) || isset($validated['start_time']) || isset($validated['end_time']) || 
-                isset($validated['class_id']) || isset($validated['coordinator_id'])) {
+                isset($validated['class_id']) || isset($validated['examiner_id'])) {
                 
                 $examDate = $validated['exam_date'] ?? $exam->exam_date;
                 $startTime = $validated['start_time'] ?? $exam->start_time;
                 $endTime = $validated['end_time'] ?? $exam->end_time;
                 $classId = $validated['class_id'] ?? $exam->class_id;
-                $coordinatorId = $validated['coordinator_id'] ?? $exam->coordinator_id;
+                $examinerId = $validated['examiner_id'] ?? $exam->examiner_id;
 
                 // Check for time conflicts in the same class on the same date
                 $timeConflict = Exam::where('class_id', $classId)
@@ -220,8 +233,8 @@ class ExamController extends Controller
                     ], 422);
                 }
 
-                // Check for coordinator conflicts on the same date and time
-                $coordinatorConflict = Exam::where('coordinator_id', $coordinatorId)
+                // Check for examiner conflicts on the same date and time
+                $examinerConflict = Exam::where('examiner_id', $examinerId)
                     ->where('exam_date', $examDate)
                     ->where('id', '!=', $exam->id)
                     ->where(function($query) use ($startTime, $endTime) {
@@ -234,10 +247,10 @@ class ExamController extends Controller
                     })
                     ->exists();
 
-                if ($coordinatorConflict) {
+                if ($examinerConflict) {
                     return response()->json([
                         'success' => false,
-                        'message' => 'Coordinator has a conflicting exam at this time'
+                        'message' => 'Examiner has a conflicting exam at this time'
                     ], 422);
                 }
             }
@@ -246,7 +259,7 @@ class ExamController extends Controller
 
             return response()->json([
                 'success' => true,
-                'data' => $exam->fresh()->load(['subject.course.department.faculty.school', 'classRoom.campus', 'coordinator']),
+                'data' => $exam->fresh()->load(['subject.course.department.faculty.school', 'classRoom.campus', 'examiner', 'examType', 'lab']),
                 'message' => 'Exam updated successfully'
             ]);
 
@@ -267,6 +280,7 @@ class ExamController extends Controller
 
     /**
      * Remove the specified exam.
+     * @group Admin Academics
      */
     public function destroy(Exam $exam): JsonResponse
     {
@@ -297,11 +311,12 @@ class ExamController extends Controller
 
     /**
      * Get exams by subject.
+     * @group Admin Academics
      */
     public function bySubject(Subject $subject, Request $request): JsonResponse
     {
         $query = $subject->exams()
-                        ->with(['classRoom.campus', 'coordinator']);
+                        ->with(['classRoom.campus', 'examiner', 'examType', 'lab']);
 
         // Filter by date range if provided
         if ($request->has('start_date')) {
@@ -325,11 +340,12 @@ class ExamController extends Controller
 
     /**
      * Get exams by class.
+     * @group Admin Academics
      */
     public function byClass(ClassRoom $class, Request $request): JsonResponse
     {
         $query = $class->exams()
-                      ->with(['subject.course', 'coordinator']);
+                      ->with(['subject.course', 'examiner', 'examType', 'lab']);
 
         // Filter by date range if provided
         if ($request->has('start_date')) {
@@ -353,10 +369,11 @@ class ExamController extends Controller
 
     /**
      * Get upcoming exams.
+     * @group Admin Academics
      */
     public function upcoming(Request $request): JsonResponse
     {
-        $query = Exam::with(['subject.course.department.faculty.school', 'classRoom.campus', 'coordinator'])
+        $query = Exam::with(['subject.course.department.faculty.school', 'classRoom.campus', 'examiner', 'examType', 'lab'])
                     ->where('exam_date', '>=', now()->toDateString());
 
         // Filter by school if provided
@@ -385,7 +402,8 @@ class ExamController extends Controller
 
     /**
      * Get exam statistics.
-     */
+     * @group Admin Academics
+    */
     public function statistics(Exam $exam): JsonResponse
     {
         $stats = [

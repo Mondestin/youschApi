@@ -17,7 +17,8 @@ class TeacherAssignmentController extends Controller
 {
     /**
      * Display a listing of teacher assignments.
-     */
+     * @group Admin Academics
+    */
     public function index(Request $request): JsonResponse
     {
         $query = TeacherAssignment::with([
@@ -65,7 +66,7 @@ class TeacherAssignmentController extends Controller
             });
         }
 
-        $assignments = $query->orderBy('assignment_date', 'desc')->paginate(15);
+        $assignments = $query->orderBy('assignment_date', 'desc')->get();
 
         return response()->json([
             'success' => true,
@@ -76,7 +77,8 @@ class TeacherAssignmentController extends Controller
 
     /**
      * Store a newly created teacher assignment.
-     */
+     * @group Admin Academics
+    */
     public function store(Request $request): JsonResponse
     {
         try {
@@ -156,7 +158,8 @@ class TeacherAssignmentController extends Controller
 
     /**
      * Display the specified teacher assignment.
-     */
+     * @group Admin Academics
+    */
     public function show(TeacherAssignment $assignment): JsonResponse
     {
         $assignment->load([
@@ -176,7 +179,8 @@ class TeacherAssignmentController extends Controller
 
     /**
      * Update the specified teacher assignment.
-     */
+     * @group Admin Academics
+    */
     public function update(Request $request, TeacherAssignment $assignment): JsonResponse
     {
         try {
@@ -271,7 +275,8 @@ class TeacherAssignmentController extends Controller
 
     /**
      * Remove the specified teacher assignment.
-     */
+     * @group Admin Academics
+    */
     public function destroy(TeacherAssignment $assignment): JsonResponse
     {
         try {
@@ -293,7 +298,8 @@ class TeacherAssignmentController extends Controller
 
     /**
      * Deactivate a teacher assignment.
-     */
+     * @group Admin Academics
+    */
     public function deactivate(TeacherAssignment $assignment): JsonResponse
     {
         try {
@@ -325,7 +331,8 @@ class TeacherAssignmentController extends Controller
 
     /**
      * Get teacher assignments by teacher.
-     */
+     * @group Admin Academics
+    */
     public function byTeacher(User $teacher, Request $request): JsonResponse
     {
         $query = TeacherAssignment::where('teacher_id', $teacher->id)
@@ -362,7 +369,8 @@ class TeacherAssignmentController extends Controller
 
     /**
      * Get teacher assignments by class.
-     */
+     * @group Admin Academics
+    */
     public function byClass(ClassRoom $class, Request $request): JsonResponse
     {
         $query = $class->teacherAssignments()
@@ -398,7 +406,8 @@ class TeacherAssignmentController extends Controller
 
     /**
      * Get teacher workload summary.
-     */
+     * @group Admin Academics
+    */
     public function workloadSummary(User $teacher, Request $request): JsonResponse
     {
         $query = TeacherAssignment::where('teacher_id', $teacher->id)

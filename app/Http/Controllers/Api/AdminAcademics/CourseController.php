@@ -13,7 +13,8 @@ class CourseController extends Controller
 {
     /**
      * Display a listing of courses.
-     */
+     * @group Admin Academics
+    */
     public function index(Request $request): JsonResponse
     {
         $query = Course::with(['department.faculty.school', 'subjects', 'classes']);
@@ -37,7 +38,7 @@ class CourseController extends Controller
             });
         }
 
-        $courses = $query->paginate(15);
+        $courses = $query->get();
 
         return response()->json([
             'success' => true,
@@ -48,7 +49,8 @@ class CourseController extends Controller
 
     /**
      * Store a newly created course.
-     */
+     * @group Admin Academics
+    */
     public function store(Request $request): JsonResponse
     {
         try {
@@ -84,7 +86,8 @@ class CourseController extends Controller
 
     /**
      * Display the specified course.
-     */
+     * @group Admin Academics
+    */
     public function show(Course $course): JsonResponse
     {
         $course->load([
@@ -104,7 +107,8 @@ class CourseController extends Controller
 
     /**
      * Update the specified course.
-     */
+     * @group Admin Academics
+    */
     public function update(Request $request, Course $course): JsonResponse
     {
         try {
@@ -140,7 +144,8 @@ class CourseController extends Controller
 
     /**
      * Remove the specified course.
-     */
+     * @group Admin Academics
+    */
     public function destroy(Course $course): JsonResponse
     {
         try {
@@ -170,7 +175,8 @@ class CourseController extends Controller
 
     /**
      * Get courses by department.
-     */
+     * @group Admin Academics
+    */
     public function byDepartment(Department $department): JsonResponse
     {
         $courses = $department->courses()
@@ -186,7 +192,8 @@ class CourseController extends Controller
 
     /**
      * Get course statistics.
-     */
+     * @group Admin Academics
+    */
     public function statistics(Course $course): JsonResponse
     {
         $stats = [

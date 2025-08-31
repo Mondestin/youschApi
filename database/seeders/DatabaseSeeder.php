@@ -6,6 +6,7 @@ use App\Models\User;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
+
 class DatabaseSeeder extends Seeder
 {
     /**
@@ -20,9 +21,18 @@ class DatabaseSeeder extends Seeder
             'email' => 'test@example.com',
         ]);
 
+        // Seed exam types first (needed for exams)
+        $this->call([
+            ExamTypeSeeder::class,
+        ]);
+
         // Seed academic management system
         $this->call([
             AcademicManagementSeeder::class,
+            StudentsManagementSeeder::class,
+            TeachersManagementSeeder::class,
+            AttendanceManagementSeeder::class,
+            ExamsGradingsSeeder::class,
         ]);
     }
 }

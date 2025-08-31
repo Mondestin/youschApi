@@ -16,7 +16,8 @@ class TimetableController extends Controller
 {
     /**
      * Display a listing of timetables.
-     */
+     * @group Admin Academics
+    */
     public function index(Request $request): JsonResponse
     {
         $query = Timetable::with(['classRoom.campus.school', 'subject.course', 'teacher']);
@@ -54,7 +55,7 @@ class TimetableController extends Controller
 
         $timetables = $query->orderBy('date', 'asc')
                            ->orderBy('start_time', 'asc')
-                           ->paginate(15);
+                           ->get();
 
         return response()->json([
             'success' => true,
@@ -65,7 +66,8 @@ class TimetableController extends Controller
 
     /**
      * Store a newly created timetable entry.
-     */
+     * @group Admin Academics
+    */
     public function store(Request $request): JsonResponse
     {
         try {
@@ -144,7 +146,8 @@ class TimetableController extends Controller
 
     /**
      * Display the specified timetable entry.
-     */
+     * @group Admin Academics
+    */
     public function show(Timetable $timetable): JsonResponse
     {
         $timetable->load([
@@ -162,7 +165,8 @@ class TimetableController extends Controller
 
     /**
      * Update the specified timetable entry.
-     */
+     * @group Admin Academics
+    */
     public function update(Request $request, Timetable $timetable): JsonResponse
     {
         try {
@@ -254,7 +258,8 @@ class TimetableController extends Controller
 
     /**
      * Remove the specified timetable entry.
-     */
+     * @group Admin Academics
+    */
     public function destroy(Timetable $timetable): JsonResponse
     {
         try {
@@ -276,7 +281,8 @@ class TimetableController extends Controller
 
     /**
      * Get class timetable.
-     */
+     * @group Admin Academics
+    */
     public function classTimetable(ClassRoom $class, Request $request): JsonResponse
     {
         $query = $class->timetables()
@@ -304,7 +310,8 @@ class TimetableController extends Controller
 
     /**
      * Get teacher timetable.
-     */
+     * @group Admin Academics
+    */
     public function teacherTimetable(User $teacher, Request $request): JsonResponse
     {
         $query = Timetable::where('teacher_id', $teacher->id)
@@ -332,7 +339,8 @@ class TimetableController extends Controller
 
     /**
      * Generate weekly timetable for a class.
-     */
+     * @group Admin Academics
+    */
     public function generateWeekly(ClassRoom $class, Request $request): JsonResponse
     {
         try {
