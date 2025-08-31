@@ -97,8 +97,6 @@ class TeacherAssignmentRepository implements TeacherAssignmentRepositoryInterfac
         return TeacherAssignment::with(['class', 'subject'])
             ->where('teacher_id', $teacherId)
             ->where('is_active', true)
-            ->orderBy('academic_year', 'desc')
-            ->orderBy('term')
             ->get();
     }
 
@@ -112,8 +110,6 @@ class TeacherAssignmentRepository implements TeacherAssignmentRepositoryInterfac
         return TeacherAssignment::with(['teacher', 'subject'])
             ->where('class_id', $classId)
             ->where('is_active', true)
-            ->orderBy('academic_year', 'desc')
-            ->orderBy('term')
             ->get();
     }
 
@@ -127,8 +123,6 @@ class TeacherAssignmentRepository implements TeacherAssignmentRepositoryInterfac
         return TeacherAssignment::with(['teacher', 'class'])
             ->where('subject_id', $subjectId)
             ->where('is_active', true)
-            ->orderBy('academic_year', 'desc')
-            ->orderBy('term')
             ->get();
     }
 
@@ -140,9 +134,7 @@ class TeacherAssignmentRepository implements TeacherAssignmentRepositoryInterfac
     public function getAssignmentsByAcademicYear(string $academicYear): Collection
     {
         return TeacherAssignment::with(['teacher', 'class', 'subject'])
-            ->where('academic_year', $academicYear)
             ->where('is_active', true)
-            ->orderBy('term')
             ->get();
     }
 
@@ -154,9 +146,7 @@ class TeacherAssignmentRepository implements TeacherAssignmentRepositoryInterfac
     public function getAssignmentsByTerm(string $term): Collection
     {
         return TeacherAssignment::with(['teacher', 'class', 'subject'])
-            ->where('term', $term)
             ->where('is_active', true)
-            ->orderBy('academic_year', 'desc')
             ->get();
     }
 
@@ -170,8 +160,6 @@ class TeacherAssignmentRepository implements TeacherAssignmentRepositoryInterfac
             ->where('is_active', true)
             ->where('start_date', '<=', now())
             ->where('end_date', '>=', now())
-            ->orderBy('academic_year', 'desc')
-            ->orderBy('term')
             ->get();
     }
 
