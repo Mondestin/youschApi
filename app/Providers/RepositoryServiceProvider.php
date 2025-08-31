@@ -69,9 +69,15 @@ class RepositoryServiceProvider extends ServiceProvider
             return new StudentRepository(new Student());
         });
 
+        // Bind Student Repository Interface
+        $this->app->bind(\App\Repositories\Students\StudentRepositoryInterface::class, StudentRepository::class);
+
         $this->app->bind(StudentApplicationRepository::class, function ($app) {
             return new StudentApplicationRepository(new StudentApplication());
         });
+
+        // Bind Student Application Repository Interface
+        $this->app->bind(\App\Repositories\Students\StudentApplicationRepositoryInterface::class, StudentApplicationRepository::class);
 
         $this->app->bind(StudentTransferRepository::class, function ($app) {
             return new StudentTransferRepository(new StudentTransfer());
@@ -103,17 +109,29 @@ class RepositoryServiceProvider extends ServiceProvider
             return new TeacherLeaveRepository(new TeacherLeave());
         });
 
+        // Bind Teacher Leave Repository Interface
+        $this->app->bind(\App\Repositories\Teachers\TeacherLeaveRepositoryInterface::class, TeacherLeaveRepository::class);
+
         $this->app->bind(TeacherDocumentRepository::class, function ($app) {
             return new TeacherDocumentRepository(new TeacherDocument());
         });
+
+        // Bind Teacher Document Repository Interface
+        $this->app->bind(\App\Repositories\Teachers\TeacherDocumentRepositoryInterface::class, TeacherDocumentRepository::class);
 
         $this->app->bind(TeacherPerformanceRepository::class, function ($app) {
             return new TeacherPerformanceRepository(new TeacherPerformance());
         });
 
+        // Bind Teacher Performance Repository Interface
+        $this->app->bind(\App\Repositories\Teachers\TeacherPerformanceRepositoryInterface::class, TeacherPerformanceRepository::class);
+
         $this->app->bind(TeacherTimetableRepository::class, function ($app) {
             return new TeacherTimetableRepository(new TeacherTimetable());
         });
+
+        // Bind Teacher Timetable Repository Interface
+        $this->app->bind(\App\Repositories\Teachers\TeacherTimetableRepositoryInterface::class, TeacherTimetableRepository::class);
 
         $this->app->bind(TeachersTeacherAssignmentRepository::class, function ($app) {
             return new TeachersTeacherAssignmentRepository(new \App\Models\Teachers\TeacherAssignment());

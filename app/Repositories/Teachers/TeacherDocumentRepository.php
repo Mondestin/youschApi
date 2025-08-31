@@ -189,6 +189,22 @@ class TeacherDocumentRepository extends BaseRepository implements TeacherDocumen
     }
 
     /**
+     * Get recent documents uploaded within specified days
+     *
+     * @param int $days
+     * @return Collection
+     */
+    public function getRecentDocuments(int $days = 30): Collection
+    {
+        $startDate = Carbon::now()->subDays($days)->startOfDay();
+        
+        return $this->model->with(['teacher'])
+            ->where('uploaded_at', '>=', $startDate)
+            ->orderBy('uploaded_at', 'desc')
+            ->get();
+    }
+
+    /**
      * Get document statistics
      *
      * @return array
