@@ -33,8 +33,8 @@ class Exam extends Model
 
     protected $casts = [
         'exam_date' => 'date',
-        'start_time' => 'time',
-        'end_time' => 'time',
+        'start_time' => 'datetime',
+        'end_time' => 'datetime',
     ];
 
     const STATUS_SCHEDULED = 'scheduled';

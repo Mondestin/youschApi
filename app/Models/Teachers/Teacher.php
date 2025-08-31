@@ -11,6 +11,8 @@ use App\Models\AdminAcademics\Campus;
 use App\Models\AdminAcademics\ClassRoom;
 use App\Models\AdminAcademics\Subject;
 use App\Models\AdminAcademics\Lab;
+use App\Models\AdminAcademics\Department;
+use App\Models\AdminAcademics\Faculty;
 
 class Teacher extends Model
 {
@@ -28,7 +30,12 @@ class Teacher extends Model
         'email',
         'phone',
         'address',
+        'department_id',
+        'faculty_id',
         'hire_date',
+        'employment_type',
+        'qualification',
+        'specialization',
         'status',
         'profile_picture',
     ];
@@ -50,6 +57,12 @@ class Teacher extends Model
     const GENDER_MALE = 'male';
     const GENDER_FEMALE = 'female';
     const GENDER_OTHER = 'other';
+
+    // Employment type constants
+    const EMPLOYMENT_TYPE_FULL_TIME = 'full-time';
+    const EMPLOYMENT_TYPE_PART_TIME = 'part-time';
+    const EMPLOYMENT_TYPE_CONTRACT = 'contract';
+    const EMPLOYMENT_TYPE_TEMPORARY = 'temporary';
 
     /**
      * Get the teacher's full name.
@@ -109,6 +122,38 @@ class Teacher extends Model
     }
 
     /**
+     * Check if teacher is full-time.
+     */
+    public function isFullTime(): bool
+    {
+        return $this->employment_type === self::EMPLOYMENT_TYPE_FULL_TIME;
+    }
+
+    /**
+     * Check if teacher is part-time.
+     */
+    public function isPartTime(): bool
+    {
+        return $this->employment_type === self::EMPLOYMENT_TYPE_PART_TIME;
+    }
+
+    /**
+     * Check if teacher is on contract.
+     */
+    public function isOnContract(): bool
+    {
+        return $this->employment_type === self::EMPLOYMENT_TYPE_CONTRACT;
+    }
+
+    /**
+     * Check if teacher is temporary.
+     */
+    public function isTemporary(): bool
+    {
+        return $this->employment_type === self::EMPLOYMENT_TYPE_TEMPORARY;
+    }
+
+    /**
      * Get the school that the teacher belongs to.
      */
     public function school(): BelongsTo
@@ -122,6 +167,22 @@ class Teacher extends Model
     public function campus(): BelongsTo
     {
         return $this->belongsTo(Campus::class);
+    }
+
+    /**
+     * Get the department that the teacher belongs to.
+     */
+    public function department(): BelongsTo
+    {
+        return $this->belongsTo(Department::class);
+    }
+
+    /**
+     * Get the faculty that the teacher belongs to.
+     */
+    public function faculty(): BelongsTo
+    {
+        return $this->belongsTo(Faculty::class);
     }
 
     /**
@@ -248,5 +309,45 @@ class Teacher extends Model
     public function scopeByHireDateRange($query, $startDate, $endDate)
     {
         return $query->whereBetween('hire_date', [$startDate, $endDate]);
+    }
+
+    /**
+     * Scope query to teachers by employment type.
+     */
+    public function scopeByEmploymentType($query, $employmentType)
+    {
+        return $query->where('employment_type', $employmentType);
+    }
+
+    /**
+     * Scope query to teachers by department.
+     */
+    public function scopeByDepartment($query, $departmentId)
+    {
+        return $query->where('department_id', $departmentId);
+    }
+
+    /**
+     * Scope query to teachers by faculty.
+     */
+    public function scopeByFaculty($query, $facultyId)
+    {
+        return $query->where('faculty_id', $facultyId);
+    }
+
+    /**
+     * Scope query to full-time teachers.
+     */
+    public function scopeFullTime($query)
+    {
+        return $query->where('employment_type', self::EMPLOYMENT_TYPE_FULL_TIME);
+    }
+
+    /**
+     * Scope query to part-time teachers.
+     */
+    public function scopePartTime($query)
+    {
+        return $query->where('employment_type', self::EMPLOYMENT_TYPE_PART_TIME);
     }
 } 

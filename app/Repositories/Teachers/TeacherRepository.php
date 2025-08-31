@@ -20,7 +20,7 @@ class TeacherRepository extends BaseRepository implements TeacherRepositoryInter
      */
     public function getPaginatedTeachers(array $filters): LengthAwarePaginator
     {
-        $query = $this->model->with(['school', 'campus']);
+        $query = $this->model->with(['school', 'campus', 'department', 'faculty']);
 
         if (isset($filters['school_id'])) {
             $query->where('school_id', $filters['school_id']);
@@ -53,6 +53,18 @@ class TeacherRepository extends BaseRepository implements TeacherRepositoryInter
                   ->orWhere('last_name', 'like', "%{$search}%")
                   ->orWhere('email', 'like', "%{$search}%");
             });
+        }
+
+        if (isset($filters['department_id'])) {
+            $query->where('department_id', $filters['department_id']);
+        }
+
+        if (isset($filters['faculty_id'])) {
+            $query->where('faculty_id', $filters['faculty_id']);
+        }
+
+        if (isset($filters['employment_type'])) {
+            $query->where('employment_type', $filters['employment_type']);
         }
 
         return $query->orderBy('created_at', 'desc')
@@ -64,7 +76,7 @@ class TeacherRepository extends BaseRepository implements TeacherRepositoryInter
      */
     public function getAllTeachers(array $filters): Collection
     {
-        $query = $this->model->with(['school', 'campus']);
+        $query = $this->model->with(['school', 'campus', 'department', 'faculty']);
 
         if (isset($filters['school_id'])) {
             $query->where('school_id', $filters['school_id']);
@@ -99,6 +111,18 @@ class TeacherRepository extends BaseRepository implements TeacherRepositoryInter
             });
         }
 
+        if (isset($filters['department_id'])) {
+            $query->where('department_id', $filters['department_id']);
+        }
+
+        if (isset($filters['faculty_id'])) {
+            $query->where('faculty_id', $filters['faculty_id']);
+        }
+
+        if (isset($filters['employment_type'])) {
+            $query->where('employment_type', $filters['employment_type']);
+        }
+
         return $query->orderBy('created_at', 'desc')->get();
     }
 
@@ -107,7 +131,9 @@ class TeacherRepository extends BaseRepository implements TeacherRepositoryInter
      */
     public function getTeacherById(int $id, array $with = []): ?Teacher
     {
-        return $this->model->with($with)->find($id);
+        $defaultRelations = ['school', 'campus', 'department', 'faculty'];
+        $relations = array_merge($defaultRelations, $with);
+        return $this->model->with($relations)->find($id);
     }
 
     /**

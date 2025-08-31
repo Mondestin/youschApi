@@ -27,7 +27,7 @@ class TeachersManagementSeeder extends Seeder
             ['name' => 'Faculty of Engineering'],
             [
                 'description' => 'Faculty of Engineering and Technology',
-                'status' => 'active'
+                'school_id' => 1 // Assuming school ID 1 exists
             ]
         );
 
@@ -36,8 +36,7 @@ class TeachersManagementSeeder extends Seeder
             ['name' => 'Computer Science'],
             [
                 'faculty_id' => $faculty->id,
-                'description' => 'Department of Computer Science and Engineering',
-                'status' => 'active'
+                'head_id' => null // Will be set later when teachers are created
             ]
         );
 
@@ -47,7 +46,8 @@ class TeachersManagementSeeder extends Seeder
             [
                 'start_date' => '2024-09-01',
                 'end_date' => '2025-06-30',
-                'status' => 'active'
+                'is_active' => true,
+                'school_id' => 1 // Assuming school ID 1 exists
             ]
         );
 
@@ -58,7 +58,7 @@ class TeachersManagementSeeder extends Seeder
                 'academic_year_id' => $academicYear->id,
                 'start_date' => '2024-09-01',
                 'end_date' => '2024-12-20',
-                'status' => 'active'
+                'is_active' => true
             ]
         );
 
@@ -66,10 +66,9 @@ class TeachersManagementSeeder extends Seeder
         $class = ClassRoom::firstOrCreate(
             ['name' => 'CS101'],
             [
-                'academic_year_id' => $academicYear->id,
-                'term_id' => $term->id,
-                'capacity' => 30,
-                'status' => 'active'
+                'campus_id' => 1, // Assuming campus ID 1 exists
+                'course_id' => 1, // Assuming course ID 1 exists
+                'capacity' => 30
             ]
         );
 
@@ -79,8 +78,8 @@ class TeachersManagementSeeder extends Seeder
             [
                 'code' => 'CS101',
                 'description' => 'Basic programming concepts and practices',
-                'credits' => 3,
-                'status' => 'active'
+                'course_id' => 1, // Assuming course ID 1 exists
+                'coordinator_id' => null // Will be set later when teachers are created
             ]
         );
 
@@ -91,9 +90,11 @@ class TeachersManagementSeeder extends Seeder
                 'last_name' => 'Smith',
                 'email' => 'john.smith@university.edu',
                 'phone' => '+1234567890',
-                'date_of_birth' => '1985-03-15',
+                'dob' => '1985-03-15',
                 'gender' => 'male',
                 'address' => '123 University Ave, City, State 12345',
+                'school_id' => 1, // Assuming school ID 1 exists
+                'campus_id' => 1, // Assuming campus ID 1 exists
                 'department_id' => $department->id,
                 'faculty_id' => $faculty->id,
                 'hire_date' => '2020-08-15',
@@ -107,9 +108,11 @@ class TeachersManagementSeeder extends Seeder
                 'last_name' => 'Johnson',
                 'email' => 'sarah.johnson@university.edu',
                 'phone' => '+1234567891',
-                'date_of_birth' => '1990-07-22',
+                'dob' => '1990-07-22',
                 'gender' => 'female',
                 'address' => '456 College Blvd, City, State 12345',
+                'school_id' => 1, // Assuming school ID 1 exists
+                'campus_id' => 1, // Assuming campus ID 1 exists
                 'department_id' => $department->id,
                 'faculty_id' => $faculty->id,
                 'hire_date' => '2022-01-10',
@@ -123,9 +126,11 @@ class TeachersManagementSeeder extends Seeder
                 'last_name' => 'Brown',
                 'email' => 'michael.brown@university.edu',
                 'phone' => '+1234567892',
-                'date_of_birth' => '1988-11-08',
+                'dob' => '1988-11-08',
                 'gender' => 'male',
                 'address' => '789 Campus Dr, City, State 12345',
+                'school_id' => 1, // Assuming school ID 1 exists
+                'campus_id' => 1, // Assuming campus ID 1 exists
                 'department_id' => $department->id,
                 'faculty_id' => $faculty->id,
                 'hire_date' => '2021-09-01',
@@ -152,10 +157,8 @@ class TeachersManagementSeeder extends Seeder
                     ],
                     [
                         'leave_type' => 'vacation',
-                        'reason' => 'Holiday vacation with family',
                         'status' => 'pending',
-                        'emergency_contact' => 'Emergency Contact',
-                        'emergency_phone' => '+1987654321'
+                        'applied_on' => now()
                     ]
                 );
             }
@@ -164,17 +167,11 @@ class TeachersManagementSeeder extends Seeder
             TeacherDocument::firstOrCreate(
                 [
                     'teacher_id' => $teacher->id,
-                    'document_type' => 'cv'
+                    'document_type' => 'CV'
                 ],
                 [
-                    'title' => 'Professional CV',
-                    'description' => 'Updated professional curriculum vitae',
-                    'file_path' => 'teacher_documents/sample_cv.pdf',
-                    'file_name' => 'cv_' . $teacher->id . '.pdf',
-                    'file_size' => 1024000,
-                    'mime_type' => 'application/pdf',
-                    'status' => 'approved',
-                    'is_required' => true
+                    'document_path' => 'teacher_documents/sample_cv.pdf',
+                    'uploaded_at' => now()
                 ]
             );
 
@@ -186,19 +183,19 @@ class TeachersManagementSeeder extends Seeder
                 ],
                 [
                     'evaluation_date' => '2024-12-01',
-                    'evaluator_id' => 1, // Assuming user ID 1 exists
-                    'teaching_effectiveness' => rand(4, 5),
-                    'classroom_management' => rand(4, 5),
-                    'subject_knowledge' => rand(4, 5),
-                    'communication_skills' => rand(4, 5),
-                    'professional_development' => rand(4, 5),
-                    'student_engagement' => rand(4, 5),
-                    'assessment_quality' => rand(4, 5),
+                    'evaluated_by' => 1, // Assuming user ID 1 exists
+                    'teaching_quality' => 4.5,
+                    'classroom_management' => 4.5,
+                    'student_engagement' => 4.5,
+                    'communication_skills' => 4.5,
+                    'professional_development' => 4.5,
+                    'attendance_punctuality' => 4.5,
+                    'student_feedback_score' => 4.5,
+                    'peer_review_score' => 4.5,
+                    'supervisor_rating' => 4.5,
                     'overall_rating' => 4.5,
-                    'strengths' => 'Excellent subject knowledge and communication skills',
-                    'areas_for_improvement' => 'Could incorporate more interactive activities',
-                    'recommendations' => 'Continue professional development in online teaching methods',
-                    'status' => 'published'
+                    'comments' => 'Excellent subject knowledge and communication skills. Could incorporate more interactive activities.',
+                    'recommendations' => 'Continue professional development in online teaching methods'
                 ]
             );
 
@@ -208,16 +205,13 @@ class TeachersManagementSeeder extends Seeder
                     'teacher_id' => $teacher->id,
                     'class_id' => $class->id,
                     'subject_id' => $subject->id,
-                    'day_of_week' => 'monday'
+                    'date' => '2024-09-02' // Monday
                 ],
                 [
                     'start_time' => '09:00:00',
                     'end_time' => '10:30:00',
-                    'room_number' => 'A101',
-                    'academic_year_id' => $academicYear->id,
-                    'term_id' => $term->id,
-                    'is_active' => true,
-                    'notes' => 'Introduction to Programming Lab'
+                    'room' => 'A101',
+                    'lab_id' => null
                 ]
             );
         }

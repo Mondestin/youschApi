@@ -73,6 +73,7 @@ class ExamsGradingsSeeder extends Seeder
                     $examDate = $currentDate->copy()->addDays(rand(1, 30));
                     
                     Exam::create([
+                        'name' => $examType->name . ' Exam - ' . $subject->name . ' (' . $class->name . ')',
                         'class_id' => $class->id,
                         'subject_id' => $subject->id,
                         'lab_id' => $subject->labs->random()->id ?? null,
