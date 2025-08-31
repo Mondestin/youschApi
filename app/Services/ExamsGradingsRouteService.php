@@ -14,7 +14,6 @@ class ExamsGradingsRouteService
     public static function registerRoutes(): void
     {
         self::registerExamTypeRoutes();
-        self::registerExamRoutes();
         self::registerExamMarkRoutes();
         self::registerStudentGPARoutes();
         self::registerReportCardRoutes();
@@ -38,34 +37,6 @@ class ExamsGradingsRouteService
             Route::delete('/{examType}', [ExamTypeController::class, 'destroy'])->name('destroy');
         });
     }
-
-    /**
-     * Register exam management routes.
-     */
-    private static function registerExamRoutes(): void
-    {
-        Route::prefix('exams')->name('exams.')->group(function () {
-            Route::get('/', [ExamController::class, 'index'])->name('index');
-            Route::post('/', [ExamController::class, 'store'])->name('store');
-            Route::get('/upcoming', [ExamController::class, 'upcoming'])->name('upcoming');
-            Route::get('/past', [ExamController::class, 'past'])->name('past');
-            Route::get('/scheduled', [ExamController::class, 'scheduled'])->name('scheduled');
-            Route::get('/completed', [ExamController::class, 'completed'])->name('completed');
-            Route::get('/cancelled', [ExamController::class, 'cancelled'])->name('cancelled');
-            Route::get('/class/{class}', [ExamController::class, 'getByClass'])->name('by-class');
-            Route::get('/subject/{subject}', [ExamController::class, 'getBySubject'])->name('by-subject');
-            Route::get('/examiner/{examiner}', [ExamController::class, 'getByExaminer'])->name('by-examiner');
-            Route::get('/type/{examType}', [ExamController::class, 'getByType'])->name('by-type');
-            Route::get('/date-range', [ExamController::class, 'getByDateRange'])->name('by-date-range');
-            Route::get('/statistics', [ExamController::class, 'statistics'])->name('statistics');
-            Route::get('/{exam}', [ExamController::class, 'show'])->name('show');
-            Route::put('/{exam}', [ExamController::class, 'update'])->name('update');
-            Route::delete('/{exam}', [ExamController::class, 'destroy'])->name('destroy');
-            Route::post('/{exam}/complete', [ExamController::class, 'markAsCompleted'])->name('complete');
-            Route::post('/{exam}/cancel', [ExamController::class, 'markAsCancelled'])->name('cancel');
-        });
-    }
-
     /**
      * Register exam mark management routes.
      */

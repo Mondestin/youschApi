@@ -30,7 +30,7 @@ class StudentGPAController extends Controller
                 'performance_level'
             ]);
 
-            $studentGPAs = $this->studentGPARepository->getPaginatedStudentGPAs($filters);
+            $studentGPAs = $this->studentGPARepository->getAllStudentGPAs($filters);
 
             return response()->json([
                 'success' => true,

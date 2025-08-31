@@ -23,7 +23,7 @@ class ExamTypeController extends Controller
     {
         try {
             $filters = $request->only(['name', 'weight', 'min_weight', 'max_weight']);
-            $examTypes = $this->examTypeRepository->getPaginatedExamTypes($filters);
+            $examTypes = $this->examTypeRepository->getAllExamTypes($filters);
 
             return response()->json([
                 'success' => true,

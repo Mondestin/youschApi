@@ -9,6 +9,7 @@ use Illuminate\Database\Eloquent\Collection;
 interface StudentGPARepositoryInterface
 {
     public function getPaginatedStudentGPAs(array $filters): LengthAwarePaginator;
+    public function getAllStudentGPAs(array $filters): Collection;
     public function getStudentGPAById(int $id): ?StudentGPA;
     public function createStudentGPA(array $data): StudentGPA;
     public function updateStudentGPA(StudentGPA $studentGPA, array $data): bool;

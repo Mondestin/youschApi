@@ -1033,11 +1033,8 @@ endpoints:
     fileParameters: []
     responses:
       -
-        status: 500
-        content: |-
-          {
-              "message": "Server Error"
-          }
+        status: 200
+        content: '{"success":true,"data":[{"id":1,"teacher_id":4,"class_id":1,"subject_id":1,"academic_year_id":1,"role":"teacher","is_primary":1,"is_active":true,"assigned_by":2,"assignment_date":"2025-08-31","end_date":null,"weekly_hours":0,"notes":"Primary teacher assignment","school_id":1,"created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z","teacher":null,"class":{"id":1,"campus_id":1,"course_id":1,"name":"BCS - Class A","capacity":30,"created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"},"subject":{"id":1,"course_id":1,"name":"Introduction to Programming","code":"CS101","description":"Basic programming concepts and practices","coordinator_id":4,"created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"}},{"id":2,"teacher_id":5,"class_id":2,"subject_id":1,"academic_year_id":1,"role":"teacher","is_primary":1,"is_active":true,"assigned_by":2,"assignment_date":"2025-08-31","end_date":null,"weekly_hours":0,"notes":"Primary teacher assignment","school_id":1,"created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z","teacher":null,"class":{"id":2,"campus_id":1,"course_id":1,"name":"BCS - Class B","capacity":25,"created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"},"subject":{"id":1,"course_id":1,"name":"Introduction to Programming","code":"CS101","description":"Basic programming concepts and practices","coordinator_id":4,"created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"}},{"id":3,"teacher_id":6,"class_id":3,"subject_id":3,"academic_year_id":1,"role":"teacher","is_primary":1,"is_active":true,"assigned_by":2,"assignment_date":"2025-08-31","end_date":null,"weekly_hours":0,"notes":"Primary teacher assignment","school_id":1,"created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z","teacher":null,"class":{"id":3,"campus_id":1,"course_id":2,"name":"BMATH - Class A","capacity":30,"created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"},"subject":{"id":3,"course_id":2,"name":"Calculus I","code":"MATH101","description":"Fundamental calculus concepts","coordinator_id":5,"created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"}},{"id":4,"teacher_id":7,"class_id":4,"subject_id":3,"academic_year_id":1,"role":"teacher","is_primary":1,"is_active":true,"assigned_by":2,"assignment_date":"2025-08-31","end_date":null,"weekly_hours":0,"notes":"Primary teacher assignment","school_id":1,"created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z","teacher":null,"class":{"id":4,"campus_id":1,"course_id":2,"name":"BMATH - Class B","capacity":25,"created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"},"subject":{"id":3,"course_id":2,"name":"Calculus I","code":"MATH101","description":"Fundamental calculus concepts","coordinator_id":5,"created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"}},{"id":5,"teacher_id":4,"class_id":5,"subject_id":4,"academic_year_id":1,"role":"teacher","is_primary":1,"is_active":true,"assigned_by":2,"assignment_date":"2025-08-31","end_date":null,"weekly_hours":0,"notes":"Primary teacher assignment","school_id":1,"created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z","teacher":null,"class":{"id":5,"campus_id":1,"course_id":3,"name":"BBA - Class A","capacity":30,"created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"},"subject":{"id":4,"course_id":3,"name":"Principles of Management","code":"BUS101","description":"Basic management principles","coordinator_id":6,"created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"}},{"id":6,"teacher_id":5,"class_id":6,"subject_id":4,"academic_year_id":1,"role":"teacher","is_primary":1,"is_active":true,"assigned_by":2,"assignment_date":"2025-08-31","end_date":null,"weekly_hours":0,"notes":"Primary teacher assignment","school_id":1,"created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z","teacher":null,"class":{"id":6,"campus_id":1,"course_id":3,"name":"BBA - Class B","capacity":25,"created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"},"subject":{"id":4,"course_id":3,"name":"Principles of Management","code":"BUS101","description":"Basic management principles","coordinator_id":6,"created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"}},{"id":7,"teacher_id":6,"class_id":7,"subject_id":5,"academic_year_id":1,"role":"teacher","is_primary":1,"is_active":true,"assigned_by":2,"assignment_date":"2025-08-31","end_date":null,"weekly_hours":0,"notes":"Primary teacher assignment","school_id":1,"created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z","teacher":null,"class":{"id":7,"campus_id":1,"course_id":4,"name":"BAENG - Class A","capacity":30,"created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"},"subject":{"id":5,"course_id":4,"name":"Introduction to Literature","code":"ENG101","description":"Literary analysis and appreciation","coordinator_id":7,"created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"}},{"id":8,"teacher_id":7,"class_id":8,"subject_id":5,"academic_year_id":1,"role":"teacher","is_primary":1,"is_active":true,"assigned_by":2,"assignment_date":"2025-08-31","end_date":null,"weekly_hours":0,"notes":"Primary teacher assignment","school_id":1,"created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z","teacher":null,"class":{"id":8,"campus_id":1,"course_id":4,"name":"BAENG - Class B","capacity":25,"created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"},"subject":{"id":5,"course_id":4,"name":"Introduction to Literature","code":"ENG101","description":"Literary analysis and appreciation","coordinator_id":7,"created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"}}],"message":"Teacher assignments retrieved successfully"}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -1126,7 +1123,7 @@ endpoints:
         name: start_date
         description: 'Must be a valid date.'
         required: true
-        example: '2025-08-27T16:38:55'
+        example: '2025-08-31T02:28:56'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -1136,7 +1133,7 @@ endpoints:
         name: end_date
         description: 'Must be a valid date. Must be a date after <code>start_date</code>.'
         required: true
-        example: '2051-09-20'
+        example: '2051-09-24'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -1178,8 +1175,8 @@ endpoints:
       subject_id: architecto
       academic_year: ngzmiyv
       term: dljnikhwaykcmyuw
-      start_date: '2025-08-27T16:38:55'
-      end_date: '2051-09-20'
+      start_date: '2025-08-31T02:28:56'
+      end_date: '2051-09-24'
       hours_per_week: 22
       is_active: true
       notes: g
@@ -1228,11 +1225,8 @@ endpoints:
     fileParameters: []
     responses:
       -
-        status: 500
-        content: |-
-          {
-              "message": "Server Error"
-          }
+        status: 200
+        content: '{"success":true,"data":{"id":1,"teacher_id":4,"class_id":1,"subject_id":1,"academic_year_id":1,"role":"teacher","is_primary":1,"is_active":true,"assigned_by":2,"assignment_date":"2025-08-31","end_date":null,"weekly_hours":0,"notes":"Primary teacher assignment","school_id":1,"created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z","teacher":null,"class":{"id":1,"campus_id":1,"course_id":1,"name":"BCS - Class A","capacity":30,"created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"},"subject":{"id":1,"course_id":1,"name":"Introduction to Programming","code":"CS101","description":"Basic programming concepts and practices","coordinator_id":4,"created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"}}}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -1332,7 +1326,7 @@ endpoints:
         name: start_date
         description: 'Must be a valid date.'
         required: false
-        example: '2025-08-27T16:38:55'
+        example: '2025-08-31T02:28:56'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -1342,7 +1336,7 @@ endpoints:
         name: end_date
         description: 'Must be a valid date. Must be a date after <code>start_date</code>.'
         required: false
-        example: '2051-09-20'
+        example: '2051-09-24'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -1362,7 +1356,7 @@ endpoints:
         name: is_active
         description: ''
         required: false
-        example: true
+        example: false
         type: boolean
         enumValues: []
         exampleWasSpecified: false
@@ -1381,10 +1375,10 @@ endpoints:
     cleanBodyParameters:
       academic_year: bngzmiy
       term: vdljnikhwaykcmyu
-      start_date: '2025-08-27T16:38:55'
-      end_date: '2051-09-20'
+      start_date: '2025-08-31T02:28:56'
+      end_date: '2051-09-24'
       hours_per_week: 22
-      is_active: true
+      is_active: false
       notes: g
     fileParameters: []
     responses: []
@@ -1458,14 +1452,14 @@ endpoints:
         name: teacher_id
         description: 'The ID of the teacher.'
         required: true
-        example: 16
+        example: 1
         type: integer
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanUrlParameters:
-      teacher_id: 16
+      teacher_id: 1
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -3577,7 +3571,7 @@ endpoints:
         name: 'assignments[].start_date'
         description: 'Must be a valid date.'
         required: true
-        example: '2025-08-27T16:38:55'
+        example: '2025-08-31T02:28:56'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -3587,7 +3581,7 @@ endpoints:
         name: 'assignments[].end_date'
         description: 'Must be a valid date. Must be a date after <code>assignments.*.start_date</code>.'
         required: true
-        example: '2051-09-20'
+        example: '2051-09-24'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -3611,8 +3605,8 @@ endpoints:
           subject_id: architecto
           academic_year: ngzmiyv
           term: dljnikhwaykcmyuw
-          start_date: '2025-08-27T16:38:55'
-          end_date: '2051-09-20'
+          start_date: '2025-08-31T02:28:56'
+          end_date: '2051-09-24'
           hours_per_week: 22
     fileParameters: []
     responses: []
@@ -3679,11 +3673,8 @@ endpoints:
     fileParameters: []
     responses:
       -
-        status: 500
-        content: |-
-          {
-              "message": "Server Error"
-          }
+        status: 200
+        content: '{"success":true,"data":{"summary":{"total_assignments":8,"unique_teachers":4,"unique_classes":8,"unique_subjects":4,"total_hours":0},"assignments_by_faculty":{"":{"count":8,"teachers":4,"total_hours":0}},"assignments_by_department":{"":{"count":8,"teachers":4,"total_hours":0}},"assignments_by_term":{"":{"count":8,"teachers":4,"total_hours":0}},"teacher_workload":{"":{"assignments":8,"classes":8,"subjects":4,"total_hours":0}}}}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json

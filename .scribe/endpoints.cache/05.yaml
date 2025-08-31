@@ -29,8 +29,8 @@ endpoints:
     fileParameters: []
     responses:
       -
-        status: 500
-        content: '{"success":false,"message":"Failed to retrieve exam types","error":"SQLSTATE[42S02]: Base table or view not found: 1146 Table ''yousch.exam_types'' doesn''t exist (Connection: mysql, SQL: select count(*) as aggregate from `exam_types`)"}'
+        status: 200
+        content: '{"success":true,"data":[{"id":4,"name":"assignment","description":"Take-home assignment or project","weight":"15.00","created_at":"2025-08-31T00:54:37.000000Z","updated_at":"2025-08-31T00:54:37.000000Z"},{"id":9,"name":"Assignment","description":"Written or practical assignment","weight":"15.00","created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"},{"id":2,"name":"final","description":"Final examination covering the entire course","weight":"50.00","created_at":"2025-08-31T00:54:37.000000Z","updated_at":"2025-08-31T00:54:37.000000Z"},{"id":7,"name":"Final","description":"End of semester examination","weight":"40.00","created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"},{"id":12,"name":"Lab Test","description":"Laboratory practical test","weight":"20.00","created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"},{"id":1,"name":"midterm","description":"Midterm examination covering first half of the course","weight":"30.00","created_at":"2025-08-31T00:54:37.000000Z","updated_at":"2025-08-31T00:54:37.000000Z"},{"id":6,"name":"Midterm","description":"Mid-semester examination","weight":"30.00","created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"},{"id":5,"name":"practical","description":"Practical or laboratory examination","weight":"25.00","created_at":"2025-08-31T00:54:37.000000Z","updated_at":"2025-08-31T00:54:37.000000Z"},{"id":10,"name":"Practical","description":"Hands-on practical examination","weight":"25.00","created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"},{"id":13,"name":"Presentation","description":"Oral presentation assessment","weight":"15.00","created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"},{"id":11,"name":"Project","description":"Long-term project work","weight":"20.00","created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"},{"id":3,"name":"quiz","description":"Short quiz covering specific topics","weight":"10.00","created_at":"2025-08-31T00:54:37.000000Z","updated_at":"2025-08-31T00:54:37.000000Z"},{"id":8,"name":"Quiz","description":"Short assessment test","weight":"10.00","created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"}],"message":"Exam types retrieved successfully"}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -100,8 +100,8 @@ endpoints:
     fileParameters: []
     responses:
       -
-        status: 500
-        content: '{"success":false,"message":"Failed to retrieve exam types","error":"SQLSTATE[42S02]: Base table or view not found: 1146 Table ''yousch.exam_types'' doesn''t exist (Connection: mysql, SQL: select * from `exam_types` order by `name` asc)"}'
+        status: 200
+        content: '{"success":true,"data":[{"id":4,"name":"assignment","description":"Take-home assignment or project","weight":"15.00","created_at":"2025-08-31T00:54:37.000000Z","updated_at":"2025-08-31T00:54:37.000000Z"},{"id":9,"name":"Assignment","description":"Written or practical assignment","weight":"15.00","created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"},{"id":2,"name":"final","description":"Final examination covering the entire course","weight":"50.00","created_at":"2025-08-31T00:54:37.000000Z","updated_at":"2025-08-31T00:54:37.000000Z"},{"id":7,"name":"Final","description":"End of semester examination","weight":"40.00","created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"},{"id":12,"name":"Lab Test","description":"Laboratory practical test","weight":"20.00","created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"},{"id":1,"name":"midterm","description":"Midterm examination covering first half of the course","weight":"30.00","created_at":"2025-08-31T00:54:37.000000Z","updated_at":"2025-08-31T00:54:37.000000Z"},{"id":6,"name":"Midterm","description":"Mid-semester examination","weight":"30.00","created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"},{"id":5,"name":"practical","description":"Practical or laboratory examination","weight":"25.00","created_at":"2025-08-31T00:54:37.000000Z","updated_at":"2025-08-31T00:54:37.000000Z"},{"id":10,"name":"Practical","description":"Hands-on practical examination","weight":"25.00","created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"},{"id":13,"name":"Presentation","description":"Oral presentation assessment","weight":"15.00","created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"},{"id":11,"name":"Project","description":"Long-term project work","weight":"20.00","created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"},{"id":3,"name":"quiz","description":"Short quiz covering specific topics","weight":"10.00","created_at":"2025-08-31T00:54:37.000000Z","updated_at":"2025-08-31T00:54:37.000000Z"},{"id":8,"name":"Quiz","description":"Short assessment test","weight":"10.00","created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"}],"message":"All exam types retrieved successfully"}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -140,8 +140,8 @@ endpoints:
     fileParameters: []
     responses:
       -
-        status: 500
-        content: '{"success":false,"message":"Failed to retrieve weighted exam types","error":"SQLSTATE[42S02]: Base table or view not found: 1146 Table ''yousch.exam_types'' doesn''t exist (Connection: mysql, SQL: select * from `exam_types` where `weight` > 100)"}'
+        status: 200
+        content: '{"success":true,"data":[],"message":"Weighted exam types retrieved successfully"}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -180,8 +180,8 @@ endpoints:
     fileParameters: []
     responses:
       -
-        status: 500
-        content: '{"success":false,"message":"Failed to retrieve exam type statistics","error":"SQLSTATE[42S02]: Base table or view not found: 1146 Table ''yousch.exam_types'' doesn''t exist (Connection: mysql, SQL: select count(*) as aggregate from `exam_types`)"}'
+        status: 200
+        content: '{"success":true,"data":{"total_types":13,"weighted_types":0,"standard_types":0,"weight_distribution":{"10.00":2,"15.00":3,"20.00":2,"25.00":2,"30.00":2,"40.00":1,"50.00":1},"average_weight":"23.461538","min_weight":"10.00","max_weight":"50.00"},"message":"Exam type statistics retrieved successfully"}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -216,14 +216,14 @@ endpoints:
         name: examType_id
         description: 'The ID of the examType.'
         required: true
-        example: 16
+        example: 1
         type: integer
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanUrlParameters:
-      examType_id: 16
+      examType_id: 1
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -231,11 +231,8 @@ endpoints:
     fileParameters: []
     responses:
       -
-        status: 500
-        content: |-
-          {
-              "message": "Server Error"
-          }
+        status: 200
+        content: '{"success":true,"data":{"id":1,"name":"midterm","description":"Midterm examination covering first half of the course","weight":"30.00","created_at":"2025-08-31T00:54:37.000000Z","updated_at":"2025-08-31T00:54:37.000000Z"},"message":"Exam type retrieved successfully"}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -270,14 +267,14 @@ endpoints:
         name: examType_id
         description: 'The ID of the examType.'
         required: true
-        example: 16
+        example: 1
         type: integer
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanUrlParameters:
-      examType_id: 16
+      examType_id: 1
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -312,319 +309,6 @@ endpoints:
         name: examType_id
         description: 'The ID of the examType.'
         required: true
-        example: 16
-        type: integer
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: false
-        custom: []
-    cleanUrlParameters:
-      examType_id: 16
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
-    fileParameters: []
-    responses: []
-    responseFields: []
-    auth: []
-    controller: null
-    method: null
-    route: null
-    custom: []
-  -
-    httpMethods:
-      - GET
-    uri: api/exams-gradings/exams
-    metadata:
-      groupName: 'Exams & Gradings'
-      groupDescription: ''
-      subgroup: ''
-      subgroupDescription: ''
-      title: 'Display a listing of exams.'
-      description: ''
-      authenticated: false
-      deprecated: false
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters: []
-    cleanUrlParameters: []
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
-    fileParameters: []
-    responses:
-      -
-        status: 500
-        content: '{"success":false,"message":"Failed to retrieve exams","error":"Call to undefined cast [time] on column [start_time] in model [App\\Models\\ExamsGradings\\Exam]."}'
-        headers:
-          cache-control: 'no-cache, private'
-          content-type: application/json
-          access-control-allow-origin: '*'
-        description: null
-        custom: []
-    responseFields: []
-    auth: []
-    controller: null
-    method: null
-    route: null
-    custom: []
-  -
-    httpMethods:
-      - POST
-    uri: api/exams-gradings/exams
-    metadata:
-      groupName: 'Exams & Gradings'
-      groupDescription: ''
-      subgroup: ''
-      subgroupDescription: ''
-      title: 'Store a newly created exam.'
-      description: ''
-      authenticated: false
-      deprecated: false
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters: []
-    cleanUrlParameters: []
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
-    fileParameters: []
-    responses: []
-    responseFields: []
-    auth: []
-    controller: null
-    method: null
-    route: null
-    custom: []
-  -
-    httpMethods:
-      - GET
-    uri: api/exams-gradings/exams/upcoming
-    metadata:
-      groupName: 'Exams & Gradings'
-      groupDescription: ''
-      subgroup: ''
-      subgroupDescription: ''
-      title: 'Get upcoming exams.'
-      description: ''
-      authenticated: false
-      deprecated: false
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters: []
-    cleanUrlParameters: []
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
-    fileParameters: []
-    responses:
-      -
-        status: 500
-        content: '{"success":false,"message":"Failed to retrieve upcoming exams","error":"SQLSTATE[42S22]: Column not found: 1054 Unknown column ''status'' in ''where clause'' (Connection: mysql, SQL: select count(*) as aggregate from `exams` where `exam_date` >= 2025-08-27 and `status` = scheduled)"}'
-        headers:
-          cache-control: 'no-cache, private'
-          content-type: application/json
-          access-control-allow-origin: '*'
-        description: null
-        custom: []
-    responseFields: []
-    auth: []
-    controller: null
-    method: null
-    route: null
-    custom: []
-  -
-    httpMethods:
-      - GET
-    uri: api/exams-gradings/exams/past
-    metadata:
-      groupName: 'Exams & Gradings'
-      groupDescription: ''
-      subgroup: ''
-      subgroupDescription: ''
-      title: 'Get past exams.'
-      description: ''
-      authenticated: false
-      deprecated: false
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters: []
-    cleanUrlParameters: []
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
-    fileParameters: []
-    responses:
-      -
-        status: 200
-        content: '{"success":true,"data":{"current_page":1,"data":[],"first_page_url":"http:\/\/localhost:8000\/api\/exams-gradings\/exams\/past?page=1","from":null,"last_page":1,"last_page_url":"http:\/\/localhost:8000\/api\/exams-gradings\/exams\/past?page=1","links":[{"url":null,"label":"&laquo; Previous","page":null,"active":false},{"url":"http:\/\/localhost:8000\/api\/exams-gradings\/exams\/past?page=1","label":"1","page":1,"active":true},{"url":null,"label":"Next &raquo;","page":null,"active":false}],"next_page_url":null,"path":"http:\/\/localhost:8000\/api\/exams-gradings\/exams\/past","per_page":15,"prev_page_url":null,"to":null,"total":0},"message":"Past exams retrieved successfully"}'
-        headers:
-          cache-control: 'no-cache, private'
-          content-type: application/json
-          access-control-allow-origin: '*'
-        description: null
-        custom: []
-    responseFields: []
-    auth: []
-    controller: null
-    method: null
-    route: null
-    custom: []
-  -
-    httpMethods:
-      - GET
-    uri: api/exams-gradings/exams/scheduled
-    metadata:
-      groupName: 'Exams & Gradings'
-      groupDescription: ''
-      subgroup: ''
-      subgroupDescription: ''
-      title: 'Get scheduled exams.'
-      description: ''
-      authenticated: false
-      deprecated: false
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters: []
-    cleanUrlParameters: []
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
-    fileParameters: []
-    responses:
-      -
-        status: 500
-        content: '{"success":false,"message":"Failed to retrieve scheduled exams","error":"SQLSTATE[42S22]: Column not found: 1054 Unknown column ''status'' in ''where clause'' (Connection: mysql, SQL: select count(*) as aggregate from `exams` where `status` = scheduled)"}'
-        headers:
-          cache-control: 'no-cache, private'
-          content-type: application/json
-          access-control-allow-origin: '*'
-        description: null
-        custom: []
-    responseFields: []
-    auth: []
-    controller: null
-    method: null
-    route: null
-    custom: []
-  -
-    httpMethods:
-      - GET
-    uri: api/exams-gradings/exams/completed
-    metadata:
-      groupName: 'Exams & Gradings'
-      groupDescription: ''
-      subgroup: ''
-      subgroupDescription: ''
-      title: 'Get completed exams.'
-      description: ''
-      authenticated: false
-      deprecated: false
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters: []
-    cleanUrlParameters: []
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
-    fileParameters: []
-    responses:
-      -
-        status: 500
-        content: '{"success":false,"message":"Failed to retrieve completed exams","error":"SQLSTATE[42S22]: Column not found: 1054 Unknown column ''status'' in ''where clause'' (Connection: mysql, SQL: select count(*) as aggregate from `exams` where `status` = completed)"}'
-        headers:
-          cache-control: 'no-cache, private'
-          content-type: application/json
-          access-control-allow-origin: '*'
-        description: null
-        custom: []
-    responseFields: []
-    auth: []
-    controller: null
-    method: null
-    route: null
-    custom: []
-  -
-    httpMethods:
-      - GET
-    uri: api/exams-gradings/exams/cancelled
-    metadata:
-      groupName: 'Exams & Gradings'
-      groupDescription: ''
-      subgroup: ''
-      subgroupDescription: ''
-      title: 'Get cancelled exams.'
-      description: ''
-      authenticated: false
-      deprecated: false
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters: []
-    cleanUrlParameters: []
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
-    fileParameters: []
-    responses:
-      -
-        status: 500
-        content: '{"success":false,"message":"Failed to retrieve cancelled exams","error":"SQLSTATE[42S22]: Column not found: 1054 Unknown column ''status'' in ''where clause'' (Connection: mysql, SQL: select count(*) as aggregate from `exams` where `status` = cancelled)"}'
-        headers:
-          cache-control: 'no-cache, private'
-          content-type: application/json
-          access-control-allow-origin: '*'
-        description: null
-        custom: []
-    responseFields: []
-    auth: []
-    controller: null
-    method: null
-    route: null
-    custom: []
-  -
-    httpMethods:
-      - GET
-    uri: 'api/exams-gradings/exams/class/{class_id}'
-    metadata:
-      groupName: 'Exams & Gradings'
-      groupDescription: ''
-      subgroup: ''
-      subgroupDescription: ''
-      title: 'Get exams by class.'
-      description: ''
-      authenticated: false
-      deprecated: false
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters:
-      class_id:
-        name: class_id
-        description: 'The ID of the class.'
-        required: true
         example: 1
         type: integer
         enumValues: []
@@ -632,471 +316,7 @@ endpoints:
         nullable: false
         custom: []
     cleanUrlParameters:
-      class_id: 1
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
-    fileParameters: []
-    responses:
-      -
-        status: 500
-        content: '{"success":false,"message":"Failed to retrieve exams for class","error":"Call to undefined cast [time] on column [start_time] in model [App\\Models\\ExamsGradings\\Exam]."}'
-        headers:
-          cache-control: 'no-cache, private'
-          content-type: application/json
-          access-control-allow-origin: '*'
-        description: null
-        custom: []
-    responseFields: []
-    auth: []
-    controller: null
-    method: null
-    route: null
-    custom: []
-  -
-    httpMethods:
-      - GET
-    uri: 'api/exams-gradings/exams/subject/{subject_id}'
-    metadata:
-      groupName: 'Exams & Gradings'
-      groupDescription: ''
-      subgroup: ''
-      subgroupDescription: ''
-      title: 'Get exams by subject.'
-      description: ''
-      authenticated: false
-      deprecated: false
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters:
-      subject_id:
-        name: subject_id
-        description: 'The ID of the subject.'
-        required: true
-        example: 1
-        type: integer
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: false
-        custom: []
-    cleanUrlParameters:
-      subject_id: 1
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
-    fileParameters: []
-    responses:
-      -
-        status: 500
-        content: '{"success":false,"message":"Failed to retrieve exams for subject","error":"Call to undefined cast [time] on column [start_time] in model [App\\Models\\ExamsGradings\\Exam]."}'
-        headers:
-          cache-control: 'no-cache, private'
-          content-type: application/json
-          access-control-allow-origin: '*'
-        description: null
-        custom: []
-    responseFields: []
-    auth: []
-    controller: null
-    method: null
-    route: null
-    custom: []
-  -
-    httpMethods:
-      - GET
-    uri: 'api/exams-gradings/exams/examiner/{examiner_id}'
-    metadata:
-      groupName: 'Exams & Gradings'
-      groupDescription: ''
-      subgroup: ''
-      subgroupDescription: ''
-      title: 'Get exams by examiner.'
-      description: ''
-      authenticated: false
-      deprecated: false
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters:
-      examiner_id:
-        name: examiner_id
-        description: 'The ID of the examiner.'
-        required: true
-        example: 1
-        type: integer
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: false
-        custom: []
-    cleanUrlParameters:
-      examiner_id: 1
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
-    fileParameters: []
-    responses:
-      -
-        status: 500
-        content: '{"success":false,"message":"Failed to retrieve exams for examiner","error":"SQLSTATE[42S22]: Column not found: 1054 Unknown column ''examiner_id'' in ''where clause'' (Connection: mysql, SQL: select count(*) as aggregate from `exams` where `examiner_id` = 1)"}'
-        headers:
-          cache-control: 'no-cache, private'
-          content-type: application/json
-          access-control-allow-origin: '*'
-        description: null
-        custom: []
-    responseFields: []
-    auth: []
-    controller: null
-    method: null
-    route: null
-    custom: []
-  -
-    httpMethods:
-      - GET
-    uri: 'api/exams-gradings/exams/type/{examType_id}'
-    metadata:
-      groupName: 'Exams & Gradings'
-      groupDescription: ''
-      subgroup: ''
-      subgroupDescription: ''
-      title: 'Get exams by exam type.'
-      description: ''
-      authenticated: false
-      deprecated: false
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters:
-      examType_id:
-        name: examType_id
-        description: 'The ID of the examType.'
-        required: true
-        example: 16
-        type: integer
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: false
-        custom: []
-    cleanUrlParameters:
-      examType_id: 16
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
-    fileParameters: []
-    responses:
-      -
-        status: 500
-        content: |-
-          {
-              "message": "Server Error"
-          }
-        headers:
-          cache-control: 'no-cache, private'
-          content-type: application/json
-          access-control-allow-origin: '*'
-        description: null
-        custom: []
-    responseFields: []
-    auth: []
-    controller: null
-    method: null
-    route: null
-    custom: []
-  -
-    httpMethods:
-      - GET
-    uri: api/exams-gradings/exams/date-range
-    metadata:
-      groupName: 'Exams & Gradings'
-      groupDescription: ''
-      subgroup: ''
-      subgroupDescription: ''
-      title: 'Get exams by date range.'
-      description: ''
-      authenticated: false
-      deprecated: false
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters: []
-    cleanUrlParameters: []
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
-    fileParameters: []
-    responses:
-      -
-        status: 422
-        content: '{"success":false,"message":"Validation failed","errors":{"start_date":["The start date field is required."],"end_date":["The end date field is required."]}}'
-        headers:
-          cache-control: 'no-cache, private'
-          content-type: application/json
-          access-control-allow-origin: '*'
-        description: null
-        custom: []
-    responseFields: []
-    auth: []
-    controller: null
-    method: null
-    route: null
-    custom: []
-  -
-    httpMethods:
-      - GET
-    uri: api/exams-gradings/exams/statistics
-    metadata:
-      groupName: 'Exams & Gradings'
-      groupDescription: ''
-      subgroup: ''
-      subgroupDescription: ''
-      title: 'Get exam statistics.'
-      description: ''
-      authenticated: false
-      deprecated: false
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters: []
-    cleanUrlParameters: []
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
-    fileParameters: []
-    responses:
-      -
-        status: 500
-        content: '{"success":false,"message":"Failed to retrieve exam statistics","error":"SQLSTATE[42S22]: Column not found: 1054 Unknown column ''status'' in ''where clause'' (Connection: mysql, SQL: select count(*) as aggregate from `exams` where `status` = scheduled)"}'
-        headers:
-          cache-control: 'no-cache, private'
-          content-type: application/json
-          access-control-allow-origin: '*'
-        description: null
-        custom: []
-    responseFields: []
-    auth: []
-    controller: null
-    method: null
-    route: null
-    custom: []
-  -
-    httpMethods:
-      - GET
-    uri: 'api/exams-gradings/exams/{id}'
-    metadata:
-      groupName: 'Exams & Gradings'
-      groupDescription: ''
-      subgroup: ''
-      subgroupDescription: ''
-      title: 'Display the specified exam.'
-      description: ''
-      authenticated: false
-      deprecated: false
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters:
-      id:
-        name: id
-        description: 'The ID of the exam.'
-        required: true
-        example: 1
-        type: integer
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: false
-        custom: []
-    cleanUrlParameters:
-      id: 1
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
-    fileParameters: []
-    responses:
-      -
-        status: 500
-        content: '{"success":false,"message":"Failed to retrieve exam","error":"SQLSTATE[42S02]: Base table or view not found: 1146 Table ''yousch.exam_marks'' doesn''t exist (Connection: mysql, SQL: select * from `exam_marks` where `exam_marks`.`exam_id` in (1))"}'
-        headers:
-          cache-control: 'no-cache, private'
-          content-type: application/json
-          access-control-allow-origin: '*'
-        description: null
-        custom: []
-    responseFields: []
-    auth: []
-    controller: null
-    method: null
-    route: null
-    custom: []
-  -
-    httpMethods:
-      - PUT
-    uri: 'api/exams-gradings/exams/{id}'
-    metadata:
-      groupName: 'Exams & Gradings'
-      groupDescription: ''
-      subgroup: ''
-      subgroupDescription: ''
-      title: 'Update the specified exam.'
-      description: ''
-      authenticated: false
-      deprecated: false
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters:
-      id:
-        name: id
-        description: 'The ID of the exam.'
-        required: true
-        example: 1
-        type: integer
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: false
-        custom: []
-    cleanUrlParameters:
-      id: 1
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
-    fileParameters: []
-    responses: []
-    responseFields: []
-    auth: []
-    controller: null
-    method: null
-    route: null
-    custom: []
-  -
-    httpMethods:
-      - DELETE
-    uri: 'api/exams-gradings/exams/{id}'
-    metadata:
-      groupName: 'Exams & Gradings'
-      groupDescription: ''
-      subgroup: ''
-      subgroupDescription: ''
-      title: 'Remove the specified exam.'
-      description: ''
-      authenticated: false
-      deprecated: false
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters:
-      id:
-        name: id
-        description: 'The ID of the exam.'
-        required: true
-        example: 1
-        type: integer
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: false
-        custom: []
-    cleanUrlParameters:
-      id: 1
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
-    fileParameters: []
-    responses: []
-    responseFields: []
-    auth: []
-    controller: null
-    method: null
-    route: null
-    custom: []
-  -
-    httpMethods:
-      - POST
-    uri: 'api/exams-gradings/exams/{exam_id}/complete'
-    metadata:
-      groupName: 'Exams & Gradings'
-      groupDescription: ''
-      subgroup: ''
-      subgroupDescription: ''
-      title: 'Mark exam as completed.'
-      description: ''
-      authenticated: false
-      deprecated: false
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters:
-      exam_id:
-        name: exam_id
-        description: 'The ID of the exam.'
-        required: true
-        example: 1
-        type: integer
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: false
-        custom: []
-    cleanUrlParameters:
-      exam_id: 1
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
-    fileParameters: []
-    responses: []
-    responseFields: []
-    auth: []
-    controller: null
-    method: null
-    route: null
-    custom: []
-  -
-    httpMethods:
-      - POST
-    uri: 'api/exams-gradings/exams/{exam_id}/cancel'
-    metadata:
-      groupName: 'Exams & Gradings'
-      groupDescription: ''
-      subgroup: ''
-      subgroupDescription: ''
-      title: 'Mark exam as cancelled.'
-      description: ''
-      authenticated: false
-      deprecated: false
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters:
-      exam_id:
-        name: exam_id
-        description: 'The ID of the exam.'
-        required: true
-        example: 1
-        type: integer
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: false
-        custom: []
-    cleanUrlParameters:
-      exam_id: 1
+      examType_id: 1
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -1135,11 +355,8 @@ endpoints:
     fileParameters: []
     responses:
       -
-        status: 500
-        content: |-
-          {
-              "message": "Server Error"
-          }
+        status: 200
+        content: '{"success":true,"data":[],"message":"Exam marks retrieved successfully"}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -1186,7 +403,7 @@ endpoints:
   -
     httpMethods:
       - GET
-    uri: 'api/exams-gradings/exam-marks/exam/{exam_id}'
+    uri: 'api/exams-gradings/exam-marks/exam/{exam}'
     metadata:
       groupName: 'Exams & Gradings'
       groupDescription: ''
@@ -1201,18 +418,18 @@ endpoints:
       Content-Type: application/json
       Accept: application/json
     urlParameters:
-      exam_id:
-        name: exam_id
-        description: 'The ID of the exam.'
+      exam:
+        name: exam
+        description: 'The exam.'
         required: true
-        example: 1
-        type: integer
+        example: architecto
+        type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanUrlParameters:
-      exam_id: 1
+      exam: architecto
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -1274,11 +491,8 @@ endpoints:
     fileParameters: []
     responses:
       -
-        status: 500
-        content: |-
-          {
-              "message": "Server Error"
-          }
+        status: 200
+        content: '{"success":true,"data":[],"message":"Exam marks for student retrieved successfully"}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -1294,7 +508,7 @@ endpoints:
   -
     httpMethods:
       - GET
-    uri: 'api/exams-gradings/exam-marks/exam/{exam_id}/student/{student_id}'
+    uri: 'api/exams-gradings/exam-marks/exam/{exam}/student/{student_id}'
     metadata:
       groupName: 'Exams & Gradings'
       groupDescription: ''
@@ -1309,12 +523,12 @@ endpoints:
       Content-Type: application/json
       Accept: application/json
     urlParameters:
-      exam_id:
-        name: exam_id
-        description: 'The ID of the exam.'
+      exam:
+        name: exam
+        description: 'The exam.'
         required: true
-        example: 1
-        type: integer
+        example: architecto
+        type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
@@ -1330,7 +544,7 @@ endpoints:
         nullable: false
         custom: []
     cleanUrlParameters:
-      exam_id: 1
+      exam: architecto
       student_id: 1
     queryParameters: []
     cleanQueryParameters: []
@@ -1382,11 +596,8 @@ endpoints:
     fileParameters: []
     responses:
       -
-        status: 500
-        content: |-
-          {
-              "message": "Server Error"
-          }
+        status: 200
+        content: '{"success":true,"data":{"total_marks":0,"passing_marks":0,"failing_marks":0,"pass_rate":0,"average_marks":0,"highest_marks":null,"lowest_marks":null},"message":"Exam mark statistics retrieved successfully"}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -1402,7 +613,7 @@ endpoints:
   -
     httpMethods:
       - GET
-    uri: 'api/exams-gradings/exam-marks/exam/{exam_id}/results'
+    uri: 'api/exams-gradings/exam-marks/exam/{exam}/results'
     metadata:
       groupName: 'Exams & Gradings'
       groupDescription: ''
@@ -1417,18 +628,18 @@ endpoints:
       Content-Type: application/json
       Accept: application/json
     urlParameters:
-      exam_id:
-        name: exam_id
-        description: 'The ID of the exam.'
+      exam:
+        name: exam
+        description: 'The exam.'
         required: true
-        example: 1
-        type: integer
+        example: architecto
+        type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanUrlParameters:
-      exam_id: 1
+      exam: architecto
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -1490,10 +701,10 @@ endpoints:
     fileParameters: []
     responses:
       -
-        status: 500
+        status: 404
         content: |-
           {
-              "message": "Server Error"
+              "message": "No query results for model [App\\Models\\ExamsGradings\\ExamMark] 16"
           }
         headers:
           cache-control: 'no-cache, private'
@@ -1617,11 +828,8 @@ endpoints:
     fileParameters: []
     responses:
       -
-        status: 500
-        content: |-
-          {
-              "message": "Server Error"
-          }
+        status: 200
+        content: '{"success":true,"data":[{"id":1,"student_id":1,"term_id":1,"academic_year_id":1,"gpa":"2.30","cgpa":"2.30","created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z","student":{"id":1,"name":"Test User","email":"test@example.com","email_verified_at":"2025-08-31T00:54:37.000000Z","created_at":"2025-08-31T00:54:37.000000Z","updated_at":"2025-08-31T00:54:37.000000Z"},"term":{"id":1,"academic_year_id":1,"name":"Fall Semester","start_date":"2024-09-01T00:00:00.000000Z","end_date":"2024-12-20T00:00:00.000000Z","is_active":true,"created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"},"academic_year":{"id":1,"school_id":1,"name":"2024-2025","start_date":"2024-09-01T00:00:00.000000Z","end_date":"2025-06-30T00:00:00.000000Z","is_active":true,"created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"}},{"id":11,"student_id":3,"term_id":3,"academic_year_id":1,"gpa":"3.20","cgpa":"3.20","created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z","student":{"id":3,"name":"School Principal","email":"principal@yousch.edu","email_verified_at":"2025-08-31T00:54:37.000000Z","created_at":"2025-08-31T00:54:37.000000Z","updated_at":"2025-08-31T00:54:37.000000Z"},"term":{"id":3,"academic_year_id":1,"name":"Summer Session","start_date":"2025-06-01T00:00:00.000000Z","end_date":"2025-07-31T00:00:00.000000Z","is_active":false,"created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"},"academic_year":{"id":1,"school_id":1,"name":"2024-2025","start_date":"2024-09-01T00:00:00.000000Z","end_date":"2025-06-30T00:00:00.000000Z","is_active":true,"created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"}},{"id":10,"student_id":3,"term_id":2,"academic_year_id":1,"gpa":"3.40","cgpa":"3.40","created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z","student":{"id":3,"name":"School Principal","email":"principal@yousch.edu","email_verified_at":"2025-08-31T00:54:37.000000Z","created_at":"2025-08-31T00:54:37.000000Z","updated_at":"2025-08-31T00:54:37.000000Z"},"term":{"id":2,"academic_year_id":1,"name":"Spring Semester","start_date":"2025-01-15T00:00:00.000000Z","end_date":"2025-05-15T00:00:00.000000Z","is_active":false,"created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"},"academic_year":{"id":1,"school_id":1,"name":"2024-2025","start_date":"2024-09-01T00:00:00.000000Z","end_date":"2025-06-30T00:00:00.000000Z","is_active":true,"created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"}},{"id":9,"student_id":3,"term_id":1,"academic_year_id":1,"gpa":"3.60","cgpa":"3.60","created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z","student":{"id":3,"name":"School Principal","email":"principal@yousch.edu","email_verified_at":"2025-08-31T00:54:37.000000Z","created_at":"2025-08-31T00:54:37.000000Z","updated_at":"2025-08-31T00:54:37.000000Z"},"term":{"id":1,"academic_year_id":1,"name":"Fall Semester","start_date":"2024-09-01T00:00:00.000000Z","end_date":"2024-12-20T00:00:00.000000Z","is_active":true,"created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"},"academic_year":{"id":1,"school_id":1,"name":"2024-2025","start_date":"2024-09-01T00:00:00.000000Z","end_date":"2025-06-30T00:00:00.000000Z","is_active":true,"created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"}},{"id":8,"student_id":2,"term_id":4,"academic_year_id":1,"gpa":"3.80","cgpa":"3.80","created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z","student":{"id":2,"name":"System Administrator","email":"admin@yousch.edu","email_verified_at":"2025-08-31T00:54:37.000000Z","created_at":"2025-08-31T00:54:37.000000Z","updated_at":"2025-08-31T00:54:37.000000Z"},"term":{"id":4,"academic_year_id":1,"name":"Fall 2024","start_date":"2024-09-01T00:00:00.000000Z","end_date":"2024-12-20T00:00:00.000000Z","is_active":true,"created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"},"academic_year":{"id":1,"school_id":1,"name":"2024-2025","start_date":"2024-09-01T00:00:00.000000Z","end_date":"2025-06-30T00:00:00.000000Z","is_active":true,"created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"}},{"id":7,"student_id":2,"term_id":3,"academic_year_id":1,"gpa":"2.80","cgpa":"2.80","created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z","student":{"id":2,"name":"System Administrator","email":"admin@yousch.edu","email_verified_at":"2025-08-31T00:54:37.000000Z","created_at":"2025-08-31T00:54:37.000000Z","updated_at":"2025-08-31T00:54:37.000000Z"},"term":{"id":3,"academic_year_id":1,"name":"Summer Session","start_date":"2025-06-01T00:00:00.000000Z","end_date":"2025-07-31T00:00:00.000000Z","is_active":false,"created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"},"academic_year":{"id":1,"school_id":1,"name":"2024-2025","start_date":"2024-09-01T00:00:00.000000Z","end_date":"2025-06-30T00:00:00.000000Z","is_active":true,"created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"}},{"id":6,"student_id":2,"term_id":2,"academic_year_id":1,"gpa":"3.30","cgpa":"3.30","created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z","student":{"id":2,"name":"System Administrator","email":"admin@yousch.edu","email_verified_at":"2025-08-31T00:54:37.000000Z","created_at":"2025-08-31T00:54:37.000000Z","updated_at":"2025-08-31T00:54:37.000000Z"},"term":{"id":2,"academic_year_id":1,"name":"Spring Semester","start_date":"2025-01-15T00:00:00.000000Z","end_date":"2025-05-15T00:00:00.000000Z","is_active":false,"created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"},"academic_year":{"id":1,"school_id":1,"name":"2024-2025","start_date":"2024-09-01T00:00:00.000000Z","end_date":"2025-06-30T00:00:00.000000Z","is_active":true,"created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"}},{"id":5,"student_id":2,"term_id":1,"academic_year_id":1,"gpa":"4.00","cgpa":"4.00","created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z","student":{"id":2,"name":"System Administrator","email":"admin@yousch.edu","email_verified_at":"2025-08-31T00:54:37.000000Z","created_at":"2025-08-31T00:54:37.000000Z","updated_at":"2025-08-31T00:54:37.000000Z"},"term":{"id":1,"academic_year_id":1,"name":"Fall Semester","start_date":"2024-09-01T00:00:00.000000Z","end_date":"2024-12-20T00:00:00.000000Z","is_active":true,"created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"},"academic_year":{"id":1,"school_id":1,"name":"2024-2025","start_date":"2024-09-01T00:00:00.000000Z","end_date":"2025-06-30T00:00:00.000000Z","is_active":true,"created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"}},{"id":4,"student_id":1,"term_id":4,"academic_year_id":1,"gpa":"4.00","cgpa":"4.00","created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z","student":{"id":1,"name":"Test User","email":"test@example.com","email_verified_at":"2025-08-31T00:54:37.000000Z","created_at":"2025-08-31T00:54:37.000000Z","updated_at":"2025-08-31T00:54:37.000000Z"},"term":{"id":4,"academic_year_id":1,"name":"Fall 2024","start_date":"2024-09-01T00:00:00.000000Z","end_date":"2024-12-20T00:00:00.000000Z","is_active":true,"created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"},"academic_year":{"id":1,"school_id":1,"name":"2024-2025","start_date":"2024-09-01T00:00:00.000000Z","end_date":"2025-06-30T00:00:00.000000Z","is_active":true,"created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"}},{"id":3,"student_id":1,"term_id":3,"academic_year_id":1,"gpa":"3.40","cgpa":"3.40","created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z","student":{"id":1,"name":"Test User","email":"test@example.com","email_verified_at":"2025-08-31T00:54:37.000000Z","created_at":"2025-08-31T00:54:37.000000Z","updated_at":"2025-08-31T00:54:37.000000Z"},"term":{"id":3,"academic_year_id":1,"name":"Summer Session","start_date":"2025-06-01T00:00:00.000000Z","end_date":"2025-07-31T00:00:00.000000Z","is_active":false,"created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"},"academic_year":{"id":1,"school_id":1,"name":"2024-2025","start_date":"2024-09-01T00:00:00.000000Z","end_date":"2025-06-30T00:00:00.000000Z","is_active":true,"created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"}},{"id":2,"student_id":1,"term_id":2,"academic_year_id":1,"gpa":"2.30","cgpa":"2.30","created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z","student":{"id":1,"name":"Test User","email":"test@example.com","email_verified_at":"2025-08-31T00:54:37.000000Z","created_at":"2025-08-31T00:54:37.000000Z","updated_at":"2025-08-31T00:54:37.000000Z"},"term":{"id":2,"academic_year_id":1,"name":"Spring Semester","start_date":"2025-01-15T00:00:00.000000Z","end_date":"2025-05-15T00:00:00.000000Z","is_active":false,"created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"},"academic_year":{"id":1,"school_id":1,"name":"2024-2025","start_date":"2024-09-01T00:00:00.000000Z","end_date":"2025-06-30T00:00:00.000000Z","is_active":true,"created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"}},{"id":12,"student_id":3,"term_id":4,"academic_year_id":1,"gpa":"2.90","cgpa":"2.90","created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z","student":{"id":3,"name":"School Principal","email":"principal@yousch.edu","email_verified_at":"2025-08-31T00:54:37.000000Z","created_at":"2025-08-31T00:54:37.000000Z","updated_at":"2025-08-31T00:54:37.000000Z"},"term":{"id":4,"academic_year_id":1,"name":"Fall 2024","start_date":"2024-09-01T00:00:00.000000Z","end_date":"2024-12-20T00:00:00.000000Z","is_active":true,"created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"},"academic_year":{"id":1,"school_id":1,"name":"2024-2025","start_date":"2024-09-01T00:00:00.000000Z","end_date":"2025-06-30T00:00:00.000000Z","is_active":true,"created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"}}],"message":"Student GPAs retrieved successfully"}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -1702,11 +910,8 @@ endpoints:
     fileParameters: []
     responses:
       -
-        status: 500
-        content: |-
-          {
-              "message": "Server Error"
-          }
+        status: 200
+        content: '{"success":true,"data":[{"id":1,"student_id":1,"term_id":1,"academic_year_id":1,"gpa":"2.30","cgpa":"2.30","created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z","term":{"id":1,"academic_year_id":1,"name":"Fall Semester","start_date":"2024-09-01T00:00:00.000000Z","end_date":"2024-12-20T00:00:00.000000Z","is_active":true,"created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"},"academic_year":{"id":1,"school_id":1,"name":"2024-2025","start_date":"2024-09-01T00:00:00.000000Z","end_date":"2025-06-30T00:00:00.000000Z","is_active":true,"created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"}},{"id":2,"student_id":1,"term_id":2,"academic_year_id":1,"gpa":"2.30","cgpa":"2.30","created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z","term":{"id":2,"academic_year_id":1,"name":"Spring Semester","start_date":"2025-01-15T00:00:00.000000Z","end_date":"2025-05-15T00:00:00.000000Z","is_active":false,"created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"},"academic_year":{"id":1,"school_id":1,"name":"2024-2025","start_date":"2024-09-01T00:00:00.000000Z","end_date":"2025-06-30T00:00:00.000000Z","is_active":true,"created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"}},{"id":3,"student_id":1,"term_id":3,"academic_year_id":1,"gpa":"3.40","cgpa":"3.40","created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z","term":{"id":3,"academic_year_id":1,"name":"Summer Session","start_date":"2025-06-01T00:00:00.000000Z","end_date":"2025-07-31T00:00:00.000000Z","is_active":false,"created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"},"academic_year":{"id":1,"school_id":1,"name":"2024-2025","start_date":"2024-09-01T00:00:00.000000Z","end_date":"2025-06-30T00:00:00.000000Z","is_active":true,"created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"}},{"id":4,"student_id":1,"term_id":4,"academic_year_id":1,"gpa":"4.00","cgpa":"4.00","created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z","term":{"id":4,"academic_year_id":1,"name":"Fall 2024","start_date":"2024-09-01T00:00:00.000000Z","end_date":"2024-12-20T00:00:00.000000Z","is_active":true,"created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"},"academic_year":{"id":1,"school_id":1,"name":"2024-2025","start_date":"2024-09-01T00:00:00.000000Z","end_date":"2025-06-30T00:00:00.000000Z","is_active":true,"created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"}}],"message":"Student GPAs retrieved successfully"}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -1756,11 +961,8 @@ endpoints:
     fileParameters: []
     responses:
       -
-        status: 500
-        content: |-
-          {
-              "message": "Server Error"
-          }
+        status: 200
+        content: '{"success":true,"data":[{"id":5,"student_id":2,"term_id":1,"academic_year_id":1,"gpa":"4.00","cgpa":"4.00","created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z","student":{"id":2,"name":"System Administrator","email":"admin@yousch.edu","email_verified_at":"2025-08-31T00:54:37.000000Z","created_at":"2025-08-31T00:54:37.000000Z","updated_at":"2025-08-31T00:54:37.000000Z"},"academic_year":{"id":1,"school_id":1,"name":"2024-2025","start_date":"2024-09-01T00:00:00.000000Z","end_date":"2025-06-30T00:00:00.000000Z","is_active":true,"created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"}},{"id":9,"student_id":3,"term_id":1,"academic_year_id":1,"gpa":"3.60","cgpa":"3.60","created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z","student":{"id":3,"name":"School Principal","email":"principal@yousch.edu","email_verified_at":"2025-08-31T00:54:37.000000Z","created_at":"2025-08-31T00:54:37.000000Z","updated_at":"2025-08-31T00:54:37.000000Z"},"academic_year":{"id":1,"school_id":1,"name":"2024-2025","start_date":"2024-09-01T00:00:00.000000Z","end_date":"2025-06-30T00:00:00.000000Z","is_active":true,"created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"}},{"id":1,"student_id":1,"term_id":1,"academic_year_id":1,"gpa":"2.30","cgpa":"2.30","created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z","student":{"id":1,"name":"Test User","email":"test@example.com","email_verified_at":"2025-08-31T00:54:37.000000Z","created_at":"2025-08-31T00:54:37.000000Z","updated_at":"2025-08-31T00:54:37.000000Z"},"academic_year":{"id":1,"school_id":1,"name":"2024-2025","start_date":"2024-09-01T00:00:00.000000Z","end_date":"2025-06-30T00:00:00.000000Z","is_active":true,"created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"}}],"message":"Student GPAs for term retrieved successfully"}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -1810,11 +1012,8 @@ endpoints:
     fileParameters: []
     responses:
       -
-        status: 500
-        content: |-
-          {
-              "message": "Server Error"
-          }
+        status: 200
+        content: '{"success":true,"data":[{"id":4,"student_id":1,"term_id":4,"academic_year_id":1,"gpa":"4.00","cgpa":"4.00","created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z","student":{"id":1,"name":"Test User","email":"test@example.com","email_verified_at":"2025-08-31T00:54:37.000000Z","created_at":"2025-08-31T00:54:37.000000Z","updated_at":"2025-08-31T00:54:37.000000Z"},"term":{"id":4,"academic_year_id":1,"name":"Fall 2024","start_date":"2024-09-01T00:00:00.000000Z","end_date":"2024-12-20T00:00:00.000000Z","is_active":true,"created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"}},{"id":5,"student_id":2,"term_id":1,"academic_year_id":1,"gpa":"4.00","cgpa":"4.00","created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z","student":{"id":2,"name":"System Administrator","email":"admin@yousch.edu","email_verified_at":"2025-08-31T00:54:37.000000Z","created_at":"2025-08-31T00:54:37.000000Z","updated_at":"2025-08-31T00:54:37.000000Z"},"term":{"id":1,"academic_year_id":1,"name":"Fall Semester","start_date":"2024-09-01T00:00:00.000000Z","end_date":"2024-12-20T00:00:00.000000Z","is_active":true,"created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"}},{"id":8,"student_id":2,"term_id":4,"academic_year_id":1,"gpa":"3.80","cgpa":"3.80","created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z","student":{"id":2,"name":"System Administrator","email":"admin@yousch.edu","email_verified_at":"2025-08-31T00:54:37.000000Z","created_at":"2025-08-31T00:54:37.000000Z","updated_at":"2025-08-31T00:54:37.000000Z"},"term":{"id":4,"academic_year_id":1,"name":"Fall 2024","start_date":"2024-09-01T00:00:00.000000Z","end_date":"2024-12-20T00:00:00.000000Z","is_active":true,"created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"}},{"id":9,"student_id":3,"term_id":1,"academic_year_id":1,"gpa":"3.60","cgpa":"3.60","created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z","student":{"id":3,"name":"School Principal","email":"principal@yousch.edu","email_verified_at":"2025-08-31T00:54:37.000000Z","created_at":"2025-08-31T00:54:37.000000Z","updated_at":"2025-08-31T00:54:37.000000Z"},"term":{"id":1,"academic_year_id":1,"name":"Fall Semester","start_date":"2024-09-01T00:00:00.000000Z","end_date":"2024-12-20T00:00:00.000000Z","is_active":true,"created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"}},{"id":3,"student_id":1,"term_id":3,"academic_year_id":1,"gpa":"3.40","cgpa":"3.40","created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z","student":{"id":1,"name":"Test User","email":"test@example.com","email_verified_at":"2025-08-31T00:54:37.000000Z","created_at":"2025-08-31T00:54:37.000000Z","updated_at":"2025-08-31T00:54:37.000000Z"},"term":{"id":3,"academic_year_id":1,"name":"Summer Session","start_date":"2025-06-01T00:00:00.000000Z","end_date":"2025-07-31T00:00:00.000000Z","is_active":false,"created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"}},{"id":10,"student_id":3,"term_id":2,"academic_year_id":1,"gpa":"3.40","cgpa":"3.40","created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z","student":{"id":3,"name":"School Principal","email":"principal@yousch.edu","email_verified_at":"2025-08-31T00:54:37.000000Z","created_at":"2025-08-31T00:54:37.000000Z","updated_at":"2025-08-31T00:54:37.000000Z"},"term":{"id":2,"academic_year_id":1,"name":"Spring Semester","start_date":"2025-01-15T00:00:00.000000Z","end_date":"2025-05-15T00:00:00.000000Z","is_active":false,"created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"}},{"id":6,"student_id":2,"term_id":2,"academic_year_id":1,"gpa":"3.30","cgpa":"3.30","created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z","student":{"id":2,"name":"System Administrator","email":"admin@yousch.edu","email_verified_at":"2025-08-31T00:54:37.000000Z","created_at":"2025-08-31T00:54:37.000000Z","updated_at":"2025-08-31T00:54:37.000000Z"},"term":{"id":2,"academic_year_id":1,"name":"Spring Semester","start_date":"2025-01-15T00:00:00.000000Z","end_date":"2025-05-15T00:00:00.000000Z","is_active":false,"created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"}},{"id":11,"student_id":3,"term_id":3,"academic_year_id":1,"gpa":"3.20","cgpa":"3.20","created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z","student":{"id":3,"name":"School Principal","email":"principal@yousch.edu","email_verified_at":"2025-08-31T00:54:37.000000Z","created_at":"2025-08-31T00:54:37.000000Z","updated_at":"2025-08-31T00:54:37.000000Z"},"term":{"id":3,"academic_year_id":1,"name":"Summer Session","start_date":"2025-06-01T00:00:00.000000Z","end_date":"2025-07-31T00:00:00.000000Z","is_active":false,"created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"}},{"id":12,"student_id":3,"term_id":4,"academic_year_id":1,"gpa":"2.90","cgpa":"2.90","created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z","student":{"id":3,"name":"School Principal","email":"principal@yousch.edu","email_verified_at":"2025-08-31T00:54:37.000000Z","created_at":"2025-08-31T00:54:37.000000Z","updated_at":"2025-08-31T00:54:37.000000Z"},"term":{"id":4,"academic_year_id":1,"name":"Fall 2024","start_date":"2024-09-01T00:00:00.000000Z","end_date":"2024-12-20T00:00:00.000000Z","is_active":true,"created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"}},{"id":7,"student_id":2,"term_id":3,"academic_year_id":1,"gpa":"2.80","cgpa":"2.80","created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z","student":{"id":2,"name":"System Administrator","email":"admin@yousch.edu","email_verified_at":"2025-08-31T00:54:37.000000Z","created_at":"2025-08-31T00:54:37.000000Z","updated_at":"2025-08-31T00:54:37.000000Z"},"term":{"id":3,"academic_year_id":1,"name":"Summer Session","start_date":"2025-06-01T00:00:00.000000Z","end_date":"2025-07-31T00:00:00.000000Z","is_active":false,"created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"}},{"id":2,"student_id":1,"term_id":2,"academic_year_id":1,"gpa":"2.30","cgpa":"2.30","created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z","student":{"id":1,"name":"Test User","email":"test@example.com","email_verified_at":"2025-08-31T00:54:37.000000Z","created_at":"2025-08-31T00:54:37.000000Z","updated_at":"2025-08-31T00:54:37.000000Z"},"term":{"id":2,"academic_year_id":1,"name":"Spring Semester","start_date":"2025-01-15T00:00:00.000000Z","end_date":"2025-05-15T00:00:00.000000Z","is_active":false,"created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"}},{"id":1,"student_id":1,"term_id":1,"academic_year_id":1,"gpa":"2.30","cgpa":"2.30","created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z","student":{"id":1,"name":"Test User","email":"test@example.com","email_verified_at":"2025-08-31T00:54:37.000000Z","created_at":"2025-08-31T00:54:37.000000Z","updated_at":"2025-08-31T00:54:37.000000Z"},"term":{"id":1,"academic_year_id":1,"name":"Fall Semester","start_date":"2024-09-01T00:00:00.000000Z","end_date":"2024-12-20T00:00:00.000000Z","is_active":true,"created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"}}],"message":"Student GPAs for academic year retrieved successfully"}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -1875,11 +1074,8 @@ endpoints:
     fileParameters: []
     responses:
       -
-        status: 500
-        content: |-
-          {
-              "message": "Server Error"
-          }
+        status: 200
+        content: '{"success":true,"data":{"id":1,"student_id":1,"term_id":1,"academic_year_id":1,"gpa":"2.30","cgpa":"2.30","created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z","student":{"id":1,"name":"Test User","email":"test@example.com","email_verified_at":"2025-08-31T00:54:37.000000Z","created_at":"2025-08-31T00:54:37.000000Z","updated_at":"2025-08-31T00:54:37.000000Z"},"term":{"id":1,"academic_year_id":1,"name":"Fall Semester","start_date":"2024-09-01T00:00:00.000000Z","end_date":"2024-12-20T00:00:00.000000Z","is_active":true,"created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"},"academic_year":{"id":1,"school_id":1,"name":"2024-2025","start_date":"2024-09-01T00:00:00.000000Z","end_date":"2025-06-30T00:00:00.000000Z","is_active":true,"created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"}},"message":"Student GPA retrieved successfully"}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -1940,11 +1136,8 @@ endpoints:
     fileParameters: []
     responses:
       -
-        status: 500
-        content: |-
-          {
-              "message": "Server Error"
-          }
+        status: 200
+        content: '{"success":true,"data":{"id":1,"student_id":1,"term_id":1,"academic_year_id":1,"gpa":"2.30","cgpa":"2.30","created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z","student":{"id":1,"name":"Test User","email":"test@example.com","email_verified_at":"2025-08-31T00:54:37.000000Z","created_at":"2025-08-31T00:54:37.000000Z","updated_at":"2025-08-31T00:54:37.000000Z"},"term":{"id":1,"academic_year_id":1,"name":"Fall Semester","start_date":"2024-09-01T00:00:00.000000Z","end_date":"2024-12-20T00:00:00.000000Z","is_active":true,"created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"},"academic_year":{"id":1,"school_id":1,"name":"2024-2025","start_date":"2024-09-01T00:00:00.000000Z","end_date":"2025-06-30T00:00:00.000000Z","is_active":true,"created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"}},"message":"Student GPA retrieved successfully"}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -1983,11 +1176,8 @@ endpoints:
     fileParameters: []
     responses:
       -
-        status: 500
-        content: |-
-          {
-              "message": "Server Error"
-          }
+        status: 422
+        content: '{"success":false,"message":"Validation failed","errors":{"student_id":["The student id field is required."],"term_id":["The term id field is required."],"academic_year_id":["The academic year id field is required."]}}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -2026,11 +1216,8 @@ endpoints:
     fileParameters: []
     responses:
       -
-        status: 500
-        content: |-
-          {
-              "message": "Server Error"
-          }
+        status: 422
+        content: '{"success":false,"message":"Validation failed","errors":{"student_id":["The student id field is required."],"academic_year_id":["The academic year id field is required."]}}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -2069,11 +1256,8 @@ endpoints:
     fileParameters: []
     responses:
       -
-        status: 500
-        content: |-
-          {
-              "message": "Server Error"
-          }
+        status: 422
+        content: '{"success":false,"message":"Validation failed","errors":{"term_id":["The term id field is required."],"academic_year_id":["The academic year id field is required."]}}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -2112,11 +1296,8 @@ endpoints:
     fileParameters: []
     responses:
       -
-        status: 500
-        content: |-
-          {
-              "message": "Server Error"
-          }
+        status: 422
+        content: '{"success":false,"message":"Validation failed","errors":{"term_id":["The term id field is required."],"academic_year_id":["The academic year id field is required."]}}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -2155,11 +1336,8 @@ endpoints:
     fileParameters: []
     responses:
       -
-        status: 500
-        content: |-
-          {
-              "message": "Server Error"
-          }
+        status: 422
+        content: '{"success":false,"message":"Validation failed","errors":{"term_id":["The term id field is required."],"academic_year_id":["The academic year id field is required."]}}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -2198,11 +1376,8 @@ endpoints:
     fileParameters: []
     responses:
       -
-        status: 500
-        content: |-
-          {
-              "message": "Server Error"
-          }
+        status: 200
+        content: '{"success":true,"data":{"total_gpas":12,"average_gpa":3.25,"highest_gpa":"4.00","lowest_gpa":"2.30"},"message":"GPA statistics retrieved successfully"}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -2237,14 +1412,14 @@ endpoints:
         name: studentGPA_id
         description: 'The ID of the studentGPA.'
         required: true
-        example: 16
+        example: 1
         type: integer
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanUrlParameters:
-      studentGPA_id: 16
+      studentGPA_id: 1
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -2252,11 +1427,8 @@ endpoints:
     fileParameters: []
     responses:
       -
-        status: 500
-        content: |-
-          {
-              "message": "Server Error"
-          }
+        status: 200
+        content: '{"success":true,"data":{"id":1,"student_id":1,"term_id":1,"academic_year_id":1,"gpa":"2.30","cgpa":"2.30","created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z","student":{"id":1,"name":"Test User","email":"test@example.com","email_verified_at":"2025-08-31T00:54:37.000000Z","created_at":"2025-08-31T00:54:37.000000Z","updated_at":"2025-08-31T00:54:37.000000Z"},"term":{"id":1,"academic_year_id":1,"name":"Fall Semester","start_date":"2024-09-01T00:00:00.000000Z","end_date":"2024-12-20T00:00:00.000000Z","is_active":true,"created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"},"academic_year":{"id":1,"school_id":1,"name":"2024-2025","start_date":"2024-09-01T00:00:00.000000Z","end_date":"2025-06-30T00:00:00.000000Z","is_active":true,"created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"}},"message":"Student GPA retrieved successfully"}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -2291,14 +1463,14 @@ endpoints:
         name: studentGPA_id
         description: 'The ID of the studentGPA.'
         required: true
-        example: 16
+        example: 1
         type: integer
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanUrlParameters:
-      studentGPA_id: 16
+      studentGPA_id: 1
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -2333,14 +1505,14 @@ endpoints:
         name: studentGPA_id
         description: 'The ID of the studentGPA.'
         required: true
-        example: 16
+        example: 1
         type: integer
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanUrlParameters:
-      studentGPA_id: 16
+      studentGPA_id: 1
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -2379,11 +1551,8 @@ endpoints:
     fileParameters: []
     responses:
       -
-        status: 500
-        content: |-
-          {
-              "message": "Server Error"
-          }
+        status: 200
+        content: '{"success":true,"data":[{"id":3,"student_id":1,"class_id":3,"term_id":3,"academic_year_id":1,"gpa":"3.40","cgpa":"3.40","remarks":"Good academic performance. Consistent effort shown.","issued_date":"2025-08-24T00:00:00.000000Z","format":"PDF","created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z","student":{"id":1,"name":"Test User","email":"test@example.com","email_verified_at":"2025-08-31T00:54:37.000000Z","created_at":"2025-08-31T00:54:37.000000Z","updated_at":"2025-08-31T00:54:37.000000Z"},"class":{"id":3,"campus_id":1,"course_id":2,"name":"BMATH - Class A","capacity":30,"created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"},"term":{"id":3,"academic_year_id":1,"name":"Summer Session","start_date":"2025-06-01T00:00:00.000000Z","end_date":"2025-07-31T00:00:00.000000Z","is_active":false,"created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"},"academic_year":{"id":1,"school_id":1,"name":"2024-2025","start_date":"2024-09-01T00:00:00.000000Z","end_date":"2025-06-30T00:00:00.000000Z","is_active":true,"created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"}},{"id":5,"student_id":2,"class_id":6,"term_id":1,"academic_year_id":1,"gpa":"4.00","cgpa":"4.00","remarks":"Outstanding academic performance. Exceptional work ethic and dedication.","issued_date":"2025-08-23T00:00:00.000000Z","format":"PDF","created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z","student":{"id":2,"name":"System Administrator","email":"admin@yousch.edu","email_verified_at":"2025-08-31T00:54:37.000000Z","created_at":"2025-08-31T00:54:37.000000Z","updated_at":"2025-08-31T00:54:37.000000Z"},"class":{"id":6,"campus_id":1,"course_id":3,"name":"BBA - Class B","capacity":25,"created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"},"term":{"id":1,"academic_year_id":1,"name":"Fall Semester","start_date":"2024-09-01T00:00:00.000000Z","end_date":"2024-12-20T00:00:00.000000Z","is_active":true,"created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"},"academic_year":{"id":1,"school_id":1,"name":"2024-2025","start_date":"2024-09-01T00:00:00.000000Z","end_date":"2025-06-30T00:00:00.000000Z","is_active":true,"created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"}},{"id":2,"student_id":1,"class_id":7,"term_id":2,"academic_year_id":1,"gpa":"2.30","cgpa":"2.30","remarks":"Below average performance. Requires more focus and effort.","issued_date":"2025-08-16T00:00:00.000000Z","format":"PDF","created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z","student":{"id":1,"name":"Test User","email":"test@example.com","email_verified_at":"2025-08-31T00:54:37.000000Z","created_at":"2025-08-31T00:54:37.000000Z","updated_at":"2025-08-31T00:54:37.000000Z"},"class":{"id":7,"campus_id":1,"course_id":4,"name":"BAENG - Class A","capacity":30,"created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"},"term":{"id":2,"academic_year_id":1,"name":"Spring Semester","start_date":"2025-01-15T00:00:00.000000Z","end_date":"2025-05-15T00:00:00.000000Z","is_active":false,"created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"},"academic_year":{"id":1,"school_id":1,"name":"2024-2025","start_date":"2024-09-01T00:00:00.000000Z","end_date":"2025-06-30T00:00:00.000000Z","is_active":true,"created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"}},{"id":6,"student_id":2,"class_id":8,"term_id":2,"academic_year_id":1,"gpa":"3.30","cgpa":"3.30","remarks":"Good academic performance. Consistent effort shown.","issued_date":"2025-08-16T00:00:00.000000Z","format":"PDF","created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z","student":{"id":2,"name":"System Administrator","email":"admin@yousch.edu","email_verified_at":"2025-08-31T00:54:37.000000Z","created_at":"2025-08-31T00:54:37.000000Z","updated_at":"2025-08-31T00:54:37.000000Z"},"class":{"id":8,"campus_id":1,"course_id":4,"name":"BAENG - Class B","capacity":25,"created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"},"term":{"id":2,"academic_year_id":1,"name":"Spring Semester","start_date":"2025-01-15T00:00:00.000000Z","end_date":"2025-05-15T00:00:00.000000Z","is_active":false,"created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"},"academic_year":{"id":1,"school_id":1,"name":"2024-2025","start_date":"2024-09-01T00:00:00.000000Z","end_date":"2025-06-30T00:00:00.000000Z","is_active":true,"created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"}},{"id":4,"student_id":1,"class_id":9,"term_id":4,"academic_year_id":1,"gpa":"4.00","cgpa":"4.00","remarks":"Outstanding academic performance. Exceptional work ethic and dedication.","issued_date":"2025-08-13T00:00:00.000000Z","format":"Digital","created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z","student":{"id":1,"name":"Test User","email":"test@example.com","email_verified_at":"2025-08-31T00:54:37.000000Z","created_at":"2025-08-31T00:54:37.000000Z","updated_at":"2025-08-31T00:54:37.000000Z"},"class":{"id":9,"campus_id":1,"course_id":1,"name":"CS101","capacity":30,"created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"},"term":{"id":4,"academic_year_id":1,"name":"Fall 2024","start_date":"2024-09-01T00:00:00.000000Z","end_date":"2024-12-20T00:00:00.000000Z","is_active":true,"created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"},"academic_year":{"id":1,"school_id":1,"name":"2024-2025","start_date":"2024-09-01T00:00:00.000000Z","end_date":"2025-06-30T00:00:00.000000Z","is_active":true,"created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"}},{"id":1,"student_id":1,"class_id":2,"term_id":1,"academic_year_id":1,"gpa":"2.30","cgpa":"2.30","remarks":"Below average performance. Requires more focus and effort.","issued_date":"2025-08-12T00:00:00.000000Z","format":"Digital","created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z","student":{"id":1,"name":"Test User","email":"test@example.com","email_verified_at":"2025-08-31T00:54:37.000000Z","created_at":"2025-08-31T00:54:37.000000Z","updated_at":"2025-08-31T00:54:37.000000Z"},"class":{"id":2,"campus_id":1,"course_id":1,"name":"BCS - Class B","capacity":25,"created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"},"term":{"id":1,"academic_year_id":1,"name":"Fall Semester","start_date":"2024-09-01T00:00:00.000000Z","end_date":"2024-12-20T00:00:00.000000Z","is_active":true,"created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"},"academic_year":{"id":1,"school_id":1,"name":"2024-2025","start_date":"2024-09-01T00:00:00.000000Z","end_date":"2025-06-30T00:00:00.000000Z","is_active":true,"created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"}},{"id":10,"student_id":3,"class_id":2,"term_id":2,"academic_year_id":1,"gpa":"3.40","cgpa":"3.40","remarks":"Good academic performance. Consistent effort shown.","issued_date":"2025-08-12T00:00:00.000000Z","format":"Digital","created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z","student":{"id":3,"name":"School Principal","email":"principal@yousch.edu","email_verified_at":"2025-08-31T00:54:37.000000Z","created_at":"2025-08-31T00:54:37.000000Z","updated_at":"2025-08-31T00:54:37.000000Z"},"class":{"id":2,"campus_id":1,"course_id":1,"name":"BCS - Class B","capacity":25,"created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"},"term":{"id":2,"academic_year_id":1,"name":"Spring Semester","start_date":"2025-01-15T00:00:00.000000Z","end_date":"2025-05-15T00:00:00.000000Z","is_active":false,"created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"},"academic_year":{"id":1,"school_id":1,"name":"2024-2025","start_date":"2024-09-01T00:00:00.000000Z","end_date":"2025-06-30T00:00:00.000000Z","is_active":true,"created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"}},{"id":9,"student_id":3,"class_id":9,"term_id":1,"academic_year_id":1,"gpa":"3.60","cgpa":"3.60","remarks":"Excellent academic performance. Strong commitment to learning.","issued_date":"2025-08-09T00:00:00.000000Z","format":"Digital","created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z","student":{"id":3,"name":"School Principal","email":"principal@yousch.edu","email_verified_at":"2025-08-31T00:54:37.000000Z","created_at":"2025-08-31T00:54:37.000000Z","updated_at":"2025-08-31T00:54:37.000000Z"},"class":{"id":9,"campus_id":1,"course_id":1,"name":"CS101","capacity":30,"created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"},"term":{"id":1,"academic_year_id":1,"name":"Fall Semester","start_date":"2024-09-01T00:00:00.000000Z","end_date":"2024-12-20T00:00:00.000000Z","is_active":true,"created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"},"academic_year":{"id":1,"school_id":1,"name":"2024-2025","start_date":"2024-09-01T00:00:00.000000Z","end_date":"2025-06-30T00:00:00.000000Z","is_active":true,"created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"}},{"id":7,"student_id":2,"class_id":5,"term_id":3,"academic_year_id":1,"gpa":"2.80","cgpa":"2.80","remarks":"Satisfactory performance. Some areas need improvement.","issued_date":"2025-08-07T00:00:00.000000Z","format":"PDF","created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z","student":{"id":2,"name":"System Administrator","email":"admin@yousch.edu","email_verified_at":"2025-08-31T00:54:37.000000Z","created_at":"2025-08-31T00:54:37.000000Z","updated_at":"2025-08-31T00:54:37.000000Z"},"class":{"id":5,"campus_id":1,"course_id":3,"name":"BBA - Class A","capacity":30,"created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"},"term":{"id":3,"academic_year_id":1,"name":"Summer Session","start_date":"2025-06-01T00:00:00.000000Z","end_date":"2025-07-31T00:00:00.000000Z","is_active":false,"created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"},"academic_year":{"id":1,"school_id":1,"name":"2024-2025","start_date":"2024-09-01T00:00:00.000000Z","end_date":"2025-06-30T00:00:00.000000Z","is_active":true,"created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"}},{"id":8,"student_id":2,"class_id":2,"term_id":4,"academic_year_id":1,"gpa":"3.80","cgpa":"3.80","remarks":"Outstanding academic performance. Exceptional work ethic and dedication.","issued_date":"2025-08-07T00:00:00.000000Z","format":"Digital","created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z","student":{"id":2,"name":"System Administrator","email":"admin@yousch.edu","email_verified_at":"2025-08-31T00:54:37.000000Z","created_at":"2025-08-31T00:54:37.000000Z","updated_at":"2025-08-31T00:54:37.000000Z"},"class":{"id":2,"campus_id":1,"course_id":1,"name":"BCS - Class B","capacity":25,"created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"},"term":{"id":4,"academic_year_id":1,"name":"Fall 2024","start_date":"2024-09-01T00:00:00.000000Z","end_date":"2024-12-20T00:00:00.000000Z","is_active":true,"created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"},"academic_year":{"id":1,"school_id":1,"name":"2024-2025","start_date":"2024-09-01T00:00:00.000000Z","end_date":"2025-06-30T00:00:00.000000Z","is_active":true,"created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"}},{"id":11,"student_id":3,"class_id":2,"term_id":3,"academic_year_id":1,"gpa":"3.20","cgpa":"3.20","remarks":"Good academic performance. Consistent effort shown.","issued_date":"2025-08-07T00:00:00.000000Z","format":"PDF","created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z","student":{"id":3,"name":"School Principal","email":"principal@yousch.edu","email_verified_at":"2025-08-31T00:54:37.000000Z","created_at":"2025-08-31T00:54:37.000000Z","updated_at":"2025-08-31T00:54:37.000000Z"},"class":{"id":2,"campus_id":1,"course_id":1,"name":"BCS - Class B","capacity":25,"created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"},"term":{"id":3,"academic_year_id":1,"name":"Summer Session","start_date":"2025-06-01T00:00:00.000000Z","end_date":"2025-07-31T00:00:00.000000Z","is_active":false,"created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"},"academic_year":{"id":1,"school_id":1,"name":"2024-2025","start_date":"2024-09-01T00:00:00.000000Z","end_date":"2025-06-30T00:00:00.000000Z","is_active":true,"created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"}},{"id":12,"student_id":3,"class_id":6,"term_id":4,"academic_year_id":1,"gpa":"2.90","cgpa":"2.90","remarks":"Satisfactory performance. Some areas need improvement.","issued_date":"2025-08-02T00:00:00.000000Z","format":"Digital","created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z","student":{"id":3,"name":"School Principal","email":"principal@yousch.edu","email_verified_at":"2025-08-31T00:54:37.000000Z","created_at":"2025-08-31T00:54:37.000000Z","updated_at":"2025-08-31T00:54:37.000000Z"},"class":{"id":6,"campus_id":1,"course_id":3,"name":"BBA - Class B","capacity":25,"created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"},"term":{"id":4,"academic_year_id":1,"name":"Fall 2024","start_date":"2024-09-01T00:00:00.000000Z","end_date":"2024-12-20T00:00:00.000000Z","is_active":true,"created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"},"academic_year":{"id":1,"school_id":1,"name":"2024-2025","start_date":"2024-09-01T00:00:00.000000Z","end_date":"2025-06-30T00:00:00.000000Z","is_active":true,"created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"}}],"message":"Report cards retrieved successfully"}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -2464,11 +1633,8 @@ endpoints:
     fileParameters: []
     responses:
       -
-        status: 500
-        content: |-
-          {
-              "message": "Server Error"
-          }
+        status: 200
+        content: '{"success":true,"data":[{"id":3,"student_id":1,"class_id":3,"term_id":3,"academic_year_id":1,"gpa":"3.40","cgpa":"3.40","remarks":"Good academic performance. Consistent effort shown.","issued_date":"2025-08-24T00:00:00.000000Z","format":"PDF","created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z","class":{"id":3,"campus_id":1,"course_id":2,"name":"BMATH - Class A","capacity":30,"created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"},"term":{"id":3,"academic_year_id":1,"name":"Summer Session","start_date":"2025-06-01T00:00:00.000000Z","end_date":"2025-07-31T00:00:00.000000Z","is_active":false,"created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"},"academic_year":{"id":1,"school_id":1,"name":"2024-2025","start_date":"2024-09-01T00:00:00.000000Z","end_date":"2025-06-30T00:00:00.000000Z","is_active":true,"created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"}},{"id":2,"student_id":1,"class_id":7,"term_id":2,"academic_year_id":1,"gpa":"2.30","cgpa":"2.30","remarks":"Below average performance. Requires more focus and effort.","issued_date":"2025-08-16T00:00:00.000000Z","format":"PDF","created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z","class":{"id":7,"campus_id":1,"course_id":4,"name":"BAENG - Class A","capacity":30,"created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"},"term":{"id":2,"academic_year_id":1,"name":"Spring Semester","start_date":"2025-01-15T00:00:00.000000Z","end_date":"2025-05-15T00:00:00.000000Z","is_active":false,"created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"},"academic_year":{"id":1,"school_id":1,"name":"2024-2025","start_date":"2024-09-01T00:00:00.000000Z","end_date":"2025-06-30T00:00:00.000000Z","is_active":true,"created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"}},{"id":4,"student_id":1,"class_id":9,"term_id":4,"academic_year_id":1,"gpa":"4.00","cgpa":"4.00","remarks":"Outstanding academic performance. Exceptional work ethic and dedication.","issued_date":"2025-08-13T00:00:00.000000Z","format":"Digital","created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z","class":{"id":9,"campus_id":1,"course_id":1,"name":"CS101","capacity":30,"created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"},"term":{"id":4,"academic_year_id":1,"name":"Fall 2024","start_date":"2024-09-01T00:00:00.000000Z","end_date":"2024-12-20T00:00:00.000000Z","is_active":true,"created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"},"academic_year":{"id":1,"school_id":1,"name":"2024-2025","start_date":"2024-09-01T00:00:00.000000Z","end_date":"2025-06-30T00:00:00.000000Z","is_active":true,"created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"}},{"id":1,"student_id":1,"class_id":2,"term_id":1,"academic_year_id":1,"gpa":"2.30","cgpa":"2.30","remarks":"Below average performance. Requires more focus and effort.","issued_date":"2025-08-12T00:00:00.000000Z","format":"Digital","created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z","class":{"id":2,"campus_id":1,"course_id":1,"name":"BCS - Class B","capacity":25,"created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"},"term":{"id":1,"academic_year_id":1,"name":"Fall Semester","start_date":"2024-09-01T00:00:00.000000Z","end_date":"2024-12-20T00:00:00.000000Z","is_active":true,"created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"},"academic_year":{"id":1,"school_id":1,"name":"2024-2025","start_date":"2024-09-01T00:00:00.000000Z","end_date":"2025-06-30T00:00:00.000000Z","is_active":true,"created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"}}],"message":"Report cards for student retrieved successfully"}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -2518,11 +1684,8 @@ endpoints:
     fileParameters: []
     responses:
       -
-        status: 500
-        content: |-
-          {
-              "message": "Server Error"
-          }
+        status: 200
+        content: '{"success":true,"data":[],"message":"Report cards for class retrieved successfully"}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -2572,11 +1735,8 @@ endpoints:
     fileParameters: []
     responses:
       -
-        status: 500
-        content: |-
-          {
-              "message": "Server Error"
-          }
+        status: 200
+        content: '{"success":true,"data":[{"id":5,"student_id":2,"class_id":6,"term_id":1,"academic_year_id":1,"gpa":"4.00","cgpa":"4.00","remarks":"Outstanding academic performance. Exceptional work ethic and dedication.","issued_date":"2025-08-23T00:00:00.000000Z","format":"PDF","created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z","student":{"id":2,"name":"System Administrator","email":"admin@yousch.edu","email_verified_at":"2025-08-31T00:54:37.000000Z","created_at":"2025-08-31T00:54:37.000000Z","updated_at":"2025-08-31T00:54:37.000000Z"},"class":{"id":6,"campus_id":1,"course_id":3,"name":"BBA - Class B","capacity":25,"created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"},"academic_year":{"id":1,"school_id":1,"name":"2024-2025","start_date":"2024-09-01T00:00:00.000000Z","end_date":"2025-06-30T00:00:00.000000Z","is_active":true,"created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"}},{"id":1,"student_id":1,"class_id":2,"term_id":1,"academic_year_id":1,"gpa":"2.30","cgpa":"2.30","remarks":"Below average performance. Requires more focus and effort.","issued_date":"2025-08-12T00:00:00.000000Z","format":"Digital","created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z","student":{"id":1,"name":"Test User","email":"test@example.com","email_verified_at":"2025-08-31T00:54:37.000000Z","created_at":"2025-08-31T00:54:37.000000Z","updated_at":"2025-08-31T00:54:37.000000Z"},"class":{"id":2,"campus_id":1,"course_id":1,"name":"BCS - Class B","capacity":25,"created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"},"academic_year":{"id":1,"school_id":1,"name":"2024-2025","start_date":"2024-09-01T00:00:00.000000Z","end_date":"2025-06-30T00:00:00.000000Z","is_active":true,"created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"}},{"id":9,"student_id":3,"class_id":9,"term_id":1,"academic_year_id":1,"gpa":"3.60","cgpa":"3.60","remarks":"Excellent academic performance. Strong commitment to learning.","issued_date":"2025-08-09T00:00:00.000000Z","format":"Digital","created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z","student":{"id":3,"name":"School Principal","email":"principal@yousch.edu","email_verified_at":"2025-08-31T00:54:37.000000Z","created_at":"2025-08-31T00:54:37.000000Z","updated_at":"2025-08-31T00:54:37.000000Z"},"class":{"id":9,"campus_id":1,"course_id":1,"name":"CS101","capacity":30,"created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"},"academic_year":{"id":1,"school_id":1,"name":"2024-2025","start_date":"2024-09-01T00:00:00.000000Z","end_date":"2025-06-30T00:00:00.000000Z","is_active":true,"created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"}}],"message":"Report cards for term retrieved successfully"}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -2626,11 +1786,8 @@ endpoints:
     fileParameters: []
     responses:
       -
-        status: 500
-        content: |-
-          {
-              "message": "Server Error"
-          }
+        status: 200
+        content: '{"success":true,"data":[{"id":3,"student_id":1,"class_id":3,"term_id":3,"academic_year_id":1,"gpa":"3.40","cgpa":"3.40","remarks":"Good academic performance. Consistent effort shown.","issued_date":"2025-08-24T00:00:00.000000Z","format":"PDF","created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z","student":{"id":1,"name":"Test User","email":"test@example.com","email_verified_at":"2025-08-31T00:54:37.000000Z","created_at":"2025-08-31T00:54:37.000000Z","updated_at":"2025-08-31T00:54:37.000000Z"},"class":{"id":3,"campus_id":1,"course_id":2,"name":"BMATH - Class A","capacity":30,"created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"},"term":{"id":3,"academic_year_id":1,"name":"Summer Session","start_date":"2025-06-01T00:00:00.000000Z","end_date":"2025-07-31T00:00:00.000000Z","is_active":false,"created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"}},{"id":5,"student_id":2,"class_id":6,"term_id":1,"academic_year_id":1,"gpa":"4.00","cgpa":"4.00","remarks":"Outstanding academic performance. Exceptional work ethic and dedication.","issued_date":"2025-08-23T00:00:00.000000Z","format":"PDF","created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z","student":{"id":2,"name":"System Administrator","email":"admin@yousch.edu","email_verified_at":"2025-08-31T00:54:37.000000Z","created_at":"2025-08-31T00:54:37.000000Z","updated_at":"2025-08-31T00:54:37.000000Z"},"class":{"id":6,"campus_id":1,"course_id":3,"name":"BBA - Class B","capacity":25,"created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"},"term":{"id":1,"academic_year_id":1,"name":"Fall Semester","start_date":"2024-09-01T00:00:00.000000Z","end_date":"2024-12-20T00:00:00.000000Z","is_active":true,"created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"}},{"id":2,"student_id":1,"class_id":7,"term_id":2,"academic_year_id":1,"gpa":"2.30","cgpa":"2.30","remarks":"Below average performance. Requires more focus and effort.","issued_date":"2025-08-16T00:00:00.000000Z","format":"PDF","created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z","student":{"id":1,"name":"Test User","email":"test@example.com","email_verified_at":"2025-08-31T00:54:37.000000Z","created_at":"2025-08-31T00:54:37.000000Z","updated_at":"2025-08-31T00:54:37.000000Z"},"class":{"id":7,"campus_id":1,"course_id":4,"name":"BAENG - Class A","capacity":30,"created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"},"term":{"id":2,"academic_year_id":1,"name":"Spring Semester","start_date":"2025-01-15T00:00:00.000000Z","end_date":"2025-05-15T00:00:00.000000Z","is_active":false,"created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"}},{"id":6,"student_id":2,"class_id":8,"term_id":2,"academic_year_id":1,"gpa":"3.30","cgpa":"3.30","remarks":"Good academic performance. Consistent effort shown.","issued_date":"2025-08-16T00:00:00.000000Z","format":"PDF","created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z","student":{"id":2,"name":"System Administrator","email":"admin@yousch.edu","email_verified_at":"2025-08-31T00:54:37.000000Z","created_at":"2025-08-31T00:54:37.000000Z","updated_at":"2025-08-31T00:54:37.000000Z"},"class":{"id":8,"campus_id":1,"course_id":4,"name":"BAENG - Class B","capacity":25,"created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"},"term":{"id":2,"academic_year_id":1,"name":"Spring Semester","start_date":"2025-01-15T00:00:00.000000Z","end_date":"2025-05-15T00:00:00.000000Z","is_active":false,"created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"}},{"id":4,"student_id":1,"class_id":9,"term_id":4,"academic_year_id":1,"gpa":"4.00","cgpa":"4.00","remarks":"Outstanding academic performance. Exceptional work ethic and dedication.","issued_date":"2025-08-13T00:00:00.000000Z","format":"Digital","created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z","student":{"id":1,"name":"Test User","email":"test@example.com","email_verified_at":"2025-08-31T00:54:37.000000Z","created_at":"2025-08-31T00:54:37.000000Z","updated_at":"2025-08-31T00:54:37.000000Z"},"class":{"id":9,"campus_id":1,"course_id":1,"name":"CS101","capacity":30,"created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"},"term":{"id":4,"academic_year_id":1,"name":"Fall 2024","start_date":"2024-09-01T00:00:00.000000Z","end_date":"2024-12-20T00:00:00.000000Z","is_active":true,"created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"}},{"id":1,"student_id":1,"class_id":2,"term_id":1,"academic_year_id":1,"gpa":"2.30","cgpa":"2.30","remarks":"Below average performance. Requires more focus and effort.","issued_date":"2025-08-12T00:00:00.000000Z","format":"Digital","created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z","student":{"id":1,"name":"Test User","email":"test@example.com","email_verified_at":"2025-08-31T00:54:37.000000Z","created_at":"2025-08-31T00:54:37.000000Z","updated_at":"2025-08-31T00:54:37.000000Z"},"class":{"id":2,"campus_id":1,"course_id":1,"name":"BCS - Class B","capacity":25,"created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"},"term":{"id":1,"academic_year_id":1,"name":"Fall Semester","start_date":"2024-09-01T00:00:00.000000Z","end_date":"2024-12-20T00:00:00.000000Z","is_active":true,"created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"}},{"id":10,"student_id":3,"class_id":2,"term_id":2,"academic_year_id":1,"gpa":"3.40","cgpa":"3.40","remarks":"Good academic performance. Consistent effort shown.","issued_date":"2025-08-12T00:00:00.000000Z","format":"Digital","created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z","student":{"id":3,"name":"School Principal","email":"principal@yousch.edu","email_verified_at":"2025-08-31T00:54:37.000000Z","created_at":"2025-08-31T00:54:37.000000Z","updated_at":"2025-08-31T00:54:37.000000Z"},"class":{"id":2,"campus_id":1,"course_id":1,"name":"BCS - Class B","capacity":25,"created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"},"term":{"id":2,"academic_year_id":1,"name":"Spring Semester","start_date":"2025-01-15T00:00:00.000000Z","end_date":"2025-05-15T00:00:00.000000Z","is_active":false,"created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"}},{"id":9,"student_id":3,"class_id":9,"term_id":1,"academic_year_id":1,"gpa":"3.60","cgpa":"3.60","remarks":"Excellent academic performance. Strong commitment to learning.","issued_date":"2025-08-09T00:00:00.000000Z","format":"Digital","created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z","student":{"id":3,"name":"School Principal","email":"principal@yousch.edu","email_verified_at":"2025-08-31T00:54:37.000000Z","created_at":"2025-08-31T00:54:37.000000Z","updated_at":"2025-08-31T00:54:37.000000Z"},"class":{"id":9,"campus_id":1,"course_id":1,"name":"CS101","capacity":30,"created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"},"term":{"id":1,"academic_year_id":1,"name":"Fall Semester","start_date":"2024-09-01T00:00:00.000000Z","end_date":"2024-12-20T00:00:00.000000Z","is_active":true,"created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"}},{"id":7,"student_id":2,"class_id":5,"term_id":3,"academic_year_id":1,"gpa":"2.80","cgpa":"2.80","remarks":"Satisfactory performance. Some areas need improvement.","issued_date":"2025-08-07T00:00:00.000000Z","format":"PDF","created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z","student":{"id":2,"name":"System Administrator","email":"admin@yousch.edu","email_verified_at":"2025-08-31T00:54:37.000000Z","created_at":"2025-08-31T00:54:37.000000Z","updated_at":"2025-08-31T00:54:37.000000Z"},"class":{"id":5,"campus_id":1,"course_id":3,"name":"BBA - Class A","capacity":30,"created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"},"term":{"id":3,"academic_year_id":1,"name":"Summer Session","start_date":"2025-06-01T00:00:00.000000Z","end_date":"2025-07-31T00:00:00.000000Z","is_active":false,"created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"}},{"id":8,"student_id":2,"class_id":2,"term_id":4,"academic_year_id":1,"gpa":"3.80","cgpa":"3.80","remarks":"Outstanding academic performance. Exceptional work ethic and dedication.","issued_date":"2025-08-07T00:00:00.000000Z","format":"Digital","created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z","student":{"id":2,"name":"System Administrator","email":"admin@yousch.edu","email_verified_at":"2025-08-31T00:54:37.000000Z","created_at":"2025-08-31T00:54:37.000000Z","updated_at":"2025-08-31T00:54:37.000000Z"},"class":{"id":2,"campus_id":1,"course_id":1,"name":"BCS - Class B","capacity":25,"created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"},"term":{"id":4,"academic_year_id":1,"name":"Fall 2024","start_date":"2024-09-01T00:00:00.000000Z","end_date":"2024-12-20T00:00:00.000000Z","is_active":true,"created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"}},{"id":11,"student_id":3,"class_id":2,"term_id":3,"academic_year_id":1,"gpa":"3.20","cgpa":"3.20","remarks":"Good academic performance. Consistent effort shown.","issued_date":"2025-08-07T00:00:00.000000Z","format":"PDF","created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z","student":{"id":3,"name":"School Principal","email":"principal@yousch.edu","email_verified_at":"2025-08-31T00:54:37.000000Z","created_at":"2025-08-31T00:54:37.000000Z","updated_at":"2025-08-31T00:54:37.000000Z"},"class":{"id":2,"campus_id":1,"course_id":1,"name":"BCS - Class B","capacity":25,"created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"},"term":{"id":3,"academic_year_id":1,"name":"Summer Session","start_date":"2025-06-01T00:00:00.000000Z","end_date":"2025-07-31T00:00:00.000000Z","is_active":false,"created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"}},{"id":12,"student_id":3,"class_id":6,"term_id":4,"academic_year_id":1,"gpa":"2.90","cgpa":"2.90","remarks":"Satisfactory performance. Some areas need improvement.","issued_date":"2025-08-02T00:00:00.000000Z","format":"Digital","created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z","student":{"id":3,"name":"School Principal","email":"principal@yousch.edu","email_verified_at":"2025-08-31T00:54:37.000000Z","created_at":"2025-08-31T00:54:37.000000Z","updated_at":"2025-08-31T00:54:37.000000Z"},"class":{"id":6,"campus_id":1,"course_id":3,"name":"BBA - Class B","capacity":25,"created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"},"term":{"id":4,"academic_year_id":1,"name":"Fall 2024","start_date":"2024-09-01T00:00:00.000000Z","end_date":"2024-12-20T00:00:00.000000Z","is_active":true,"created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"}}],"message":"Report cards for academic year retrieved successfully"}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -2700,11 +1857,8 @@ endpoints:
     fileParameters: []
     responses:
       -
-        status: 500
-        content: |-
-          {
-              "message": "Server Error"
-          }
+        status: 200
+        content: '{"success":true,"data":{"total_report_cards":12,"average_gpa":3.25,"average_cgpa":3.25,"highest_gpa":"4.00","lowest_gpa":"2.30","format_distribution":{"PDF":6,"Digital":6}},"message":"Report card statistics retrieved successfully"}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -2739,14 +1893,14 @@ endpoints:
         name: reportCard_id
         description: 'The ID of the reportCard.'
         required: true
-        example: 16
+        example: 1
         type: integer
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanUrlParameters:
-      reportCard_id: 16
+      reportCard_id: 1
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -2754,11 +1908,8 @@ endpoints:
     fileParameters: []
     responses:
       -
-        status: 500
-        content: |-
-          {
-              "message": "Server Error"
-          }
+        status: 200
+        content: '{"success":true,"data":{"id":1,"student_id":1,"class_id":2,"term_id":1,"academic_year_id":1,"gpa":"2.30","cgpa":"2.30","remarks":"Below average performance. Requires more focus and effort.","issued_date":"2025-08-12T00:00:00.000000Z","format":"Digital","created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z","student":{"id":1,"name":"Test User","email":"test@example.com","email_verified_at":"2025-08-31T00:54:37.000000Z","created_at":"2025-08-31T00:54:37.000000Z","updated_at":"2025-08-31T00:54:37.000000Z"},"class":{"id":2,"campus_id":1,"course_id":1,"name":"BCS - Class B","capacity":25,"created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"},"term":{"id":1,"academic_year_id":1,"name":"Fall Semester","start_date":"2024-09-01T00:00:00.000000Z","end_date":"2024-12-20T00:00:00.000000Z","is_active":true,"created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"},"academic_year":{"id":1,"school_id":1,"name":"2024-2025","start_date":"2024-09-01T00:00:00.000000Z","end_date":"2025-06-30T00:00:00.000000Z","is_active":true,"created_at":"2025-08-31T00:54:40.000000Z","updated_at":"2025-08-31T00:54:40.000000Z"}},"message":"Report card retrieved successfully"}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -2793,14 +1944,14 @@ endpoints:
         name: reportCard_id
         description: 'The ID of the reportCard.'
         required: true
-        example: 16
+        example: 1
         type: integer
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanUrlParameters:
-      reportCard_id: 16
+      reportCard_id: 1
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -2835,14 +1986,14 @@ endpoints:
         name: reportCard_id
         description: 'The ID of the reportCard.'
         required: true
-        example: 16
+        example: 1
         type: integer
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanUrlParameters:
-      reportCard_id: 16
+      reportCard_id: 1
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -2943,11 +2094,8 @@ endpoints:
     fileParameters: []
     responses:
       -
-        status: 500
-        content: |-
-          {
-              "message": "Server Error"
-          }
+        status: 200
+        content: '{"success":true,"data":{"total_marks":0,"passing_marks":0,"failing_marks":0,"pass_rate":0,"average_marks":0,"highest_marks":null,"lowest_marks":null,"grade_distribution":[],"exam_marks":[]},"message":"Performance report generated successfully"}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -2986,11 +2134,8 @@ endpoints:
     fileParameters: []
     responses:
       -
-        status: 500
-        content: |-
-          {
-              "message": "Server Error"
-          }
+        status: 422
+        content: '{"success":false,"message":"Validation failed","errors":{"class_id":["The class id field is required."]}}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -3029,11 +2174,8 @@ endpoints:
     fileParameters: []
     responses:
       -
-        status: 500
-        content: |-
-          {
-              "message": "Server Error"
-          }
+        status: 422
+        content: '{"success":false,"message":"Validation failed","errors":{"subject_id":["The subject id field is required."]}}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json

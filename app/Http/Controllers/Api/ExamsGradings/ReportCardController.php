@@ -30,7 +30,7 @@ class ReportCardController extends Controller
                 'format', 'date_from', 'date_to'
             ]);
 
-            $reportCards = $this->reportCardRepository->getPaginatedReportCards($filters);
+            $reportCards = $this->reportCardRepository->getAllReportCards($filters);
 
             return response()->json([
                 'success' => true,

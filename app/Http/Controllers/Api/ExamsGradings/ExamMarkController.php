@@ -29,7 +29,7 @@ class ExamMarkController extends Controller
                 'has_grade', 'is_passing'
             ]);
 
-            $examMarks = $this->examMarkRepository->getPaginatedExamMarks($filters);
+            $examMarks = $this->examMarkRepository->getAllExamMarks($filters);
 
             return response()->json([
                 'success' => true,

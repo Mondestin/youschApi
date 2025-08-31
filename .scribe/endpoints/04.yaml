@@ -120,7 +120,7 @@ endpoints:
         name: date
         description: 'Must be a valid date.'
         required: true
-        example: '2025-08-27T16:38:55'
+        example: '2025-08-31T02:28:56'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -130,7 +130,7 @@ endpoints:
         name: status
         description: ''
         required: true
-        example: excused
+        example: present
         type: string
         enumValues:
           - present
@@ -155,8 +155,8 @@ endpoints:
       class_id: architecto
       subject_id: architecto
       timetable_id: architecto
-      date: '2025-08-27T16:38:55'
-      status: excused
+      date: '2025-08-31T02:28:56'
+      status: present
       remarks: 'n'
     fileParameters: []
     responses: []
@@ -188,14 +188,14 @@ endpoints:
         name: attendance_id
         description: 'The ID of the attendance.'
         required: true
-        example: 16
+        example: 1
         type: integer
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanUrlParameters:
-      attendance_id: 16
+      attendance_id: 1
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -242,14 +242,14 @@ endpoints:
         name: attendance_id
         description: 'The ID of the attendance.'
         required: true
-        example: 16
+        example: 1
         type: integer
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanUrlParameters:
-      attendance_id: 16
+      attendance_id: 1
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
@@ -257,7 +257,7 @@ endpoints:
         name: status
         description: ''
         required: false
-        example: absent
+        example: present
         type: string
         enumValues:
           - present
@@ -278,7 +278,7 @@ endpoints:
         nullable: true
         custom: []
     cleanBodyParameters:
-      status: absent
+      status: present
       remarks: b
     fileParameters: []
     responses: []
@@ -310,14 +310,14 @@ endpoints:
         name: attendance_id
         description: 'The ID of the attendance.'
         required: true
-        example: 16
+        example: 1
         type: integer
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanUrlParameters:
-      attendance_id: 16
+      attendance_id: 1
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -529,11 +529,8 @@ endpoints:
     fileParameters: []
     responses:
       -
-        status: 500
-        content: |-
-          {
-              "message": "Server Error"
-          }
+        status: 200
+        content: '{"success":true,"data":[]}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -572,7 +569,7 @@ endpoints:
         name: start_date
         description: 'Must be a valid date.'
         required: true
-        example: '2025-08-27T16:38:55'
+        example: '2025-08-31T02:28:56'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -582,15 +579,15 @@ endpoints:
         name: end_date
         description: 'Must be a valid date. Must be a date after or equal to <code>start_date</code>.'
         required: true
-        example: '2051-09-20'
+        example: '2051-09-24'
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanBodyParameters:
-      start_date: '2025-08-27T16:38:55'
-      end_date: '2051-09-20'
+      start_date: '2025-08-31T02:28:56'
+      end_date: '2051-09-24'
     fileParameters: []
     responses: []
     responseFields: []
@@ -636,14 +633,14 @@ endpoints:
         name: date
         description: 'Must be a valid date.'
         required: true
-        example: '2025-08-27T16:38:55'
+        example: '2025-08-31T02:28:56'
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanBodyParameters:
-      date: '2025-08-27T16:38:55'
+      date: '2025-08-31T02:28:56'
     fileParameters: []
     responses:
       -
@@ -701,7 +698,7 @@ endpoints:
         name: start_date
         description: 'Must be a valid date.'
         required: true
-        example: '2025-08-27T16:38:55'
+        example: '2025-08-31T02:28:56'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -711,15 +708,15 @@ endpoints:
         name: end_date
         description: 'Must be a valid date. Must be a date after or equal to <code>start_date</code>.'
         required: true
-        example: '2051-09-20'
+        example: '2051-09-24'
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanBodyParameters:
-      start_date: '2025-08-27T16:38:55'
-      end_date: '2051-09-20'
+      start_date: '2025-08-31T02:28:56'
+      end_date: '2051-09-24'
     fileParameters: []
     responses:
       -
@@ -777,7 +774,7 @@ endpoints:
         name: start_date
         description: 'Must be a valid date.'
         required: true
-        example: '2025-08-27T16:38:55'
+        example: '2025-08-31T02:28:56'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -787,15 +784,15 @@ endpoints:
         name: end_date
         description: 'Must be a valid date. Must be a date after or equal to <code>start_date</code>.'
         required: true
-        example: '2051-09-20'
+        example: '2051-09-24'
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanBodyParameters:
-      start_date: '2025-08-27T16:38:55'
-      end_date: '2051-09-20'
+      start_date: '2025-08-31T02:28:56'
+      end_date: '2051-09-24'
     fileParameters: []
     responses:
       -
@@ -842,10 +839,10 @@ endpoints:
     fileParameters: []
     responses:
       -
-        status: 500
+        status: 404
         content: |-
           {
-              "message": "Server Error"
+              "message": "No query results for model [App\\Models\\Attendance\\StudentAttendance] statistics"
           }
         headers:
           cache-control: 'no-cache, private'
@@ -885,10 +882,10 @@ endpoints:
     fileParameters: []
     responses:
       -
-        status: 500
+        status: 404
         content: |-
           {
-              "message": "Server Error"
+              "message": "No query results for model [App\\Models\\Attendance\\StudentAttendance] report"
           }
         headers:
           cache-control: 'no-cache, private'
@@ -1021,7 +1018,7 @@ endpoints:
         name: date
         description: 'Must be a valid date.'
         required: true
-        example: '2025-08-27T16:38:55'
+        example: '2025-08-31T02:28:56'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -1055,7 +1052,7 @@ endpoints:
       class_id: architecto
       subject_id: architecto
       timetable_id: architecto
-      date: '2025-08-27T16:38:55'
+      date: '2025-08-31T02:28:56'
       status: late
       remarks: 'n'
     fileParameters: []
@@ -1088,14 +1085,14 @@ endpoints:
         name: attendance_id
         description: 'The ID of the attendance.'
         required: true
-        example: 16
+        example: 1
         type: integer
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanUrlParameters:
-      attendance_id: 16
+      attendance_id: 1
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -1142,14 +1139,14 @@ endpoints:
         name: attendance_id
         description: 'The ID of the attendance.'
         required: true
-        example: 16
+        example: 1
         type: integer
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanUrlParameters:
-      attendance_id: 16
+      attendance_id: 1
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
@@ -1209,14 +1206,14 @@ endpoints:
         name: attendance_id
         description: 'The ID of the attendance.'
         required: true
-        example: 16
+        example: 1
         type: integer
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanUrlParameters:
-      attendance_id: 16
+      attendance_id: 1
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -1428,11 +1425,8 @@ endpoints:
     fileParameters: []
     responses:
       -
-        status: 500
-        content: |-
-          {
-              "message": "Server Error"
-          }
+        status: 200
+        content: '{"success":true,"data":[]}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -1471,7 +1465,7 @@ endpoints:
         name: start_date
         description: 'Must be a valid date.'
         required: true
-        example: '2025-08-27T16:38:55'
+        example: '2025-08-31T02:28:56'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -1481,15 +1475,15 @@ endpoints:
         name: end_date
         description: 'Must be a valid date. Must be a date after or equal to <code>start_date</code>.'
         required: true
-        example: '2051-09-20'
+        example: '2051-09-24'
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanBodyParameters:
-      start_date: '2025-08-27T16:38:55'
-      end_date: '2051-09-20'
+      start_date: '2025-08-31T02:28:56'
+      end_date: '2051-09-24'
     fileParameters: []
     responses: []
     responseFields: []
@@ -1535,14 +1529,14 @@ endpoints:
         name: date
         description: 'Must be a valid date.'
         required: true
-        example: '2025-08-27T16:38:55'
+        example: '2025-08-31T02:28:56'
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanBodyParameters:
-      date: '2025-08-27T16:38:55'
+      date: '2025-08-31T02:28:56'
     fileParameters: []
     responses:
       -
@@ -1600,7 +1594,7 @@ endpoints:
         name: start_date
         description: 'Must be a valid date.'
         required: true
-        example: '2025-08-27T16:38:55'
+        example: '2025-08-31T02:28:56'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -1610,15 +1604,15 @@ endpoints:
         name: end_date
         description: 'Must be a valid date. Must be a date after or equal to <code>start_date</code>.'
         required: true
-        example: '2051-09-20'
+        example: '2051-09-24'
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanBodyParameters:
-      start_date: '2025-08-27T16:38:55'
-      end_date: '2051-09-20'
+      start_date: '2025-08-31T02:28:56'
+      end_date: '2051-09-24'
     fileParameters: []
     responses:
       -
@@ -1676,7 +1670,7 @@ endpoints:
         name: start_date
         description: 'Must be a valid date.'
         required: true
-        example: '2025-08-27T16:38:55'
+        example: '2025-08-31T02:28:56'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -1686,15 +1680,15 @@ endpoints:
         name: end_date
         description: 'Must be a valid date. Must be a date after or equal to <code>start_date</code>.'
         required: true
-        example: '2051-09-20'
+        example: '2051-09-24'
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanBodyParameters:
-      start_date: '2025-08-27T16:38:55'
-      end_date: '2051-09-20'
+      start_date: '2025-08-31T02:28:56'
+      end_date: '2051-09-24'
     fileParameters: []
     responses:
       -
@@ -1741,10 +1735,10 @@ endpoints:
     fileParameters: []
     responses:
       -
-        status: 500
+        status: 404
         content: |-
           {
-              "message": "Server Error"
+              "message": "No query results for model [App\\Models\\Attendance\\TeacherAttendance] statistics"
           }
         headers:
           cache-control: 'no-cache, private'
@@ -1784,10 +1778,10 @@ endpoints:
     fileParameters: []
     responses:
       -
-        status: 500
+        status: 404
         content: |-
           {
-              "message": "Server Error"
+              "message": "No query results for model [App\\Models\\Attendance\\TeacherAttendance] report"
           }
         headers:
           cache-control: 'no-cache, private'
@@ -1910,7 +1904,7 @@ endpoints:
         name: date
         description: 'Must be a valid date.'
         required: true
-        example: '2025-08-27T16:38:55'
+        example: '2025-08-31T02:28:56'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -1940,7 +1934,7 @@ endpoints:
       student_id: architecto
       class_id: architecto
       subject_id: architecto
-      date: '2025-08-27T16:38:55'
+      date: '2025-08-31T02:28:56'
       reason: 'n'
     fileParameters:
       document: null
@@ -1973,14 +1967,14 @@ endpoints:
         name: excuse_id
         description: 'The ID of the excuse.'
         required: true
-        example: 16
+        example: 1
         type: integer
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanUrlParameters:
-      excuse_id: 16
+      excuse_id: 1
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -2027,14 +2021,14 @@ endpoints:
         name: excuse_id
         description: 'The ID of the excuse.'
         required: true
-        example: 16
+        example: 1
         type: integer
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanUrlParameters:
-      excuse_id: 16
+      excuse_id: 1
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
@@ -2091,14 +2085,14 @@ endpoints:
         name: excuse_id
         description: 'The ID of the excuse.'
         required: true
-        example: 16
+        example: 1
         type: integer
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanUrlParameters:
-      excuse_id: 16
+      excuse_id: 1
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -2310,11 +2304,8 @@ endpoints:
     fileParameters: []
     responses:
       -
-        status: 500
-        content: |-
-          {
-              "message": "Server Error"
-          }
+        status: 200
+        content: '{"success":true,"data":[]}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -2353,7 +2344,7 @@ endpoints:
         name: start_date
         description: 'Must be a valid date.'
         required: true
-        example: '2025-08-27T16:38:55'
+        example: '2025-08-31T02:28:56'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -2363,15 +2354,15 @@ endpoints:
         name: end_date
         description: 'Must be a valid date. Must be a date after or equal to <code>start_date</code>.'
         required: true
-        example: '2051-09-20'
+        example: '2051-09-24'
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanBodyParameters:
-      start_date: '2025-08-27T16:38:55'
-      end_date: '2051-09-20'
+      start_date: '2025-08-31T02:28:56'
+      end_date: '2051-09-24'
     fileParameters: []
     responses: []
     responseFields: []
@@ -2406,10 +2397,10 @@ endpoints:
     fileParameters: []
     responses:
       -
-        status: 500
+        status: 404
         content: |-
           {
-              "message": "Server Error"
+              "message": "No query results for model [App\\Models\\Attendance\\StudentAttendanceExcuse] pending"
           }
         headers:
           cache-control: 'no-cache, private'
@@ -2449,10 +2440,10 @@ endpoints:
     fileParameters: []
     responses:
       -
-        status: 500
+        status: 404
         content: |-
           {
-              "message": "Server Error"
+              "message": "No query results for model [App\\Models\\Attendance\\StudentAttendanceExcuse] approved"
           }
         headers:
           cache-control: 'no-cache, private'
@@ -2492,10 +2483,10 @@ endpoints:
     fileParameters: []
     responses:
       -
-        status: 500
+        status: 404
         content: |-
           {
-              "message": "Server Error"
+              "message": "No query results for model [App\\Models\\Attendance\\StudentAttendanceExcuse] rejected"
           }
         headers:
           cache-control: 'no-cache, private'
@@ -2531,14 +2522,14 @@ endpoints:
         name: excuse_id
         description: 'The ID of the excuse.'
         required: true
-        example: 16
+        example: 1
         type: integer
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanUrlParameters:
-      excuse_id: 16
+      excuse_id: 1
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -2573,14 +2564,14 @@ endpoints:
         name: excuse_id
         description: 'The ID of the excuse.'
         required: true
-        example: 16
+        example: 1
         type: integer
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanUrlParameters:
-      excuse_id: 16
+      excuse_id: 1
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -2619,10 +2610,10 @@ endpoints:
     fileParameters: []
     responses:
       -
-        status: 500
+        status: 404
         content: |-
           {
-              "message": "Server Error"
+              "message": "No query results for model [App\\Models\\Attendance\\StudentAttendanceExcuse] statistics"
           }
         headers:
           cache-control: 'no-cache, private'
@@ -2662,10 +2653,10 @@ endpoints:
     fileParameters: []
     responses:
       -
-        status: 500
+        status: 404
         content: |-
           {
-              "message": "Server Error"
+              "message": "No query results for model [App\\Models\\Attendance\\StudentAttendanceExcuse] report"
           }
         headers:
           cache-control: 'no-cache, private'
@@ -2716,7 +2707,7 @@ endpoints:
         name: start_date
         description: 'Must be a valid date.'
         required: true
-        example: '2025-08-27T16:38:55'
+        example: '2025-08-31T02:28:56'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -2726,15 +2717,15 @@ endpoints:
         name: end_date
         description: 'Must be a valid date. Must be a date after or equal to <code>start_date</code>.'
         required: true
-        example: '2051-09-20'
+        example: '2051-09-24'
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanBodyParameters:
-      start_date: '2025-08-27T16:38:55'
-      end_date: '2051-09-20'
+      start_date: '2025-08-31T02:28:56'
+      end_date: '2051-09-24'
     fileParameters: []
     responses:
       -
@@ -2864,7 +2855,7 @@ endpoints:
         name: date
         description: 'Must be a valid date.'
         required: true
-        example: '2025-08-27T16:38:55'
+        example: '2025-08-31T02:28:56'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -2894,7 +2885,7 @@ endpoints:
       teacher_id: architecto
       class_id: architecto
       subject_id: architecto
-      date: '2025-08-27T16:38:55'
+      date: '2025-08-31T02:28:56'
       reason: 'n'
     fileParameters:
       document: null
@@ -2927,14 +2918,14 @@ endpoints:
         name: excuse_id
         description: 'The ID of the excuse.'
         required: true
-        example: 16
+        example: 1
         type: integer
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanUrlParameters:
-      excuse_id: 16
+      excuse_id: 1
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -2981,14 +2972,14 @@ endpoints:
         name: excuse_id
         description: 'The ID of the excuse.'
         required: true
-        example: 16
+        example: 1
         type: integer
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanUrlParameters:
-      excuse_id: 16
+      excuse_id: 1
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
@@ -3045,14 +3036,14 @@ endpoints:
         name: excuse_id
         description: 'The ID of the excuse.'
         required: true
-        example: 16
+        example: 1
         type: integer
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanUrlParameters:
-      excuse_id: 16
+      excuse_id: 1
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -3264,11 +3255,8 @@ endpoints:
     fileParameters: []
     responses:
       -
-        status: 500
-        content: |-
-          {
-              "message": "Server Error"
-          }
+        status: 200
+        content: '{"success":true,"data":[]}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -3307,7 +3295,7 @@ endpoints:
         name: start_date
         description: 'Must be a valid date.'
         required: true
-        example: '2025-08-27T16:38:55'
+        example: '2025-08-31T02:28:56'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -3317,15 +3305,15 @@ endpoints:
         name: end_date
         description: 'Must be a valid date. Must be a date after or equal to <code>start_date</code>.'
         required: true
-        example: '2051-09-20'
+        example: '2051-09-24'
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanBodyParameters:
-      start_date: '2025-08-27T16:38:55'
-      end_date: '2051-09-20'
+      start_date: '2025-08-31T02:28:56'
+      end_date: '2051-09-24'
     fileParameters: []
     responses: []
     responseFields: []
@@ -3360,10 +3348,10 @@ endpoints:
     fileParameters: []
     responses:
       -
-        status: 500
+        status: 404
         content: |-
           {
-              "message": "Server Error"
+              "message": "No query results for model [App\\Models\\Attendance\\TeacherAttendanceExcuse] pending"
           }
         headers:
           cache-control: 'no-cache, private'
@@ -3403,10 +3391,10 @@ endpoints:
     fileParameters: []
     responses:
       -
-        status: 500
+        status: 404
         content: |-
           {
-              "message": "Server Error"
+              "message": "No query results for model [App\\Models\\Attendance\\TeacherAttendanceExcuse] approved"
           }
         headers:
           cache-control: 'no-cache, private'
@@ -3446,10 +3434,10 @@ endpoints:
     fileParameters: []
     responses:
       -
-        status: 500
+        status: 404
         content: |-
           {
-              "message": "Server Error"
+              "message": "No query results for model [App\\Models\\Attendance\\TeacherAttendanceExcuse] rejected"
           }
         headers:
           cache-control: 'no-cache, private'
@@ -3485,14 +3473,14 @@ endpoints:
         name: excuse_id
         description: 'The ID of the excuse.'
         required: true
-        example: 16
+        example: 1
         type: integer
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanUrlParameters:
-      excuse_id: 16
+      excuse_id: 1
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -3527,14 +3515,14 @@ endpoints:
         name: excuse_id
         description: 'The ID of the excuse.'
         required: true
-        example: 16
+        example: 1
         type: integer
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanUrlParameters:
-      excuse_id: 16
+      excuse_id: 1
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -3573,10 +3561,10 @@ endpoints:
     fileParameters: []
     responses:
       -
-        status: 500
+        status: 404
         content: |-
           {
-              "message": "Server Error"
+              "message": "No query results for model [App\\Models\\Attendance\\TeacherAttendanceExcuse] statistics"
           }
         headers:
           cache-control: 'no-cache, private'
@@ -3616,10 +3604,10 @@ endpoints:
     fileParameters: []
     responses:
       -
-        status: 500
+        status: 404
         content: |-
           {
-              "message": "Server Error"
+              "message": "No query results for model [App\\Models\\Attendance\\TeacherAttendanceExcuse] report"
           }
         headers:
           cache-control: 'no-cache, private'
@@ -3670,7 +3658,7 @@ endpoints:
         name: start_date
         description: 'Must be a valid date.'
         required: true
-        example: '2025-08-27T16:38:55'
+        example: '2025-08-31T02:28:56'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -3680,15 +3668,15 @@ endpoints:
         name: end_date
         description: 'Must be a valid date. Must be a date after or equal to <code>start_date</code>.'
         required: true
-        example: '2051-09-20'
+        example: '2051-09-24'
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanBodyParameters:
-      start_date: '2025-08-27T16:38:55'
-      end_date: '2051-09-20'
+      start_date: '2025-08-31T02:28:56'
+      end_date: '2051-09-24'
     fileParameters: []
     responses:
       -
@@ -3786,7 +3774,7 @@ endpoints:
         name: 'attendance_data[].date'
         description: 'Must be a valid date.'
         required: true
-        example: '2025-08-27T16:38:55'
+        example: '2025-08-31T02:28:56'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -3796,7 +3784,7 @@ endpoints:
         name: 'attendance_data[].status'
         description: ''
         required: true
-        example: late
+        example: present
         type: string
         enumValues:
           - present
@@ -3823,8 +3811,8 @@ endpoints:
           class_id: architecto
           subject_id: architecto
           timetable_id: architecto
-          date: '2025-08-27T16:38:55'
-          status: late
+          date: '2025-08-31T02:28:56'
+          status: present
           remarks: 'n'
     fileParameters: []
     responses: []
@@ -3992,7 +3980,7 @@ endpoints:
         name: 'attendance_data[].date'
         description: 'Must be a valid date.'
         required: true
-        example: '2025-08-27T16:38:55'
+        example: '2025-08-31T02:28:56'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -4002,7 +3990,7 @@ endpoints:
         name: 'attendance_data[].status'
         description: ''
         required: true
-        example: present
+        example: late
         type: string
         enumValues:
           - present
@@ -4028,8 +4016,8 @@ endpoints:
           class_id: architecto
           subject_id: architecto
           timetable_id: architecto
-          date: '2025-08-27T16:38:55'
-          status: present
+          date: '2025-08-31T02:28:56'
+          status: late
           remarks: 'n'
     fileParameters: []
     responses: []
@@ -4317,11 +4305,8 @@ endpoints:
     fileParameters: []
     responses:
       -
-        status: 500
-        content: |-
-          {
-              "message": "Server Error"
-          }
+        status: 200
+        content: '{"success":true,"data":{"total_records":567,"present_count":409,"absent_count":77,"late_count":55,"excused_count":26,"present_percentage":72.13,"absent_percentage":13.58,"late_percentage":9.7,"excused_percentage":4.59}}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -4360,11 +4345,8 @@ endpoints:
     fileParameters: []
     responses:
       -
-        status: 500
-        content: |-
-          {
-              "message": "Server Error"
-          }
+        status: 200
+        content: '{"success":true,"data":{"total_records":567,"present_count":481,"absent_count":60,"late_count":26,"present_percentage":84.83,"absent_percentage":10.58,"late_percentage":4.59}}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -4403,11 +4385,8 @@ endpoints:
     fileParameters: []
     responses:
       -
-        status: 500
-        content: |-
-          {
-              "message": "Server Error"
-          }
+        status: 200
+        content: '{"success":true,"data":{"total_excuses":58,"pending_count":23,"approved_count":34,"rejected_count":1,"pending_percentage":39.66,"approved_percentage":58.62,"rejected_percentage":1.72}}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -4446,11 +4425,8 @@ endpoints:
     fileParameters: []
     responses:
       -
-        status: 500
-        content: |-
-          {
-              "message": "Server Error"
-          }
+        status: 200
+        content: '{"success":true,"data":{"total_excuses":29,"pending_count":12,"approved_count":15,"rejected_count":2,"pending_percentage":41.38,"approved_percentage":51.72,"rejected_percentage":6.9}}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
