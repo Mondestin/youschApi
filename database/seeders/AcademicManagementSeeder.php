@@ -26,6 +26,7 @@ use App\Models\AdminAcademics\{
     SchoolAdmin,
     SchoolCalendar
 };
+use App\Models\ExamsGradings\ExamType;
 
 class AcademicManagementSeeder extends Seeder
 {
@@ -512,22 +513,24 @@ class AcademicManagementSeeder extends Seeder
             $examTypes = ['midterm', 'final', 'quiz'];
             
             foreach ($examTypes as $type) {
+                $examType = ExamType::where('name', $type)->first();
+                if (!$examType) {
+                    $this->command->warn("Exam type '{$type}' not found, skipping...");
+                    continue;
+                }
+                
                 Exam::create([
                     'name' => ucfirst($type) . ' Exam - ' . $subject->name,
-                    'type' => $type,
                     'subject_id' => $subject->id,
                     'class_id' => $classes->where('course_id', $subject->course_id)->first()->id,
-                    'coordinator_id' => $subject->coordinator_id,
                     'exam_date' => now()->addDays(rand(30, 90)),
                     'start_time' => '09:00:00',
                     'end_time' => '11:00:00',
-                    'duration_minutes' => 120,
-                    'total_marks' => 100,
-                    'passing_marks' => 60,
-                    'description' => ucfirst($type) . ' examination for ' . $subject->name,
                     'instructions' => 'Please read all questions carefully before answering.',
-                    'is_active' => true,
-                    'school_id' => $school->id,
+                    'lab_id' => null, // No lab for general exams
+                    'exam_type_id' => $examType->id,
+                    'examiner_id' => $subject->coordinator_id,
+                    'status' => 'scheduled',
                 ]);
             }
         }

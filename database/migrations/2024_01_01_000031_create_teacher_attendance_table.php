@@ -13,11 +13,11 @@ return new class extends Migration
     {
         Schema::create('teacher_attendance', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('teacher_id')->constrained('teachers')->onDelete('cascade');
+            $table->foreignId('teacher_id')->constrained('users')->onDelete('cascade');
             $table->foreignId('class_id')->constrained('classes')->onDelete('cascade');
             $table->foreignId('subject_id')->constrained('subjects')->onDelete('cascade');
             $table->foreignId('lab_id')->nullable()->constrained('labs')->onDelete('set null');
-            $table->foreignId('timetable_id')->constrained('teacher_timetables')->onDelete('cascade');
+            $table->foreignId('timetable_id')->constrained('timetables')->onDelete('cascade');
             $table->date('date');
             $table->enum('status', ['present', 'absent', 'late'])->default('present');
             $table->text('remarks')->nullable();

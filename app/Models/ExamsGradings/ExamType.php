@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Builder;
+use App\Models\AdminAcademics\Exam;
 
 class ExamType extends Model
 {
@@ -26,7 +27,7 @@ class ExamType extends Model
      */
     public function exams(): HasMany
     {
-        return $this->hasMany(Exam::class, 'exam_type_id');
+        return $this->hasMany(Exam::class, 'type');
     }
 
     /**

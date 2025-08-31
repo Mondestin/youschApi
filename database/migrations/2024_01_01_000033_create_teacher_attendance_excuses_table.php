@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('teacher_attendance_excuses', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('teacher_id')->constrained('teachers')->onDelete('cascade');
+            $table->foreignId('teacher_id')->constrained('users')->onDelete('cascade');
             $table->foreignId('class_id')->constrained('classes')->onDelete('cascade');
             $table->foreignId('subject_id')->constrained('subjects')->onDelete('cascade');
             $table->foreignId('lab_id')->nullable()->constrained('labs')->onDelete('set null');

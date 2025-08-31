@@ -17,7 +17,7 @@ return new class extends Migration
             $table->foreignId('class_id')->constrained('classes')->onDelete('cascade');
             $table->foreignId('subject_id')->constrained('subjects')->onDelete('cascade');
             $table->foreignId('lab_id')->nullable()->constrained('labs')->onDelete('set null');
-            $table->foreignId('timetable_id')->constrained('teacher_timetables')->onDelete('cascade');
+            $table->foreignId('timetable_id')->constrained('timetables')->onDelete('cascade');
             $table->date('date');
             $table->enum('status', ['present', 'absent', 'late', 'excused'])->default('absent');
             $table->text('remarks')->nullable();

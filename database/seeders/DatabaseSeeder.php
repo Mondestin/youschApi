@@ -21,6 +21,11 @@ class DatabaseSeeder extends Seeder
             'email' => 'test@example.com',
         ]);
 
+        // Seed exam types first (needed for exams)
+        $this->call([
+            ExamTypeSeeder::class,
+        ]);
+
         // Seed academic management system
         $this->call([
             AcademicManagementSeeder::class,

@@ -8,7 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use App\Models\AdminAcademics\Subject;
 use App\Models\AdminAcademics\ClassRoom;
-use App\Models\AdminAcademics\School;
+use App\Models\AdminAcademics\Lab;
+use App\Models\ExamsGradings\ExamType;
 use App\Models\AdminAcademics\StudentGrade;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 
@@ -18,38 +19,27 @@ class Exam extends Model
 
     protected $fillable = [
         'name',
-        'type',
         'subject_id',
         'class_id',
-        'coordinator_id',
         'exam_date',
         'start_time',
         'end_time',
-        'duration_minutes',
-        'total_marks',
-        'passing_marks',
-        'description',
         'instructions',
-        'is_active',
-        'school_id',
+        'lab_id',
+        'exam_type_id',
+        'examiner_id',
+        'status',
     ];
 
     protected $casts = [
         'exam_date' => 'date',
-        'start_time' => 'datetime',
-        'end_time' => 'datetime',
-        'total_marks' => 'integer',
-        'passing_marks' => 'integer',
-        'duration_minutes' => 'integer',
-        'is_active' => 'boolean',
+        'start_time' => 'time',
+        'end_time' => 'time',
     ];
 
-    const TYPE_INTERNAL = 'internal';
-    const TYPE_MIDTERM = 'midterm';
-    const TYPE_FINAL = 'final';
-    const TYPE_QUIZ = 'quiz';
-    const TYPE_ASSIGNMENT = 'assignment';
-    const TYPE_PROJECT = 'project';
+    const STATUS_SCHEDULED = 'scheduled';
+    const STATUS_COMPLETED = 'completed';
+    const STATUS_CANCELLED = 'cancelled';
 
     /**
      * Get the subject for this exam.
@@ -68,19 +58,27 @@ class Exam extends Model
     }
 
     /**
-     * Get the coordinator for this exam.
+     * Get the lab for this exam.
      */
-    public function coordinator(): BelongsTo
+    public function lab(): BelongsTo
     {
-        return $this->belongsTo(User::class, 'coordinator_id');
+        return $this->belongsTo(Lab::class);
     }
 
     /**
-     * Get the school for this exam.
+     * Get the exam type for this exam.
      */
-    public function school(): BelongsTo
+    public function examType(): BelongsTo
     {
-        return $this->belongsTo(School::class);
+        return $this->belongsTo(ExamType::class);
+    }
+
+    /**
+     * Get the examiner for this exam.
+     */
+    public function examiner(): BelongsTo
+    {
+        return $this->belongsTo(User::class, 'examiner_id');
     }
 
     /**
@@ -92,19 +90,19 @@ class Exam extends Model
     }
 
     /**
-     * Scope to get active exams.
+     * Scope to get exams by status.
      */
-    public function scopeActive($query)
+    public function scopeByStatus($query, $status)
     {
-        return $query->where('is_active', true);
+        return $query->where('status', $status);
     }
 
     /**
-     * Scope to get exams by type.
+     * Scope to get exams by exam type.
      */
-    public function scopeByType($query, $type)
+    public function scopeByExamType($query, $examTypeId)
     {
-        return $query->where('type', $type);
+        return $query->where('exam_type_id', $examTypeId);
     }
 
     /**

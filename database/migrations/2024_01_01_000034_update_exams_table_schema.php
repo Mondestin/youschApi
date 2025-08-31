@@ -12,6 +12,10 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('exams', function (Blueprint $table) {
+            // Drop foreign key constraints first
+            $table->dropForeign(['coordinator_id']);
+            $table->dropForeign(['school_id']);
+            
             // Add new columns
             $table->foreignId('lab_id')->nullable()->constrained()->onDelete('set null')->after('subject_id');
             $table->foreignId('exam_type_id')->constrained('exam_types')->onDelete('cascade')->after('lab_id');
@@ -19,7 +23,7 @@ return new class extends Migration
             $table->enum('status', ['scheduled', 'completed', 'cancelled'])->default('scheduled')->after('examiner_id');
             
             // Drop old columns that are no longer needed
-            $table->dropColumn(['name', 'type', 'coordinator_id', 'duration_minutes', 'total_marks', 'passing_marks', 'description', 'is_active', 'school_id']);
+            $table->dropColumn(['type', 'coordinator_id', 'duration_minutes', 'total_marks', 'passing_marks', 'description', 'is_active', 'school_id']);
         });
     }
 

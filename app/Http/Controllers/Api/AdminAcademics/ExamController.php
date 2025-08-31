@@ -6,6 +6,8 @@ use App\Http\Controllers\Controller;
 use App\Models\AdminAcademics\Exam;
 use App\Models\AdminAcademics\Subject;
 use App\Models\AdminAcademics\ClassRoom;
+use App\Models\AdminAcademics\Lab;
+use App\Models\ExamsGradings\ExamType;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Http\JsonResponse;
@@ -20,7 +22,7 @@ class ExamController extends Controller
      */
     public function index(Request $request): JsonResponse
     {
-        $query = Exam::with(['subject.course.department.faculty.school', 'classRoom.campus', 'coordinator']);
+        $query = Exam::with(['subject.course.department.faculty.school', 'classRoom.campus', 'examiner', 'examType', 'lab']);
 
         // Filter by subject if provided
         if ($request->has('subject_id')) {
@@ -32,14 +34,19 @@ class ExamController extends Controller
             $query->where('class_id', $request->class_id);
         }
 
-        // Filter by coordinator if provided
-        if ($request->has('coordinator_id')) {
-            $query->where('coordinator_id', $request->coordinator_id);
+        // Filter by examiner if provided
+        if ($request->has('examiner_id')) {
+            $query->where('examiner_id', $request->examiner_id);
         }
 
-        // Filter by type if provided
-        if ($request->has('type')) {
-            $query->where('type', $request->type);
+        // Filter by exam type if provided
+        if ($request->has('exam_type_id')) {
+            $query->where('exam_type_id', $request->exam_type_id);
+        }
+
+        // Filter by status if provided
+        if ($request->has('status')) {
+            $query->where('status', $request->status);
         }
 
         // Filter by date range if provided
