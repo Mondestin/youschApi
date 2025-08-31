@@ -27,7 +27,7 @@ class AttendanceManagementSeeder extends Seeder
         $students = DB::table('students')->pluck('id')->toArray();
         $classes = DB::table('classes')->pluck('id')->toArray();
         $subjects = DB::table('subjects')->pluck('id')->toArray();
-        $timetables = DB::table('teacher_timetables')->pluck('id')->toArray();
+        $timetables = DB::table('timetables')->pluck('id')->toArray();
 
         if (empty($students) || empty($classes) || empty($subjects) || empty($timetables)) {
             $this->command->warn('Skipping student attendance seeding - required data not found');
@@ -86,7 +86,7 @@ class AttendanceManagementSeeder extends Seeder
         $teachers = DB::table('teachers')->pluck('id')->toArray();
         $classes = DB::table('classes')->pluck('id')->toArray();
         $subjects = DB::table('subjects')->pluck('id')->toArray();
-        $timetables = DB::table('teacher_timetables')->pluck('id')->toArray();
+        $timetables = DB::table('timetables')->pluck('id')->toArray();
 
         if (empty($teachers) || empty($classes) || empty($subjects) || empty($timetables)) {
             $this->command->warn('Skipping teacher attendance seeding - required data not found');

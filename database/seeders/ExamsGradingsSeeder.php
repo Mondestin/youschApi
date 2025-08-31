@@ -4,12 +4,13 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 use App\Models\ExamsGradings\ExamType;
-use App\Models\ExamsGradings\Exam;
+use App\Models\AdminAcademics\Exam;
 use App\Models\ExamsGradings\ExamMark;
 use App\Models\ExamsGradings\StudentGPA;
 use App\Models\ExamsGradings\ReportCard;
 use App\Models\AdminAcademics\{ClassRoom, Subject, Lab, Term, AcademicYear};
-use App\Models\User;
+use App\Models\Teachers\Teacher;
+use App\Models\Students\Student;
 
 class ExamsGradingsSeeder extends Seeder
 {
@@ -54,7 +55,7 @@ class ExamsGradingsSeeder extends Seeder
 
         $classes = ClassRoom::with(['subjects'])->get();
         $examTypes = ExamType::all();
-        $teachers = User::where('role', 'teacher')->get();
+        $teachers = Teacher::all();
 
         if ($classes->isEmpty() || $examTypes->isEmpty() || $teachers->isEmpty()) {
             $this->command->warn('⚠️ Skipping exam creation - missing required data');
@@ -97,7 +98,7 @@ class ExamsGradingsSeeder extends Seeder
         $this->command->info('📊 Creating exam marks...');
 
         $exams = Exam::where('status', 'completed')->get();
-        $students = User::where('role', 'student')->get();
+        $students = Student::all();
 
         if ($exams->isEmpty() || $students->isEmpty()) {
             $this->command->warn('⚠️ Skipping exam marks creation - missing required data');
@@ -133,7 +134,7 @@ class ExamsGradingsSeeder extends Seeder
     {
         $this->command->info('🎓 Creating student GPAs...');
 
-        $students = User::where('role', 'student')->get();
+        $students = Student::all();
         $terms = Term::all();
         $academicYears = AcademicYear::all();
 
@@ -166,7 +167,7 @@ class ExamsGradingsSeeder extends Seeder
     {
         $this->command->info('📋 Creating report cards...');
 
-        $students = User::where('role', 'student')->get();
+        $students = Student::all();
         $classes = ClassRoom::all();
         $terms = Term::all();
         $academicYears = AcademicYear::all();
