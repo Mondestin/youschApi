@@ -12,32 +12,32 @@ class ExamTypeSeeder extends Seeder
      */
     public function run(): void
     {
-        $this->command->info('📝 Creating exam types...');
+        $this->command->info('📝 Création des types d\'examen...');
 
         $examTypes = [
             [
-                'name' => 'midterm',
-                'description' => 'Midterm examination covering first half of the course',
+                'name' => 'mi-parcours',
+                'description' => 'Examen de mi-parcours couvrant la première moitié du cours',
                 'weight' => 30.00,
             ],
             [
                 'name' => 'final',
-                'description' => 'Final examination covering the entire course',
+                'description' => 'Examen final couvrant l\'ensemble du cours',
                 'weight' => 50.00,
             ],
             [
                 'name' => 'quiz',
-                'description' => 'Short quiz covering specific topics',
+                'description' => 'Quiz court couvrant des sujets spécifiques',
                 'weight' => 10.00,
             ],
             [
-                'name' => 'assignment',
-                'description' => 'Take-home assignment or project',
+                'name' => 'devoir',
+                'description' => 'Devoir à la maison ou projet',
                 'weight' => 15.00,
             ],
             [
-                'name' => 'practical',
-                'description' => 'Practical or laboratory examination',
+                'name' => 'pratique',
+                'description' => 'Examen pratique ou de laboratoire',
                 'weight' => 25.00,
             ],
         ];
@@ -46,6 +46,6 @@ class ExamTypeSeeder extends Seeder
             ExamType::create($examTypeData);
         }
 
-        $this->command->info('✅ Exam types created successfully');
+        $this->command->info('✅ Types d\'examen créés avec succès');
     }
 } 

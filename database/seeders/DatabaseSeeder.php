@@ -2,10 +2,9 @@
 
 namespace Database\Seeders;
 
-use App\Models\User;
-// use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-
+use Illuminate\Support\Facades\DB;
+use App\Models\User;
 
 class DatabaseSeeder extends Seeder
 {
@@ -14,25 +13,90 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // User::factory(10)->create();
+        $this->command->info('🌱 Démarrage du Seeder Principal de la Base de Données...');
 
-        User::factory()->create([
-            'name' => 'Test User',
-            'email' => 'test@example.com',
-        ]);
+        // Clear existing data (optional - uncomment if needed)
+        // $this->clearExistingData();
+         
+        User::factory(10)->create();
+        // Seed exam types first
+        $this->call(ExamTypeSeeder::class);
+        
+        // Seed academic management data
+        $this->call(AcademicManagementSeeder::class);
+        
+        // Seed teachers management data
+        $this->call(TeachersManagementSeeder::class);
+        
+        // Seed attendance management data
+        $this->call(AttendanceManagementSeeder::class);
+        
+        // Seed exams and gradings data
+        $this->call(ExamsGradingsSeeder::class);
 
-        // Seed exam types first (needed for exams)
-        $this->call([
-            ExamTypeSeeder::class,
-        ]);
+        $this->command->info('✅ Seeder Principal de la Base de Données terminé avec succès !');
+        $this->command->info('🎉 Toutes les données de test ont été créées avec succès !');
+    }
 
-        // Seed academic management system
-        $this->call([
-            AcademicManagementSeeder::class,
-            StudentsManagementSeeder::class,
-            TeachersManagementSeeder::class,
-            AttendanceManagementSeeder::class,
-            ExamsGradingsSeeder::class,
-        ]);
+    /**
+     * Clear existing data from the database
+     */
+    private function clearExistingData(): void
+    {
+        $this->command->info('🧹 Nettoyage des données existantes...');
+
+        // Disable foreign key checks
+        DB::statement('SET FOREIGN_KEY_CHECKS=0;');
+
+        // Clear all tables (adjust as needed)
+        $tables = [
+            'exam_types',
+            'exams',
+            'exam_marks',
+            'student_gpas',
+            'report_cards',
+            'grading_schemes',
+            'grade_scales',
+            'student_enrollments',
+            'student_grades',
+            'teacher_assignments',
+            'announcements',
+            'labs',
+            'school_admins',
+            'school_calendars',
+            'timetables',
+            'student_attendance',
+            'teacher_attendance',
+            'student_attendance_excuses',
+            'teacher_attendance_excuses',
+            'teacher_leaves',
+            'teacher_documents',
+            'teacher_performance',
+            'teacher_timetables',
+            'classes',
+            'subjects',
+            'courses',
+            'departments',
+            'faculties',
+            'terms',
+            'academic_years',
+            'campuses',
+            'schools',
+            'teachers',
+            'students',
+            'users',
+        ];
+
+        foreach ($tables as $table) {
+            if (DB::getSchemaBuilder()->hasTable($table)) {
+                DB::table($table)->truncate();
+                $this->command->info("✅ Table '{$table}' vidée");
+            }
+        }
+
+        // Re-enable foreign key checks
+        DB::statement('SET FOREIGN_KEY_CHECKS=1;');
+
+        $this->command->info('✅ Nettoyage des données terminé');
     }
 }
