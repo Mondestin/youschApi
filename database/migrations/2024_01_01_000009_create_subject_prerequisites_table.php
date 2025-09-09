@@ -15,6 +15,7 @@ return new class extends Migration
             $table->foreignId('subject_id')->constrained()->onDelete('cascade');
             $table->foreignId('prerequisite_id')->constrained('subjects')->onDelete('cascade');
             $table->primary(['subject_id', 'prerequisite_id']);
+            $table->timestamps();
         });
     }
 

@@ -280,6 +280,7 @@ class AcademicManagementSeeder extends Seeder
 
         // Create subjects
         $subjects = [
+            // Computer Science Subjects
             [
                 'course_id' => Course::where('code', 'BCS')->first()->id,
                 'name' => 'Introduction à la Programmation',
@@ -295,12 +296,58 @@ class AcademicManagementSeeder extends Seeder
                 'coordinator_id' => User::where('email', 'sarah.johnson@yousch.edu')->first()->id,
             ],
             [
+                'course_id' => Course::where('code', 'BCS')->first()->id,
+                'name' => 'Bases de Données',
+                'code' => 'CS301',
+                'description' => 'Conception et gestion de bases de données',
+                'coordinator_id' => User::where('email', 'sarah.johnson@yousch.edu')->first()->id,
+            ],
+            [
+                'course_id' => Course::where('code', 'BCS')->first()->id,
+                'name' => 'Développement Web',
+                'code' => 'CS401',
+                'description' => 'Développement d\'applications web modernes',
+                'coordinator_id' => User::where('email', 'sarah.johnson@yousch.edu')->first()->id,
+            ],
+            [
+                'course_id' => Course::where('code', 'BCS')->first()->id,
+                'name' => 'Projet de Fin d\'Études',
+                'code' => 'CS501',
+                'description' => 'Projet intégrateur en informatique',
+                'coordinator_id' => User::where('email', 'sarah.johnson@yousch.edu')->first()->id,
+            ],
+            
+            // Mathematics Subjects
+            [
                 'course_id' => Course::where('code', 'BMATH')->first()->id,
                 'name' => 'Calcul I',
                 'code' => 'MATH101',
                 'description' => 'Concepts fondamentaux du calcul',
                 'coordinator_id' => User::where('email', 'michael.chen@yousch.edu')->first()->id,
             ],
+            [
+                'course_id' => Course::where('code', 'BMATH')->first()->id,
+                'name' => 'Algèbre Linéaire',
+                'code' => 'MATH201',
+                'description' => 'Algèbre linéaire et géométrie analytique',
+                'coordinator_id' => User::where('email', 'michael.chen@yousch.edu')->first()->id,
+            ],
+            [
+                'course_id' => Course::where('code', 'BMATH')->first()->id,
+                'name' => 'Statistiques et Probabilités',
+                'code' => 'MATH301',
+                'description' => 'Statistiques descriptives et inférentielles',
+                'coordinator_id' => User::where('email', 'michael.chen@yousch.edu')->first()->id,
+            ],
+            [
+                'course_id' => Course::where('code', 'BMATH')->first()->id,
+                'name' => 'Analyse Mathématique',
+                'code' => 'MATH401',
+                'description' => 'Analyse mathématique avancée',
+                'coordinator_id' => User::where('email', 'michael.chen@yousch.edu')->first()->id,
+            ],
+            
+            // Business Subjects
             [
                 'course_id' => Course::where('code', 'BBA')->first()->id,
                 'name' => 'Principes de Gestion',
@@ -309,10 +356,54 @@ class AcademicManagementSeeder extends Seeder
                 'coordinator_id' => User::where('email', 'emily.rodriguez@yousch.edu')->first()->id,
             ],
             [
+                'course_id' => Course::where('code', 'BBA')->first()->id,
+                'name' => 'Marketing Fondamental',
+                'code' => 'BUS201',
+                'description' => 'Concepts et stratégies de marketing',
+                'coordinator_id' => User::where('email', 'emily.rodriguez@yousch.edu')->first()->id,
+            ],
+            [
+                'course_id' => Course::where('code', 'BBA')->first()->id,
+                'name' => 'Gestion Financière',
+                'code' => 'BUS301',
+                'description' => 'Gestion financière et comptabilité',
+                'coordinator_id' => User::where('email', 'emily.rodriguez@yousch.edu')->first()->id,
+            ],
+            [
+                'course_id' => Course::where('code', 'BBA')->first()->id,
+                'name' => 'Stratégie d\'Entreprise',
+                'code' => 'BUS401',
+                'description' => 'Stratégie et planification d\'entreprise',
+                'coordinator_id' => User::where('email', 'emily.rodriguez@yousch.edu')->first()->id,
+            ],
+            
+            // English Subjects
+            [
                 'course_id' => Course::where('code', 'BAENG')->first()->id,
                 'name' => 'Introduction à la Littérature',
                 'code' => 'ENG101',
                 'description' => 'Analyse et appréciation littéraire',
+                'coordinator_id' => User::where('email', 'david.thompson@yousch.edu')->first()->id,
+            ],
+            [
+                'course_id' => Course::where('code', 'BAENG')->first()->id,
+                'name' => 'Écriture Avancée',
+                'code' => 'ENG201',
+                'description' => 'Techniques d\'écriture avancées',
+                'coordinator_id' => User::where('email', 'david.thompson@yousch.edu')->first()->id,
+            ],
+            [
+                'course_id' => Course::where('code', 'BAENG')->first()->id,
+                'name' => 'Littérature Moderne',
+                'code' => 'ENG301',
+                'description' => 'Étude de la littérature moderne',
+                'coordinator_id' => User::where('email', 'david.thompson@yousch.edu')->first()->id,
+            ],
+            [
+                'course_id' => Course::where('code', 'BAENG')->first()->id,
+                'name' => 'Critique Littéraire',
+                'code' => 'ENG401',
+                'description' => 'Méthodes de critique littéraire',
                 'coordinator_id' => User::where('email', 'david.thompson@yousch.edu')->first()->id,
             ],
         ];
@@ -321,14 +412,11 @@ class AcademicManagementSeeder extends Seeder
             Subject::create($subjectData);
         }
 
-        // Create labs for computer science subjects
-        $csSubject = Subject::where('code', 'CS101')->first();
-        Lab::create([
-            'subject_id' => $csSubject->id,
-            'name' => 'Laboratoire de Programmation 1',
-            'description' => 'Laboratoire informatique pour exercices de programmation',
-            'schedule' => 'Lundi 14h00 - 16h00',
-        ]);
+        // Create labs for various subjects
+        $this->createLabsForSubjects();
+        
+        // Create prerequisite relationships
+        $this->createPrerequisiteRelationships();
 
         $this->command->info('✅ Structure académique créée avec succès');
     }
@@ -781,5 +869,145 @@ class AcademicManagementSeeder extends Seeder
         if ($score >= 70) return 'C';
         if ($score >= 60) return 'D';
         return 'F';
+    }
+
+    /**
+     * Create labs for various subjects
+     */
+    private function createLabsForSubjects(): void
+    {
+        $this->command->info('🔬 Création des laboratoires...');
+
+        $labs = [
+            // Computer Science Labs
+            [
+                'subject_code' => 'CS101',
+                'name' => 'Laboratoire de Programmation 1',
+                'description' => 'Laboratoire informatique pour exercices de programmation de base',
+                'schedule' => 'Lundi 14h00 - 16h00',
+            ],
+            [
+                'subject_code' => 'CS101',
+                'name' => 'Laboratoire de Programmation 2',
+                'description' => 'Laboratoire avancé pour projets de programmation',
+                'schedule' => 'Mercredi 10h00 - 12h00',
+            ],
+            [
+                'subject_code' => 'CS201',
+                'name' => 'Laboratoire de Structures de Données',
+                'description' => 'Laboratoire pour l\'implémentation de structures de données',
+                'schedule' => 'Mardi 14h00 - 16h00',
+            ],
+            [
+                'subject_code' => 'CS301',
+                'name' => 'Laboratoire de Base de Données',
+                'description' => 'Laboratoire pour la conception et manipulation de bases de données',
+                'schedule' => 'Jeudi 10h00 - 12h00',
+            ],
+            [
+                'subject_code' => 'CS301',
+                'name' => 'Laboratoire de Base de Données Avancé',
+                'description' => 'Laboratoire pour requêtes complexes et optimisation',
+                'schedule' => 'Vendredi 14h00 - 16h00',
+            ],
+            // Mathematics Labs
+            [
+                'subject_code' => 'MATH101',
+                'name' => 'Laboratoire de Calcul',
+                'description' => 'Laboratoire pour exercices pratiques de calcul',
+                'schedule' => 'Lundi 16h00 - 18h00',
+            ],
+            [
+                'subject_code' => 'MATH201',
+                'name' => 'Laboratoire d\'Algèbre Linéaire',
+                'description' => 'Laboratoire pour exercices d\'algèbre linéaire',
+                'schedule' => 'Mercredi 14h00 - 16h00',
+            ],
+            // Business Labs
+            [
+                'subject_code' => 'BUS101',
+                'name' => 'Laboratoire de Gestion',
+                'description' => 'Laboratoire pour simulations de gestion d\'entreprise',
+                'schedule' => 'Mardi 10h00 - 12h00',
+            ],
+            [
+                'subject_code' => 'BUS201',
+                'name' => 'Laboratoire de Marketing',
+                'description' => 'Laboratoire pour études de cas marketing',
+                'schedule' => 'Jeudi 14h00 - 16h00',
+            ],
+            // English Labs
+            [
+                'subject_code' => 'ENG101',
+                'name' => 'Laboratoire de Communication',
+                'description' => 'Laboratoire pour exercices de communication orale et écrite',
+                'schedule' => 'Vendredi 10h00 - 12h00',
+            ],
+        ];
+
+        foreach ($labs as $labData) {
+            $subject = Subject::where('code', $labData['subject_code'])->first();
+            if ($subject) {
+                Lab::create([
+                    'subject_id' => $subject->id,
+                    'name' => $labData['name'],
+                    'description' => $labData['description'],
+                    'schedule' => $labData['schedule'],
+                ]);
+            }
+        }
+
+        $this->command->info('✅ Laboratoires créés avec succès');
+    }
+
+    /**
+     * Create prerequisite relationships between subjects
+     */
+    private function createPrerequisiteRelationships(): void
+    {
+        $this->command->info('🔗 Création des prérequis...');
+
+        $prerequisites = [
+            // Computer Science Prerequisites
+            ['subject' => 'CS201', 'prerequisite' => 'CS101'],
+            ['subject' => 'CS301', 'prerequisite' => 'CS201'],
+            ['subject' => 'CS301', 'prerequisite' => 'MATH101'],
+            ['subject' => 'CS401', 'prerequisite' => 'CS301'],
+            ['subject' => 'CS401', 'prerequisite' => 'MATH201'],
+            
+            // Mathematics Prerequisites
+            ['subject' => 'MATH201', 'prerequisite' => 'MATH101'],
+            ['subject' => 'MATH301', 'prerequisite' => 'MATH201'],
+            
+            // Business Prerequisites
+            ['subject' => 'BUS201', 'prerequisite' => 'BUS101'],
+            ['subject' => 'BUS301', 'prerequisite' => 'BUS201'],
+            ['subject' => 'BUS301', 'prerequisite' => 'MATH101'],
+            
+            // English Prerequisites
+            ['subject' => 'ENG201', 'prerequisite' => 'ENG101'],
+            ['subject' => 'ENG301', 'prerequisite' => 'ENG201'],
+        ];
+
+        foreach ($prerequisites as $prereq) {
+            $subject = Subject::where('code', $prereq['subject'])->first();
+            $prerequisite = Subject::where('code', $prereq['prerequisite'])->first();
+            
+            if ($subject && $prerequisite) {
+                // Check if prerequisite relationship already exists
+                $existing = \App\Models\AdminAcademics\SubjectPrerequisite::where('subject_id', $subject->id)
+                    ->where('prerequisite_id', $prerequisite->id)
+                    ->first();
+                
+                if (!$existing) {
+                    \App\Models\AdminAcademics\SubjectPrerequisite::create([
+                        'subject_id' => $subject->id,
+                        'prerequisite_id' => $prerequisite->id,
+                    ]);
+                }
+            }
+        }
+
+        $this->command->info('✅ Prérequis créés avec succès');
     }
 } 

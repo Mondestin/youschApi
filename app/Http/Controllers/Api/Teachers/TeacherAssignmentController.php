@@ -115,7 +115,7 @@ class TeacherAssignmentController extends Controller
 
         return response()->json([
             'success' => true,
-            'message' => 'Enseignement créé avec succès',
+            'message' => 'Enseignant assigné avec succès',
             'data' => $assignment
         ], 201);
     }

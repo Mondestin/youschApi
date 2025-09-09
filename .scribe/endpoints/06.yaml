@@ -1,0 +1,4429 @@
+name: Attendance
+description: ''
+endpoints:
+  -
+    httpMethods:
+      - GET
+    uri: api/attendance/student-attendance
+    metadata:
+      groupName: Attendance
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Display a listing of student attendance records.'
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 500
+        content: |-
+          {
+              "message": "Server Error"
+          }
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/attendance/student-attendance
+    metadata:
+      groupName: Attendance
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Store a newly created student attendance record.'
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      student_id:
+        name: student_id
+        description: 'The <code>id</code> of an existing record in the students table.'
+        required: true
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      class_id:
+        name: class_id
+        description: 'The <code>id</code> of an existing record in the classes table.'
+        required: true
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      subject_id:
+        name: subject_id
+        description: 'The <code>id</code> of an existing record in the subjects table.'
+        required: true
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      lab_id:
+        name: lab_id
+        description: 'The <code>id</code> of an existing record in the labs table.'
+        required: false
+        example: null
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        custom: []
+      timetable_id:
+        name: timetable_id
+        description: 'The <code>id</code> of an existing record in the teacher_timetables table.'
+        required: true
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      date:
+        name: date
+        description: 'Must be a valid date.'
+        required: true
+        example: '2025-09-09T02:07:54'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      status:
+        name: status
+        description: ''
+        required: true
+        example: absent
+        type: string
+        enumValues:
+          - present
+          - absent
+          - late
+          - excused
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      remarks:
+        name: remarks
+        description: 'Must not be greater than 500 characters.'
+        required: false
+        example: 'n'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        custom: []
+    cleanBodyParameters:
+      student_id: architecto
+      class_id: architecto
+      subject_id: architecto
+      timetable_id: architecto
+      date: '2025-09-09T02:07:54'
+      status: absent
+      remarks: 'n'
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/attendance/student-attendance/{attendance_id}'
+    metadata:
+      groupName: Attendance
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Display the specified student attendance record.'
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      attendance_id:
+        name: attendance_id
+        description: 'The ID of the attendance.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      attendance_id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 500
+        content: |-
+          {
+              "message": "Server Error"
+          }
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - PUT
+    uri: 'api/attendance/student-attendance/{attendance_id}'
+    metadata:
+      groupName: Attendance
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Update the specified student attendance record.'
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      attendance_id:
+        name: attendance_id
+        description: 'The ID of the attendance.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      attendance_id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      status:
+        name: status
+        description: ''
+        required: false
+        example: excused
+        type: string
+        enumValues:
+          - present
+          - absent
+          - late
+          - excused
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      remarks:
+        name: remarks
+        description: 'Must not be greater than 500 characters.'
+        required: false
+        example: b
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        custom: []
+    cleanBodyParameters:
+      status: excused
+      remarks: b
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - DELETE
+    uri: 'api/attendance/student-attendance/{attendance_id}'
+    metadata:
+      groupName: Attendance
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Remove the specified student attendance record.'
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      attendance_id:
+        name: attendance_id
+        description: 'The ID of the attendance.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      attendance_id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/attendance/student-attendance/student/{studentId}'
+    metadata:
+      groupName: Attendance
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Get attendance by student.'
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      studentId:
+        name: studentId
+        description: ''
+        required: true
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      studentId: architecto
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 500
+        content: |-
+          {
+              "message": "Server Error"
+          }
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/attendance/student-attendance/class/{classId}'
+    metadata:
+      groupName: Attendance
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Get attendance by class.'
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      classId:
+        name: classId
+        description: ''
+        required: true
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      classId: architecto
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 500
+        content: |-
+          {
+              "message": "Server Error"
+          }
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/attendance/student-attendance/subject/{subjectId}'
+    metadata:
+      groupName: Attendance
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Get attendance by subject.'
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      subjectId:
+        name: subjectId
+        description: ''
+        required: true
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      subjectId: architecto
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 500
+        content: |-
+          {
+              "message": "Server Error"
+          }
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/attendance/student-attendance/date/{date}'
+    metadata:
+      groupName: Attendance
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Get attendance by date.'
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      date:
+        name: date
+        description: 'The date.'
+        required: true
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      date: architecto
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"success":true,"data":[]}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/attendance/student-attendance/date-range
+    metadata:
+      groupName: Attendance
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Get attendance by date range.'
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      start_date:
+        name: start_date
+        description: 'Must be a valid date.'
+        required: true
+        example: '2025-09-09T02:07:54'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      end_date:
+        name: end_date
+        description: 'Must be a valid date. Must be a date after or equal to <code>start_date</code>.'
+        required: true
+        example: '2051-10-03'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanBodyParameters:
+      start_date: '2025-09-09T02:07:54'
+      end_date: '2051-10-03'
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/attendance/student-attendance/class/{classId}/summary'
+    metadata:
+      groupName: Attendance
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Get class attendance summary for a specific date.'
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      classId:
+        name: classId
+        description: ''
+        required: true
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      classId: architecto
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      date:
+        name: date
+        description: 'Must be a valid date.'
+        required: true
+        example: '2025-09-09T02:07:54'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanBodyParameters:
+      date: '2025-09-09T02:07:54'
+    fileParameters: []
+    responses:
+      -
+        status: 500
+        content: |-
+          {
+              "message": "Server Error"
+          }
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/attendance/student-attendance/student/{studentId}/summary'
+    metadata:
+      groupName: Attendance
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Get student attendance summary for a date range.'
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      studentId:
+        name: studentId
+        description: ''
+        required: true
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      studentId: architecto
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      start_date:
+        name: start_date
+        description: 'Must be a valid date.'
+        required: true
+        example: '2025-09-09T02:07:54'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      end_date:
+        name: end_date
+        description: 'Must be a valid date. Must be a date after or equal to <code>start_date</code>.'
+        required: true
+        example: '2051-10-03'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanBodyParameters:
+      start_date: '2025-09-09T02:07:54'
+      end_date: '2051-10-03'
+    fileParameters: []
+    responses:
+      -
+        status: 500
+        content: |-
+          {
+              "message": "Server Error"
+          }
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/attendance/student-attendance/student/{studentId}/trends'
+    metadata:
+      groupName: Attendance
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Get attendance trends for a student.'
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      studentId:
+        name: studentId
+        description: ''
+        required: true
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      studentId: architecto
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      start_date:
+        name: start_date
+        description: 'Must be a valid date.'
+        required: true
+        example: '2025-09-09T02:07:54'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      end_date:
+        name: end_date
+        description: 'Must be a valid date. Must be a date after or equal to <code>start_date</code>.'
+        required: true
+        example: '2051-10-03'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanBodyParameters:
+      start_date: '2025-09-09T02:07:54'
+      end_date: '2051-10-03'
+    fileParameters: []
+    responses:
+      -
+        status: 500
+        content: |-
+          {
+              "message": "Server Error"
+          }
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/attendance/student-attendance/statistics
+    metadata:
+      groupName: Attendance
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Get attendance statistics.'
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 404
+        content: |-
+          {
+              "message": "No query results for model [App\\Models\\Attendance\\StudentAttendance] statistics"
+          }
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/attendance/student-attendance/report
+    metadata:
+      groupName: Attendance
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Generate attendance report.'
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 404
+        content: |-
+          {
+              "message": "No query results for model [App\\Models\\Attendance\\StudentAttendance] report"
+          }
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/attendance/teacher-attendance
+    metadata:
+      groupName: Attendance
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Display a listing of teacher attendance records.'
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 500
+        content: |-
+          {
+              "message": "Server Error"
+          }
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/attendance/teacher-attendance
+    metadata:
+      groupName: Attendance
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Store a newly created teacher attendance record.'
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      teacher_id:
+        name: teacher_id
+        description: 'The <code>id</code> of an existing record in the teachers table.'
+        required: true
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      class_id:
+        name: class_id
+        description: 'The <code>id</code> of an existing record in the classes table.'
+        required: true
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      subject_id:
+        name: subject_id
+        description: 'The <code>id</code> of an existing record in the subjects table.'
+        required: true
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      lab_id:
+        name: lab_id
+        description: 'The <code>id</code> of an existing record in the labs table.'
+        required: false
+        example: null
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        custom: []
+      timetable_id:
+        name: timetable_id
+        description: 'The <code>id</code> of an existing record in the teacher_timetables table.'
+        required: true
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      date:
+        name: date
+        description: 'Must be a valid date.'
+        required: true
+        example: '2025-09-09T02:07:54'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      status:
+        name: status
+        description: ''
+        required: true
+        example: present
+        type: string
+        enumValues:
+          - present
+          - absent
+          - late
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      remarks:
+        name: remarks
+        description: 'Must not be greater than 500 characters.'
+        required: false
+        example: 'n'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        custom: []
+    cleanBodyParameters:
+      teacher_id: architecto
+      class_id: architecto
+      subject_id: architecto
+      timetable_id: architecto
+      date: '2025-09-09T02:07:54'
+      status: present
+      remarks: 'n'
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/attendance/teacher-attendance/{attendance_id}'
+    metadata:
+      groupName: Attendance
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Display the specified teacher attendance record.'
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      attendance_id:
+        name: attendance_id
+        description: 'The ID of the attendance.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      attendance_id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 500
+        content: |-
+          {
+              "message": "Server Error"
+          }
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - PUT
+    uri: 'api/attendance/teacher-attendance/{attendance_id}'
+    metadata:
+      groupName: Attendance
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Update the specified teacher attendance record.'
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      attendance_id:
+        name: attendance_id
+        description: 'The ID of the attendance.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      attendance_id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      status:
+        name: status
+        description: ''
+        required: false
+        example: absent
+        type: string
+        enumValues:
+          - present
+          - absent
+          - late
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      remarks:
+        name: remarks
+        description: 'Must not be greater than 500 characters.'
+        required: false
+        example: b
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        custom: []
+    cleanBodyParameters:
+      status: absent
+      remarks: b
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - DELETE
+    uri: 'api/attendance/teacher-attendance/{attendance_id}'
+    metadata:
+      groupName: Attendance
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Remove the specified teacher attendance record.'
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      attendance_id:
+        name: attendance_id
+        description: 'The ID of the attendance.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      attendance_id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/attendance/teacher-attendance/teacher/{teacherId}'
+    metadata:
+      groupName: Attendance
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Get attendance by teacher.'
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      teacherId:
+        name: teacherId
+        description: ''
+        required: true
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      teacherId: architecto
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 500
+        content: |-
+          {
+              "message": "Server Error"
+          }
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/attendance/teacher-attendance/class/{classId}'
+    metadata:
+      groupName: Attendance
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Get attendance by class.'
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      classId:
+        name: classId
+        description: ''
+        required: true
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      classId: architecto
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 500
+        content: |-
+          {
+              "message": "Server Error"
+          }
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/attendance/teacher-attendance/subject/{subjectId}'
+    metadata:
+      groupName: Attendance
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Get attendance by subject.'
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      subjectId:
+        name: subjectId
+        description: ''
+        required: true
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      subjectId: architecto
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 500
+        content: |-
+          {
+              "message": "Server Error"
+          }
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/attendance/teacher-attendance/date/{date}'
+    metadata:
+      groupName: Attendance
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Get attendance by date.'
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      date:
+        name: date
+        description: 'The date.'
+        required: true
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      date: architecto
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"success":true,"data":[]}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/attendance/teacher-attendance/date-range
+    metadata:
+      groupName: Attendance
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Get attendance by date range.'
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      start_date:
+        name: start_date
+        description: 'Must be a valid date.'
+        required: true
+        example: '2025-09-09T02:07:54'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      end_date:
+        name: end_date
+        description: 'Must be a valid date. Must be a date after or equal to <code>start_date</code>.'
+        required: true
+        example: '2051-10-03'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanBodyParameters:
+      start_date: '2025-09-09T02:07:54'
+      end_date: '2051-10-03'
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/attendance/teacher-attendance/class/{classId}/summary'
+    metadata:
+      groupName: Attendance
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Get class attendance summary for a specific date.'
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      classId:
+        name: classId
+        description: ''
+        required: true
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      classId: architecto
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      date:
+        name: date
+        description: 'Must be a valid date.'
+        required: true
+        example: '2025-09-09T02:07:54'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanBodyParameters:
+      date: '2025-09-09T02:07:54'
+    fileParameters: []
+    responses:
+      -
+        status: 500
+        content: |-
+          {
+              "message": "Server Error"
+          }
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/attendance/teacher-attendance/teacher/{teacherId}/summary'
+    metadata:
+      groupName: Attendance
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Get teacher attendance summary for a date range.'
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      teacherId:
+        name: teacherId
+        description: ''
+        required: true
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      teacherId: architecto
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      start_date:
+        name: start_date
+        description: 'Must be a valid date.'
+        required: true
+        example: '2025-09-09T02:07:54'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      end_date:
+        name: end_date
+        description: 'Must be a valid date. Must be a date after or equal to <code>start_date</code>.'
+        required: true
+        example: '2051-10-03'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanBodyParameters:
+      start_date: '2025-09-09T02:07:54'
+      end_date: '2051-10-03'
+    fileParameters: []
+    responses:
+      -
+        status: 500
+        content: |-
+          {
+              "message": "Server Error"
+          }
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/attendance/teacher-attendance/teacher/{teacherId}/trends'
+    metadata:
+      groupName: Attendance
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Get attendance trends for a teacher.'
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      teacherId:
+        name: teacherId
+        description: ''
+        required: true
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      teacherId: architecto
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      start_date:
+        name: start_date
+        description: 'Must be a valid date.'
+        required: true
+        example: '2025-09-09T02:07:54'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      end_date:
+        name: end_date
+        description: 'Must be a valid date. Must be a date after or equal to <code>start_date</code>.'
+        required: true
+        example: '2051-10-03'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanBodyParameters:
+      start_date: '2025-09-09T02:07:54'
+      end_date: '2051-10-03'
+    fileParameters: []
+    responses:
+      -
+        status: 500
+        content: |-
+          {
+              "message": "Server Error"
+          }
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/attendance/teacher-attendance/statistics
+    metadata:
+      groupName: Attendance
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Get attendance statistics.'
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 404
+        content: |-
+          {
+              "message": "No query results for model [App\\Models\\Attendance\\TeacherAttendance] statistics"
+          }
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/attendance/teacher-attendance/report
+    metadata:
+      groupName: Attendance
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Generate attendance report.'
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 404
+        content: |-
+          {
+              "message": "No query results for model [App\\Models\\Attendance\\TeacherAttendance] report"
+          }
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/attendance/student-excuses
+    metadata:
+      groupName: Attendance
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Display a listing of student attendance excuses.'
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"success":true,"data":{"current_page":1,"data":[],"first_page_url":"http:\/\/localhost:8000\/api\/attendance\/student-excuses?page=1","from":null,"last_page":1,"last_page_url":"http:\/\/localhost:8000\/api\/attendance\/student-excuses?page=1","links":[{"url":null,"label":"&laquo; Previous","page":null,"active":false},{"url":"http:\/\/localhost:8000\/api\/attendance\/student-excuses?page=1","label":"1","page":1,"active":true},{"url":null,"label":"Next &raquo;","page":null,"active":false}],"next_page_url":null,"path":"http:\/\/localhost:8000\/api\/attendance\/student-excuses","per_page":15,"prev_page_url":null,"to":null,"total":0}}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/attendance/student-excuses
+    metadata:
+      groupName: Attendance
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Store a newly created student attendance excuse.'
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: multipart/form-data
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      student_id:
+        name: student_id
+        description: 'The <code>id</code> of an existing record in the students table.'
+        required: true
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      class_id:
+        name: class_id
+        description: 'The <code>id</code> of an existing record in the classes table.'
+        required: true
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      subject_id:
+        name: subject_id
+        description: 'The <code>id</code> of an existing record in the subjects table.'
+        required: true
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      lab_id:
+        name: lab_id
+        description: 'The <code>id</code> of an existing record in the labs table.'
+        required: false
+        example: null
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        custom: []
+      date:
+        name: date
+        description: 'Must be a valid date.'
+        required: true
+        example: '2025-09-09T02:07:54'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      reason:
+        name: reason
+        description: 'Must not be greater than 255 characters.'
+        required: true
+        example: 'n'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      document:
+        name: document
+        description: 'Must be a file. Must not be greater than 2048 kilobytes.'
+        required: false
+        example: null
+        type: file
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        custom: []
+    cleanBodyParameters:
+      student_id: architecto
+      class_id: architecto
+      subject_id: architecto
+      date: '2025-09-09T02:07:54'
+      reason: 'n'
+    fileParameters:
+      document: null
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/attendance/student-excuses/{excuse_id}'
+    metadata:
+      groupName: Attendance
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Display the specified student attendance excuse.'
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      excuse_id:
+        name: excuse_id
+        description: 'The ID of the excuse.'
+        required: true
+        example: 16
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      excuse_id: 16
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 404
+        content: |-
+          {
+              "message": "No query results for model [App\\Models\\Attendance\\StudentAttendanceExcuse] 16"
+          }
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - PUT
+    uri: 'api/attendance/student-excuses/{excuse_id}'
+    metadata:
+      groupName: Attendance
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Update the specified student attendance excuse.'
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: multipart/form-data
+      Accept: application/json
+    urlParameters:
+      excuse_id:
+        name: excuse_id
+        description: 'The ID of the excuse.'
+        required: true
+        example: 16
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      excuse_id: 16
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      reason:
+        name: reason
+        description: 'Must not be greater than 255 characters.'
+        required: false
+        example: b
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      document:
+        name: document
+        description: 'Must be a file. Must not be greater than 2048 kilobytes.'
+        required: false
+        example: null
+        type: file
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        custom: []
+    cleanBodyParameters:
+      reason: b
+    fileParameters:
+      document: null
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - DELETE
+    uri: 'api/attendance/student-excuses/{excuse_id}'
+    metadata:
+      groupName: Attendance
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Remove the specified student attendance excuse.'
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      excuse_id:
+        name: excuse_id
+        description: 'The ID of the excuse.'
+        required: true
+        example: 16
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      excuse_id: 16
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/attendance/student-excuses/student/{studentId}'
+    metadata:
+      groupName: Attendance
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Get excuses by student.'
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      studentId:
+        name: studentId
+        description: ''
+        required: true
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      studentId: architecto
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 500
+        content: |-
+          {
+              "message": "Server Error"
+          }
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/attendance/student-excuses/class/{classId}'
+    metadata:
+      groupName: Attendance
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Get excuses by class.'
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      classId:
+        name: classId
+        description: ''
+        required: true
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      classId: architecto
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 500
+        content: |-
+          {
+              "message": "Server Error"
+          }
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/attendance/student-excuses/subject/{subjectId}'
+    metadata:
+      groupName: Attendance
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Get excuses by subject.'
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      subjectId:
+        name: subjectId
+        description: ''
+        required: true
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      subjectId: architecto
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 500
+        content: |-
+          {
+              "message": "Server Error"
+          }
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/attendance/student-excuses/date/{date}'
+    metadata:
+      groupName: Attendance
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Get excuses by date.'
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      date:
+        name: date
+        description: 'The date.'
+        required: true
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      date: architecto
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"success":true,"data":[]}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/attendance/student-excuses/date-range
+    metadata:
+      groupName: Attendance
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Get excuses by date range.'
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      start_date:
+        name: start_date
+        description: 'Must be a valid date.'
+        required: true
+        example: '2025-09-09T02:07:54'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      end_date:
+        name: end_date
+        description: 'Must be a valid date. Must be a date after or equal to <code>start_date</code>.'
+        required: true
+        example: '2051-10-03'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanBodyParameters:
+      start_date: '2025-09-09T02:07:54'
+      end_date: '2051-10-03'
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/attendance/student-excuses/pending
+    metadata:
+      groupName: Attendance
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Get pending excuses.'
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 404
+        content: |-
+          {
+              "message": "No query results for model [App\\Models\\Attendance\\StudentAttendanceExcuse] pending"
+          }
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/attendance/student-excuses/approved
+    metadata:
+      groupName: Attendance
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Get approved excuses.'
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 404
+        content: |-
+          {
+              "message": "No query results for model [App\\Models\\Attendance\\StudentAttendanceExcuse] approved"
+          }
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/attendance/student-excuses/rejected
+    metadata:
+      groupName: Attendance
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Get rejected excuses.'
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 404
+        content: |-
+          {
+              "message": "No query results for model [App\\Models\\Attendance\\StudentAttendanceExcuse] rejected"
+          }
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: 'api/attendance/student-excuses/{excuse_id}/approve'
+    metadata:
+      groupName: Attendance
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Approve an excuse request.'
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      excuse_id:
+        name: excuse_id
+        description: 'The ID of the excuse.'
+        required: true
+        example: 16
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      excuse_id: 16
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: 'api/attendance/student-excuses/{excuse_id}/reject'
+    metadata:
+      groupName: Attendance
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Reject an excuse request.'
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      excuse_id:
+        name: excuse_id
+        description: 'The ID of the excuse.'
+        required: true
+        example: 16
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      excuse_id: 16
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/attendance/student-excuses/statistics
+    metadata:
+      groupName: Attendance
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Get excuse statistics.'
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 404
+        content: |-
+          {
+              "message": "No query results for model [App\\Models\\Attendance\\StudentAttendanceExcuse] statistics"
+          }
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/attendance/student-excuses/report
+    metadata:
+      groupName: Attendance
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Generate excuse report.'
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 404
+        content: |-
+          {
+              "message": "No query results for model [App\\Models\\Attendance\\StudentAttendanceExcuse] report"
+          }
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/attendance/student-excuses/student/{studentId}/trends'
+    metadata:
+      groupName: Attendance
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Get excuse trends for a student.'
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      studentId:
+        name: studentId
+        description: ''
+        required: true
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      studentId: architecto
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      start_date:
+        name: start_date
+        description: 'Must be a valid date.'
+        required: true
+        example: '2025-09-09T02:07:54'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      end_date:
+        name: end_date
+        description: 'Must be a valid date. Must be a date after or equal to <code>start_date</code>.'
+        required: true
+        example: '2051-10-03'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanBodyParameters:
+      start_date: '2025-09-09T02:07:54'
+      end_date: '2051-10-03'
+    fileParameters: []
+    responses:
+      -
+        status: 500
+        content: |-
+          {
+              "message": "Server Error"
+          }
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/attendance/teacher-excuses
+    metadata:
+      groupName: Attendance
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Display a listing of teacher attendance excuses.'
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"success":true,"data":{"current_page":1,"data":[],"first_page_url":"http:\/\/localhost:8000\/api\/attendance\/teacher-excuses?page=1","from":null,"last_page":1,"last_page_url":"http:\/\/localhost:8000\/api\/attendance\/teacher-excuses?page=1","links":[{"url":null,"label":"&laquo; Previous","page":null,"active":false},{"url":"http:\/\/localhost:8000\/api\/attendance\/teacher-excuses?page=1","label":"1","page":1,"active":true},{"url":null,"label":"Next &raquo;","page":null,"active":false}],"next_page_url":null,"path":"http:\/\/localhost:8000\/api\/attendance\/teacher-excuses","per_page":15,"prev_page_url":null,"to":null,"total":0}}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/attendance/teacher-excuses
+    metadata:
+      groupName: Attendance
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Store a newly created teacher attendance excuse.'
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: multipart/form-data
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      teacher_id:
+        name: teacher_id
+        description: 'The <code>id</code> of an existing record in the teachers table.'
+        required: true
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      class_id:
+        name: class_id
+        description: 'The <code>id</code> of an existing record in the classes table.'
+        required: true
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      subject_id:
+        name: subject_id
+        description: 'The <code>id</code> of an existing record in the subjects table.'
+        required: true
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      lab_id:
+        name: lab_id
+        description: 'The <code>id</code> of an existing record in the labs table.'
+        required: false
+        example: null
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        custom: []
+      date:
+        name: date
+        description: 'Must be a valid date.'
+        required: true
+        example: '2025-09-09T02:07:54'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      reason:
+        name: reason
+        description: 'Must not be greater than 255 characters.'
+        required: true
+        example: 'n'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      document:
+        name: document
+        description: 'Must be a file. Must not be greater than 2048 kilobytes.'
+        required: false
+        example: null
+        type: file
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        custom: []
+    cleanBodyParameters:
+      teacher_id: architecto
+      class_id: architecto
+      subject_id: architecto
+      date: '2025-09-09T02:07:54'
+      reason: 'n'
+    fileParameters:
+      document: null
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/attendance/teacher-excuses/{excuse_id}'
+    metadata:
+      groupName: Attendance
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Display the specified teacher attendance excuse.'
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      excuse_id:
+        name: excuse_id
+        description: 'The ID of the excuse.'
+        required: true
+        example: 16
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      excuse_id: 16
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 404
+        content: |-
+          {
+              "message": "No query results for model [App\\Models\\Attendance\\TeacherAttendanceExcuse] 16"
+          }
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - PUT
+    uri: 'api/attendance/teacher-excuses/{excuse_id}'
+    metadata:
+      groupName: Attendance
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Update the specified teacher attendance excuse.'
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: multipart/form-data
+      Accept: application/json
+    urlParameters:
+      excuse_id:
+        name: excuse_id
+        description: 'The ID of the excuse.'
+        required: true
+        example: 16
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      excuse_id: 16
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      reason:
+        name: reason
+        description: 'Must not be greater than 255 characters.'
+        required: false
+        example: b
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      document:
+        name: document
+        description: 'Must be a file. Must not be greater than 2048 kilobytes.'
+        required: false
+        example: null
+        type: file
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        custom: []
+    cleanBodyParameters:
+      reason: b
+    fileParameters:
+      document: null
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - DELETE
+    uri: 'api/attendance/teacher-excuses/{excuse_id}'
+    metadata:
+      groupName: Attendance
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Remove the specified teacher attendance excuse.'
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      excuse_id:
+        name: excuse_id
+        description: 'The ID of the excuse.'
+        required: true
+        example: 16
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      excuse_id: 16
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/attendance/teacher-excuses/teacher/{teacherId}'
+    metadata:
+      groupName: Attendance
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Get excuses by teacher.'
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      teacherId:
+        name: teacherId
+        description: ''
+        required: true
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      teacherId: architecto
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 500
+        content: |-
+          {
+              "message": "Server Error"
+          }
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/attendance/teacher-excuses/class/{classId}'
+    metadata:
+      groupName: Attendance
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Get excuses by class.'
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      classId:
+        name: classId
+        description: ''
+        required: true
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      classId: architecto
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 500
+        content: |-
+          {
+              "message": "Server Error"
+          }
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/attendance/teacher-excuses/subject/{subjectId}'
+    metadata:
+      groupName: Attendance
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Get excuses by subject.'
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      subjectId:
+        name: subjectId
+        description: ''
+        required: true
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      subjectId: architecto
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 500
+        content: |-
+          {
+              "message": "Server Error"
+          }
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/attendance/teacher-excuses/date/{date}'
+    metadata:
+      groupName: Attendance
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Get excuses by date.'
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      date:
+        name: date
+        description: 'The date.'
+        required: true
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      date: architecto
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"success":true,"data":[]}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/attendance/teacher-excuses/date-range
+    metadata:
+      groupName: Attendance
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Get excuses by date range.'
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      start_date:
+        name: start_date
+        description: 'Must be a valid date.'
+        required: true
+        example: '2025-09-09T02:07:54'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      end_date:
+        name: end_date
+        description: 'Must be a valid date. Must be a date after or equal to <code>start_date</code>.'
+        required: true
+        example: '2051-10-03'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanBodyParameters:
+      start_date: '2025-09-09T02:07:54'
+      end_date: '2051-10-03'
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/attendance/teacher-excuses/pending
+    metadata:
+      groupName: Attendance
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Get pending excuses.'
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 404
+        content: |-
+          {
+              "message": "No query results for model [App\\Models\\Attendance\\TeacherAttendanceExcuse] pending"
+          }
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/attendance/teacher-excuses/approved
+    metadata:
+      groupName: Attendance
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Get approved excuses.'
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 404
+        content: |-
+          {
+              "message": "No query results for model [App\\Models\\Attendance\\TeacherAttendanceExcuse] approved"
+          }
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/attendance/teacher-excuses/rejected
+    metadata:
+      groupName: Attendance
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Get rejected excuses.'
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 404
+        content: |-
+          {
+              "message": "No query results for model [App\\Models\\Attendance\\TeacherAttendanceExcuse] rejected"
+          }
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: 'api/attendance/teacher-excuses/{excuse_id}/approve'
+    metadata:
+      groupName: Attendance
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Approve an excuse request.'
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      excuse_id:
+        name: excuse_id
+        description: 'The ID of the excuse.'
+        required: true
+        example: 16
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      excuse_id: 16
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: 'api/attendance/teacher-excuses/{excuse_id}/reject'
+    metadata:
+      groupName: Attendance
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Reject an excuse request.'
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      excuse_id:
+        name: excuse_id
+        description: 'The ID of the excuse.'
+        required: true
+        example: 16
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      excuse_id: 16
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/attendance/teacher-excuses/statistics
+    metadata:
+      groupName: Attendance
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Get excuse statistics.'
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 404
+        content: |-
+          {
+              "message": "No query results for model [App\\Models\\Attendance\\TeacherAttendanceExcuse] statistics"
+          }
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/attendance/teacher-excuses/report
+    metadata:
+      groupName: Attendance
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Generate excuse report.'
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 404
+        content: |-
+          {
+              "message": "No query results for model [App\\Models\\Attendance\\TeacherAttendanceExcuse] report"
+          }
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/attendance/teacher-excuses/teacher/{teacherId}/trends'
+    metadata:
+      groupName: Attendance
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Get excuse trends for a teacher.'
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      teacherId:
+        name: teacherId
+        description: ''
+        required: true
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      teacherId: architecto
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      start_date:
+        name: start_date
+        description: 'Must be a valid date.'
+        required: true
+        example: '2025-09-09T02:07:54'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      end_date:
+        name: end_date
+        description: 'Must be a valid date. Must be a date after or equal to <code>start_date</code>.'
+        required: true
+        example: '2051-10-03'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanBodyParameters:
+      start_date: '2025-09-09T02:07:54'
+      end_date: '2051-10-03'
+    fileParameters: []
+    responses:
+      -
+        status: 500
+        content: |-
+          {
+              "message": "Server Error"
+          }
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/attendance/bulk/student-attendance/create
+    metadata:
+      groupName: Attendance
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Bulk create attendance records.'
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      attendance_data:
+        name: attendance_data
+        description: 'Must have at least 1 items.'
+        required: true
+        example:
+          - []
+        type: 'object[]'
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      'attendance_data[].student_id':
+        name: 'attendance_data[].student_id'
+        description: 'The <code>id</code> of an existing record in the students table.'
+        required: true
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      'attendance_data[].class_id':
+        name: 'attendance_data[].class_id'
+        description: 'The <code>id</code> of an existing record in the classes table.'
+        required: true
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      'attendance_data[].subject_id':
+        name: 'attendance_data[].subject_id'
+        description: 'The <code>id</code> of an existing record in the subjects table.'
+        required: true
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      'attendance_data[].timetable_id':
+        name: 'attendance_data[].timetable_id'
+        description: 'The <code>id</code> of an existing record in the teacher_timetables table.'
+        required: true
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      'attendance_data[].date':
+        name: 'attendance_data[].date'
+        description: 'Must be a valid date.'
+        required: true
+        example: '2025-09-09T02:07:54'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      'attendance_data[].status':
+        name: 'attendance_data[].status'
+        description: ''
+        required: true
+        example: present
+        type: string
+        enumValues:
+          - present
+          - absent
+          - late
+          - excused
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      'attendance_data[].remarks':
+        name: 'attendance_data[].remarks'
+        description: 'Must not be greater than 500 characters.'
+        required: false
+        example: 'n'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        custom: []
+    cleanBodyParameters:
+      attendance_data:
+        -
+          student_id: architecto
+          class_id: architecto
+          subject_id: architecto
+          timetable_id: architecto
+          date: '2025-09-09T02:07:54'
+          status: present
+          remarks: 'n'
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/attendance/bulk/student-attendance/update
+    metadata:
+      groupName: Attendance
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Bulk update attendance records.'
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      attendance_data:
+        name: attendance_data
+        description: 'Must have at least 1 items.'
+        required: true
+        example:
+          - []
+        type: 'object[]'
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      'attendance_data[].id':
+        name: 'attendance_data[].id'
+        description: 'The <code>id</code> of an existing record in the student_attendance table.'
+        required: true
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      'attendance_data[].status':
+        name: 'attendance_data[].status'
+        description: ''
+        required: false
+        example: late
+        type: string
+        enumValues:
+          - present
+          - absent
+          - late
+          - excused
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      'attendance_data[].remarks':
+        name: 'attendance_data[].remarks'
+        description: 'Must not be greater than 500 characters.'
+        required: false
+        example: 'n'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        custom: []
+    cleanBodyParameters:
+      attendance_data:
+        -
+          id: architecto
+          status: late
+          remarks: 'n'
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/attendance/bulk/teacher-attendance/create
+    metadata:
+      groupName: Attendance
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Bulk create attendance records.'
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      attendance_data:
+        name: attendance_data
+        description: 'Must have at least 1 items.'
+        required: true
+        example:
+          - []
+        type: 'object[]'
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      'attendance_data[].teacher_id':
+        name: 'attendance_data[].teacher_id'
+        description: 'The <code>id</code> of an existing record in the teachers table.'
+        required: true
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      'attendance_data[].class_id':
+        name: 'attendance_data[].class_id'
+        description: 'The <code>id</code> of an existing record in the classes table.'
+        required: true
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      'attendance_data[].subject_id':
+        name: 'attendance_data[].subject_id'
+        description: 'The <code>id</code> of an existing record in the subjects table.'
+        required: true
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      'attendance_data[].timetable_id':
+        name: 'attendance_data[].timetable_id'
+        description: 'The <code>id</code> of an existing record in the teacher_timetables table.'
+        required: true
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      'attendance_data[].date':
+        name: 'attendance_data[].date'
+        description: 'Must be a valid date.'
+        required: true
+        example: '2025-09-09T02:07:54'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      'attendance_data[].status':
+        name: 'attendance_data[].status'
+        description: ''
+        required: true
+        example: late
+        type: string
+        enumValues:
+          - present
+          - absent
+          - late
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      'attendance_data[].remarks':
+        name: 'attendance_data[].remarks'
+        description: 'Must not be greater than 500 characters.'
+        required: false
+        example: 'n'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        custom: []
+    cleanBodyParameters:
+      attendance_data:
+        -
+          teacher_id: architecto
+          class_id: architecto
+          subject_id: architecto
+          timetable_id: architecto
+          date: '2025-09-09T02:07:54'
+          status: late
+          remarks: 'n'
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/attendance/bulk/teacher-attendance/update
+    metadata:
+      groupName: Attendance
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Bulk update attendance records.'
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      attendance_data:
+        name: attendance_data
+        description: 'Must have at least 1 items.'
+        required: true
+        example:
+          - []
+        type: 'object[]'
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      'attendance_data[].id':
+        name: 'attendance_data[].id'
+        description: 'The <code>id</code> of an existing record in the teacher_attendance table.'
+        required: true
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      'attendance_data[].status':
+        name: 'attendance_data[].status'
+        description: ''
+        required: false
+        example: late
+        type: string
+        enumValues:
+          - present
+          - absent
+          - late
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      'attendance_data[].remarks':
+        name: 'attendance_data[].remarks'
+        description: 'Must not be greater than 500 characters.'
+        required: false
+        example: 'n'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        custom: []
+    cleanBodyParameters:
+      attendance_data:
+        -
+          id: architecto
+          status: late
+          remarks: 'n'
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/attendance/reports/student-attendance
+    metadata:
+      groupName: Attendance
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Generate attendance report.'
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 500
+        content: |-
+          {
+              "message": "Server Error"
+          }
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/attendance/reports/teacher-attendance
+    metadata:
+      groupName: Attendance
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Generate attendance report.'
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 500
+        content: |-
+          {
+              "message": "Server Error"
+          }
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/attendance/reports/student-excuses
+    metadata:
+      groupName: Attendance
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Generate excuse report.'
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"success":true,"data":{"summary":{"total_excuses":0,"pending_count":0,"approved_count":0,"rejected_count":0,"pending_percentage":0,"approved_percentage":0,"rejected_percentage":0},"excuses_by_class":[],"excuses_by_date":[],"excuses_by_status":[]}}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/attendance/reports/teacher-excuses
+    metadata:
+      groupName: Attendance
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Generate excuse report.'
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"success":true,"data":{"summary":{"total_excuses":0,"pending_count":0,"approved_count":0,"rejected_count":0,"pending_percentage":0,"approved_percentage":0,"rejected_percentage":0},"excuses_by_teacher":[],"excuses_by_date":[],"excuses_by_status":[]}}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/attendance/reports/student-attendance/stats
+    metadata:
+      groupName: Attendance
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Get attendance statistics.'
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"success":true,"data":{"total_records":175,"present_count":121,"absent_count":31,"late_count":23,"excused_count":0,"present_percentage":69.14,"absent_percentage":17.71,"late_percentage":13.14,"excused_percentage":0}}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/attendance/reports/teacher-attendance/stats
+    metadata:
+      groupName: Attendance
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Get attendance statistics.'
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"success":true,"data":{"total_records":3400,"present_count":2565,"absent_count":490,"late_count":345,"present_percentage":75.44,"absent_percentage":14.41,"late_percentage":10.15}}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/attendance/reports/student-excuses/stats
+    metadata:
+      groupName: Attendance
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Get excuse statistics.'
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"success":true,"data":{"total_excuses":0,"pending_count":0,"approved_count":0,"rejected_count":0,"pending_percentage":0,"approved_percentage":0,"rejected_percentage":0}}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/attendance/reports/teacher-excuses/stats
+    metadata:
+      groupName: Attendance
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Get excuse statistics.'
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"success":true,"data":{"total_excuses":0,"pending_count":0,"approved_count":0,"rejected_count":0,"pending_percentage":0,"approved_percentage":0,"rejected_percentage":0}}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []

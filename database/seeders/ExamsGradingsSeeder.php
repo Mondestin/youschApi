@@ -17,6 +17,7 @@ use App\Models\AdminAcademics\{
 };
 use App\Models\Teachers\Teacher;
 use App\Models\Students\Student;
+use App\Models\User;
 
 class ExamsGradingsSeeder extends Seeder
 {
@@ -47,7 +48,7 @@ class ExamsGradingsSeeder extends Seeder
         $this->command->info('📝 Création des notes d\'examen...');
 
         $exams = Exam::all();
-        $students = Student::all();
+        $students = User::where('email', 'like', '%@student.yousch.edu')->get();
         $teachers = Teacher::all();
 
         if ($exams->isEmpty() || $students->isEmpty() || $teachers->isEmpty()) {
@@ -72,48 +73,9 @@ class ExamsGradingsSeeder extends Seeder
                 ExamMark::create([
                     'exam_id' => $exam->id,
                     'student_id' => $student->id,
-                    'subject_id' => $exam->subject_id,
-                    'class_id' => $exam->class_id,
-                    'academic_year_id' => $exam->academic_year_id ?? 1,
-                    'term_id' => $exam->term_id ?? 1,
-                    'score' => $score,
-                    'max_score' => $maxScore,
-                    'percentage' => $percentage,
+                    'marks_obtained' => $score,
                     'grade' => $grade,
-                    'grade_point' => $this->getGradePoint($grade),
-                    'has_grade' => true,
-                    'is_passing' => $isPassing,
                     'remarks' => $this->getGradeRemarks($percentage),
-                    'graded_by' => $teachers->random()->id,
-                    'graded_at' => now(),
-                    'is_absent' => false,
-                    'is_excused' => false,
-                    'submitted_at' => now(),
-                    'reviewed_at' => now(),
-                    'reviewed_by' => $teachers->random()->id,
-                    'review_notes' => 'Note vérifiée et approuvée',
-                    'appeal_status' => 'none',
-                    'appeal_reason' => null,
-                    'appeal_submitted_at' => null,
-                    'appeal_reviewed_at' => null,
-                    'appeal_reviewed_by' => null,
-                    'appeal_decision' => null,
-                    'appeal_notes' => null,
-                    'is_curved' => false,
-                    'curve_factor' => null,
-                    'original_score' => $score,
-                    'original_percentage' => $percentage,
-                    'original_grade' => $grade,
-                    'moderation_notes' => null,
-                    'moderated_by' => null,
-                    'moderated_at' => null,
-                    'is_final' => true,
-                    'can_be_modified' => false,
-                    'modification_reason' => null,
-                    'modification_approved_by' => null,
-                    'modification_approved_at' => null,
-                    'created_by' => $teachers->random()->id,
-                    'updated_by' => $teachers->random()->id,
                 ]);
             }
         }
@@ -128,7 +90,7 @@ class ExamsGradingsSeeder extends Seeder
     {
         $this->command->info('📊 Création des moyennes générales des étudiants...');
 
-        $students = Student::all();
+        $students = User::where('email', 'like', '%@student.yousch.edu')->get();
         $academicYears = AcademicYear::all();
         $terms = Term::all();
 
@@ -149,29 +111,6 @@ class ExamsGradingsSeeder extends Seeder
                         'term_id' => $term->id,
                         'gpa' => $gpa,
                         'cgpa' => $cgpa,
-                        'total_credits' => rand(15, 21),
-                        'earned_credits' => rand(12, 21),
-                        'failed_credits' => rand(0, 3),
-                        'incomplete_credits' => rand(0, 2),
-                        'withdrawn_credits' => rand(0, 1),
-                        'academic_standing' => $this->getAcademicStanding($gpa),
-                        'performance_level' => $this->getPerformanceLevel($gpa),
-                        'rank_in_class' => rand(1, 30),
-                        'total_students_in_class' => rand(25, 35),
-                        'percentile' => rand(70, 100),
-                        'is_on_probation' => $gpa < 2.0,
-                        'probation_reason' => $gpa < 2.0 ? 'Moyenne générale inférieure à 2.0' : null,
-                        'probation_start_date' => $gpa < 2.0 ? now() : null,
-                        'probation_end_date' => $gpa < 2.0 ? now()->addMonths(6) : null,
-                        'academic_advisor_id' => rand(1, 5),
-                        'advisor_notes' => 'Performance académique satisfaisante',
-                        'improvement_plan' => $gpa < 2.5 ? 'Plan d\'amélioration académique requis' : null,
-                        'is_eligible_for_honors' => $gpa >= 3.5,
-                        'honors_type' => $gpa >= 3.8 ? 'Magna Cum Laude' : ($gpa >= 3.5 ? 'Cum Laude' : null),
-                        'graduation_eligibility' => $gpa >= 2.0 ? 'Éligible' : 'Non éligible',
-                        'graduation_date' => $gpa >= 2.0 ? now()->addMonths(6) : null,
-                        'created_by' => rand(1, 5),
-                        'updated_by' => rand(1, 5),
                     ]);
                 }
             }
@@ -187,7 +126,7 @@ class ExamsGradingsSeeder extends Seeder
     {
         $this->command->info('📋 Création des bulletins scolaires...');
 
-        $students = Student::all();
+        $students = User::where('email', 'like', '%@student.yousch.edu')->get();
         $classes = ClassRoom::all();
         $academicYears = AcademicYear::all();
         $terms = Term::all();
@@ -212,51 +151,9 @@ class ExamsGradingsSeeder extends Seeder
                 'term_id' => $term->id,
                 'gpa' => $gpa,
                 'cgpa' => $cgpa,
-                'total_credits' => rand(15, 21),
-                'earned_credits' => rand(12, 21),
-                'failed_credits' => rand(0, 3),
-                'incomplete_credits' => rand(0, 2),
-                'withdrawn_credits' => rand(0, 1),
-                'academic_standing' => $this->getAcademicStanding($gpa),
-                'performance_level' => $this->getPerformanceLevel($gpa),
-                'rank_in_class' => rand(1, 30),
-                'total_students_in_class' => rand(25, 35),
-                'percentile' => rand(70, 100),
-                'is_on_probation' => $gpa < 2.0,
-                'probation_reason' => $gpa < 2.0 ? 'Moyenne générale inférieure à 2.0' : null,
-                'probation_start_date' => $gpa < 2.0 ? now() : null,
-                'probation_end_date' => $gpa < 2.0 ? now()->addMonths(6) : null,
-                'academic_advisor_id' => rand(1, 5),
-                'advisor_notes' => 'Performance académique satisfaisante',
-                'improvement_plan' => $gpa < 2.5 ? 'Plan d\'amélioration académique requis' : null,
-                'is_eligible_for_honors' => $gpa >= 3.5,
-                'honors_type' => $gpa >= 3.8 ? 'Magna Cum Laude' : ($gpa >= 3.5 ? 'Cum Laude' : null),
-                'graduation_eligibility' => $gpa >= 2.0 ? 'Éligible' : 'Non éligible',
-                'graduation_date' => $gpa >= 2.0 ? now()->addMonths(6) : null,
-                'report_card_number' => 'RC-' . str_pad($student->id, 6, '0', STR_PAD_LEFT) . '-' . $term->id,
-                'issue_date' => now(),
-                'is_published' => true,
-                'published_at' => now(),
-                'published_by' => rand(1, 5),
-                'is_acknowledged' => rand(0, 1),
-                'acknowledged_at' => rand(0, 1) ? now() : null,
-                'acknowledged_by' => rand(0, 1) ? $student->id : null,
-                'parent_signature' => rand(0, 1) ? 'Signature des parents reçue' : null,
-                'parent_signature_date' => rand(0, 1) ? now() : null,
-                'student_signature' => rand(0, 1) ? 'Signature de l\'étudiant reçue' : null,
-                'student_signature_date' => rand(0, 1) ? now() : null,
-                'format' => 'standard',
-                'template_version' => '1.0',
-                'is_archived' => false,
-                'archived_at' => null,
-                'archived_by' => null,
-                'archive_reason' => null,
-                'can_be_modified' => false,
-                'modification_reason' => null,
-                'modification_approved_by' => null,
-                'modification_approved_at' => null,
-                'created_by' => rand(1, 5),
-                'updated_by' => rand(1, 5),
+                'remarks' => $this->getGradeRemarks($gpa * 25), // Convert GPA to percentage for remarks
+                'issued_date' => now()->toDateString(),
+                'format' => 'Digital',
             ]);
         }
 

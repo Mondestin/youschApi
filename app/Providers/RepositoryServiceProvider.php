@@ -21,6 +21,8 @@ use App\Repositories\Teachers\TeacherDocumentRepository;
 use App\Repositories\Teachers\TeacherPerformanceRepository;
 use App\Repositories\Teachers\TeacherTimetableRepository;
 use App\Repositories\Teachers\TeacherAssignmentRepository as TeachersTeacherAssignmentRepository;
+use App\Repositories\AdminAcademics\LabRepository;
+use App\Repositories\AdminAcademics\PrerequisiteRepository;
 use App\Models\AdminAcademics\Exam;
 use App\Models\AdminAcademics\StudentGrade;
 use App\Models\AdminAcademics\StudentEnrollment;
@@ -36,6 +38,8 @@ use App\Models\Teachers\TeacherLeave;
 use App\Models\Teachers\TeacherDocument;
 use App\Models\Teachers\TeacherPerformance;
 use App\Models\Teachers\TeacherTimetable;
+use App\Models\AdminAcademics\Lab;
+use App\Models\AdminAcademics\SubjectPrerequisite;
 
 class RepositoryServiceProvider extends ServiceProvider
 {
@@ -151,6 +155,22 @@ class RepositoryServiceProvider extends ServiceProvider
         $this->app->bind(\App\Repositories\ExamsGradings\ExamMarkRepositoryInterface::class, \App\Repositories\ExamsGradings\ExamMarkRepository::class);
         $this->app->bind(\App\Repositories\ExamsGradings\StudentGPARepositoryInterface::class, \App\Repositories\ExamsGradings\StudentGPARepository::class);
         $this->app->bind(\App\Repositories\ExamsGradings\ReportCardRepositoryInterface::class, \App\Repositories\ExamsGradings\ReportCardRepository::class);
+
+        // Bind Lab Repository
+        $this->app->bind(LabRepository::class, function ($app) {
+            return new LabRepository(new Lab());
+        });
+
+        // Bind Lab Repository Interface
+        $this->app->bind(\App\Repositories\AdminAcademics\LabRepositoryInterface::class, LabRepository::class);
+
+        // Bind Prerequisite Repository
+        $this->app->bind(PrerequisiteRepository::class, function ($app) {
+            return new PrerequisiteRepository(new SubjectPrerequisite());
+        });
+
+        // Bind Prerequisite Repository Interface
+        $this->app->bind(\App\Repositories\AdminAcademics\PrerequisiteRepositoryInterface::class, PrerequisiteRepository::class);
     }
 
     /**

@@ -25,14 +25,21 @@ class DatabaseSeeder extends Seeder
         // Seed academic management data
         $this->call(AcademicManagementSeeder::class);
         
+        // Seed students management data
+        $this->call(StudentsManagementSeeder::class);
+        
         // Seed teachers management data
         $this->call(TeachersManagementSeeder::class);
         
         // Seed attendance management data
         $this->call(AttendanceManagementSeeder::class);
         
-        // Seed exams and gradings data
+        // Seed exams and gradings data (needs teachers and students)
         $this->call(ExamsGradingsSeeder::class);
+        
+        // Seed labs and prerequisites data
+        $this->call(LabSeeder::class);
+        $this->call(PrerequisiteSeeder::class);
 
         $this->command->info('✅ Seeder Principal de la Base de Données terminé avec succès !');
         $this->command->info('🎉 Toutes les données de test ont été créées avec succès !');

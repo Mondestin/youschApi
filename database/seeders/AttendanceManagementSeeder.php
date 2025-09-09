@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use App\Models\User;
+use App\Models\Students\Student;
 use App\Models\AdminAcademics\{
     School,
     Campus,
@@ -382,10 +383,15 @@ class AttendanceManagementSeeder extends Seeder
     {
         $this->command->info('📚 Création des enregistrements de présence des étudiants...');
 
-        $students = User::where('email', 'like', '%@student.yousch.edu')->get();
+        $students = Student::where('status', 'active')->get();
         $classes = ClassRoom::all();
         $subjects = Subject::all();
         $timetables = DB::table('timetables')->get();
+
+        if ($students->isEmpty()) {
+            $this->command->warn('No active students found. Skipping student attendance creation.');
+            return;
+        }
 
         foreach ($students as $student) {
             $class = $classes->random();
@@ -455,8 +461,6 @@ class AttendanceManagementSeeder extends Seeder
                         'timetable_id' => $timetable->id,
                         'date' => $date->format('Y-m-d'),
                         'status' => $status,
-                        'check_in_time' => $status === 'present' ? '08:45:00' : null,
-                        'check_out_time' => $status === 'present' ? '10:35:00' : null,
                         'remarks' => $this->getAttendanceRemarks($status),
                         'created_at' => now(),
                         'updated_at' => now(),
@@ -473,8 +477,8 @@ class AttendanceManagementSeeder extends Seeder
      */
     private function getRandomAttendanceStatus(): string
     {
-        $statuses = ['present', 'absent', 'late', 'excused'];
-        $weights = [70, 15, 10, 5]; // 70% present, 15% absent, 10% late, 5% excused
+        $statuses = ['present', 'absent', 'late'];
+        $weights = [75, 15, 10]; // 75% present, 15% absent, 10% late
         
         $random = rand(1, 100);
         $cumulative = 0;
@@ -498,7 +502,6 @@ class AttendanceManagementSeeder extends Seeder
             'present' => 'Présent et ponctuel',
             'absent' => 'Absence non justifiée',
             'late' => 'Arrivé en retard',
-            'excused' => 'Absence justifiée avec document',
         ];
         
         return $remarks[$status] ?? 'Aucune remarque';
