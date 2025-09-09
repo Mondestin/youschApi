@@ -1347,7 +1347,7 @@
     </ul>
 
     <ul class="toc-footer" id="last-updated">
-        <li>Last updated: August 31, 2025</li>
+        <li>Last updated: September 8, 2025</li>
     </ul>
 </div>
 
@@ -3690,7 +3690,7 @@ access-control-allow-origin: *
     &quot;data&quot;: {
         &quot;total_classes&quot;: 9,
         &quot;total_students&quot;: 8,
-        &quot;total_teachers&quot;: 8,
+        &quot;total_teachers&quot;: 3,
         &quot;total_subjects&quot;: 0
     },
     &quot;message&quot;: &quot;Campus statistics retrieved successfully&quot;
@@ -4690,58 +4690,6 @@ access-control-allow-origin: *
                 }
             },
             {
-                &quot;id&quot;: 3,
-                &quot;teacher_id&quot;: 6,
-                &quot;class_id&quot;: 3,
-                &quot;subject_id&quot;: 3,
-                &quot;academic_year_id&quot;: 1,
-                &quot;role&quot;: &quot;teacher&quot;,
-                &quot;is_primary&quot;: true,
-                &quot;is_active&quot;: true,
-                &quot;assigned_by&quot;: 2,
-                &quot;assignment_date&quot;: &quot;2025-08-31T00:00:00.000000Z&quot;,
-                &quot;end_date&quot;: null,
-                &quot;weekly_hours&quot;: 0,
-                &quot;notes&quot;: &quot;Primary teacher assignment&quot;,
-                &quot;school_id&quot;: 1,
-                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
-                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
-                &quot;teacher&quot;: {
-                    &quot;id&quot;: 6,
-                    &quot;name&quot;: &quot;Dr. Emily Rodriguez&quot;,
-                    &quot;email&quot;: &quot;emily.rodriguez@yousch.edu&quot;,
-                    &quot;email_verified_at&quot;: &quot;2025-08-31T00:54:38.000000Z&quot;,
-                    &quot;created_at&quot;: &quot;2025-08-31T00:54:38.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2025-08-31T00:54:38.000000Z&quot;
-                }
-            },
-            {
-                &quot;id&quot;: 4,
-                &quot;teacher_id&quot;: 7,
-                &quot;class_id&quot;: 4,
-                &quot;subject_id&quot;: 3,
-                &quot;academic_year_id&quot;: 1,
-                &quot;role&quot;: &quot;teacher&quot;,
-                &quot;is_primary&quot;: true,
-                &quot;is_active&quot;: true,
-                &quot;assigned_by&quot;: 2,
-                &quot;assignment_date&quot;: &quot;2025-08-31T00:00:00.000000Z&quot;,
-                &quot;end_date&quot;: null,
-                &quot;weekly_hours&quot;: 0,
-                &quot;notes&quot;: &quot;Primary teacher assignment&quot;,
-                &quot;school_id&quot;: 1,
-                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
-                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
-                &quot;teacher&quot;: {
-                    &quot;id&quot;: 7,
-                    &quot;name&quot;: &quot;Prof. David Thompson&quot;,
-                    &quot;email&quot;: &quot;david.thompson@yousch.edu&quot;,
-                    &quot;email_verified_at&quot;: &quot;2025-08-31T00:54:38.000000Z&quot;,
-                    &quot;created_at&quot;: &quot;2025-08-31T00:54:38.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2025-08-31T00:54:38.000000Z&quot;
-                }
-            },
-            {
                 &quot;id&quot;: 5,
                 &quot;teacher_id&quot;: 4,
                 &quot;class_id&quot;: 5,
@@ -4765,84 +4713,6 @@ access-control-allow-origin: *
                     &quot;email_verified_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
                     &quot;created_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
                     &quot;updated_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;
-                }
-            },
-            {
-                &quot;id&quot;: 6,
-                &quot;teacher_id&quot;: 5,
-                &quot;class_id&quot;: 6,
-                &quot;subject_id&quot;: 4,
-                &quot;academic_year_id&quot;: 1,
-                &quot;role&quot;: &quot;teacher&quot;,
-                &quot;is_primary&quot;: true,
-                &quot;is_active&quot;: true,
-                &quot;assigned_by&quot;: 2,
-                &quot;assignment_date&quot;: &quot;2025-08-31T00:00:00.000000Z&quot;,
-                &quot;end_date&quot;: null,
-                &quot;weekly_hours&quot;: 0,
-                &quot;notes&quot;: &quot;Primary teacher assignment&quot;,
-                &quot;school_id&quot;: 1,
-                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
-                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
-                &quot;teacher&quot;: {
-                    &quot;id&quot;: 5,
-                    &quot;name&quot;: &quot;Prof. Michael Chen&quot;,
-                    &quot;email&quot;: &quot;michael.chen@yousch.edu&quot;,
-                    &quot;email_verified_at&quot;: &quot;2025-08-31T00:54:38.000000Z&quot;,
-                    &quot;created_at&quot;: &quot;2025-08-31T00:54:38.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2025-08-31T00:54:38.000000Z&quot;
-                }
-            },
-            {
-                &quot;id&quot;: 7,
-                &quot;teacher_id&quot;: 6,
-                &quot;class_id&quot;: 7,
-                &quot;subject_id&quot;: 5,
-                &quot;academic_year_id&quot;: 1,
-                &quot;role&quot;: &quot;teacher&quot;,
-                &quot;is_primary&quot;: true,
-                &quot;is_active&quot;: true,
-                &quot;assigned_by&quot;: 2,
-                &quot;assignment_date&quot;: &quot;2025-08-31T00:00:00.000000Z&quot;,
-                &quot;end_date&quot;: null,
-                &quot;weekly_hours&quot;: 0,
-                &quot;notes&quot;: &quot;Primary teacher assignment&quot;,
-                &quot;school_id&quot;: 1,
-                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
-                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
-                &quot;teacher&quot;: {
-                    &quot;id&quot;: 6,
-                    &quot;name&quot;: &quot;Dr. Emily Rodriguez&quot;,
-                    &quot;email&quot;: &quot;emily.rodriguez@yousch.edu&quot;,
-                    &quot;email_verified_at&quot;: &quot;2025-08-31T00:54:38.000000Z&quot;,
-                    &quot;created_at&quot;: &quot;2025-08-31T00:54:38.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2025-08-31T00:54:38.000000Z&quot;
-                }
-            },
-            {
-                &quot;id&quot;: 8,
-                &quot;teacher_id&quot;: 7,
-                &quot;class_id&quot;: 8,
-                &quot;subject_id&quot;: 5,
-                &quot;academic_year_id&quot;: 1,
-                &quot;role&quot;: &quot;teacher&quot;,
-                &quot;is_primary&quot;: true,
-                &quot;is_active&quot;: true,
-                &quot;assigned_by&quot;: 2,
-                &quot;assignment_date&quot;: &quot;2025-08-31T00:00:00.000000Z&quot;,
-                &quot;end_date&quot;: null,
-                &quot;weekly_hours&quot;: 0,
-                &quot;notes&quot;: &quot;Primary teacher assignment&quot;,
-                &quot;school_id&quot;: 1,
-                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
-                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
-                &quot;teacher&quot;: {
-                    &quot;id&quot;: 7,
-                    &quot;name&quot;: &quot;Prof. David Thompson&quot;,
-                    &quot;email&quot;: &quot;david.thompson@yousch.edu&quot;,
-                    &quot;email_verified_at&quot;: &quot;2025-08-31T00:54:38.000000Z&quot;,
-                    &quot;created_at&quot;: &quot;2025-08-31T00:54:38.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2025-08-31T00:54:38.000000Z&quot;
                 }
             }
         ]
@@ -5347,7 +5217,7 @@ access-control-allow-origin: *
     &quot;data&quot;: {
         &quot;total_terms&quot;: 4,
         &quot;total_students&quot;: 8,
-        &quot;total_teachers&quot;: 4,
+        &quot;total_teachers&quot;: 2,
         &quot;total_classes&quot;: 5,
         &quot;total_subjects&quot;: 4,
         &quot;is_current&quot;: false
@@ -6942,7 +6812,7 @@ access-control-allow-origin: *
         &quot;total_subjects&quot;: 4,
         &quot;total_grades&quot;: 10,
         &quot;is_current&quot;: false,
-        &quot;days_remaining&quot;: 254.1034159476852
+        &quot;days_remaining&quot;: 262.9871729761227
     },
     &quot;message&quot;: &quot;Term statistics retrieved successfully&quot;
 }</code>
@@ -11405,8 +11275,8 @@ access-control-allow-origin: *
                 &quot;subject_id&quot;: 1,
                 &quot;class_id&quot;: 1,
                 &quot;exam_date&quot;: &quot;2025-10-29T00:00:00.000000Z&quot;,
-                &quot;start_time&quot;: &quot;2025-08-31T09:00:00.000000Z&quot;,
-                &quot;end_time&quot;: &quot;2025-08-31T11:00:00.000000Z&quot;,
+                &quot;start_time&quot;: &quot;2025-09-08T09:00:00.000000Z&quot;,
+                &quot;end_time&quot;: &quot;2025-09-08T11:00:00.000000Z&quot;,
                 &quot;instructions&quot;: &quot;Please read all questions carefully before answering.&quot;,
                 &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
                 &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -11421,8 +11291,8 @@ access-control-allow-origin: *
                 &quot;subject_id&quot;: 1,
                 &quot;class_id&quot;: 1,
                 &quot;exam_date&quot;: &quot;2025-10-27T00:00:00.000000Z&quot;,
-                &quot;start_time&quot;: &quot;2025-08-31T09:00:00.000000Z&quot;,
-                &quot;end_time&quot;: &quot;2025-08-31T11:00:00.000000Z&quot;,
+                &quot;start_time&quot;: &quot;2025-09-08T09:00:00.000000Z&quot;,
+                &quot;end_time&quot;: &quot;2025-09-08T11:00:00.000000Z&quot;,
                 &quot;instructions&quot;: &quot;Please read all questions carefully before answering. updated&quot;,
                 &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
                 &quot;updated_at&quot;: &quot;2025-08-31T02:06:17.000000Z&quot;,
@@ -11437,30 +11307,14 @@ access-control-allow-origin: *
                 &quot;subject_id&quot;: 1,
                 &quot;class_id&quot;: 1,
                 &quot;exam_date&quot;: &quot;2025-11-01T00:00:00.000000Z&quot;,
-                &quot;start_time&quot;: &quot;2025-08-31T09:00:00.000000Z&quot;,
-                &quot;end_time&quot;: &quot;2025-08-31T11:00:00.000000Z&quot;,
+                &quot;start_time&quot;: &quot;2025-09-08T09:00:00.000000Z&quot;,
+                &quot;end_time&quot;: &quot;2025-09-08T11:00:00.000000Z&quot;,
                 &quot;instructions&quot;: &quot;Please read all questions carefully before answering.&quot;,
                 &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
                 &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
                 &quot;lab_id&quot;: null,
                 &quot;exam_type_id&quot;: 3,
                 &quot;examiner_id&quot;: 4,
-                &quot;status&quot;: &quot;scheduled&quot;
-            },
-            {
-                &quot;id&quot;: 16,
-                &quot;name&quot;: &quot;Mondestin Myssie&quot;,
-                &quot;subject_id&quot;: 1,
-                &quot;class_id&quot;: 2,
-                &quot;exam_date&quot;: &quot;2025-08-31T00:00:00.000000Z&quot;,
-                &quot;start_time&quot;: &quot;2025-08-31T07:13:00.000000Z&quot;,
-                &quot;end_time&quot;: &quot;2025-08-31T09:18:00.000000Z&quot;,
-                &quot;instructions&quot;: &quot;hgvvhvhv hv n&quot;,
-                &quot;created_at&quot;: &quot;2025-08-31T02:15:35.000000Z&quot;,
-                &quot;updated_at&quot;: &quot;2025-08-31T02:15:35.000000Z&quot;,
-                &quot;lab_id&quot;: null,
-                &quot;exam_type_id&quot;: 2,
-                &quot;examiner_id&quot;: 5,
                 &quot;status&quot;: &quot;scheduled&quot;
             }
         ],
@@ -12255,7 +12109,7 @@ access-control-allow-origin: *
     &quot;success&quot;: true,
     &quot;data&quot;: {
         &quot;total_labs&quot;: 1,
-        &quot;total_exams&quot;: 4,
+        &quot;total_exams&quot;: 3,
         &quot;total_classes&quot;: 0,
         &quot;total_students&quot;: 2,
         &quot;prerequisites_count&quot;: 0,
@@ -13239,8 +13093,8 @@ access-control-allow-origin: *
                 &quot;subject_id&quot;: 1,
                 &quot;teacher_id&quot;: 4,
                 &quot;date&quot;: &quot;2025-08-25T00:00:00.000000Z&quot;,
-                &quot;start_time&quot;: &quot;2025-08-31T09:00:00.000000Z&quot;,
-                &quot;end_time&quot;: &quot;2025-08-31T10:30:00.000000Z&quot;,
+                &quot;start_time&quot;: &quot;2025-09-08T09:00:00.000000Z&quot;,
+                &quot;end_time&quot;: &quot;2025-09-08T10:30:00.000000Z&quot;,
                 &quot;room&quot;: &quot;Room 101&quot;,
                 &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
                 &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -13261,8 +13115,8 @@ access-control-allow-origin: *
                 &quot;subject_id&quot;: 1,
                 &quot;teacher_id&quot;: 4,
                 &quot;date&quot;: &quot;2025-08-25T00:00:00.000000Z&quot;,
-                &quot;start_time&quot;: &quot;2025-08-31T14:00:00.000000Z&quot;,
-                &quot;end_time&quot;: &quot;2025-08-31T15:30:00.000000Z&quot;,
+                &quot;start_time&quot;: &quot;2025-09-08T14:00:00.000000Z&quot;,
+                &quot;end_time&quot;: &quot;2025-09-08T15:30:00.000000Z&quot;,
                 &quot;room&quot;: &quot;Room 101&quot;,
                 &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
                 &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -13283,8 +13137,8 @@ access-control-allow-origin: *
                 &quot;subject_id&quot;: 1,
                 &quot;teacher_id&quot;: 4,
                 &quot;date&quot;: &quot;2025-08-26T00:00:00.000000Z&quot;,
-                &quot;start_time&quot;: &quot;2025-08-31T09:00:00.000000Z&quot;,
-                &quot;end_time&quot;: &quot;2025-08-31T10:30:00.000000Z&quot;,
+                &quot;start_time&quot;: &quot;2025-09-08T09:00:00.000000Z&quot;,
+                &quot;end_time&quot;: &quot;2025-09-08T10:30:00.000000Z&quot;,
                 &quot;room&quot;: &quot;Room 101&quot;,
                 &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
                 &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -13305,8 +13159,8 @@ access-control-allow-origin: *
                 &quot;subject_id&quot;: 1,
                 &quot;teacher_id&quot;: 4,
                 &quot;date&quot;: &quot;2025-08-26T00:00:00.000000Z&quot;,
-                &quot;start_time&quot;: &quot;2025-08-31T14:00:00.000000Z&quot;,
-                &quot;end_time&quot;: &quot;2025-08-31T15:30:00.000000Z&quot;,
+                &quot;start_time&quot;: &quot;2025-09-08T14:00:00.000000Z&quot;,
+                &quot;end_time&quot;: &quot;2025-09-08T15:30:00.000000Z&quot;,
                 &quot;room&quot;: &quot;Room 101&quot;,
                 &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
                 &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -13327,8 +13181,8 @@ access-control-allow-origin: *
                 &quot;subject_id&quot;: 1,
                 &quot;teacher_id&quot;: 4,
                 &quot;date&quot;: &quot;2025-08-27T00:00:00.000000Z&quot;,
-                &quot;start_time&quot;: &quot;2025-08-31T09:00:00.000000Z&quot;,
-                &quot;end_time&quot;: &quot;2025-08-31T10:30:00.000000Z&quot;,
+                &quot;start_time&quot;: &quot;2025-09-08T09:00:00.000000Z&quot;,
+                &quot;end_time&quot;: &quot;2025-09-08T10:30:00.000000Z&quot;,
                 &quot;room&quot;: &quot;Room 101&quot;,
                 &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
                 &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -13349,8 +13203,8 @@ access-control-allow-origin: *
                 &quot;subject_id&quot;: 1,
                 &quot;teacher_id&quot;: 4,
                 &quot;date&quot;: &quot;2025-08-27T00:00:00.000000Z&quot;,
-                &quot;start_time&quot;: &quot;2025-08-31T14:00:00.000000Z&quot;,
-                &quot;end_time&quot;: &quot;2025-08-31T15:30:00.000000Z&quot;,
+                &quot;start_time&quot;: &quot;2025-09-08T14:00:00.000000Z&quot;,
+                &quot;end_time&quot;: &quot;2025-09-08T15:30:00.000000Z&quot;,
                 &quot;room&quot;: &quot;Room 101&quot;,
                 &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
                 &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -13371,8 +13225,8 @@ access-control-allow-origin: *
                 &quot;subject_id&quot;: 1,
                 &quot;teacher_id&quot;: 4,
                 &quot;date&quot;: &quot;2025-08-28T00:00:00.000000Z&quot;,
-                &quot;start_time&quot;: &quot;2025-08-31T09:00:00.000000Z&quot;,
-                &quot;end_time&quot;: &quot;2025-08-31T10:30:00.000000Z&quot;,
+                &quot;start_time&quot;: &quot;2025-09-08T09:00:00.000000Z&quot;,
+                &quot;end_time&quot;: &quot;2025-09-08T10:30:00.000000Z&quot;,
                 &quot;room&quot;: &quot;Room 101&quot;,
                 &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
                 &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -13393,8 +13247,8 @@ access-control-allow-origin: *
                 &quot;subject_id&quot;: 1,
                 &quot;teacher_id&quot;: 4,
                 &quot;date&quot;: &quot;2025-08-28T00:00:00.000000Z&quot;,
-                &quot;start_time&quot;: &quot;2025-08-31T14:00:00.000000Z&quot;,
-                &quot;end_time&quot;: &quot;2025-08-31T15:30:00.000000Z&quot;,
+                &quot;start_time&quot;: &quot;2025-09-08T14:00:00.000000Z&quot;,
+                &quot;end_time&quot;: &quot;2025-09-08T15:30:00.000000Z&quot;,
                 &quot;room&quot;: &quot;Room 101&quot;,
                 &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
                 &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -13415,8 +13269,8 @@ access-control-allow-origin: *
                 &quot;subject_id&quot;: 1,
                 &quot;teacher_id&quot;: 4,
                 &quot;date&quot;: &quot;2025-08-29T00:00:00.000000Z&quot;,
-                &quot;start_time&quot;: &quot;2025-08-31T09:00:00.000000Z&quot;,
-                &quot;end_time&quot;: &quot;2025-08-31T10:30:00.000000Z&quot;,
+                &quot;start_time&quot;: &quot;2025-09-08T09:00:00.000000Z&quot;,
+                &quot;end_time&quot;: &quot;2025-09-08T10:30:00.000000Z&quot;,
                 &quot;room&quot;: &quot;Room 101&quot;,
                 &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
                 &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -13437,8 +13291,8 @@ access-control-allow-origin: *
                 &quot;subject_id&quot;: 1,
                 &quot;teacher_id&quot;: 4,
                 &quot;date&quot;: &quot;2025-08-29T00:00:00.000000Z&quot;,
-                &quot;start_time&quot;: &quot;2025-08-31T14:00:00.000000Z&quot;,
-                &quot;end_time&quot;: &quot;2025-08-31T15:30:00.000000Z&quot;,
+                &quot;start_time&quot;: &quot;2025-09-08T14:00:00.000000Z&quot;,
+                &quot;end_time&quot;: &quot;2025-09-08T15:30:00.000000Z&quot;,
                 &quot;room&quot;: &quot;Room 101&quot;,
                 &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
                 &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -13459,8 +13313,8 @@ access-control-allow-origin: *
                 &quot;subject_id&quot;: 2,
                 &quot;teacher_id&quot;: 5,
                 &quot;date&quot;: &quot;2025-08-25T00:00:00.000000Z&quot;,
-                &quot;start_time&quot;: &quot;2025-08-31T09:00:00.000000Z&quot;,
-                &quot;end_time&quot;: &quot;2025-08-31T10:30:00.000000Z&quot;,
+                &quot;start_time&quot;: &quot;2025-09-08T09:00:00.000000Z&quot;,
+                &quot;end_time&quot;: &quot;2025-09-08T10:30:00.000000Z&quot;,
                 &quot;room&quot;: &quot;Room 102&quot;,
                 &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
                 &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -13481,8 +13335,8 @@ access-control-allow-origin: *
                 &quot;subject_id&quot;: 2,
                 &quot;teacher_id&quot;: 5,
                 &quot;date&quot;: &quot;2025-08-25T00:00:00.000000Z&quot;,
-                &quot;start_time&quot;: &quot;2025-08-31T14:00:00.000000Z&quot;,
-                &quot;end_time&quot;: &quot;2025-08-31T15:30:00.000000Z&quot;,
+                &quot;start_time&quot;: &quot;2025-09-08T14:00:00.000000Z&quot;,
+                &quot;end_time&quot;: &quot;2025-09-08T15:30:00.000000Z&quot;,
                 &quot;room&quot;: &quot;Room 102&quot;,
                 &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
                 &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -13503,8 +13357,8 @@ access-control-allow-origin: *
                 &quot;subject_id&quot;: 2,
                 &quot;teacher_id&quot;: 5,
                 &quot;date&quot;: &quot;2025-08-26T00:00:00.000000Z&quot;,
-                &quot;start_time&quot;: &quot;2025-08-31T09:00:00.000000Z&quot;,
-                &quot;end_time&quot;: &quot;2025-08-31T10:30:00.000000Z&quot;,
+                &quot;start_time&quot;: &quot;2025-09-08T09:00:00.000000Z&quot;,
+                &quot;end_time&quot;: &quot;2025-09-08T10:30:00.000000Z&quot;,
                 &quot;room&quot;: &quot;Room 102&quot;,
                 &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
                 &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -13525,8 +13379,8 @@ access-control-allow-origin: *
                 &quot;subject_id&quot;: 2,
                 &quot;teacher_id&quot;: 5,
                 &quot;date&quot;: &quot;2025-08-26T00:00:00.000000Z&quot;,
-                &quot;start_time&quot;: &quot;2025-08-31T14:00:00.000000Z&quot;,
-                &quot;end_time&quot;: &quot;2025-08-31T15:30:00.000000Z&quot;,
+                &quot;start_time&quot;: &quot;2025-09-08T14:00:00.000000Z&quot;,
+                &quot;end_time&quot;: &quot;2025-09-08T15:30:00.000000Z&quot;,
                 &quot;room&quot;: &quot;Room 102&quot;,
                 &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
                 &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -13547,8 +13401,8 @@ access-control-allow-origin: *
                 &quot;subject_id&quot;: 2,
                 &quot;teacher_id&quot;: 5,
                 &quot;date&quot;: &quot;2025-08-27T00:00:00.000000Z&quot;,
-                &quot;start_time&quot;: &quot;2025-08-31T09:00:00.000000Z&quot;,
-                &quot;end_time&quot;: &quot;2025-08-31T10:30:00.000000Z&quot;,
+                &quot;start_time&quot;: &quot;2025-09-08T09:00:00.000000Z&quot;,
+                &quot;end_time&quot;: &quot;2025-09-08T10:30:00.000000Z&quot;,
                 &quot;room&quot;: &quot;Room 102&quot;,
                 &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
                 &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -13569,8 +13423,8 @@ access-control-allow-origin: *
                 &quot;subject_id&quot;: 2,
                 &quot;teacher_id&quot;: 5,
                 &quot;date&quot;: &quot;2025-08-27T00:00:00.000000Z&quot;,
-                &quot;start_time&quot;: &quot;2025-08-31T14:00:00.000000Z&quot;,
-                &quot;end_time&quot;: &quot;2025-08-31T15:30:00.000000Z&quot;,
+                &quot;start_time&quot;: &quot;2025-09-08T14:00:00.000000Z&quot;,
+                &quot;end_time&quot;: &quot;2025-09-08T15:30:00.000000Z&quot;,
                 &quot;room&quot;: &quot;Room 102&quot;,
                 &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
                 &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -13591,8 +13445,8 @@ access-control-allow-origin: *
                 &quot;subject_id&quot;: 2,
                 &quot;teacher_id&quot;: 5,
                 &quot;date&quot;: &quot;2025-08-28T00:00:00.000000Z&quot;,
-                &quot;start_time&quot;: &quot;2025-08-31T09:00:00.000000Z&quot;,
-                &quot;end_time&quot;: &quot;2025-08-31T10:30:00.000000Z&quot;,
+                &quot;start_time&quot;: &quot;2025-09-08T09:00:00.000000Z&quot;,
+                &quot;end_time&quot;: &quot;2025-09-08T10:30:00.000000Z&quot;,
                 &quot;room&quot;: &quot;Room 102&quot;,
                 &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
                 &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -13613,8 +13467,8 @@ access-control-allow-origin: *
                 &quot;subject_id&quot;: 2,
                 &quot;teacher_id&quot;: 5,
                 &quot;date&quot;: &quot;2025-08-28T00:00:00.000000Z&quot;,
-                &quot;start_time&quot;: &quot;2025-08-31T14:00:00.000000Z&quot;,
-                &quot;end_time&quot;: &quot;2025-08-31T15:30:00.000000Z&quot;,
+                &quot;start_time&quot;: &quot;2025-09-08T14:00:00.000000Z&quot;,
+                &quot;end_time&quot;: &quot;2025-09-08T15:30:00.000000Z&quot;,
                 &quot;room&quot;: &quot;Room 102&quot;,
                 &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
                 &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -13635,8 +13489,8 @@ access-control-allow-origin: *
                 &quot;subject_id&quot;: 2,
                 &quot;teacher_id&quot;: 5,
                 &quot;date&quot;: &quot;2025-08-29T00:00:00.000000Z&quot;,
-                &quot;start_time&quot;: &quot;2025-08-31T09:00:00.000000Z&quot;,
-                &quot;end_time&quot;: &quot;2025-08-31T10:30:00.000000Z&quot;,
+                &quot;start_time&quot;: &quot;2025-09-08T09:00:00.000000Z&quot;,
+                &quot;end_time&quot;: &quot;2025-09-08T10:30:00.000000Z&quot;,
                 &quot;room&quot;: &quot;Room 102&quot;,
                 &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
                 &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -13657,8 +13511,8 @@ access-control-allow-origin: *
                 &quot;subject_id&quot;: 2,
                 &quot;teacher_id&quot;: 5,
                 &quot;date&quot;: &quot;2025-08-29T00:00:00.000000Z&quot;,
-                &quot;start_time&quot;: &quot;2025-08-31T14:00:00.000000Z&quot;,
-                &quot;end_time&quot;: &quot;2025-08-31T15:30:00.000000Z&quot;,
+                &quot;start_time&quot;: &quot;2025-09-08T14:00:00.000000Z&quot;,
+                &quot;end_time&quot;: &quot;2025-09-08T15:30:00.000000Z&quot;,
                 &quot;room&quot;: &quot;Room 102&quot;,
                 &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
                 &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -13681,8 +13535,8 @@ access-control-allow-origin: *
                 &quot;subject_id&quot;: 1,
                 &quot;class_id&quot;: 1,
                 &quot;exam_date&quot;: &quot;2025-10-29T00:00:00.000000Z&quot;,
-                &quot;start_time&quot;: &quot;2025-08-31T09:00:00.000000Z&quot;,
-                &quot;end_time&quot;: &quot;2025-08-31T11:00:00.000000Z&quot;,
+                &quot;start_time&quot;: &quot;2025-09-08T09:00:00.000000Z&quot;,
+                &quot;end_time&quot;: &quot;2025-09-08T11:00:00.000000Z&quot;,
                 &quot;instructions&quot;: &quot;Please read all questions carefully before answering.&quot;,
                 &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
                 &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -13697,8 +13551,8 @@ access-control-allow-origin: *
                 &quot;subject_id&quot;: 1,
                 &quot;class_id&quot;: 1,
                 &quot;exam_date&quot;: &quot;2025-10-27T00:00:00.000000Z&quot;,
-                &quot;start_time&quot;: &quot;2025-08-31T09:00:00.000000Z&quot;,
-                &quot;end_time&quot;: &quot;2025-08-31T11:00:00.000000Z&quot;,
+                &quot;start_time&quot;: &quot;2025-09-08T09:00:00.000000Z&quot;,
+                &quot;end_time&quot;: &quot;2025-09-08T11:00:00.000000Z&quot;,
                 &quot;instructions&quot;: &quot;Please read all questions carefully before answering. updated&quot;,
                 &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
                 &quot;updated_at&quot;: &quot;2025-08-31T02:06:17.000000Z&quot;,
@@ -13713,8 +13567,8 @@ access-control-allow-origin: *
                 &quot;subject_id&quot;: 1,
                 &quot;class_id&quot;: 1,
                 &quot;exam_date&quot;: &quot;2025-11-01T00:00:00.000000Z&quot;,
-                &quot;start_time&quot;: &quot;2025-08-31T09:00:00.000000Z&quot;,
-                &quot;end_time&quot;: &quot;2025-08-31T11:00:00.000000Z&quot;,
+                &quot;start_time&quot;: &quot;2025-09-08T09:00:00.000000Z&quot;,
+                &quot;end_time&quot;: &quot;2025-09-08T11:00:00.000000Z&quot;,
                 &quot;instructions&quot;: &quot;Please read all questions carefully before answering.&quot;,
                 &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
                 &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -13729,8 +13583,8 @@ access-control-allow-origin: *
                 &quot;subject_id&quot;: 2,
                 &quot;class_id&quot;: 1,
                 &quot;exam_date&quot;: &quot;2025-11-24T00:00:00.000000Z&quot;,
-                &quot;start_time&quot;: &quot;2025-08-31T09:00:00.000000Z&quot;,
-                &quot;end_time&quot;: &quot;2025-08-31T11:00:00.000000Z&quot;,
+                &quot;start_time&quot;: &quot;2025-09-08T09:00:00.000000Z&quot;,
+                &quot;end_time&quot;: &quot;2025-09-08T11:00:00.000000Z&quot;,
                 &quot;instructions&quot;: &quot;Please read all questions carefully before answering.&quot;,
                 &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
                 &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -13745,8 +13599,8 @@ access-control-allow-origin: *
                 &quot;subject_id&quot;: 2,
                 &quot;class_id&quot;: 1,
                 &quot;exam_date&quot;: &quot;2025-09-30T00:00:00.000000Z&quot;,
-                &quot;start_time&quot;: &quot;2025-08-31T09:00:00.000000Z&quot;,
-                &quot;end_time&quot;: &quot;2025-08-31T11:00:00.000000Z&quot;,
+                &quot;start_time&quot;: &quot;2025-09-08T09:00:00.000000Z&quot;,
+                &quot;end_time&quot;: &quot;2025-09-08T11:00:00.000000Z&quot;,
                 &quot;instructions&quot;: &quot;Please read all questions carefully before answering. update&quot;,
                 &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
                 &quot;updated_at&quot;: &quot;2025-08-31T01:59:22.000000Z&quot;,
@@ -13761,8 +13615,8 @@ access-control-allow-origin: *
                 &quot;subject_id&quot;: 2,
                 &quot;class_id&quot;: 1,
                 &quot;exam_date&quot;: &quot;2025-10-07T00:00:00.000000Z&quot;,
-                &quot;start_time&quot;: &quot;2025-08-31T09:00:00.000000Z&quot;,
-                &quot;end_time&quot;: &quot;2025-08-31T11:00:00.000000Z&quot;,
+                &quot;start_time&quot;: &quot;2025-09-08T09:00:00.000000Z&quot;,
+                &quot;end_time&quot;: &quot;2025-09-08T11:00:00.000000Z&quot;,
                 &quot;instructions&quot;: &quot;Please read all questions carefully before answering.&quot;,
                 &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
                 &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -14745,8 +14599,8 @@ access-control-allow-origin: *
             &quot;subject_id&quot;: 1,
             &quot;teacher_id&quot;: 4,
             &quot;date&quot;: &quot;2025-08-25T00:00:00.000000Z&quot;,
-            &quot;start_time&quot;: &quot;2025-08-31T09:00:00.000000Z&quot;,
-            &quot;end_time&quot;: &quot;2025-08-31T10:30:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;2025-09-08T09:00:00.000000Z&quot;,
+            &quot;end_time&quot;: &quot;2025-09-08T10:30:00.000000Z&quot;,
             &quot;room&quot;: &quot;Room 101&quot;,
             &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -14817,8 +14671,8 @@ access-control-allow-origin: *
             &quot;subject_id&quot;: 3,
             &quot;teacher_id&quot;: 4,
             &quot;date&quot;: &quot;2025-08-25T00:00:00.000000Z&quot;,
-            &quot;start_time&quot;: &quot;2025-08-31T09:00:00.000000Z&quot;,
-            &quot;end_time&quot;: &quot;2025-08-31T10:30:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;2025-09-08T09:00:00.000000Z&quot;,
+            &quot;end_time&quot;: &quot;2025-09-08T10:30:00.000000Z&quot;,
             &quot;room&quot;: &quot;Room 101&quot;,
             &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -14889,8 +14743,8 @@ access-control-allow-origin: *
             &quot;subject_id&quot;: 3,
             &quot;teacher_id&quot;: 4,
             &quot;date&quot;: &quot;2025-08-25T00:00:00.000000Z&quot;,
-            &quot;start_time&quot;: &quot;2025-08-31T09:00:00.000000Z&quot;,
-            &quot;end_time&quot;: &quot;2025-08-31T10:30:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;2025-09-08T09:00:00.000000Z&quot;,
+            &quot;end_time&quot;: &quot;2025-09-08T10:30:00.000000Z&quot;,
             &quot;room&quot;: &quot;Room 101&quot;,
             &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -14961,8 +14815,8 @@ access-control-allow-origin: *
             &quot;subject_id&quot;: 1,
             &quot;teacher_id&quot;: 4,
             &quot;date&quot;: &quot;2025-08-25T00:00:00.000000Z&quot;,
-            &quot;start_time&quot;: &quot;2025-08-31T09:00:00.000000Z&quot;,
-            &quot;end_time&quot;: &quot;2025-08-31T10:30:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;2025-09-08T09:00:00.000000Z&quot;,
+            &quot;end_time&quot;: &quot;2025-09-08T10:30:00.000000Z&quot;,
             &quot;room&quot;: &quot;Room 101&quot;,
             &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -15033,8 +14887,8 @@ access-control-allow-origin: *
             &quot;subject_id&quot;: 4,
             &quot;teacher_id&quot;: 4,
             &quot;date&quot;: &quot;2025-08-25T00:00:00.000000Z&quot;,
-            &quot;start_time&quot;: &quot;2025-08-31T09:00:00.000000Z&quot;,
-            &quot;end_time&quot;: &quot;2025-08-31T10:30:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;2025-09-08T09:00:00.000000Z&quot;,
+            &quot;end_time&quot;: &quot;2025-09-08T10:30:00.000000Z&quot;,
             &quot;room&quot;: &quot;Room 101&quot;,
             &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -15105,8 +14959,8 @@ access-control-allow-origin: *
             &quot;subject_id&quot;: 2,
             &quot;teacher_id&quot;: 5,
             &quot;date&quot;: &quot;2025-08-25T00:00:00.000000Z&quot;,
-            &quot;start_time&quot;: &quot;2025-08-31T09:00:00.000000Z&quot;,
-            &quot;end_time&quot;: &quot;2025-08-31T10:30:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;2025-09-08T09:00:00.000000Z&quot;,
+            &quot;end_time&quot;: &quot;2025-09-08T10:30:00.000000Z&quot;,
             &quot;room&quot;: &quot;Room 102&quot;,
             &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -15177,8 +15031,8 @@ access-control-allow-origin: *
             &quot;subject_id&quot;: 4,
             &quot;teacher_id&quot;: 4,
             &quot;date&quot;: &quot;2025-08-25T00:00:00.000000Z&quot;,
-            &quot;start_time&quot;: &quot;2025-08-31T09:00:00.000000Z&quot;,
-            &quot;end_time&quot;: &quot;2025-08-31T10:30:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;2025-09-08T09:00:00.000000Z&quot;,
+            &quot;end_time&quot;: &quot;2025-09-08T10:30:00.000000Z&quot;,
             &quot;room&quot;: &quot;Room 101&quot;,
             &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -15249,8 +15103,8 @@ access-control-allow-origin: *
             &quot;subject_id&quot;: 2,
             &quot;teacher_id&quot;: 5,
             &quot;date&quot;: &quot;2025-08-25T00:00:00.000000Z&quot;,
-            &quot;start_time&quot;: &quot;2025-08-31T09:00:00.000000Z&quot;,
-            &quot;end_time&quot;: &quot;2025-08-31T10:30:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;2025-09-08T09:00:00.000000Z&quot;,
+            &quot;end_time&quot;: &quot;2025-09-08T10:30:00.000000Z&quot;,
             &quot;room&quot;: &quot;Room 102&quot;,
             &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -15321,8 +15175,8 @@ access-control-allow-origin: *
             &quot;subject_id&quot;: 5,
             &quot;teacher_id&quot;: 4,
             &quot;date&quot;: &quot;2025-08-25T00:00:00.000000Z&quot;,
-            &quot;start_time&quot;: &quot;2025-08-31T09:00:00.000000Z&quot;,
-            &quot;end_time&quot;: &quot;2025-08-31T10:30:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;2025-09-08T09:00:00.000000Z&quot;,
+            &quot;end_time&quot;: &quot;2025-09-08T10:30:00.000000Z&quot;,
             &quot;room&quot;: &quot;Room 101&quot;,
             &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -15393,8 +15247,8 @@ access-control-allow-origin: *
             &quot;subject_id&quot;: 5,
             &quot;teacher_id&quot;: 4,
             &quot;date&quot;: &quot;2025-08-25T00:00:00.000000Z&quot;,
-            &quot;start_time&quot;: &quot;2025-08-31T09:00:00.000000Z&quot;,
-            &quot;end_time&quot;: &quot;2025-08-31T10:30:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;2025-09-08T09:00:00.000000Z&quot;,
+            &quot;end_time&quot;: &quot;2025-09-08T10:30:00.000000Z&quot;,
             &quot;room&quot;: &quot;Room 101&quot;,
             &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -15465,8 +15319,8 @@ access-control-allow-origin: *
             &quot;subject_id&quot;: 4,
             &quot;teacher_id&quot;: 4,
             &quot;date&quot;: &quot;2025-08-25T00:00:00.000000Z&quot;,
-            &quot;start_time&quot;: &quot;2025-08-31T14:00:00.000000Z&quot;,
-            &quot;end_time&quot;: &quot;2025-08-31T15:30:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;2025-09-08T14:00:00.000000Z&quot;,
+            &quot;end_time&quot;: &quot;2025-09-08T15:30:00.000000Z&quot;,
             &quot;room&quot;: &quot;Room 101&quot;,
             &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -15537,8 +15391,8 @@ access-control-allow-origin: *
             &quot;subject_id&quot;: 5,
             &quot;teacher_id&quot;: 4,
             &quot;date&quot;: &quot;2025-08-25T00:00:00.000000Z&quot;,
-            &quot;start_time&quot;: &quot;2025-08-31T14:00:00.000000Z&quot;,
-            &quot;end_time&quot;: &quot;2025-08-31T15:30:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;2025-09-08T14:00:00.000000Z&quot;,
+            &quot;end_time&quot;: &quot;2025-09-08T15:30:00.000000Z&quot;,
             &quot;room&quot;: &quot;Room 101&quot;,
             &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -15609,8 +15463,8 @@ access-control-allow-origin: *
             &quot;subject_id&quot;: 3,
             &quot;teacher_id&quot;: 4,
             &quot;date&quot;: &quot;2025-08-25T00:00:00.000000Z&quot;,
-            &quot;start_time&quot;: &quot;2025-08-31T14:00:00.000000Z&quot;,
-            &quot;end_time&quot;: &quot;2025-08-31T15:30:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;2025-09-08T14:00:00.000000Z&quot;,
+            &quot;end_time&quot;: &quot;2025-09-08T15:30:00.000000Z&quot;,
             &quot;room&quot;: &quot;Room 101&quot;,
             &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -15681,8 +15535,8 @@ access-control-allow-origin: *
             &quot;subject_id&quot;: 1,
             &quot;teacher_id&quot;: 4,
             &quot;date&quot;: &quot;2025-08-25T00:00:00.000000Z&quot;,
-            &quot;start_time&quot;: &quot;2025-08-31T14:00:00.000000Z&quot;,
-            &quot;end_time&quot;: &quot;2025-08-31T15:30:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;2025-09-08T14:00:00.000000Z&quot;,
+            &quot;end_time&quot;: &quot;2025-09-08T15:30:00.000000Z&quot;,
             &quot;room&quot;: &quot;Room 101&quot;,
             &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -15753,8 +15607,8 @@ access-control-allow-origin: *
             &quot;subject_id&quot;: 3,
             &quot;teacher_id&quot;: 4,
             &quot;date&quot;: &quot;2025-08-25T00:00:00.000000Z&quot;,
-            &quot;start_time&quot;: &quot;2025-08-31T14:00:00.000000Z&quot;,
-            &quot;end_time&quot;: &quot;2025-08-31T15:30:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;2025-09-08T14:00:00.000000Z&quot;,
+            &quot;end_time&quot;: &quot;2025-09-08T15:30:00.000000Z&quot;,
             &quot;room&quot;: &quot;Room 101&quot;,
             &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -15825,8 +15679,8 @@ access-control-allow-origin: *
             &quot;subject_id&quot;: 1,
             &quot;teacher_id&quot;: 4,
             &quot;date&quot;: &quot;2025-08-25T00:00:00.000000Z&quot;,
-            &quot;start_time&quot;: &quot;2025-08-31T14:00:00.000000Z&quot;,
-            &quot;end_time&quot;: &quot;2025-08-31T15:30:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;2025-09-08T14:00:00.000000Z&quot;,
+            &quot;end_time&quot;: &quot;2025-09-08T15:30:00.000000Z&quot;,
             &quot;room&quot;: &quot;Room 101&quot;,
             &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -15897,8 +15751,8 @@ access-control-allow-origin: *
             &quot;subject_id&quot;: 2,
             &quot;teacher_id&quot;: 5,
             &quot;date&quot;: &quot;2025-08-25T00:00:00.000000Z&quot;,
-            &quot;start_time&quot;: &quot;2025-08-31T14:00:00.000000Z&quot;,
-            &quot;end_time&quot;: &quot;2025-08-31T15:30:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;2025-09-08T14:00:00.000000Z&quot;,
+            &quot;end_time&quot;: &quot;2025-09-08T15:30:00.000000Z&quot;,
             &quot;room&quot;: &quot;Room 102&quot;,
             &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -15969,8 +15823,8 @@ access-control-allow-origin: *
             &quot;subject_id&quot;: 5,
             &quot;teacher_id&quot;: 4,
             &quot;date&quot;: &quot;2025-08-25T00:00:00.000000Z&quot;,
-            &quot;start_time&quot;: &quot;2025-08-31T14:00:00.000000Z&quot;,
-            &quot;end_time&quot;: &quot;2025-08-31T15:30:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;2025-09-08T14:00:00.000000Z&quot;,
+            &quot;end_time&quot;: &quot;2025-09-08T15:30:00.000000Z&quot;,
             &quot;room&quot;: &quot;Room 101&quot;,
             &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -16041,8 +15895,8 @@ access-control-allow-origin: *
             &quot;subject_id&quot;: 2,
             &quot;teacher_id&quot;: 5,
             &quot;date&quot;: &quot;2025-08-25T00:00:00.000000Z&quot;,
-            &quot;start_time&quot;: &quot;2025-08-31T14:00:00.000000Z&quot;,
-            &quot;end_time&quot;: &quot;2025-08-31T15:30:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;2025-09-08T14:00:00.000000Z&quot;,
+            &quot;end_time&quot;: &quot;2025-09-08T15:30:00.000000Z&quot;,
             &quot;room&quot;: &quot;Room 102&quot;,
             &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -16113,8 +15967,8 @@ access-control-allow-origin: *
             &quot;subject_id&quot;: 4,
             &quot;teacher_id&quot;: 4,
             &quot;date&quot;: &quot;2025-08-25T00:00:00.000000Z&quot;,
-            &quot;start_time&quot;: &quot;2025-08-31T14:00:00.000000Z&quot;,
-            &quot;end_time&quot;: &quot;2025-08-31T15:30:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;2025-09-08T14:00:00.000000Z&quot;,
+            &quot;end_time&quot;: &quot;2025-09-08T15:30:00.000000Z&quot;,
             &quot;room&quot;: &quot;Room 101&quot;,
             &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -16185,8 +16039,8 @@ access-control-allow-origin: *
             &quot;subject_id&quot;: 5,
             &quot;teacher_id&quot;: 4,
             &quot;date&quot;: &quot;2025-08-26T00:00:00.000000Z&quot;,
-            &quot;start_time&quot;: &quot;2025-08-31T09:00:00.000000Z&quot;,
-            &quot;end_time&quot;: &quot;2025-08-31T10:30:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;2025-09-08T09:00:00.000000Z&quot;,
+            &quot;end_time&quot;: &quot;2025-09-08T10:30:00.000000Z&quot;,
             &quot;room&quot;: &quot;Room 101&quot;,
             &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -16257,8 +16111,8 @@ access-control-allow-origin: *
             &quot;subject_id&quot;: 2,
             &quot;teacher_id&quot;: 5,
             &quot;date&quot;: &quot;2025-08-26T00:00:00.000000Z&quot;,
-            &quot;start_time&quot;: &quot;2025-08-31T09:00:00.000000Z&quot;,
-            &quot;end_time&quot;: &quot;2025-08-31T10:30:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;2025-09-08T09:00:00.000000Z&quot;,
+            &quot;end_time&quot;: &quot;2025-09-08T10:30:00.000000Z&quot;,
             &quot;room&quot;: &quot;Room 102&quot;,
             &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -16329,8 +16183,8 @@ access-control-allow-origin: *
             &quot;subject_id&quot;: 3,
             &quot;teacher_id&quot;: 4,
             &quot;date&quot;: &quot;2025-08-26T00:00:00.000000Z&quot;,
-            &quot;start_time&quot;: &quot;2025-08-31T09:00:00.000000Z&quot;,
-            &quot;end_time&quot;: &quot;2025-08-31T10:30:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;2025-09-08T09:00:00.000000Z&quot;,
+            &quot;end_time&quot;: &quot;2025-09-08T10:30:00.000000Z&quot;,
             &quot;room&quot;: &quot;Room 101&quot;,
             &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -16401,8 +16255,8 @@ access-control-allow-origin: *
             &quot;subject_id&quot;: 4,
             &quot;teacher_id&quot;: 4,
             &quot;date&quot;: &quot;2025-08-26T00:00:00.000000Z&quot;,
-            &quot;start_time&quot;: &quot;2025-08-31T09:00:00.000000Z&quot;,
-            &quot;end_time&quot;: &quot;2025-08-31T10:30:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;2025-09-08T09:00:00.000000Z&quot;,
+            &quot;end_time&quot;: &quot;2025-09-08T10:30:00.000000Z&quot;,
             &quot;room&quot;: &quot;Room 101&quot;,
             &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -16473,8 +16327,8 @@ access-control-allow-origin: *
             &quot;subject_id&quot;: 3,
             &quot;teacher_id&quot;: 4,
             &quot;date&quot;: &quot;2025-08-26T00:00:00.000000Z&quot;,
-            &quot;start_time&quot;: &quot;2025-08-31T09:00:00.000000Z&quot;,
-            &quot;end_time&quot;: &quot;2025-08-31T10:30:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;2025-09-08T09:00:00.000000Z&quot;,
+            &quot;end_time&quot;: &quot;2025-09-08T10:30:00.000000Z&quot;,
             &quot;room&quot;: &quot;Room 101&quot;,
             &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -16545,8 +16399,8 @@ access-control-allow-origin: *
             &quot;subject_id&quot;: 5,
             &quot;teacher_id&quot;: 4,
             &quot;date&quot;: &quot;2025-08-26T00:00:00.000000Z&quot;,
-            &quot;start_time&quot;: &quot;2025-08-31T09:00:00.000000Z&quot;,
-            &quot;end_time&quot;: &quot;2025-08-31T10:30:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;2025-09-08T09:00:00.000000Z&quot;,
+            &quot;end_time&quot;: &quot;2025-09-08T10:30:00.000000Z&quot;,
             &quot;room&quot;: &quot;Room 101&quot;,
             &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -16617,8 +16471,8 @@ access-control-allow-origin: *
             &quot;subject_id&quot;: 4,
             &quot;teacher_id&quot;: 4,
             &quot;date&quot;: &quot;2025-08-26T00:00:00.000000Z&quot;,
-            &quot;start_time&quot;: &quot;2025-08-31T09:00:00.000000Z&quot;,
-            &quot;end_time&quot;: &quot;2025-08-31T10:30:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;2025-09-08T09:00:00.000000Z&quot;,
+            &quot;end_time&quot;: &quot;2025-09-08T10:30:00.000000Z&quot;,
             &quot;room&quot;: &quot;Room 101&quot;,
             &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -16689,8 +16543,8 @@ access-control-allow-origin: *
             &quot;subject_id&quot;: 1,
             &quot;teacher_id&quot;: 4,
             &quot;date&quot;: &quot;2025-08-26T00:00:00.000000Z&quot;,
-            &quot;start_time&quot;: &quot;2025-08-31T09:00:00.000000Z&quot;,
-            &quot;end_time&quot;: &quot;2025-08-31T10:30:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;2025-09-08T09:00:00.000000Z&quot;,
+            &quot;end_time&quot;: &quot;2025-09-08T10:30:00.000000Z&quot;,
             &quot;room&quot;: &quot;Room 101&quot;,
             &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -16761,8 +16615,8 @@ access-control-allow-origin: *
             &quot;subject_id&quot;: 2,
             &quot;teacher_id&quot;: 5,
             &quot;date&quot;: &quot;2025-08-26T00:00:00.000000Z&quot;,
-            &quot;start_time&quot;: &quot;2025-08-31T09:00:00.000000Z&quot;,
-            &quot;end_time&quot;: &quot;2025-08-31T10:30:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;2025-09-08T09:00:00.000000Z&quot;,
+            &quot;end_time&quot;: &quot;2025-09-08T10:30:00.000000Z&quot;,
             &quot;room&quot;: &quot;Room 102&quot;,
             &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -16833,8 +16687,8 @@ access-control-allow-origin: *
             &quot;subject_id&quot;: 1,
             &quot;teacher_id&quot;: 4,
             &quot;date&quot;: &quot;2025-08-26T00:00:00.000000Z&quot;,
-            &quot;start_time&quot;: &quot;2025-08-31T09:00:00.000000Z&quot;,
-            &quot;end_time&quot;: &quot;2025-08-31T10:30:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;2025-09-08T09:00:00.000000Z&quot;,
+            &quot;end_time&quot;: &quot;2025-09-08T10:30:00.000000Z&quot;,
             &quot;room&quot;: &quot;Room 101&quot;,
             &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -16905,8 +16759,8 @@ access-control-allow-origin: *
             &quot;subject_id&quot;: 3,
             &quot;teacher_id&quot;: 4,
             &quot;date&quot;: &quot;2025-08-26T00:00:00.000000Z&quot;,
-            &quot;start_time&quot;: &quot;2025-08-31T14:00:00.000000Z&quot;,
-            &quot;end_time&quot;: &quot;2025-08-31T15:30:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;2025-09-08T14:00:00.000000Z&quot;,
+            &quot;end_time&quot;: &quot;2025-09-08T15:30:00.000000Z&quot;,
             &quot;room&quot;: &quot;Room 101&quot;,
             &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -16977,8 +16831,8 @@ access-control-allow-origin: *
             &quot;subject_id&quot;: 1,
             &quot;teacher_id&quot;: 4,
             &quot;date&quot;: &quot;2025-08-26T00:00:00.000000Z&quot;,
-            &quot;start_time&quot;: &quot;2025-08-31T14:00:00.000000Z&quot;,
-            &quot;end_time&quot;: &quot;2025-08-31T15:30:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;2025-09-08T14:00:00.000000Z&quot;,
+            &quot;end_time&quot;: &quot;2025-09-08T15:30:00.000000Z&quot;,
             &quot;room&quot;: &quot;Room 101&quot;,
             &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -17049,8 +16903,8 @@ access-control-allow-origin: *
             &quot;subject_id&quot;: 4,
             &quot;teacher_id&quot;: 4,
             &quot;date&quot;: &quot;2025-08-26T00:00:00.000000Z&quot;,
-            &quot;start_time&quot;: &quot;2025-08-31T14:00:00.000000Z&quot;,
-            &quot;end_time&quot;: &quot;2025-08-31T15:30:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;2025-09-08T14:00:00.000000Z&quot;,
+            &quot;end_time&quot;: &quot;2025-09-08T15:30:00.000000Z&quot;,
             &quot;room&quot;: &quot;Room 101&quot;,
             &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -17121,8 +16975,8 @@ access-control-allow-origin: *
             &quot;subject_id&quot;: 3,
             &quot;teacher_id&quot;: 4,
             &quot;date&quot;: &quot;2025-08-26T00:00:00.000000Z&quot;,
-            &quot;start_time&quot;: &quot;2025-08-31T14:00:00.000000Z&quot;,
-            &quot;end_time&quot;: &quot;2025-08-31T15:30:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;2025-09-08T14:00:00.000000Z&quot;,
+            &quot;end_time&quot;: &quot;2025-09-08T15:30:00.000000Z&quot;,
             &quot;room&quot;: &quot;Room 101&quot;,
             &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -17193,8 +17047,8 @@ access-control-allow-origin: *
             &quot;subject_id&quot;: 5,
             &quot;teacher_id&quot;: 4,
             &quot;date&quot;: &quot;2025-08-26T00:00:00.000000Z&quot;,
-            &quot;start_time&quot;: &quot;2025-08-31T14:00:00.000000Z&quot;,
-            &quot;end_time&quot;: &quot;2025-08-31T15:30:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;2025-09-08T14:00:00.000000Z&quot;,
+            &quot;end_time&quot;: &quot;2025-09-08T15:30:00.000000Z&quot;,
             &quot;room&quot;: &quot;Room 101&quot;,
             &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -17265,8 +17119,8 @@ access-control-allow-origin: *
             &quot;subject_id&quot;: 4,
             &quot;teacher_id&quot;: 4,
             &quot;date&quot;: &quot;2025-08-26T00:00:00.000000Z&quot;,
-            &quot;start_time&quot;: &quot;2025-08-31T14:00:00.000000Z&quot;,
-            &quot;end_time&quot;: &quot;2025-08-31T15:30:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;2025-09-08T14:00:00.000000Z&quot;,
+            &quot;end_time&quot;: &quot;2025-09-08T15:30:00.000000Z&quot;,
             &quot;room&quot;: &quot;Room 101&quot;,
             &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -17337,8 +17191,8 @@ access-control-allow-origin: *
             &quot;subject_id&quot;: 1,
             &quot;teacher_id&quot;: 4,
             &quot;date&quot;: &quot;2025-08-26T00:00:00.000000Z&quot;,
-            &quot;start_time&quot;: &quot;2025-08-31T14:00:00.000000Z&quot;,
-            &quot;end_time&quot;: &quot;2025-08-31T15:30:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;2025-09-08T14:00:00.000000Z&quot;,
+            &quot;end_time&quot;: &quot;2025-09-08T15:30:00.000000Z&quot;,
             &quot;room&quot;: &quot;Room 101&quot;,
             &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -17409,8 +17263,8 @@ access-control-allow-origin: *
             &quot;subject_id&quot;: 5,
             &quot;teacher_id&quot;: 4,
             &quot;date&quot;: &quot;2025-08-26T00:00:00.000000Z&quot;,
-            &quot;start_time&quot;: &quot;2025-08-31T14:00:00.000000Z&quot;,
-            &quot;end_time&quot;: &quot;2025-08-31T15:30:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;2025-09-08T14:00:00.000000Z&quot;,
+            &quot;end_time&quot;: &quot;2025-09-08T15:30:00.000000Z&quot;,
             &quot;room&quot;: &quot;Room 101&quot;,
             &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -17481,8 +17335,8 @@ access-control-allow-origin: *
             &quot;subject_id&quot;: 2,
             &quot;teacher_id&quot;: 5,
             &quot;date&quot;: &quot;2025-08-26T00:00:00.000000Z&quot;,
-            &quot;start_time&quot;: &quot;2025-08-31T14:00:00.000000Z&quot;,
-            &quot;end_time&quot;: &quot;2025-08-31T15:30:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;2025-09-08T14:00:00.000000Z&quot;,
+            &quot;end_time&quot;: &quot;2025-09-08T15:30:00.000000Z&quot;,
             &quot;room&quot;: &quot;Room 102&quot;,
             &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -17553,8 +17407,8 @@ access-control-allow-origin: *
             &quot;subject_id&quot;: 2,
             &quot;teacher_id&quot;: 5,
             &quot;date&quot;: &quot;2025-08-26T00:00:00.000000Z&quot;,
-            &quot;start_time&quot;: &quot;2025-08-31T14:00:00.000000Z&quot;,
-            &quot;end_time&quot;: &quot;2025-08-31T15:30:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;2025-09-08T14:00:00.000000Z&quot;,
+            &quot;end_time&quot;: &quot;2025-09-08T15:30:00.000000Z&quot;,
             &quot;room&quot;: &quot;Room 102&quot;,
             &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -17625,8 +17479,8 @@ access-control-allow-origin: *
             &quot;subject_id&quot;: 3,
             &quot;teacher_id&quot;: 4,
             &quot;date&quot;: &quot;2025-08-27T00:00:00.000000Z&quot;,
-            &quot;start_time&quot;: &quot;2025-08-31T09:00:00.000000Z&quot;,
-            &quot;end_time&quot;: &quot;2025-08-31T10:30:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;2025-09-08T09:00:00.000000Z&quot;,
+            &quot;end_time&quot;: &quot;2025-09-08T10:30:00.000000Z&quot;,
             &quot;room&quot;: &quot;Room 101&quot;,
             &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -17697,8 +17551,8 @@ access-control-allow-origin: *
             &quot;subject_id&quot;: 1,
             &quot;teacher_id&quot;: 4,
             &quot;date&quot;: &quot;2025-08-27T00:00:00.000000Z&quot;,
-            &quot;start_time&quot;: &quot;2025-08-31T09:00:00.000000Z&quot;,
-            &quot;end_time&quot;: &quot;2025-08-31T10:30:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;2025-09-08T09:00:00.000000Z&quot;,
+            &quot;end_time&quot;: &quot;2025-09-08T10:30:00.000000Z&quot;,
             &quot;room&quot;: &quot;Room 101&quot;,
             &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -17769,8 +17623,8 @@ access-control-allow-origin: *
             &quot;subject_id&quot;: 5,
             &quot;teacher_id&quot;: 4,
             &quot;date&quot;: &quot;2025-08-27T00:00:00.000000Z&quot;,
-            &quot;start_time&quot;: &quot;2025-08-31T09:00:00.000000Z&quot;,
-            &quot;end_time&quot;: &quot;2025-08-31T10:30:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;2025-09-08T09:00:00.000000Z&quot;,
+            &quot;end_time&quot;: &quot;2025-09-08T10:30:00.000000Z&quot;,
             &quot;room&quot;: &quot;Room 101&quot;,
             &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -17841,8 +17695,8 @@ access-control-allow-origin: *
             &quot;subject_id&quot;: 4,
             &quot;teacher_id&quot;: 4,
             &quot;date&quot;: &quot;2025-08-27T00:00:00.000000Z&quot;,
-            &quot;start_time&quot;: &quot;2025-08-31T09:00:00.000000Z&quot;,
-            &quot;end_time&quot;: &quot;2025-08-31T10:30:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;2025-09-08T09:00:00.000000Z&quot;,
+            &quot;end_time&quot;: &quot;2025-09-08T10:30:00.000000Z&quot;,
             &quot;room&quot;: &quot;Room 101&quot;,
             &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -17913,8 +17767,8 @@ access-control-allow-origin: *
             &quot;subject_id&quot;: 3,
             &quot;teacher_id&quot;: 4,
             &quot;date&quot;: &quot;2025-08-27T00:00:00.000000Z&quot;,
-            &quot;start_time&quot;: &quot;2025-08-31T09:00:00.000000Z&quot;,
-            &quot;end_time&quot;: &quot;2025-08-31T10:30:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;2025-09-08T09:00:00.000000Z&quot;,
+            &quot;end_time&quot;: &quot;2025-09-08T10:30:00.000000Z&quot;,
             &quot;room&quot;: &quot;Room 101&quot;,
             &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -17985,8 +17839,8 @@ access-control-allow-origin: *
             &quot;subject_id&quot;: 5,
             &quot;teacher_id&quot;: 4,
             &quot;date&quot;: &quot;2025-08-27T00:00:00.000000Z&quot;,
-            &quot;start_time&quot;: &quot;2025-08-31T09:00:00.000000Z&quot;,
-            &quot;end_time&quot;: &quot;2025-08-31T10:30:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;2025-09-08T09:00:00.000000Z&quot;,
+            &quot;end_time&quot;: &quot;2025-09-08T10:30:00.000000Z&quot;,
             &quot;room&quot;: &quot;Room 101&quot;,
             &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -18057,8 +17911,8 @@ access-control-allow-origin: *
             &quot;subject_id&quot;: 2,
             &quot;teacher_id&quot;: 5,
             &quot;date&quot;: &quot;2025-08-27T00:00:00.000000Z&quot;,
-            &quot;start_time&quot;: &quot;2025-08-31T09:00:00.000000Z&quot;,
-            &quot;end_time&quot;: &quot;2025-08-31T10:30:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;2025-09-08T09:00:00.000000Z&quot;,
+            &quot;end_time&quot;: &quot;2025-09-08T10:30:00.000000Z&quot;,
             &quot;room&quot;: &quot;Room 102&quot;,
             &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -18129,8 +17983,8 @@ access-control-allow-origin: *
             &quot;subject_id&quot;: 1,
             &quot;teacher_id&quot;: 4,
             &quot;date&quot;: &quot;2025-08-27T00:00:00.000000Z&quot;,
-            &quot;start_time&quot;: &quot;2025-08-31T09:00:00.000000Z&quot;,
-            &quot;end_time&quot;: &quot;2025-08-31T10:30:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;2025-09-08T09:00:00.000000Z&quot;,
+            &quot;end_time&quot;: &quot;2025-09-08T10:30:00.000000Z&quot;,
             &quot;room&quot;: &quot;Room 101&quot;,
             &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -18201,8 +18055,8 @@ access-control-allow-origin: *
             &quot;subject_id&quot;: 2,
             &quot;teacher_id&quot;: 5,
             &quot;date&quot;: &quot;2025-08-27T00:00:00.000000Z&quot;,
-            &quot;start_time&quot;: &quot;2025-08-31T09:00:00.000000Z&quot;,
-            &quot;end_time&quot;: &quot;2025-08-31T10:30:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;2025-09-08T09:00:00.000000Z&quot;,
+            &quot;end_time&quot;: &quot;2025-09-08T10:30:00.000000Z&quot;,
             &quot;room&quot;: &quot;Room 102&quot;,
             &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -18273,8 +18127,8 @@ access-control-allow-origin: *
             &quot;subject_id&quot;: 4,
             &quot;teacher_id&quot;: 4,
             &quot;date&quot;: &quot;2025-08-27T00:00:00.000000Z&quot;,
-            &quot;start_time&quot;: &quot;2025-08-31T09:00:00.000000Z&quot;,
-            &quot;end_time&quot;: &quot;2025-08-31T10:30:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;2025-09-08T09:00:00.000000Z&quot;,
+            &quot;end_time&quot;: &quot;2025-09-08T10:30:00.000000Z&quot;,
             &quot;room&quot;: &quot;Room 101&quot;,
             &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -18345,8 +18199,8 @@ access-control-allow-origin: *
             &quot;subject_id&quot;: 4,
             &quot;teacher_id&quot;: 4,
             &quot;date&quot;: &quot;2025-08-27T00:00:00.000000Z&quot;,
-            &quot;start_time&quot;: &quot;2025-08-31T14:00:00.000000Z&quot;,
-            &quot;end_time&quot;: &quot;2025-08-31T15:30:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;2025-09-08T14:00:00.000000Z&quot;,
+            &quot;end_time&quot;: &quot;2025-09-08T15:30:00.000000Z&quot;,
             &quot;room&quot;: &quot;Room 101&quot;,
             &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -18417,8 +18271,8 @@ access-control-allow-origin: *
             &quot;subject_id&quot;: 3,
             &quot;teacher_id&quot;: 4,
             &quot;date&quot;: &quot;2025-08-27T00:00:00.000000Z&quot;,
-            &quot;start_time&quot;: &quot;2025-08-31T14:00:00.000000Z&quot;,
-            &quot;end_time&quot;: &quot;2025-08-31T15:30:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;2025-09-08T14:00:00.000000Z&quot;,
+            &quot;end_time&quot;: &quot;2025-09-08T15:30:00.000000Z&quot;,
             &quot;room&quot;: &quot;Room 101&quot;,
             &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -18489,8 +18343,8 @@ access-control-allow-origin: *
             &quot;subject_id&quot;: 4,
             &quot;teacher_id&quot;: 4,
             &quot;date&quot;: &quot;2025-08-27T00:00:00.000000Z&quot;,
-            &quot;start_time&quot;: &quot;2025-08-31T14:00:00.000000Z&quot;,
-            &quot;end_time&quot;: &quot;2025-08-31T15:30:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;2025-09-08T14:00:00.000000Z&quot;,
+            &quot;end_time&quot;: &quot;2025-09-08T15:30:00.000000Z&quot;,
             &quot;room&quot;: &quot;Room 101&quot;,
             &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -18561,8 +18415,8 @@ access-control-allow-origin: *
             &quot;subject_id&quot;: 2,
             &quot;teacher_id&quot;: 5,
             &quot;date&quot;: &quot;2025-08-27T00:00:00.000000Z&quot;,
-            &quot;start_time&quot;: &quot;2025-08-31T14:00:00.000000Z&quot;,
-            &quot;end_time&quot;: &quot;2025-08-31T15:30:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;2025-09-08T14:00:00.000000Z&quot;,
+            &quot;end_time&quot;: &quot;2025-09-08T15:30:00.000000Z&quot;,
             &quot;room&quot;: &quot;Room 102&quot;,
             &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -18633,8 +18487,8 @@ access-control-allow-origin: *
             &quot;subject_id&quot;: 5,
             &quot;teacher_id&quot;: 4,
             &quot;date&quot;: &quot;2025-08-27T00:00:00.000000Z&quot;,
-            &quot;start_time&quot;: &quot;2025-08-31T14:00:00.000000Z&quot;,
-            &quot;end_time&quot;: &quot;2025-08-31T15:30:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;2025-09-08T14:00:00.000000Z&quot;,
+            &quot;end_time&quot;: &quot;2025-09-08T15:30:00.000000Z&quot;,
             &quot;room&quot;: &quot;Room 101&quot;,
             &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -18705,8 +18559,8 @@ access-control-allow-origin: *
             &quot;subject_id&quot;: 1,
             &quot;teacher_id&quot;: 4,
             &quot;date&quot;: &quot;2025-08-27T00:00:00.000000Z&quot;,
-            &quot;start_time&quot;: &quot;2025-08-31T14:00:00.000000Z&quot;,
-            &quot;end_time&quot;: &quot;2025-08-31T15:30:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;2025-09-08T14:00:00.000000Z&quot;,
+            &quot;end_time&quot;: &quot;2025-09-08T15:30:00.000000Z&quot;,
             &quot;room&quot;: &quot;Room 101&quot;,
             &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -18777,8 +18631,8 @@ access-control-allow-origin: *
             &quot;subject_id&quot;: 2,
             &quot;teacher_id&quot;: 5,
             &quot;date&quot;: &quot;2025-08-27T00:00:00.000000Z&quot;,
-            &quot;start_time&quot;: &quot;2025-08-31T14:00:00.000000Z&quot;,
-            &quot;end_time&quot;: &quot;2025-08-31T15:30:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;2025-09-08T14:00:00.000000Z&quot;,
+            &quot;end_time&quot;: &quot;2025-09-08T15:30:00.000000Z&quot;,
             &quot;room&quot;: &quot;Room 102&quot;,
             &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -18849,8 +18703,8 @@ access-control-allow-origin: *
             &quot;subject_id&quot;: 5,
             &quot;teacher_id&quot;: 4,
             &quot;date&quot;: &quot;2025-08-27T00:00:00.000000Z&quot;,
-            &quot;start_time&quot;: &quot;2025-08-31T14:00:00.000000Z&quot;,
-            &quot;end_time&quot;: &quot;2025-08-31T15:30:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;2025-09-08T14:00:00.000000Z&quot;,
+            &quot;end_time&quot;: &quot;2025-09-08T15:30:00.000000Z&quot;,
             &quot;room&quot;: &quot;Room 101&quot;,
             &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -18921,8 +18775,8 @@ access-control-allow-origin: *
             &quot;subject_id&quot;: 1,
             &quot;teacher_id&quot;: 4,
             &quot;date&quot;: &quot;2025-08-27T00:00:00.000000Z&quot;,
-            &quot;start_time&quot;: &quot;2025-08-31T14:00:00.000000Z&quot;,
-            &quot;end_time&quot;: &quot;2025-08-31T15:30:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;2025-09-08T14:00:00.000000Z&quot;,
+            &quot;end_time&quot;: &quot;2025-09-08T15:30:00.000000Z&quot;,
             &quot;room&quot;: &quot;Room 101&quot;,
             &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -18993,8 +18847,8 @@ access-control-allow-origin: *
             &quot;subject_id&quot;: 3,
             &quot;teacher_id&quot;: 4,
             &quot;date&quot;: &quot;2025-08-27T00:00:00.000000Z&quot;,
-            &quot;start_time&quot;: &quot;2025-08-31T14:00:00.000000Z&quot;,
-            &quot;end_time&quot;: &quot;2025-08-31T15:30:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;2025-09-08T14:00:00.000000Z&quot;,
+            &quot;end_time&quot;: &quot;2025-09-08T15:30:00.000000Z&quot;,
             &quot;room&quot;: &quot;Room 101&quot;,
             &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -19065,8 +18919,8 @@ access-control-allow-origin: *
             &quot;subject_id&quot;: 5,
             &quot;teacher_id&quot;: 4,
             &quot;date&quot;: &quot;2025-08-28T00:00:00.000000Z&quot;,
-            &quot;start_time&quot;: &quot;2025-08-31T09:00:00.000000Z&quot;,
-            &quot;end_time&quot;: &quot;2025-08-31T10:30:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;2025-09-08T09:00:00.000000Z&quot;,
+            &quot;end_time&quot;: &quot;2025-09-08T10:30:00.000000Z&quot;,
             &quot;room&quot;: &quot;Room 101&quot;,
             &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -19137,8 +18991,8 @@ access-control-allow-origin: *
             &quot;subject_id&quot;: 1,
             &quot;teacher_id&quot;: 4,
             &quot;date&quot;: &quot;2025-08-28T00:00:00.000000Z&quot;,
-            &quot;start_time&quot;: &quot;2025-08-31T09:00:00.000000Z&quot;,
-            &quot;end_time&quot;: &quot;2025-08-31T10:30:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;2025-09-08T09:00:00.000000Z&quot;,
+            &quot;end_time&quot;: &quot;2025-09-08T10:30:00.000000Z&quot;,
             &quot;room&quot;: &quot;Room 101&quot;,
             &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -19209,8 +19063,8 @@ access-control-allow-origin: *
             &quot;subject_id&quot;: 4,
             &quot;teacher_id&quot;: 4,
             &quot;date&quot;: &quot;2025-08-28T00:00:00.000000Z&quot;,
-            &quot;start_time&quot;: &quot;2025-08-31T09:00:00.000000Z&quot;,
-            &quot;end_time&quot;: &quot;2025-08-31T10:30:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;2025-09-08T09:00:00.000000Z&quot;,
+            &quot;end_time&quot;: &quot;2025-09-08T10:30:00.000000Z&quot;,
             &quot;room&quot;: &quot;Room 101&quot;,
             &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -19281,8 +19135,8 @@ access-control-allow-origin: *
             &quot;subject_id&quot;: 4,
             &quot;teacher_id&quot;: 4,
             &quot;date&quot;: &quot;2025-08-28T00:00:00.000000Z&quot;,
-            &quot;start_time&quot;: &quot;2025-08-31T09:00:00.000000Z&quot;,
-            &quot;end_time&quot;: &quot;2025-08-31T10:30:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;2025-09-08T09:00:00.000000Z&quot;,
+            &quot;end_time&quot;: &quot;2025-09-08T10:30:00.000000Z&quot;,
             &quot;room&quot;: &quot;Room 101&quot;,
             &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -19353,8 +19207,8 @@ access-control-allow-origin: *
             &quot;subject_id&quot;: 5,
             &quot;teacher_id&quot;: 4,
             &quot;date&quot;: &quot;2025-08-28T00:00:00.000000Z&quot;,
-            &quot;start_time&quot;: &quot;2025-08-31T09:00:00.000000Z&quot;,
-            &quot;end_time&quot;: &quot;2025-08-31T10:30:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;2025-09-08T09:00:00.000000Z&quot;,
+            &quot;end_time&quot;: &quot;2025-09-08T10:30:00.000000Z&quot;,
             &quot;room&quot;: &quot;Room 101&quot;,
             &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -19425,8 +19279,8 @@ access-control-allow-origin: *
             &quot;subject_id&quot;: 2,
             &quot;teacher_id&quot;: 5,
             &quot;date&quot;: &quot;2025-08-28T00:00:00.000000Z&quot;,
-            &quot;start_time&quot;: &quot;2025-08-31T09:00:00.000000Z&quot;,
-            &quot;end_time&quot;: &quot;2025-08-31T10:30:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;2025-09-08T09:00:00.000000Z&quot;,
+            &quot;end_time&quot;: &quot;2025-09-08T10:30:00.000000Z&quot;,
             &quot;room&quot;: &quot;Room 102&quot;,
             &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -19497,8 +19351,8 @@ access-control-allow-origin: *
             &quot;subject_id&quot;: 2,
             &quot;teacher_id&quot;: 5,
             &quot;date&quot;: &quot;2025-08-28T00:00:00.000000Z&quot;,
-            &quot;start_time&quot;: &quot;2025-08-31T09:00:00.000000Z&quot;,
-            &quot;end_time&quot;: &quot;2025-08-31T10:30:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;2025-09-08T09:00:00.000000Z&quot;,
+            &quot;end_time&quot;: &quot;2025-09-08T10:30:00.000000Z&quot;,
             &quot;room&quot;: &quot;Room 102&quot;,
             &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -19569,8 +19423,8 @@ access-control-allow-origin: *
             &quot;subject_id&quot;: 3,
             &quot;teacher_id&quot;: 4,
             &quot;date&quot;: &quot;2025-08-28T00:00:00.000000Z&quot;,
-            &quot;start_time&quot;: &quot;2025-08-31T09:00:00.000000Z&quot;,
-            &quot;end_time&quot;: &quot;2025-08-31T10:30:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;2025-09-08T09:00:00.000000Z&quot;,
+            &quot;end_time&quot;: &quot;2025-09-08T10:30:00.000000Z&quot;,
             &quot;room&quot;: &quot;Room 101&quot;,
             &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -19641,8 +19495,8 @@ access-control-allow-origin: *
             &quot;subject_id&quot;: 1,
             &quot;teacher_id&quot;: 4,
             &quot;date&quot;: &quot;2025-08-28T00:00:00.000000Z&quot;,
-            &quot;start_time&quot;: &quot;2025-08-31T09:00:00.000000Z&quot;,
-            &quot;end_time&quot;: &quot;2025-08-31T10:30:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;2025-09-08T09:00:00.000000Z&quot;,
+            &quot;end_time&quot;: &quot;2025-09-08T10:30:00.000000Z&quot;,
             &quot;room&quot;: &quot;Room 101&quot;,
             &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -19713,8 +19567,8 @@ access-control-allow-origin: *
             &quot;subject_id&quot;: 3,
             &quot;teacher_id&quot;: 4,
             &quot;date&quot;: &quot;2025-08-28T00:00:00.000000Z&quot;,
-            &quot;start_time&quot;: &quot;2025-08-31T09:00:00.000000Z&quot;,
-            &quot;end_time&quot;: &quot;2025-08-31T10:30:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;2025-09-08T09:00:00.000000Z&quot;,
+            &quot;end_time&quot;: &quot;2025-09-08T10:30:00.000000Z&quot;,
             &quot;room&quot;: &quot;Room 101&quot;,
             &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -19785,8 +19639,8 @@ access-control-allow-origin: *
             &quot;subject_id&quot;: 5,
             &quot;teacher_id&quot;: 4,
             &quot;date&quot;: &quot;2025-08-28T00:00:00.000000Z&quot;,
-            &quot;start_time&quot;: &quot;2025-08-31T14:00:00.000000Z&quot;,
-            &quot;end_time&quot;: &quot;2025-08-31T15:30:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;2025-09-08T14:00:00.000000Z&quot;,
+            &quot;end_time&quot;: &quot;2025-09-08T15:30:00.000000Z&quot;,
             &quot;room&quot;: &quot;Room 101&quot;,
             &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -19857,8 +19711,8 @@ access-control-allow-origin: *
             &quot;subject_id&quot;: 2,
             &quot;teacher_id&quot;: 5,
             &quot;date&quot;: &quot;2025-08-28T00:00:00.000000Z&quot;,
-            &quot;start_time&quot;: &quot;2025-08-31T14:00:00.000000Z&quot;,
-            &quot;end_time&quot;: &quot;2025-08-31T15:30:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;2025-09-08T14:00:00.000000Z&quot;,
+            &quot;end_time&quot;: &quot;2025-09-08T15:30:00.000000Z&quot;,
             &quot;room&quot;: &quot;Room 102&quot;,
             &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -19929,8 +19783,8 @@ access-control-allow-origin: *
             &quot;subject_id&quot;: 1,
             &quot;teacher_id&quot;: 4,
             &quot;date&quot;: &quot;2025-08-28T00:00:00.000000Z&quot;,
-            &quot;start_time&quot;: &quot;2025-08-31T14:00:00.000000Z&quot;,
-            &quot;end_time&quot;: &quot;2025-08-31T15:30:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;2025-09-08T14:00:00.000000Z&quot;,
+            &quot;end_time&quot;: &quot;2025-09-08T15:30:00.000000Z&quot;,
             &quot;room&quot;: &quot;Room 101&quot;,
             &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -20001,8 +19855,8 @@ access-control-allow-origin: *
             &quot;subject_id&quot;: 3,
             &quot;teacher_id&quot;: 4,
             &quot;date&quot;: &quot;2025-08-28T00:00:00.000000Z&quot;,
-            &quot;start_time&quot;: &quot;2025-08-31T14:00:00.000000Z&quot;,
-            &quot;end_time&quot;: &quot;2025-08-31T15:30:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;2025-09-08T14:00:00.000000Z&quot;,
+            &quot;end_time&quot;: &quot;2025-09-08T15:30:00.000000Z&quot;,
             &quot;room&quot;: &quot;Room 101&quot;,
             &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -20073,8 +19927,8 @@ access-control-allow-origin: *
             &quot;subject_id&quot;: 4,
             &quot;teacher_id&quot;: 4,
             &quot;date&quot;: &quot;2025-08-28T00:00:00.000000Z&quot;,
-            &quot;start_time&quot;: &quot;2025-08-31T14:00:00.000000Z&quot;,
-            &quot;end_time&quot;: &quot;2025-08-31T15:30:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;2025-09-08T14:00:00.000000Z&quot;,
+            &quot;end_time&quot;: &quot;2025-09-08T15:30:00.000000Z&quot;,
             &quot;room&quot;: &quot;Room 101&quot;,
             &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -20145,8 +19999,8 @@ access-control-allow-origin: *
             &quot;subject_id&quot;: 3,
             &quot;teacher_id&quot;: 4,
             &quot;date&quot;: &quot;2025-08-28T00:00:00.000000Z&quot;,
-            &quot;start_time&quot;: &quot;2025-08-31T14:00:00.000000Z&quot;,
-            &quot;end_time&quot;: &quot;2025-08-31T15:30:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;2025-09-08T14:00:00.000000Z&quot;,
+            &quot;end_time&quot;: &quot;2025-09-08T15:30:00.000000Z&quot;,
             &quot;room&quot;: &quot;Room 101&quot;,
             &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -20217,8 +20071,8 @@ access-control-allow-origin: *
             &quot;subject_id&quot;: 4,
             &quot;teacher_id&quot;: 4,
             &quot;date&quot;: &quot;2025-08-28T00:00:00.000000Z&quot;,
-            &quot;start_time&quot;: &quot;2025-08-31T14:00:00.000000Z&quot;,
-            &quot;end_time&quot;: &quot;2025-08-31T15:30:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;2025-09-08T14:00:00.000000Z&quot;,
+            &quot;end_time&quot;: &quot;2025-09-08T15:30:00.000000Z&quot;,
             &quot;room&quot;: &quot;Room 101&quot;,
             &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -20289,8 +20143,8 @@ access-control-allow-origin: *
             &quot;subject_id&quot;: 2,
             &quot;teacher_id&quot;: 5,
             &quot;date&quot;: &quot;2025-08-28T00:00:00.000000Z&quot;,
-            &quot;start_time&quot;: &quot;2025-08-31T14:00:00.000000Z&quot;,
-            &quot;end_time&quot;: &quot;2025-08-31T15:30:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;2025-09-08T14:00:00.000000Z&quot;,
+            &quot;end_time&quot;: &quot;2025-09-08T15:30:00.000000Z&quot;,
             &quot;room&quot;: &quot;Room 102&quot;,
             &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -20361,8 +20215,8 @@ access-control-allow-origin: *
             &quot;subject_id&quot;: 1,
             &quot;teacher_id&quot;: 4,
             &quot;date&quot;: &quot;2025-08-28T00:00:00.000000Z&quot;,
-            &quot;start_time&quot;: &quot;2025-08-31T14:00:00.000000Z&quot;,
-            &quot;end_time&quot;: &quot;2025-08-31T15:30:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;2025-09-08T14:00:00.000000Z&quot;,
+            &quot;end_time&quot;: &quot;2025-09-08T15:30:00.000000Z&quot;,
             &quot;room&quot;: &quot;Room 101&quot;,
             &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -20433,8 +20287,8 @@ access-control-allow-origin: *
             &quot;subject_id&quot;: 5,
             &quot;teacher_id&quot;: 4,
             &quot;date&quot;: &quot;2025-08-28T00:00:00.000000Z&quot;,
-            &quot;start_time&quot;: &quot;2025-08-31T14:00:00.000000Z&quot;,
-            &quot;end_time&quot;: &quot;2025-08-31T15:30:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;2025-09-08T14:00:00.000000Z&quot;,
+            &quot;end_time&quot;: &quot;2025-09-08T15:30:00.000000Z&quot;,
             &quot;room&quot;: &quot;Room 101&quot;,
             &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -20505,8 +20359,8 @@ access-control-allow-origin: *
             &quot;subject_id&quot;: 5,
             &quot;teacher_id&quot;: 4,
             &quot;date&quot;: &quot;2025-08-29T00:00:00.000000Z&quot;,
-            &quot;start_time&quot;: &quot;2025-08-31T09:00:00.000000Z&quot;,
-            &quot;end_time&quot;: &quot;2025-08-31T10:30:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;2025-09-08T09:00:00.000000Z&quot;,
+            &quot;end_time&quot;: &quot;2025-09-08T10:30:00.000000Z&quot;,
             &quot;room&quot;: &quot;Room 101&quot;,
             &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -20577,8 +20431,8 @@ access-control-allow-origin: *
             &quot;subject_id&quot;: 3,
             &quot;teacher_id&quot;: 4,
             &quot;date&quot;: &quot;2025-08-29T00:00:00.000000Z&quot;,
-            &quot;start_time&quot;: &quot;2025-08-31T09:00:00.000000Z&quot;,
-            &quot;end_time&quot;: &quot;2025-08-31T10:30:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;2025-09-08T09:00:00.000000Z&quot;,
+            &quot;end_time&quot;: &quot;2025-09-08T10:30:00.000000Z&quot;,
             &quot;room&quot;: &quot;Room 101&quot;,
             &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -20649,8 +20503,8 @@ access-control-allow-origin: *
             &quot;subject_id&quot;: 2,
             &quot;teacher_id&quot;: 5,
             &quot;date&quot;: &quot;2025-08-29T00:00:00.000000Z&quot;,
-            &quot;start_time&quot;: &quot;2025-08-31T09:00:00.000000Z&quot;,
-            &quot;end_time&quot;: &quot;2025-08-31T10:30:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;2025-09-08T09:00:00.000000Z&quot;,
+            &quot;end_time&quot;: &quot;2025-09-08T10:30:00.000000Z&quot;,
             &quot;room&quot;: &quot;Room 102&quot;,
             &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -20721,8 +20575,8 @@ access-control-allow-origin: *
             &quot;subject_id&quot;: 4,
             &quot;teacher_id&quot;: 4,
             &quot;date&quot;: &quot;2025-08-29T00:00:00.000000Z&quot;,
-            &quot;start_time&quot;: &quot;2025-08-31T09:00:00.000000Z&quot;,
-            &quot;end_time&quot;: &quot;2025-08-31T10:30:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;2025-09-08T09:00:00.000000Z&quot;,
+            &quot;end_time&quot;: &quot;2025-09-08T10:30:00.000000Z&quot;,
             &quot;room&quot;: &quot;Room 101&quot;,
             &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -20793,8 +20647,8 @@ access-control-allow-origin: *
             &quot;subject_id&quot;: 3,
             &quot;teacher_id&quot;: 4,
             &quot;date&quot;: &quot;2025-08-29T00:00:00.000000Z&quot;,
-            &quot;start_time&quot;: &quot;2025-08-31T09:00:00.000000Z&quot;,
-            &quot;end_time&quot;: &quot;2025-08-31T10:30:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;2025-09-08T09:00:00.000000Z&quot;,
+            &quot;end_time&quot;: &quot;2025-09-08T10:30:00.000000Z&quot;,
             &quot;room&quot;: &quot;Room 101&quot;,
             &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -20865,8 +20719,8 @@ access-control-allow-origin: *
             &quot;subject_id&quot;: 1,
             &quot;teacher_id&quot;: 4,
             &quot;date&quot;: &quot;2025-08-29T00:00:00.000000Z&quot;,
-            &quot;start_time&quot;: &quot;2025-08-31T09:00:00.000000Z&quot;,
-            &quot;end_time&quot;: &quot;2025-08-31T10:30:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;2025-09-08T09:00:00.000000Z&quot;,
+            &quot;end_time&quot;: &quot;2025-09-08T10:30:00.000000Z&quot;,
             &quot;room&quot;: &quot;Room 101&quot;,
             &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -20937,8 +20791,8 @@ access-control-allow-origin: *
             &quot;subject_id&quot;: 1,
             &quot;teacher_id&quot;: 4,
             &quot;date&quot;: &quot;2025-08-29T00:00:00.000000Z&quot;,
-            &quot;start_time&quot;: &quot;2025-08-31T09:00:00.000000Z&quot;,
-            &quot;end_time&quot;: &quot;2025-08-31T10:30:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;2025-09-08T09:00:00.000000Z&quot;,
+            &quot;end_time&quot;: &quot;2025-09-08T10:30:00.000000Z&quot;,
             &quot;room&quot;: &quot;Room 101&quot;,
             &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -21009,8 +20863,8 @@ access-control-allow-origin: *
             &quot;subject_id&quot;: 5,
             &quot;teacher_id&quot;: 4,
             &quot;date&quot;: &quot;2025-08-29T00:00:00.000000Z&quot;,
-            &quot;start_time&quot;: &quot;2025-08-31T09:00:00.000000Z&quot;,
-            &quot;end_time&quot;: &quot;2025-08-31T10:30:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;2025-09-08T09:00:00.000000Z&quot;,
+            &quot;end_time&quot;: &quot;2025-09-08T10:30:00.000000Z&quot;,
             &quot;room&quot;: &quot;Room 101&quot;,
             &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -21081,8 +20935,8 @@ access-control-allow-origin: *
             &quot;subject_id&quot;: 4,
             &quot;teacher_id&quot;: 4,
             &quot;date&quot;: &quot;2025-08-29T00:00:00.000000Z&quot;,
-            &quot;start_time&quot;: &quot;2025-08-31T09:00:00.000000Z&quot;,
-            &quot;end_time&quot;: &quot;2025-08-31T10:30:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;2025-09-08T09:00:00.000000Z&quot;,
+            &quot;end_time&quot;: &quot;2025-09-08T10:30:00.000000Z&quot;,
             &quot;room&quot;: &quot;Room 101&quot;,
             &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -21153,8 +21007,8 @@ access-control-allow-origin: *
             &quot;subject_id&quot;: 2,
             &quot;teacher_id&quot;: 5,
             &quot;date&quot;: &quot;2025-08-29T00:00:00.000000Z&quot;,
-            &quot;start_time&quot;: &quot;2025-08-31T09:00:00.000000Z&quot;,
-            &quot;end_time&quot;: &quot;2025-08-31T10:30:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;2025-09-08T09:00:00.000000Z&quot;,
+            &quot;end_time&quot;: &quot;2025-09-08T10:30:00.000000Z&quot;,
             &quot;room&quot;: &quot;Room 102&quot;,
             &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -21225,8 +21079,8 @@ access-control-allow-origin: *
             &quot;subject_id&quot;: 1,
             &quot;teacher_id&quot;: 4,
             &quot;date&quot;: &quot;2025-08-29T00:00:00.000000Z&quot;,
-            &quot;start_time&quot;: &quot;2025-08-31T14:00:00.000000Z&quot;,
-            &quot;end_time&quot;: &quot;2025-08-31T15:30:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;2025-09-08T14:00:00.000000Z&quot;,
+            &quot;end_time&quot;: &quot;2025-09-08T15:30:00.000000Z&quot;,
             &quot;room&quot;: &quot;Room 101&quot;,
             &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -21297,8 +21151,8 @@ access-control-allow-origin: *
             &quot;subject_id&quot;: 2,
             &quot;teacher_id&quot;: 5,
             &quot;date&quot;: &quot;2025-08-29T00:00:00.000000Z&quot;,
-            &quot;start_time&quot;: &quot;2025-08-31T14:00:00.000000Z&quot;,
-            &quot;end_time&quot;: &quot;2025-08-31T15:30:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;2025-09-08T14:00:00.000000Z&quot;,
+            &quot;end_time&quot;: &quot;2025-09-08T15:30:00.000000Z&quot;,
             &quot;room&quot;: &quot;Room 102&quot;,
             &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -21369,8 +21223,8 @@ access-control-allow-origin: *
             &quot;subject_id&quot;: 2,
             &quot;teacher_id&quot;: 5,
             &quot;date&quot;: &quot;2025-08-29T00:00:00.000000Z&quot;,
-            &quot;start_time&quot;: &quot;2025-08-31T14:00:00.000000Z&quot;,
-            &quot;end_time&quot;: &quot;2025-08-31T15:30:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;2025-09-08T14:00:00.000000Z&quot;,
+            &quot;end_time&quot;: &quot;2025-09-08T15:30:00.000000Z&quot;,
             &quot;room&quot;: &quot;Room 102&quot;,
             &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -21441,8 +21295,8 @@ access-control-allow-origin: *
             &quot;subject_id&quot;: 5,
             &quot;teacher_id&quot;: 4,
             &quot;date&quot;: &quot;2025-08-29T00:00:00.000000Z&quot;,
-            &quot;start_time&quot;: &quot;2025-08-31T14:00:00.000000Z&quot;,
-            &quot;end_time&quot;: &quot;2025-08-31T15:30:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;2025-09-08T14:00:00.000000Z&quot;,
+            &quot;end_time&quot;: &quot;2025-09-08T15:30:00.000000Z&quot;,
             &quot;room&quot;: &quot;Room 101&quot;,
             &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -21513,8 +21367,8 @@ access-control-allow-origin: *
             &quot;subject_id&quot;: 3,
             &quot;teacher_id&quot;: 4,
             &quot;date&quot;: &quot;2025-08-29T00:00:00.000000Z&quot;,
-            &quot;start_time&quot;: &quot;2025-08-31T14:00:00.000000Z&quot;,
-            &quot;end_time&quot;: &quot;2025-08-31T15:30:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;2025-09-08T14:00:00.000000Z&quot;,
+            &quot;end_time&quot;: &quot;2025-09-08T15:30:00.000000Z&quot;,
             &quot;room&quot;: &quot;Room 101&quot;,
             &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -21585,8 +21439,8 @@ access-control-allow-origin: *
             &quot;subject_id&quot;: 4,
             &quot;teacher_id&quot;: 4,
             &quot;date&quot;: &quot;2025-08-29T00:00:00.000000Z&quot;,
-            &quot;start_time&quot;: &quot;2025-08-31T14:00:00.000000Z&quot;,
-            &quot;end_time&quot;: &quot;2025-08-31T15:30:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;2025-09-08T14:00:00.000000Z&quot;,
+            &quot;end_time&quot;: &quot;2025-09-08T15:30:00.000000Z&quot;,
             &quot;room&quot;: &quot;Room 101&quot;,
             &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -21657,8 +21511,8 @@ access-control-allow-origin: *
             &quot;subject_id&quot;: 1,
             &quot;teacher_id&quot;: 4,
             &quot;date&quot;: &quot;2025-08-29T00:00:00.000000Z&quot;,
-            &quot;start_time&quot;: &quot;2025-08-31T14:00:00.000000Z&quot;,
-            &quot;end_time&quot;: &quot;2025-08-31T15:30:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;2025-09-08T14:00:00.000000Z&quot;,
+            &quot;end_time&quot;: &quot;2025-09-08T15:30:00.000000Z&quot;,
             &quot;room&quot;: &quot;Room 101&quot;,
             &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -21729,8 +21583,8 @@ access-control-allow-origin: *
             &quot;subject_id&quot;: 3,
             &quot;teacher_id&quot;: 4,
             &quot;date&quot;: &quot;2025-08-29T00:00:00.000000Z&quot;,
-            &quot;start_time&quot;: &quot;2025-08-31T14:00:00.000000Z&quot;,
-            &quot;end_time&quot;: &quot;2025-08-31T15:30:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;2025-09-08T14:00:00.000000Z&quot;,
+            &quot;end_time&quot;: &quot;2025-09-08T15:30:00.000000Z&quot;,
             &quot;room&quot;: &quot;Room 101&quot;,
             &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -21801,8 +21655,8 @@ access-control-allow-origin: *
             &quot;subject_id&quot;: 4,
             &quot;teacher_id&quot;: 4,
             &quot;date&quot;: &quot;2025-08-29T00:00:00.000000Z&quot;,
-            &quot;start_time&quot;: &quot;2025-08-31T14:00:00.000000Z&quot;,
-            &quot;end_time&quot;: &quot;2025-08-31T15:30:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;2025-09-08T14:00:00.000000Z&quot;,
+            &quot;end_time&quot;: &quot;2025-09-08T15:30:00.000000Z&quot;,
             &quot;room&quot;: &quot;Room 101&quot;,
             &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -21873,8 +21727,8 @@ access-control-allow-origin: *
             &quot;subject_id&quot;: 5,
             &quot;teacher_id&quot;: 4,
             &quot;date&quot;: &quot;2025-08-29T00:00:00.000000Z&quot;,
-            &quot;start_time&quot;: &quot;2025-08-31T14:00:00.000000Z&quot;,
-            &quot;end_time&quot;: &quot;2025-08-31T15:30:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;2025-09-08T14:00:00.000000Z&quot;,
+            &quot;end_time&quot;: &quot;2025-09-08T15:30:00.000000Z&quot;,
             &quot;room&quot;: &quot;Room 101&quot;,
             &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -22179,8 +22033,8 @@ access-control-allow-origin: *
         &quot;subject_id&quot;: 1,
         &quot;teacher_id&quot;: 4,
         &quot;date&quot;: &quot;2025-08-25T00:00:00.000000Z&quot;,
-        &quot;start_time&quot;: &quot;2025-08-31T09:00:00.000000Z&quot;,
-        &quot;end_time&quot;: &quot;2025-08-31T10:30:00.000000Z&quot;,
+        &quot;start_time&quot;: &quot;2025-09-08T09:00:00.000000Z&quot;,
+        &quot;end_time&quot;: &quot;2025-09-08T10:30:00.000000Z&quot;,
         &quot;room&quot;: &quot;Room 101&quot;,
         &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
         &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -22645,8 +22499,8 @@ access-control-allow-origin: *
             &quot;subject_id&quot;: 1,
             &quot;teacher_id&quot;: 4,
             &quot;date&quot;: &quot;2025-08-25T00:00:00.000000Z&quot;,
-            &quot;start_time&quot;: &quot;2025-08-31T09:00:00.000000Z&quot;,
-            &quot;end_time&quot;: &quot;2025-08-31T10:30:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;2025-09-08T09:00:00.000000Z&quot;,
+            &quot;end_time&quot;: &quot;2025-09-08T10:30:00.000000Z&quot;,
             &quot;room&quot;: &quot;Room 101&quot;,
             &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -22684,8 +22538,8 @@ access-control-allow-origin: *
             &quot;subject_id&quot;: 2,
             &quot;teacher_id&quot;: 5,
             &quot;date&quot;: &quot;2025-08-25T00:00:00.000000Z&quot;,
-            &quot;start_time&quot;: &quot;2025-08-31T09:00:00.000000Z&quot;,
-            &quot;end_time&quot;: &quot;2025-08-31T10:30:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;2025-09-08T09:00:00.000000Z&quot;,
+            &quot;end_time&quot;: &quot;2025-09-08T10:30:00.000000Z&quot;,
             &quot;room&quot;: &quot;Room 102&quot;,
             &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -22723,8 +22577,8 @@ access-control-allow-origin: *
             &quot;subject_id&quot;: 2,
             &quot;teacher_id&quot;: 5,
             &quot;date&quot;: &quot;2025-08-25T00:00:00.000000Z&quot;,
-            &quot;start_time&quot;: &quot;2025-08-31T14:00:00.000000Z&quot;,
-            &quot;end_time&quot;: &quot;2025-08-31T15:30:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;2025-09-08T14:00:00.000000Z&quot;,
+            &quot;end_time&quot;: &quot;2025-09-08T15:30:00.000000Z&quot;,
             &quot;room&quot;: &quot;Room 102&quot;,
             &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -22762,8 +22616,8 @@ access-control-allow-origin: *
             &quot;subject_id&quot;: 1,
             &quot;teacher_id&quot;: 4,
             &quot;date&quot;: &quot;2025-08-25T00:00:00.000000Z&quot;,
-            &quot;start_time&quot;: &quot;2025-08-31T14:00:00.000000Z&quot;,
-            &quot;end_time&quot;: &quot;2025-08-31T15:30:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;2025-09-08T14:00:00.000000Z&quot;,
+            &quot;end_time&quot;: &quot;2025-09-08T15:30:00.000000Z&quot;,
             &quot;room&quot;: &quot;Room 101&quot;,
             &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -22801,8 +22655,8 @@ access-control-allow-origin: *
             &quot;subject_id&quot;: 2,
             &quot;teacher_id&quot;: 5,
             &quot;date&quot;: &quot;2025-08-26T00:00:00.000000Z&quot;,
-            &quot;start_time&quot;: &quot;2025-08-31T09:00:00.000000Z&quot;,
-            &quot;end_time&quot;: &quot;2025-08-31T10:30:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;2025-09-08T09:00:00.000000Z&quot;,
+            &quot;end_time&quot;: &quot;2025-09-08T10:30:00.000000Z&quot;,
             &quot;room&quot;: &quot;Room 102&quot;,
             &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -22840,8 +22694,8 @@ access-control-allow-origin: *
             &quot;subject_id&quot;: 1,
             &quot;teacher_id&quot;: 4,
             &quot;date&quot;: &quot;2025-08-26T00:00:00.000000Z&quot;,
-            &quot;start_time&quot;: &quot;2025-08-31T09:00:00.000000Z&quot;,
-            &quot;end_time&quot;: &quot;2025-08-31T10:30:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;2025-09-08T09:00:00.000000Z&quot;,
+            &quot;end_time&quot;: &quot;2025-09-08T10:30:00.000000Z&quot;,
             &quot;room&quot;: &quot;Room 101&quot;,
             &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -22879,8 +22733,8 @@ access-control-allow-origin: *
             &quot;subject_id&quot;: 2,
             &quot;teacher_id&quot;: 5,
             &quot;date&quot;: &quot;2025-08-26T00:00:00.000000Z&quot;,
-            &quot;start_time&quot;: &quot;2025-08-31T14:00:00.000000Z&quot;,
-            &quot;end_time&quot;: &quot;2025-08-31T15:30:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;2025-09-08T14:00:00.000000Z&quot;,
+            &quot;end_time&quot;: &quot;2025-09-08T15:30:00.000000Z&quot;,
             &quot;room&quot;: &quot;Room 102&quot;,
             &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -22918,8 +22772,8 @@ access-control-allow-origin: *
             &quot;subject_id&quot;: 1,
             &quot;teacher_id&quot;: 4,
             &quot;date&quot;: &quot;2025-08-26T00:00:00.000000Z&quot;,
-            &quot;start_time&quot;: &quot;2025-08-31T14:00:00.000000Z&quot;,
-            &quot;end_time&quot;: &quot;2025-08-31T15:30:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;2025-09-08T14:00:00.000000Z&quot;,
+            &quot;end_time&quot;: &quot;2025-09-08T15:30:00.000000Z&quot;,
             &quot;room&quot;: &quot;Room 101&quot;,
             &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -22957,8 +22811,8 @@ access-control-allow-origin: *
             &quot;subject_id&quot;: 2,
             &quot;teacher_id&quot;: 5,
             &quot;date&quot;: &quot;2025-08-27T00:00:00.000000Z&quot;,
-            &quot;start_time&quot;: &quot;2025-08-31T09:00:00.000000Z&quot;,
-            &quot;end_time&quot;: &quot;2025-08-31T10:30:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;2025-09-08T09:00:00.000000Z&quot;,
+            &quot;end_time&quot;: &quot;2025-09-08T10:30:00.000000Z&quot;,
             &quot;room&quot;: &quot;Room 102&quot;,
             &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -22996,8 +22850,8 @@ access-control-allow-origin: *
             &quot;subject_id&quot;: 1,
             &quot;teacher_id&quot;: 4,
             &quot;date&quot;: &quot;2025-08-27T00:00:00.000000Z&quot;,
-            &quot;start_time&quot;: &quot;2025-08-31T09:00:00.000000Z&quot;,
-            &quot;end_time&quot;: &quot;2025-08-31T10:30:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;2025-09-08T09:00:00.000000Z&quot;,
+            &quot;end_time&quot;: &quot;2025-09-08T10:30:00.000000Z&quot;,
             &quot;room&quot;: &quot;Room 101&quot;,
             &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -23035,8 +22889,8 @@ access-control-allow-origin: *
             &quot;subject_id&quot;: 2,
             &quot;teacher_id&quot;: 5,
             &quot;date&quot;: &quot;2025-08-27T00:00:00.000000Z&quot;,
-            &quot;start_time&quot;: &quot;2025-08-31T14:00:00.000000Z&quot;,
-            &quot;end_time&quot;: &quot;2025-08-31T15:30:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;2025-09-08T14:00:00.000000Z&quot;,
+            &quot;end_time&quot;: &quot;2025-09-08T15:30:00.000000Z&quot;,
             &quot;room&quot;: &quot;Room 102&quot;,
             &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -23074,8 +22928,8 @@ access-control-allow-origin: *
             &quot;subject_id&quot;: 1,
             &quot;teacher_id&quot;: 4,
             &quot;date&quot;: &quot;2025-08-27T00:00:00.000000Z&quot;,
-            &quot;start_time&quot;: &quot;2025-08-31T14:00:00.000000Z&quot;,
-            &quot;end_time&quot;: &quot;2025-08-31T15:30:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;2025-09-08T14:00:00.000000Z&quot;,
+            &quot;end_time&quot;: &quot;2025-09-08T15:30:00.000000Z&quot;,
             &quot;room&quot;: &quot;Room 101&quot;,
             &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -23113,8 +22967,8 @@ access-control-allow-origin: *
             &quot;subject_id&quot;: 2,
             &quot;teacher_id&quot;: 5,
             &quot;date&quot;: &quot;2025-08-28T00:00:00.000000Z&quot;,
-            &quot;start_time&quot;: &quot;2025-08-31T09:00:00.000000Z&quot;,
-            &quot;end_time&quot;: &quot;2025-08-31T10:30:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;2025-09-08T09:00:00.000000Z&quot;,
+            &quot;end_time&quot;: &quot;2025-09-08T10:30:00.000000Z&quot;,
             &quot;room&quot;: &quot;Room 102&quot;,
             &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -23152,8 +23006,8 @@ access-control-allow-origin: *
             &quot;subject_id&quot;: 1,
             &quot;teacher_id&quot;: 4,
             &quot;date&quot;: &quot;2025-08-28T00:00:00.000000Z&quot;,
-            &quot;start_time&quot;: &quot;2025-08-31T09:00:00.000000Z&quot;,
-            &quot;end_time&quot;: &quot;2025-08-31T10:30:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;2025-09-08T09:00:00.000000Z&quot;,
+            &quot;end_time&quot;: &quot;2025-09-08T10:30:00.000000Z&quot;,
             &quot;room&quot;: &quot;Room 101&quot;,
             &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -23191,8 +23045,8 @@ access-control-allow-origin: *
             &quot;subject_id&quot;: 1,
             &quot;teacher_id&quot;: 4,
             &quot;date&quot;: &quot;2025-08-28T00:00:00.000000Z&quot;,
-            &quot;start_time&quot;: &quot;2025-08-31T14:00:00.000000Z&quot;,
-            &quot;end_time&quot;: &quot;2025-08-31T15:30:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;2025-09-08T14:00:00.000000Z&quot;,
+            &quot;end_time&quot;: &quot;2025-09-08T15:30:00.000000Z&quot;,
             &quot;room&quot;: &quot;Room 101&quot;,
             &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -23230,8 +23084,8 @@ access-control-allow-origin: *
             &quot;subject_id&quot;: 2,
             &quot;teacher_id&quot;: 5,
             &quot;date&quot;: &quot;2025-08-28T00:00:00.000000Z&quot;,
-            &quot;start_time&quot;: &quot;2025-08-31T14:00:00.000000Z&quot;,
-            &quot;end_time&quot;: &quot;2025-08-31T15:30:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;2025-09-08T14:00:00.000000Z&quot;,
+            &quot;end_time&quot;: &quot;2025-09-08T15:30:00.000000Z&quot;,
             &quot;room&quot;: &quot;Room 102&quot;,
             &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -23269,8 +23123,8 @@ access-control-allow-origin: *
             &quot;subject_id&quot;: 1,
             &quot;teacher_id&quot;: 4,
             &quot;date&quot;: &quot;2025-08-29T00:00:00.000000Z&quot;,
-            &quot;start_time&quot;: &quot;2025-08-31T09:00:00.000000Z&quot;,
-            &quot;end_time&quot;: &quot;2025-08-31T10:30:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;2025-09-08T09:00:00.000000Z&quot;,
+            &quot;end_time&quot;: &quot;2025-09-08T10:30:00.000000Z&quot;,
             &quot;room&quot;: &quot;Room 101&quot;,
             &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -23308,8 +23162,8 @@ access-control-allow-origin: *
             &quot;subject_id&quot;: 2,
             &quot;teacher_id&quot;: 5,
             &quot;date&quot;: &quot;2025-08-29T00:00:00.000000Z&quot;,
-            &quot;start_time&quot;: &quot;2025-08-31T09:00:00.000000Z&quot;,
-            &quot;end_time&quot;: &quot;2025-08-31T10:30:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;2025-09-08T09:00:00.000000Z&quot;,
+            &quot;end_time&quot;: &quot;2025-09-08T10:30:00.000000Z&quot;,
             &quot;room&quot;: &quot;Room 102&quot;,
             &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -23347,8 +23201,8 @@ access-control-allow-origin: *
             &quot;subject_id&quot;: 1,
             &quot;teacher_id&quot;: 4,
             &quot;date&quot;: &quot;2025-08-29T00:00:00.000000Z&quot;,
-            &quot;start_time&quot;: &quot;2025-08-31T14:00:00.000000Z&quot;,
-            &quot;end_time&quot;: &quot;2025-08-31T15:30:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;2025-09-08T14:00:00.000000Z&quot;,
+            &quot;end_time&quot;: &quot;2025-09-08T15:30:00.000000Z&quot;,
             &quot;room&quot;: &quot;Room 101&quot;,
             &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -23386,8 +23240,8 @@ access-control-allow-origin: *
             &quot;subject_id&quot;: 2,
             &quot;teacher_id&quot;: 5,
             &quot;date&quot;: &quot;2025-08-29T00:00:00.000000Z&quot;,
-            &quot;start_time&quot;: &quot;2025-08-31T14:00:00.000000Z&quot;,
-            &quot;end_time&quot;: &quot;2025-08-31T15:30:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;2025-09-08T14:00:00.000000Z&quot;,
+            &quot;end_time&quot;: &quot;2025-09-08T15:30:00.000000Z&quot;,
             &quot;room&quot;: &quot;Room 102&quot;,
             &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -23817,114 +23671,13 @@ access-control-allow-origin: *
     &quot;success&quot;: true,
     &quot;data&quot;: [
         {
-            &quot;id&quot;: 16,
-            &quot;name&quot;: &quot;Mondestin Myssie&quot;,
-            &quot;subject_id&quot;: 1,
-            &quot;class_id&quot;: 2,
-            &quot;exam_date&quot;: &quot;2025-08-31T00:00:00.000000Z&quot;,
-            &quot;start_time&quot;: &quot;2025-08-31T07:13:00.000000Z&quot;,
-            &quot;end_time&quot;: &quot;2025-08-31T09:18:00.000000Z&quot;,
-            &quot;instructions&quot;: &quot;hgvvhvhv hv n&quot;,
-            &quot;created_at&quot;: &quot;2025-08-31T02:15:35.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-08-31T02:15:35.000000Z&quot;,
-            &quot;lab_id&quot;: null,
-            &quot;exam_type_id&quot;: 2,
-            &quot;examiner_id&quot;: 5,
-            &quot;status&quot;: &quot;scheduled&quot;,
-            &quot;subject&quot;: {
-                &quot;id&quot;: 1,
-                &quot;course_id&quot;: 1,
-                &quot;name&quot;: &quot;Introduction to Programming&quot;,
-                &quot;code&quot;: &quot;CS101&quot;,
-                &quot;description&quot;: &quot;Basic programming concepts and practices&quot;,
-                &quot;coordinator_id&quot;: 4,
-                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
-                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
-                &quot;course&quot;: {
-                    &quot;id&quot;: 1,
-                    &quot;department_id&quot;: 1,
-                    &quot;name&quot;: &quot;Bachelor of Computer Science&quot;,
-                    &quot;code&quot;: &quot;BCS&quot;,
-                    &quot;description&quot;: &quot;Comprehensive computer science program&quot;,
-                    &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
-                    &quot;department&quot;: {
-                        &quot;id&quot;: 1,
-                        &quot;faculty_id&quot;: 1,
-                        &quot;name&quot;: &quot;Computer Science&quot;,
-                        &quot;head_id&quot;: 4,
-                        &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
-                        &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
-                        &quot;faculty&quot;: {
-                            &quot;id&quot;: 1,
-                            &quot;school_id&quot;: 1,
-                            &quot;name&quot;: &quot;Faculty of Science and Technology&quot;,
-                            &quot;description&quot;: &quot;Leading research and education in science and technology&quot;,
-                            &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
-                            &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
-                            &quot;school&quot;: {
-                                &quot;id&quot;: 1,
-                                &quot;name&quot;: &quot;Yousch International School&quot;,
-                                &quot;domain&quot;: &quot;yousch.edu&quot;,
-                                &quot;contact_info&quot;: &quot;Contact us for more information&quot;,
-                                &quot;address&quot;: &quot;123 Education Street, Knowledge City&quot;,
-                                &quot;phone&quot;: &quot;+1-555-0123&quot;,
-                                &quot;email&quot;: &quot;info@yousch.edu&quot;,
-                                &quot;website&quot;: &quot;https://www.yousch.edu&quot;,
-                                &quot;is_active&quot;: true,
-                                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
-                                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
-                            }
-                        }
-                    }
-                }
-            },
-            &quot;class_room&quot;: {
-                &quot;id&quot;: 2,
-                &quot;campus_id&quot;: 1,
-                &quot;course_id&quot;: 1,
-                &quot;name&quot;: &quot;BCS - Class B&quot;,
-                &quot;capacity&quot;: 25,
-                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
-                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
-                &quot;campus&quot;: {
-                    &quot;id&quot;: 1,
-                    &quot;school_id&quot;: 1,
-                    &quot;name&quot;: &quot;Main Campus&quot;,
-                    &quot;address&quot;: &quot;123 Education Street, Knowledge City&quot;,
-                    &quot;phone&quot;: &quot;+1-555-0123&quot;,
-                    &quot;email&quot;: &quot;main@yousch.edu&quot;,
-                    &quot;is_active&quot;: true,
-                    &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
-                }
-            },
-            &quot;examiner&quot;: {
-                &quot;id&quot;: 5,
-                &quot;name&quot;: &quot;Prof. Michael Chen&quot;,
-                &quot;email&quot;: &quot;michael.chen@yousch.edu&quot;,
-                &quot;email_verified_at&quot;: &quot;2025-08-31T00:54:38.000000Z&quot;,
-                &quot;created_at&quot;: &quot;2025-08-31T00:54:38.000000Z&quot;,
-                &quot;updated_at&quot;: &quot;2025-08-31T00:54:38.000000Z&quot;
-            },
-            &quot;exam_type&quot;: {
-                &quot;id&quot;: 2,
-                &quot;name&quot;: &quot;final&quot;,
-                &quot;description&quot;: &quot;Final examination covering the entire course&quot;,
-                &quot;weight&quot;: &quot;50.00&quot;,
-                &quot;created_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
-                &quot;updated_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;
-            },
-            &quot;lab&quot;: null
-        },
-        {
             &quot;id&quot;: 5,
             &quot;name&quot;: &quot;Final Exam - Data Structures and Algorithms&quot;,
             &quot;subject_id&quot;: 2,
             &quot;class_id&quot;: 1,
             &quot;exam_date&quot;: &quot;2025-09-30T00:00:00.000000Z&quot;,
-            &quot;start_time&quot;: &quot;2025-08-31T09:00:00.000000Z&quot;,
-            &quot;end_time&quot;: &quot;2025-08-31T11:00:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;2025-09-08T09:00:00.000000Z&quot;,
+            &quot;end_time&quot;: &quot;2025-09-08T11:00:00.000000Z&quot;,
             &quot;instructions&quot;: &quot;Please read all questions carefully before answering. update&quot;,
             &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2025-08-31T01:59:22.000000Z&quot;,
@@ -24024,8 +23777,8 @@ access-control-allow-origin: *
             &quot;subject_id&quot;: 2,
             &quot;class_id&quot;: 1,
             &quot;exam_date&quot;: &quot;2025-10-07T00:00:00.000000Z&quot;,
-            &quot;start_time&quot;: &quot;2025-08-31T09:00:00.000000Z&quot;,
-            &quot;end_time&quot;: &quot;2025-08-31T11:00:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;2025-09-08T09:00:00.000000Z&quot;,
+            &quot;end_time&quot;: &quot;2025-09-08T11:00:00.000000Z&quot;,
             &quot;instructions&quot;: &quot;Please read all questions carefully before answering.&quot;,
             &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -24125,8 +23878,8 @@ access-control-allow-origin: *
             &quot;subject_id&quot;: 3,
             &quot;class_id&quot;: 3,
             &quot;exam_date&quot;: &quot;2025-10-14T00:00:00.000000Z&quot;,
-            &quot;start_time&quot;: &quot;2025-08-31T09:00:00.000000Z&quot;,
-            &quot;end_time&quot;: &quot;2025-08-31T11:00:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;2025-09-08T09:00:00.000000Z&quot;,
+            &quot;end_time&quot;: &quot;2025-09-08T11:00:00.000000Z&quot;,
             &quot;instructions&quot;: &quot;Please read all questions carefully before answering.&quot;,
             &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -24226,8 +23979,8 @@ access-control-allow-origin: *
             &quot;subject_id&quot;: 4,
             &quot;class_id&quot;: 5,
             &quot;exam_date&quot;: &quot;2025-10-18T00:00:00.000000Z&quot;,
-            &quot;start_time&quot;: &quot;2025-08-31T09:00:00.000000Z&quot;,
-            &quot;end_time&quot;: &quot;2025-08-31T11:00:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;2025-09-08T09:00:00.000000Z&quot;,
+            &quot;end_time&quot;: &quot;2025-09-08T11:00:00.000000Z&quot;,
             &quot;instructions&quot;: &quot;Please read all questions carefully before answering.&quot;,
             &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -24327,8 +24080,8 @@ access-control-allow-origin: *
             &quot;subject_id&quot;: 5,
             &quot;class_id&quot;: 7,
             &quot;exam_date&quot;: &quot;2025-10-18T00:00:00.000000Z&quot;,
-            &quot;start_time&quot;: &quot;2025-08-31T09:00:00.000000Z&quot;,
-            &quot;end_time&quot;: &quot;2025-08-31T11:00:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;2025-09-08T09:00:00.000000Z&quot;,
+            &quot;end_time&quot;: &quot;2025-09-08T11:00:00.000000Z&quot;,
             &quot;instructions&quot;: &quot;Please read all questions carefully before answering.&quot;,
             &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -24428,8 +24181,8 @@ access-control-allow-origin: *
             &quot;subject_id&quot;: 1,
             &quot;class_id&quot;: 1,
             &quot;exam_date&quot;: &quot;2025-10-27T00:00:00.000000Z&quot;,
-            &quot;start_time&quot;: &quot;2025-08-31T09:00:00.000000Z&quot;,
-            &quot;end_time&quot;: &quot;2025-08-31T11:00:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;2025-09-08T09:00:00.000000Z&quot;,
+            &quot;end_time&quot;: &quot;2025-09-08T11:00:00.000000Z&quot;,
             &quot;instructions&quot;: &quot;Please read all questions carefully before answering. updated&quot;,
             &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2025-08-31T02:06:17.000000Z&quot;,
@@ -24529,8 +24282,8 @@ access-control-allow-origin: *
             &quot;subject_id&quot;: 1,
             &quot;class_id&quot;: 1,
             &quot;exam_date&quot;: &quot;2025-10-29T00:00:00.000000Z&quot;,
-            &quot;start_time&quot;: &quot;2025-08-31T09:00:00.000000Z&quot;,
-            &quot;end_time&quot;: &quot;2025-08-31T11:00:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;2025-09-08T09:00:00.000000Z&quot;,
+            &quot;end_time&quot;: &quot;2025-09-08T11:00:00.000000Z&quot;,
             &quot;instructions&quot;: &quot;Please read all questions carefully before answering.&quot;,
             &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -24630,8 +24383,8 @@ access-control-allow-origin: *
             &quot;subject_id&quot;: 1,
             &quot;class_id&quot;: 1,
             &quot;exam_date&quot;: &quot;2025-11-01T00:00:00.000000Z&quot;,
-            &quot;start_time&quot;: &quot;2025-08-31T09:00:00.000000Z&quot;,
-            &quot;end_time&quot;: &quot;2025-08-31T11:00:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;2025-09-08T09:00:00.000000Z&quot;,
+            &quot;end_time&quot;: &quot;2025-09-08T11:00:00.000000Z&quot;,
             &quot;instructions&quot;: &quot;Please read all questions carefully before answering.&quot;,
             &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -24731,8 +24484,8 @@ access-control-allow-origin: *
             &quot;subject_id&quot;: 5,
             &quot;class_id&quot;: 7,
             &quot;exam_date&quot;: &quot;2025-11-06T00:00:00.000000Z&quot;,
-            &quot;start_time&quot;: &quot;2025-08-31T09:00:00.000000Z&quot;,
-            &quot;end_time&quot;: &quot;2025-08-31T11:00:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;2025-09-08T09:00:00.000000Z&quot;,
+            &quot;end_time&quot;: &quot;2025-09-08T11:00:00.000000Z&quot;,
             &quot;instructions&quot;: &quot;Please read all questions carefully before answering.&quot;,
             &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -24832,8 +24585,8 @@ access-control-allow-origin: *
             &quot;subject_id&quot;: 3,
             &quot;class_id&quot;: 3,
             &quot;exam_date&quot;: &quot;2025-11-13T00:00:00.000000Z&quot;,
-            &quot;start_time&quot;: &quot;2025-08-31T09:00:00.000000Z&quot;,
-            &quot;end_time&quot;: &quot;2025-08-31T11:00:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;2025-09-08T09:00:00.000000Z&quot;,
+            &quot;end_time&quot;: &quot;2025-09-08T11:00:00.000000Z&quot;,
             &quot;instructions&quot;: &quot;Please read all questions carefully before answering.&quot;,
             &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -24933,8 +24686,8 @@ access-control-allow-origin: *
             &quot;subject_id&quot;: 2,
             &quot;class_id&quot;: 1,
             &quot;exam_date&quot;: &quot;2025-11-24T00:00:00.000000Z&quot;,
-            &quot;start_time&quot;: &quot;2025-08-31T09:00:00.000000Z&quot;,
-            &quot;end_time&quot;: &quot;2025-08-31T11:00:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;2025-09-08T09:00:00.000000Z&quot;,
+            &quot;end_time&quot;: &quot;2025-09-08T11:00:00.000000Z&quot;,
             &quot;instructions&quot;: &quot;Please read all questions carefully before answering.&quot;,
             &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -25268,8 +25021,8 @@ access-control-allow-origin: *
         &quot;subject_id&quot;: 1,
         &quot;class_id&quot;: 1,
         &quot;exam_date&quot;: &quot;2025-10-29T00:00:00.000000Z&quot;,
-        &quot;start_time&quot;: &quot;2025-08-31T09:00:00.000000Z&quot;,
-        &quot;end_time&quot;: &quot;2025-08-31T11:00:00.000000Z&quot;,
+        &quot;start_time&quot;: &quot;2025-09-08T09:00:00.000000Z&quot;,
+        &quot;end_time&quot;: &quot;2025-09-08T11:00:00.000000Z&quot;,
         &quot;instructions&quot;: &quot;Please read all questions carefully before answering.&quot;,
         &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
         &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -25742,66 +25495,13 @@ access-control-allow-origin: *
     &quot;success&quot;: true,
     &quot;data&quot;: [
         {
-            &quot;id&quot;: 16,
-            &quot;name&quot;: &quot;Mondestin Myssie&quot;,
-            &quot;subject_id&quot;: 1,
-            &quot;class_id&quot;: 2,
-            &quot;exam_date&quot;: &quot;2025-08-31T00:00:00.000000Z&quot;,
-            &quot;start_time&quot;: &quot;2025-08-31T07:13:00.000000Z&quot;,
-            &quot;end_time&quot;: &quot;2025-08-31T09:18:00.000000Z&quot;,
-            &quot;instructions&quot;: &quot;hgvvhvhv hv n&quot;,
-            &quot;created_at&quot;: &quot;2025-08-31T02:15:35.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-08-31T02:15:35.000000Z&quot;,
-            &quot;lab_id&quot;: null,
-            &quot;exam_type_id&quot;: 2,
-            &quot;examiner_id&quot;: 5,
-            &quot;status&quot;: &quot;scheduled&quot;,
-            &quot;class_room&quot;: {
-                &quot;id&quot;: 2,
-                &quot;campus_id&quot;: 1,
-                &quot;course_id&quot;: 1,
-                &quot;name&quot;: &quot;BCS - Class B&quot;,
-                &quot;capacity&quot;: 25,
-                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
-                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
-                &quot;campus&quot;: {
-                    &quot;id&quot;: 1,
-                    &quot;school_id&quot;: 1,
-                    &quot;name&quot;: &quot;Main Campus&quot;,
-                    &quot;address&quot;: &quot;123 Education Street, Knowledge City&quot;,
-                    &quot;phone&quot;: &quot;+1-555-0123&quot;,
-                    &quot;email&quot;: &quot;main@yousch.edu&quot;,
-                    &quot;is_active&quot;: true,
-                    &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
-                }
-            },
-            &quot;examiner&quot;: {
-                &quot;id&quot;: 5,
-                &quot;name&quot;: &quot;Prof. Michael Chen&quot;,
-                &quot;email&quot;: &quot;michael.chen@yousch.edu&quot;,
-                &quot;email_verified_at&quot;: &quot;2025-08-31T00:54:38.000000Z&quot;,
-                &quot;created_at&quot;: &quot;2025-08-31T00:54:38.000000Z&quot;,
-                &quot;updated_at&quot;: &quot;2025-08-31T00:54:38.000000Z&quot;
-            },
-            &quot;exam_type&quot;: {
-                &quot;id&quot;: 2,
-                &quot;name&quot;: &quot;final&quot;,
-                &quot;description&quot;: &quot;Final examination covering the entire course&quot;,
-                &quot;weight&quot;: &quot;50.00&quot;,
-                &quot;created_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
-                &quot;updated_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;
-            },
-            &quot;lab&quot;: null
-        },
-        {
             &quot;id&quot;: 2,
             &quot;name&quot;: &quot;Final Exam - Introduction to Programming&quot;,
             &quot;subject_id&quot;: 1,
             &quot;class_id&quot;: 1,
             &quot;exam_date&quot;: &quot;2025-10-27T00:00:00.000000Z&quot;,
-            &quot;start_time&quot;: &quot;2025-08-31T09:00:00.000000Z&quot;,
-            &quot;end_time&quot;: &quot;2025-08-31T11:00:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;2025-09-08T09:00:00.000000Z&quot;,
+            &quot;end_time&quot;: &quot;2025-09-08T11:00:00.000000Z&quot;,
             &quot;instructions&quot;: &quot;Please read all questions carefully before answering. updated&quot;,
             &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2025-08-31T02:06:17.000000Z&quot;,
@@ -25853,8 +25553,8 @@ access-control-allow-origin: *
             &quot;subject_id&quot;: 1,
             &quot;class_id&quot;: 1,
             &quot;exam_date&quot;: &quot;2025-10-29T00:00:00.000000Z&quot;,
-            &quot;start_time&quot;: &quot;2025-08-31T09:00:00.000000Z&quot;,
-            &quot;end_time&quot;: &quot;2025-08-31T11:00:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;2025-09-08T09:00:00.000000Z&quot;,
+            &quot;end_time&quot;: &quot;2025-09-08T11:00:00.000000Z&quot;,
             &quot;instructions&quot;: &quot;Please read all questions carefully before answering.&quot;,
             &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -25906,8 +25606,8 @@ access-control-allow-origin: *
             &quot;subject_id&quot;: 1,
             &quot;class_id&quot;: 1,
             &quot;exam_date&quot;: &quot;2025-11-01T00:00:00.000000Z&quot;,
-            &quot;start_time&quot;: &quot;2025-08-31T09:00:00.000000Z&quot;,
-            &quot;end_time&quot;: &quot;2025-08-31T11:00:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;2025-09-08T09:00:00.000000Z&quot;,
+            &quot;end_time&quot;: &quot;2025-09-08T11:00:00.000000Z&quot;,
             &quot;instructions&quot;: &quot;Please read all questions carefully before answering.&quot;,
             &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -26098,8 +25798,8 @@ access-control-allow-origin: *
             &quot;subject_id&quot;: 2,
             &quot;class_id&quot;: 1,
             &quot;exam_date&quot;: &quot;2025-09-30T00:00:00.000000Z&quot;,
-            &quot;start_time&quot;: &quot;2025-08-31T09:00:00.000000Z&quot;,
-            &quot;end_time&quot;: &quot;2025-08-31T11:00:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;2025-09-08T09:00:00.000000Z&quot;,
+            &quot;end_time&quot;: &quot;2025-09-08T11:00:00.000000Z&quot;,
             &quot;instructions&quot;: &quot;Please read all questions carefully before answering. update&quot;,
             &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2025-08-31T01:59:22.000000Z&quot;,
@@ -26150,8 +25850,8 @@ access-control-allow-origin: *
             &quot;subject_id&quot;: 2,
             &quot;class_id&quot;: 1,
             &quot;exam_date&quot;: &quot;2025-10-07T00:00:00.000000Z&quot;,
-            &quot;start_time&quot;: &quot;2025-08-31T09:00:00.000000Z&quot;,
-            &quot;end_time&quot;: &quot;2025-08-31T11:00:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;2025-09-08T09:00:00.000000Z&quot;,
+            &quot;end_time&quot;: &quot;2025-09-08T11:00:00.000000Z&quot;,
             &quot;instructions&quot;: &quot;Please read all questions carefully before answering.&quot;,
             &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -26202,8 +25902,8 @@ access-control-allow-origin: *
             &quot;subject_id&quot;: 1,
             &quot;class_id&quot;: 1,
             &quot;exam_date&quot;: &quot;2025-10-27T00:00:00.000000Z&quot;,
-            &quot;start_time&quot;: &quot;2025-08-31T09:00:00.000000Z&quot;,
-            &quot;end_time&quot;: &quot;2025-08-31T11:00:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;2025-09-08T09:00:00.000000Z&quot;,
+            &quot;end_time&quot;: &quot;2025-09-08T11:00:00.000000Z&quot;,
             &quot;instructions&quot;: &quot;Please read all questions carefully before answering. updated&quot;,
             &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2025-08-31T02:06:17.000000Z&quot;,
@@ -26254,8 +25954,8 @@ access-control-allow-origin: *
             &quot;subject_id&quot;: 1,
             &quot;class_id&quot;: 1,
             &quot;exam_date&quot;: &quot;2025-10-29T00:00:00.000000Z&quot;,
-            &quot;start_time&quot;: &quot;2025-08-31T09:00:00.000000Z&quot;,
-            &quot;end_time&quot;: &quot;2025-08-31T11:00:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;2025-09-08T09:00:00.000000Z&quot;,
+            &quot;end_time&quot;: &quot;2025-09-08T11:00:00.000000Z&quot;,
             &quot;instructions&quot;: &quot;Please read all questions carefully before answering.&quot;,
             &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -26306,8 +26006,8 @@ access-control-allow-origin: *
             &quot;subject_id&quot;: 1,
             &quot;class_id&quot;: 1,
             &quot;exam_date&quot;: &quot;2025-11-01T00:00:00.000000Z&quot;,
-            &quot;start_time&quot;: &quot;2025-08-31T09:00:00.000000Z&quot;,
-            &quot;end_time&quot;: &quot;2025-08-31T11:00:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;2025-09-08T09:00:00.000000Z&quot;,
+            &quot;end_time&quot;: &quot;2025-09-08T11:00:00.000000Z&quot;,
             &quot;instructions&quot;: &quot;Please read all questions carefully before answering.&quot;,
             &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -26358,8 +26058,8 @@ access-control-allow-origin: *
             &quot;subject_id&quot;: 2,
             &quot;class_id&quot;: 1,
             &quot;exam_date&quot;: &quot;2025-11-24T00:00:00.000000Z&quot;,
-            &quot;start_time&quot;: &quot;2025-08-31T09:00:00.000000Z&quot;,
-            &quot;end_time&quot;: &quot;2025-08-31T11:00:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;2025-09-08T09:00:00.000000Z&quot;,
+            &quot;end_time&quot;: &quot;2025-09-08T11:00:00.000000Z&quot;,
             &quot;instructions&quot;: &quot;Please read all questions carefully before answering.&quot;,
             &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -26672,7 +26372,7 @@ access-control-allow-origin: *
         &quot;average_score&quot;: &quot;79.000000&quot;,
         &quot;highest_score&quot;: &quot;88.00&quot;,
         &quot;lowest_score&quot;: &quot;70.00&quot;,
-        &quot;days_until_exam&quot;: 58.89658006521991,
+        &quot;days_until_exam&quot;: 50.01282367453704,
         &quot;is_past&quot;: false
     },
     &quot;message&quot;: &quot;Exam statistics retrieved successfully&quot;
@@ -30284,8 +29984,8 @@ access-control-allow-origin: *
                 &quot;subject_id&quot;: 4,
                 &quot;class_id&quot;: 5,
                 &quot;exam_date&quot;: &quot;2025-10-18T00:00:00.000000Z&quot;,
-                &quot;start_time&quot;: &quot;2025-08-31T09:00:00.000000Z&quot;,
-                &quot;end_time&quot;: &quot;2025-08-31T11:00:00.000000Z&quot;,
+                &quot;start_time&quot;: &quot;2025-09-08T09:00:00.000000Z&quot;,
+                &quot;end_time&quot;: &quot;2025-09-08T11:00:00.000000Z&quot;,
                 &quot;instructions&quot;: &quot;Please read all questions carefully before answering.&quot;,
                 &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
                 &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -30415,8 +30115,8 @@ access-control-allow-origin: *
                 &quot;subject_id&quot;: 4,
                 &quot;class_id&quot;: 5,
                 &quot;exam_date&quot;: &quot;2025-10-18T00:00:00.000000Z&quot;,
-                &quot;start_time&quot;: &quot;2025-08-31T09:00:00.000000Z&quot;,
-                &quot;end_time&quot;: &quot;2025-08-31T11:00:00.000000Z&quot;,
+                &quot;start_time&quot;: &quot;2025-09-08T09:00:00.000000Z&quot;,
+                &quot;end_time&quot;: &quot;2025-09-08T11:00:00.000000Z&quot;,
                 &quot;instructions&quot;: &quot;Please read all questions carefully before answering.&quot;,
                 &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
                 &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -30546,8 +30246,8 @@ access-control-allow-origin: *
                 &quot;subject_id&quot;: 3,
                 &quot;class_id&quot;: 3,
                 &quot;exam_date&quot;: &quot;2025-11-13T00:00:00.000000Z&quot;,
-                &quot;start_time&quot;: &quot;2025-08-31T09:00:00.000000Z&quot;,
-                &quot;end_time&quot;: &quot;2025-08-31T11:00:00.000000Z&quot;,
+                &quot;start_time&quot;: &quot;2025-09-08T09:00:00.000000Z&quot;,
+                &quot;end_time&quot;: &quot;2025-09-08T11:00:00.000000Z&quot;,
                 &quot;instructions&quot;: &quot;Please read all questions carefully before answering.&quot;,
                 &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
                 &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -30677,8 +30377,8 @@ access-control-allow-origin: *
                 &quot;subject_id&quot;: 4,
                 &quot;class_id&quot;: 5,
                 &quot;exam_date&quot;: &quot;2025-10-18T00:00:00.000000Z&quot;,
-                &quot;start_time&quot;: &quot;2025-08-31T09:00:00.000000Z&quot;,
-                &quot;end_time&quot;: &quot;2025-08-31T11:00:00.000000Z&quot;,
+                &quot;start_time&quot;: &quot;2025-09-08T09:00:00.000000Z&quot;,
+                &quot;end_time&quot;: &quot;2025-09-08T11:00:00.000000Z&quot;,
                 &quot;instructions&quot;: &quot;Please read all questions carefully before answering.&quot;,
                 &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
                 &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -30808,8 +30508,8 @@ access-control-allow-origin: *
                 &quot;subject_id&quot;: 4,
                 &quot;class_id&quot;: 5,
                 &quot;exam_date&quot;: &quot;2025-10-18T00:00:00.000000Z&quot;,
-                &quot;start_time&quot;: &quot;2025-08-31T09:00:00.000000Z&quot;,
-                &quot;end_time&quot;: &quot;2025-08-31T11:00:00.000000Z&quot;,
+                &quot;start_time&quot;: &quot;2025-09-08T09:00:00.000000Z&quot;,
+                &quot;end_time&quot;: &quot;2025-09-08T11:00:00.000000Z&quot;,
                 &quot;instructions&quot;: &quot;Please read all questions carefully before answering.&quot;,
                 &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
                 &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -30939,8 +30639,8 @@ access-control-allow-origin: *
                 &quot;subject_id&quot;: 3,
                 &quot;class_id&quot;: 3,
                 &quot;exam_date&quot;: &quot;2025-11-13T00:00:00.000000Z&quot;,
-                &quot;start_time&quot;: &quot;2025-08-31T09:00:00.000000Z&quot;,
-                &quot;end_time&quot;: &quot;2025-08-31T11:00:00.000000Z&quot;,
+                &quot;start_time&quot;: &quot;2025-09-08T09:00:00.000000Z&quot;,
+                &quot;end_time&quot;: &quot;2025-09-08T11:00:00.000000Z&quot;,
                 &quot;instructions&quot;: &quot;Please read all questions carefully before answering.&quot;,
                 &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
                 &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -31070,8 +30770,8 @@ access-control-allow-origin: *
                 &quot;subject_id&quot;: 1,
                 &quot;class_id&quot;: 1,
                 &quot;exam_date&quot;: &quot;2025-10-29T00:00:00.000000Z&quot;,
-                &quot;start_time&quot;: &quot;2025-08-31T09:00:00.000000Z&quot;,
-                &quot;end_time&quot;: &quot;2025-08-31T11:00:00.000000Z&quot;,
+                &quot;start_time&quot;: &quot;2025-09-08T09:00:00.000000Z&quot;,
+                &quot;end_time&quot;: &quot;2025-09-08T11:00:00.000000Z&quot;,
                 &quot;instructions&quot;: &quot;Please read all questions carefully before answering.&quot;,
                 &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
                 &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -31201,8 +30901,8 @@ access-control-allow-origin: *
                 &quot;subject_id&quot;: 2,
                 &quot;class_id&quot;: 1,
                 &quot;exam_date&quot;: &quot;2025-11-24T00:00:00.000000Z&quot;,
-                &quot;start_time&quot;: &quot;2025-08-31T09:00:00.000000Z&quot;,
-                &quot;end_time&quot;: &quot;2025-08-31T11:00:00.000000Z&quot;,
+                &quot;start_time&quot;: &quot;2025-09-08T09:00:00.000000Z&quot;,
+                &quot;end_time&quot;: &quot;2025-09-08T11:00:00.000000Z&quot;,
                 &quot;instructions&quot;: &quot;Please read all questions carefully before answering.&quot;,
                 &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
                 &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -31332,8 +31032,8 @@ access-control-allow-origin: *
                 &quot;subject_id&quot;: 1,
                 &quot;class_id&quot;: 1,
                 &quot;exam_date&quot;: &quot;2025-10-29T00:00:00.000000Z&quot;,
-                &quot;start_time&quot;: &quot;2025-08-31T09:00:00.000000Z&quot;,
-                &quot;end_time&quot;: &quot;2025-08-31T11:00:00.000000Z&quot;,
+                &quot;start_time&quot;: &quot;2025-09-08T09:00:00.000000Z&quot;,
+                &quot;end_time&quot;: &quot;2025-09-08T11:00:00.000000Z&quot;,
                 &quot;instructions&quot;: &quot;Please read all questions carefully before answering.&quot;,
                 &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
                 &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -31463,8 +31163,8 @@ access-control-allow-origin: *
                 &quot;subject_id&quot;: 2,
                 &quot;class_id&quot;: 1,
                 &quot;exam_date&quot;: &quot;2025-11-24T00:00:00.000000Z&quot;,
-                &quot;start_time&quot;: &quot;2025-08-31T09:00:00.000000Z&quot;,
-                &quot;end_time&quot;: &quot;2025-08-31T11:00:00.000000Z&quot;,
+                &quot;start_time&quot;: &quot;2025-09-08T09:00:00.000000Z&quot;,
+                &quot;end_time&quot;: &quot;2025-09-08T11:00:00.000000Z&quot;,
                 &quot;instructions&quot;: &quot;Please read all questions carefully before answering.&quot;,
                 &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
                 &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -31828,8 +31528,8 @@ access-control-allow-origin: *
             &quot;subject_id&quot;: 4,
             &quot;class_id&quot;: 5,
             &quot;exam_date&quot;: &quot;2025-10-18T00:00:00.000000Z&quot;,
-            &quot;start_time&quot;: &quot;2025-08-31T09:00:00.000000Z&quot;,
-            &quot;end_time&quot;: &quot;2025-08-31T11:00:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;2025-09-08T09:00:00.000000Z&quot;,
+            &quot;end_time&quot;: &quot;2025-09-08T11:00:00.000000Z&quot;,
             &quot;instructions&quot;: &quot;Please read all questions carefully before answering.&quot;,
             &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
@@ -33001,232 +32701,6 @@ access-control-allow-origin: *
             }
         },
         {
-            &quot;id&quot;: 3,
-            &quot;teacher_id&quot;: 6,
-            &quot;class_id&quot;: 3,
-            &quot;subject_id&quot;: 3,
-            &quot;academic_year_id&quot;: 1,
-            &quot;role&quot;: &quot;teacher&quot;,
-            &quot;is_primary&quot;: true,
-            &quot;is_active&quot;: true,
-            &quot;assigned_by&quot;: 2,
-            &quot;assignment_date&quot;: &quot;2025-08-31T00:00:00.000000Z&quot;,
-            &quot;end_date&quot;: null,
-            &quot;weekly_hours&quot;: 0,
-            &quot;notes&quot;: &quot;Primary teacher assignment&quot;,
-            &quot;school_id&quot;: 1,
-            &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
-            &quot;teacher&quot;: {
-                &quot;id&quot;: 6,
-                &quot;name&quot;: &quot;Dr. Emily Rodriguez&quot;,
-                &quot;email&quot;: &quot;emily.rodriguez@yousch.edu&quot;,
-                &quot;email_verified_at&quot;: &quot;2025-08-31T00:54:38.000000Z&quot;,
-                &quot;created_at&quot;: &quot;2025-08-31T00:54:38.000000Z&quot;,
-                &quot;updated_at&quot;: &quot;2025-08-31T00:54:38.000000Z&quot;
-            },
-            &quot;class_room&quot;: {
-                &quot;id&quot;: 3,
-                &quot;campus_id&quot;: 1,
-                &quot;course_id&quot;: 2,
-                &quot;name&quot;: &quot;BMATH - Class A&quot;,
-                &quot;capacity&quot;: 30,
-                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
-                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
-                &quot;campus&quot;: {
-                    &quot;id&quot;: 1,
-                    &quot;school_id&quot;: 1,
-                    &quot;name&quot;: &quot;Main Campus&quot;,
-                    &quot;address&quot;: &quot;123 Education Street, Knowledge City&quot;,
-                    &quot;phone&quot;: &quot;+1-555-0123&quot;,
-                    &quot;email&quot;: &quot;main@yousch.edu&quot;,
-                    &quot;is_active&quot;: true,
-                    &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
-                    &quot;school&quot;: {
-                        &quot;id&quot;: 1,
-                        &quot;name&quot;: &quot;Yousch International School&quot;,
-                        &quot;domain&quot;: &quot;yousch.edu&quot;,
-                        &quot;contact_info&quot;: &quot;Contact us for more information&quot;,
-                        &quot;address&quot;: &quot;123 Education Street, Knowledge City&quot;,
-                        &quot;phone&quot;: &quot;+1-555-0123&quot;,
-                        &quot;email&quot;: &quot;info@yousch.edu&quot;,
-                        &quot;website&quot;: &quot;https://www.yousch.edu&quot;,
-                        &quot;is_active&quot;: true,
-                        &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
-                        &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
-                    }
-                },
-                &quot;course&quot;: {
-                    &quot;id&quot;: 2,
-                    &quot;department_id&quot;: 2,
-                    &quot;name&quot;: &quot;Bachelor of Mathematics&quot;,
-                    &quot;code&quot;: &quot;BMATH&quot;,
-                    &quot;description&quot;: &quot;Advanced mathematics program&quot;,
-                    &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
-                    &quot;department&quot;: {
-                        &quot;id&quot;: 2,
-                        &quot;faculty_id&quot;: 1,
-                        &quot;name&quot;: &quot;Mathematics&quot;,
-                        &quot;head_id&quot;: 5,
-                        &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
-                        &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
-                        &quot;faculty&quot;: {
-                            &quot;id&quot;: 1,
-                            &quot;school_id&quot;: 1,
-                            &quot;name&quot;: &quot;Faculty of Science and Technology&quot;,
-                            &quot;description&quot;: &quot;Leading research and education in science and technology&quot;,
-                            &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
-                            &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
-                        }
-                    }
-                }
-            },
-            &quot;subject&quot;: {
-                &quot;id&quot;: 3,
-                &quot;course_id&quot;: 2,
-                &quot;name&quot;: &quot;Calculus I&quot;,
-                &quot;code&quot;: &quot;MATH101&quot;,
-                &quot;description&quot;: &quot;Fundamental calculus concepts&quot;,
-                &quot;coordinator_id&quot;: 5,
-                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
-                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
-                &quot;course&quot;: {
-                    &quot;id&quot;: 2,
-                    &quot;department_id&quot;: 2,
-                    &quot;name&quot;: &quot;Bachelor of Mathematics&quot;,
-                    &quot;code&quot;: &quot;BMATH&quot;,
-                    &quot;description&quot;: &quot;Advanced mathematics program&quot;,
-                    &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
-                }
-            },
-            &quot;academic_year&quot;: {
-                &quot;id&quot;: 1,
-                &quot;school_id&quot;: 1,
-                &quot;name&quot;: &quot;2024-2025&quot;,
-                &quot;start_date&quot;: &quot;2024-09-01T00:00:00.000000Z&quot;,
-                &quot;end_date&quot;: &quot;2025-06-30T00:00:00.000000Z&quot;,
-                &quot;is_active&quot;: true,
-                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
-                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
-            }
-        },
-        {
-            &quot;id&quot;: 4,
-            &quot;teacher_id&quot;: 7,
-            &quot;class_id&quot;: 4,
-            &quot;subject_id&quot;: 3,
-            &quot;academic_year_id&quot;: 1,
-            &quot;role&quot;: &quot;teacher&quot;,
-            &quot;is_primary&quot;: true,
-            &quot;is_active&quot;: true,
-            &quot;assigned_by&quot;: 2,
-            &quot;assignment_date&quot;: &quot;2025-08-31T00:00:00.000000Z&quot;,
-            &quot;end_date&quot;: null,
-            &quot;weekly_hours&quot;: 0,
-            &quot;notes&quot;: &quot;Primary teacher assignment&quot;,
-            &quot;school_id&quot;: 1,
-            &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
-            &quot;teacher&quot;: {
-                &quot;id&quot;: 7,
-                &quot;name&quot;: &quot;Prof. David Thompson&quot;,
-                &quot;email&quot;: &quot;david.thompson@yousch.edu&quot;,
-                &quot;email_verified_at&quot;: &quot;2025-08-31T00:54:38.000000Z&quot;,
-                &quot;created_at&quot;: &quot;2025-08-31T00:54:38.000000Z&quot;,
-                &quot;updated_at&quot;: &quot;2025-08-31T00:54:38.000000Z&quot;
-            },
-            &quot;class_room&quot;: {
-                &quot;id&quot;: 4,
-                &quot;campus_id&quot;: 1,
-                &quot;course_id&quot;: 2,
-                &quot;name&quot;: &quot;BMATH - Class B&quot;,
-                &quot;capacity&quot;: 25,
-                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
-                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
-                &quot;campus&quot;: {
-                    &quot;id&quot;: 1,
-                    &quot;school_id&quot;: 1,
-                    &quot;name&quot;: &quot;Main Campus&quot;,
-                    &quot;address&quot;: &quot;123 Education Street, Knowledge City&quot;,
-                    &quot;phone&quot;: &quot;+1-555-0123&quot;,
-                    &quot;email&quot;: &quot;main@yousch.edu&quot;,
-                    &quot;is_active&quot;: true,
-                    &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
-                    &quot;school&quot;: {
-                        &quot;id&quot;: 1,
-                        &quot;name&quot;: &quot;Yousch International School&quot;,
-                        &quot;domain&quot;: &quot;yousch.edu&quot;,
-                        &quot;contact_info&quot;: &quot;Contact us for more information&quot;,
-                        &quot;address&quot;: &quot;123 Education Street, Knowledge City&quot;,
-                        &quot;phone&quot;: &quot;+1-555-0123&quot;,
-                        &quot;email&quot;: &quot;info@yousch.edu&quot;,
-                        &quot;website&quot;: &quot;https://www.yousch.edu&quot;,
-                        &quot;is_active&quot;: true,
-                        &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
-                        &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
-                    }
-                },
-                &quot;course&quot;: {
-                    &quot;id&quot;: 2,
-                    &quot;department_id&quot;: 2,
-                    &quot;name&quot;: &quot;Bachelor of Mathematics&quot;,
-                    &quot;code&quot;: &quot;BMATH&quot;,
-                    &quot;description&quot;: &quot;Advanced mathematics program&quot;,
-                    &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
-                    &quot;department&quot;: {
-                        &quot;id&quot;: 2,
-                        &quot;faculty_id&quot;: 1,
-                        &quot;name&quot;: &quot;Mathematics&quot;,
-                        &quot;head_id&quot;: 5,
-                        &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
-                        &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
-                        &quot;faculty&quot;: {
-                            &quot;id&quot;: 1,
-                            &quot;school_id&quot;: 1,
-                            &quot;name&quot;: &quot;Faculty of Science and Technology&quot;,
-                            &quot;description&quot;: &quot;Leading research and education in science and technology&quot;,
-                            &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
-                            &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
-                        }
-                    }
-                }
-            },
-            &quot;subject&quot;: {
-                &quot;id&quot;: 3,
-                &quot;course_id&quot;: 2,
-                &quot;name&quot;: &quot;Calculus I&quot;,
-                &quot;code&quot;: &quot;MATH101&quot;,
-                &quot;description&quot;: &quot;Fundamental calculus concepts&quot;,
-                &quot;coordinator_id&quot;: 5,
-                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
-                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
-                &quot;course&quot;: {
-                    &quot;id&quot;: 2,
-                    &quot;department_id&quot;: 2,
-                    &quot;name&quot;: &quot;Bachelor of Mathematics&quot;,
-                    &quot;code&quot;: &quot;BMATH&quot;,
-                    &quot;description&quot;: &quot;Advanced mathematics program&quot;,
-                    &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
-                }
-            },
-            &quot;academic_year&quot;: {
-                &quot;id&quot;: 1,
-                &quot;school_id&quot;: 1,
-                &quot;name&quot;: &quot;2024-2025&quot;,
-                &quot;start_date&quot;: &quot;2024-09-01T00:00:00.000000Z&quot;,
-                &quot;end_date&quot;: &quot;2025-06-30T00:00:00.000000Z&quot;,
-                &quot;is_active&quot;: true,
-                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
-                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
-            }
-        },
-        {
             &quot;id&quot;: 5,
             &quot;teacher_id&quot;: 4,
             &quot;class_id&quot;: 5,
@@ -33324,345 +32798,6 @@ access-control-allow-origin: *
                     &quot;name&quot;: &quot;Bachelor of Business Administration&quot;,
                     &quot;code&quot;: &quot;BBA&quot;,
                     &quot;description&quot;: &quot;Business management program&quot;,
-                    &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
-                }
-            },
-            &quot;academic_year&quot;: {
-                &quot;id&quot;: 1,
-                &quot;school_id&quot;: 1,
-                &quot;name&quot;: &quot;2024-2025&quot;,
-                &quot;start_date&quot;: &quot;2024-09-01T00:00:00.000000Z&quot;,
-                &quot;end_date&quot;: &quot;2025-06-30T00:00:00.000000Z&quot;,
-                &quot;is_active&quot;: true,
-                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
-                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
-            }
-        },
-        {
-            &quot;id&quot;: 6,
-            &quot;teacher_id&quot;: 5,
-            &quot;class_id&quot;: 6,
-            &quot;subject_id&quot;: 4,
-            &quot;academic_year_id&quot;: 1,
-            &quot;role&quot;: &quot;teacher&quot;,
-            &quot;is_primary&quot;: true,
-            &quot;is_active&quot;: true,
-            &quot;assigned_by&quot;: 2,
-            &quot;assignment_date&quot;: &quot;2025-08-31T00:00:00.000000Z&quot;,
-            &quot;end_date&quot;: null,
-            &quot;weekly_hours&quot;: 0,
-            &quot;notes&quot;: &quot;Primary teacher assignment&quot;,
-            &quot;school_id&quot;: 1,
-            &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
-            &quot;teacher&quot;: {
-                &quot;id&quot;: 5,
-                &quot;name&quot;: &quot;Prof. Michael Chen&quot;,
-                &quot;email&quot;: &quot;michael.chen@yousch.edu&quot;,
-                &quot;email_verified_at&quot;: &quot;2025-08-31T00:54:38.000000Z&quot;,
-                &quot;created_at&quot;: &quot;2025-08-31T00:54:38.000000Z&quot;,
-                &quot;updated_at&quot;: &quot;2025-08-31T00:54:38.000000Z&quot;
-            },
-            &quot;class_room&quot;: {
-                &quot;id&quot;: 6,
-                &quot;campus_id&quot;: 1,
-                &quot;course_id&quot;: 3,
-                &quot;name&quot;: &quot;BBA - Class B&quot;,
-                &quot;capacity&quot;: 25,
-                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
-                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
-                &quot;campus&quot;: {
-                    &quot;id&quot;: 1,
-                    &quot;school_id&quot;: 1,
-                    &quot;name&quot;: &quot;Main Campus&quot;,
-                    &quot;address&quot;: &quot;123 Education Street, Knowledge City&quot;,
-                    &quot;phone&quot;: &quot;+1-555-0123&quot;,
-                    &quot;email&quot;: &quot;main@yousch.edu&quot;,
-                    &quot;is_active&quot;: true,
-                    &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
-                    &quot;school&quot;: {
-                        &quot;id&quot;: 1,
-                        &quot;name&quot;: &quot;Yousch International School&quot;,
-                        &quot;domain&quot;: &quot;yousch.edu&quot;,
-                        &quot;contact_info&quot;: &quot;Contact us for more information&quot;,
-                        &quot;address&quot;: &quot;123 Education Street, Knowledge City&quot;,
-                        &quot;phone&quot;: &quot;+1-555-0123&quot;,
-                        &quot;email&quot;: &quot;info@yousch.edu&quot;,
-                        &quot;website&quot;: &quot;https://www.yousch.edu&quot;,
-                        &quot;is_active&quot;: true,
-                        &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
-                        &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
-                    }
-                },
-                &quot;course&quot;: {
-                    &quot;id&quot;: 3,
-                    &quot;department_id&quot;: 3,
-                    &quot;name&quot;: &quot;Bachelor of Business Administration&quot;,
-                    &quot;code&quot;: &quot;BBA&quot;,
-                    &quot;description&quot;: &quot;Business management program&quot;,
-                    &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
-                    &quot;department&quot;: {
-                        &quot;id&quot;: 3,
-                        &quot;faculty_id&quot;: 2,
-                        &quot;name&quot;: &quot;Business Administration&quot;,
-                        &quot;head_id&quot;: 6,
-                        &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
-                        &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
-                        &quot;faculty&quot;: {
-                            &quot;id&quot;: 2,
-                            &quot;school_id&quot;: 1,
-                            &quot;name&quot;: &quot;Faculty of Business and Economics&quot;,
-                            &quot;description&quot;: &quot;Preparing future business leaders and economists&quot;,
-                            &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
-                            &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
-                        }
-                    }
-                }
-            },
-            &quot;subject&quot;: {
-                &quot;id&quot;: 4,
-                &quot;course_id&quot;: 3,
-                &quot;name&quot;: &quot;Principles of Management&quot;,
-                &quot;code&quot;: &quot;BUS101&quot;,
-                &quot;description&quot;: &quot;Basic management principles&quot;,
-                &quot;coordinator_id&quot;: 6,
-                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
-                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
-                &quot;course&quot;: {
-                    &quot;id&quot;: 3,
-                    &quot;department_id&quot;: 3,
-                    &quot;name&quot;: &quot;Bachelor of Business Administration&quot;,
-                    &quot;code&quot;: &quot;BBA&quot;,
-                    &quot;description&quot;: &quot;Business management program&quot;,
-                    &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
-                }
-            },
-            &quot;academic_year&quot;: {
-                &quot;id&quot;: 1,
-                &quot;school_id&quot;: 1,
-                &quot;name&quot;: &quot;2024-2025&quot;,
-                &quot;start_date&quot;: &quot;2024-09-01T00:00:00.000000Z&quot;,
-                &quot;end_date&quot;: &quot;2025-06-30T00:00:00.000000Z&quot;,
-                &quot;is_active&quot;: true,
-                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
-                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
-            }
-        },
-        {
-            &quot;id&quot;: 7,
-            &quot;teacher_id&quot;: 6,
-            &quot;class_id&quot;: 7,
-            &quot;subject_id&quot;: 5,
-            &quot;academic_year_id&quot;: 1,
-            &quot;role&quot;: &quot;teacher&quot;,
-            &quot;is_primary&quot;: true,
-            &quot;is_active&quot;: true,
-            &quot;assigned_by&quot;: 2,
-            &quot;assignment_date&quot;: &quot;2025-08-31T00:00:00.000000Z&quot;,
-            &quot;end_date&quot;: null,
-            &quot;weekly_hours&quot;: 0,
-            &quot;notes&quot;: &quot;Primary teacher assignment&quot;,
-            &quot;school_id&quot;: 1,
-            &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
-            &quot;teacher&quot;: {
-                &quot;id&quot;: 6,
-                &quot;name&quot;: &quot;Dr. Emily Rodriguez&quot;,
-                &quot;email&quot;: &quot;emily.rodriguez@yousch.edu&quot;,
-                &quot;email_verified_at&quot;: &quot;2025-08-31T00:54:38.000000Z&quot;,
-                &quot;created_at&quot;: &quot;2025-08-31T00:54:38.000000Z&quot;,
-                &quot;updated_at&quot;: &quot;2025-08-31T00:54:38.000000Z&quot;
-            },
-            &quot;class_room&quot;: {
-                &quot;id&quot;: 7,
-                &quot;campus_id&quot;: 1,
-                &quot;course_id&quot;: 4,
-                &quot;name&quot;: &quot;BAENG - Class A&quot;,
-                &quot;capacity&quot;: 30,
-                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
-                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
-                &quot;campus&quot;: {
-                    &quot;id&quot;: 1,
-                    &quot;school_id&quot;: 1,
-                    &quot;name&quot;: &quot;Main Campus&quot;,
-                    &quot;address&quot;: &quot;123 Education Street, Knowledge City&quot;,
-                    &quot;phone&quot;: &quot;+1-555-0123&quot;,
-                    &quot;email&quot;: &quot;main@yousch.edu&quot;,
-                    &quot;is_active&quot;: true,
-                    &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
-                    &quot;school&quot;: {
-                        &quot;id&quot;: 1,
-                        &quot;name&quot;: &quot;Yousch International School&quot;,
-                        &quot;domain&quot;: &quot;yousch.edu&quot;,
-                        &quot;contact_info&quot;: &quot;Contact us for more information&quot;,
-                        &quot;address&quot;: &quot;123 Education Street, Knowledge City&quot;,
-                        &quot;phone&quot;: &quot;+1-555-0123&quot;,
-                        &quot;email&quot;: &quot;info@yousch.edu&quot;,
-                        &quot;website&quot;: &quot;https://www.yousch.edu&quot;,
-                        &quot;is_active&quot;: true,
-                        &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
-                        &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
-                    }
-                },
-                &quot;course&quot;: {
-                    &quot;id&quot;: 4,
-                    &quot;department_id&quot;: 4,
-                    &quot;name&quot;: &quot;Bachelor of Arts in English&quot;,
-                    &quot;code&quot;: &quot;BAENG&quot;,
-                    &quot;description&quot;: &quot;English literature and language program&quot;,
-                    &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
-                    &quot;department&quot;: {
-                        &quot;id&quot;: 4,
-                        &quot;faculty_id&quot;: 3,
-                        &quot;name&quot;: &quot;English Literature&quot;,
-                        &quot;head_id&quot;: 7,
-                        &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
-                        &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
-                        &quot;faculty&quot;: {
-                            &quot;id&quot;: 3,
-                            &quot;school_id&quot;: 1,
-                            &quot;name&quot;: &quot;Faculty of Arts and Humanities&quot;,
-                            &quot;description&quot;: &quot;Exploring creativity, culture, and human expression&quot;,
-                            &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
-                            &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
-                        }
-                    }
-                }
-            },
-            &quot;subject&quot;: {
-                &quot;id&quot;: 5,
-                &quot;course_id&quot;: 4,
-                &quot;name&quot;: &quot;Introduction to Literature&quot;,
-                &quot;code&quot;: &quot;ENG101&quot;,
-                &quot;description&quot;: &quot;Literary analysis and appreciation&quot;,
-                &quot;coordinator_id&quot;: 7,
-                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
-                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
-                &quot;course&quot;: {
-                    &quot;id&quot;: 4,
-                    &quot;department_id&quot;: 4,
-                    &quot;name&quot;: &quot;Bachelor of Arts in English&quot;,
-                    &quot;code&quot;: &quot;BAENG&quot;,
-                    &quot;description&quot;: &quot;English literature and language program&quot;,
-                    &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
-                }
-            },
-            &quot;academic_year&quot;: {
-                &quot;id&quot;: 1,
-                &quot;school_id&quot;: 1,
-                &quot;name&quot;: &quot;2024-2025&quot;,
-                &quot;start_date&quot;: &quot;2024-09-01T00:00:00.000000Z&quot;,
-                &quot;end_date&quot;: &quot;2025-06-30T00:00:00.000000Z&quot;,
-                &quot;is_active&quot;: true,
-                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
-                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
-            }
-        },
-        {
-            &quot;id&quot;: 8,
-            &quot;teacher_id&quot;: 7,
-            &quot;class_id&quot;: 8,
-            &quot;subject_id&quot;: 5,
-            &quot;academic_year_id&quot;: 1,
-            &quot;role&quot;: &quot;teacher&quot;,
-            &quot;is_primary&quot;: true,
-            &quot;is_active&quot;: true,
-            &quot;assigned_by&quot;: 2,
-            &quot;assignment_date&quot;: &quot;2025-08-31T00:00:00.000000Z&quot;,
-            &quot;end_date&quot;: null,
-            &quot;weekly_hours&quot;: 0,
-            &quot;notes&quot;: &quot;Primary teacher assignment&quot;,
-            &quot;school_id&quot;: 1,
-            &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
-            &quot;teacher&quot;: {
-                &quot;id&quot;: 7,
-                &quot;name&quot;: &quot;Prof. David Thompson&quot;,
-                &quot;email&quot;: &quot;david.thompson@yousch.edu&quot;,
-                &quot;email_verified_at&quot;: &quot;2025-08-31T00:54:38.000000Z&quot;,
-                &quot;created_at&quot;: &quot;2025-08-31T00:54:38.000000Z&quot;,
-                &quot;updated_at&quot;: &quot;2025-08-31T00:54:38.000000Z&quot;
-            },
-            &quot;class_room&quot;: {
-                &quot;id&quot;: 8,
-                &quot;campus_id&quot;: 1,
-                &quot;course_id&quot;: 4,
-                &quot;name&quot;: &quot;BAENG - Class B&quot;,
-                &quot;capacity&quot;: 25,
-                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
-                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
-                &quot;campus&quot;: {
-                    &quot;id&quot;: 1,
-                    &quot;school_id&quot;: 1,
-                    &quot;name&quot;: &quot;Main Campus&quot;,
-                    &quot;address&quot;: &quot;123 Education Street, Knowledge City&quot;,
-                    &quot;phone&quot;: &quot;+1-555-0123&quot;,
-                    &quot;email&quot;: &quot;main@yousch.edu&quot;,
-                    &quot;is_active&quot;: true,
-                    &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
-                    &quot;school&quot;: {
-                        &quot;id&quot;: 1,
-                        &quot;name&quot;: &quot;Yousch International School&quot;,
-                        &quot;domain&quot;: &quot;yousch.edu&quot;,
-                        &quot;contact_info&quot;: &quot;Contact us for more information&quot;,
-                        &quot;address&quot;: &quot;123 Education Street, Knowledge City&quot;,
-                        &quot;phone&quot;: &quot;+1-555-0123&quot;,
-                        &quot;email&quot;: &quot;info@yousch.edu&quot;,
-                        &quot;website&quot;: &quot;https://www.yousch.edu&quot;,
-                        &quot;is_active&quot;: true,
-                        &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
-                        &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
-                    }
-                },
-                &quot;course&quot;: {
-                    &quot;id&quot;: 4,
-                    &quot;department_id&quot;: 4,
-                    &quot;name&quot;: &quot;Bachelor of Arts in English&quot;,
-                    &quot;code&quot;: &quot;BAENG&quot;,
-                    &quot;description&quot;: &quot;English literature and language program&quot;,
-                    &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
-                    &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
-                    &quot;department&quot;: {
-                        &quot;id&quot;: 4,
-                        &quot;faculty_id&quot;: 3,
-                        &quot;name&quot;: &quot;English Literature&quot;,
-                        &quot;head_id&quot;: 7,
-                        &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
-                        &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
-                        &quot;faculty&quot;: {
-                            &quot;id&quot;: 3,
-                            &quot;school_id&quot;: 1,
-                            &quot;name&quot;: &quot;Faculty of Arts and Humanities&quot;,
-                            &quot;description&quot;: &quot;Exploring creativity, culture, and human expression&quot;,
-                            &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
-                            &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
-                        }
-                    }
-                }
-            },
-            &quot;subject&quot;: {
-                &quot;id&quot;: 5,
-                &quot;course_id&quot;: 4,
-                &quot;name&quot;: &quot;Introduction to Literature&quot;,
-                &quot;code&quot;: &quot;ENG101&quot;,
-                &quot;description&quot;: &quot;Literary analysis and appreciation&quot;,
-                &quot;coordinator_id&quot;: 7,
-                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
-                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
-                &quot;course&quot;: {
-                    &quot;id&quot;: 4,
-                    &quot;department_id&quot;: 4,
-                    &quot;name&quot;: &quot;Bachelor of Arts in English&quot;,
-                    &quot;code&quot;: &quot;BAENG&quot;,
-                    &quot;description&quot;: &quot;English literature and language program&quot;,
                     &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
                     &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
                 }
@@ -36022,44 +35157,6 @@ access-control-allow-origin: *
             }
         },
         {
-            &quot;id&quot;: 2,
-            &quot;title&quot;: &quot;Campus Maintenance Notice&quot;,
-            &quot;content&quot;: &quot;Scheduled maintenance will be conducted on the main campus this weekend. Please plan accordingly.&quot;,
-            &quot;scope&quot;: &quot;campus&quot;,
-            &quot;priority&quot;: &quot;normal&quot;,
-            &quot;school_id&quot;: 1,
-            &quot;campus_id&quot;: 1,
-            &quot;class_id&quot;: null,
-            &quot;is_active&quot;: true,
-            &quot;is_urgent&quot;: false,
-            &quot;publish_date&quot;: &quot;2025-08-29T00:54:40.000000Z&quot;,
-            &quot;expiry_date&quot;: &quot;2025-09-07T00:54:40.000000Z&quot;,
-            &quot;created_by&quot;: {
-                &quot;id&quot;: 2,
-                &quot;name&quot;: &quot;System Administrator&quot;,
-                &quot;email&quot;: &quot;admin@yousch.edu&quot;,
-                &quot;email_verified_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
-                &quot;created_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
-                &quot;updated_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;
-            },
-            &quot;target_audience&quot;: &quot;all&quot;,
-            &quot;attachments&quot;: [],
-            &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
-            &quot;campus&quot;: {
-                &quot;id&quot;: 1,
-                &quot;school_id&quot;: 1,
-                &quot;name&quot;: &quot;Main Campus&quot;,
-                &quot;address&quot;: &quot;123 Education Street, Knowledge City&quot;,
-                &quot;phone&quot;: &quot;+1-555-0123&quot;,
-                &quot;email&quot;: &quot;main@yousch.edu&quot;,
-                &quot;is_active&quot;: true,
-                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
-                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
-            },
-            &quot;class_room&quot;: null
-        },
-        {
             &quot;id&quot;: 1,
             &quot;title&quot;: &quot;Welcome to New Academic Year 2024-2025!&quot;,
             &quot;content&quot;: &quot;We are excited to welcome all students to the new academic year. Classes begin on September 1st, 2024.&quot;,
@@ -36298,46 +35395,6 @@ access-control-allow-origin: *
                     }
                 }
             }
-        },
-        {
-            &quot;id&quot;: 2,
-            &quot;title&quot;: &quot;Campus Maintenance Notice&quot;,
-            &quot;content&quot;: &quot;Scheduled maintenance will be conducted on the main campus this weekend. Please plan accordingly.&quot;,
-            &quot;scope&quot;: &quot;campus&quot;,
-            &quot;priority&quot;: &quot;normal&quot;,
-            &quot;school_id&quot;: 1,
-            &quot;campus_id&quot;: 1,
-            &quot;class_id&quot;: null,
-            &quot;is_active&quot;: true,
-            &quot;is_urgent&quot;: false,
-            &quot;publish_date&quot;: &quot;2025-08-29T00:54:40.000000Z&quot;,
-            &quot;expiry_date&quot;: &quot;2025-09-07T00:54:40.000000Z&quot;,
-            &quot;created_by&quot;: {
-                &quot;id&quot;: 2,
-                &quot;name&quot;: &quot;System Administrator&quot;,
-                &quot;email&quot;: &quot;admin@yousch.edu&quot;,
-                &quot;email_verified_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
-                &quot;created_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
-                &quot;updated_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;
-            },
-            &quot;target_audience&quot;: &quot;all&quot;,
-            &quot;attachments&quot;: [],
-            &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
-            &quot;school&quot;: {
-                &quot;id&quot;: 1,
-                &quot;name&quot;: &quot;Yousch International School&quot;,
-                &quot;domain&quot;: &quot;yousch.edu&quot;,
-                &quot;contact_info&quot;: &quot;Contact us for more information&quot;,
-                &quot;address&quot;: &quot;123 Education Street, Knowledge City&quot;,
-                &quot;phone&quot;: &quot;+1-555-0123&quot;,
-                &quot;email&quot;: &quot;info@yousch.edu&quot;,
-                &quot;website&quot;: &quot;https://www.yousch.edu&quot;,
-                &quot;is_active&quot;: true,
-                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
-                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
-            },
-            &quot;class_room&quot;: null
         }
     ],
     &quot;message&quot;: &quot;Campus announcements retrieved successfully&quot;
@@ -38217,8 +37274,8 @@ You can check the Dev Tools console for debugging information.</code></pre>
     \"class_id\": \"architecto\",
     \"subject_id\": \"architecto\",
     \"timetable_id\": \"architecto\",
-    \"date\": \"2025-08-31T02:28:56\",
-    \"status\": \"present\",
+    \"date\": \"2025-09-08T23:41:32\",
+    \"status\": \"absent\",
     \"remarks\": \"n\"
 }"
 </code></pre></div>
@@ -38239,8 +37296,8 @@ let body = {
     "class_id": "architecto",
     "subject_id": "architecto",
     "timetable_id": "architecto",
-    "date": "2025-08-31T02:28:56",
-    "status": "present",
+    "date": "2025-09-08T23:41:32",
+    "status": "absent",
     "remarks": "n"
 };
 
@@ -38385,10 +37442,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="date"                data-endpoint="POSTapi-attendance-student-attendance"
-               value="2025-08-31T02:28:56"
+               value="2025-09-08T23:41:32"
                data-component="body">
     <br>
-<p>Must be a valid date. Example: <code>2025-08-31T02:28:56</code></p>
+<p>Must be a valid date. Example: <code>2025-09-08T23:41:32</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>status</code></b>&nbsp;&nbsp;
@@ -38396,10 +37453,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="status"                data-endpoint="POSTapi-attendance-student-attendance"
-               value="present"
+               value="absent"
                data-component="body">
     <br>
-<p>Example: <code>present</code></p>
+<p>Example: <code>absent</code></p>
 Must be one of:
 <ul style="list-style-type: square;"><li><code>present</code></li> <li><code>absent</code></li> <li><code>late</code></li> <li><code>excused</code></li></ul>
         </div>
@@ -39390,8 +38447,8 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"start_date\": \"2025-08-31T02:28:56\",
-    \"end_date\": \"2051-09-24\"
+    \"start_date\": \"2025-09-08T23:41:32\",
+    \"end_date\": \"2051-10-02\"
 }"
 </code></pre></div>
 
@@ -39407,8 +38464,8 @@ const headers = {
 };
 
 let body = {
-    "start_date": "2025-08-31T02:28:56",
-    "end_date": "2051-09-24"
+    "start_date": "2025-09-08T23:41:32",
+    "end_date": "2051-10-02"
 };
 
 fetch(url, {
@@ -39497,10 +38554,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="start_date"                data-endpoint="POSTapi-attendance-student-attendance-date-range"
-               value="2025-08-31T02:28:56"
+               value="2025-09-08T23:41:32"
                data-component="body">
     <br>
-<p>Must be a valid date. Example: <code>2025-08-31T02:28:56</code></p>
+<p>Must be a valid date. Example: <code>2025-09-08T23:41:32</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>end_date</code></b>&nbsp;&nbsp;
@@ -39508,10 +38565,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="end_date"                data-endpoint="POSTapi-attendance-student-attendance-date-range"
-               value="2051-09-24"
+               value="2051-10-02"
                data-component="body">
     <br>
-<p>Must be a valid date. Must be a date after or equal to <code>start_date</code>. Example: <code>2051-09-24</code></p>
+<p>Must be a valid date. Must be a date after or equal to <code>start_date</code>. Example: <code>2051-10-02</code></p>
         </div>
         </form>
 
@@ -39532,7 +38589,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"date\": \"2025-08-31T02:28:56\"
+    \"date\": \"2025-09-08T23:41:32\"
 }"
 </code></pre></div>
 
@@ -39548,7 +38605,7 @@ const headers = {
 };
 
 let body = {
-    "date": "2025-08-31T02:28:56"
+    "date": "2025-09-08T23:41:32"
 };
 
 fetch(url, {
@@ -39665,10 +38722,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="date"                data-endpoint="GETapi-attendance-student-attendance-class--classId--summary"
-               value="2025-08-31T02:28:56"
+               value="2025-09-08T23:41:32"
                data-component="body">
     <br>
-<p>Must be a valid date. Example: <code>2025-08-31T02:28:56</code></p>
+<p>Must be a valid date. Example: <code>2025-09-08T23:41:32</code></p>
         </div>
         </form>
 
@@ -39689,8 +38746,8 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"start_date\": \"2025-08-31T02:28:56\",
-    \"end_date\": \"2051-09-24\"
+    \"start_date\": \"2025-09-08T23:41:32\",
+    \"end_date\": \"2051-10-02\"
 }"
 </code></pre></div>
 
@@ -39706,8 +38763,8 @@ const headers = {
 };
 
 let body = {
-    "start_date": "2025-08-31T02:28:56",
-    "end_date": "2051-09-24"
+    "start_date": "2025-09-08T23:41:32",
+    "end_date": "2051-10-02"
 };
 
 fetch(url, {
@@ -39824,10 +38881,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="start_date"                data-endpoint="GETapi-attendance-student-attendance-student--studentId--summary"
-               value="2025-08-31T02:28:56"
+               value="2025-09-08T23:41:32"
                data-component="body">
     <br>
-<p>Must be a valid date. Example: <code>2025-08-31T02:28:56</code></p>
+<p>Must be a valid date. Example: <code>2025-09-08T23:41:32</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>end_date</code></b>&nbsp;&nbsp;
@@ -39835,10 +38892,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="end_date"                data-endpoint="GETapi-attendance-student-attendance-student--studentId--summary"
-               value="2051-09-24"
+               value="2051-10-02"
                data-component="body">
     <br>
-<p>Must be a valid date. Must be a date after or equal to <code>start_date</code>. Example: <code>2051-09-24</code></p>
+<p>Must be a valid date. Must be a date after or equal to <code>start_date</code>. Example: <code>2051-10-02</code></p>
         </div>
         </form>
 
@@ -39859,8 +38916,8 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"start_date\": \"2025-08-31T02:28:56\",
-    \"end_date\": \"2051-09-24\"
+    \"start_date\": \"2025-09-08T23:41:32\",
+    \"end_date\": \"2051-10-02\"
 }"
 </code></pre></div>
 
@@ -39876,8 +38933,8 @@ const headers = {
 };
 
 let body = {
-    "start_date": "2025-08-31T02:28:56",
-    "end_date": "2051-09-24"
+    "start_date": "2025-09-08T23:41:32",
+    "end_date": "2051-10-02"
 };
 
 fetch(url, {
@@ -39994,10 +39051,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="start_date"                data-endpoint="GETapi-attendance-student-attendance-student--studentId--trends"
-               value="2025-08-31T02:28:56"
+               value="2025-09-08T23:41:32"
                data-component="body">
     <br>
-<p>Must be a valid date. Example: <code>2025-08-31T02:28:56</code></p>
+<p>Must be a valid date. Example: <code>2025-09-08T23:41:32</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>end_date</code></b>&nbsp;&nbsp;
@@ -40005,10 +39062,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="end_date"                data-endpoint="GETapi-attendance-student-attendance-student--studentId--trends"
-               value="2051-09-24"
+               value="2051-10-02"
                data-component="body">
     <br>
-<p>Must be a valid date. Must be a date after or equal to <code>start_date</code>. Example: <code>2051-09-24</code></p>
+<p>Must be a valid date. Must be a date after or equal to <code>start_date</code>. Example: <code>2051-10-02</code></p>
         </div>
         </form>
 
@@ -40405,8 +39462,8 @@ You can check the Dev Tools console for debugging information.</code></pre>
     \"class_id\": \"architecto\",
     \"subject_id\": \"architecto\",
     \"timetable_id\": \"architecto\",
-    \"date\": \"2025-08-31T02:28:56\",
-    \"status\": \"late\",
+    \"date\": \"2025-09-08T23:41:32\",
+    \"status\": \"absent\",
     \"remarks\": \"n\"
 }"
 </code></pre></div>
@@ -40427,8 +39484,8 @@ let body = {
     "class_id": "architecto",
     "subject_id": "architecto",
     "timetable_id": "architecto",
-    "date": "2025-08-31T02:28:56",
-    "status": "late",
+    "date": "2025-09-08T23:41:32",
+    "status": "absent",
     "remarks": "n"
 };
 
@@ -40573,10 +39630,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="date"                data-endpoint="POSTapi-attendance-teacher-attendance"
-               value="2025-08-31T02:28:56"
+               value="2025-09-08T23:41:32"
                data-component="body">
     <br>
-<p>Must be a valid date. Example: <code>2025-08-31T02:28:56</code></p>
+<p>Must be a valid date. Example: <code>2025-09-08T23:41:32</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>status</code></b>&nbsp;&nbsp;
@@ -40584,10 +39641,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="status"                data-endpoint="POSTapi-attendance-teacher-attendance"
-               value="late"
+               value="absent"
                data-component="body">
     <br>
-<p>Example: <code>late</code></p>
+<p>Example: <code>absent</code></p>
 Must be one of:
 <ul style="list-style-type: square;"><li><code>present</code></li> <li><code>absent</code></li> <li><code>late</code></li></ul>
         </div>
@@ -40757,7 +39814,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"status\": \"late\",
+    \"status\": \"present\",
     \"remarks\": \"b\"
 }"
 </code></pre></div>
@@ -40774,7 +39831,7 @@ const headers = {
 };
 
 let body = {
-    "status": "late",
+    "status": "present",
     "remarks": "b"
 };
 
@@ -40876,10 +39933,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="status"                data-endpoint="PUTapi-attendance-teacher-attendance--attendance_id-"
-               value="late"
+               value="present"
                data-component="body">
     <br>
-<p>Example: <code>late</code></p>
+<p>Example: <code>present</code></p>
 Must be one of:
 <ul style="list-style-type: square;"><li><code>present</code></li> <li><code>absent</code></li> <li><code>late</code></li></ul>
         </div>
@@ -41578,8 +40635,8 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"start_date\": \"2025-08-31T02:28:56\",
-    \"end_date\": \"2051-09-24\"
+    \"start_date\": \"2025-09-08T23:41:32\",
+    \"end_date\": \"2051-10-02\"
 }"
 </code></pre></div>
 
@@ -41595,8 +40652,8 @@ const headers = {
 };
 
 let body = {
-    "start_date": "2025-08-31T02:28:56",
-    "end_date": "2051-09-24"
+    "start_date": "2025-09-08T23:41:32",
+    "end_date": "2051-10-02"
 };
 
 fetch(url, {
@@ -41685,10 +40742,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="start_date"                data-endpoint="POSTapi-attendance-teacher-attendance-date-range"
-               value="2025-08-31T02:28:56"
+               value="2025-09-08T23:41:32"
                data-component="body">
     <br>
-<p>Must be a valid date. Example: <code>2025-08-31T02:28:56</code></p>
+<p>Must be a valid date. Example: <code>2025-09-08T23:41:32</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>end_date</code></b>&nbsp;&nbsp;
@@ -41696,10 +40753,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="end_date"                data-endpoint="POSTapi-attendance-teacher-attendance-date-range"
-               value="2051-09-24"
+               value="2051-10-02"
                data-component="body">
     <br>
-<p>Must be a valid date. Must be a date after or equal to <code>start_date</code>. Example: <code>2051-09-24</code></p>
+<p>Must be a valid date. Must be a date after or equal to <code>start_date</code>. Example: <code>2051-10-02</code></p>
         </div>
         </form>
 
@@ -41720,7 +40777,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"date\": \"2025-08-31T02:28:56\"
+    \"date\": \"2025-09-08T23:41:32\"
 }"
 </code></pre></div>
 
@@ -41736,7 +40793,7 @@ const headers = {
 };
 
 let body = {
-    "date": "2025-08-31T02:28:56"
+    "date": "2025-09-08T23:41:32"
 };
 
 fetch(url, {
@@ -41853,10 +40910,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="date"                data-endpoint="GETapi-attendance-teacher-attendance-class--classId--summary"
-               value="2025-08-31T02:28:56"
+               value="2025-09-08T23:41:32"
                data-component="body">
     <br>
-<p>Must be a valid date. Example: <code>2025-08-31T02:28:56</code></p>
+<p>Must be a valid date. Example: <code>2025-09-08T23:41:32</code></p>
         </div>
         </form>
 
@@ -41877,8 +40934,8 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"start_date\": \"2025-08-31T02:28:56\",
-    \"end_date\": \"2051-09-24\"
+    \"start_date\": \"2025-09-08T23:41:32\",
+    \"end_date\": \"2051-10-02\"
 }"
 </code></pre></div>
 
@@ -41894,8 +40951,8 @@ const headers = {
 };
 
 let body = {
-    "start_date": "2025-08-31T02:28:56",
-    "end_date": "2051-09-24"
+    "start_date": "2025-09-08T23:41:32",
+    "end_date": "2051-10-02"
 };
 
 fetch(url, {
@@ -42012,10 +41069,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="start_date"                data-endpoint="GETapi-attendance-teacher-attendance-teacher--teacherId--summary"
-               value="2025-08-31T02:28:56"
+               value="2025-09-08T23:41:32"
                data-component="body">
     <br>
-<p>Must be a valid date. Example: <code>2025-08-31T02:28:56</code></p>
+<p>Must be a valid date. Example: <code>2025-09-08T23:41:32</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>end_date</code></b>&nbsp;&nbsp;
@@ -42023,10 +41080,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="end_date"                data-endpoint="GETapi-attendance-teacher-attendance-teacher--teacherId--summary"
-               value="2051-09-24"
+               value="2051-10-02"
                data-component="body">
     <br>
-<p>Must be a valid date. Must be a date after or equal to <code>start_date</code>. Example: <code>2051-09-24</code></p>
+<p>Must be a valid date. Must be a date after or equal to <code>start_date</code>. Example: <code>2051-10-02</code></p>
         </div>
         </form>
 
@@ -42047,8 +41104,8 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"start_date\": \"2025-08-31T02:28:56\",
-    \"end_date\": \"2051-09-24\"
+    \"start_date\": \"2025-09-08T23:41:32\",
+    \"end_date\": \"2051-10-02\"
 }"
 </code></pre></div>
 
@@ -42064,8 +41121,8 @@ const headers = {
 };
 
 let body = {
-    "start_date": "2025-08-31T02:28:56",
-    "end_date": "2051-09-24"
+    "start_date": "2025-09-08T23:41:32",
+    "end_date": "2051-10-02"
 };
 
 fetch(url, {
@@ -42182,10 +41239,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="start_date"                data-endpoint="GETapi-attendance-teacher-attendance-teacher--teacherId--trends"
-               value="2025-08-31T02:28:56"
+               value="2025-09-08T23:41:32"
                data-component="body">
     <br>
-<p>Must be a valid date. Example: <code>2025-08-31T02:28:56</code></p>
+<p>Must be a valid date. Example: <code>2025-09-08T23:41:32</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>end_date</code></b>&nbsp;&nbsp;
@@ -42193,10 +41250,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="end_date"                data-endpoint="GETapi-attendance-teacher-attendance-teacher--teacherId--trends"
-               value="2051-09-24"
+               value="2051-10-02"
                data-component="body">
     <br>
-<p>Must be a valid date. Must be a date after or equal to <code>start_date</code>. Example: <code>2051-09-24</code></p>
+<p>Must be a valid date. Must be a date after or equal to <code>start_date</code>. Example: <code>2051-10-02</code></p>
         </div>
         </form>
 
@@ -42591,9 +41648,9 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --form "student_id=architecto"\
     --form "class_id=architecto"\
     --form "subject_id=architecto"\
-    --form "date=2025-08-31T02:28:56"\
+    --form "date=2025-09-08T23:41:32"\
     --form "reason=n"\
-    --form "document=@/private/var/folders/6g/8lq1w8516txg8s4l8y45fq6r0000gp/T/php8nlv308bqkrmf1Kje25" </code></pre></div>
+    --form "document=@/private/var/folders/6g/8lq1w8516txg8s4l8y45fq6r0000gp/T/phpgb1cf2rc387o0Y86KP0" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -42610,7 +41667,7 @@ const body = new FormData();
 body.append('student_id', 'architecto');
 body.append('class_id', 'architecto');
 body.append('subject_id', 'architecto');
-body.append('date', '2025-08-31T02:28:56');
+body.append('date', '2025-09-08T23:41:32');
 body.append('reason', 'n');
 body.append('document', document.querySelector('input[name="document"]').files[0]);
 
@@ -42744,10 +41801,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="date"                data-endpoint="POSTapi-attendance-student-excuses"
-               value="2025-08-31T02:28:56"
+               value="2025-09-08T23:41:32"
                data-component="body">
     <br>
-<p>Must be a valid date. Example: <code>2025-08-31T02:28:56</code></p>
+<p>Must be a valid date. Example: <code>2025-09-08T23:41:32</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>reason</code></b>&nbsp;&nbsp;
@@ -42769,7 +41826,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                value=""
                data-component="body">
     <br>
-<p>Must be a file. Must not be greater than 2048 kilobytes. Example: <code>/private/var/folders/6g/8lq1w8516txg8s4l8y45fq6r0000gp/T/php8nlv308bqkrmf1Kje25</code></p>
+<p>Must be a file. Must not be greater than 2048 kilobytes. Example: <code>/private/var/folders/6g/8lq1w8516txg8s4l8y45fq6r0000gp/T/phpgb1cf2rc387o0Y86KP0</code></p>
         </div>
         </form>
 
@@ -42926,7 +41983,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "Content-Type: multipart/form-data" \
     --header "Accept: application/json" \
     --form "reason=b"\
-    --form "document=@/private/var/folders/6g/8lq1w8516txg8s4l8y45fq6r0000gp/T/php66td4kgtmjvl4fNDLJx" </code></pre></div>
+    --form "document=@/private/var/folders/6g/8lq1w8516txg8s4l8y45fq6r0000gp/T/phpvomj0je8keor7YjOzqy" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -43055,7 +42112,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                value=""
                data-component="body">
     <br>
-<p>Must be a file. Must not be greater than 2048 kilobytes. Example: <code>/private/var/folders/6g/8lq1w8516txg8s4l8y45fq6r0000gp/T/php66td4kgtmjvl4fNDLJx</code></p>
+<p>Must be a file. Must not be greater than 2048 kilobytes. Example: <code>/private/var/folders/6g/8lq1w8516txg8s4l8y45fq6r0000gp/T/phpvomj0je8keor7YjOzqy</code></p>
         </div>
         </form>
 
@@ -43741,8 +42798,8 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"start_date\": \"2025-08-31T02:28:56\",
-    \"end_date\": \"2051-09-24\"
+    \"start_date\": \"2025-09-08T23:41:32\",
+    \"end_date\": \"2051-10-02\"
 }"
 </code></pre></div>
 
@@ -43758,8 +42815,8 @@ const headers = {
 };
 
 let body = {
-    "start_date": "2025-08-31T02:28:56",
-    "end_date": "2051-09-24"
+    "start_date": "2025-09-08T23:41:32",
+    "end_date": "2051-10-02"
 };
 
 fetch(url, {
@@ -43848,10 +42905,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="start_date"                data-endpoint="POSTapi-attendance-student-excuses-date-range"
-               value="2025-08-31T02:28:56"
+               value="2025-09-08T23:41:32"
                data-component="body">
     <br>
-<p>Must be a valid date. Example: <code>2025-08-31T02:28:56</code></p>
+<p>Must be a valid date. Example: <code>2025-09-08T23:41:32</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>end_date</code></b>&nbsp;&nbsp;
@@ -43859,10 +42916,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="end_date"                data-endpoint="POSTapi-attendance-student-excuses-date-range"
-               value="2051-09-24"
+               value="2051-10-02"
                data-component="body">
     <br>
-<p>Must be a valid date. Must be a date after or equal to <code>start_date</code>. Example: <code>2051-09-24</code></p>
+<p>Must be a valid date. Must be a date after or equal to <code>start_date</code>. Example: <code>2051-10-02</code></p>
         </div>
         </form>
 
@@ -44743,8 +43800,8 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"start_date\": \"2025-08-31T02:28:56\",
-    \"end_date\": \"2051-09-24\"
+    \"start_date\": \"2025-09-08T23:41:32\",
+    \"end_date\": \"2051-10-02\"
 }"
 </code></pre></div>
 
@@ -44760,8 +43817,8 @@ const headers = {
 };
 
 let body = {
-    "start_date": "2025-08-31T02:28:56",
-    "end_date": "2051-09-24"
+    "start_date": "2025-09-08T23:41:32",
+    "end_date": "2051-10-02"
 };
 
 fetch(url, {
@@ -44878,10 +43935,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="start_date"                data-endpoint="GETapi-attendance-student-excuses-student--studentId--trends"
-               value="2025-08-31T02:28:56"
+               value="2025-09-08T23:41:32"
                data-component="body">
     <br>
-<p>Must be a valid date. Example: <code>2025-08-31T02:28:56</code></p>
+<p>Must be a valid date. Example: <code>2025-09-08T23:41:32</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>end_date</code></b>&nbsp;&nbsp;
@@ -44889,10 +43946,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="end_date"                data-endpoint="GETapi-attendance-student-excuses-student--studentId--trends"
-               value="2051-09-24"
+               value="2051-10-02"
                data-component="body">
     <br>
-<p>Must be a valid date. Must be a date after or equal to <code>start_date</code>. Example: <code>2051-09-24</code></p>
+<p>Must be a valid date. Must be a date after or equal to <code>start_date</code>. Example: <code>2051-10-02</code></p>
         </div>
         </form>
 
@@ -45039,9 +44096,9 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --form "teacher_id=architecto"\
     --form "class_id=architecto"\
     --form "subject_id=architecto"\
-    --form "date=2025-08-31T02:28:56"\
+    --form "date=2025-09-08T23:41:32"\
     --form "reason=n"\
-    --form "document=@/private/var/folders/6g/8lq1w8516txg8s4l8y45fq6r0000gp/T/phpt8tk37mh6knd7OJbdnd" </code></pre></div>
+    --form "document=@/private/var/folders/6g/8lq1w8516txg8s4l8y45fq6r0000gp/T/phppbu20vca9v5ve0TPEFv" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -45058,7 +44115,7 @@ const body = new FormData();
 body.append('teacher_id', 'architecto');
 body.append('class_id', 'architecto');
 body.append('subject_id', 'architecto');
-body.append('date', '2025-08-31T02:28:56');
+body.append('date', '2025-09-08T23:41:32');
 body.append('reason', 'n');
 body.append('document', document.querySelector('input[name="document"]').files[0]);
 
@@ -45192,10 +44249,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="date"                data-endpoint="POSTapi-attendance-teacher-excuses"
-               value="2025-08-31T02:28:56"
+               value="2025-09-08T23:41:32"
                data-component="body">
     <br>
-<p>Must be a valid date. Example: <code>2025-08-31T02:28:56</code></p>
+<p>Must be a valid date. Example: <code>2025-09-08T23:41:32</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>reason</code></b>&nbsp;&nbsp;
@@ -45217,7 +44274,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                value=""
                data-component="body">
     <br>
-<p>Must be a file. Must not be greater than 2048 kilobytes. Example: <code>/private/var/folders/6g/8lq1w8516txg8s4l8y45fq6r0000gp/T/phpt8tk37mh6knd7OJbdnd</code></p>
+<p>Must be a file. Must not be greater than 2048 kilobytes. Example: <code>/private/var/folders/6g/8lq1w8516txg8s4l8y45fq6r0000gp/T/phppbu20vca9v5ve0TPEFv</code></p>
         </div>
         </form>
 
@@ -45374,7 +44431,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "Content-Type: multipart/form-data" \
     --header "Accept: application/json" \
     --form "reason=b"\
-    --form "document=@/private/var/folders/6g/8lq1w8516txg8s4l8y45fq6r0000gp/T/phps0e7urdihpp6dT4146m" </code></pre></div>
+    --form "document=@/private/var/folders/6g/8lq1w8516txg8s4l8y45fq6r0000gp/T/phpn2941fq30jlg2iX2Xfu" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -45503,7 +44560,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                value=""
                data-component="body">
     <br>
-<p>Must be a file. Must not be greater than 2048 kilobytes. Example: <code>/private/var/folders/6g/8lq1w8516txg8s4l8y45fq6r0000gp/T/phps0e7urdihpp6dT4146m</code></p>
+<p>Must be a file. Must not be greater than 2048 kilobytes. Example: <code>/private/var/folders/6g/8lq1w8516txg8s4l8y45fq6r0000gp/T/phpn2941fq30jlg2iX2Xfu</code></p>
         </div>
         </form>
 
@@ -46189,8 +45246,8 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"start_date\": \"2025-08-31T02:28:56\",
-    \"end_date\": \"2051-09-24\"
+    \"start_date\": \"2025-09-08T23:41:32\",
+    \"end_date\": \"2051-10-02\"
 }"
 </code></pre></div>
 
@@ -46206,8 +45263,8 @@ const headers = {
 };
 
 let body = {
-    "start_date": "2025-08-31T02:28:56",
-    "end_date": "2051-09-24"
+    "start_date": "2025-09-08T23:41:32",
+    "end_date": "2051-10-02"
 };
 
 fetch(url, {
@@ -46296,10 +45353,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="start_date"                data-endpoint="POSTapi-attendance-teacher-excuses-date-range"
-               value="2025-08-31T02:28:56"
+               value="2025-09-08T23:41:32"
                data-component="body">
     <br>
-<p>Must be a valid date. Example: <code>2025-08-31T02:28:56</code></p>
+<p>Must be a valid date. Example: <code>2025-09-08T23:41:32</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>end_date</code></b>&nbsp;&nbsp;
@@ -46307,10 +45364,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="end_date"                data-endpoint="POSTapi-attendance-teacher-excuses-date-range"
-               value="2051-09-24"
+               value="2051-10-02"
                data-component="body">
     <br>
-<p>Must be a valid date. Must be a date after or equal to <code>start_date</code>. Example: <code>2051-09-24</code></p>
+<p>Must be a valid date. Must be a date after or equal to <code>start_date</code>. Example: <code>2051-10-02</code></p>
         </div>
         </form>
 
@@ -47191,8 +46248,8 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"start_date\": \"2025-08-31T02:28:56\",
-    \"end_date\": \"2051-09-24\"
+    \"start_date\": \"2025-09-08T23:41:32\",
+    \"end_date\": \"2051-10-02\"
 }"
 </code></pre></div>
 
@@ -47208,8 +46265,8 @@ const headers = {
 };
 
 let body = {
-    "start_date": "2025-08-31T02:28:56",
-    "end_date": "2051-09-24"
+    "start_date": "2025-09-08T23:41:32",
+    "end_date": "2051-10-02"
 };
 
 fetch(url, {
@@ -47326,10 +46383,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="start_date"                data-endpoint="GETapi-attendance-teacher-excuses-teacher--teacherId--trends"
-               value="2025-08-31T02:28:56"
+               value="2025-09-08T23:41:32"
                data-component="body">
     <br>
-<p>Must be a valid date. Example: <code>2025-08-31T02:28:56</code></p>
+<p>Must be a valid date. Example: <code>2025-09-08T23:41:32</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>end_date</code></b>&nbsp;&nbsp;
@@ -47337,10 +46394,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="end_date"                data-endpoint="GETapi-attendance-teacher-excuses-teacher--teacherId--trends"
-               value="2051-09-24"
+               value="2051-10-02"
                data-component="body">
     <br>
-<p>Must be a valid date. Must be a date after or equal to <code>start_date</code>. Example: <code>2051-09-24</code></p>
+<p>Must be a valid date. Must be a date after or equal to <code>start_date</code>. Example: <code>2051-10-02</code></p>
         </div>
         </form>
 
@@ -47367,7 +46424,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
             \"class_id\": \"architecto\",
             \"subject_id\": \"architecto\",
             \"timetable_id\": \"architecto\",
-            \"date\": \"2025-08-31T02:28:56\",
+            \"date\": \"2025-09-08T23:41:32\",
             \"status\": \"present\",
             \"remarks\": \"n\"
         }
@@ -47393,7 +46450,7 @@ let body = {
             "class_id": "architecto",
             "subject_id": "architecto",
             "timetable_id": "architecto",
-            "date": "2025-08-31T02:28:56",
+            "date": "2025-09-08T23:41:32",
             "status": "present",
             "remarks": "n"
         }
@@ -47539,10 +46596,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="attendance_data.0.date"                data-endpoint="POSTapi-attendance-bulk-student-attendance-create"
-               value="2025-08-31T02:28:56"
+               value="2025-09-08T23:41:32"
                data-component="body">
     <br>
-<p>Must be a valid date. Example: <code>2025-08-31T02:28:56</code></p>
+<p>Must be a valid date. Example: <code>2025-09-08T23:41:32</code></p>
                     </div>
                                                                 <div style="margin-left: 14px; clear: unset;">
                         <b style="line-height: 2;"><code>status</code></b>&nbsp;&nbsp;
@@ -47771,8 +46828,8 @@ Must be one of:
             \"class_id\": \"architecto\",
             \"subject_id\": \"architecto\",
             \"timetable_id\": \"architecto\",
-            \"date\": \"2025-08-31T02:28:56\",
-            \"status\": \"late\",
+            \"date\": \"2025-09-08T23:41:32\",
+            \"status\": \"absent\",
             \"remarks\": \"n\"
         }
     ]
@@ -47797,8 +46854,8 @@ let body = {
             "class_id": "architecto",
             "subject_id": "architecto",
             "timetable_id": "architecto",
-            "date": "2025-08-31T02:28:56",
-            "status": "late",
+            "date": "2025-09-08T23:41:32",
+            "status": "absent",
             "remarks": "n"
         }
     ]
@@ -47943,10 +47000,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="attendance_data.0.date"                data-endpoint="POSTapi-attendance-bulk-teacher-attendance-create"
-               value="2025-08-31T02:28:56"
+               value="2025-09-08T23:41:32"
                data-component="body">
     <br>
-<p>Must be a valid date. Example: <code>2025-08-31T02:28:56</code></p>
+<p>Must be a valid date. Example: <code>2025-09-08T23:41:32</code></p>
                     </div>
                                                                 <div style="margin-left: 14px; clear: unset;">
                         <b style="line-height: 2;"><code>status</code></b>&nbsp;&nbsp;
@@ -47954,10 +47011,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="attendance_data.0.status"                data-endpoint="POSTapi-attendance-bulk-teacher-attendance-create"
-               value="late"
+               value="absent"
                data-component="body">
     <br>
-<p>Example: <code>late</code></p>
+<p>Example: <code>absent</code></p>
 Must be one of:
 <ul style="list-style-type: square;"><li><code>present</code></li> <li><code>absent</code></li> <li><code>late</code></li></ul>
                     </div>
@@ -47996,7 +47053,7 @@ Must be one of:
     \"attendance_data\": [
         {
             \"id\": \"architecto\",
-            \"status\": \"present\",
+            \"status\": \"late\",
             \"remarks\": \"n\"
         }
     ]
@@ -48018,7 +47075,7 @@ let body = {
     "attendance_data": [
         {
             "id": "architecto",
-            "status": "present",
+            "status": "late",
             "remarks": "n"
         }
     ]
@@ -48130,10 +47187,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="attendance_data.0.status"                data-endpoint="POSTapi-attendance-bulk-teacher-attendance-update"
-               value="present"
+               value="late"
                data-component="body">
     <br>
-<p>Example: <code>present</code></p>
+<p>Example: <code>late</code></p>
 Must be one of:
 <ul style="list-style-type: square;"><li><code>present</code></li> <li><code>absent</code></li> <li><code>late</code></li></ul>
                     </div>
@@ -49238,14 +48295,6 @@ access-control-allow-origin: *
     &quot;success&quot;: true,
     &quot;data&quot;: [
         {
-            &quot;id&quot;: 4,
-            &quot;name&quot;: &quot;assignment&quot;,
-            &quot;description&quot;: &quot;Take-home assignment or project&quot;,
-            &quot;weight&quot;: &quot;15.00&quot;,
-            &quot;created_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;
-        },
-        {
             &quot;id&quot;: 9,
             &quot;name&quot;: &quot;Assignment&quot;,
             &quot;description&quot;: &quot;Written or practical assignment&quot;,
@@ -49576,14 +48625,6 @@ access-control-allow-origin: *
 <code class="language-json" style="max-height: 300px;">{
     &quot;success&quot;: true,
     &quot;data&quot;: [
-        {
-            &quot;id&quot;: 4,
-            &quot;name&quot;: &quot;assignment&quot;,
-            &quot;description&quot;: &quot;Take-home assignment or project&quot;,
-            &quot;weight&quot;: &quot;15.00&quot;,
-            &quot;created_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;
-        },
         {
             &quot;id&quot;: 9,
             &quot;name&quot;: &quot;Assignment&quot;,
@@ -49933,19 +48974,19 @@ access-control-allow-origin: *
 <code class="language-json" style="max-height: 300px;">{
     &quot;success&quot;: true,
     &quot;data&quot;: {
-        &quot;total_types&quot;: 13,
+        &quot;total_types&quot;: 12,
         &quot;weighted_types&quot;: 0,
         &quot;standard_types&quot;: 0,
         &quot;weight_distribution&quot;: {
             &quot;10.00&quot;: 2,
-            &quot;15.00&quot;: 3,
+            &quot;15.00&quot;: 2,
             &quot;20.00&quot;: 2,
             &quot;25.00&quot;: 2,
             &quot;30.00&quot;: 2,
             &quot;40.00&quot;: 1,
             &quot;50.00&quot;: 1
         },
-        &quot;average_weight&quot;: &quot;23.461538&quot;,
+        &quot;average_weight&quot;: &quot;24.166667&quot;,
         &quot;min_weight&quot;: &quot;10.00&quot;,
         &quot;max_weight&quot;: &quot;50.00&quot;
     },
@@ -58595,7 +57636,7 @@ access-control-allow-origin: *
 
 <code class="language-json" style="max-height: 300px;">{
     &quot;status&quot;: &quot;healthy&quot;,
-    &quot;timestamp&quot;: &quot;2025-08-31T02:28:54.920596Z&quot;,
+    &quot;timestamp&quot;: &quot;2025-09-08T23:41:31.572027Z&quot;,
     &quot;version&quot;: &quot;1.0.0&quot;
 }</code>
  </pre>
@@ -69043,7 +68084,7 @@ fetch(url, {
 
 <span id="example-responses-GETapi-teachers-teachers">
             <blockquote>
-            <p>Example response (500):</p>
+            <p>Example response (200):</p>
         </blockquote>
                 <details class="annotation">
             <summary style="cursor: pointer;">
@@ -69055,7 +68096,258 @@ access-control-allow-origin: *
  </code></pre></details>         <pre>
 
 <code class="language-json" style="max-height: 300px;">{
-    &quot;message&quot;: &quot;Server Error&quot;
+    &quot;success&quot;: true,
+    &quot;data&quot;: [
+        {
+            &quot;id&quot;: 5,
+            &quot;school_id&quot;: 1,
+            &quot;campus_id&quot;: 2,
+            &quot;first_name&quot;: &quot;Mondestin&quot;,
+            &quot;last_name&quot;: &quot;MYSSIE&quot;,
+            &quot;dob&quot;: &quot;2025-08-30T00:00:00.000000Z&quot;,
+            &quot;gender&quot;: &quot;male&quot;,
+            &quot;email&quot;: &quot;sydneymodestin@gmail.com&quot;,
+            &quot;phone&quot;: &quot;+33753754960&quot;,
+            &quot;address&quot;: &quot;6 ROUTE DE STALINGRAD\nAppt 232&quot;,
+            &quot;hire_date&quot;: &quot;2025-08-22T00:00:00.000000Z&quot;,
+            &quot;employment_type&quot;: &quot;full-time&quot;,
+            &quot;qualification&quot;: &quot;Ph.D. in Computer Science&quot;,
+            &quot;specialization&quot;: &quot;Software Engineering, Algorithms&quot;,
+            &quot;status&quot;: &quot;active&quot;,
+            &quot;profile_picture&quot;: null,
+            &quot;created_at&quot;: &quot;2025-08-31T16:54:16.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-08-31T22:58:14.000000Z&quot;,
+            &quot;department_id&quot;: 2,
+            &quot;faculty_id&quot;: 1,
+            &quot;school&quot;: {
+                &quot;id&quot;: 1,
+                &quot;name&quot;: &quot;Yousch International School&quot;,
+                &quot;domain&quot;: &quot;yousch.edu&quot;,
+                &quot;contact_info&quot;: &quot;Contact us for more information&quot;,
+                &quot;address&quot;: &quot;123 Education Street, Knowledge City&quot;,
+                &quot;phone&quot;: &quot;+1-555-0123&quot;,
+                &quot;email&quot;: &quot;info@yousch.edu&quot;,
+                &quot;website&quot;: &quot;https://www.yousch.edu&quot;,
+                &quot;is_active&quot;: true,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            },
+            &quot;campus&quot;: {
+                &quot;id&quot;: 2,
+                &quot;school_id&quot;: 1,
+                &quot;name&quot;: &quot;North Campus&quot;,
+                &quot;address&quot;: &quot;456 Learning Avenue, North District&quot;,
+                &quot;phone&quot;: &quot;+1-555-0124&quot;,
+                &quot;email&quot;: &quot;north@yousch.edu&quot;,
+                &quot;is_active&quot;: true,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            },
+            &quot;department&quot;: {
+                &quot;id&quot;: 2,
+                &quot;faculty_id&quot;: 1,
+                &quot;name&quot;: &quot;Mathematics&quot;,
+                &quot;head_id&quot;: 5,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            },
+            &quot;faculty&quot;: {
+                &quot;id&quot;: 1,
+                &quot;school_id&quot;: 1,
+                &quot;name&quot;: &quot;Faculty of Science and Technology&quot;,
+                &quot;description&quot;: &quot;Leading research and education in science and technology&quot;,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            }
+        },
+        {
+            &quot;id&quot;: 4,
+            &quot;school_id&quot;: 1,
+            &quot;campus_id&quot;: 2,
+            &quot;first_name&quot;: &quot;Mondestin&quot;,
+            &quot;last_name&quot;: &quot;MYSSIE&quot;,
+            &quot;dob&quot;: &quot;2024-08-07T00:00:00.000000Z&quot;,
+            &quot;gender&quot;: &quot;female&quot;,
+            &quot;email&quot;: &quot;sydneymondestin@gmail.com&quot;,
+            &quot;phone&quot;: &quot;+33753754960&quot;,
+            &quot;address&quot;: &quot;6 ROUTE DE STALINGRAD\nAppt 232&quot;,
+            &quot;hire_date&quot;: &quot;2025-09-27T00:00:00.000000Z&quot;,
+            &quot;employment_type&quot;: &quot;full-time&quot;,
+            &quot;qualification&quot;: &quot;Ph.D. in Computer Science&quot;,
+            &quot;specialization&quot;: &quot;Software Engineering, Algorithms&quot;,
+            &quot;status&quot;: &quot;active&quot;,
+            &quot;profile_picture&quot;: null,
+            &quot;created_at&quot;: &quot;2025-08-31T05:51:43.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-08-31T05:51:43.000000Z&quot;,
+            &quot;department_id&quot;: 3,
+            &quot;faculty_id&quot;: 2,
+            &quot;school&quot;: {
+                &quot;id&quot;: 1,
+                &quot;name&quot;: &quot;Yousch International School&quot;,
+                &quot;domain&quot;: &quot;yousch.edu&quot;,
+                &quot;contact_info&quot;: &quot;Contact us for more information&quot;,
+                &quot;address&quot;: &quot;123 Education Street, Knowledge City&quot;,
+                &quot;phone&quot;: &quot;+1-555-0123&quot;,
+                &quot;email&quot;: &quot;info@yousch.edu&quot;,
+                &quot;website&quot;: &quot;https://www.yousch.edu&quot;,
+                &quot;is_active&quot;: true,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            },
+            &quot;campus&quot;: {
+                &quot;id&quot;: 2,
+                &quot;school_id&quot;: 1,
+                &quot;name&quot;: &quot;North Campus&quot;,
+                &quot;address&quot;: &quot;456 Learning Avenue, North District&quot;,
+                &quot;phone&quot;: &quot;+1-555-0124&quot;,
+                &quot;email&quot;: &quot;north@yousch.edu&quot;,
+                &quot;is_active&quot;: true,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            },
+            &quot;department&quot;: {
+                &quot;id&quot;: 3,
+                &quot;faculty_id&quot;: 2,
+                &quot;name&quot;: &quot;Business Administration&quot;,
+                &quot;head_id&quot;: 6,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            },
+            &quot;faculty&quot;: {
+                &quot;id&quot;: 2,
+                &quot;school_id&quot;: 1,
+                &quot;name&quot;: &quot;Faculty of Business and Economics&quot;,
+                &quot;description&quot;: &quot;Preparing future business leaders and economists&quot;,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            }
+        },
+        {
+            &quot;id&quot;: 2,
+            &quot;school_id&quot;: 1,
+            &quot;campus_id&quot;: 1,
+            &quot;first_name&quot;: &quot;Sarah&quot;,
+            &quot;last_name&quot;: &quot;Johnson&quot;,
+            &quot;dob&quot;: &quot;1990-07-22T00:00:00.000000Z&quot;,
+            &quot;gender&quot;: &quot;female&quot;,
+            &quot;email&quot;: &quot;sarah.johnson@university.edu&quot;,
+            &quot;phone&quot;: &quot;+1234567891&quot;,
+            &quot;address&quot;: &quot;456 College Blvd, City, State 12345&quot;,
+            &quot;hire_date&quot;: &quot;2022-01-10T00:00:00.000000Z&quot;,
+            &quot;employment_type&quot;: &quot;full-time&quot;,
+            &quot;qualification&quot;: &quot;M.S. in Computer Science&quot;,
+            &quot;specialization&quot;: &quot;Database Systems, Web Development&quot;,
+            &quot;status&quot;: &quot;active&quot;,
+            &quot;profile_picture&quot;: null,
+            &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+            &quot;department_id&quot;: 1,
+            &quot;faculty_id&quot;: 4,
+            &quot;school&quot;: {
+                &quot;id&quot;: 1,
+                &quot;name&quot;: &quot;Yousch International School&quot;,
+                &quot;domain&quot;: &quot;yousch.edu&quot;,
+                &quot;contact_info&quot;: &quot;Contact us for more information&quot;,
+                &quot;address&quot;: &quot;123 Education Street, Knowledge City&quot;,
+                &quot;phone&quot;: &quot;+1-555-0123&quot;,
+                &quot;email&quot;: &quot;info@yousch.edu&quot;,
+                &quot;website&quot;: &quot;https://www.yousch.edu&quot;,
+                &quot;is_active&quot;: true,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            },
+            &quot;campus&quot;: {
+                &quot;id&quot;: 1,
+                &quot;school_id&quot;: 1,
+                &quot;name&quot;: &quot;Main Campus&quot;,
+                &quot;address&quot;: &quot;123 Education Street, Knowledge City&quot;,
+                &quot;phone&quot;: &quot;+1-555-0123&quot;,
+                &quot;email&quot;: &quot;main@yousch.edu&quot;,
+                &quot;is_active&quot;: true,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            },
+            &quot;department&quot;: {
+                &quot;id&quot;: 1,
+                &quot;faculty_id&quot;: 1,
+                &quot;name&quot;: &quot;Computer Science&quot;,
+                &quot;head_id&quot;: 4,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            },
+            &quot;faculty&quot;: {
+                &quot;id&quot;: 4,
+                &quot;school_id&quot;: 1,
+                &quot;name&quot;: &quot;Faculty of Engineering&quot;,
+                &quot;description&quot;: &quot;Faculty of Engineering and Technology&quot;,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            }
+        },
+        {
+            &quot;id&quot;: 3,
+            &quot;school_id&quot;: 1,
+            &quot;campus_id&quot;: 1,
+            &quot;first_name&quot;: &quot;Michael&quot;,
+            &quot;last_name&quot;: &quot;Brown&quot;,
+            &quot;dob&quot;: &quot;1988-11-08T00:00:00.000000Z&quot;,
+            &quot;gender&quot;: &quot;male&quot;,
+            &quot;email&quot;: &quot;michael.brown@university.edu&quot;,
+            &quot;phone&quot;: &quot;+1234567892&quot;,
+            &quot;address&quot;: &quot;789 Campus Dr, City, State 12345&quot;,
+            &quot;hire_date&quot;: &quot;2021-09-01T00:00:00.000000Z&quot;,
+            &quot;employment_type&quot;: &quot;part-time&quot;,
+            &quot;qualification&quot;: &quot;Ph.D. in Information Technology&quot;,
+            &quot;specialization&quot;: &quot;Cybersecurity, Network Security&quot;,
+            &quot;status&quot;: &quot;active&quot;,
+            &quot;profile_picture&quot;: null,
+            &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+            &quot;department_id&quot;: 1,
+            &quot;faculty_id&quot;: 4,
+            &quot;school&quot;: {
+                &quot;id&quot;: 1,
+                &quot;name&quot;: &quot;Yousch International School&quot;,
+                &quot;domain&quot;: &quot;yousch.edu&quot;,
+                &quot;contact_info&quot;: &quot;Contact us for more information&quot;,
+                &quot;address&quot;: &quot;123 Education Street, Knowledge City&quot;,
+                &quot;phone&quot;: &quot;+1-555-0123&quot;,
+                &quot;email&quot;: &quot;info@yousch.edu&quot;,
+                &quot;website&quot;: &quot;https://www.yousch.edu&quot;,
+                &quot;is_active&quot;: true,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            },
+            &quot;campus&quot;: {
+                &quot;id&quot;: 1,
+                &quot;school_id&quot;: 1,
+                &quot;name&quot;: &quot;Main Campus&quot;,
+                &quot;address&quot;: &quot;123 Education Street, Knowledge City&quot;,
+                &quot;phone&quot;: &quot;+1-555-0123&quot;,
+                &quot;email&quot;: &quot;main@yousch.edu&quot;,
+                &quot;is_active&quot;: true,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            },
+            &quot;department&quot;: {
+                &quot;id&quot;: 1,
+                &quot;faculty_id&quot;: 1,
+                &quot;name&quot;: &quot;Computer Science&quot;,
+                &quot;head_id&quot;: 4,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            },
+            &quot;faculty&quot;: {
+                &quot;id&quot;: 4,
+                &quot;school_id&quot;: 1,
+                &quot;name&quot;: &quot;Faculty of Engineering&quot;,
+                &quot;description&quot;: &quot;Faculty of Engineering and Technology&quot;,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            }
+        }
+    ],
+    &quot;message&quot;: &quot;Teachers retrieved successfully&quot;
 }</code>
  </pre>
     </span>
@@ -70059,7 +69351,8 @@ access-control-allow-origin: *
  </code></pre></details>         <pre>
 
 <code class="language-json" style="max-height: 300px;">{
-    &quot;message&quot;: &quot;Server Error&quot;
+    &quot;success&quot;: false,
+    &quot;message&quot;: &quot;Failed to retrieve teacher documents: SQLSTATE[42S22]: Column not found: 1054 Unknown column &#039;created_at&#039; in &#039;order clause&#039; (Connection: mysql, SQL: select * from `teacher_documents` order by `created_at` desc)&quot;
 }</code>
  </pre>
     </span>
@@ -71179,7 +70472,8 @@ access-control-allow-origin: *
  </code></pre></details>         <pre>
 
 <code class="language-json" style="max-height: 300px;">{
-    &quot;message&quot;: &quot;Server Error&quot;
+    &quot;success&quot;: false,
+    &quot;message&quot;: &quot;Failed to retrieve documents: SQLSTATE[42S22]: Column not found: 1054 Unknown column &#039;created_at&#039; in &#039;order clause&#039; (Connection: mysql, SQL: select * from `teacher_documents` where `document_type` = architecto order by `created_at` desc)&quot;
 }</code>
  </pre>
     </span>
@@ -71315,7 +70609,8 @@ access-control-allow-origin: *
  </code></pre></details>         <pre>
 
 <code class="language-json" style="max-height: 300px;">{
-    &quot;message&quot;: &quot;Server Error&quot;
+    &quot;success&quot;: false,
+    &quot;message&quot;: &quot;Failed to retrieve documents: SQLSTATE[42S22]: Column not found: 1054 Unknown column &#039;status&#039; in &#039;where clause&#039; (Connection: mysql, SQL: select * from `teacher_documents` where `status` = architecto order by `created_at` desc)&quot;
 }</code>
  </pre>
     </span>
@@ -71842,7 +71137,28 @@ access-control-allow-origin: *
             &quot;school_id&quot;: 1,
             &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
-            &quot;teacher&quot;: null,
+            &quot;teacher&quot;: {
+                &quot;id&quot;: 4,
+                &quot;school_id&quot;: 1,
+                &quot;campus_id&quot;: 2,
+                &quot;first_name&quot;: &quot;Mondestin&quot;,
+                &quot;last_name&quot;: &quot;MYSSIE&quot;,
+                &quot;dob&quot;: &quot;2024-08-07T00:00:00.000000Z&quot;,
+                &quot;gender&quot;: &quot;female&quot;,
+                &quot;email&quot;: &quot;sydneymondestin@gmail.com&quot;,
+                &quot;phone&quot;: &quot;+33753754960&quot;,
+                &quot;address&quot;: &quot;6 ROUTE DE STALINGRAD\nAppt 232&quot;,
+                &quot;hire_date&quot;: &quot;2025-09-27T00:00:00.000000Z&quot;,
+                &quot;employment_type&quot;: &quot;full-time&quot;,
+                &quot;qualification&quot;: &quot;Ph.D. in Computer Science&quot;,
+                &quot;specialization&quot;: &quot;Software Engineering, Algorithms&quot;,
+                &quot;status&quot;: &quot;active&quot;,
+                &quot;profile_picture&quot;: null,
+                &quot;created_at&quot;: &quot;2025-08-31T05:51:43.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T05:51:43.000000Z&quot;,
+                &quot;department_id&quot;: 3,
+                &quot;faculty_id&quot;: 2
+            },
             &quot;class&quot;: {
                 &quot;id&quot;: 1,
                 &quot;campus_id&quot;: 1,
@@ -71880,7 +71196,28 @@ access-control-allow-origin: *
             &quot;school_id&quot;: 1,
             &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
-            &quot;teacher&quot;: null,
+            &quot;teacher&quot;: {
+                &quot;id&quot;: 5,
+                &quot;school_id&quot;: 1,
+                &quot;campus_id&quot;: 2,
+                &quot;first_name&quot;: &quot;Mondestin&quot;,
+                &quot;last_name&quot;: &quot;MYSSIE&quot;,
+                &quot;dob&quot;: &quot;2025-08-30T00:00:00.000000Z&quot;,
+                &quot;gender&quot;: &quot;male&quot;,
+                &quot;email&quot;: &quot;sydneymodestin@gmail.com&quot;,
+                &quot;phone&quot;: &quot;+33753754960&quot;,
+                &quot;address&quot;: &quot;6 ROUTE DE STALINGRAD\nAppt 232&quot;,
+                &quot;hire_date&quot;: &quot;2025-08-22T00:00:00.000000Z&quot;,
+                &quot;employment_type&quot;: &quot;full-time&quot;,
+                &quot;qualification&quot;: &quot;Ph.D. in Computer Science&quot;,
+                &quot;specialization&quot;: &quot;Software Engineering, Algorithms&quot;,
+                &quot;status&quot;: &quot;active&quot;,
+                &quot;profile_picture&quot;: null,
+                &quot;created_at&quot;: &quot;2025-08-31T16:54:16.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T22:58:14.000000Z&quot;,
+                &quot;department_id&quot;: 2,
+                &quot;faculty_id&quot;: 1
+            },
             &quot;class&quot;: {
                 &quot;id&quot;: 2,
                 &quot;campus_id&quot;: 1,
@@ -71902,82 +71239,6 @@ access-control-allow-origin: *
             }
         },
         {
-            &quot;id&quot;: 3,
-            &quot;teacher_id&quot;: 6,
-            &quot;class_id&quot;: 3,
-            &quot;subject_id&quot;: 3,
-            &quot;academic_year_id&quot;: 1,
-            &quot;role&quot;: &quot;teacher&quot;,
-            &quot;is_primary&quot;: 1,
-            &quot;is_active&quot;: true,
-            &quot;assigned_by&quot;: 2,
-            &quot;assignment_date&quot;: &quot;2025-08-31&quot;,
-            &quot;end_date&quot;: null,
-            &quot;weekly_hours&quot;: 0,
-            &quot;notes&quot;: &quot;Primary teacher assignment&quot;,
-            &quot;school_id&quot;: 1,
-            &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
-            &quot;teacher&quot;: null,
-            &quot;class&quot;: {
-                &quot;id&quot;: 3,
-                &quot;campus_id&quot;: 1,
-                &quot;course_id&quot;: 2,
-                &quot;name&quot;: &quot;BMATH - Class A&quot;,
-                &quot;capacity&quot;: 30,
-                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
-                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
-            },
-            &quot;subject&quot;: {
-                &quot;id&quot;: 3,
-                &quot;course_id&quot;: 2,
-                &quot;name&quot;: &quot;Calculus I&quot;,
-                &quot;code&quot;: &quot;MATH101&quot;,
-                &quot;description&quot;: &quot;Fundamental calculus concepts&quot;,
-                &quot;coordinator_id&quot;: 5,
-                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
-                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
-            }
-        },
-        {
-            &quot;id&quot;: 4,
-            &quot;teacher_id&quot;: 7,
-            &quot;class_id&quot;: 4,
-            &quot;subject_id&quot;: 3,
-            &quot;academic_year_id&quot;: 1,
-            &quot;role&quot;: &quot;teacher&quot;,
-            &quot;is_primary&quot;: 1,
-            &quot;is_active&quot;: true,
-            &quot;assigned_by&quot;: 2,
-            &quot;assignment_date&quot;: &quot;2025-08-31&quot;,
-            &quot;end_date&quot;: null,
-            &quot;weekly_hours&quot;: 0,
-            &quot;notes&quot;: &quot;Primary teacher assignment&quot;,
-            &quot;school_id&quot;: 1,
-            &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
-            &quot;teacher&quot;: null,
-            &quot;class&quot;: {
-                &quot;id&quot;: 4,
-                &quot;campus_id&quot;: 1,
-                &quot;course_id&quot;: 2,
-                &quot;name&quot;: &quot;BMATH - Class B&quot;,
-                &quot;capacity&quot;: 25,
-                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
-                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
-            },
-            &quot;subject&quot;: {
-                &quot;id&quot;: 3,
-                &quot;course_id&quot;: 2,
-                &quot;name&quot;: &quot;Calculus I&quot;,
-                &quot;code&quot;: &quot;MATH101&quot;,
-                &quot;description&quot;: &quot;Fundamental calculus concepts&quot;,
-                &quot;coordinator_id&quot;: 5,
-                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
-                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
-            }
-        },
-        {
             &quot;id&quot;: 5,
             &quot;teacher_id&quot;: 4,
             &quot;class_id&quot;: 5,
@@ -71994,7 +71255,28 @@ access-control-allow-origin: *
             &quot;school_id&quot;: 1,
             &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
             &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
-            &quot;teacher&quot;: null,
+            &quot;teacher&quot;: {
+                &quot;id&quot;: 4,
+                &quot;school_id&quot;: 1,
+                &quot;campus_id&quot;: 2,
+                &quot;first_name&quot;: &quot;Mondestin&quot;,
+                &quot;last_name&quot;: &quot;MYSSIE&quot;,
+                &quot;dob&quot;: &quot;2024-08-07T00:00:00.000000Z&quot;,
+                &quot;gender&quot;: &quot;female&quot;,
+                &quot;email&quot;: &quot;sydneymondestin@gmail.com&quot;,
+                &quot;phone&quot;: &quot;+33753754960&quot;,
+                &quot;address&quot;: &quot;6 ROUTE DE STALINGRAD\nAppt 232&quot;,
+                &quot;hire_date&quot;: &quot;2025-09-27T00:00:00.000000Z&quot;,
+                &quot;employment_type&quot;: &quot;full-time&quot;,
+                &quot;qualification&quot;: &quot;Ph.D. in Computer Science&quot;,
+                &quot;specialization&quot;: &quot;Software Engineering, Algorithms&quot;,
+                &quot;status&quot;: &quot;active&quot;,
+                &quot;profile_picture&quot;: null,
+                &quot;created_at&quot;: &quot;2025-08-31T05:51:43.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T05:51:43.000000Z&quot;,
+                &quot;department_id&quot;: 3,
+                &quot;faculty_id&quot;: 2
+            },
             &quot;class&quot;: {
                 &quot;id&quot;: 5,
                 &quot;campus_id&quot;: 1,
@@ -72011,120 +71293,6 @@ access-control-allow-origin: *
                 &quot;code&quot;: &quot;BUS101&quot;,
                 &quot;description&quot;: &quot;Basic management principles&quot;,
                 &quot;coordinator_id&quot;: 6,
-                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
-                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
-            }
-        },
-        {
-            &quot;id&quot;: 6,
-            &quot;teacher_id&quot;: 5,
-            &quot;class_id&quot;: 6,
-            &quot;subject_id&quot;: 4,
-            &quot;academic_year_id&quot;: 1,
-            &quot;role&quot;: &quot;teacher&quot;,
-            &quot;is_primary&quot;: 1,
-            &quot;is_active&quot;: true,
-            &quot;assigned_by&quot;: 2,
-            &quot;assignment_date&quot;: &quot;2025-08-31&quot;,
-            &quot;end_date&quot;: null,
-            &quot;weekly_hours&quot;: 0,
-            &quot;notes&quot;: &quot;Primary teacher assignment&quot;,
-            &quot;school_id&quot;: 1,
-            &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
-            &quot;teacher&quot;: null,
-            &quot;class&quot;: {
-                &quot;id&quot;: 6,
-                &quot;campus_id&quot;: 1,
-                &quot;course_id&quot;: 3,
-                &quot;name&quot;: &quot;BBA - Class B&quot;,
-                &quot;capacity&quot;: 25,
-                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
-                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
-            },
-            &quot;subject&quot;: {
-                &quot;id&quot;: 4,
-                &quot;course_id&quot;: 3,
-                &quot;name&quot;: &quot;Principles of Management&quot;,
-                &quot;code&quot;: &quot;BUS101&quot;,
-                &quot;description&quot;: &quot;Basic management principles&quot;,
-                &quot;coordinator_id&quot;: 6,
-                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
-                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
-            }
-        },
-        {
-            &quot;id&quot;: 7,
-            &quot;teacher_id&quot;: 6,
-            &quot;class_id&quot;: 7,
-            &quot;subject_id&quot;: 5,
-            &quot;academic_year_id&quot;: 1,
-            &quot;role&quot;: &quot;teacher&quot;,
-            &quot;is_primary&quot;: 1,
-            &quot;is_active&quot;: true,
-            &quot;assigned_by&quot;: 2,
-            &quot;assignment_date&quot;: &quot;2025-08-31&quot;,
-            &quot;end_date&quot;: null,
-            &quot;weekly_hours&quot;: 0,
-            &quot;notes&quot;: &quot;Primary teacher assignment&quot;,
-            &quot;school_id&quot;: 1,
-            &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
-            &quot;teacher&quot;: null,
-            &quot;class&quot;: {
-                &quot;id&quot;: 7,
-                &quot;campus_id&quot;: 1,
-                &quot;course_id&quot;: 4,
-                &quot;name&quot;: &quot;BAENG - Class A&quot;,
-                &quot;capacity&quot;: 30,
-                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
-                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
-            },
-            &quot;subject&quot;: {
-                &quot;id&quot;: 5,
-                &quot;course_id&quot;: 4,
-                &quot;name&quot;: &quot;Introduction to Literature&quot;,
-                &quot;code&quot;: &quot;ENG101&quot;,
-                &quot;description&quot;: &quot;Literary analysis and appreciation&quot;,
-                &quot;coordinator_id&quot;: 7,
-                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
-                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
-            }
-        },
-        {
-            &quot;id&quot;: 8,
-            &quot;teacher_id&quot;: 7,
-            &quot;class_id&quot;: 8,
-            &quot;subject_id&quot;: 5,
-            &quot;academic_year_id&quot;: 1,
-            &quot;role&quot;: &quot;teacher&quot;,
-            &quot;is_primary&quot;: 1,
-            &quot;is_active&quot;: true,
-            &quot;assigned_by&quot;: 2,
-            &quot;assignment_date&quot;: &quot;2025-08-31&quot;,
-            &quot;end_date&quot;: null,
-            &quot;weekly_hours&quot;: 0,
-            &quot;notes&quot;: &quot;Primary teacher assignment&quot;,
-            &quot;school_id&quot;: 1,
-            &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
-            &quot;teacher&quot;: null,
-            &quot;class&quot;: {
-                &quot;id&quot;: 8,
-                &quot;campus_id&quot;: 1,
-                &quot;course_id&quot;: 4,
-                &quot;name&quot;: &quot;BAENG - Class B&quot;,
-                &quot;capacity&quot;: 25,
-                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
-                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
-            },
-            &quot;subject&quot;: {
-                &quot;id&quot;: 5,
-                &quot;course_id&quot;: 4,
-                &quot;name&quot;: &quot;Introduction to Literature&quot;,
-                &quot;code&quot;: &quot;ENG101&quot;,
-                &quot;description&quot;: &quot;Literary analysis and appreciation&quot;,
-                &quot;coordinator_id&quot;: 7,
                 &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
                 &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
             }
@@ -72227,10 +71395,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
     \"subject_id\": \"architecto\",
     \"academic_year\": \"ngzmiyv\",
     \"term\": \"dljnikhwaykcmyuw\",
-    \"start_date\": \"2025-08-31T02:28:56\",
-    \"end_date\": \"2051-09-24\",
+    \"start_date\": \"2025-09-08T23:41:32\",
+    \"end_date\": \"2051-10-02\",
     \"hours_per_week\": 22,
-    \"is_active\": true,
+    \"is_active\": false,
     \"notes\": \"g\"
 }"
 </code></pre></div>
@@ -72252,10 +71420,10 @@ let body = {
     "subject_id": "architecto",
     "academic_year": "ngzmiyv",
     "term": "dljnikhwaykcmyuw",
-    "start_date": "2025-08-31T02:28:56",
-    "end_date": "2051-09-24",
+    "start_date": "2025-09-08T23:41:32",
+    "end_date": "2051-10-02",
     "hours_per_week": 22,
-    "is_active": true,
+    "is_active": false,
     "notes": "g"
 };
 
@@ -72400,10 +71568,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="start_date"                data-endpoint="POSTapi-teachers-assignments"
-               value="2025-08-31T02:28:56"
+               value="2025-09-08T23:41:32"
                data-component="body">
     <br>
-<p>Must be a valid date. Example: <code>2025-08-31T02:28:56</code></p>
+<p>Must be a valid date. Example: <code>2025-09-08T23:41:32</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>end_date</code></b>&nbsp;&nbsp;
@@ -72411,10 +71579,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="end_date"                data-endpoint="POSTapi-teachers-assignments"
-               value="2051-09-24"
+               value="2051-10-02"
                data-component="body">
     <br>
-<p>Must be a valid date. Must be a date after <code>start_date</code>. Example: <code>2051-09-24</code></p>
+<p>Must be a valid date. Must be a date after <code>start_date</code>. Example: <code>2051-10-02</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>hours_per_week</code></b>&nbsp;&nbsp;
@@ -72446,7 +71614,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
             <code>false</code>
         </label>
     <br>
-<p>Example: <code>true</code></p>
+<p>Example: <code>false</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>notes</code></b>&nbsp;&nbsp;
@@ -72528,7 +71696,28 @@ access-control-allow-origin: *
         &quot;school_id&quot;: 1,
         &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
         &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
-        &quot;teacher&quot;: null,
+        &quot;teacher&quot;: {
+            &quot;id&quot;: 4,
+            &quot;school_id&quot;: 1,
+            &quot;campus_id&quot;: 2,
+            &quot;first_name&quot;: &quot;Mondestin&quot;,
+            &quot;last_name&quot;: &quot;MYSSIE&quot;,
+            &quot;dob&quot;: &quot;2024-08-07T00:00:00.000000Z&quot;,
+            &quot;gender&quot;: &quot;female&quot;,
+            &quot;email&quot;: &quot;sydneymondestin@gmail.com&quot;,
+            &quot;phone&quot;: &quot;+33753754960&quot;,
+            &quot;address&quot;: &quot;6 ROUTE DE STALINGRAD\nAppt 232&quot;,
+            &quot;hire_date&quot;: &quot;2025-09-27T00:00:00.000000Z&quot;,
+            &quot;employment_type&quot;: &quot;full-time&quot;,
+            &quot;qualification&quot;: &quot;Ph.D. in Computer Science&quot;,
+            &quot;specialization&quot;: &quot;Software Engineering, Algorithms&quot;,
+            &quot;status&quot;: &quot;active&quot;,
+            &quot;profile_picture&quot;: null,
+            &quot;created_at&quot;: &quot;2025-08-31T05:51:43.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-08-31T05:51:43.000000Z&quot;,
+            &quot;department_id&quot;: 3,
+            &quot;faculty_id&quot;: 2
+        },
         &quot;class&quot;: {
             &quot;id&quot;: 1,
             &quot;campus_id&quot;: 1,
@@ -72654,10 +71843,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --data "{
     \"academic_year\": \"bngzmiy\",
     \"term\": \"vdljnikhwaykcmyu\",
-    \"start_date\": \"2025-08-31T02:28:56\",
-    \"end_date\": \"2051-09-24\",
+    \"start_date\": \"2025-09-08T23:41:32\",
+    \"end_date\": \"2051-10-02\",
     \"hours_per_week\": 22,
-    \"is_active\": false,
+    \"is_active\": true,
     \"notes\": \"g\"
 }"
 </code></pre></div>
@@ -72676,10 +71865,10 @@ const headers = {
 let body = {
     "academic_year": "bngzmiy",
     "term": "vdljnikhwaykcmyu",
-    "start_date": "2025-08-31T02:28:56",
-    "end_date": "2051-09-24",
+    "start_date": "2025-09-08T23:41:32",
+    "end_date": "2051-10-02",
     "hours_per_week": 22,
-    "is_active": false,
+    "is_active": true,
     "notes": "g"
 };
 
@@ -72836,10 +72025,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="start_date"                data-endpoint="PUTapi-teachers-assignments--id-"
-               value="2025-08-31T02:28:56"
+               value="2025-09-08T23:41:32"
                data-component="body">
     <br>
-<p>Must be a valid date. Example: <code>2025-08-31T02:28:56</code></p>
+<p>Must be a valid date. Example: <code>2025-09-08T23:41:32</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>end_date</code></b>&nbsp;&nbsp;
@@ -72847,10 +72036,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="end_date"                data-endpoint="PUTapi-teachers-assignments--id-"
-               value="2051-09-24"
+               value="2051-10-02"
                data-component="body">
     <br>
-<p>Must be a valid date. Must be a date after <code>start_date</code>. Example: <code>2051-09-24</code></p>
+<p>Must be a valid date. Must be a date after <code>start_date</code>. Example: <code>2051-10-02</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>hours_per_week</code></b>&nbsp;&nbsp;
@@ -72882,7 +72071,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
             <code>false</code>
         </label>
     <br>
-<p>Example: <code>false</code></p>
+<p>Example: <code>true</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>notes</code></b>&nbsp;&nbsp;
@@ -73030,14 +72219,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost:8000/api/teachers/assignments/teacher/1" \
+    --get "http://localhost:8000/api/teachers/assignments/teacher/2" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:8000/api/teachers/assignments/teacher/1"
+    "http://localhost:8000/api/teachers/assignments/teacher/2"
 );
 
 const headers = {
@@ -73054,7 +72243,7 @@ fetch(url, {
 
 <span id="example-responses-GETapi-teachers-assignments-teacher--teacher_id-">
             <blockquote>
-            <p>Example response (500):</p>
+            <p>Example response (200):</p>
         </blockquote>
                 <details class="annotation">
             <summary style="cursor: pointer;">
@@ -73066,7 +72255,8 @@ access-control-allow-origin: *
  </code></pre></details>         <pre>
 
 <code class="language-json" style="max-height: 300px;">{
-    &quot;message&quot;: &quot;Server Error&quot;
+    &quot;success&quot;: true,
+    &quot;data&quot;: []
 }</code>
  </pre>
     </span>
@@ -73146,10 +72336,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="teacher_id"                data-endpoint="GETapi-teachers-assignments-teacher--teacher_id-"
-               value="1"
+               value="2"
                data-component="url">
     <br>
-<p>The ID of the teacher. Example: <code>1</code></p>
+<p>The ID of the teacher. Example: <code>2</code></p>
             </div>
                     </form>
 
@@ -73190,7 +72380,7 @@ fetch(url, {
 
 <span id="example-responses-GETapi-teachers-assignments-class--class_id-">
             <blockquote>
-            <p>Example response (500):</p>
+            <p>Example response (200):</p>
         </blockquote>
                 <details class="annotation">
             <summary style="cursor: pointer;">
@@ -73202,7 +72392,59 @@ access-control-allow-origin: *
  </code></pre></details>         <pre>
 
 <code class="language-json" style="max-height: 300px;">{
-    &quot;message&quot;: &quot;Server Error&quot;
+    &quot;success&quot;: true,
+    &quot;data&quot;: [
+        {
+            &quot;id&quot;: 1,
+            &quot;teacher_id&quot;: 4,
+            &quot;class_id&quot;: 1,
+            &quot;subject_id&quot;: 1,
+            &quot;academic_year_id&quot;: 1,
+            &quot;role&quot;: &quot;teacher&quot;,
+            &quot;is_primary&quot;: 1,
+            &quot;is_active&quot;: true,
+            &quot;assigned_by&quot;: 2,
+            &quot;assignment_date&quot;: &quot;2025-08-31&quot;,
+            &quot;end_date&quot;: null,
+            &quot;weekly_hours&quot;: 0,
+            &quot;notes&quot;: &quot;Primary teacher assignment&quot;,
+            &quot;school_id&quot;: 1,
+            &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+            &quot;teacher&quot;: {
+                &quot;id&quot;: 4,
+                &quot;school_id&quot;: 1,
+                &quot;campus_id&quot;: 2,
+                &quot;first_name&quot;: &quot;Mondestin&quot;,
+                &quot;last_name&quot;: &quot;MYSSIE&quot;,
+                &quot;dob&quot;: &quot;2024-08-07T00:00:00.000000Z&quot;,
+                &quot;gender&quot;: &quot;female&quot;,
+                &quot;email&quot;: &quot;sydneymondestin@gmail.com&quot;,
+                &quot;phone&quot;: &quot;+33753754960&quot;,
+                &quot;address&quot;: &quot;6 ROUTE DE STALINGRAD\nAppt 232&quot;,
+                &quot;hire_date&quot;: &quot;2025-09-27T00:00:00.000000Z&quot;,
+                &quot;employment_type&quot;: &quot;full-time&quot;,
+                &quot;qualification&quot;: &quot;Ph.D. in Computer Science&quot;,
+                &quot;specialization&quot;: &quot;Software Engineering, Algorithms&quot;,
+                &quot;status&quot;: &quot;active&quot;,
+                &quot;profile_picture&quot;: null,
+                &quot;created_at&quot;: &quot;2025-08-31T05:51:43.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T05:51:43.000000Z&quot;,
+                &quot;department_id&quot;: 3,
+                &quot;faculty_id&quot;: 2
+            },
+            &quot;subject&quot;: {
+                &quot;id&quot;: 1,
+                &quot;course_id&quot;: 1,
+                &quot;name&quot;: &quot;Introduction to Programming&quot;,
+                &quot;code&quot;: &quot;CS101&quot;,
+                &quot;description&quot;: &quot;Basic programming concepts and practices&quot;,
+                &quot;coordinator_id&quot;: 4,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            }
+        }
+    ]
 }</code>
  </pre>
     </span>
@@ -73326,7 +72568,7 @@ fetch(url, {
 
 <span id="example-responses-GETapi-teachers-assignments-subject--subject_id-">
             <blockquote>
-            <p>Example response (500):</p>
+            <p>Example response (200):</p>
         </blockquote>
                 <details class="annotation">
             <summary style="cursor: pointer;">
@@ -73338,7 +72580,107 @@ access-control-allow-origin: *
  </code></pre></details>         <pre>
 
 <code class="language-json" style="max-height: 300px;">{
-    &quot;message&quot;: &quot;Server Error&quot;
+    &quot;success&quot;: true,
+    &quot;data&quot;: [
+        {
+            &quot;id&quot;: 1,
+            &quot;teacher_id&quot;: 4,
+            &quot;class_id&quot;: 1,
+            &quot;subject_id&quot;: 1,
+            &quot;academic_year_id&quot;: 1,
+            &quot;role&quot;: &quot;teacher&quot;,
+            &quot;is_primary&quot;: 1,
+            &quot;is_active&quot;: true,
+            &quot;assigned_by&quot;: 2,
+            &quot;assignment_date&quot;: &quot;2025-08-31&quot;,
+            &quot;end_date&quot;: null,
+            &quot;weekly_hours&quot;: 0,
+            &quot;notes&quot;: &quot;Primary teacher assignment&quot;,
+            &quot;school_id&quot;: 1,
+            &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+            &quot;teacher&quot;: {
+                &quot;id&quot;: 4,
+                &quot;school_id&quot;: 1,
+                &quot;campus_id&quot;: 2,
+                &quot;first_name&quot;: &quot;Mondestin&quot;,
+                &quot;last_name&quot;: &quot;MYSSIE&quot;,
+                &quot;dob&quot;: &quot;2024-08-07T00:00:00.000000Z&quot;,
+                &quot;gender&quot;: &quot;female&quot;,
+                &quot;email&quot;: &quot;sydneymondestin@gmail.com&quot;,
+                &quot;phone&quot;: &quot;+33753754960&quot;,
+                &quot;address&quot;: &quot;6 ROUTE DE STALINGRAD\nAppt 232&quot;,
+                &quot;hire_date&quot;: &quot;2025-09-27T00:00:00.000000Z&quot;,
+                &quot;employment_type&quot;: &quot;full-time&quot;,
+                &quot;qualification&quot;: &quot;Ph.D. in Computer Science&quot;,
+                &quot;specialization&quot;: &quot;Software Engineering, Algorithms&quot;,
+                &quot;status&quot;: &quot;active&quot;,
+                &quot;profile_picture&quot;: null,
+                &quot;created_at&quot;: &quot;2025-08-31T05:51:43.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T05:51:43.000000Z&quot;,
+                &quot;department_id&quot;: 3,
+                &quot;faculty_id&quot;: 2
+            },
+            &quot;class&quot;: {
+                &quot;id&quot;: 1,
+                &quot;campus_id&quot;: 1,
+                &quot;course_id&quot;: 1,
+                &quot;name&quot;: &quot;BCS - Class A&quot;,
+                &quot;capacity&quot;: 30,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            }
+        },
+        {
+            &quot;id&quot;: 2,
+            &quot;teacher_id&quot;: 5,
+            &quot;class_id&quot;: 2,
+            &quot;subject_id&quot;: 1,
+            &quot;academic_year_id&quot;: 1,
+            &quot;role&quot;: &quot;teacher&quot;,
+            &quot;is_primary&quot;: 1,
+            &quot;is_active&quot;: true,
+            &quot;assigned_by&quot;: 2,
+            &quot;assignment_date&quot;: &quot;2025-08-31&quot;,
+            &quot;end_date&quot;: null,
+            &quot;weekly_hours&quot;: 0,
+            &quot;notes&quot;: &quot;Primary teacher assignment&quot;,
+            &quot;school_id&quot;: 1,
+            &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+            &quot;teacher&quot;: {
+                &quot;id&quot;: 5,
+                &quot;school_id&quot;: 1,
+                &quot;campus_id&quot;: 2,
+                &quot;first_name&quot;: &quot;Mondestin&quot;,
+                &quot;last_name&quot;: &quot;MYSSIE&quot;,
+                &quot;dob&quot;: &quot;2025-08-30T00:00:00.000000Z&quot;,
+                &quot;gender&quot;: &quot;male&quot;,
+                &quot;email&quot;: &quot;sydneymodestin@gmail.com&quot;,
+                &quot;phone&quot;: &quot;+33753754960&quot;,
+                &quot;address&quot;: &quot;6 ROUTE DE STALINGRAD\nAppt 232&quot;,
+                &quot;hire_date&quot;: &quot;2025-08-22T00:00:00.000000Z&quot;,
+                &quot;employment_type&quot;: &quot;full-time&quot;,
+                &quot;qualification&quot;: &quot;Ph.D. in Computer Science&quot;,
+                &quot;specialization&quot;: &quot;Software Engineering, Algorithms&quot;,
+                &quot;status&quot;: &quot;active&quot;,
+                &quot;profile_picture&quot;: null,
+                &quot;created_at&quot;: &quot;2025-08-31T16:54:16.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T22:58:14.000000Z&quot;,
+                &quot;department_id&quot;: 2,
+                &quot;faculty_id&quot;: 1
+            },
+            &quot;class&quot;: {
+                &quot;id&quot;: 2,
+                &quot;campus_id&quot;: 1,
+                &quot;course_id&quot;: 1,
+                &quot;name&quot;: &quot;BCS - Class B&quot;,
+                &quot;capacity&quot;: 25,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            }
+        }
+    ]
 }</code>
  </pre>
     </span>
@@ -73586,7 +72928,7 @@ fetch(url, {
 
 <span id="example-responses-GETapi-teachers-timetables">
             <blockquote>
-            <p>Example response (500):</p>
+            <p>Example response (200):</p>
         </blockquote>
                 <details class="annotation">
             <summary style="cursor: pointer;">
@@ -73598,7 +72940,3910 @@ access-control-allow-origin: *
  </code></pre></details>         <pre>
 
 <code class="language-json" style="max-height: 300px;">{
-    &quot;message&quot;: &quot;Server Error&quot;
+    &quot;success&quot;: true,
+    &quot;data&quot;: [
+        {
+            &quot;id&quot;: 1,
+            &quot;class_id&quot;: 1,
+            &quot;subject_id&quot;: 1,
+            &quot;teacher_id&quot;: 4,
+            &quot;date&quot;: &quot;2025-08-25T00:00:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;09:00&quot;,
+            &quot;end_time&quot;: &quot;10:30&quot;,
+            &quot;room&quot;: &quot;Room 101&quot;,
+            &quot;created_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;updated_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;teacher&quot;: {
+                &quot;id&quot;: 4,
+                &quot;name&quot;: &quot;Dr. Sarah Johnson&quot;,
+                &quot;email&quot;: &quot;sarah.johnson@yousch.edu&quot;,
+                &quot;email_verified_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;
+            },
+            &quot;class_room&quot;: {
+                &quot;id&quot;: 1,
+                &quot;campus_id&quot;: 1,
+                &quot;course_id&quot;: 1,
+                &quot;name&quot;: &quot;BCS - Class A&quot;,
+                &quot;capacity&quot;: 30,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            },
+            &quot;subject&quot;: {
+                &quot;id&quot;: 1,
+                &quot;course_id&quot;: 1,
+                &quot;name&quot;: &quot;Introduction to Programming&quot;,
+                &quot;code&quot;: &quot;CS101&quot;,
+                &quot;description&quot;: &quot;Basic programming concepts and practices&quot;,
+                &quot;coordinator_id&quot;: 4,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            }
+        },
+        {
+            &quot;id&quot;: 51,
+            &quot;class_id&quot;: 4,
+            &quot;subject_id&quot;: 3,
+            &quot;teacher_id&quot;: 4,
+            &quot;date&quot;: &quot;2025-08-25T00:00:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;09:00&quot;,
+            &quot;end_time&quot;: &quot;10:30&quot;,
+            &quot;room&quot;: &quot;Room 101&quot;,
+            &quot;created_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;updated_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;teacher&quot;: {
+                &quot;id&quot;: 4,
+                &quot;name&quot;: &quot;Dr. Sarah Johnson&quot;,
+                &quot;email&quot;: &quot;sarah.johnson@yousch.edu&quot;,
+                &quot;email_verified_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;
+            },
+            &quot;class_room&quot;: {
+                &quot;id&quot;: 4,
+                &quot;campus_id&quot;: 1,
+                &quot;course_id&quot;: 2,
+                &quot;name&quot;: &quot;BMATH - Class B&quot;,
+                &quot;capacity&quot;: 25,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            },
+            &quot;subject&quot;: {
+                &quot;id&quot;: 3,
+                &quot;course_id&quot;: 2,
+                &quot;name&quot;: &quot;Calculus I&quot;,
+                &quot;code&quot;: &quot;MATH101&quot;,
+                &quot;description&quot;: &quot;Fundamental calculus concepts&quot;,
+                &quot;coordinator_id&quot;: 5,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            }
+        },
+        {
+            &quot;id&quot;: 41,
+            &quot;class_id&quot;: 3,
+            &quot;subject_id&quot;: 3,
+            &quot;teacher_id&quot;: 4,
+            &quot;date&quot;: &quot;2025-08-25T00:00:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;09:00&quot;,
+            &quot;end_time&quot;: &quot;10:30&quot;,
+            &quot;room&quot;: &quot;Room 101&quot;,
+            &quot;created_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;updated_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;teacher&quot;: {
+                &quot;id&quot;: 4,
+                &quot;name&quot;: &quot;Dr. Sarah Johnson&quot;,
+                &quot;email&quot;: &quot;sarah.johnson@yousch.edu&quot;,
+                &quot;email_verified_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;
+            },
+            &quot;class_room&quot;: {
+                &quot;id&quot;: 3,
+                &quot;campus_id&quot;: 1,
+                &quot;course_id&quot;: 2,
+                &quot;name&quot;: &quot;BMATH - Class A&quot;,
+                &quot;capacity&quot;: 30,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            },
+            &quot;subject&quot;: {
+                &quot;id&quot;: 3,
+                &quot;course_id&quot;: 2,
+                &quot;name&quot;: &quot;Calculus I&quot;,
+                &quot;code&quot;: &quot;MATH101&quot;,
+                &quot;description&quot;: &quot;Fundamental calculus concepts&quot;,
+                &quot;coordinator_id&quot;: 5,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            }
+        },
+        {
+            &quot;id&quot;: 21,
+            &quot;class_id&quot;: 2,
+            &quot;subject_id&quot;: 1,
+            &quot;teacher_id&quot;: 4,
+            &quot;date&quot;: &quot;2025-08-25T00:00:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;09:00&quot;,
+            &quot;end_time&quot;: &quot;10:30&quot;,
+            &quot;room&quot;: &quot;Room 101&quot;,
+            &quot;created_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;updated_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;teacher&quot;: {
+                &quot;id&quot;: 4,
+                &quot;name&quot;: &quot;Dr. Sarah Johnson&quot;,
+                &quot;email&quot;: &quot;sarah.johnson@yousch.edu&quot;,
+                &quot;email_verified_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;
+            },
+            &quot;class_room&quot;: {
+                &quot;id&quot;: 2,
+                &quot;campus_id&quot;: 1,
+                &quot;course_id&quot;: 1,
+                &quot;name&quot;: &quot;BCS - Class B&quot;,
+                &quot;capacity&quot;: 25,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            },
+            &quot;subject&quot;: {
+                &quot;id&quot;: 1,
+                &quot;course_id&quot;: 1,
+                &quot;name&quot;: &quot;Introduction to Programming&quot;,
+                &quot;code&quot;: &quot;CS101&quot;,
+                &quot;description&quot;: &quot;Basic programming concepts and practices&quot;,
+                &quot;coordinator_id&quot;: 4,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            }
+        },
+        {
+            &quot;id&quot;: 61,
+            &quot;class_id&quot;: 5,
+            &quot;subject_id&quot;: 4,
+            &quot;teacher_id&quot;: 4,
+            &quot;date&quot;: &quot;2025-08-25T00:00:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;09:00&quot;,
+            &quot;end_time&quot;: &quot;10:30&quot;,
+            &quot;room&quot;: &quot;Room 101&quot;,
+            &quot;created_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;updated_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;teacher&quot;: {
+                &quot;id&quot;: 4,
+                &quot;name&quot;: &quot;Dr. Sarah Johnson&quot;,
+                &quot;email&quot;: &quot;sarah.johnson@yousch.edu&quot;,
+                &quot;email_verified_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;
+            },
+            &quot;class_room&quot;: {
+                &quot;id&quot;: 5,
+                &quot;campus_id&quot;: 1,
+                &quot;course_id&quot;: 3,
+                &quot;name&quot;: &quot;BBA - Class A&quot;,
+                &quot;capacity&quot;: 30,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            },
+            &quot;subject&quot;: {
+                &quot;id&quot;: 4,
+                &quot;course_id&quot;: 3,
+                &quot;name&quot;: &quot;Principles of Management&quot;,
+                &quot;code&quot;: &quot;BUS101&quot;,
+                &quot;description&quot;: &quot;Basic management principles&quot;,
+                &quot;coordinator_id&quot;: 6,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            }
+        },
+        {
+            &quot;id&quot;: 31,
+            &quot;class_id&quot;: 2,
+            &quot;subject_id&quot;: 2,
+            &quot;teacher_id&quot;: 5,
+            &quot;date&quot;: &quot;2025-08-25T00:00:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;09:00&quot;,
+            &quot;end_time&quot;: &quot;10:30&quot;,
+            &quot;room&quot;: &quot;Room 102&quot;,
+            &quot;created_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;updated_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;teacher&quot;: {
+                &quot;id&quot;: 5,
+                &quot;name&quot;: &quot;Prof. Michael Chen&quot;,
+                &quot;email&quot;: &quot;michael.chen@yousch.edu&quot;,
+                &quot;email_verified_at&quot;: &quot;2025-08-31T00:54:38.000000Z&quot;,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:38.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:38.000000Z&quot;
+            },
+            &quot;class_room&quot;: {
+                &quot;id&quot;: 2,
+                &quot;campus_id&quot;: 1,
+                &quot;course_id&quot;: 1,
+                &quot;name&quot;: &quot;BCS - Class B&quot;,
+                &quot;capacity&quot;: 25,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            },
+            &quot;subject&quot;: {
+                &quot;id&quot;: 2,
+                &quot;course_id&quot;: 1,
+                &quot;name&quot;: &quot;Data Structures and Algorithms&quot;,
+                &quot;code&quot;: &quot;CS201&quot;,
+                &quot;description&quot;: &quot;Advanced programming concepts&quot;,
+                &quot;coordinator_id&quot;: 4,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            }
+        },
+        {
+            &quot;id&quot;: 71,
+            &quot;class_id&quot;: 6,
+            &quot;subject_id&quot;: 4,
+            &quot;teacher_id&quot;: 4,
+            &quot;date&quot;: &quot;2025-08-25T00:00:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;09:00&quot;,
+            &quot;end_time&quot;: &quot;10:30&quot;,
+            &quot;room&quot;: &quot;Room 101&quot;,
+            &quot;created_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;updated_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;teacher&quot;: {
+                &quot;id&quot;: 4,
+                &quot;name&quot;: &quot;Dr. Sarah Johnson&quot;,
+                &quot;email&quot;: &quot;sarah.johnson@yousch.edu&quot;,
+                &quot;email_verified_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;
+            },
+            &quot;class_room&quot;: {
+                &quot;id&quot;: 6,
+                &quot;campus_id&quot;: 1,
+                &quot;course_id&quot;: 3,
+                &quot;name&quot;: &quot;BBA - Class B&quot;,
+                &quot;capacity&quot;: 25,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            },
+            &quot;subject&quot;: {
+                &quot;id&quot;: 4,
+                &quot;course_id&quot;: 3,
+                &quot;name&quot;: &quot;Principles of Management&quot;,
+                &quot;code&quot;: &quot;BUS101&quot;,
+                &quot;description&quot;: &quot;Basic management principles&quot;,
+                &quot;coordinator_id&quot;: 6,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            }
+        },
+        {
+            &quot;id&quot;: 11,
+            &quot;class_id&quot;: 1,
+            &quot;subject_id&quot;: 2,
+            &quot;teacher_id&quot;: 5,
+            &quot;date&quot;: &quot;2025-08-25T00:00:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;09:00&quot;,
+            &quot;end_time&quot;: &quot;10:30&quot;,
+            &quot;room&quot;: &quot;Room 102&quot;,
+            &quot;created_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;updated_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;teacher&quot;: {
+                &quot;id&quot;: 5,
+                &quot;name&quot;: &quot;Prof. Michael Chen&quot;,
+                &quot;email&quot;: &quot;michael.chen@yousch.edu&quot;,
+                &quot;email_verified_at&quot;: &quot;2025-08-31T00:54:38.000000Z&quot;,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:38.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:38.000000Z&quot;
+            },
+            &quot;class_room&quot;: {
+                &quot;id&quot;: 1,
+                &quot;campus_id&quot;: 1,
+                &quot;course_id&quot;: 1,
+                &quot;name&quot;: &quot;BCS - Class A&quot;,
+                &quot;capacity&quot;: 30,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            },
+            &quot;subject&quot;: {
+                &quot;id&quot;: 2,
+                &quot;course_id&quot;: 1,
+                &quot;name&quot;: &quot;Data Structures and Algorithms&quot;,
+                &quot;code&quot;: &quot;CS201&quot;,
+                &quot;description&quot;: &quot;Advanced programming concepts&quot;,
+                &quot;coordinator_id&quot;: 4,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            }
+        },
+        {
+            &quot;id&quot;: 81,
+            &quot;class_id&quot;: 7,
+            &quot;subject_id&quot;: 5,
+            &quot;teacher_id&quot;: 4,
+            &quot;date&quot;: &quot;2025-08-25T00:00:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;09:00&quot;,
+            &quot;end_time&quot;: &quot;10:30&quot;,
+            &quot;room&quot;: &quot;Room 101&quot;,
+            &quot;created_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;updated_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;teacher&quot;: {
+                &quot;id&quot;: 4,
+                &quot;name&quot;: &quot;Dr. Sarah Johnson&quot;,
+                &quot;email&quot;: &quot;sarah.johnson@yousch.edu&quot;,
+                &quot;email_verified_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;
+            },
+            &quot;class_room&quot;: {
+                &quot;id&quot;: 7,
+                &quot;campus_id&quot;: 1,
+                &quot;course_id&quot;: 4,
+                &quot;name&quot;: &quot;BAENG - Class A&quot;,
+                &quot;capacity&quot;: 30,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            },
+            &quot;subject&quot;: {
+                &quot;id&quot;: 5,
+                &quot;course_id&quot;: 4,
+                &quot;name&quot;: &quot;Introduction to Literature&quot;,
+                &quot;code&quot;: &quot;ENG101&quot;,
+                &quot;description&quot;: &quot;Literary analysis and appreciation&quot;,
+                &quot;coordinator_id&quot;: 7,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            }
+        },
+        {
+            &quot;id&quot;: 91,
+            &quot;class_id&quot;: 8,
+            &quot;subject_id&quot;: 5,
+            &quot;teacher_id&quot;: 4,
+            &quot;date&quot;: &quot;2025-08-25T00:00:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;09:00&quot;,
+            &quot;end_time&quot;: &quot;10:30&quot;,
+            &quot;room&quot;: &quot;Room 101&quot;,
+            &quot;created_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;updated_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;teacher&quot;: {
+                &quot;id&quot;: 4,
+                &quot;name&quot;: &quot;Dr. Sarah Johnson&quot;,
+                &quot;email&quot;: &quot;sarah.johnson@yousch.edu&quot;,
+                &quot;email_verified_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;
+            },
+            &quot;class_room&quot;: {
+                &quot;id&quot;: 8,
+                &quot;campus_id&quot;: 1,
+                &quot;course_id&quot;: 4,
+                &quot;name&quot;: &quot;BAENG - Class B&quot;,
+                &quot;capacity&quot;: 25,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            },
+            &quot;subject&quot;: {
+                &quot;id&quot;: 5,
+                &quot;course_id&quot;: 4,
+                &quot;name&quot;: &quot;Introduction to Literature&quot;,
+                &quot;code&quot;: &quot;ENG101&quot;,
+                &quot;description&quot;: &quot;Literary analysis and appreciation&quot;,
+                &quot;coordinator_id&quot;: 7,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            }
+        },
+        {
+            &quot;id&quot;: 62,
+            &quot;class_id&quot;: 5,
+            &quot;subject_id&quot;: 4,
+            &quot;teacher_id&quot;: 4,
+            &quot;date&quot;: &quot;2025-08-25T00:00:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;14:00&quot;,
+            &quot;end_time&quot;: &quot;15:30&quot;,
+            &quot;room&quot;: &quot;Room 101&quot;,
+            &quot;created_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;updated_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;teacher&quot;: {
+                &quot;id&quot;: 4,
+                &quot;name&quot;: &quot;Dr. Sarah Johnson&quot;,
+                &quot;email&quot;: &quot;sarah.johnson@yousch.edu&quot;,
+                &quot;email_verified_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;
+            },
+            &quot;class_room&quot;: {
+                &quot;id&quot;: 5,
+                &quot;campus_id&quot;: 1,
+                &quot;course_id&quot;: 3,
+                &quot;name&quot;: &quot;BBA - Class A&quot;,
+                &quot;capacity&quot;: 30,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            },
+            &quot;subject&quot;: {
+                &quot;id&quot;: 4,
+                &quot;course_id&quot;: 3,
+                &quot;name&quot;: &quot;Principles of Management&quot;,
+                &quot;code&quot;: &quot;BUS101&quot;,
+                &quot;description&quot;: &quot;Basic management principles&quot;,
+                &quot;coordinator_id&quot;: 6,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            }
+        },
+        {
+            &quot;id&quot;: 92,
+            &quot;class_id&quot;: 8,
+            &quot;subject_id&quot;: 5,
+            &quot;teacher_id&quot;: 4,
+            &quot;date&quot;: &quot;2025-08-25T00:00:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;14:00&quot;,
+            &quot;end_time&quot;: &quot;15:30&quot;,
+            &quot;room&quot;: &quot;Room 101&quot;,
+            &quot;created_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;updated_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;teacher&quot;: {
+                &quot;id&quot;: 4,
+                &quot;name&quot;: &quot;Dr. Sarah Johnson&quot;,
+                &quot;email&quot;: &quot;sarah.johnson@yousch.edu&quot;,
+                &quot;email_verified_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;
+            },
+            &quot;class_room&quot;: {
+                &quot;id&quot;: 8,
+                &quot;campus_id&quot;: 1,
+                &quot;course_id&quot;: 4,
+                &quot;name&quot;: &quot;BAENG - Class B&quot;,
+                &quot;capacity&quot;: 25,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            },
+            &quot;subject&quot;: {
+                &quot;id&quot;: 5,
+                &quot;course_id&quot;: 4,
+                &quot;name&quot;: &quot;Introduction to Literature&quot;,
+                &quot;code&quot;: &quot;ENG101&quot;,
+                &quot;description&quot;: &quot;Literary analysis and appreciation&quot;,
+                &quot;coordinator_id&quot;: 7,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            }
+        },
+        {
+            &quot;id&quot;: 42,
+            &quot;class_id&quot;: 3,
+            &quot;subject_id&quot;: 3,
+            &quot;teacher_id&quot;: 4,
+            &quot;date&quot;: &quot;2025-08-25T00:00:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;14:00&quot;,
+            &quot;end_time&quot;: &quot;15:30&quot;,
+            &quot;room&quot;: &quot;Room 101&quot;,
+            &quot;created_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;updated_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;teacher&quot;: {
+                &quot;id&quot;: 4,
+                &quot;name&quot;: &quot;Dr. Sarah Johnson&quot;,
+                &quot;email&quot;: &quot;sarah.johnson@yousch.edu&quot;,
+                &quot;email_verified_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;
+            },
+            &quot;class_room&quot;: {
+                &quot;id&quot;: 3,
+                &quot;campus_id&quot;: 1,
+                &quot;course_id&quot;: 2,
+                &quot;name&quot;: &quot;BMATH - Class A&quot;,
+                &quot;capacity&quot;: 30,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            },
+            &quot;subject&quot;: {
+                &quot;id&quot;: 3,
+                &quot;course_id&quot;: 2,
+                &quot;name&quot;: &quot;Calculus I&quot;,
+                &quot;code&quot;: &quot;MATH101&quot;,
+                &quot;description&quot;: &quot;Fundamental calculus concepts&quot;,
+                &quot;coordinator_id&quot;: 5,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            }
+        },
+        {
+            &quot;id&quot;: 2,
+            &quot;class_id&quot;: 1,
+            &quot;subject_id&quot;: 1,
+            &quot;teacher_id&quot;: 4,
+            &quot;date&quot;: &quot;2025-08-25T00:00:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;14:00&quot;,
+            &quot;end_time&quot;: &quot;15:30&quot;,
+            &quot;room&quot;: &quot;Room 101&quot;,
+            &quot;created_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;updated_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;teacher&quot;: {
+                &quot;id&quot;: 4,
+                &quot;name&quot;: &quot;Dr. Sarah Johnson&quot;,
+                &quot;email&quot;: &quot;sarah.johnson@yousch.edu&quot;,
+                &quot;email_verified_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;
+            },
+            &quot;class_room&quot;: {
+                &quot;id&quot;: 1,
+                &quot;campus_id&quot;: 1,
+                &quot;course_id&quot;: 1,
+                &quot;name&quot;: &quot;BCS - Class A&quot;,
+                &quot;capacity&quot;: 30,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            },
+            &quot;subject&quot;: {
+                &quot;id&quot;: 1,
+                &quot;course_id&quot;: 1,
+                &quot;name&quot;: &quot;Introduction to Programming&quot;,
+                &quot;code&quot;: &quot;CS101&quot;,
+                &quot;description&quot;: &quot;Basic programming concepts and practices&quot;,
+                &quot;coordinator_id&quot;: 4,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            }
+        },
+        {
+            &quot;id&quot;: 52,
+            &quot;class_id&quot;: 4,
+            &quot;subject_id&quot;: 3,
+            &quot;teacher_id&quot;: 4,
+            &quot;date&quot;: &quot;2025-08-25T00:00:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;14:00&quot;,
+            &quot;end_time&quot;: &quot;15:30&quot;,
+            &quot;room&quot;: &quot;Room 101&quot;,
+            &quot;created_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;updated_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;teacher&quot;: {
+                &quot;id&quot;: 4,
+                &quot;name&quot;: &quot;Dr. Sarah Johnson&quot;,
+                &quot;email&quot;: &quot;sarah.johnson@yousch.edu&quot;,
+                &quot;email_verified_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;
+            },
+            &quot;class_room&quot;: {
+                &quot;id&quot;: 4,
+                &quot;campus_id&quot;: 1,
+                &quot;course_id&quot;: 2,
+                &quot;name&quot;: &quot;BMATH - Class B&quot;,
+                &quot;capacity&quot;: 25,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            },
+            &quot;subject&quot;: {
+                &quot;id&quot;: 3,
+                &quot;course_id&quot;: 2,
+                &quot;name&quot;: &quot;Calculus I&quot;,
+                &quot;code&quot;: &quot;MATH101&quot;,
+                &quot;description&quot;: &quot;Fundamental calculus concepts&quot;,
+                &quot;coordinator_id&quot;: 5,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            }
+        },
+        {
+            &quot;id&quot;: 22,
+            &quot;class_id&quot;: 2,
+            &quot;subject_id&quot;: 1,
+            &quot;teacher_id&quot;: 4,
+            &quot;date&quot;: &quot;2025-08-25T00:00:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;14:00&quot;,
+            &quot;end_time&quot;: &quot;15:30&quot;,
+            &quot;room&quot;: &quot;Room 101&quot;,
+            &quot;created_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;updated_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;teacher&quot;: {
+                &quot;id&quot;: 4,
+                &quot;name&quot;: &quot;Dr. Sarah Johnson&quot;,
+                &quot;email&quot;: &quot;sarah.johnson@yousch.edu&quot;,
+                &quot;email_verified_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;
+            },
+            &quot;class_room&quot;: {
+                &quot;id&quot;: 2,
+                &quot;campus_id&quot;: 1,
+                &quot;course_id&quot;: 1,
+                &quot;name&quot;: &quot;BCS - Class B&quot;,
+                &quot;capacity&quot;: 25,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            },
+            &quot;subject&quot;: {
+                &quot;id&quot;: 1,
+                &quot;course_id&quot;: 1,
+                &quot;name&quot;: &quot;Introduction to Programming&quot;,
+                &quot;code&quot;: &quot;CS101&quot;,
+                &quot;description&quot;: &quot;Basic programming concepts and practices&quot;,
+                &quot;coordinator_id&quot;: 4,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            }
+        },
+        {
+            &quot;id&quot;: 32,
+            &quot;class_id&quot;: 2,
+            &quot;subject_id&quot;: 2,
+            &quot;teacher_id&quot;: 5,
+            &quot;date&quot;: &quot;2025-08-25T00:00:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;14:00&quot;,
+            &quot;end_time&quot;: &quot;15:30&quot;,
+            &quot;room&quot;: &quot;Room 102&quot;,
+            &quot;created_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;updated_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;teacher&quot;: {
+                &quot;id&quot;: 5,
+                &quot;name&quot;: &quot;Prof. Michael Chen&quot;,
+                &quot;email&quot;: &quot;michael.chen@yousch.edu&quot;,
+                &quot;email_verified_at&quot;: &quot;2025-08-31T00:54:38.000000Z&quot;,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:38.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:38.000000Z&quot;
+            },
+            &quot;class_room&quot;: {
+                &quot;id&quot;: 2,
+                &quot;campus_id&quot;: 1,
+                &quot;course_id&quot;: 1,
+                &quot;name&quot;: &quot;BCS - Class B&quot;,
+                &quot;capacity&quot;: 25,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            },
+            &quot;subject&quot;: {
+                &quot;id&quot;: 2,
+                &quot;course_id&quot;: 1,
+                &quot;name&quot;: &quot;Data Structures and Algorithms&quot;,
+                &quot;code&quot;: &quot;CS201&quot;,
+                &quot;description&quot;: &quot;Advanced programming concepts&quot;,
+                &quot;coordinator_id&quot;: 4,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            }
+        },
+        {
+            &quot;id&quot;: 82,
+            &quot;class_id&quot;: 7,
+            &quot;subject_id&quot;: 5,
+            &quot;teacher_id&quot;: 4,
+            &quot;date&quot;: &quot;2025-08-25T00:00:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;14:00&quot;,
+            &quot;end_time&quot;: &quot;15:30&quot;,
+            &quot;room&quot;: &quot;Room 101&quot;,
+            &quot;created_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;updated_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;teacher&quot;: {
+                &quot;id&quot;: 4,
+                &quot;name&quot;: &quot;Dr. Sarah Johnson&quot;,
+                &quot;email&quot;: &quot;sarah.johnson@yousch.edu&quot;,
+                &quot;email_verified_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;
+            },
+            &quot;class_room&quot;: {
+                &quot;id&quot;: 7,
+                &quot;campus_id&quot;: 1,
+                &quot;course_id&quot;: 4,
+                &quot;name&quot;: &quot;BAENG - Class A&quot;,
+                &quot;capacity&quot;: 30,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            },
+            &quot;subject&quot;: {
+                &quot;id&quot;: 5,
+                &quot;course_id&quot;: 4,
+                &quot;name&quot;: &quot;Introduction to Literature&quot;,
+                &quot;code&quot;: &quot;ENG101&quot;,
+                &quot;description&quot;: &quot;Literary analysis and appreciation&quot;,
+                &quot;coordinator_id&quot;: 7,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            }
+        },
+        {
+            &quot;id&quot;: 12,
+            &quot;class_id&quot;: 1,
+            &quot;subject_id&quot;: 2,
+            &quot;teacher_id&quot;: 5,
+            &quot;date&quot;: &quot;2025-08-25T00:00:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;14:00&quot;,
+            &quot;end_time&quot;: &quot;15:30&quot;,
+            &quot;room&quot;: &quot;Room 102&quot;,
+            &quot;created_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;updated_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;teacher&quot;: {
+                &quot;id&quot;: 5,
+                &quot;name&quot;: &quot;Prof. Michael Chen&quot;,
+                &quot;email&quot;: &quot;michael.chen@yousch.edu&quot;,
+                &quot;email_verified_at&quot;: &quot;2025-08-31T00:54:38.000000Z&quot;,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:38.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:38.000000Z&quot;
+            },
+            &quot;class_room&quot;: {
+                &quot;id&quot;: 1,
+                &quot;campus_id&quot;: 1,
+                &quot;course_id&quot;: 1,
+                &quot;name&quot;: &quot;BCS - Class A&quot;,
+                &quot;capacity&quot;: 30,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            },
+            &quot;subject&quot;: {
+                &quot;id&quot;: 2,
+                &quot;course_id&quot;: 1,
+                &quot;name&quot;: &quot;Data Structures and Algorithms&quot;,
+                &quot;code&quot;: &quot;CS201&quot;,
+                &quot;description&quot;: &quot;Advanced programming concepts&quot;,
+                &quot;coordinator_id&quot;: 4,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            }
+        },
+        {
+            &quot;id&quot;: 72,
+            &quot;class_id&quot;: 6,
+            &quot;subject_id&quot;: 4,
+            &quot;teacher_id&quot;: 4,
+            &quot;date&quot;: &quot;2025-08-25T00:00:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;14:00&quot;,
+            &quot;end_time&quot;: &quot;15:30&quot;,
+            &quot;room&quot;: &quot;Room 101&quot;,
+            &quot;created_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;updated_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;teacher&quot;: {
+                &quot;id&quot;: 4,
+                &quot;name&quot;: &quot;Dr. Sarah Johnson&quot;,
+                &quot;email&quot;: &quot;sarah.johnson@yousch.edu&quot;,
+                &quot;email_verified_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;
+            },
+            &quot;class_room&quot;: {
+                &quot;id&quot;: 6,
+                &quot;campus_id&quot;: 1,
+                &quot;course_id&quot;: 3,
+                &quot;name&quot;: &quot;BBA - Class B&quot;,
+                &quot;capacity&quot;: 25,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            },
+            &quot;subject&quot;: {
+                &quot;id&quot;: 4,
+                &quot;course_id&quot;: 3,
+                &quot;name&quot;: &quot;Principles of Management&quot;,
+                &quot;code&quot;: &quot;BUS101&quot;,
+                &quot;description&quot;: &quot;Basic management principles&quot;,
+                &quot;coordinator_id&quot;: 6,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            }
+        },
+        {
+            &quot;id&quot;: 93,
+            &quot;class_id&quot;: 8,
+            &quot;subject_id&quot;: 5,
+            &quot;teacher_id&quot;: 4,
+            &quot;date&quot;: &quot;2025-08-26T00:00:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;09:00&quot;,
+            &quot;end_time&quot;: &quot;10:30&quot;,
+            &quot;room&quot;: &quot;Room 101&quot;,
+            &quot;created_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;updated_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;teacher&quot;: {
+                &quot;id&quot;: 4,
+                &quot;name&quot;: &quot;Dr. Sarah Johnson&quot;,
+                &quot;email&quot;: &quot;sarah.johnson@yousch.edu&quot;,
+                &quot;email_verified_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;
+            },
+            &quot;class_room&quot;: {
+                &quot;id&quot;: 8,
+                &quot;campus_id&quot;: 1,
+                &quot;course_id&quot;: 4,
+                &quot;name&quot;: &quot;BAENG - Class B&quot;,
+                &quot;capacity&quot;: 25,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            },
+            &quot;subject&quot;: {
+                &quot;id&quot;: 5,
+                &quot;course_id&quot;: 4,
+                &quot;name&quot;: &quot;Introduction to Literature&quot;,
+                &quot;code&quot;: &quot;ENG101&quot;,
+                &quot;description&quot;: &quot;Literary analysis and appreciation&quot;,
+                &quot;coordinator_id&quot;: 7,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            }
+        },
+        {
+            &quot;id&quot;: 33,
+            &quot;class_id&quot;: 2,
+            &quot;subject_id&quot;: 2,
+            &quot;teacher_id&quot;: 5,
+            &quot;date&quot;: &quot;2025-08-26T00:00:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;09:00&quot;,
+            &quot;end_time&quot;: &quot;10:30&quot;,
+            &quot;room&quot;: &quot;Room 102&quot;,
+            &quot;created_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;updated_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;teacher&quot;: {
+                &quot;id&quot;: 5,
+                &quot;name&quot;: &quot;Prof. Michael Chen&quot;,
+                &quot;email&quot;: &quot;michael.chen@yousch.edu&quot;,
+                &quot;email_verified_at&quot;: &quot;2025-08-31T00:54:38.000000Z&quot;,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:38.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:38.000000Z&quot;
+            },
+            &quot;class_room&quot;: {
+                &quot;id&quot;: 2,
+                &quot;campus_id&quot;: 1,
+                &quot;course_id&quot;: 1,
+                &quot;name&quot;: &quot;BCS - Class B&quot;,
+                &quot;capacity&quot;: 25,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            },
+            &quot;subject&quot;: {
+                &quot;id&quot;: 2,
+                &quot;course_id&quot;: 1,
+                &quot;name&quot;: &quot;Data Structures and Algorithms&quot;,
+                &quot;code&quot;: &quot;CS201&quot;,
+                &quot;description&quot;: &quot;Advanced programming concepts&quot;,
+                &quot;coordinator_id&quot;: 4,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            }
+        },
+        {
+            &quot;id&quot;: 43,
+            &quot;class_id&quot;: 3,
+            &quot;subject_id&quot;: 3,
+            &quot;teacher_id&quot;: 4,
+            &quot;date&quot;: &quot;2025-08-26T00:00:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;09:00&quot;,
+            &quot;end_time&quot;: &quot;10:30&quot;,
+            &quot;room&quot;: &quot;Room 101&quot;,
+            &quot;created_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;updated_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;teacher&quot;: {
+                &quot;id&quot;: 4,
+                &quot;name&quot;: &quot;Dr. Sarah Johnson&quot;,
+                &quot;email&quot;: &quot;sarah.johnson@yousch.edu&quot;,
+                &quot;email_verified_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;
+            },
+            &quot;class_room&quot;: {
+                &quot;id&quot;: 3,
+                &quot;campus_id&quot;: 1,
+                &quot;course_id&quot;: 2,
+                &quot;name&quot;: &quot;BMATH - Class A&quot;,
+                &quot;capacity&quot;: 30,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            },
+            &quot;subject&quot;: {
+                &quot;id&quot;: 3,
+                &quot;course_id&quot;: 2,
+                &quot;name&quot;: &quot;Calculus I&quot;,
+                &quot;code&quot;: &quot;MATH101&quot;,
+                &quot;description&quot;: &quot;Fundamental calculus concepts&quot;,
+                &quot;coordinator_id&quot;: 5,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            }
+        },
+        {
+            &quot;id&quot;: 63,
+            &quot;class_id&quot;: 5,
+            &quot;subject_id&quot;: 4,
+            &quot;teacher_id&quot;: 4,
+            &quot;date&quot;: &quot;2025-08-26T00:00:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;09:00&quot;,
+            &quot;end_time&quot;: &quot;10:30&quot;,
+            &quot;room&quot;: &quot;Room 101&quot;,
+            &quot;created_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;updated_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;teacher&quot;: {
+                &quot;id&quot;: 4,
+                &quot;name&quot;: &quot;Dr. Sarah Johnson&quot;,
+                &quot;email&quot;: &quot;sarah.johnson@yousch.edu&quot;,
+                &quot;email_verified_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;
+            },
+            &quot;class_room&quot;: {
+                &quot;id&quot;: 5,
+                &quot;campus_id&quot;: 1,
+                &quot;course_id&quot;: 3,
+                &quot;name&quot;: &quot;BBA - Class A&quot;,
+                &quot;capacity&quot;: 30,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            },
+            &quot;subject&quot;: {
+                &quot;id&quot;: 4,
+                &quot;course_id&quot;: 3,
+                &quot;name&quot;: &quot;Principles of Management&quot;,
+                &quot;code&quot;: &quot;BUS101&quot;,
+                &quot;description&quot;: &quot;Basic management principles&quot;,
+                &quot;coordinator_id&quot;: 6,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            }
+        },
+        {
+            &quot;id&quot;: 53,
+            &quot;class_id&quot;: 4,
+            &quot;subject_id&quot;: 3,
+            &quot;teacher_id&quot;: 4,
+            &quot;date&quot;: &quot;2025-08-26T00:00:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;09:00&quot;,
+            &quot;end_time&quot;: &quot;10:30&quot;,
+            &quot;room&quot;: &quot;Room 101&quot;,
+            &quot;created_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;updated_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;teacher&quot;: {
+                &quot;id&quot;: 4,
+                &quot;name&quot;: &quot;Dr. Sarah Johnson&quot;,
+                &quot;email&quot;: &quot;sarah.johnson@yousch.edu&quot;,
+                &quot;email_verified_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;
+            },
+            &quot;class_room&quot;: {
+                &quot;id&quot;: 4,
+                &quot;campus_id&quot;: 1,
+                &quot;course_id&quot;: 2,
+                &quot;name&quot;: &quot;BMATH - Class B&quot;,
+                &quot;capacity&quot;: 25,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            },
+            &quot;subject&quot;: {
+                &quot;id&quot;: 3,
+                &quot;course_id&quot;: 2,
+                &quot;name&quot;: &quot;Calculus I&quot;,
+                &quot;code&quot;: &quot;MATH101&quot;,
+                &quot;description&quot;: &quot;Fundamental calculus concepts&quot;,
+                &quot;coordinator_id&quot;: 5,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            }
+        },
+        {
+            &quot;id&quot;: 83,
+            &quot;class_id&quot;: 7,
+            &quot;subject_id&quot;: 5,
+            &quot;teacher_id&quot;: 4,
+            &quot;date&quot;: &quot;2025-08-26T00:00:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;09:00&quot;,
+            &quot;end_time&quot;: &quot;10:30&quot;,
+            &quot;room&quot;: &quot;Room 101&quot;,
+            &quot;created_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;updated_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;teacher&quot;: {
+                &quot;id&quot;: 4,
+                &quot;name&quot;: &quot;Dr. Sarah Johnson&quot;,
+                &quot;email&quot;: &quot;sarah.johnson@yousch.edu&quot;,
+                &quot;email_verified_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;
+            },
+            &quot;class_room&quot;: {
+                &quot;id&quot;: 7,
+                &quot;campus_id&quot;: 1,
+                &quot;course_id&quot;: 4,
+                &quot;name&quot;: &quot;BAENG - Class A&quot;,
+                &quot;capacity&quot;: 30,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            },
+            &quot;subject&quot;: {
+                &quot;id&quot;: 5,
+                &quot;course_id&quot;: 4,
+                &quot;name&quot;: &quot;Introduction to Literature&quot;,
+                &quot;code&quot;: &quot;ENG101&quot;,
+                &quot;description&quot;: &quot;Literary analysis and appreciation&quot;,
+                &quot;coordinator_id&quot;: 7,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            }
+        },
+        {
+            &quot;id&quot;: 73,
+            &quot;class_id&quot;: 6,
+            &quot;subject_id&quot;: 4,
+            &quot;teacher_id&quot;: 4,
+            &quot;date&quot;: &quot;2025-08-26T00:00:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;09:00&quot;,
+            &quot;end_time&quot;: &quot;10:30&quot;,
+            &quot;room&quot;: &quot;Room 101&quot;,
+            &quot;created_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;updated_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;teacher&quot;: {
+                &quot;id&quot;: 4,
+                &quot;name&quot;: &quot;Dr. Sarah Johnson&quot;,
+                &quot;email&quot;: &quot;sarah.johnson@yousch.edu&quot;,
+                &quot;email_verified_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;
+            },
+            &quot;class_room&quot;: {
+                &quot;id&quot;: 6,
+                &quot;campus_id&quot;: 1,
+                &quot;course_id&quot;: 3,
+                &quot;name&quot;: &quot;BBA - Class B&quot;,
+                &quot;capacity&quot;: 25,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            },
+            &quot;subject&quot;: {
+                &quot;id&quot;: 4,
+                &quot;course_id&quot;: 3,
+                &quot;name&quot;: &quot;Principles of Management&quot;,
+                &quot;code&quot;: &quot;BUS101&quot;,
+                &quot;description&quot;: &quot;Basic management principles&quot;,
+                &quot;coordinator_id&quot;: 6,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            }
+        },
+        {
+            &quot;id&quot;: 23,
+            &quot;class_id&quot;: 2,
+            &quot;subject_id&quot;: 1,
+            &quot;teacher_id&quot;: 4,
+            &quot;date&quot;: &quot;2025-08-26T00:00:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;09:00&quot;,
+            &quot;end_time&quot;: &quot;10:30&quot;,
+            &quot;room&quot;: &quot;Room 101&quot;,
+            &quot;created_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;updated_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;teacher&quot;: {
+                &quot;id&quot;: 4,
+                &quot;name&quot;: &quot;Dr. Sarah Johnson&quot;,
+                &quot;email&quot;: &quot;sarah.johnson@yousch.edu&quot;,
+                &quot;email_verified_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;
+            },
+            &quot;class_room&quot;: {
+                &quot;id&quot;: 2,
+                &quot;campus_id&quot;: 1,
+                &quot;course_id&quot;: 1,
+                &quot;name&quot;: &quot;BCS - Class B&quot;,
+                &quot;capacity&quot;: 25,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            },
+            &quot;subject&quot;: {
+                &quot;id&quot;: 1,
+                &quot;course_id&quot;: 1,
+                &quot;name&quot;: &quot;Introduction to Programming&quot;,
+                &quot;code&quot;: &quot;CS101&quot;,
+                &quot;description&quot;: &quot;Basic programming concepts and practices&quot;,
+                &quot;coordinator_id&quot;: 4,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            }
+        },
+        {
+            &quot;id&quot;: 13,
+            &quot;class_id&quot;: 1,
+            &quot;subject_id&quot;: 2,
+            &quot;teacher_id&quot;: 5,
+            &quot;date&quot;: &quot;2025-08-26T00:00:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;09:00&quot;,
+            &quot;end_time&quot;: &quot;10:30&quot;,
+            &quot;room&quot;: &quot;Room 102&quot;,
+            &quot;created_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;updated_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;teacher&quot;: {
+                &quot;id&quot;: 5,
+                &quot;name&quot;: &quot;Prof. Michael Chen&quot;,
+                &quot;email&quot;: &quot;michael.chen@yousch.edu&quot;,
+                &quot;email_verified_at&quot;: &quot;2025-08-31T00:54:38.000000Z&quot;,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:38.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:38.000000Z&quot;
+            },
+            &quot;class_room&quot;: {
+                &quot;id&quot;: 1,
+                &quot;campus_id&quot;: 1,
+                &quot;course_id&quot;: 1,
+                &quot;name&quot;: &quot;BCS - Class A&quot;,
+                &quot;capacity&quot;: 30,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            },
+            &quot;subject&quot;: {
+                &quot;id&quot;: 2,
+                &quot;course_id&quot;: 1,
+                &quot;name&quot;: &quot;Data Structures and Algorithms&quot;,
+                &quot;code&quot;: &quot;CS201&quot;,
+                &quot;description&quot;: &quot;Advanced programming concepts&quot;,
+                &quot;coordinator_id&quot;: 4,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            }
+        },
+        {
+            &quot;id&quot;: 3,
+            &quot;class_id&quot;: 1,
+            &quot;subject_id&quot;: 1,
+            &quot;teacher_id&quot;: 4,
+            &quot;date&quot;: &quot;2025-08-26T00:00:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;09:00&quot;,
+            &quot;end_time&quot;: &quot;10:30&quot;,
+            &quot;room&quot;: &quot;Room 101&quot;,
+            &quot;created_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;updated_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;teacher&quot;: {
+                &quot;id&quot;: 4,
+                &quot;name&quot;: &quot;Dr. Sarah Johnson&quot;,
+                &quot;email&quot;: &quot;sarah.johnson@yousch.edu&quot;,
+                &quot;email_verified_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;
+            },
+            &quot;class_room&quot;: {
+                &quot;id&quot;: 1,
+                &quot;campus_id&quot;: 1,
+                &quot;course_id&quot;: 1,
+                &quot;name&quot;: &quot;BCS - Class A&quot;,
+                &quot;capacity&quot;: 30,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            },
+            &quot;subject&quot;: {
+                &quot;id&quot;: 1,
+                &quot;course_id&quot;: 1,
+                &quot;name&quot;: &quot;Introduction to Programming&quot;,
+                &quot;code&quot;: &quot;CS101&quot;,
+                &quot;description&quot;: &quot;Basic programming concepts and practices&quot;,
+                &quot;coordinator_id&quot;: 4,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            }
+        },
+        {
+            &quot;id&quot;: 54,
+            &quot;class_id&quot;: 4,
+            &quot;subject_id&quot;: 3,
+            &quot;teacher_id&quot;: 4,
+            &quot;date&quot;: &quot;2025-08-26T00:00:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;14:00&quot;,
+            &quot;end_time&quot;: &quot;15:30&quot;,
+            &quot;room&quot;: &quot;Room 101&quot;,
+            &quot;created_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;updated_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;teacher&quot;: {
+                &quot;id&quot;: 4,
+                &quot;name&quot;: &quot;Dr. Sarah Johnson&quot;,
+                &quot;email&quot;: &quot;sarah.johnson@yousch.edu&quot;,
+                &quot;email_verified_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;
+            },
+            &quot;class_room&quot;: {
+                &quot;id&quot;: 4,
+                &quot;campus_id&quot;: 1,
+                &quot;course_id&quot;: 2,
+                &quot;name&quot;: &quot;BMATH - Class B&quot;,
+                &quot;capacity&quot;: 25,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            },
+            &quot;subject&quot;: {
+                &quot;id&quot;: 3,
+                &quot;course_id&quot;: 2,
+                &quot;name&quot;: &quot;Calculus I&quot;,
+                &quot;code&quot;: &quot;MATH101&quot;,
+                &quot;description&quot;: &quot;Fundamental calculus concepts&quot;,
+                &quot;coordinator_id&quot;: 5,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            }
+        },
+        {
+            &quot;id&quot;: 4,
+            &quot;class_id&quot;: 1,
+            &quot;subject_id&quot;: 1,
+            &quot;teacher_id&quot;: 4,
+            &quot;date&quot;: &quot;2025-08-26T00:00:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;14:00&quot;,
+            &quot;end_time&quot;: &quot;15:30&quot;,
+            &quot;room&quot;: &quot;Room 101&quot;,
+            &quot;created_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;updated_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;teacher&quot;: {
+                &quot;id&quot;: 4,
+                &quot;name&quot;: &quot;Dr. Sarah Johnson&quot;,
+                &quot;email&quot;: &quot;sarah.johnson@yousch.edu&quot;,
+                &quot;email_verified_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;
+            },
+            &quot;class_room&quot;: {
+                &quot;id&quot;: 1,
+                &quot;campus_id&quot;: 1,
+                &quot;course_id&quot;: 1,
+                &quot;name&quot;: &quot;BCS - Class A&quot;,
+                &quot;capacity&quot;: 30,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            },
+            &quot;subject&quot;: {
+                &quot;id&quot;: 1,
+                &quot;course_id&quot;: 1,
+                &quot;name&quot;: &quot;Introduction to Programming&quot;,
+                &quot;code&quot;: &quot;CS101&quot;,
+                &quot;description&quot;: &quot;Basic programming concepts and practices&quot;,
+                &quot;coordinator_id&quot;: 4,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            }
+        },
+        {
+            &quot;id&quot;: 74,
+            &quot;class_id&quot;: 6,
+            &quot;subject_id&quot;: 4,
+            &quot;teacher_id&quot;: 4,
+            &quot;date&quot;: &quot;2025-08-26T00:00:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;14:00&quot;,
+            &quot;end_time&quot;: &quot;15:30&quot;,
+            &quot;room&quot;: &quot;Room 101&quot;,
+            &quot;created_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;updated_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;teacher&quot;: {
+                &quot;id&quot;: 4,
+                &quot;name&quot;: &quot;Dr. Sarah Johnson&quot;,
+                &quot;email&quot;: &quot;sarah.johnson@yousch.edu&quot;,
+                &quot;email_verified_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;
+            },
+            &quot;class_room&quot;: {
+                &quot;id&quot;: 6,
+                &quot;campus_id&quot;: 1,
+                &quot;course_id&quot;: 3,
+                &quot;name&quot;: &quot;BBA - Class B&quot;,
+                &quot;capacity&quot;: 25,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            },
+            &quot;subject&quot;: {
+                &quot;id&quot;: 4,
+                &quot;course_id&quot;: 3,
+                &quot;name&quot;: &quot;Principles of Management&quot;,
+                &quot;code&quot;: &quot;BUS101&quot;,
+                &quot;description&quot;: &quot;Basic management principles&quot;,
+                &quot;coordinator_id&quot;: 6,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            }
+        },
+        {
+            &quot;id&quot;: 44,
+            &quot;class_id&quot;: 3,
+            &quot;subject_id&quot;: 3,
+            &quot;teacher_id&quot;: 4,
+            &quot;date&quot;: &quot;2025-08-26T00:00:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;14:00&quot;,
+            &quot;end_time&quot;: &quot;15:30&quot;,
+            &quot;room&quot;: &quot;Room 101&quot;,
+            &quot;created_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;updated_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;teacher&quot;: {
+                &quot;id&quot;: 4,
+                &quot;name&quot;: &quot;Dr. Sarah Johnson&quot;,
+                &quot;email&quot;: &quot;sarah.johnson@yousch.edu&quot;,
+                &quot;email_verified_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;
+            },
+            &quot;class_room&quot;: {
+                &quot;id&quot;: 3,
+                &quot;campus_id&quot;: 1,
+                &quot;course_id&quot;: 2,
+                &quot;name&quot;: &quot;BMATH - Class A&quot;,
+                &quot;capacity&quot;: 30,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            },
+            &quot;subject&quot;: {
+                &quot;id&quot;: 3,
+                &quot;course_id&quot;: 2,
+                &quot;name&quot;: &quot;Calculus I&quot;,
+                &quot;code&quot;: &quot;MATH101&quot;,
+                &quot;description&quot;: &quot;Fundamental calculus concepts&quot;,
+                &quot;coordinator_id&quot;: 5,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            }
+        },
+        {
+            &quot;id&quot;: 84,
+            &quot;class_id&quot;: 7,
+            &quot;subject_id&quot;: 5,
+            &quot;teacher_id&quot;: 4,
+            &quot;date&quot;: &quot;2025-08-26T00:00:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;14:00&quot;,
+            &quot;end_time&quot;: &quot;15:30&quot;,
+            &quot;room&quot;: &quot;Room 101&quot;,
+            &quot;created_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;updated_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;teacher&quot;: {
+                &quot;id&quot;: 4,
+                &quot;name&quot;: &quot;Dr. Sarah Johnson&quot;,
+                &quot;email&quot;: &quot;sarah.johnson@yousch.edu&quot;,
+                &quot;email_verified_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;
+            },
+            &quot;class_room&quot;: {
+                &quot;id&quot;: 7,
+                &quot;campus_id&quot;: 1,
+                &quot;course_id&quot;: 4,
+                &quot;name&quot;: &quot;BAENG - Class A&quot;,
+                &quot;capacity&quot;: 30,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            },
+            &quot;subject&quot;: {
+                &quot;id&quot;: 5,
+                &quot;course_id&quot;: 4,
+                &quot;name&quot;: &quot;Introduction to Literature&quot;,
+                &quot;code&quot;: &quot;ENG101&quot;,
+                &quot;description&quot;: &quot;Literary analysis and appreciation&quot;,
+                &quot;coordinator_id&quot;: 7,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            }
+        },
+        {
+            &quot;id&quot;: 64,
+            &quot;class_id&quot;: 5,
+            &quot;subject_id&quot;: 4,
+            &quot;teacher_id&quot;: 4,
+            &quot;date&quot;: &quot;2025-08-26T00:00:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;14:00&quot;,
+            &quot;end_time&quot;: &quot;15:30&quot;,
+            &quot;room&quot;: &quot;Room 101&quot;,
+            &quot;created_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;updated_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;teacher&quot;: {
+                &quot;id&quot;: 4,
+                &quot;name&quot;: &quot;Dr. Sarah Johnson&quot;,
+                &quot;email&quot;: &quot;sarah.johnson@yousch.edu&quot;,
+                &quot;email_verified_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;
+            },
+            &quot;class_room&quot;: {
+                &quot;id&quot;: 5,
+                &quot;campus_id&quot;: 1,
+                &quot;course_id&quot;: 3,
+                &quot;name&quot;: &quot;BBA - Class A&quot;,
+                &quot;capacity&quot;: 30,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            },
+            &quot;subject&quot;: {
+                &quot;id&quot;: 4,
+                &quot;course_id&quot;: 3,
+                &quot;name&quot;: &quot;Principles of Management&quot;,
+                &quot;code&quot;: &quot;BUS101&quot;,
+                &quot;description&quot;: &quot;Basic management principles&quot;,
+                &quot;coordinator_id&quot;: 6,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            }
+        },
+        {
+            &quot;id&quot;: 24,
+            &quot;class_id&quot;: 2,
+            &quot;subject_id&quot;: 1,
+            &quot;teacher_id&quot;: 4,
+            &quot;date&quot;: &quot;2025-08-26T00:00:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;14:00&quot;,
+            &quot;end_time&quot;: &quot;15:30&quot;,
+            &quot;room&quot;: &quot;Room 101&quot;,
+            &quot;created_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;updated_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;teacher&quot;: {
+                &quot;id&quot;: 4,
+                &quot;name&quot;: &quot;Dr. Sarah Johnson&quot;,
+                &quot;email&quot;: &quot;sarah.johnson@yousch.edu&quot;,
+                &quot;email_verified_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;
+            },
+            &quot;class_room&quot;: {
+                &quot;id&quot;: 2,
+                &quot;campus_id&quot;: 1,
+                &quot;course_id&quot;: 1,
+                &quot;name&quot;: &quot;BCS - Class B&quot;,
+                &quot;capacity&quot;: 25,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            },
+            &quot;subject&quot;: {
+                &quot;id&quot;: 1,
+                &quot;course_id&quot;: 1,
+                &quot;name&quot;: &quot;Introduction to Programming&quot;,
+                &quot;code&quot;: &quot;CS101&quot;,
+                &quot;description&quot;: &quot;Basic programming concepts and practices&quot;,
+                &quot;coordinator_id&quot;: 4,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            }
+        },
+        {
+            &quot;id&quot;: 94,
+            &quot;class_id&quot;: 8,
+            &quot;subject_id&quot;: 5,
+            &quot;teacher_id&quot;: 4,
+            &quot;date&quot;: &quot;2025-08-26T00:00:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;14:00&quot;,
+            &quot;end_time&quot;: &quot;15:30&quot;,
+            &quot;room&quot;: &quot;Room 101&quot;,
+            &quot;created_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;updated_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;teacher&quot;: {
+                &quot;id&quot;: 4,
+                &quot;name&quot;: &quot;Dr. Sarah Johnson&quot;,
+                &quot;email&quot;: &quot;sarah.johnson@yousch.edu&quot;,
+                &quot;email_verified_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;
+            },
+            &quot;class_room&quot;: {
+                &quot;id&quot;: 8,
+                &quot;campus_id&quot;: 1,
+                &quot;course_id&quot;: 4,
+                &quot;name&quot;: &quot;BAENG - Class B&quot;,
+                &quot;capacity&quot;: 25,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            },
+            &quot;subject&quot;: {
+                &quot;id&quot;: 5,
+                &quot;course_id&quot;: 4,
+                &quot;name&quot;: &quot;Introduction to Literature&quot;,
+                &quot;code&quot;: &quot;ENG101&quot;,
+                &quot;description&quot;: &quot;Literary analysis and appreciation&quot;,
+                &quot;coordinator_id&quot;: 7,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            }
+        },
+        {
+            &quot;id&quot;: 34,
+            &quot;class_id&quot;: 2,
+            &quot;subject_id&quot;: 2,
+            &quot;teacher_id&quot;: 5,
+            &quot;date&quot;: &quot;2025-08-26T00:00:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;14:00&quot;,
+            &quot;end_time&quot;: &quot;15:30&quot;,
+            &quot;room&quot;: &quot;Room 102&quot;,
+            &quot;created_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;updated_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;teacher&quot;: {
+                &quot;id&quot;: 5,
+                &quot;name&quot;: &quot;Prof. Michael Chen&quot;,
+                &quot;email&quot;: &quot;michael.chen@yousch.edu&quot;,
+                &quot;email_verified_at&quot;: &quot;2025-08-31T00:54:38.000000Z&quot;,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:38.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:38.000000Z&quot;
+            },
+            &quot;class_room&quot;: {
+                &quot;id&quot;: 2,
+                &quot;campus_id&quot;: 1,
+                &quot;course_id&quot;: 1,
+                &quot;name&quot;: &quot;BCS - Class B&quot;,
+                &quot;capacity&quot;: 25,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            },
+            &quot;subject&quot;: {
+                &quot;id&quot;: 2,
+                &quot;course_id&quot;: 1,
+                &quot;name&quot;: &quot;Data Structures and Algorithms&quot;,
+                &quot;code&quot;: &quot;CS201&quot;,
+                &quot;description&quot;: &quot;Advanced programming concepts&quot;,
+                &quot;coordinator_id&quot;: 4,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            }
+        },
+        {
+            &quot;id&quot;: 14,
+            &quot;class_id&quot;: 1,
+            &quot;subject_id&quot;: 2,
+            &quot;teacher_id&quot;: 5,
+            &quot;date&quot;: &quot;2025-08-26T00:00:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;14:00&quot;,
+            &quot;end_time&quot;: &quot;15:30&quot;,
+            &quot;room&quot;: &quot;Room 102&quot;,
+            &quot;created_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;updated_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;teacher&quot;: {
+                &quot;id&quot;: 5,
+                &quot;name&quot;: &quot;Prof. Michael Chen&quot;,
+                &quot;email&quot;: &quot;michael.chen@yousch.edu&quot;,
+                &quot;email_verified_at&quot;: &quot;2025-08-31T00:54:38.000000Z&quot;,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:38.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:38.000000Z&quot;
+            },
+            &quot;class_room&quot;: {
+                &quot;id&quot;: 1,
+                &quot;campus_id&quot;: 1,
+                &quot;course_id&quot;: 1,
+                &quot;name&quot;: &quot;BCS - Class A&quot;,
+                &quot;capacity&quot;: 30,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            },
+            &quot;subject&quot;: {
+                &quot;id&quot;: 2,
+                &quot;course_id&quot;: 1,
+                &quot;name&quot;: &quot;Data Structures and Algorithms&quot;,
+                &quot;code&quot;: &quot;CS201&quot;,
+                &quot;description&quot;: &quot;Advanced programming concepts&quot;,
+                &quot;coordinator_id&quot;: 4,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            }
+        },
+        {
+            &quot;id&quot;: 55,
+            &quot;class_id&quot;: 4,
+            &quot;subject_id&quot;: 3,
+            &quot;teacher_id&quot;: 4,
+            &quot;date&quot;: &quot;2025-08-27T00:00:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;09:00&quot;,
+            &quot;end_time&quot;: &quot;10:30&quot;,
+            &quot;room&quot;: &quot;Room 101&quot;,
+            &quot;created_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;updated_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;teacher&quot;: {
+                &quot;id&quot;: 4,
+                &quot;name&quot;: &quot;Dr. Sarah Johnson&quot;,
+                &quot;email&quot;: &quot;sarah.johnson@yousch.edu&quot;,
+                &quot;email_verified_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;
+            },
+            &quot;class_room&quot;: {
+                &quot;id&quot;: 4,
+                &quot;campus_id&quot;: 1,
+                &quot;course_id&quot;: 2,
+                &quot;name&quot;: &quot;BMATH - Class B&quot;,
+                &quot;capacity&quot;: 25,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            },
+            &quot;subject&quot;: {
+                &quot;id&quot;: 3,
+                &quot;course_id&quot;: 2,
+                &quot;name&quot;: &quot;Calculus I&quot;,
+                &quot;code&quot;: &quot;MATH101&quot;,
+                &quot;description&quot;: &quot;Fundamental calculus concepts&quot;,
+                &quot;coordinator_id&quot;: 5,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            }
+        },
+        {
+            &quot;id&quot;: 5,
+            &quot;class_id&quot;: 1,
+            &quot;subject_id&quot;: 1,
+            &quot;teacher_id&quot;: 4,
+            &quot;date&quot;: &quot;2025-08-27T00:00:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;09:00&quot;,
+            &quot;end_time&quot;: &quot;10:30&quot;,
+            &quot;room&quot;: &quot;Room 101&quot;,
+            &quot;created_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;updated_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;teacher&quot;: {
+                &quot;id&quot;: 4,
+                &quot;name&quot;: &quot;Dr. Sarah Johnson&quot;,
+                &quot;email&quot;: &quot;sarah.johnson@yousch.edu&quot;,
+                &quot;email_verified_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;
+            },
+            &quot;class_room&quot;: {
+                &quot;id&quot;: 1,
+                &quot;campus_id&quot;: 1,
+                &quot;course_id&quot;: 1,
+                &quot;name&quot;: &quot;BCS - Class A&quot;,
+                &quot;capacity&quot;: 30,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            },
+            &quot;subject&quot;: {
+                &quot;id&quot;: 1,
+                &quot;course_id&quot;: 1,
+                &quot;name&quot;: &quot;Introduction to Programming&quot;,
+                &quot;code&quot;: &quot;CS101&quot;,
+                &quot;description&quot;: &quot;Basic programming concepts and practices&quot;,
+                &quot;coordinator_id&quot;: 4,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            }
+        },
+        {
+            &quot;id&quot;: 85,
+            &quot;class_id&quot;: 7,
+            &quot;subject_id&quot;: 5,
+            &quot;teacher_id&quot;: 4,
+            &quot;date&quot;: &quot;2025-08-27T00:00:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;09:00&quot;,
+            &quot;end_time&quot;: &quot;10:30&quot;,
+            &quot;room&quot;: &quot;Room 101&quot;,
+            &quot;created_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;updated_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;teacher&quot;: {
+                &quot;id&quot;: 4,
+                &quot;name&quot;: &quot;Dr. Sarah Johnson&quot;,
+                &quot;email&quot;: &quot;sarah.johnson@yousch.edu&quot;,
+                &quot;email_verified_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;
+            },
+            &quot;class_room&quot;: {
+                &quot;id&quot;: 7,
+                &quot;campus_id&quot;: 1,
+                &quot;course_id&quot;: 4,
+                &quot;name&quot;: &quot;BAENG - Class A&quot;,
+                &quot;capacity&quot;: 30,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            },
+            &quot;subject&quot;: {
+                &quot;id&quot;: 5,
+                &quot;course_id&quot;: 4,
+                &quot;name&quot;: &quot;Introduction to Literature&quot;,
+                &quot;code&quot;: &quot;ENG101&quot;,
+                &quot;description&quot;: &quot;Literary analysis and appreciation&quot;,
+                &quot;coordinator_id&quot;: 7,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            }
+        },
+        {
+            &quot;id&quot;: 75,
+            &quot;class_id&quot;: 6,
+            &quot;subject_id&quot;: 4,
+            &quot;teacher_id&quot;: 4,
+            &quot;date&quot;: &quot;2025-08-27T00:00:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;09:00&quot;,
+            &quot;end_time&quot;: &quot;10:30&quot;,
+            &quot;room&quot;: &quot;Room 101&quot;,
+            &quot;created_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;updated_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;teacher&quot;: {
+                &quot;id&quot;: 4,
+                &quot;name&quot;: &quot;Dr. Sarah Johnson&quot;,
+                &quot;email&quot;: &quot;sarah.johnson@yousch.edu&quot;,
+                &quot;email_verified_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;
+            },
+            &quot;class_room&quot;: {
+                &quot;id&quot;: 6,
+                &quot;campus_id&quot;: 1,
+                &quot;course_id&quot;: 3,
+                &quot;name&quot;: &quot;BBA - Class B&quot;,
+                &quot;capacity&quot;: 25,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            },
+            &quot;subject&quot;: {
+                &quot;id&quot;: 4,
+                &quot;course_id&quot;: 3,
+                &quot;name&quot;: &quot;Principles of Management&quot;,
+                &quot;code&quot;: &quot;BUS101&quot;,
+                &quot;description&quot;: &quot;Basic management principles&quot;,
+                &quot;coordinator_id&quot;: 6,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            }
+        },
+        {
+            &quot;id&quot;: 45,
+            &quot;class_id&quot;: 3,
+            &quot;subject_id&quot;: 3,
+            &quot;teacher_id&quot;: 4,
+            &quot;date&quot;: &quot;2025-08-27T00:00:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;09:00&quot;,
+            &quot;end_time&quot;: &quot;10:30&quot;,
+            &quot;room&quot;: &quot;Room 101&quot;,
+            &quot;created_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;updated_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;teacher&quot;: {
+                &quot;id&quot;: 4,
+                &quot;name&quot;: &quot;Dr. Sarah Johnson&quot;,
+                &quot;email&quot;: &quot;sarah.johnson@yousch.edu&quot;,
+                &quot;email_verified_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;
+            },
+            &quot;class_room&quot;: {
+                &quot;id&quot;: 3,
+                &quot;campus_id&quot;: 1,
+                &quot;course_id&quot;: 2,
+                &quot;name&quot;: &quot;BMATH - Class A&quot;,
+                &quot;capacity&quot;: 30,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            },
+            &quot;subject&quot;: {
+                &quot;id&quot;: 3,
+                &quot;course_id&quot;: 2,
+                &quot;name&quot;: &quot;Calculus I&quot;,
+                &quot;code&quot;: &quot;MATH101&quot;,
+                &quot;description&quot;: &quot;Fundamental calculus concepts&quot;,
+                &quot;coordinator_id&quot;: 5,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            }
+        },
+        {
+            &quot;id&quot;: 95,
+            &quot;class_id&quot;: 8,
+            &quot;subject_id&quot;: 5,
+            &quot;teacher_id&quot;: 4,
+            &quot;date&quot;: &quot;2025-08-27T00:00:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;09:00&quot;,
+            &quot;end_time&quot;: &quot;10:30&quot;,
+            &quot;room&quot;: &quot;Room 101&quot;,
+            &quot;created_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;updated_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;teacher&quot;: {
+                &quot;id&quot;: 4,
+                &quot;name&quot;: &quot;Dr. Sarah Johnson&quot;,
+                &quot;email&quot;: &quot;sarah.johnson@yousch.edu&quot;,
+                &quot;email_verified_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;
+            },
+            &quot;class_room&quot;: {
+                &quot;id&quot;: 8,
+                &quot;campus_id&quot;: 1,
+                &quot;course_id&quot;: 4,
+                &quot;name&quot;: &quot;BAENG - Class B&quot;,
+                &quot;capacity&quot;: 25,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            },
+            &quot;subject&quot;: {
+                &quot;id&quot;: 5,
+                &quot;course_id&quot;: 4,
+                &quot;name&quot;: &quot;Introduction to Literature&quot;,
+                &quot;code&quot;: &quot;ENG101&quot;,
+                &quot;description&quot;: &quot;Literary analysis and appreciation&quot;,
+                &quot;coordinator_id&quot;: 7,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            }
+        },
+        {
+            &quot;id&quot;: 15,
+            &quot;class_id&quot;: 1,
+            &quot;subject_id&quot;: 2,
+            &quot;teacher_id&quot;: 5,
+            &quot;date&quot;: &quot;2025-08-27T00:00:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;09:00&quot;,
+            &quot;end_time&quot;: &quot;10:30&quot;,
+            &quot;room&quot;: &quot;Room 102&quot;,
+            &quot;created_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;updated_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;teacher&quot;: {
+                &quot;id&quot;: 5,
+                &quot;name&quot;: &quot;Prof. Michael Chen&quot;,
+                &quot;email&quot;: &quot;michael.chen@yousch.edu&quot;,
+                &quot;email_verified_at&quot;: &quot;2025-08-31T00:54:38.000000Z&quot;,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:38.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:38.000000Z&quot;
+            },
+            &quot;class_room&quot;: {
+                &quot;id&quot;: 1,
+                &quot;campus_id&quot;: 1,
+                &quot;course_id&quot;: 1,
+                &quot;name&quot;: &quot;BCS - Class A&quot;,
+                &quot;capacity&quot;: 30,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            },
+            &quot;subject&quot;: {
+                &quot;id&quot;: 2,
+                &quot;course_id&quot;: 1,
+                &quot;name&quot;: &quot;Data Structures and Algorithms&quot;,
+                &quot;code&quot;: &quot;CS201&quot;,
+                &quot;description&quot;: &quot;Advanced programming concepts&quot;,
+                &quot;coordinator_id&quot;: 4,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            }
+        },
+        {
+            &quot;id&quot;: 25,
+            &quot;class_id&quot;: 2,
+            &quot;subject_id&quot;: 1,
+            &quot;teacher_id&quot;: 4,
+            &quot;date&quot;: &quot;2025-08-27T00:00:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;09:00&quot;,
+            &quot;end_time&quot;: &quot;10:30&quot;,
+            &quot;room&quot;: &quot;Room 101&quot;,
+            &quot;created_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;updated_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;teacher&quot;: {
+                &quot;id&quot;: 4,
+                &quot;name&quot;: &quot;Dr. Sarah Johnson&quot;,
+                &quot;email&quot;: &quot;sarah.johnson@yousch.edu&quot;,
+                &quot;email_verified_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;
+            },
+            &quot;class_room&quot;: {
+                &quot;id&quot;: 2,
+                &quot;campus_id&quot;: 1,
+                &quot;course_id&quot;: 1,
+                &quot;name&quot;: &quot;BCS - Class B&quot;,
+                &quot;capacity&quot;: 25,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            },
+            &quot;subject&quot;: {
+                &quot;id&quot;: 1,
+                &quot;course_id&quot;: 1,
+                &quot;name&quot;: &quot;Introduction to Programming&quot;,
+                &quot;code&quot;: &quot;CS101&quot;,
+                &quot;description&quot;: &quot;Basic programming concepts and practices&quot;,
+                &quot;coordinator_id&quot;: 4,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            }
+        },
+        {
+            &quot;id&quot;: 35,
+            &quot;class_id&quot;: 2,
+            &quot;subject_id&quot;: 2,
+            &quot;teacher_id&quot;: 5,
+            &quot;date&quot;: &quot;2025-08-27T00:00:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;09:00&quot;,
+            &quot;end_time&quot;: &quot;10:30&quot;,
+            &quot;room&quot;: &quot;Room 102&quot;,
+            &quot;created_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;updated_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;teacher&quot;: {
+                &quot;id&quot;: 5,
+                &quot;name&quot;: &quot;Prof. Michael Chen&quot;,
+                &quot;email&quot;: &quot;michael.chen@yousch.edu&quot;,
+                &quot;email_verified_at&quot;: &quot;2025-08-31T00:54:38.000000Z&quot;,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:38.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:38.000000Z&quot;
+            },
+            &quot;class_room&quot;: {
+                &quot;id&quot;: 2,
+                &quot;campus_id&quot;: 1,
+                &quot;course_id&quot;: 1,
+                &quot;name&quot;: &quot;BCS - Class B&quot;,
+                &quot;capacity&quot;: 25,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            },
+            &quot;subject&quot;: {
+                &quot;id&quot;: 2,
+                &quot;course_id&quot;: 1,
+                &quot;name&quot;: &quot;Data Structures and Algorithms&quot;,
+                &quot;code&quot;: &quot;CS201&quot;,
+                &quot;description&quot;: &quot;Advanced programming concepts&quot;,
+                &quot;coordinator_id&quot;: 4,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            }
+        },
+        {
+            &quot;id&quot;: 65,
+            &quot;class_id&quot;: 5,
+            &quot;subject_id&quot;: 4,
+            &quot;teacher_id&quot;: 4,
+            &quot;date&quot;: &quot;2025-08-27T00:00:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;09:00&quot;,
+            &quot;end_time&quot;: &quot;10:30&quot;,
+            &quot;room&quot;: &quot;Room 101&quot;,
+            &quot;created_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;updated_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;teacher&quot;: {
+                &quot;id&quot;: 4,
+                &quot;name&quot;: &quot;Dr. Sarah Johnson&quot;,
+                &quot;email&quot;: &quot;sarah.johnson@yousch.edu&quot;,
+                &quot;email_verified_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;
+            },
+            &quot;class_room&quot;: {
+                &quot;id&quot;: 5,
+                &quot;campus_id&quot;: 1,
+                &quot;course_id&quot;: 3,
+                &quot;name&quot;: &quot;BBA - Class A&quot;,
+                &quot;capacity&quot;: 30,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            },
+            &quot;subject&quot;: {
+                &quot;id&quot;: 4,
+                &quot;course_id&quot;: 3,
+                &quot;name&quot;: &quot;Principles of Management&quot;,
+                &quot;code&quot;: &quot;BUS101&quot;,
+                &quot;description&quot;: &quot;Basic management principles&quot;,
+                &quot;coordinator_id&quot;: 6,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            }
+        },
+        {
+            &quot;id&quot;: 76,
+            &quot;class_id&quot;: 6,
+            &quot;subject_id&quot;: 4,
+            &quot;teacher_id&quot;: 4,
+            &quot;date&quot;: &quot;2025-08-27T00:00:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;14:00&quot;,
+            &quot;end_time&quot;: &quot;15:30&quot;,
+            &quot;room&quot;: &quot;Room 101&quot;,
+            &quot;created_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;updated_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;teacher&quot;: {
+                &quot;id&quot;: 4,
+                &quot;name&quot;: &quot;Dr. Sarah Johnson&quot;,
+                &quot;email&quot;: &quot;sarah.johnson@yousch.edu&quot;,
+                &quot;email_verified_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;
+            },
+            &quot;class_room&quot;: {
+                &quot;id&quot;: 6,
+                &quot;campus_id&quot;: 1,
+                &quot;course_id&quot;: 3,
+                &quot;name&quot;: &quot;BBA - Class B&quot;,
+                &quot;capacity&quot;: 25,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            },
+            &quot;subject&quot;: {
+                &quot;id&quot;: 4,
+                &quot;course_id&quot;: 3,
+                &quot;name&quot;: &quot;Principles of Management&quot;,
+                &quot;code&quot;: &quot;BUS101&quot;,
+                &quot;description&quot;: &quot;Basic management principles&quot;,
+                &quot;coordinator_id&quot;: 6,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            }
+        },
+        {
+            &quot;id&quot;: 56,
+            &quot;class_id&quot;: 4,
+            &quot;subject_id&quot;: 3,
+            &quot;teacher_id&quot;: 4,
+            &quot;date&quot;: &quot;2025-08-27T00:00:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;14:00&quot;,
+            &quot;end_time&quot;: &quot;15:30&quot;,
+            &quot;room&quot;: &quot;Room 101&quot;,
+            &quot;created_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;updated_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;teacher&quot;: {
+                &quot;id&quot;: 4,
+                &quot;name&quot;: &quot;Dr. Sarah Johnson&quot;,
+                &quot;email&quot;: &quot;sarah.johnson@yousch.edu&quot;,
+                &quot;email_verified_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;
+            },
+            &quot;class_room&quot;: {
+                &quot;id&quot;: 4,
+                &quot;campus_id&quot;: 1,
+                &quot;course_id&quot;: 2,
+                &quot;name&quot;: &quot;BMATH - Class B&quot;,
+                &quot;capacity&quot;: 25,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            },
+            &quot;subject&quot;: {
+                &quot;id&quot;: 3,
+                &quot;course_id&quot;: 2,
+                &quot;name&quot;: &quot;Calculus I&quot;,
+                &quot;code&quot;: &quot;MATH101&quot;,
+                &quot;description&quot;: &quot;Fundamental calculus concepts&quot;,
+                &quot;coordinator_id&quot;: 5,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            }
+        },
+        {
+            &quot;id&quot;: 66,
+            &quot;class_id&quot;: 5,
+            &quot;subject_id&quot;: 4,
+            &quot;teacher_id&quot;: 4,
+            &quot;date&quot;: &quot;2025-08-27T00:00:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;14:00&quot;,
+            &quot;end_time&quot;: &quot;15:30&quot;,
+            &quot;room&quot;: &quot;Room 101&quot;,
+            &quot;created_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;updated_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;teacher&quot;: {
+                &quot;id&quot;: 4,
+                &quot;name&quot;: &quot;Dr. Sarah Johnson&quot;,
+                &quot;email&quot;: &quot;sarah.johnson@yousch.edu&quot;,
+                &quot;email_verified_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;
+            },
+            &quot;class_room&quot;: {
+                &quot;id&quot;: 5,
+                &quot;campus_id&quot;: 1,
+                &quot;course_id&quot;: 3,
+                &quot;name&quot;: &quot;BBA - Class A&quot;,
+                &quot;capacity&quot;: 30,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            },
+            &quot;subject&quot;: {
+                &quot;id&quot;: 4,
+                &quot;course_id&quot;: 3,
+                &quot;name&quot;: &quot;Principles of Management&quot;,
+                &quot;code&quot;: &quot;BUS101&quot;,
+                &quot;description&quot;: &quot;Basic management principles&quot;,
+                &quot;coordinator_id&quot;: 6,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            }
+        },
+        {
+            &quot;id&quot;: 16,
+            &quot;class_id&quot;: 1,
+            &quot;subject_id&quot;: 2,
+            &quot;teacher_id&quot;: 5,
+            &quot;date&quot;: &quot;2025-08-27T00:00:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;14:00&quot;,
+            &quot;end_time&quot;: &quot;15:30&quot;,
+            &quot;room&quot;: &quot;Room 102&quot;,
+            &quot;created_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;updated_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;teacher&quot;: {
+                &quot;id&quot;: 5,
+                &quot;name&quot;: &quot;Prof. Michael Chen&quot;,
+                &quot;email&quot;: &quot;michael.chen@yousch.edu&quot;,
+                &quot;email_verified_at&quot;: &quot;2025-08-31T00:54:38.000000Z&quot;,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:38.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:38.000000Z&quot;
+            },
+            &quot;class_room&quot;: {
+                &quot;id&quot;: 1,
+                &quot;campus_id&quot;: 1,
+                &quot;course_id&quot;: 1,
+                &quot;name&quot;: &quot;BCS - Class A&quot;,
+                &quot;capacity&quot;: 30,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            },
+            &quot;subject&quot;: {
+                &quot;id&quot;: 2,
+                &quot;course_id&quot;: 1,
+                &quot;name&quot;: &quot;Data Structures and Algorithms&quot;,
+                &quot;code&quot;: &quot;CS201&quot;,
+                &quot;description&quot;: &quot;Advanced programming concepts&quot;,
+                &quot;coordinator_id&quot;: 4,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            }
+        },
+        {
+            &quot;id&quot;: 96,
+            &quot;class_id&quot;: 8,
+            &quot;subject_id&quot;: 5,
+            &quot;teacher_id&quot;: 4,
+            &quot;date&quot;: &quot;2025-08-27T00:00:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;14:00&quot;,
+            &quot;end_time&quot;: &quot;15:30&quot;,
+            &quot;room&quot;: &quot;Room 101&quot;,
+            &quot;created_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;updated_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;teacher&quot;: {
+                &quot;id&quot;: 4,
+                &quot;name&quot;: &quot;Dr. Sarah Johnson&quot;,
+                &quot;email&quot;: &quot;sarah.johnson@yousch.edu&quot;,
+                &quot;email_verified_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;
+            },
+            &quot;class_room&quot;: {
+                &quot;id&quot;: 8,
+                &quot;campus_id&quot;: 1,
+                &quot;course_id&quot;: 4,
+                &quot;name&quot;: &quot;BAENG - Class B&quot;,
+                &quot;capacity&quot;: 25,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            },
+            &quot;subject&quot;: {
+                &quot;id&quot;: 5,
+                &quot;course_id&quot;: 4,
+                &quot;name&quot;: &quot;Introduction to Literature&quot;,
+                &quot;code&quot;: &quot;ENG101&quot;,
+                &quot;description&quot;: &quot;Literary analysis and appreciation&quot;,
+                &quot;coordinator_id&quot;: 7,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            }
+        },
+        {
+            &quot;id&quot;: 26,
+            &quot;class_id&quot;: 2,
+            &quot;subject_id&quot;: 1,
+            &quot;teacher_id&quot;: 4,
+            &quot;date&quot;: &quot;2025-08-27T00:00:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;14:00&quot;,
+            &quot;end_time&quot;: &quot;15:30&quot;,
+            &quot;room&quot;: &quot;Room 101&quot;,
+            &quot;created_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;updated_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;teacher&quot;: {
+                &quot;id&quot;: 4,
+                &quot;name&quot;: &quot;Dr. Sarah Johnson&quot;,
+                &quot;email&quot;: &quot;sarah.johnson@yousch.edu&quot;,
+                &quot;email_verified_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;
+            },
+            &quot;class_room&quot;: {
+                &quot;id&quot;: 2,
+                &quot;campus_id&quot;: 1,
+                &quot;course_id&quot;: 1,
+                &quot;name&quot;: &quot;BCS - Class B&quot;,
+                &quot;capacity&quot;: 25,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            },
+            &quot;subject&quot;: {
+                &quot;id&quot;: 1,
+                &quot;course_id&quot;: 1,
+                &quot;name&quot;: &quot;Introduction to Programming&quot;,
+                &quot;code&quot;: &quot;CS101&quot;,
+                &quot;description&quot;: &quot;Basic programming concepts and practices&quot;,
+                &quot;coordinator_id&quot;: 4,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            }
+        },
+        {
+            &quot;id&quot;: 36,
+            &quot;class_id&quot;: 2,
+            &quot;subject_id&quot;: 2,
+            &quot;teacher_id&quot;: 5,
+            &quot;date&quot;: &quot;2025-08-27T00:00:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;14:00&quot;,
+            &quot;end_time&quot;: &quot;15:30&quot;,
+            &quot;room&quot;: &quot;Room 102&quot;,
+            &quot;created_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;updated_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;teacher&quot;: {
+                &quot;id&quot;: 5,
+                &quot;name&quot;: &quot;Prof. Michael Chen&quot;,
+                &quot;email&quot;: &quot;michael.chen@yousch.edu&quot;,
+                &quot;email_verified_at&quot;: &quot;2025-08-31T00:54:38.000000Z&quot;,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:38.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:38.000000Z&quot;
+            },
+            &quot;class_room&quot;: {
+                &quot;id&quot;: 2,
+                &quot;campus_id&quot;: 1,
+                &quot;course_id&quot;: 1,
+                &quot;name&quot;: &quot;BCS - Class B&quot;,
+                &quot;capacity&quot;: 25,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            },
+            &quot;subject&quot;: {
+                &quot;id&quot;: 2,
+                &quot;course_id&quot;: 1,
+                &quot;name&quot;: &quot;Data Structures and Algorithms&quot;,
+                &quot;code&quot;: &quot;CS201&quot;,
+                &quot;description&quot;: &quot;Advanced programming concepts&quot;,
+                &quot;coordinator_id&quot;: 4,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            }
+        },
+        {
+            &quot;id&quot;: 86,
+            &quot;class_id&quot;: 7,
+            &quot;subject_id&quot;: 5,
+            &quot;teacher_id&quot;: 4,
+            &quot;date&quot;: &quot;2025-08-27T00:00:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;14:00&quot;,
+            &quot;end_time&quot;: &quot;15:30&quot;,
+            &quot;room&quot;: &quot;Room 101&quot;,
+            &quot;created_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;updated_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;teacher&quot;: {
+                &quot;id&quot;: 4,
+                &quot;name&quot;: &quot;Dr. Sarah Johnson&quot;,
+                &quot;email&quot;: &quot;sarah.johnson@yousch.edu&quot;,
+                &quot;email_verified_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;
+            },
+            &quot;class_room&quot;: {
+                &quot;id&quot;: 7,
+                &quot;campus_id&quot;: 1,
+                &quot;course_id&quot;: 4,
+                &quot;name&quot;: &quot;BAENG - Class A&quot;,
+                &quot;capacity&quot;: 30,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            },
+            &quot;subject&quot;: {
+                &quot;id&quot;: 5,
+                &quot;course_id&quot;: 4,
+                &quot;name&quot;: &quot;Introduction to Literature&quot;,
+                &quot;code&quot;: &quot;ENG101&quot;,
+                &quot;description&quot;: &quot;Literary analysis and appreciation&quot;,
+                &quot;coordinator_id&quot;: 7,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            }
+        },
+        {
+            &quot;id&quot;: 6,
+            &quot;class_id&quot;: 1,
+            &quot;subject_id&quot;: 1,
+            &quot;teacher_id&quot;: 4,
+            &quot;date&quot;: &quot;2025-08-27T00:00:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;14:00&quot;,
+            &quot;end_time&quot;: &quot;15:30&quot;,
+            &quot;room&quot;: &quot;Room 101&quot;,
+            &quot;created_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;updated_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;teacher&quot;: {
+                &quot;id&quot;: 4,
+                &quot;name&quot;: &quot;Dr. Sarah Johnson&quot;,
+                &quot;email&quot;: &quot;sarah.johnson@yousch.edu&quot;,
+                &quot;email_verified_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;
+            },
+            &quot;class_room&quot;: {
+                &quot;id&quot;: 1,
+                &quot;campus_id&quot;: 1,
+                &quot;course_id&quot;: 1,
+                &quot;name&quot;: &quot;BCS - Class A&quot;,
+                &quot;capacity&quot;: 30,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            },
+            &quot;subject&quot;: {
+                &quot;id&quot;: 1,
+                &quot;course_id&quot;: 1,
+                &quot;name&quot;: &quot;Introduction to Programming&quot;,
+                &quot;code&quot;: &quot;CS101&quot;,
+                &quot;description&quot;: &quot;Basic programming concepts and practices&quot;,
+                &quot;coordinator_id&quot;: 4,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            }
+        },
+        {
+            &quot;id&quot;: 46,
+            &quot;class_id&quot;: 3,
+            &quot;subject_id&quot;: 3,
+            &quot;teacher_id&quot;: 4,
+            &quot;date&quot;: &quot;2025-08-27T00:00:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;14:00&quot;,
+            &quot;end_time&quot;: &quot;15:30&quot;,
+            &quot;room&quot;: &quot;Room 101&quot;,
+            &quot;created_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;updated_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;teacher&quot;: {
+                &quot;id&quot;: 4,
+                &quot;name&quot;: &quot;Dr. Sarah Johnson&quot;,
+                &quot;email&quot;: &quot;sarah.johnson@yousch.edu&quot;,
+                &quot;email_verified_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;
+            },
+            &quot;class_room&quot;: {
+                &quot;id&quot;: 3,
+                &quot;campus_id&quot;: 1,
+                &quot;course_id&quot;: 2,
+                &quot;name&quot;: &quot;BMATH - Class A&quot;,
+                &quot;capacity&quot;: 30,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            },
+            &quot;subject&quot;: {
+                &quot;id&quot;: 3,
+                &quot;course_id&quot;: 2,
+                &quot;name&quot;: &quot;Calculus I&quot;,
+                &quot;code&quot;: &quot;MATH101&quot;,
+                &quot;description&quot;: &quot;Fundamental calculus concepts&quot;,
+                &quot;coordinator_id&quot;: 5,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            }
+        },
+        {
+            &quot;id&quot;: 87,
+            &quot;class_id&quot;: 7,
+            &quot;subject_id&quot;: 5,
+            &quot;teacher_id&quot;: 4,
+            &quot;date&quot;: &quot;2025-08-28T00:00:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;09:00&quot;,
+            &quot;end_time&quot;: &quot;10:30&quot;,
+            &quot;room&quot;: &quot;Room 101&quot;,
+            &quot;created_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;updated_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;teacher&quot;: {
+                &quot;id&quot;: 4,
+                &quot;name&quot;: &quot;Dr. Sarah Johnson&quot;,
+                &quot;email&quot;: &quot;sarah.johnson@yousch.edu&quot;,
+                &quot;email_verified_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;
+            },
+            &quot;class_room&quot;: {
+                &quot;id&quot;: 7,
+                &quot;campus_id&quot;: 1,
+                &quot;course_id&quot;: 4,
+                &quot;name&quot;: &quot;BAENG - Class A&quot;,
+                &quot;capacity&quot;: 30,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            },
+            &quot;subject&quot;: {
+                &quot;id&quot;: 5,
+                &quot;course_id&quot;: 4,
+                &quot;name&quot;: &quot;Introduction to Literature&quot;,
+                &quot;code&quot;: &quot;ENG101&quot;,
+                &quot;description&quot;: &quot;Literary analysis and appreciation&quot;,
+                &quot;coordinator_id&quot;: 7,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            }
+        },
+        {
+            &quot;id&quot;: 7,
+            &quot;class_id&quot;: 1,
+            &quot;subject_id&quot;: 1,
+            &quot;teacher_id&quot;: 4,
+            &quot;date&quot;: &quot;2025-08-28T00:00:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;09:00&quot;,
+            &quot;end_time&quot;: &quot;10:30&quot;,
+            &quot;room&quot;: &quot;Room 101&quot;,
+            &quot;created_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;updated_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;teacher&quot;: {
+                &quot;id&quot;: 4,
+                &quot;name&quot;: &quot;Dr. Sarah Johnson&quot;,
+                &quot;email&quot;: &quot;sarah.johnson@yousch.edu&quot;,
+                &quot;email_verified_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;
+            },
+            &quot;class_room&quot;: {
+                &quot;id&quot;: 1,
+                &quot;campus_id&quot;: 1,
+                &quot;course_id&quot;: 1,
+                &quot;name&quot;: &quot;BCS - Class A&quot;,
+                &quot;capacity&quot;: 30,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            },
+            &quot;subject&quot;: {
+                &quot;id&quot;: 1,
+                &quot;course_id&quot;: 1,
+                &quot;name&quot;: &quot;Introduction to Programming&quot;,
+                &quot;code&quot;: &quot;CS101&quot;,
+                &quot;description&quot;: &quot;Basic programming concepts and practices&quot;,
+                &quot;coordinator_id&quot;: 4,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            }
+        },
+        {
+            &quot;id&quot;: 77,
+            &quot;class_id&quot;: 6,
+            &quot;subject_id&quot;: 4,
+            &quot;teacher_id&quot;: 4,
+            &quot;date&quot;: &quot;2025-08-28T00:00:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;09:00&quot;,
+            &quot;end_time&quot;: &quot;10:30&quot;,
+            &quot;room&quot;: &quot;Room 101&quot;,
+            &quot;created_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;updated_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;teacher&quot;: {
+                &quot;id&quot;: 4,
+                &quot;name&quot;: &quot;Dr. Sarah Johnson&quot;,
+                &quot;email&quot;: &quot;sarah.johnson@yousch.edu&quot;,
+                &quot;email_verified_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;
+            },
+            &quot;class_room&quot;: {
+                &quot;id&quot;: 6,
+                &quot;campus_id&quot;: 1,
+                &quot;course_id&quot;: 3,
+                &quot;name&quot;: &quot;BBA - Class B&quot;,
+                &quot;capacity&quot;: 25,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            },
+            &quot;subject&quot;: {
+                &quot;id&quot;: 4,
+                &quot;course_id&quot;: 3,
+                &quot;name&quot;: &quot;Principles of Management&quot;,
+                &quot;code&quot;: &quot;BUS101&quot;,
+                &quot;description&quot;: &quot;Basic management principles&quot;,
+                &quot;coordinator_id&quot;: 6,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            }
+        },
+        {
+            &quot;id&quot;: 67,
+            &quot;class_id&quot;: 5,
+            &quot;subject_id&quot;: 4,
+            &quot;teacher_id&quot;: 4,
+            &quot;date&quot;: &quot;2025-08-28T00:00:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;09:00&quot;,
+            &quot;end_time&quot;: &quot;10:30&quot;,
+            &quot;room&quot;: &quot;Room 101&quot;,
+            &quot;created_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;updated_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;teacher&quot;: {
+                &quot;id&quot;: 4,
+                &quot;name&quot;: &quot;Dr. Sarah Johnson&quot;,
+                &quot;email&quot;: &quot;sarah.johnson@yousch.edu&quot;,
+                &quot;email_verified_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;
+            },
+            &quot;class_room&quot;: {
+                &quot;id&quot;: 5,
+                &quot;campus_id&quot;: 1,
+                &quot;course_id&quot;: 3,
+                &quot;name&quot;: &quot;BBA - Class A&quot;,
+                &quot;capacity&quot;: 30,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            },
+            &quot;subject&quot;: {
+                &quot;id&quot;: 4,
+                &quot;course_id&quot;: 3,
+                &quot;name&quot;: &quot;Principles of Management&quot;,
+                &quot;code&quot;: &quot;BUS101&quot;,
+                &quot;description&quot;: &quot;Basic management principles&quot;,
+                &quot;coordinator_id&quot;: 6,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            }
+        },
+        {
+            &quot;id&quot;: 97,
+            &quot;class_id&quot;: 8,
+            &quot;subject_id&quot;: 5,
+            &quot;teacher_id&quot;: 4,
+            &quot;date&quot;: &quot;2025-08-28T00:00:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;09:00&quot;,
+            &quot;end_time&quot;: &quot;10:30&quot;,
+            &quot;room&quot;: &quot;Room 101&quot;,
+            &quot;created_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;updated_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;teacher&quot;: {
+                &quot;id&quot;: 4,
+                &quot;name&quot;: &quot;Dr. Sarah Johnson&quot;,
+                &quot;email&quot;: &quot;sarah.johnson@yousch.edu&quot;,
+                &quot;email_verified_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;
+            },
+            &quot;class_room&quot;: {
+                &quot;id&quot;: 8,
+                &quot;campus_id&quot;: 1,
+                &quot;course_id&quot;: 4,
+                &quot;name&quot;: &quot;BAENG - Class B&quot;,
+                &quot;capacity&quot;: 25,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            },
+            &quot;subject&quot;: {
+                &quot;id&quot;: 5,
+                &quot;course_id&quot;: 4,
+                &quot;name&quot;: &quot;Introduction to Literature&quot;,
+                &quot;code&quot;: &quot;ENG101&quot;,
+                &quot;description&quot;: &quot;Literary analysis and appreciation&quot;,
+                &quot;coordinator_id&quot;: 7,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            }
+        },
+        {
+            &quot;id&quot;: 37,
+            &quot;class_id&quot;: 2,
+            &quot;subject_id&quot;: 2,
+            &quot;teacher_id&quot;: 5,
+            &quot;date&quot;: &quot;2025-08-28T00:00:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;09:00&quot;,
+            &quot;end_time&quot;: &quot;10:30&quot;,
+            &quot;room&quot;: &quot;Room 102&quot;,
+            &quot;created_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;updated_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;teacher&quot;: {
+                &quot;id&quot;: 5,
+                &quot;name&quot;: &quot;Prof. Michael Chen&quot;,
+                &quot;email&quot;: &quot;michael.chen@yousch.edu&quot;,
+                &quot;email_verified_at&quot;: &quot;2025-08-31T00:54:38.000000Z&quot;,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:38.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:38.000000Z&quot;
+            },
+            &quot;class_room&quot;: {
+                &quot;id&quot;: 2,
+                &quot;campus_id&quot;: 1,
+                &quot;course_id&quot;: 1,
+                &quot;name&quot;: &quot;BCS - Class B&quot;,
+                &quot;capacity&quot;: 25,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            },
+            &quot;subject&quot;: {
+                &quot;id&quot;: 2,
+                &quot;course_id&quot;: 1,
+                &quot;name&quot;: &quot;Data Structures and Algorithms&quot;,
+                &quot;code&quot;: &quot;CS201&quot;,
+                &quot;description&quot;: &quot;Advanced programming concepts&quot;,
+                &quot;coordinator_id&quot;: 4,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            }
+        },
+        {
+            &quot;id&quot;: 17,
+            &quot;class_id&quot;: 1,
+            &quot;subject_id&quot;: 2,
+            &quot;teacher_id&quot;: 5,
+            &quot;date&quot;: &quot;2025-08-28T00:00:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;09:00&quot;,
+            &quot;end_time&quot;: &quot;10:30&quot;,
+            &quot;room&quot;: &quot;Room 102&quot;,
+            &quot;created_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;updated_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;teacher&quot;: {
+                &quot;id&quot;: 5,
+                &quot;name&quot;: &quot;Prof. Michael Chen&quot;,
+                &quot;email&quot;: &quot;michael.chen@yousch.edu&quot;,
+                &quot;email_verified_at&quot;: &quot;2025-08-31T00:54:38.000000Z&quot;,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:38.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:38.000000Z&quot;
+            },
+            &quot;class_room&quot;: {
+                &quot;id&quot;: 1,
+                &quot;campus_id&quot;: 1,
+                &quot;course_id&quot;: 1,
+                &quot;name&quot;: &quot;BCS - Class A&quot;,
+                &quot;capacity&quot;: 30,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            },
+            &quot;subject&quot;: {
+                &quot;id&quot;: 2,
+                &quot;course_id&quot;: 1,
+                &quot;name&quot;: &quot;Data Structures and Algorithms&quot;,
+                &quot;code&quot;: &quot;CS201&quot;,
+                &quot;description&quot;: &quot;Advanced programming concepts&quot;,
+                &quot;coordinator_id&quot;: 4,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            }
+        },
+        {
+            &quot;id&quot;: 57,
+            &quot;class_id&quot;: 4,
+            &quot;subject_id&quot;: 3,
+            &quot;teacher_id&quot;: 4,
+            &quot;date&quot;: &quot;2025-08-28T00:00:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;09:00&quot;,
+            &quot;end_time&quot;: &quot;10:30&quot;,
+            &quot;room&quot;: &quot;Room 101&quot;,
+            &quot;created_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;updated_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;teacher&quot;: {
+                &quot;id&quot;: 4,
+                &quot;name&quot;: &quot;Dr. Sarah Johnson&quot;,
+                &quot;email&quot;: &quot;sarah.johnson@yousch.edu&quot;,
+                &quot;email_verified_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;
+            },
+            &quot;class_room&quot;: {
+                &quot;id&quot;: 4,
+                &quot;campus_id&quot;: 1,
+                &quot;course_id&quot;: 2,
+                &quot;name&quot;: &quot;BMATH - Class B&quot;,
+                &quot;capacity&quot;: 25,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            },
+            &quot;subject&quot;: {
+                &quot;id&quot;: 3,
+                &quot;course_id&quot;: 2,
+                &quot;name&quot;: &quot;Calculus I&quot;,
+                &quot;code&quot;: &quot;MATH101&quot;,
+                &quot;description&quot;: &quot;Fundamental calculus concepts&quot;,
+                &quot;coordinator_id&quot;: 5,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            }
+        },
+        {
+            &quot;id&quot;: 27,
+            &quot;class_id&quot;: 2,
+            &quot;subject_id&quot;: 1,
+            &quot;teacher_id&quot;: 4,
+            &quot;date&quot;: &quot;2025-08-28T00:00:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;09:00&quot;,
+            &quot;end_time&quot;: &quot;10:30&quot;,
+            &quot;room&quot;: &quot;Room 101&quot;,
+            &quot;created_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;updated_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;teacher&quot;: {
+                &quot;id&quot;: 4,
+                &quot;name&quot;: &quot;Dr. Sarah Johnson&quot;,
+                &quot;email&quot;: &quot;sarah.johnson@yousch.edu&quot;,
+                &quot;email_verified_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;
+            },
+            &quot;class_room&quot;: {
+                &quot;id&quot;: 2,
+                &quot;campus_id&quot;: 1,
+                &quot;course_id&quot;: 1,
+                &quot;name&quot;: &quot;BCS - Class B&quot;,
+                &quot;capacity&quot;: 25,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            },
+            &quot;subject&quot;: {
+                &quot;id&quot;: 1,
+                &quot;course_id&quot;: 1,
+                &quot;name&quot;: &quot;Introduction to Programming&quot;,
+                &quot;code&quot;: &quot;CS101&quot;,
+                &quot;description&quot;: &quot;Basic programming concepts and practices&quot;,
+                &quot;coordinator_id&quot;: 4,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            }
+        },
+        {
+            &quot;id&quot;: 47,
+            &quot;class_id&quot;: 3,
+            &quot;subject_id&quot;: 3,
+            &quot;teacher_id&quot;: 4,
+            &quot;date&quot;: &quot;2025-08-28T00:00:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;09:00&quot;,
+            &quot;end_time&quot;: &quot;10:30&quot;,
+            &quot;room&quot;: &quot;Room 101&quot;,
+            &quot;created_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;updated_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;teacher&quot;: {
+                &quot;id&quot;: 4,
+                &quot;name&quot;: &quot;Dr. Sarah Johnson&quot;,
+                &quot;email&quot;: &quot;sarah.johnson@yousch.edu&quot;,
+                &quot;email_verified_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;
+            },
+            &quot;class_room&quot;: {
+                &quot;id&quot;: 3,
+                &quot;campus_id&quot;: 1,
+                &quot;course_id&quot;: 2,
+                &quot;name&quot;: &quot;BMATH - Class A&quot;,
+                &quot;capacity&quot;: 30,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            },
+            &quot;subject&quot;: {
+                &quot;id&quot;: 3,
+                &quot;course_id&quot;: 2,
+                &quot;name&quot;: &quot;Calculus I&quot;,
+                &quot;code&quot;: &quot;MATH101&quot;,
+                &quot;description&quot;: &quot;Fundamental calculus concepts&quot;,
+                &quot;coordinator_id&quot;: 5,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            }
+        },
+        {
+            &quot;id&quot;: 98,
+            &quot;class_id&quot;: 8,
+            &quot;subject_id&quot;: 5,
+            &quot;teacher_id&quot;: 4,
+            &quot;date&quot;: &quot;2025-08-28T00:00:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;14:00&quot;,
+            &quot;end_time&quot;: &quot;15:30&quot;,
+            &quot;room&quot;: &quot;Room 101&quot;,
+            &quot;created_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;updated_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;teacher&quot;: {
+                &quot;id&quot;: 4,
+                &quot;name&quot;: &quot;Dr. Sarah Johnson&quot;,
+                &quot;email&quot;: &quot;sarah.johnson@yousch.edu&quot;,
+                &quot;email_verified_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;
+            },
+            &quot;class_room&quot;: {
+                &quot;id&quot;: 8,
+                &quot;campus_id&quot;: 1,
+                &quot;course_id&quot;: 4,
+                &quot;name&quot;: &quot;BAENG - Class B&quot;,
+                &quot;capacity&quot;: 25,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            },
+            &quot;subject&quot;: {
+                &quot;id&quot;: 5,
+                &quot;course_id&quot;: 4,
+                &quot;name&quot;: &quot;Introduction to Literature&quot;,
+                &quot;code&quot;: &quot;ENG101&quot;,
+                &quot;description&quot;: &quot;Literary analysis and appreciation&quot;,
+                &quot;coordinator_id&quot;: 7,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            }
+        },
+        {
+            &quot;id&quot;: 18,
+            &quot;class_id&quot;: 1,
+            &quot;subject_id&quot;: 2,
+            &quot;teacher_id&quot;: 5,
+            &quot;date&quot;: &quot;2025-08-28T00:00:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;14:00&quot;,
+            &quot;end_time&quot;: &quot;15:30&quot;,
+            &quot;room&quot;: &quot;Room 102&quot;,
+            &quot;created_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;updated_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;teacher&quot;: {
+                &quot;id&quot;: 5,
+                &quot;name&quot;: &quot;Prof. Michael Chen&quot;,
+                &quot;email&quot;: &quot;michael.chen@yousch.edu&quot;,
+                &quot;email_verified_at&quot;: &quot;2025-08-31T00:54:38.000000Z&quot;,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:38.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:38.000000Z&quot;
+            },
+            &quot;class_room&quot;: {
+                &quot;id&quot;: 1,
+                &quot;campus_id&quot;: 1,
+                &quot;course_id&quot;: 1,
+                &quot;name&quot;: &quot;BCS - Class A&quot;,
+                &quot;capacity&quot;: 30,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            },
+            &quot;subject&quot;: {
+                &quot;id&quot;: 2,
+                &quot;course_id&quot;: 1,
+                &quot;name&quot;: &quot;Data Structures and Algorithms&quot;,
+                &quot;code&quot;: &quot;CS201&quot;,
+                &quot;description&quot;: &quot;Advanced programming concepts&quot;,
+                &quot;coordinator_id&quot;: 4,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            }
+        },
+        {
+            &quot;id&quot;: 8,
+            &quot;class_id&quot;: 1,
+            &quot;subject_id&quot;: 1,
+            &quot;teacher_id&quot;: 4,
+            &quot;date&quot;: &quot;2025-08-28T00:00:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;14:00&quot;,
+            &quot;end_time&quot;: &quot;15:30&quot;,
+            &quot;room&quot;: &quot;Room 101&quot;,
+            &quot;created_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;updated_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;teacher&quot;: {
+                &quot;id&quot;: 4,
+                &quot;name&quot;: &quot;Dr. Sarah Johnson&quot;,
+                &quot;email&quot;: &quot;sarah.johnson@yousch.edu&quot;,
+                &quot;email_verified_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;
+            },
+            &quot;class_room&quot;: {
+                &quot;id&quot;: 1,
+                &quot;campus_id&quot;: 1,
+                &quot;course_id&quot;: 1,
+                &quot;name&quot;: &quot;BCS - Class A&quot;,
+                &quot;capacity&quot;: 30,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            },
+            &quot;subject&quot;: {
+                &quot;id&quot;: 1,
+                &quot;course_id&quot;: 1,
+                &quot;name&quot;: &quot;Introduction to Programming&quot;,
+                &quot;code&quot;: &quot;CS101&quot;,
+                &quot;description&quot;: &quot;Basic programming concepts and practices&quot;,
+                &quot;coordinator_id&quot;: 4,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            }
+        },
+        {
+            &quot;id&quot;: 48,
+            &quot;class_id&quot;: 3,
+            &quot;subject_id&quot;: 3,
+            &quot;teacher_id&quot;: 4,
+            &quot;date&quot;: &quot;2025-08-28T00:00:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;14:00&quot;,
+            &quot;end_time&quot;: &quot;15:30&quot;,
+            &quot;room&quot;: &quot;Room 101&quot;,
+            &quot;created_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;updated_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;teacher&quot;: {
+                &quot;id&quot;: 4,
+                &quot;name&quot;: &quot;Dr. Sarah Johnson&quot;,
+                &quot;email&quot;: &quot;sarah.johnson@yousch.edu&quot;,
+                &quot;email_verified_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;
+            },
+            &quot;class_room&quot;: {
+                &quot;id&quot;: 3,
+                &quot;campus_id&quot;: 1,
+                &quot;course_id&quot;: 2,
+                &quot;name&quot;: &quot;BMATH - Class A&quot;,
+                &quot;capacity&quot;: 30,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            },
+            &quot;subject&quot;: {
+                &quot;id&quot;: 3,
+                &quot;course_id&quot;: 2,
+                &quot;name&quot;: &quot;Calculus I&quot;,
+                &quot;code&quot;: &quot;MATH101&quot;,
+                &quot;description&quot;: &quot;Fundamental calculus concepts&quot;,
+                &quot;coordinator_id&quot;: 5,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            }
+        },
+        {
+            &quot;id&quot;: 78,
+            &quot;class_id&quot;: 6,
+            &quot;subject_id&quot;: 4,
+            &quot;teacher_id&quot;: 4,
+            &quot;date&quot;: &quot;2025-08-28T00:00:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;14:00&quot;,
+            &quot;end_time&quot;: &quot;15:30&quot;,
+            &quot;room&quot;: &quot;Room 101&quot;,
+            &quot;created_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;updated_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;teacher&quot;: {
+                &quot;id&quot;: 4,
+                &quot;name&quot;: &quot;Dr. Sarah Johnson&quot;,
+                &quot;email&quot;: &quot;sarah.johnson@yousch.edu&quot;,
+                &quot;email_verified_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;
+            },
+            &quot;class_room&quot;: {
+                &quot;id&quot;: 6,
+                &quot;campus_id&quot;: 1,
+                &quot;course_id&quot;: 3,
+                &quot;name&quot;: &quot;BBA - Class B&quot;,
+                &quot;capacity&quot;: 25,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            },
+            &quot;subject&quot;: {
+                &quot;id&quot;: 4,
+                &quot;course_id&quot;: 3,
+                &quot;name&quot;: &quot;Principles of Management&quot;,
+                &quot;code&quot;: &quot;BUS101&quot;,
+                &quot;description&quot;: &quot;Basic management principles&quot;,
+                &quot;coordinator_id&quot;: 6,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            }
+        },
+        {
+            &quot;id&quot;: 58,
+            &quot;class_id&quot;: 4,
+            &quot;subject_id&quot;: 3,
+            &quot;teacher_id&quot;: 4,
+            &quot;date&quot;: &quot;2025-08-28T00:00:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;14:00&quot;,
+            &quot;end_time&quot;: &quot;15:30&quot;,
+            &quot;room&quot;: &quot;Room 101&quot;,
+            &quot;created_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;updated_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;teacher&quot;: {
+                &quot;id&quot;: 4,
+                &quot;name&quot;: &quot;Dr. Sarah Johnson&quot;,
+                &quot;email&quot;: &quot;sarah.johnson@yousch.edu&quot;,
+                &quot;email_verified_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;
+            },
+            &quot;class_room&quot;: {
+                &quot;id&quot;: 4,
+                &quot;campus_id&quot;: 1,
+                &quot;course_id&quot;: 2,
+                &quot;name&quot;: &quot;BMATH - Class B&quot;,
+                &quot;capacity&quot;: 25,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            },
+            &quot;subject&quot;: {
+                &quot;id&quot;: 3,
+                &quot;course_id&quot;: 2,
+                &quot;name&quot;: &quot;Calculus I&quot;,
+                &quot;code&quot;: &quot;MATH101&quot;,
+                &quot;description&quot;: &quot;Fundamental calculus concepts&quot;,
+                &quot;coordinator_id&quot;: 5,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            }
+        },
+        {
+            &quot;id&quot;: 68,
+            &quot;class_id&quot;: 5,
+            &quot;subject_id&quot;: 4,
+            &quot;teacher_id&quot;: 4,
+            &quot;date&quot;: &quot;2025-08-28T00:00:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;14:00&quot;,
+            &quot;end_time&quot;: &quot;15:30&quot;,
+            &quot;room&quot;: &quot;Room 101&quot;,
+            &quot;created_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;updated_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;teacher&quot;: {
+                &quot;id&quot;: 4,
+                &quot;name&quot;: &quot;Dr. Sarah Johnson&quot;,
+                &quot;email&quot;: &quot;sarah.johnson@yousch.edu&quot;,
+                &quot;email_verified_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;
+            },
+            &quot;class_room&quot;: {
+                &quot;id&quot;: 5,
+                &quot;campus_id&quot;: 1,
+                &quot;course_id&quot;: 3,
+                &quot;name&quot;: &quot;BBA - Class A&quot;,
+                &quot;capacity&quot;: 30,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            },
+            &quot;subject&quot;: {
+                &quot;id&quot;: 4,
+                &quot;course_id&quot;: 3,
+                &quot;name&quot;: &quot;Principles of Management&quot;,
+                &quot;code&quot;: &quot;BUS101&quot;,
+                &quot;description&quot;: &quot;Basic management principles&quot;,
+                &quot;coordinator_id&quot;: 6,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            }
+        },
+        {
+            &quot;id&quot;: 38,
+            &quot;class_id&quot;: 2,
+            &quot;subject_id&quot;: 2,
+            &quot;teacher_id&quot;: 5,
+            &quot;date&quot;: &quot;2025-08-28T00:00:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;14:00&quot;,
+            &quot;end_time&quot;: &quot;15:30&quot;,
+            &quot;room&quot;: &quot;Room 102&quot;,
+            &quot;created_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;updated_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;teacher&quot;: {
+                &quot;id&quot;: 5,
+                &quot;name&quot;: &quot;Prof. Michael Chen&quot;,
+                &quot;email&quot;: &quot;michael.chen@yousch.edu&quot;,
+                &quot;email_verified_at&quot;: &quot;2025-08-31T00:54:38.000000Z&quot;,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:38.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:38.000000Z&quot;
+            },
+            &quot;class_room&quot;: {
+                &quot;id&quot;: 2,
+                &quot;campus_id&quot;: 1,
+                &quot;course_id&quot;: 1,
+                &quot;name&quot;: &quot;BCS - Class B&quot;,
+                &quot;capacity&quot;: 25,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            },
+            &quot;subject&quot;: {
+                &quot;id&quot;: 2,
+                &quot;course_id&quot;: 1,
+                &quot;name&quot;: &quot;Data Structures and Algorithms&quot;,
+                &quot;code&quot;: &quot;CS201&quot;,
+                &quot;description&quot;: &quot;Advanced programming concepts&quot;,
+                &quot;coordinator_id&quot;: 4,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            }
+        },
+        {
+            &quot;id&quot;: 28,
+            &quot;class_id&quot;: 2,
+            &quot;subject_id&quot;: 1,
+            &quot;teacher_id&quot;: 4,
+            &quot;date&quot;: &quot;2025-08-28T00:00:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;14:00&quot;,
+            &quot;end_time&quot;: &quot;15:30&quot;,
+            &quot;room&quot;: &quot;Room 101&quot;,
+            &quot;created_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;updated_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;teacher&quot;: {
+                &quot;id&quot;: 4,
+                &quot;name&quot;: &quot;Dr. Sarah Johnson&quot;,
+                &quot;email&quot;: &quot;sarah.johnson@yousch.edu&quot;,
+                &quot;email_verified_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;
+            },
+            &quot;class_room&quot;: {
+                &quot;id&quot;: 2,
+                &quot;campus_id&quot;: 1,
+                &quot;course_id&quot;: 1,
+                &quot;name&quot;: &quot;BCS - Class B&quot;,
+                &quot;capacity&quot;: 25,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            },
+            &quot;subject&quot;: {
+                &quot;id&quot;: 1,
+                &quot;course_id&quot;: 1,
+                &quot;name&quot;: &quot;Introduction to Programming&quot;,
+                &quot;code&quot;: &quot;CS101&quot;,
+                &quot;description&quot;: &quot;Basic programming concepts and practices&quot;,
+                &quot;coordinator_id&quot;: 4,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            }
+        },
+        {
+            &quot;id&quot;: 88,
+            &quot;class_id&quot;: 7,
+            &quot;subject_id&quot;: 5,
+            &quot;teacher_id&quot;: 4,
+            &quot;date&quot;: &quot;2025-08-28T00:00:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;14:00&quot;,
+            &quot;end_time&quot;: &quot;15:30&quot;,
+            &quot;room&quot;: &quot;Room 101&quot;,
+            &quot;created_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;updated_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;teacher&quot;: {
+                &quot;id&quot;: 4,
+                &quot;name&quot;: &quot;Dr. Sarah Johnson&quot;,
+                &quot;email&quot;: &quot;sarah.johnson@yousch.edu&quot;,
+                &quot;email_verified_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;
+            },
+            &quot;class_room&quot;: {
+                &quot;id&quot;: 7,
+                &quot;campus_id&quot;: 1,
+                &quot;course_id&quot;: 4,
+                &quot;name&quot;: &quot;BAENG - Class A&quot;,
+                &quot;capacity&quot;: 30,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            },
+            &quot;subject&quot;: {
+                &quot;id&quot;: 5,
+                &quot;course_id&quot;: 4,
+                &quot;name&quot;: &quot;Introduction to Literature&quot;,
+                &quot;code&quot;: &quot;ENG101&quot;,
+                &quot;description&quot;: &quot;Literary analysis and appreciation&quot;,
+                &quot;coordinator_id&quot;: 7,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            }
+        },
+        {
+            &quot;id&quot;: 89,
+            &quot;class_id&quot;: 7,
+            &quot;subject_id&quot;: 5,
+            &quot;teacher_id&quot;: 4,
+            &quot;date&quot;: &quot;2025-08-29T00:00:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;09:00&quot;,
+            &quot;end_time&quot;: &quot;10:30&quot;,
+            &quot;room&quot;: &quot;Room 101&quot;,
+            &quot;created_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;updated_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;teacher&quot;: {
+                &quot;id&quot;: 4,
+                &quot;name&quot;: &quot;Dr. Sarah Johnson&quot;,
+                &quot;email&quot;: &quot;sarah.johnson@yousch.edu&quot;,
+                &quot;email_verified_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;
+            },
+            &quot;class_room&quot;: {
+                &quot;id&quot;: 7,
+                &quot;campus_id&quot;: 1,
+                &quot;course_id&quot;: 4,
+                &quot;name&quot;: &quot;BAENG - Class A&quot;,
+                &quot;capacity&quot;: 30,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            },
+            &quot;subject&quot;: {
+                &quot;id&quot;: 5,
+                &quot;course_id&quot;: 4,
+                &quot;name&quot;: &quot;Introduction to Literature&quot;,
+                &quot;code&quot;: &quot;ENG101&quot;,
+                &quot;description&quot;: &quot;Literary analysis and appreciation&quot;,
+                &quot;coordinator_id&quot;: 7,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            }
+        },
+        {
+            &quot;id&quot;: 49,
+            &quot;class_id&quot;: 3,
+            &quot;subject_id&quot;: 3,
+            &quot;teacher_id&quot;: 4,
+            &quot;date&quot;: &quot;2025-08-29T00:00:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;09:00&quot;,
+            &quot;end_time&quot;: &quot;10:30&quot;,
+            &quot;room&quot;: &quot;Room 101&quot;,
+            &quot;created_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;updated_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;teacher&quot;: {
+                &quot;id&quot;: 4,
+                &quot;name&quot;: &quot;Dr. Sarah Johnson&quot;,
+                &quot;email&quot;: &quot;sarah.johnson@yousch.edu&quot;,
+                &quot;email_verified_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;
+            },
+            &quot;class_room&quot;: {
+                &quot;id&quot;: 3,
+                &quot;campus_id&quot;: 1,
+                &quot;course_id&quot;: 2,
+                &quot;name&quot;: &quot;BMATH - Class A&quot;,
+                &quot;capacity&quot;: 30,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            },
+            &quot;subject&quot;: {
+                &quot;id&quot;: 3,
+                &quot;course_id&quot;: 2,
+                &quot;name&quot;: &quot;Calculus I&quot;,
+                &quot;code&quot;: &quot;MATH101&quot;,
+                &quot;description&quot;: &quot;Fundamental calculus concepts&quot;,
+                &quot;coordinator_id&quot;: 5,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            }
+        },
+        {
+            &quot;id&quot;: 19,
+            &quot;class_id&quot;: 1,
+            &quot;subject_id&quot;: 2,
+            &quot;teacher_id&quot;: 5,
+            &quot;date&quot;: &quot;2025-08-29T00:00:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;09:00&quot;,
+            &quot;end_time&quot;: &quot;10:30&quot;,
+            &quot;room&quot;: &quot;Room 102&quot;,
+            &quot;created_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;updated_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;teacher&quot;: {
+                &quot;id&quot;: 5,
+                &quot;name&quot;: &quot;Prof. Michael Chen&quot;,
+                &quot;email&quot;: &quot;michael.chen@yousch.edu&quot;,
+                &quot;email_verified_at&quot;: &quot;2025-08-31T00:54:38.000000Z&quot;,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:38.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:38.000000Z&quot;
+            },
+            &quot;class_room&quot;: {
+                &quot;id&quot;: 1,
+                &quot;campus_id&quot;: 1,
+                &quot;course_id&quot;: 1,
+                &quot;name&quot;: &quot;BCS - Class A&quot;,
+                &quot;capacity&quot;: 30,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            },
+            &quot;subject&quot;: {
+                &quot;id&quot;: 2,
+                &quot;course_id&quot;: 1,
+                &quot;name&quot;: &quot;Data Structures and Algorithms&quot;,
+                &quot;code&quot;: &quot;CS201&quot;,
+                &quot;description&quot;: &quot;Advanced programming concepts&quot;,
+                &quot;coordinator_id&quot;: 4,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            }
+        },
+        {
+            &quot;id&quot;: 79,
+            &quot;class_id&quot;: 6,
+            &quot;subject_id&quot;: 4,
+            &quot;teacher_id&quot;: 4,
+            &quot;date&quot;: &quot;2025-08-29T00:00:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;09:00&quot;,
+            &quot;end_time&quot;: &quot;10:30&quot;,
+            &quot;room&quot;: &quot;Room 101&quot;,
+            &quot;created_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;updated_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;teacher&quot;: {
+                &quot;id&quot;: 4,
+                &quot;name&quot;: &quot;Dr. Sarah Johnson&quot;,
+                &quot;email&quot;: &quot;sarah.johnson@yousch.edu&quot;,
+                &quot;email_verified_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;
+            },
+            &quot;class_room&quot;: {
+                &quot;id&quot;: 6,
+                &quot;campus_id&quot;: 1,
+                &quot;course_id&quot;: 3,
+                &quot;name&quot;: &quot;BBA - Class B&quot;,
+                &quot;capacity&quot;: 25,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            },
+            &quot;subject&quot;: {
+                &quot;id&quot;: 4,
+                &quot;course_id&quot;: 3,
+                &quot;name&quot;: &quot;Principles of Management&quot;,
+                &quot;code&quot;: &quot;BUS101&quot;,
+                &quot;description&quot;: &quot;Basic management principles&quot;,
+                &quot;coordinator_id&quot;: 6,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            }
+        },
+        {
+            &quot;id&quot;: 59,
+            &quot;class_id&quot;: 4,
+            &quot;subject_id&quot;: 3,
+            &quot;teacher_id&quot;: 4,
+            &quot;date&quot;: &quot;2025-08-29T00:00:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;09:00&quot;,
+            &quot;end_time&quot;: &quot;10:30&quot;,
+            &quot;room&quot;: &quot;Room 101&quot;,
+            &quot;created_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;updated_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;teacher&quot;: {
+                &quot;id&quot;: 4,
+                &quot;name&quot;: &quot;Dr. Sarah Johnson&quot;,
+                &quot;email&quot;: &quot;sarah.johnson@yousch.edu&quot;,
+                &quot;email_verified_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;
+            },
+            &quot;class_room&quot;: {
+                &quot;id&quot;: 4,
+                &quot;campus_id&quot;: 1,
+                &quot;course_id&quot;: 2,
+                &quot;name&quot;: &quot;BMATH - Class B&quot;,
+                &quot;capacity&quot;: 25,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            },
+            &quot;subject&quot;: {
+                &quot;id&quot;: 3,
+                &quot;course_id&quot;: 2,
+                &quot;name&quot;: &quot;Calculus I&quot;,
+                &quot;code&quot;: &quot;MATH101&quot;,
+                &quot;description&quot;: &quot;Fundamental calculus concepts&quot;,
+                &quot;coordinator_id&quot;: 5,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            }
+        },
+        {
+            &quot;id&quot;: 9,
+            &quot;class_id&quot;: 1,
+            &quot;subject_id&quot;: 1,
+            &quot;teacher_id&quot;: 4,
+            &quot;date&quot;: &quot;2025-08-29T00:00:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;09:00&quot;,
+            &quot;end_time&quot;: &quot;10:30&quot;,
+            &quot;room&quot;: &quot;Room 101&quot;,
+            &quot;created_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;updated_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;teacher&quot;: {
+                &quot;id&quot;: 4,
+                &quot;name&quot;: &quot;Dr. Sarah Johnson&quot;,
+                &quot;email&quot;: &quot;sarah.johnson@yousch.edu&quot;,
+                &quot;email_verified_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;
+            },
+            &quot;class_room&quot;: {
+                &quot;id&quot;: 1,
+                &quot;campus_id&quot;: 1,
+                &quot;course_id&quot;: 1,
+                &quot;name&quot;: &quot;BCS - Class A&quot;,
+                &quot;capacity&quot;: 30,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            },
+            &quot;subject&quot;: {
+                &quot;id&quot;: 1,
+                &quot;course_id&quot;: 1,
+                &quot;name&quot;: &quot;Introduction to Programming&quot;,
+                &quot;code&quot;: &quot;CS101&quot;,
+                &quot;description&quot;: &quot;Basic programming concepts and practices&quot;,
+                &quot;coordinator_id&quot;: 4,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            }
+        },
+        {
+            &quot;id&quot;: 29,
+            &quot;class_id&quot;: 2,
+            &quot;subject_id&quot;: 1,
+            &quot;teacher_id&quot;: 4,
+            &quot;date&quot;: &quot;2025-08-29T00:00:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;09:00&quot;,
+            &quot;end_time&quot;: &quot;10:30&quot;,
+            &quot;room&quot;: &quot;Room 101&quot;,
+            &quot;created_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;updated_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;teacher&quot;: {
+                &quot;id&quot;: 4,
+                &quot;name&quot;: &quot;Dr. Sarah Johnson&quot;,
+                &quot;email&quot;: &quot;sarah.johnson@yousch.edu&quot;,
+                &quot;email_verified_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;
+            },
+            &quot;class_room&quot;: {
+                &quot;id&quot;: 2,
+                &quot;campus_id&quot;: 1,
+                &quot;course_id&quot;: 1,
+                &quot;name&quot;: &quot;BCS - Class B&quot;,
+                &quot;capacity&quot;: 25,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            },
+            &quot;subject&quot;: {
+                &quot;id&quot;: 1,
+                &quot;course_id&quot;: 1,
+                &quot;name&quot;: &quot;Introduction to Programming&quot;,
+                &quot;code&quot;: &quot;CS101&quot;,
+                &quot;description&quot;: &quot;Basic programming concepts and practices&quot;,
+                &quot;coordinator_id&quot;: 4,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            }
+        },
+        {
+            &quot;id&quot;: 99,
+            &quot;class_id&quot;: 8,
+            &quot;subject_id&quot;: 5,
+            &quot;teacher_id&quot;: 4,
+            &quot;date&quot;: &quot;2025-08-29T00:00:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;09:00&quot;,
+            &quot;end_time&quot;: &quot;10:30&quot;,
+            &quot;room&quot;: &quot;Room 101&quot;,
+            &quot;created_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;updated_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;teacher&quot;: {
+                &quot;id&quot;: 4,
+                &quot;name&quot;: &quot;Dr. Sarah Johnson&quot;,
+                &quot;email&quot;: &quot;sarah.johnson@yousch.edu&quot;,
+                &quot;email_verified_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;
+            },
+            &quot;class_room&quot;: {
+                &quot;id&quot;: 8,
+                &quot;campus_id&quot;: 1,
+                &quot;course_id&quot;: 4,
+                &quot;name&quot;: &quot;BAENG - Class B&quot;,
+                &quot;capacity&quot;: 25,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            },
+            &quot;subject&quot;: {
+                &quot;id&quot;: 5,
+                &quot;course_id&quot;: 4,
+                &quot;name&quot;: &quot;Introduction to Literature&quot;,
+                &quot;code&quot;: &quot;ENG101&quot;,
+                &quot;description&quot;: &quot;Literary analysis and appreciation&quot;,
+                &quot;coordinator_id&quot;: 7,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            }
+        },
+        {
+            &quot;id&quot;: 69,
+            &quot;class_id&quot;: 5,
+            &quot;subject_id&quot;: 4,
+            &quot;teacher_id&quot;: 4,
+            &quot;date&quot;: &quot;2025-08-29T00:00:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;09:00&quot;,
+            &quot;end_time&quot;: &quot;10:30&quot;,
+            &quot;room&quot;: &quot;Room 101&quot;,
+            &quot;created_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;updated_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;teacher&quot;: {
+                &quot;id&quot;: 4,
+                &quot;name&quot;: &quot;Dr. Sarah Johnson&quot;,
+                &quot;email&quot;: &quot;sarah.johnson@yousch.edu&quot;,
+                &quot;email_verified_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;
+            },
+            &quot;class_room&quot;: {
+                &quot;id&quot;: 5,
+                &quot;campus_id&quot;: 1,
+                &quot;course_id&quot;: 3,
+                &quot;name&quot;: &quot;BBA - Class A&quot;,
+                &quot;capacity&quot;: 30,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            },
+            &quot;subject&quot;: {
+                &quot;id&quot;: 4,
+                &quot;course_id&quot;: 3,
+                &quot;name&quot;: &quot;Principles of Management&quot;,
+                &quot;code&quot;: &quot;BUS101&quot;,
+                &quot;description&quot;: &quot;Basic management principles&quot;,
+                &quot;coordinator_id&quot;: 6,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            }
+        },
+        {
+            &quot;id&quot;: 39,
+            &quot;class_id&quot;: 2,
+            &quot;subject_id&quot;: 2,
+            &quot;teacher_id&quot;: 5,
+            &quot;date&quot;: &quot;2025-08-29T00:00:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;09:00&quot;,
+            &quot;end_time&quot;: &quot;10:30&quot;,
+            &quot;room&quot;: &quot;Room 102&quot;,
+            &quot;created_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;updated_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;teacher&quot;: {
+                &quot;id&quot;: 5,
+                &quot;name&quot;: &quot;Prof. Michael Chen&quot;,
+                &quot;email&quot;: &quot;michael.chen@yousch.edu&quot;,
+                &quot;email_verified_at&quot;: &quot;2025-08-31T00:54:38.000000Z&quot;,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:38.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:38.000000Z&quot;
+            },
+            &quot;class_room&quot;: {
+                &quot;id&quot;: 2,
+                &quot;campus_id&quot;: 1,
+                &quot;course_id&quot;: 1,
+                &quot;name&quot;: &quot;BCS - Class B&quot;,
+                &quot;capacity&quot;: 25,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            },
+            &quot;subject&quot;: {
+                &quot;id&quot;: 2,
+                &quot;course_id&quot;: 1,
+                &quot;name&quot;: &quot;Data Structures and Algorithms&quot;,
+                &quot;code&quot;: &quot;CS201&quot;,
+                &quot;description&quot;: &quot;Advanced programming concepts&quot;,
+                &quot;coordinator_id&quot;: 4,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            }
+        },
+        {
+            &quot;id&quot;: 30,
+            &quot;class_id&quot;: 2,
+            &quot;subject_id&quot;: 1,
+            &quot;teacher_id&quot;: 4,
+            &quot;date&quot;: &quot;2025-08-29T00:00:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;14:00&quot;,
+            &quot;end_time&quot;: &quot;15:30&quot;,
+            &quot;room&quot;: &quot;Room 101&quot;,
+            &quot;created_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;updated_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;teacher&quot;: {
+                &quot;id&quot;: 4,
+                &quot;name&quot;: &quot;Dr. Sarah Johnson&quot;,
+                &quot;email&quot;: &quot;sarah.johnson@yousch.edu&quot;,
+                &quot;email_verified_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;
+            },
+            &quot;class_room&quot;: {
+                &quot;id&quot;: 2,
+                &quot;campus_id&quot;: 1,
+                &quot;course_id&quot;: 1,
+                &quot;name&quot;: &quot;BCS - Class B&quot;,
+                &quot;capacity&quot;: 25,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            },
+            &quot;subject&quot;: {
+                &quot;id&quot;: 1,
+                &quot;course_id&quot;: 1,
+                &quot;name&quot;: &quot;Introduction to Programming&quot;,
+                &quot;code&quot;: &quot;CS101&quot;,
+                &quot;description&quot;: &quot;Basic programming concepts and practices&quot;,
+                &quot;coordinator_id&quot;: 4,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            }
+        },
+        {
+            &quot;id&quot;: 40,
+            &quot;class_id&quot;: 2,
+            &quot;subject_id&quot;: 2,
+            &quot;teacher_id&quot;: 5,
+            &quot;date&quot;: &quot;2025-08-29T00:00:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;14:00&quot;,
+            &quot;end_time&quot;: &quot;15:30&quot;,
+            &quot;room&quot;: &quot;Room 102&quot;,
+            &quot;created_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;updated_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;teacher&quot;: {
+                &quot;id&quot;: 5,
+                &quot;name&quot;: &quot;Prof. Michael Chen&quot;,
+                &quot;email&quot;: &quot;michael.chen@yousch.edu&quot;,
+                &quot;email_verified_at&quot;: &quot;2025-08-31T00:54:38.000000Z&quot;,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:38.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:38.000000Z&quot;
+            },
+            &quot;class_room&quot;: {
+                &quot;id&quot;: 2,
+                &quot;campus_id&quot;: 1,
+                &quot;course_id&quot;: 1,
+                &quot;name&quot;: &quot;BCS - Class B&quot;,
+                &quot;capacity&quot;: 25,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            },
+            &quot;subject&quot;: {
+                &quot;id&quot;: 2,
+                &quot;course_id&quot;: 1,
+                &quot;name&quot;: &quot;Data Structures and Algorithms&quot;,
+                &quot;code&quot;: &quot;CS201&quot;,
+                &quot;description&quot;: &quot;Advanced programming concepts&quot;,
+                &quot;coordinator_id&quot;: 4,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            }
+        },
+        {
+            &quot;id&quot;: 20,
+            &quot;class_id&quot;: 1,
+            &quot;subject_id&quot;: 2,
+            &quot;teacher_id&quot;: 5,
+            &quot;date&quot;: &quot;2025-08-29T00:00:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;14:00&quot;,
+            &quot;end_time&quot;: &quot;15:30&quot;,
+            &quot;room&quot;: &quot;Room 102&quot;,
+            &quot;created_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;updated_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;teacher&quot;: {
+                &quot;id&quot;: 5,
+                &quot;name&quot;: &quot;Prof. Michael Chen&quot;,
+                &quot;email&quot;: &quot;michael.chen@yousch.edu&quot;,
+                &quot;email_verified_at&quot;: &quot;2025-08-31T00:54:38.000000Z&quot;,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:38.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:38.000000Z&quot;
+            },
+            &quot;class_room&quot;: {
+                &quot;id&quot;: 1,
+                &quot;campus_id&quot;: 1,
+                &quot;course_id&quot;: 1,
+                &quot;name&quot;: &quot;BCS - Class A&quot;,
+                &quot;capacity&quot;: 30,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            },
+            &quot;subject&quot;: {
+                &quot;id&quot;: 2,
+                &quot;course_id&quot;: 1,
+                &quot;name&quot;: &quot;Data Structures and Algorithms&quot;,
+                &quot;code&quot;: &quot;CS201&quot;,
+                &quot;description&quot;: &quot;Advanced programming concepts&quot;,
+                &quot;coordinator_id&quot;: 4,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            }
+        },
+        {
+            &quot;id&quot;: 90,
+            &quot;class_id&quot;: 7,
+            &quot;subject_id&quot;: 5,
+            &quot;teacher_id&quot;: 4,
+            &quot;date&quot;: &quot;2025-08-29T00:00:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;14:00&quot;,
+            &quot;end_time&quot;: &quot;15:30&quot;,
+            &quot;room&quot;: &quot;Room 101&quot;,
+            &quot;created_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;updated_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;teacher&quot;: {
+                &quot;id&quot;: 4,
+                &quot;name&quot;: &quot;Dr. Sarah Johnson&quot;,
+                &quot;email&quot;: &quot;sarah.johnson@yousch.edu&quot;,
+                &quot;email_verified_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;
+            },
+            &quot;class_room&quot;: {
+                &quot;id&quot;: 7,
+                &quot;campus_id&quot;: 1,
+                &quot;course_id&quot;: 4,
+                &quot;name&quot;: &quot;BAENG - Class A&quot;,
+                &quot;capacity&quot;: 30,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            },
+            &quot;subject&quot;: {
+                &quot;id&quot;: 5,
+                &quot;course_id&quot;: 4,
+                &quot;name&quot;: &quot;Introduction to Literature&quot;,
+                &quot;code&quot;: &quot;ENG101&quot;,
+                &quot;description&quot;: &quot;Literary analysis and appreciation&quot;,
+                &quot;coordinator_id&quot;: 7,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            }
+        },
+        {
+            &quot;id&quot;: 50,
+            &quot;class_id&quot;: 3,
+            &quot;subject_id&quot;: 3,
+            &quot;teacher_id&quot;: 4,
+            &quot;date&quot;: &quot;2025-08-29T00:00:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;14:00&quot;,
+            &quot;end_time&quot;: &quot;15:30&quot;,
+            &quot;room&quot;: &quot;Room 101&quot;,
+            &quot;created_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;updated_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;teacher&quot;: {
+                &quot;id&quot;: 4,
+                &quot;name&quot;: &quot;Dr. Sarah Johnson&quot;,
+                &quot;email&quot;: &quot;sarah.johnson@yousch.edu&quot;,
+                &quot;email_verified_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;
+            },
+            &quot;class_room&quot;: {
+                &quot;id&quot;: 3,
+                &quot;campus_id&quot;: 1,
+                &quot;course_id&quot;: 2,
+                &quot;name&quot;: &quot;BMATH - Class A&quot;,
+                &quot;capacity&quot;: 30,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            },
+            &quot;subject&quot;: {
+                &quot;id&quot;: 3,
+                &quot;course_id&quot;: 2,
+                &quot;name&quot;: &quot;Calculus I&quot;,
+                &quot;code&quot;: &quot;MATH101&quot;,
+                &quot;description&quot;: &quot;Fundamental calculus concepts&quot;,
+                &quot;coordinator_id&quot;: 5,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            }
+        },
+        {
+            &quot;id&quot;: 80,
+            &quot;class_id&quot;: 6,
+            &quot;subject_id&quot;: 4,
+            &quot;teacher_id&quot;: 4,
+            &quot;date&quot;: &quot;2025-08-29T00:00:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;14:00&quot;,
+            &quot;end_time&quot;: &quot;15:30&quot;,
+            &quot;room&quot;: &quot;Room 101&quot;,
+            &quot;created_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;updated_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;teacher&quot;: {
+                &quot;id&quot;: 4,
+                &quot;name&quot;: &quot;Dr. Sarah Johnson&quot;,
+                &quot;email&quot;: &quot;sarah.johnson@yousch.edu&quot;,
+                &quot;email_verified_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;
+            },
+            &quot;class_room&quot;: {
+                &quot;id&quot;: 6,
+                &quot;campus_id&quot;: 1,
+                &quot;course_id&quot;: 3,
+                &quot;name&quot;: &quot;BBA - Class B&quot;,
+                &quot;capacity&quot;: 25,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            },
+            &quot;subject&quot;: {
+                &quot;id&quot;: 4,
+                &quot;course_id&quot;: 3,
+                &quot;name&quot;: &quot;Principles of Management&quot;,
+                &quot;code&quot;: &quot;BUS101&quot;,
+                &quot;description&quot;: &quot;Basic management principles&quot;,
+                &quot;coordinator_id&quot;: 6,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            }
+        },
+        {
+            &quot;id&quot;: 10,
+            &quot;class_id&quot;: 1,
+            &quot;subject_id&quot;: 1,
+            &quot;teacher_id&quot;: 4,
+            &quot;date&quot;: &quot;2025-08-29T00:00:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;14:00&quot;,
+            &quot;end_time&quot;: &quot;15:30&quot;,
+            &quot;room&quot;: &quot;Room 101&quot;,
+            &quot;created_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;updated_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;teacher&quot;: {
+                &quot;id&quot;: 4,
+                &quot;name&quot;: &quot;Dr. Sarah Johnson&quot;,
+                &quot;email&quot;: &quot;sarah.johnson@yousch.edu&quot;,
+                &quot;email_verified_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;
+            },
+            &quot;class_room&quot;: {
+                &quot;id&quot;: 1,
+                &quot;campus_id&quot;: 1,
+                &quot;course_id&quot;: 1,
+                &quot;name&quot;: &quot;BCS - Class A&quot;,
+                &quot;capacity&quot;: 30,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            },
+            &quot;subject&quot;: {
+                &quot;id&quot;: 1,
+                &quot;course_id&quot;: 1,
+                &quot;name&quot;: &quot;Introduction to Programming&quot;,
+                &quot;code&quot;: &quot;CS101&quot;,
+                &quot;description&quot;: &quot;Basic programming concepts and practices&quot;,
+                &quot;coordinator_id&quot;: 4,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            }
+        },
+        {
+            &quot;id&quot;: 60,
+            &quot;class_id&quot;: 4,
+            &quot;subject_id&quot;: 3,
+            &quot;teacher_id&quot;: 4,
+            &quot;date&quot;: &quot;2025-08-29T00:00:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;14:00&quot;,
+            &quot;end_time&quot;: &quot;15:30&quot;,
+            &quot;room&quot;: &quot;Room 101&quot;,
+            &quot;created_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;updated_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;teacher&quot;: {
+                &quot;id&quot;: 4,
+                &quot;name&quot;: &quot;Dr. Sarah Johnson&quot;,
+                &quot;email&quot;: &quot;sarah.johnson@yousch.edu&quot;,
+                &quot;email_verified_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;
+            },
+            &quot;class_room&quot;: {
+                &quot;id&quot;: 4,
+                &quot;campus_id&quot;: 1,
+                &quot;course_id&quot;: 2,
+                &quot;name&quot;: &quot;BMATH - Class B&quot;,
+                &quot;capacity&quot;: 25,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            },
+            &quot;subject&quot;: {
+                &quot;id&quot;: 3,
+                &quot;course_id&quot;: 2,
+                &quot;name&quot;: &quot;Calculus I&quot;,
+                &quot;code&quot;: &quot;MATH101&quot;,
+                &quot;description&quot;: &quot;Fundamental calculus concepts&quot;,
+                &quot;coordinator_id&quot;: 5,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            }
+        },
+        {
+            &quot;id&quot;: 70,
+            &quot;class_id&quot;: 5,
+            &quot;subject_id&quot;: 4,
+            &quot;teacher_id&quot;: 4,
+            &quot;date&quot;: &quot;2025-08-29T00:00:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;14:00&quot;,
+            &quot;end_time&quot;: &quot;15:30&quot;,
+            &quot;room&quot;: &quot;Room 101&quot;,
+            &quot;created_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;updated_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;teacher&quot;: {
+                &quot;id&quot;: 4,
+                &quot;name&quot;: &quot;Dr. Sarah Johnson&quot;,
+                &quot;email&quot;: &quot;sarah.johnson@yousch.edu&quot;,
+                &quot;email_verified_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;
+            },
+            &quot;class_room&quot;: {
+                &quot;id&quot;: 5,
+                &quot;campus_id&quot;: 1,
+                &quot;course_id&quot;: 3,
+                &quot;name&quot;: &quot;BBA - Class A&quot;,
+                &quot;capacity&quot;: 30,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            },
+            &quot;subject&quot;: {
+                &quot;id&quot;: 4,
+                &quot;course_id&quot;: 3,
+                &quot;name&quot;: &quot;Principles of Management&quot;,
+                &quot;code&quot;: &quot;BUS101&quot;,
+                &quot;description&quot;: &quot;Basic management principles&quot;,
+                &quot;coordinator_id&quot;: 6,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            }
+        },
+        {
+            &quot;id&quot;: 100,
+            &quot;class_id&quot;: 8,
+            &quot;subject_id&quot;: 5,
+            &quot;teacher_id&quot;: 4,
+            &quot;date&quot;: &quot;2025-08-29T00:00:00.000000Z&quot;,
+            &quot;start_time&quot;: &quot;14:00&quot;,
+            &quot;end_time&quot;: &quot;15:30&quot;,
+            &quot;room&quot;: &quot;Room 101&quot;,
+            &quot;created_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;updated_at&quot;: &quot;2025-08-31 00:54:40&quot;,
+            &quot;teacher&quot;: {
+                &quot;id&quot;: 4,
+                &quot;name&quot;: &quot;Dr. Sarah Johnson&quot;,
+                &quot;email&quot;: &quot;sarah.johnson@yousch.edu&quot;,
+                &quot;email_verified_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:37.000000Z&quot;
+            },
+            &quot;class_room&quot;: {
+                &quot;id&quot;: 8,
+                &quot;campus_id&quot;: 1,
+                &quot;course_id&quot;: 4,
+                &quot;name&quot;: &quot;BAENG - Class B&quot;,
+                &quot;capacity&quot;: 25,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            },
+            &quot;subject&quot;: {
+                &quot;id&quot;: 5,
+                &quot;course_id&quot;: 4,
+                &quot;name&quot;: &quot;Introduction to Literature&quot;,
+                &quot;code&quot;: &quot;ENG101&quot;,
+                &quot;description&quot;: &quot;Literary analysis and appreciation&quot;,
+                &quot;coordinator_id&quot;: 7,
+                &quot;created_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2025-08-31T00:54:40.000000Z&quot;
+            }
+        }
+    ],
+    &quot;message&quot;: &quot;Teacher timetables retrieved successfully&quot;
 }</code>
  </pre>
     </span>
@@ -74602,7 +77847,7 @@ fetch(url, {
 
 <span id="example-responses-GETapi-teachers-timetables-day--day-">
             <blockquote>
-            <p>Example response (500):</p>
+            <p>Example response (422):</p>
         </blockquote>
                 <details class="annotation">
             <summary style="cursor: pointer;">
@@ -74614,7 +77859,13 @@ access-control-allow-origin: *
  </code></pre></details>         <pre>
 
 <code class="language-json" style="max-height: 300px;">{
-    &quot;message&quot;: &quot;Server Error&quot;
+    &quot;success&quot;: false,
+    &quot;message&quot;: &quot;Invalid day of week&quot;,
+    &quot;errors&quot;: {
+        &quot;day_of_week&quot;: [
+            &quot;The selected day of week is invalid.&quot;
+        ]
+    }
 }</code>
  </pre>
     </span>
@@ -75445,7 +78696,8 @@ access-control-allow-origin: *
  </code></pre></details>         <pre>
 
 <code class="language-json" style="max-height: 300px;">{
-    &quot;message&quot;: &quot;Server Error&quot;
+    &quot;success&quot;: false,
+    &quot;message&quot;: &quot;Failed to retrieve teacher leaves: SQLSTATE[42S22]: Column not found: 1054 Unknown column &#039;start_date&#039; in &#039;order clause&#039; (Connection: mysql, SQL: select * from `teacher_leaves` order by `start_date` desc)&quot;
 }</code>
  </pre>
     </span>
@@ -76429,7 +79681,8 @@ access-control-allow-origin: *
  </code></pre></details>         <pre>
 
 <code class="language-json" style="max-height: 300px;">{
-    &quot;message&quot;: &quot;Server Error&quot;
+    &quot;success&quot;: false,
+    &quot;message&quot;: &quot;Failed to retrieve leaves: SQLSTATE[42S22]: Column not found: 1054 Unknown column &#039;leave_type&#039; in &#039;where clause&#039; (Connection: mysql, SQL: select * from `teacher_leaves` where `leave_type` = architecto order by `start_date` desc)&quot;
 }</code>
  </pre>
     </span>
@@ -76565,7 +79818,8 @@ access-control-allow-origin: *
  </code></pre></details>         <pre>
 
 <code class="language-json" style="max-height: 300px;">{
-    &quot;message&quot;: &quot;Server Error&quot;
+    &quot;success&quot;: false,
+    &quot;message&quot;: &quot;Failed to retrieve leaves: SQLSTATE[42S22]: Column not found: 1054 Unknown column &#039;status&#039; in &#039;where clause&#039; (Connection: mysql, SQL: select * from `teacher_leaves` where `status` = architecto order by `start_date` desc)&quot;
 }</code>
  </pre>
     </span>
@@ -76949,7 +80203,8 @@ access-control-allow-origin: *
  </code></pre></details>         <pre>
 
 <code class="language-json" style="max-height: 300px;">{
-    &quot;message&quot;: &quot;Server Error&quot;
+    &quot;success&quot;: false,
+    &quot;message&quot;: &quot;Failed to retrieve teacher performances: SQLSTATE[42S02]: Base table or view not found: 1146 Table &#039;yousch.teacher_performance&#039; doesn&#039;t exist (Connection: mysql, SQL: select * from `teacher_performance` order by `evaluation_date` desc)&quot;
 }</code>
  </pre>
     </span>
@@ -78069,7 +81324,8 @@ access-control-allow-origin: *
  </code></pre></details>         <pre>
 
 <code class="language-json" style="max-height: 300px;">{
-    &quot;message&quot;: &quot;Server Error&quot;
+    &quot;success&quot;: false,
+    &quot;message&quot;: &quot;Failed to retrieve period performances: SQLSTATE[42S02]: Base table or view not found: 1146 Table &#039;yousch.teacher_performance&#039; doesn&#039;t exist (Connection: mysql, SQL: select * from `teacher_performance` where `evaluation_period` like %architecto% order by `evaluation_date` desc)&quot;
 }</code>
  </pre>
     </span>
@@ -78548,8 +81804,8 @@ You can check the Dev Tools console for debugging information.</code></pre>
             \"subject_id\": \"architecto\",
             \"academic_year\": \"ngzmiyv\",
             \"term\": \"dljnikhwaykcmyuw\",
-            \"start_date\": \"2025-08-31T02:28:56\",
-            \"end_date\": \"2051-09-24\",
+            \"start_date\": \"2025-09-08T23:41:32\",
+            \"end_date\": \"2051-10-02\",
             \"hours_per_week\": 22
         }
     ]
@@ -78575,8 +81831,8 @@ let body = {
             "subject_id": "architecto",
             "academic_year": "ngzmiyv",
             "term": "dljnikhwaykcmyuw",
-            "start_date": "2025-08-31T02:28:56",
-            "end_date": "2051-09-24",
+            "start_date": "2025-09-08T23:41:32",
+            "end_date": "2051-10-02",
             "hours_per_week": 22
         }
     ]
@@ -78732,10 +81988,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="assignments.0.start_date"                data-endpoint="POSTapi-teachers-bulk-assignments-import"
-               value="2025-08-31T02:28:56"
+               value="2025-09-08T23:41:32"
                data-component="body">
     <br>
-<p>Must be a valid date. Example: <code>2025-08-31T02:28:56</code></p>
+<p>Must be a valid date. Example: <code>2025-09-08T23:41:32</code></p>
                     </div>
                                                                 <div style="margin-left: 14px; clear: unset;">
                         <b style="line-height: 2;"><code>end_date</code></b>&nbsp;&nbsp;
@@ -78743,10 +81999,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="assignments.0.end_date"                data-endpoint="POSTapi-teachers-bulk-assignments-import"
-               value="2051-09-24"
+               value="2051-10-02"
                data-component="body">
     <br>
-<p>Must be a valid date. Must be a date after <code>assignments.*.start_date</code>. Example: <code>2051-09-24</code></p>
+<p>Must be a valid date. Must be a date after <code>assignments.*.start_date</code>. Example: <code>2051-10-02</code></p>
                     </div>
                                                                 <div style="margin-left: 14px; clear: unset;">
                         <b style="line-height: 2;"><code>hours_per_week</code></b>&nbsp;&nbsp;
@@ -78923,38 +82179,48 @@ access-control-allow-origin: *
     &quot;success&quot;: true,
     &quot;data&quot;: {
         &quot;summary&quot;: {
-            &quot;total_assignments&quot;: 8,
-            &quot;unique_teachers&quot;: 4,
-            &quot;unique_classes&quot;: 8,
-            &quot;unique_subjects&quot;: 4,
+            &quot;total_assignments&quot;: 3,
+            &quot;unique_teachers&quot;: 2,
+            &quot;unique_classes&quot;: 3,
+            &quot;unique_subjects&quot;: 2,
             &quot;total_hours&quot;: 0
         },
         &quot;assignments_by_faculty&quot;: {
-            &quot;&quot;: {
-                &quot;count&quot;: 8,
-                &quot;teachers&quot;: 4,
+            &quot;Faculty of Business and Economics&quot;: {
+                &quot;count&quot;: 2,
+                &quot;teachers&quot;: 1,
+                &quot;total_hours&quot;: 0
+            },
+            &quot;Faculty of Science and Technology&quot;: {
+                &quot;count&quot;: 1,
+                &quot;teachers&quot;: 1,
                 &quot;total_hours&quot;: 0
             }
         },
         &quot;assignments_by_department&quot;: {
-            &quot;&quot;: {
-                &quot;count&quot;: 8,
-                &quot;teachers&quot;: 4,
+            &quot;Business Administration&quot;: {
+                &quot;count&quot;: 2,
+                &quot;teachers&quot;: 1,
+                &quot;total_hours&quot;: 0
+            },
+            &quot;Mathematics&quot;: {
+                &quot;count&quot;: 1,
+                &quot;teachers&quot;: 1,
                 &quot;total_hours&quot;: 0
             }
         },
         &quot;assignments_by_term&quot;: {
             &quot;&quot;: {
-                &quot;count&quot;: 8,
-                &quot;teachers&quot;: 4,
+                &quot;count&quot;: 3,
+                &quot;teachers&quot;: 2,
                 &quot;total_hours&quot;: 0
             }
         },
         &quot;teacher_workload&quot;: {
             &quot;&quot;: {
-                &quot;assignments&quot;: 8,
-                &quot;classes&quot;: 8,
-                &quot;subjects&quot;: 4,
+                &quot;assignments&quot;: 3,
+                &quot;classes&quot;: 3,
+                &quot;subjects&quot;: 2,
                 &quot;total_hours&quot;: 0
             }
         }

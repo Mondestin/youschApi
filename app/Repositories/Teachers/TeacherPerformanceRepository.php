@@ -384,4 +384,37 @@ class TeacherPerformanceRepository extends BaseRepository implements TeacherPerf
         
         return $this->createPerformance($evaluationData);
     }
+
+    /**
+     * Get paginated performance records (interface method)
+     *
+     * @param array $filters
+     * @return LengthAwarePaginator
+     */
+    public function getPaginatedPerformance(array $filters): LengthAwarePaginator
+    {
+        return $this->getPaginatedPerformances($filters);
+    }
+
+    /**
+     * Get performance by teacher (interface method)
+     *
+     * @param int $teacherId
+     * @return Collection
+     */
+    public function getPerformanceByTeacher(int $teacherId): Collection
+    {
+        return $this->getPerformancesByTeacher($teacherId);
+    }
+
+    /**
+     * Get performance by period (interface method)
+     *
+     * @param string $period
+     * @return Collection
+     */
+    public function getPerformanceByPeriod(string $period): Collection
+    {
+        return $this->getPerformancesByPeriod($period);
+    }
 } 

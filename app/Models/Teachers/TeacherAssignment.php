@@ -19,19 +19,23 @@ class TeacherAssignment extends Model
         'teacher_id',
         'class_id',
         'subject_id',
-        'academic_year',
-        'term',
-        'start_date',
-        'end_date',
-        'hours_per_week',
+        'academic_year_id',
+        'role',
+        'is_primary',
         'is_active',
+        'assigned_by',
+        'assignment_date',
+        'end_date',
+        'weekly_hours',
         'notes',
+        'school_id',
     ];
 
     protected $casts = [
-        'start_date' => 'date',
+        'assignment_date' => 'date',
         'end_date' => 'date',
         'is_active' => 'boolean',
+        'is_primary' => 'boolean',
     ];
 
     /**
@@ -77,9 +81,9 @@ class TeacherAssignment extends Model
     /**
      * Scope query to assignments by academic year.
      */
-    public function scopeByAcademicYear($query, $academicYear)
+    public function scopeByAcademicYear($query, $academicYearId)
     {
-        return $query->where('academic_year', $academicYear);
+        return $query->where('academic_year_id', $academicYearId);
     }
 
     /**
@@ -119,7 +123,7 @@ class TeacherAssignment extends Model
      */
     public function scopeCurrent($query)
     {
-        return $query->where('start_date', '<=', now())
+        return $query->where('assignment_date', '<=', now())
                     ->where('end_date', '>=', now())
                     ->where('is_active', true);
     }
@@ -130,7 +134,7 @@ class TeacherAssignment extends Model
     public function isCurrentlyActive(): bool
     {
         return $this->is_active && 
-               $this->start_date <= now() && 
+               $this->assignment_date <= now() && 
                $this->end_date >= now();
     }
 
@@ -139,7 +143,7 @@ class TeacherAssignment extends Model
      */
     public function getDurationInDays(): int
     {
-        return $this->start_date->diffInDays($this->end_date);
+        return $this->assignment_date->diffInDays($this->end_date);
     }
 
     /**
@@ -147,8 +151,8 @@ class TeacherAssignment extends Model
      */
     public function getTotalHours(): float
     {
-        $weeks = $this->start_date->diffInWeeks($this->end_date);
-        return $weeks * $this->hours_per_week;
+        $weeks = $this->assignment_date->diffInWeeks($this->end_date);
+        return $weeks * $this->weekly_hours;
     }
 
     /**
@@ -157,6 +161,6 @@ class TeacherAssignment extends Model
     public function getWorkloadPercentage(): float
     {
         // Assuming 40 hours per week is 100% workload
-        return ($this->hours_per_week / 40) * 100;
+        return ($this->weekly_hours / 40) * 100;
     }
 } 

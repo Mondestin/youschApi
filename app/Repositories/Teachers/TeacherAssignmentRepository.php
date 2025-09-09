@@ -18,6 +18,7 @@ class TeacherAssignmentRepository implements TeacherAssignmentRepositoryInterfac
     public function getAllAssignments(array $filters = []): Collection
     {
         $query = TeacherAssignment::with(['teacher', 'class', 'subject']);
+        //->with(['teacher', 'class', 'subject']);
 
         if (isset($filters['teacher_id'])) {
             $query->where('teacher_id', $filters['teacher_id']);
@@ -31,12 +32,85 @@ class TeacherAssignmentRepository implements TeacherAssignmentRepositoryInterfac
             $query->where('subject_id', $filters['subject_id']);
         }
 
-        if (isset($filters['academic_year'])) {
-            $query->where('academic_year', $filters['academic_year']);
+        if (isset($filters['academic_year_id'])) {
+            $query->where('academic_year_id', $filters['academic_year_id']);
         }
 
-        if (isset($filters['term'])) {
-            $query->where('term', $filters['term']);
+        if (isset($filters['role'])) {
+            $query->where('role', $filters['role']);
+        }
+
+        if (isset($filters['is_primary'])) {
+            $query->where('is_primary', $filters['is_primary']);
+        }
+
+        if (isset($filters['assigned_by'])) {
+            // Check if assigned_by is an email or ID
+            if (filter_var($filters['assigned_by'], FILTER_VALIDATE_EMAIL)) {
+                // If it's an email, find the user ID first
+                $userId = \App\Models\User::where('email', $filters['assigned_by'])->value('id');
+                if ($userId) {
+                    $query->where('assigned_by', $userId);
+                } else {
+                    // If user not found, return empty result
+                    $query->where('assigned_by', -1);
+                }
+            } else {
+                // If it's an ID, use it directly
+                $query->where('assigned_by', $filters['assigned_by']);
+            }
+        }
+
+        // Handle assigned_by_email filter (alternative to assigned_by)
+        if (isset($filters['assigned_by_email'])) {
+            $userId = \App\Models\User::where('email', $filters['assigned_by_email'])->value('id');
+            if ($userId) {
+                $query->where('assigned_by', $userId);
+            } else {
+                // If user not found, return empty result
+                $query->where('assigned_by', -1);
+            }
+        }
+
+        if (isset($filters['school_id'])) {
+            $query->where('school_id', $filters['school_id']);
+        }
+
+        // Filter by assignment date range
+        if (isset($filters['assignment_date_from'])) {
+            $query->where('assignment_date', '>=', $filters['assignment_date_from']);
+        }
+
+        if (isset($filters['assignment_date_to'])) {
+            $query->where('assignment_date', '<=', $filters['assignment_date_to']);
+        }
+
+        // Filter by end date range
+        if (isset($filters['end_date_from'])) {
+            $query->where('end_date', '>=', $filters['end_date_from']);
+        }
+
+        if (isset($filters['end_date_to'])) {
+            $query->where('end_date', '<=', $filters['end_date_to']);
+        }
+
+        // Filter by weekly hours range
+        if (isset($filters['weekly_hours_min'])) {
+            $query->where('weekly_hours', '>=', $filters['weekly_hours_min']);
+        }
+
+        if (isset($filters['weekly_hours_max'])) {
+            $query->where('weekly_hours', '<=', $filters['weekly_hours_max']);
+        }
+
+        // Filter by active status if specified, otherwise show all
+        if (isset($filters['is_active'])) {
+            $query->where('is_active', $filters['is_active']);
+        }
+
+        // Search in notes
+        if (isset($filters['notes_search'])) {
+            $query->where('notes', 'like', '%' . $filters['notes_search'] . '%');
         }
 
         $assignments = $query->orderBy('created_at', 'desc')->get();    
@@ -63,7 +137,8 @@ class TeacherAssignmentRepository implements TeacherAssignmentRepositoryInterfac
      */
     public function createAssignment(array $data): TeacherAssignment
     {
-        return TeacherAssignment::create($data);
+        $assignment = TeacherAssignment::create($data);
+        return $assignment->load(['teacher', 'class', 'subject']);
     }
 
     /**
@@ -128,12 +203,13 @@ class TeacherAssignmentRepository implements TeacherAssignmentRepositoryInterfac
 
     /**
      * Get all assignments for a specific academic year
-     * @param string $academicYear The academic year
+     * @param int $academicYearId The academic year ID
      * @return Collection The assignments for the academic year
      */
-    public function getAssignmentsByAcademicYear(string $academicYear): Collection
+    public function getAssignmentsByAcademicYear(int $academicYearId): Collection
     {
         return TeacherAssignment::with(['teacher', 'class', 'subject'])
+            ->where('academic_year_id', $academicYearId)
             ->where('is_active', true)
             ->get();
     }
@@ -146,6 +222,7 @@ class TeacherAssignmentRepository implements TeacherAssignmentRepositoryInterfac
     public function getAssignmentsByTerm(string $term): Collection
     {
         return TeacherAssignment::with(['teacher', 'class', 'subject'])
+            ->where('term', $term)
             ->where('is_active', true)
             ->get();
     }
@@ -158,7 +235,7 @@ class TeacherAssignmentRepository implements TeacherAssignmentRepositoryInterfac
     {
         return TeacherAssignment::with(['teacher', 'class', 'subject'])
             ->where('is_active', true)
-            ->where('start_date', '<=', now())
+            ->where('assignment_date', '<=', now())
             ->where('end_date', '>=', now())
             ->get();
     }
@@ -173,15 +250,15 @@ class TeacherAssignmentRepository implements TeacherAssignmentRepositoryInterfac
     {
         return TeacherAssignment::with(['teacher', 'class', 'subject'])
             ->where(function ($query) use ($startDate, $endDate) {
-                $query->whereBetween('start_date', [$startDate, $endDate])
+                $query->whereBetween('assignment_date', [$startDate, $endDate])
                     ->orWhereBetween('end_date', [$startDate, $endDate])
                     ->orWhere(function ($q) use ($startDate, $endDate) {
-                        $q->where('start_date', '<=', $startDate)
+                        $q->where('assignment_date', '<=', $startDate)
                             ->where('end_date', '>=', $endDate);
                     });
             })
             ->where('is_active', true)
-            ->orderBy('start_date')
+            ->orderBy('assignment_date')
             ->get();
     }
 
@@ -201,21 +278,21 @@ class TeacherAssignmentRepository implements TeacherAssignmentRepositoryInterfac
         int $teacherId, 
         int $classId, 
         int $subjectId, 
-        string $academicYear, 
-        string $term, 
-        string $startDate, 
+        int $academicYearId, 
+        string $role, 
+        string $assignmentDate, 
         string $endDate, 
         ?int $excludeId = null
     ): array {
         $query = TeacherAssignment::where('teacher_id', $teacherId)
-            ->where('academic_year', $academicYear)
-            ->where('term', $term)
+            ->where('academic_year_id', $academicYearId)
+            ->where('role', $role)
             ->where('is_active', true)
-            ->where(function ($q) use ($startDate, $endDate) {
-                $q->whereBetween('start_date', [$startDate, $endDate])
-                    ->orWhereBetween('end_date', [$startDate, $endDate])
-                    ->orWhere(function ($subQ) use ($startDate, $endDate) {
-                        $subQ->where('start_date', '<=', $startDate)
+            ->where(function ($q) use ($assignmentDate, $endDate) {
+                $q->whereBetween('assignment_date', [$assignmentDate, $endDate])
+                    ->orWhereBetween('end_date', [$assignmentDate, $endDate])
+                    ->orWhere(function ($subQ) use ($assignmentDate, $endDate) {
+                        $subQ->where('assignment_date', '<=', $assignmentDate)
                             ->where('end_date', '>=', $endDate);
                     });
             });

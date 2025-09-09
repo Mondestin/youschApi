@@ -16,7 +16,7 @@ interface TeacherAssignmentRepositoryInterface
     public function getAssignmentsByTeacher(int $teacherId): Collection;
     public function getAssignmentsByClass(int $classId): Collection;
     public function getAssignmentsBySubject(int $subjectId): Collection;
-    public function getAssignmentsByAcademicYear(string $academicYear): Collection;
+    public function getAssignmentsByAcademicYear(int $academicYearId): Collection;
     public function getAssignmentsByTerm(string $term): Collection;
     public function getActiveAssignments(): Collection;
     public function getAssignmentsByDateRange(string $startDate, string $endDate): Collection;
@@ -25,9 +25,9 @@ interface TeacherAssignmentRepositoryInterface
         int $teacherId, 
         int $classId, 
         int $subjectId, 
-        string $academicYear, 
-        string $term, 
-        string $startDate, 
+        int $academicYearId, 
+        string $role, 
+        string $assignmentDate, 
         string $endDate, 
         ?int $excludeId = null
     ): array;
