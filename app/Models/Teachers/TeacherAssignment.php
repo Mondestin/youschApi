@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use App\Models\AdminAcademics\Subject;
 use App\Models\AdminAcademics\ClassRoom;
+use App\Models\User;
 
 class TeacherAssignment extends Model
 {
@@ -60,6 +61,14 @@ class TeacherAssignment extends Model
     public function subject(): BelongsTo
     {
         return $this->belongsTo(Subject::class);
+    }
+
+    /**
+     * Get the user who assigned this assignment.
+     */
+    public function assignedBy(): BelongsTo
+    {
+        return $this->belongsTo(User::class, 'assigned_by');
     }
 
     /**

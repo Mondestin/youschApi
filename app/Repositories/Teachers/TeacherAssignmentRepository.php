@@ -17,8 +17,7 @@ class TeacherAssignmentRepository implements TeacherAssignmentRepositoryInterfac
      */
     public function getAllAssignments(array $filters = []): Collection
     {
-        $query = TeacherAssignment::with(['teacher', 'class', 'subject']);
-        //->with(['teacher', 'class', 'subject']);
+        $query = TeacherAssignment::with(['teacher', 'class', 'subject', 'assignedBy']);
 
         if (isset($filters['teacher_id'])) {
             $query->where('teacher_id', $filters['teacher_id']);
@@ -127,7 +126,7 @@ class TeacherAssignmentRepository implements TeacherAssignmentRepositoryInterfac
      */
     public function getAssignmentById(int $id): ?TeacherAssignment
     {
-        return TeacherAssignment::with(['teacher', 'class', 'subject'])->find($id);
+        return TeacherAssignment::with(['teacher', 'class', 'subject', 'assignedBy'])->find($id);
     }
 
     /**
@@ -138,7 +137,7 @@ class TeacherAssignmentRepository implements TeacherAssignmentRepositoryInterfac
     public function createAssignment(array $data): TeacherAssignment
     {
         $assignment = TeacherAssignment::create($data);
-        return $assignment->load(['teacher', 'class', 'subject']);
+        return $assignment->load(['teacher', 'class', 'subject', 'assignedBy']);
     }
 
     /**
@@ -169,7 +168,7 @@ class TeacherAssignmentRepository implements TeacherAssignmentRepositoryInterfac
      */
     public function getAssignmentsByTeacher(int $teacherId): Collection
     {
-        return TeacherAssignment::with(['class', 'subject'])
+        return TeacherAssignment::with(['class', 'subject', 'assignedBy'])
             ->where('teacher_id', $teacherId)
             ->where('is_active', true)
             ->get();
@@ -182,7 +181,7 @@ class TeacherAssignmentRepository implements TeacherAssignmentRepositoryInterfac
      */
     public function getAssignmentsByClass(int $classId): Collection
     {
-        return TeacherAssignment::with(['teacher', 'subject'])
+        return TeacherAssignment::with(['teacher', 'subject', 'assignedBy'])
             ->where('class_id', $classId)
             ->where('is_active', true)
             ->get();
@@ -195,7 +194,7 @@ class TeacherAssignmentRepository implements TeacherAssignmentRepositoryInterfac
      */
     public function getAssignmentsBySubject(int $subjectId): Collection
     {
-        return TeacherAssignment::with(['teacher', 'class'])
+        return TeacherAssignment::with(['teacher', 'class', 'assignedBy'])
             ->where('subject_id', $subjectId)
             ->where('is_active', true)
             ->get();
@@ -208,7 +207,7 @@ class TeacherAssignmentRepository implements TeacherAssignmentRepositoryInterfac
      */
     public function getAssignmentsByAcademicYear(int $academicYearId): Collection
     {
-        return TeacherAssignment::with(['teacher', 'class', 'subject'])
+        return TeacherAssignment::with(['teacher', 'class', 'subject', 'assignedBy'])
             ->where('academic_year_id', $academicYearId)
             ->where('is_active', true)
             ->get();
@@ -221,7 +220,7 @@ class TeacherAssignmentRepository implements TeacherAssignmentRepositoryInterfac
      */
     public function getAssignmentsByTerm(string $term): Collection
     {
-        return TeacherAssignment::with(['teacher', 'class', 'subject'])
+        return TeacherAssignment::with(['teacher', 'class', 'subject', 'assignedBy'])
             ->where('term', $term)
             ->where('is_active', true)
             ->get();
@@ -233,7 +232,7 @@ class TeacherAssignmentRepository implements TeacherAssignmentRepositoryInterfac
      */
     public function getActiveAssignments(): Collection
     {
-        return TeacherAssignment::with(['teacher', 'class', 'subject'])
+        return TeacherAssignment::with(['teacher', 'class', 'subject', 'assignedBy'])
             ->where('is_active', true)
             ->where('assignment_date', '<=', now())
             ->where('end_date', '>=', now())
@@ -248,7 +247,7 @@ class TeacherAssignmentRepository implements TeacherAssignmentRepositoryInterfac
      */
     public function getAssignmentsByDateRange(string $startDate, string $endDate): Collection
     {
-        return TeacherAssignment::with(['teacher', 'class', 'subject'])
+        return TeacherAssignment::with(['teacher', 'class', 'subject', 'assignedBy'])
             ->where(function ($query) use ($startDate, $endDate) {
                 $query->whereBetween('assignment_date', [$startDate, $endDate])
                     ->orWhereBetween('end_date', [$startDate, $endDate])

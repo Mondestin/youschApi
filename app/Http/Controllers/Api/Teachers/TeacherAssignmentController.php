@@ -128,7 +128,7 @@ class TeacherAssignmentController extends Controller
     {
         return response()->json([
             'success' => true,
-            'data' => $assignment->load(['teacher', 'class', 'subject'])
+            'data' => $assignment->load(['teacher', 'class', 'subject', 'assignedBy'])
         ]);
     }
 
@@ -202,7 +202,7 @@ class TeacherAssignmentController extends Controller
         return response()->json([
             'success' => true,
             'message' => 'Teacher assignment updated successfully',
-            'data' => $assignment->fresh()->load(['teacher', 'class', 'subject'])
+            'data' => $assignment->fresh()->load(['teacher', 'class', 'subject', 'assignedBy'])
         ]);
     }
 
@@ -237,7 +237,7 @@ class TeacherAssignmentController extends Controller
 
         return response()->json([
             'success' => true,
-            'data' => $assignments->load(['class', 'subject'])
+            'data' => $assignments->load(['class', 'subject', 'assignedBy'])
         ]);
     }
 
@@ -251,7 +251,7 @@ class TeacherAssignmentController extends Controller
 
         return response()->json([
             'success' => true,
-            'data' => $assignments->load(['teacher', 'subject'])
+            'data' => $assignments->load(['teacher', 'subject', 'assignedBy'])
         ]);
     }
 
@@ -265,7 +265,7 @@ class TeacherAssignmentController extends Controller
 
         return response()->json([
             'success' => true,
-            'data' => $assignments->load(['teacher', 'class'])
+            'data' => $assignments->load(['teacher', 'class', 'assignedBy'])
         ]);
     }
 
@@ -346,7 +346,7 @@ class TeacherAssignmentController extends Controller
 
         return response()->json([
             'success' => true,
-            'data' => $assignments->load(['teacher', 'class', 'subject']),
+            'data' => $assignments->load(['teacher', 'class', 'subject', 'assignedBy']),
             'export_format' => 'json'
         ]);
     }
