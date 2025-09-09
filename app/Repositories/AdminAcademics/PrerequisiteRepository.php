@@ -16,7 +16,7 @@ class PrerequisiteRepository implements PrerequisiteRepositoryInterface
      */
     public function getAllPrerequisites(array $filters = []): Collection
     {
-        $query = SubjectPrerequisite::with(['subject', 'prerequisite']);
+        $query = SubjectPrerequisite::with(['subject.course', 'subject.coordinator', 'prerequisite.course', 'prerequisite.coordinator']);
 
         if (isset($filters['subject_id'])) {
             $query->where('subject_id', $filters['subject_id']);
@@ -38,7 +38,7 @@ class PrerequisiteRepository implements PrerequisiteRepositoryInterface
      */
     public function getPrerequisiteById(int $id): ?SubjectPrerequisite
     {
-        return SubjectPrerequisite::with(['subject', 'prerequisite'])->find($id);
+        return SubjectPrerequisite::with(['subject.course', 'subject.coordinator', 'prerequisite.course', 'prerequisite.coordinator'])->find($id);
     }
 
     /**
@@ -49,7 +49,7 @@ class PrerequisiteRepository implements PrerequisiteRepositoryInterface
     public function createPrerequisite(array $data): SubjectPrerequisite
     {
         $prerequisite = SubjectPrerequisite::create($data);
-        return $prerequisite->load(['subject', 'prerequisite']);
+        return $prerequisite->load(['subject.course', 'subject.coordinator', 'prerequisite.course', 'prerequisite.coordinator']);
     }
 
     /**
@@ -80,7 +80,7 @@ class PrerequisiteRepository implements PrerequisiteRepositoryInterface
      */
     public function getPrerequisitesBySubject(int $subjectId): Collection
     {
-        return SubjectPrerequisite::with(['prerequisite'])
+        return SubjectPrerequisite::with(['prerequisite.course', 'prerequisite.coordinator'])
             ->where('subject_id', $subjectId)
             ->orderBy('prerequisite_id', 'asc')
             ->get();
@@ -93,7 +93,7 @@ class PrerequisiteRepository implements PrerequisiteRepositoryInterface
      */
     public function getSubjectsRequiringPrerequisite(int $prerequisiteId): Collection
     {
-        return SubjectPrerequisite::with(['subject'])
+        return SubjectPrerequisite::with(['subject.course', 'subject.coordinator'])
             ->where('prerequisite_id', $prerequisiteId)
             ->orderBy('subject_id', 'asc')
             ->get();
@@ -188,7 +188,7 @@ class PrerequisiteRepository implements PrerequisiteRepositoryInterface
 
         $visited[] = $subjectId;
 
-        $prerequisites = SubjectPrerequisite::with(['prerequisite'])
+        $prerequisites = SubjectPrerequisite::with(['prerequisite.course', 'prerequisite.coordinator'])
             ->where('subject_id', $subjectId)
             ->get();
 
@@ -282,7 +282,7 @@ class PrerequisiteRepository implements PrerequisiteRepositoryInterface
                     $prerequisite = SubjectPrerequisite::create($prerequisiteData);
                     $results['success'][] = [
                         'index' => $index,
-                        'data' => $prerequisite->load(['subject', 'prerequisite']),
+                        'data' => $prerequisite->load(['subject.course', 'subject.coordinator', 'prerequisite.course', 'prerequisite.coordinator']),
                         'message' => 'Prerequisite created successfully'
                     ];
                 } catch (\Exception $e) {

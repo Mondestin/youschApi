@@ -98,7 +98,7 @@ class PrerequisiteController extends Controller
     {
         return response()->json([
             'success' => true,
-            'data' => $prerequisite->load(['subject', 'prerequisite'])
+            'data' => $prerequisite->load(['subject.course', 'subject.coordinator', 'prerequisite.course', 'prerequisite.coordinator'])
         ]);
     }
 
@@ -165,7 +165,7 @@ class PrerequisiteController extends Controller
         return response()->json([
             'success' => true,
             'message' => 'Prerequisite updated successfully',
-            'data' => $prerequisite->fresh()->load(['subject', 'prerequisite'])
+            'data' => $prerequisite->fresh()->load(['subject.course', 'subject.coordinator', 'prerequisite.course', 'prerequisite.coordinator'])
         ]);
     }
 
@@ -262,7 +262,7 @@ class PrerequisiteController extends Controller
 
         return response()->json([
             'success' => true,
-            'data' => $prerequisites->load(['subject', 'prerequisite']),
+            'data' => $prerequisites->load(['subject.course', 'subject.coordinator', 'prerequisite.course', 'prerequisite.coordinator']),
             'export_format' => 'json'
         ]);
     }

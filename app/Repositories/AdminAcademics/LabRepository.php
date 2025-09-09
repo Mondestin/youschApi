@@ -15,7 +15,7 @@ class LabRepository implements LabRepositoryInterface
      */
     public function getAllLabs(array $filters = []): Collection
     {
-        $query = Lab::with(['subject']);
+        $query = Lab::with(['subject.course', 'subject.coordinator', 'assistant']);
 
         if (isset($filters['subject_id'])) {
             $query->where('subject_id', $filters['subject_id']);
@@ -33,6 +33,26 @@ class LabRepository implements LabRepositoryInterface
             $query->where('schedule', 'like', '%' . $filters['schedule'] . '%');
         }
 
+        if (isset($filters['assistant_id'])) {
+            $query->where('assistant_id', $filters['assistant_id']);
+        }
+
+        if (isset($filters['start_datetime_from'])) {
+            $query->where('start_datetime', '>=', $filters['start_datetime_from']);
+        }
+
+        if (isset($filters['start_datetime_to'])) {
+            $query->where('start_datetime', '<=', $filters['start_datetime_to']);
+        }
+
+        if (isset($filters['end_datetime_from'])) {
+            $query->where('end_datetime', '>=', $filters['end_datetime_from']);
+        }
+
+        if (isset($filters['end_datetime_to'])) {
+            $query->where('end_datetime', '<=', $filters['end_datetime_to']);
+        }
+
         $labs = $query->orderBy('name', 'asc')->get();
 
         return $labs;
@@ -45,7 +65,7 @@ class LabRepository implements LabRepositoryInterface
      */
     public function getLabById(int $id): ?Lab
     {
-        return Lab::with(['subject'])->find($id);
+        return Lab::with(['subject.course', 'subject.coordinator', 'assistant'])->find($id);
     }
 
     /**
@@ -56,7 +76,7 @@ class LabRepository implements LabRepositoryInterface
     public function createLab(array $data): Lab
     {
         $lab = Lab::create($data);
-        return $lab->load(['subject']);
+        return $lab->load(['subject.course', 'subject.coordinator', 'assistant']);
     }
 
     /**
@@ -87,7 +107,7 @@ class LabRepository implements LabRepositoryInterface
      */
     public function getLabsBySubject(int $subjectId): Collection
     {
-        return Lab::with(['subject'])
+        return Lab::with(['subject.course', 'subject.coordinator', 'assistant'])
             ->where('subject_id', $subjectId)
             ->orderBy('name', 'asc')
             ->get();
