@@ -51,9 +51,27 @@ class ExamTypeRepository implements ExamTypeRepositoryInterface
         return $examType->delete();
     }
 
-    public function getAllExamTypes(): Collection
+    public function getAllExamTypes(array $filters = []): Collection
     {
-        return ExamType::orderBy('name')->get();
+        $query = ExamType::query();
+
+        if (isset($filters['name'])) {
+            $query->where('name', 'like', '%' . $filters['name'] . '%');
+        }
+
+        if (isset($filters['weight'])) {
+            $query->where('weight', $filters['weight']);
+        }
+
+        if (isset($filters['min_weight'])) {
+            $query->where('weight', '>=', $filters['min_weight']);
+        }
+
+        if (isset($filters['max_weight'])) {
+            $query->where('weight', '<=', $filters['max_weight']);
+        }
+
+        return $query->orderBy('name')->get();
     }
 
     public function getExamTypesByWeight(float $weight): Collection

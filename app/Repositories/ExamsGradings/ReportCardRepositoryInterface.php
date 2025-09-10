@@ -9,6 +9,7 @@ use Illuminate\Database\Eloquent\Collection;
 interface ReportCardRepositoryInterface
 {
     public function getPaginatedReportCards(array $filters): LengthAwarePaginator;
+    public function getAllReportCards(array $filters): Collection;
     public function getReportCardById(int $id): ?ReportCard;
     public function createReportCard(array $data): ReportCard;
     public function updateReportCard(ReportCard $reportCard, array $data): bool;

@@ -9,6 +9,7 @@ use Illuminate\Database\Eloquent\Collection;
 interface ExamMarkRepositoryInterface
 {
     public function getPaginatedExamMarks(array $filters): LengthAwarePaginator;
+    public function getAllExamMarks(array $filters): Collection;
     public function getExamMarkById(int $id): ?ExamMark;
     public function createExamMark(array $data): ExamMark;
     public function updateExamMark(ExamMark $examMark, array $data): bool;

@@ -60,7 +60,7 @@ class TeacherController extends Controller
                 'last_name' => 'required|string|max:255',
                 'email' => 'required|email|unique:teachers,email',
                 'phone' => 'nullable|string|max:20',
-                'date_of_birth' => 'required|date',
+                'dob' => 'required|date',
                 'gender' => 'required|in:male,female,other',
                 'address' => 'nullable|string',
                 'department_id' => 'required|exists:departments,id',

@@ -249,23 +249,6 @@ class StudentApplicationRepository extends BaseRepository implements StudentAppl
 
     private function generateStudentNumber(int $schoolId): string
     {
-        $prefix = config('students.student_number.prefix', 'STU');
-        $year = date(config('students.student_number.year_format', 'Y'));
-        $separator = config('students.student_number.separator', '');
-        $sequenceLength = config('students.student_number.sequence_length', 4);
-
-        $lastStudent = Student::where('school_id', $schoolId)
-            ->where('student_number', 'like', $prefix . $separator . $year . '%')
-            ->orderBy('student_number', 'desc')
-            ->first();
-
-        if ($lastStudent) {
-            $lastSequence = (int) substr($lastStudent->student_number, -$sequenceLength);
-            $newSequence = $lastSequence + 1;
-        } else {
-            $newSequence = 1;
-        }
-
-        return $prefix . $separator . $year . str_pad($newSequence, $sequenceLength, '0', STR_PAD_LEFT);
+        return Student::generateStudentNumber($schoolId);
     }
 } 

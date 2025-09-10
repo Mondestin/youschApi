@@ -23,7 +23,7 @@ class TeacherTimetableRepository extends BaseRepository implements TeacherTimeta
      */
     public function getPaginatedTimetables(array $filters): LengthAwarePaginator
     {
-        $query = $this->model->with(['teacher', 'class', 'subject', 'academicYear', 'term']);
+        $query = $this->model->with(['teacher', 'classRoom', 'subject']);
 
         // Apply filters
         if (isset($filters['teacher_id'])) {
@@ -38,21 +38,21 @@ class TeacherTimetableRepository extends BaseRepository implements TeacherTimeta
             $query->where('subject_id', $filters['subject_id']);
         }
 
-        if (isset($filters['day_of_week'])) {
-            $query->where('day_of_week', $filters['day_of_week']);
+        if (isset($filters['date'])) {
+            $query->where('date', $filters['date']);
         }
 
-        if (isset($filters['academic_year_id'])) {
-            $query->where('academic_year_id', $filters['academic_year_id']);
+        if (isset($filters['date_from'])) {
+            $query->where('date', '>=', $filters['date_from']);
         }
 
-        if (isset($filters['term_id'])) {
-            $query->where('term_id', $filters['term_id']);
+        if (isset($filters['date_to'])) {
+            $query->where('date', '<=', $filters['date_to']);
         }
 
         $perPage = $filters['per_page'] ?? 15;
 
-        return $query->orderBy('day_of_week')
+        return $query->orderBy('date')
             ->orderBy('start_time')
             ->paginate($perPage);
     }
@@ -65,7 +65,7 @@ class TeacherTimetableRepository extends BaseRepository implements TeacherTimeta
      */
     public function getAllTimetables(array $filters): Collection
     {
-        $query = $this->model->with(['teacher', 'class', 'subject', 'academicYear', 'term']);
+        $query = $this->model->with(['teacher', 'classRoom', 'subject']);
 
         // Apply filters
         if (isset($filters['teacher_id'])) {
@@ -80,19 +80,19 @@ class TeacherTimetableRepository extends BaseRepository implements TeacherTimeta
             $query->where('subject_id', $filters['subject_id']);
         }
 
-        if (isset($filters['day_of_week'])) {
-            $query->where('day_of_week', $filters['day_of_week']);
+        if (isset($filters['date'])) {
+            $query->where('date', $filters['date']);
         }
 
-        if (isset($filters['academic_year_id'])) {
-            $query->where('academic_year_id', $filters['academic_year_id']);
+        if (isset($filters['date_from'])) {
+            $query->where('date', '>=', $filters['date_from']);
         }
 
-        if (isset($filters['term_id'])) {
-            $query->where('term_id', $filters['term_id']);
+        if (isset($filters['date_to'])) {
+            $query->where('date', '<=', $filters['date_to']);
         }
 
-        return $query->orderBy('day_of_week')
+        return $query->orderBy('date')
             ->orderBy('start_time')
             ->get();
     }
@@ -105,7 +105,7 @@ class TeacherTimetableRepository extends BaseRepository implements TeacherTimeta
      */
     public function getTimetableById(int $id): ?TeacherTimetable
     {
-        return $this->model->with(['teacher', 'class', 'subject', 'academicYear', 'term'])->find($id);
+        return $this->model->with(['teacher', 'classRoom', 'subject'])->find($id);
     }
 
     /**
@@ -116,8 +116,6 @@ class TeacherTimetableRepository extends BaseRepository implements TeacherTimeta
      */
     public function createTimetable(array $data): TeacherTimetable
     {
-        $data['is_active'] = $data['is_active'] ?? true;
-        
         return $this->model->create($data);
     }
 
@@ -152,9 +150,9 @@ class TeacherTimetableRepository extends BaseRepository implements TeacherTimeta
      */
     public function getTimetablesByTeacher(int $teacherId): Collection
     {
-        return $this->model->with(['teacher', 'class', 'subject', 'academicYear', 'term'])
+        return $this->model->with(['teacher', 'classRoom', 'subject'])
             ->where('teacher_id', $teacherId)
-            ->orderBy('day_of_week')
+            ->orderBy('date')
             ->orderBy('start_time')
             ->get();
     }
@@ -167,9 +165,9 @@ class TeacherTimetableRepository extends BaseRepository implements TeacherTimeta
      */
     public function getTimetablesByClass(int $classId): Collection
     {
-        return $this->model->with(['teacher', 'class', 'subject', 'academicYear', 'term'])
+        return $this->model->with(['teacher', 'classRoom', 'subject'])
             ->where('class_id', $classId)
-            ->orderBy('day_of_week')
+            ->orderBy('date')
             ->orderBy('start_time')
             ->get();
     }
@@ -182,40 +180,23 @@ class TeacherTimetableRepository extends BaseRepository implements TeacherTimeta
      */
     public function getTimetablesBySubject(int $subjectId): Collection
     {
-        return $this->model->with(['teacher', 'class', 'subject', 'academicYear', 'term'])
+        return $this->model->with(['teacher', 'classRoom', 'subject'])
             ->where('subject_id', $subjectId)
-            ->orderBy('day_of_week')
+            ->orderBy('date')
             ->orderBy('start_time')
             ->get();
     }
 
     /**
-     * Get timetables by day of week
+     * Get timetables by specific date
      *
-     * @param string $dayOfWeek
+     * @param string $date
      * @return Collection
      */
-    public function getTimetablesByDay(string $dayOfWeek): Collection
+    public function getTimetablesByDate(string $date): Collection
     {
-        return $this->model->with(['teacher', 'class', 'subject', 'academicYear', 'term'])
-            ->where('day_of_week', $dayOfWeek)
-            ->orderBy('start_time')
-            ->get();
-    }
-
-    /**
-     * Get timetables by academic year and term
-     *
-     * @param int $academicYearId
-     * @param int $termId
-     * @return Collection
-     */
-    public function getTimetablesByAcademicYearAndTerm(int $academicYearId, int $termId): Collection
-    {
-        return $this->model->with(['teacher', 'class', 'subject', 'academicYear', 'term'])
-            ->where('academic_year_id', $academicYearId)
-            ->where('term_id', $termId)
-            ->orderBy('day_of_week')
+        return $this->model->with(['teacher', 'classRoom', 'subject'])
+            ->where('date', $date)
             ->orderBy('start_time')
             ->get();
     }
@@ -224,40 +205,31 @@ class TeacherTimetableRepository extends BaseRepository implements TeacherTimeta
      * Get teacher weekly schedule
      *
      * @param int $teacherId
-     * @param int $academicYearId
-     * @param int $termId
+     * @param string $startDate
+     * @param string $endDate
      * @return array
      */
-    public function getTeacherWeeklySchedule(int $teacherId, int $academicYearId, int $termId): array
+    public function getTeacherWeeklySchedule(int $teacherId, string $startDate, string $endDate): array
     {
-        $timetables = $this->model->with(['teacher', 'class', 'subject', 'academicYear', 'term'])
+        $timetables = $this->model->with(['teacher', 'classRoom', 'subject'])
             ->where('teacher_id', $teacherId)
-            ->where('academic_year_id', $academicYearId)
-            ->where('term_id', $termId)
-            ->where('is_active', true)
-            ->orderBy('day_of_week')
+            ->whereBetween('date', [$startDate, $endDate])
+            ->orderBy('date')
             ->orderBy('start_time')
             ->get();
 
-        $schedule = [
-            'monday' => [],
-            'tuesday' => [],
-            'wednesday' => [],
-            'thursday' => [],
-            'friday' => [],
-            'saturday' => [],
-            'sunday' => []
-        ];
-
+        $schedule = [];
         foreach ($timetables as $timetable) {
-            $schedule[$timetable->day_of_week][] = [
+            $dayOfWeek = date('l', strtotime($timetable->date));
+            $schedule[$dayOfWeek][] = [
                 'id' => $timetable->id,
+                'date' => $timetable->date,
                 'start_time' => $timetable->start_time,
                 'end_time' => $timetable->end_time,
-                'class' => $timetable->class,
+                'teacher' => $timetable->teacher,
                 'subject' => $timetable->subject,
-                'room_number' => $timetable->room_number,
-                'notes' => $timetable->notes
+                'class' => $timetable->classRoom,
+                'room' => $timetable->room
             ];
         }
 
@@ -268,40 +240,30 @@ class TeacherTimetableRepository extends BaseRepository implements TeacherTimeta
      * Get class weekly schedule
      *
      * @param int $classId
-     * @param int $academicYearId
-     * @param int $termId
+     * @param string $startDate
+     * @param string $endDate
      * @return array
      */
-    public function getClassWeeklySchedule(int $classId, int $academicYearId, int $termId): array
+    public function getClassWeeklySchedule(int $classId, string $startDate, string $endDate): array
     {
-        $timetables = $this->model->with(['teacher', 'class', 'subject', 'academicYear', 'term'])
+        $timetables = $this->model->with(['teacher', 'classRoom', 'subject'])
             ->where('class_id', $classId)
-            ->where('academic_year_id', $academicYearId)
-            ->where('term_id', $termId)
-            ->where('is_active', true)
-            ->orderBy('day_of_week')
+            ->whereBetween('date', [$startDate, $endDate])
+            ->orderBy('date')
             ->orderBy('start_time')
             ->get();
 
-        $schedule = [
-            'monday' => [],
-            'tuesday' => [],
-            'wednesday' => [],
-            'thursday' => [],
-            'friday' => [],
-            'saturday' => [],
-            'sunday' => []
-        ];
-
+        $schedule = [];
         foreach ($timetables as $timetable) {
-            $schedule[$timetable->day_of_week][] = [
+            $dayOfWeek = date('l', strtotime($timetable->date));
+            $schedule[$dayOfWeek][] = [
                 'id' => $timetable->id,
+                'date' => $timetable->date,
                 'start_time' => $timetable->start_time,
                 'end_time' => $timetable->end_time,
                 'teacher' => $timetable->teacher,
                 'subject' => $timetable->subject,
-                'room_number' => $timetable->room_number,
-                'notes' => $timetable->notes
+                'room' => $timetable->room
             ];
         }
 
@@ -312,29 +274,22 @@ class TeacherTimetableRepository extends BaseRepository implements TeacherTimeta
      * Check for time conflicts
      *
      * @param int $teacherId
-     * @param string $dayOfWeek
+     * @param string $date
      * @param string $startTime
      * @param string $endTime
-     * @param int $academicYearId
-     * @param int $termId
      * @param int|null $excludeId
      * @return Collection
      */
     public function checkTimeConflicts(
         int $teacherId,
-        string $dayOfWeek,
+        string $date,
         string $startTime,
         string $endTime,
-        int $academicYearId,
-        int $termId,
         ?int $excludeId = null
     ): Collection {
-        $query = $this->model->with(['teacher', 'class', 'subject'])
+        $query = $this->model->with(['teacher', 'classRoom', 'subject'])
             ->where('teacher_id', $teacherId)
-            ->where('day_of_week', $dayOfWeek)
-            ->where('academic_year_id', $academicYearId)
-            ->where('term_id', $termId)
-            ->where('is_active', true);
+            ->where('date', $date);
 
         if ($excludeId) {
             $query->where('id', '!=', $excludeId);
@@ -358,31 +313,109 @@ class TeacherTimetableRepository extends BaseRepository implements TeacherTimeta
     public function getTimetableStatistics(): array
     {
         $totalEntries = $this->model->count();
-        $activeEntries = $this->model->where('is_active', true)->count();
-        $inactiveEntries = $this->model->where('is_active', false)->count();
-
-        $entriesByDay = $this->model->selectRaw('day_of_week, COUNT(*) as count')
-            ->groupBy('day_of_week')
-            ->pluck('count', 'day_of_week')
+        
+        $entriesByDate = $this->model->selectRaw('date, COUNT(*) as count')
+            ->groupBy('date')
+            ->pluck('count', 'date')
             ->toArray();
 
-        $entriesByAcademicYear = $this->model->selectRaw('academic_year_id, COUNT(*) as count')
-            ->groupBy('academic_year_id')
-            ->pluck('count', 'academic_year_id')
+        $entriesByTeacher = $this->model->selectRaw('teacher_id, COUNT(*) as count')
+            ->groupBy('teacher_id')
+            ->pluck('count', 'teacher_id')
             ->toArray();
 
-        $entriesByTerm = $this->model->selectRaw('term_id, COUNT(*) as count')
-            ->groupBy('term_id')
-            ->pluck('count', 'term_id')
+        $entriesByClass = $this->model->selectRaw('class_id, COUNT(*) as count')
+            ->groupBy('class_id')
+            ->pluck('count', 'class_id')
+            ->toArray();
+
+        $entriesBySubject = $this->model->selectRaw('subject_id, COUNT(*) as count')
+            ->groupBy('subject_id')
+            ->pluck('count', 'subject_id')
             ->toArray();
 
         return [
             'total_entries' => $totalEntries,
-            'active_entries' => $activeEntries,
-            'inactive_entries' => $inactiveEntries,
-            'entries_by_day' => $entriesByDay,
-            'entries_by_academic_year' => $entriesByAcademicYear,
-            'entries_by_term' => $entriesByTerm
+            'entries_by_date' => $entriesByDate,
+            'entries_by_teacher' => $entriesByTeacher,
+            'entries_by_class' => $entriesByClass,
+            'entries_by_subject' => $entriesBySubject
         ];
+    }
+
+    /**
+     * Get timetables by date range
+     *
+     * @param string $startDate
+     * @param string $endDate
+     * @return Collection
+     */
+    public function getTimetablesByDateRange(string $startDate, string $endDate): Collection
+    {
+        return $this->model->with(['teacher', 'classRoom', 'subject'])
+            ->whereBetween('date', [$startDate, $endDate])
+            ->orderBy('date')
+            ->orderBy('start_time')
+            ->get();
+    }
+
+    /**
+     * Get timetables by time range
+     *
+     * @param string $startTime
+     * @param string $endTime
+     * @return Collection
+     */
+    public function getTimetablesByTimeRange(string $startTime, string $endTime): Collection
+    {
+        return $this->model->with(['teacher', 'classRoom', 'subject'])
+            ->where(function ($query) use ($startTime, $endTime) {
+                $query->whereBetween('start_time', [$startTime, $endTime])
+                    ->orWhereBetween('end_time', [$startTime, $endTime])
+                    ->orWhere(function ($subQuery) use ($startTime, $endTime) {
+                        $subQuery->where('start_time', '<=', $startTime)
+                            ->where('end_time', '>=', $endTime);
+                    });
+            })
+            ->orderBy('start_time')
+            ->get();
+    }
+
+    /**
+     * Generate timetable for a teacher based on constraints
+     *
+     * @param int $teacherId
+     * @param array $constraints
+     * @return Collection
+     */
+    public function generateTimetable(int $teacherId, array $constraints): Collection
+    {
+        $query = $this->model->with(['teacher', 'classRoom', 'subject'])
+            ->where('teacher_id', $teacherId);
+
+        // Apply constraints
+        if (isset($constraints['date_from'])) {
+            $query->where('date', '>=', $constraints['date_from']);
+        }
+
+        if (isset($constraints['date_to'])) {
+            $query->where('date', '<=', $constraints['date_to']);
+        }
+
+        if (isset($constraints['class_id'])) {
+            $query->where('class_id', $constraints['class_id']);
+        }
+
+        if (isset($constraints['subject_id'])) {
+            $query->where('subject_id', $constraints['subject_id']);
+        }
+
+        if (isset($constraints['date'])) {
+            $query->where('date', $constraints['date']);
+        }
+
+        return $query->orderBy('date')
+            ->orderBy('start_time')
+            ->get();
     }
 } 

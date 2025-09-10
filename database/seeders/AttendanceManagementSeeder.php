@@ -4,7 +4,19 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
-use Carbon\Carbon;
+use App\Models\User;
+use App\Models\Students\Student;
+use App\Models\AdminAcademics\{
+    School,
+    Campus,
+    Faculty,
+    Department,
+    Course,
+    Subject,
+    ClassRoom,
+    AcademicYear,
+    Term
+};
 
 class AttendanceManagementSeeder extends Seeder
 {
@@ -13,405 +25,485 @@ class AttendanceManagementSeeder extends Seeder
      */
     public function run(): void
     {
-        $this->seedStudentAttendance();
-        $this->seedTeacherAttendance();
-        $this->seedStudentAttendanceExcuses();
-        $this->seedTeacherAttendanceExcuses();
+        $this->command->info('🌱 Démarrage du Seeder de Gestion des Présences...');
+
+        // Create schools and campuses first
+        $this->createSchoolsAndCampuses();
+        
+        // Create academic structure
+        $this->createAcademicStructure();
+        
+        // Create academic years and terms
+        $this->createAcademicYearsAndTerms();
+        
+        // Create classes and subjects
+        $this->createClassesAndSubjects();
+        
+        // Create timetables
+        $this->createTimetables();
+        
+        // Create student attendance records
+        $this->createStudentAttendance();
+        
+        // Create teacher attendance records
+        $this->createTeacherAttendance();
+
+        $this->command->info('✅ Seeder de Gestion des Présences terminé avec succès !');
     }
 
     /**
-     * Seed student attendance data.
+     * Create schools and campuses
      */
-    private function seedStudentAttendance(): void
+    private function createSchoolsAndCampuses(): void
     {
-        $students = DB::table('students')->pluck('id')->toArray();
-        $classes = DB::table('classes')->pluck('id')->toArray();
-        $subjects = DB::table('subjects')->pluck('id')->toArray();
-        $timetables = DB::table('timetables')->pluck('id')->toArray();
+        $this->command->info('🏫 Création des écoles et campus...');
 
-        if (empty($students) || empty($classes) || empty($subjects) || empty($timetables)) {
-            $this->command->warn('Skipping student attendance seeding - required data not found');
+        // Create main school
+        $school = School::firstOrCreate([
+            'name' => 'École Internationale Yousch',
+        ], [
+            'domain' => 'yousch.edu',
+            'contact_info' => 'Contactez-nous pour plus d\'informations',
+            'address' => '123 Rue de l\'Éducation, Cité du Savoir',
+            'phone' => '+1-555-0123',
+            'email' => 'info@yousch.edu',
+            'website' => 'https://www.yousch.edu',
+            'is_active' => true,
+        ]);
+
+        // Create campuses
+        $campuses = [
+            [
+                'name' => 'Campus Principal',
+                'address' => '123 Rue de l\'Éducation, Cité du Savoir',
+                'phone' => '+1-555-0123',
+                'email' => 'main@yousch.edu',
+                'is_active' => true,
+            ],
+            [
+                'name' => 'Campus Nord',
+                'address' => '456 Avenue de l\'Apprentissage, District Nord',
+                'phone' => '+1-555-0124',
+                'email' => 'north@yousch.edu',
+                'is_active' => true,
+            ],
+        ];
+
+        foreach ($campuses as $campusData) {
+            Campus::firstOrCreate([
+                'name' => $campusData['name'],
+            ], array_merge($campusData, ['school_id' => $school->id]));
+        }
+
+        $this->command->info('✅ Écoles et campus créés avec succès');
+    }
+
+    /**
+     * Create academic structure
+     */
+    private function createAcademicStructure(): void
+    {
+        $this->command->info('📚 Création de la structure académique...');
+
+        $school = School::first();
+        $mainCampus = Campus::where('name', 'Campus Principal')->first();
+
+        // Create faculties
+        $faculties = [
+            [
+                'name' => 'Faculté des Sciences et Technologies',
+                'description' => 'Recherche et éducation de pointe en sciences et technologies',
+            ],
+            [
+                'name' => 'Faculté des Affaires et de l\'Économie',
+                'description' => 'Préparation des futurs leaders d\'affaires et économistes',
+            ],
+            [
+                'name' => 'Faculté des Arts et Humanités',
+                'description' => 'Exploration de la créativité, de la culture et de l\'expression humaine',
+            ],
+        ];
+
+        foreach ($faculties as $facultyData) {
+            Faculty::firstOrCreate([
+                'name' => $facultyData['name'],
+            ], array_merge($facultyData, ['school_id' => $school->id]));
+        }
+
+        // Create departments
+        $departments = [
+            [
+                'faculty_id' => Faculty::where('name', 'Faculté des Sciences et Technologies')->first()->id,
+                'name' => 'Informatique',
+                'head_id' => null, // Will be set later
+            ],
+            [
+                'faculty_id' => Faculty::where('name', 'Faculté des Sciences et Technologies')->first()->id,
+                'name' => 'Mathématiques',
+                'head_id' => null, // Will be set later
+            ],
+            [
+                'faculty_id' => Faculty::where('name', 'Faculté des Affaires et de l\'Économie')->first()->id,
+                'name' => 'Administration des Affaires',
+                'head_id' => null, // Will be set later
+            ],
+            [
+                'faculty_id' => Faculty::where('name', 'Faculté des Arts et Humanités')->first()->id,
+                'name' => 'Littérature Anglaise',
+                'head_id' => null, // Will be set later
+            ],
+        ];
+
+        foreach ($departments as $departmentData) {
+            Department::firstOrCreate([
+                'name' => $departmentData['name'],
+            ], $departmentData);
+        }
+
+        // Create courses
+        $courses = [
+            [
+                'department_id' => Department::where('name', 'Informatique')->first()->id,
+                'name' => 'Baccalauréat en Informatique',
+                'code' => 'BCS',
+                'description' => 'Programme complet d\'informatique',
+            ],
+            [
+                'department_id' => Department::where('name', 'Mathématiques')->first()->id,
+                'name' => 'Baccalauréat en Mathématiques',
+                'code' => 'BMATH',
+                'description' => 'Programme de mathématiques avancées',
+            ],
+            [
+                'department_id' => Department::where('name', 'Administration des Affaires')->first()->id,
+                'name' => 'Baccalauréat en Administration des Affaires',
+                'code' => 'BBA',
+                'description' => 'Programme de gestion des affaires',
+            ],
+            [
+                'department_id' => Department::where('name', 'Littérature Anglaise')->first()->id,
+                'name' => 'Baccalauréat ès Arts en Anglais',
+                'code' => 'BAENG',
+                'description' => 'Programme de littérature et langue anglaise',
+            ],
+        ];
+
+        foreach ($courses as $courseData) {
+            Course::firstOrCreate([
+                'name' => $courseData['name'],
+            ], $courseData);
+        }
+
+        // Create subjects
+        $subjects = [
+            [
+                'course_id' => Course::where('code', 'BCS')->first()->id,
+                'name' => 'Introduction à la Programmation',
+                'code' => 'CS101',
+                'description' => 'Concepts et pratiques de programmation de base',
+                'coordinator_id' => null, // Will be set later
+            ],
+            [
+                'course_id' => Course::where('code', 'BMATH')->first()->id,
+                'name' => 'Calcul I',
+                'code' => 'MATH101',
+                'description' => 'Concepts fondamentaux du calcul',
+                'coordinator_id' => null, // Will be set later
+            ],
+            [
+                'course_id' => Course::where('code', 'BBA')->first()->id,
+                'name' => 'Principes de Gestion',
+                'code' => 'BUS101',
+                'description' => 'Principes de gestion de base',
+                'coordinator_id' => null, // Will be set later
+            ],
+            [
+                'course_id' => Course::where('code', 'BAENG')->first()->id,
+                'name' => 'Introduction à la Littérature',
+                'code' => 'ENG101',
+                'description' => 'Analyse et appréciation littéraire',
+                'coordinator_id' => null, // Will be set later
+            ],
+        ];
+
+        foreach ($subjects as $subjectData) {
+            Subject::firstOrCreate([
+                'name' => $subjectData['name'],
+            ], $subjectData);
+        }
+
+        $this->command->info('✅ Structure académique créée avec succès');
+    }
+
+    /**
+     * Create academic years and terms
+     */
+    private function createAcademicYearsAndTerms(): void
+    {
+        $this->command->info('📅 Création des années académiques et trimestres...');
+
+        $school = School::first();
+
+        // Create current academic year
+        $currentYear = AcademicYear::firstOrCreate([
+            'name' => '2024-2025',
+        ], [
+            'school_id' => $school->id,
+            'start_date' => '2024-09-01',
+            'end_date' => '2025-06-30',
+            'is_active' => true,
+        ]);
+
+        // Create terms for current academic year
+        $terms = [
+            [
+                'name' => 'Semestre d\'Automne',
+                'start_date' => '2024-09-01',
+                'end_date' => '2024-12-20',
+                'is_active' => true,
+            ],
+            [
+                'name' => 'Semestre de Printemps',
+                'start_date' => '2025-01-15',
+                'end_date' => '2025-05-15',
+                'is_active' => false,
+            ],
+            [
+                'name' => 'Session d\'Été',
+                'start_date' => '2025-06-01',
+                'end_date' => '2025-07-31',
+                'is_active' => false,
+            ],
+        ];
+
+        foreach ($terms as $termData) {
+            Term::firstOrCreate([
+                'name' => $termData['name'],
+            ], array_merge($termData, ['academic_year_id' => $currentYear->id]));
+        }
+
+        $this->command->info('✅ Années académiques et trimestres créés avec succès');
+    }
+
+    /**
+     * Create classes and subjects
+     */
+    private function createClassesAndSubjects(): void
+    {
+        $this->command->info('🏫 Création des classes et affectations de matières...');
+
+        $mainCampus = Campus::where('name', 'Campus Principal')->first();
+        $courses = Course::all();
+
+        // Create classes for each course
+        foreach ($courses as $course) {
+            ClassRoom::firstOrCreate([
+                'name' => $course->code . ' - Classe A',
+            ], [
+                'campus_id' => $mainCampus->id,
+                'course_id' => $course->id,
+                'capacity' => 30,
+            ]);
+
+            ClassRoom::firstOrCreate([
+                'name' => $course->code . ' - Classe B',
+            ], [
+                'campus_id' => $mainCampus->id,
+                'course_id' => $course->id,
+                'capacity' => 25,
+            ]);
+        }
+
+        $this->command->info('✅ Classes et affectations de matières créées avec succès');
+    }
+
+    /**
+     * Create timetables
+     */
+    private function createTimetables(): void
+    {
+        $this->command->info('⏰ Création des emplois du temps...');
+
+        $classes = ClassRoom::all();
+        $subjects = Subject::all();
+        $teachers = User::whereIn('email', [
+            'sarah.johnson@yousch.edu',
+            'michael.chen@yousch.edu',
+            'emily.rodriguez@yousch.edu',
+            'david.thompson@yousch.edu'
+        ])->get();
+
+        $currentDate = now()->startOfWeek();
+        
+        foreach ($classes as $class) {
+            $course = $class->course;
+            $courseSubjects = Subject::where('course_id', $course->id)->get();
+            
+            foreach ($courseSubjects as $index => $subject) {
+                $teacher = $teachers[$index % $teachers->count()];
+                
+                // Create weekly schedule for this subject
+                for ($day = 0; $day < 5; $day++) { // Monday to Friday
+                    $date = $currentDate->copy()->addDays($day);
+                    
+                    DB::table('timetables')->insert([
+                        'class_id' => $class->id,
+                        'subject_id' => $subject->id,
+                        'teacher_id' => $teacher->id,
+                        'date' => $date->format('Y-m-d'),
+                        'start_time' => '09:00:00',
+                        'end_time' => '10:30:00',
+                        'room' => 'Salle ' . ($index + 101),
+                        'created_at' => now(),
+                        'updated_at' => now(),
+                    ]);
+                    
+                    DB::table('timetables')->insert([
+                        'class_id' => $class->id,
+                        'subject_id' => $subject->id,
+                        'teacher_id' => $teacher->id,
+                        'date' => $date->format('Y-m-d'),
+                        'start_time' => '14:00:00',
+                        'end_time' => '15:30:00',
+                        'room' => 'Salle ' . ($index + 101),
+                        'created_at' => now(),
+                        'updated_at' => now(),
+                    ]);
+                }
+            }
+        }
+
+        $this->command->info('✅ Emplois du temps créés avec succès');
+    }
+
+    /**
+     * Create student attendance records
+     */
+    private function createStudentAttendance(): void
+    {
+        $this->command->info('📚 Création des enregistrements de présence des étudiants...');
+
+        $students = Student::where('status', 'active')->get();
+        $classes = ClassRoom::all();
+        $subjects = Subject::all();
+        $timetables = DB::table('timetables')->get();
+
+        if ($students->isEmpty()) {
+            $this->command->warn('No active students found. Skipping student attendance creation.');
             return;
         }
 
-        $attendanceData = [];
-        $startDate = Carbon::now()->subDays(30);
-        $endDate = Carbon::now();
-
-        for ($date = $startDate; $date->lte($endDate); $date->addDay()) {
-            // Skip weekends
-            if ($date->isWeekend()) {
-                continue;
-            }
-
-            foreach ($classes as $classId) {
-                $classStudents = array_slice($students, 0, rand(15, 25)); // Random number of students per class
+        foreach ($students as $student) {
+            $class = $classes->random();
+            $classSubjects = Subject::where('course_id', $class->course_id)->get();
+            
+            foreach ($classSubjects as $subject) {
+                $timetable = $timetables->where('class_id', $class->id)
+                                       ->where('subject_id', $subject->id)
+                                       ->first();
                 
-                foreach ($classStudents as $studentId) {
-                    $subjectId = $subjects[array_rand($subjects)];
-                    $timetableId = $timetables[array_rand($timetables)];
-                    
+                if ($timetable) {
+                    // Create attendance for the past week
+                    for ($day = 0; $day < 5; $day++) {
+                        $date = now()->subDays($day);
+                        $status = $this->getRandomAttendanceStatus();
+                        
+                        DB::table('student_attendance')->insert([
+                            'student_id' => $student->id,
+                            'class_id' => $class->id,
+                            'subject_id' => $subject->id,
+                            'lab_id' => null,
+                            'timetable_id' => $timetable->id,
+                            'date' => $date->format('Y-m-d'),
+                            'status' => $status,
+                            'remarks' => $this->getAttendanceRemarks($status),
+                            'created_at' => now(),
+                            'updated_at' => now(),
+                        ]);
+                    }
+                }
+            }
+        }
+
+        $this->command->info('✅ Enregistrements de présence des étudiants créés avec succès');
+    }
+
+    /**
+     * Create teacher attendance records
+     */
+    private function createTeacherAttendance(): void
+    {
+        $this->command->info('👨‍🏫 Création des enregistrements de présence des enseignants...');
+
+        $teachers = User::whereIn('email', [
+            'sarah.johnson@yousch.edu',
+            'michael.chen@yousch.edu',
+            'emily.rodriguez@yousch.edu',
+            'david.thompson@yousch.edu'
+        ])->get();
+        
+        $timetables = DB::table('timetables')->get();
+
+        foreach ($teachers as $teacher) {
+            $teacherTimetables = $timetables->where('teacher_id', $teacher->id);
+            
+            foreach ($teacherTimetables as $timetable) {
+                // Create attendance for the past week
+                for ($day = 0; $day < 5; $day++) {
+                    $date = now()->subDays($day);
                     $status = $this->getRandomAttendanceStatus();
-                    $remarks = $this->getRandomRemarks($status);
-
-                    $attendanceData[] = [
-                        'student_id' => $studentId,
-                        'class_id' => $classId,
-                        'subject_id' => $subjectId,
-                        'lab_id' => null, // No lab for now
-                        'timetable_id' => $timetableId,
-                        'date' => $date->format('Y-m-d'),
-                        'status' => $status,
-                        'remarks' => $remarks,
-                        'created_at' => now(),
-                        'updated_at' => now(),
-                    ];
-                }
-            }
-        }
-
-        // Insert in chunks to avoid memory issues
-        foreach (array_chunk($attendanceData, 1000) as $chunk) {
-            DB::table('student_attendance')->insert($chunk);
-        }
-
-        $this->command->info('Student attendance data seeded successfully');
-    }
-
-    /**
-     * Seed teacher attendance data.
-     */
-    private function seedTeacherAttendance(): void
-    {
-        $teachers = DB::table('teachers')->pluck('id')->toArray();
-        $classes = DB::table('classes')->pluck('id')->toArray();
-        $subjects = DB::table('subjects')->pluck('id')->toArray();
-        $timetables = DB::table('timetables')->pluck('id')->toArray();
-
-        if (empty($teachers) || empty($classes) || empty($subjects) || empty($timetables)) {
-            $this->command->warn('Skipping teacher attendance seeding - required data not found');
-            return;
-        }
-
-        $attendanceData = [];
-        $startDate = Carbon::now()->subDays(30);
-        $endDate = Carbon::now();
-
-        for ($date = $startDate; $date->lte($endDate); $date->addDay()) {
-            // Skip weekends
-            if ($date->isWeekend()) {
-                continue;
-            }
-
-            foreach ($classes as $classId) {
-                $classTeachers = array_slice($teachers, 0, rand(3, 8)); // Random number of teachers per class
-                
-                foreach ($classTeachers as $teacherId) {
-                    $subjectId = $subjects[array_rand($subjects)];
-                    $timetableId = $timetables[array_rand($timetables)];
                     
-                    $status = $this->getRandomTeacherAttendanceStatus();
-                    $remarks = $this->getRandomTeacherRemarks($status);
-
-                    $attendanceData[] = [
-                        'teacher_id' => $teacherId,
-                        'class_id' => $classId,
-                        'subject_id' => $subjectId,
-                        'lab_id' => null, // No lab for now
-                        'timetable_id' => $timetableId,
+                    DB::table('teacher_attendance')->insert([
+                        'teacher_id' => $teacher->id,
+                        'class_id' => $timetable->class_id,
+                        'subject_id' => $timetable->subject_id,
+                        'lab_id' => null,
+                        'timetable_id' => $timetable->id,
                         'date' => $date->format('Y-m-d'),
                         'status' => $status,
-                        'remarks' => $remarks,
+                        'remarks' => $this->getAttendanceRemarks($status),
                         'created_at' => now(),
                         'updated_at' => now(),
-                    ];
+                    ]);
                 }
             }
         }
 
-        // Insert in chunks to avoid memory issues
-        foreach (array_chunk($attendanceData, 1000) as $chunk) {
-            DB::table('teacher_attendance')->insert($chunk);
-        }
-
-        $this->command->info('Teacher attendance data seeded successfully');
+        $this->command->info('✅ Enregistrements de présence des enseignants créés avec succès');
     }
 
     /**
-     * Seed student attendance excuses.
-     */
-    private function seedStudentAttendanceExcuses(): void
-    {
-        $students = DB::table('students')->pluck('id')->toArray();
-        $classes = DB::table('classes')->pluck('id')->toArray();
-        $subjects = DB::table('subjects')->pluck('id')->toArray();
-        $users = DB::table('users')->pluck('id')->toArray();
-
-        if (empty($students) || empty($classes) || empty($subjects) || empty($users)) {
-            $this->command->warn('Skipping student excuses seeding - required data not found');
-            return;
-        }
-
-        $excuseData = [];
-        $startDate = Carbon::now()->subDays(30);
-        $endDate = Carbon::now();
-
-        for ($date = $startDate; $date->lte($endDate); $date->addDay()) {
-            // Skip weekends
-            if ($date->isWeekend()) {
-                continue;
-            }
-
-            // Generate 1-5 excuses per day
-            $numExcuses = rand(1, 5);
-            
-            for ($i = 0; $i < $numExcuses; $i++) {
-                $studentId = $students[array_rand($students)];
-                $classId = $classes[array_rand($classes)];
-                $subjectId = $subjects[array_rand($subjects)];
-                $status = $this->getRandomExcuseStatus();
-                
-                $excuseData[] = [
-                    'student_id' => $studentId,
-                    'class_id' => $classId,
-                    'subject_id' => $subjectId,
-                    'lab_id' => null,
-                    'date' => $date->format('Y-m-d'),
-                    'reason' => $this->getRandomExcuseReason(),
-                    'document_path' => null, // No documents for now
-                    'status' => $status,
-                    'reviewed_by' => $status !== 'pending' ? $users[array_rand($users)] : null,
-                    'reviewed_on' => $status !== 'pending' ? now() : null,
-                    'created_at' => now(),
-                    'updated_at' => now(),
-                ];
-            }
-        }
-
-        // Insert in chunks to avoid memory issues
-        foreach (array_chunk($excuseData, 500) as $chunk) {
-            DB::table('student_attendance_excuses')->insert($chunk);
-        }
-
-        $this->command->info('Student attendance excuses seeded successfully');
-    }
-
-    /**
-     * Seed teacher attendance excuses.
-     */
-    private function seedTeacherAttendanceExcuses(): void
-    {
-        $teachers = DB::table('teachers')->pluck('id')->toArray();
-        $classes = DB::table('classes')->pluck('id')->toArray();
-        $subjects = DB::table('subjects')->pluck('id')->toArray();
-        $users = DB::table('users')->pluck('id')->toArray();
-
-        if (empty($teachers) || empty($classes) || empty($subjects) || empty($users)) {
-            $this->command->warn('Skipping teacher excuses seeding - required data not found');
-            return;
-        }
-
-        $excuseData = [];
-        $startDate = Carbon::now()->subDays(30);
-        $endDate = Carbon::now();
-
-        for ($date = $startDate; $date->lte($endDate); $date->addDay()) {
-            // Skip weekends
-            if ($date->isWeekend()) {
-                continue;
-            }
-
-            // Generate 0-3 excuses per day (teachers have fewer excuses)
-            $numExcuses = rand(0, 3);
-            
-            for ($i = 0; $i < $numExcuses; $i++) {
-                $teacherId = $teachers[array_rand($teachers)];
-                $classId = $classes[array_rand($classes)];
-                $subjectId = $subjects[array_rand($subjects)];
-                $status = $this->getRandomExcuseStatus();
-                
-                $excuseData[] = [
-                    'teacher_id' => $teacherId,
-                    'class_id' => $classId,
-                    'subject_id' => $subjectId,
-                    'lab_id' => null,
-                    'date' => $date->format('Y-m-d'),
-                    'reason' => $this->getRandomTeacherExcuseReason(),
-                    'document_path' => null, // No documents for now
-                    'status' => $status,
-                    'reviewed_by' => $status !== 'pending' ? $users[array_rand($users)] : null,
-                    'reviewed_on' => $status !== 'pending' ? now() : null,
-                    'created_at' => now(),
-                    'updated_at' => now(),
-                ];
-            }
-        }
-
-        // Insert in chunks to avoid memory issues
-        foreach (array_chunk($excuseData, 500) as $chunk) {
-            DB::table('teacher_attendance_excuses')->insert($chunk);
-        }
-
-        $this->command->info('Teacher attendance excuses seeded successfully');
-    }
-
-    /**
-     * Get random attendance status for students.
+     * Get random attendance status
      */
     private function getRandomAttendanceStatus(): string
     {
-        $statuses = ['present', 'absent', 'late', 'excused'];
-        $weights = [70, 15, 10, 5]; // 70% present, 15% absent, 10% late, 5% excused
-        
-        return $this->getWeightedRandom($statuses, $weights);
-    }
-
-    /**
-     * Get random attendance status for teachers.
-     */
-    private function getRandomTeacherAttendanceStatus(): string
-    {
         $statuses = ['present', 'absent', 'late'];
-        $weights = [85, 10, 5]; // 85% present, 10% absent, 5% late
+        $weights = [75, 15, 10]; // 75% present, 15% absent, 10% late
         
-        return $this->getWeightedRandom($statuses, $weights);
-    }
-
-    /**
-     * Get random excuse status.
-     */
-    private function getRandomExcuseStatus(): string
-    {
-        $statuses = ['pending', 'approved', 'rejected'];
-        $weights = [30, 60, 10]; // 30% pending, 60% approved, 10% rejected
+        $random = rand(1, 100);
+        $cumulative = 0;
         
-        return $this->getWeightedRandom($statuses, $weights);
-    }
-
-    /**
-     * Get random remarks based on status.
-     */
-    private function getRandomRemarks(string $status): ?string
-    {
-        $remarks = [
-            'present' => [
-                'On time',
-                'Present and ready',
-                'Participated actively',
-                null
-            ],
-            'absent' => [
-                'No show',
-                'Not in class',
-                'Absent without notice',
-                null
-            ],
-            'late' => [
-                'Arrived 10 minutes late',
-                'Traffic delay',
-                'Late arrival',
-                null
-            ],
-            'excused' => [
-                'Medical appointment',
-                'Family emergency',
-                'School activity',
-                null
-            ]
-        ];
-
-        $statusRemarks = $remarks[$status] ?? [null];
-        return $statusRemarks[array_rand($statusRemarks)];
-    }
-
-    /**
-     * Get random teacher remarks based on status.
-     */
-    private function getRandomTeacherRemarks(string $status): ?string
-    {
-        $remarks = [
-            'present' => [
-                'On time',
-                'Present and ready',
-                'Class conducted normally',
-                null
-            ],
-            'absent' => [
-                'Substitute teacher assigned',
-                'Class cancelled',
-                'Not available',
-                null
-            ],
-            'late' => [
-                'Arrived 5 minutes late',
-                'Technical issues',
-                'Late arrival',
-                null
-            ]
-        ];
-
-        $statusRemarks = $remarks[$status] ?? [null];
-        return $statusRemarks[array_rand($statusRemarks)];
-    }
-
-    /**
-     * Get random excuse reason for students.
-     */
-    private function getRandomExcuseReason(): string
-    {
-        $reasons = [
-            'Medical appointment',
-            'Family emergency',
-            'Personal illness',
-            'Dental appointment',
-            'Family travel',
-            'Religious observance',
-            'School activity',
-            'Sports competition',
-            'Music lesson',
-            'Therapy session'
-        ];
-
-        return $reasons[array_rand($reasons)];
-    }
-
-    /**
-     * Get random excuse reason for teachers.
-     */
-    private function getRandomTeacherExcuseReason(): string
-    {
-        $reasons = [
-            'Professional development',
-            'Medical appointment',
-            'Family emergency',
-            'Conference attendance',
-            'Training session',
-            'Personal illness',
-            'Administrative meeting',
-            'Curriculum planning',
-            'Assessment marking',
-            'Parent consultation'
-        ];
-
-        return $reasons[array_rand($reasons)];
-    }
-
-    /**
-     * Get weighted random selection.
-     */
-    private function getWeightedRandom(array $items, array $weights): mixed
-    {
-        $totalWeight = array_sum($weights);
-        $random = mt_rand(1, $totalWeight);
-        
-        $currentWeight = 0;
-        foreach ($items as $index => $item) {
-            $currentWeight += $weights[$index];
-            if ($random <= $currentWeight) {
-                return $item;
+        for ($i = 0; $i < count($statuses); $i++) {
+            $cumulative += $weights[$i];
+            if ($random <= $cumulative) {
+                return $statuses[$i];
             }
         }
         
-        return $items[0]; // Fallback
+        return 'present';
+    }
+
+    /**
+     * Get attendance remarks based on status
+     */
+    private function getAttendanceRemarks(string $status): string
+    {
+        $remarks = [
+            'present' => 'Présent et ponctuel',
+            'absent' => 'Absence non justifiée',
+            'late' => 'Arrivé en retard',
+        ];
+        
+        return $remarks[$status] ?? 'Aucune remarque';
     }
 } 

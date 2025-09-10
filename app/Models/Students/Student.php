@@ -12,6 +12,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Support\Facades\Log;
 
 class Student extends Model
 {
@@ -52,6 +53,26 @@ class Student extends Model
     const GENDER_MALE = 'male';
     const GENDER_FEMALE = 'female';
     const GENDER_OTHER = 'other';
+
+    /**
+     * Boot the model.
+     */
+    protected static function boot()
+    {
+        parent::boot();
+
+        // Automatically generate student number before creating a new student
+        static::creating(function ($student) {
+            if (empty($student->student_number) && !empty($student->school_id)) {
+                $student->student_number = static::generateStudentNumber($student->school_id);
+                
+                Log::info('Student number auto-generated in model', [
+                    'student_number' => $student->student_number,
+                    'school_id' => $student->school_id
+                ]);
+            }
+        });
+    }
 
     /**
      * Get the school for this student.
@@ -243,5 +264,45 @@ class Student extends Model
     public function transfer(): bool
     {
         return $this->update(['status' => self::STATUS_TRANSFERRED]);
+    }
+
+    /**
+     * Generate a unique student number for a given school.
+     * 
+     * @param int $schoolId The school ID to generate the student number for
+     * @return string The generated student number
+     */
+    public static function generateStudentNumber(int $schoolId): string
+    {
+        $prefix = config('students.student_number.prefix', 'STU');
+        $year = date(config('students.student_number.year_format', 'Y'));
+        $separator = config('students.student_number.separator', '');
+        $sequenceLength = config('students.student_number.sequence_length', 4);
+
+        // Find the last student number for this school and year
+        $lastStudent = static::where('school_id', $schoolId)
+            ->where('student_number', 'like', $prefix . $separator . $year . '%')
+            ->orderBy('student_number', 'desc')
+            ->first();
+
+        if ($lastStudent) {
+            // Extract the sequence number from the last student number
+            $lastSequence = (int) substr($lastStudent->student_number, -$sequenceLength);
+            $newSequence = $lastSequence + 1;
+        } else {
+            // First student for this school and year
+            $newSequence = 1;
+        }
+
+        // Generate the new student number
+        $studentNumber = $prefix . $separator . $year . str_pad($newSequence, $sequenceLength, '0', STR_PAD_LEFT);
+
+        // Ensure uniqueness (in case of race conditions)
+        while (static::where('student_number', $studentNumber)->exists()) {
+            $newSequence++;
+            $studentNumber = $prefix . $separator . $year . str_pad($newSequence, $sequenceLength, '0', STR_PAD_LEFT);
+        }
+
+        return $studentNumber;
     }
 } 

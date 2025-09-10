@@ -41,7 +41,7 @@ class StudentController extends Controller
             return response()->json([
                 'success' => true,
                 'data' => $students,
-                'message' => 'Students retrieved successfully'
+                'message' => 'Étudiants récupérés avec succès'
             ]);
 
         } catch (\Exception $e) {
@@ -52,7 +52,7 @@ class StudentController extends Controller
 
             return response()->json([
                 'success' => false,
-                'message' => 'Unable to retrieve students'
+                'message' => 'Impossible de récupérer les étudiants'
             ], 500);
         }
     }
@@ -64,11 +64,13 @@ class StudentController extends Controller
     public function store(Request $request): JsonResponse
     {
         try {
+            // Set locale to French for validation messages
+            app()->setLocale('fr');
+            
             $validated = $request->validate([
                 'school_id' => 'required|exists:schools,id',
                 'campus_id' => 'required|exists:campuses,id',
                 'class_id' => 'nullable|exists:classes,id',
-                'student_number' => 'required|string|max:50|unique:students',
                 'first_name' => 'required|string|max:100',
                 'last_name' => 'required|string|max:100',
                 'dob' => 'required|date|before:today',
@@ -81,6 +83,7 @@ class StudentController extends Controller
                 'enrollment_date' => 'required|date',
                 'status' => 'sometimes|in:active,graduated,transferred,suspended,inactive',
                 'profile_picture' => 'nullable|string|max:255',
+                'student_number' => 'nullable|string|max:50|unique:students,student_number',
             ]);
 
             // Check if email is already used by another student
@@ -93,9 +96,19 @@ class StudentController extends Controller
 
                     return response()->json([
                         'success' => false,
-                        'message' => 'Email is already registered'
+                        'message' => 'Cet email est déjà enregistré'
                     ], 422);
                 }
+            }
+
+            // Generate student number if not provided
+            if (empty($validated['student_number'])) {
+                $validated['student_number'] = $this->studentRepository->generateStudentNumber($validated['school_id']);
+                
+                Log::info('Student number generated', [
+                    'student_number' => $validated['student_number'],
+                    'school_id' => $validated['school_id']
+                ]);
             }
 
             $student = $this->studentRepository->createStudent($validated);
@@ -110,7 +123,8 @@ class StudentController extends Controller
 
             return response()->json([
                 'success' => true,
-                'message' => 'Student created successfully',
+                'status' => 'success',
+                'message' => 'Étudiant créé avec succès',
                 'data' => $student->load(['school', 'campus', 'classRoom'])
             ], 201);
 
@@ -122,7 +136,7 @@ class StudentController extends Controller
 
             return response()->json([
                 'success' => false,
-                'message' => 'Validation failed',
+                'message' => 'Échec de la validation',
                 'errors' => $e->errors()
             ], 422);
         } catch (\Exception $e) {
@@ -134,7 +148,7 @@ class StudentController extends Controller
 
             return response()->json([
                 'success' => false,
-                'message' => 'Unable to create student'
+                'message' => 'Impossible de créer l\'étudiant'
             ], 500);
         }
     }
@@ -151,7 +165,7 @@ class StudentController extends Controller
             if (!$student) {
                 return response()->json([
                     'success' => false,
-                    'message' => 'Student not found'
+                    'message' => 'Étudiant non trouvé'
                 ], 404);
             }
 
@@ -175,7 +189,7 @@ class StudentController extends Controller
 
             return response()->json([
                 'success' => false,
-                'message' => 'Unable to retrieve student'
+                'message' => 'Impossible de récupérer l\'étudiant'
             ], 500);
         }
     }
@@ -187,6 +201,9 @@ class StudentController extends Controller
     public function update(Request $request, Student $student): JsonResponse
     {
         try {
+            // Set locale to French for validation messages
+            app()->setLocale('fr');
+            
             $validated = $request->validate([
                 'class_id' => 'sometimes|nullable|exists:classes,id',
                 'first_name' => 'sometimes|required|string|max:100',
@@ -213,7 +230,8 @@ class StudentController extends Controller
 
             return response()->json([
                 'success' => true,
-                'message' => 'Student updated successfully',
+                'status' => 'success',
+                'message' => 'Étudiant mis à jour avec succès',
                 'data' => $this->studentRepository->getStudentById($student->id, ['school', 'campus', 'classRoom'])
             ]);
 
@@ -226,7 +244,7 @@ class StudentController extends Controller
 
             return response()->json([
                 'success' => false,
-                'message' => 'Validation failed',
+                'message' => 'Échec de la validation',
                 'errors' => $e->errors()
             ], 422);
         } catch (\Exception $e) {
@@ -239,7 +257,7 @@ class StudentController extends Controller
 
             return response()->json([
                 'success' => false,
-                'message' => 'Unable to update student'
+                'message' => 'Impossible de mettre à jour l\'étudiant'
             ], 500);
         }
     }
@@ -262,7 +280,7 @@ class StudentController extends Controller
 
                 return response()->json([
                     'success' => false,
-                    'message' => 'Cannot delete student with related records'
+                    'message' => 'Impossible de supprimer l\'étudiant avec des enregistrements liés'
                 ], 422);
             }
 
@@ -280,7 +298,8 @@ class StudentController extends Controller
 
             return response()->json([
                 'success' => true,
-                'message' => 'Student deleted successfully'
+                'status' => 'success',
+                'message' => 'Étudiant supprimé avec succès'
             ]);
 
         } catch (\Exception $e) {
@@ -292,7 +311,7 @@ class StudentController extends Controller
 
             return response()->json([
                 'success' => false,
-                'message' => 'Unable to delete student'
+                'message' => 'Impossible de supprimer l\'étudiant'
             ], 500);
         }
     }
@@ -304,6 +323,9 @@ class StudentController extends Controller
     public function changeStatus(Request $request, Student $student): JsonResponse
     {
         try {
+            // Set locale to French for validation messages
+            app()->setLocale('fr');
+            
             $validated = $request->validate([
                 'status' => 'required|in:active,graduated,transferred,suspended,inactive',
             ]);
@@ -320,7 +342,8 @@ class StudentController extends Controller
 
             return response()->json([
                 'success' => true,
-                'message' => 'Student status updated successfully',
+                'status' => 'success',
+                'message' => 'Statut de l\'étudiant mis à jour avec succès',
                 'data' => $this->studentRepository->getStudentById($student->id)
             ]);
 
@@ -333,7 +356,7 @@ class StudentController extends Controller
 
             return response()->json([
                 'success' => false,
-                'message' => 'Validation failed',
+                'message' => 'Échec de la validation',
                 'errors' => $e->errors()
             ], 422);
         } catch (\Exception $e) {
@@ -346,7 +369,7 @@ class StudentController extends Controller
 
             return response()->json([
                 'success' => false,
-                'message' => 'Unable to update student status'
+                'message' => 'Impossible de mettre à jour le statut de l\'étudiant'
             ], 500);
         }
     }
@@ -358,6 +381,9 @@ class StudentController extends Controller
     public function assignToClass(Request $request, Student $student): JsonResponse
     {
         try {
+            // Set locale to French for validation messages
+            app()->setLocale('fr');
+            
             $validated = $request->validate([
                 'class_id' => 'required|exists:classes,id',
             ]);
@@ -374,7 +400,7 @@ class StudentController extends Controller
 
             return response()->json([
                 'success' => true,
-                'message' => 'Student assigned to class successfully',
+                'message' => 'Étudiant assigné à la classe avec succès',
                 'data' => $this->studentRepository->getStudentById($student->id, ['classRoom'])
             ]);
 
@@ -387,7 +413,7 @@ class StudentController extends Controller
 
             return response()->json([
                 'success' => false,
-                'message' => 'Validation failed',
+                'message' => 'Échec de la validation',
                 'errors' => $e->errors()
             ], 422);
         } catch (\Exception $e) {
@@ -400,7 +426,7 @@ class StudentController extends Controller
 
             return response()->json([
                 'success' => false,
-                'message' => 'Unable to assign student to class'
+                'message' => 'Impossible d\'assigner l\'étudiant à la classe'
             ], 500);
         }
     }
@@ -439,7 +465,7 @@ class StudentController extends Controller
 
             return response()->json([
                 'success' => false,
-                'message' => 'Unable to retrieve academic performance'
+                'message' => 'Impossible de récupérer les performances académiques'
             ], 500);
         }
     }
@@ -477,7 +503,7 @@ class StudentController extends Controller
 
             return response()->json([
                 'success' => false,
-                'message' => 'Unable to retrieve statistics'
+                'message' => 'Impossible de récupérer les statistiques'
             ], 500);
         }
     }
@@ -489,6 +515,9 @@ class StudentController extends Controller
     public function bulkImport(Request $request): JsonResponse
     {
         try {
+            // Set locale to French for validation messages
+            app()->setLocale('fr');
+            
             $validated = $request->validate([
                 'file' => 'required|file|mimes:csv,xlsx,xls|max:10240',
                 'school_id' => 'required|exists:schools,id',
@@ -504,7 +533,7 @@ class StudentController extends Controller
 
             return response()->json([
                 'success' => true,
-                'message' => 'Bulk import initiated successfully'
+                'message' => 'Import en masse initié avec succès'
             ]);
 
         } catch (ValidationException $e) {
@@ -515,7 +544,7 @@ class StudentController extends Controller
 
             return response()->json([
                 'success' => false,
-                'message' => 'Validation failed',
+                'message' => 'Échec de la validation',
                 'errors' => $e->errors()
             ], 422);
         } catch (\Exception $e) {
@@ -527,7 +556,7 @@ class StudentController extends Controller
 
             return response()->json([
                 'success' => false,
-                'message' => 'Unable to initiate bulk import'
+                'message' => 'Impossible d\'initier l\'import en masse'
             ], 500);
         }
     }
@@ -539,6 +568,9 @@ class StudentController extends Controller
     public function bulkExport(Request $request): JsonResponse
     {
         try {
+            // Set locale to French for validation messages
+            app()->setLocale('fr');
+            
             $validated = $request->validate([
                 'format' => 'required|in:csv,xlsx,pdf',
                 'filters' => 'array',
@@ -554,7 +586,7 @@ class StudentController extends Controller
 
             return response()->json([
                 'success' => true,
-                'message' => 'Bulk export initiated successfully'
+                'message' => 'Export en masse initié avec succès'
             ]);
 
         } catch (ValidationException $e) {
@@ -565,7 +597,7 @@ class StudentController extends Controller
 
             return response()->json([
                 'success' => false,
-                'message' => 'Validation failed',
+                'message' => 'Échec de la validation',
                 'errors' => $e->errors()
             ], 422);
         } catch (\Exception $e) {
@@ -577,7 +609,7 @@ class StudentController extends Controller
 
             return response()->json([
                 'success' => false,
-                'message' => 'Unable to initiate bulk export'
+                'message' => 'Impossible d\'initier l\'export en masse'
             ], 500);
         }
     }
@@ -612,7 +644,7 @@ class StudentController extends Controller
 
             return response()->json([
                 'success' => false,
-                'message' => 'Unable to retrieve enrollment trends'
+                'message' => 'Impossible de récupérer les tendances d\'inscription'
             ], 500);
         }
     }
@@ -647,7 +679,7 @@ class StudentController extends Controller
 
             return response()->json([
                 'success' => false,
-                'message' => 'Unable to retrieve demographics report'
+                'message' => 'Impossible de récupérer le rapport démographique'
             ], 500);
         }
     }

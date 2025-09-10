@@ -35,7 +35,7 @@ class AcademicManagementSeeder extends Seeder
      */
     public function run(): void
     {
-        $this->command->info('🌱 Starting Academic Management Seeder...');
+        $this->command->info('🌱 Démarrage du Seeder de Gestion Académique...');
 
         // Create users first
         $this->createUsers();
@@ -70,7 +70,7 @@ class AcademicManagementSeeder extends Seeder
         // Create school calendar events
         $this->createSchoolCalendarEvents();
 
-        $this->command->info('✅ Academic Management Seeder completed successfully!');
+        $this->command->info('✅ Seeder de Gestion Académique terminé avec succès !');
     }
 
     /**
@@ -78,18 +78,18 @@ class AcademicManagementSeeder extends Seeder
      */
     private function createUsers(): void
     {
-        $this->command->info('👥 Creating users...');
+        $this->command->info('👥 Création des utilisateurs...');
 
         // Create admin users
         User::create([
-            'name' => 'System Administrator',
+            'name' => 'Administrateur Système',
             'email' => 'admin@yousch.edu',
             'password' => bcrypt('password'),
             'email_verified_at' => now(),
         ]);
 
         User::create([
-            'name' => 'School Principal',
+            'name' => 'Directeur de l\'École',
             'email' => 'principal@yousch.edu',
             'password' => bcrypt('password'),
             'email_verified_at' => now(),
@@ -134,7 +134,7 @@ class AcademicManagementSeeder extends Seeder
             ]);
         }
 
-        $this->command->info('✅ Users created successfully');
+        $this->command->info('✅ Utilisateurs créés avec succès');
     }
 
     /**
@@ -142,14 +142,14 @@ class AcademicManagementSeeder extends Seeder
      */
     private function createSchoolsAndCampuses(): void
     {
-        $this->command->info('🏫 Creating schools and campuses...');
+        $this->command->info('🏫 Création des écoles et campus...');
 
         // Create main school
         $school = School::create([
-            'name' => 'Yousch International School',
+            'name' => 'École Internationale Yousch',
             'domain' => 'yousch.edu',
-            'contact_info' => 'Contact us for more information',
-            'address' => '123 Education Street, Knowledge City',
+            'contact_info' => 'Contactez-nous pour plus d\'informations',
+            'address' => '123 Rue de l\'Éducation, Cité du Savoir',
             'phone' => '+1-555-0123',
             'email' => 'info@yousch.edu',
             'website' => 'https://www.yousch.edu',
@@ -159,22 +159,22 @@ class AcademicManagementSeeder extends Seeder
         // Create campuses
         $campuses = [
             [
-                'name' => 'Main Campus',
-                'address' => '123 Education Street, Knowledge City',
+                'name' => 'Campus Principal',
+                'address' => '123 Rue de l\'Éducation, Cité du Savoir',
                 'phone' => '+1-555-0123',
                 'email' => 'main@yousch.edu',
                 'is_active' => true,
             ],
             [
-                'name' => 'North Campus',
-                'address' => '456 Learning Avenue, North District',
+                'name' => 'Campus Nord',
+                'address' => '456 Avenue de l\'Apprentissage, District Nord',
                 'phone' => '+1-555-0124',
                 'email' => 'north@yousch.edu',
                 'is_active' => true,
             ],
             [
-                'name' => 'East Campus',
-                'address' => '789 Wisdom Road, East Quarter',
+                'name' => 'Campus Est',
+                'address' => '789 Route de la Sagesse, Quartier Est',
                 'phone' => '+1-555-0125',
                 'email' => 'east@yousch.edu',
                 'is_active' => true,
@@ -185,7 +185,7 @@ class AcademicManagementSeeder extends Seeder
             Campus::create(array_merge($campusData, ['school_id' => $school->id]));
         }
 
-        $this->command->info('✅ Schools and campuses created successfully');
+        $this->command->info('✅ Écoles et campus créés avec succès');
     }
 
     /**
@@ -193,24 +193,24 @@ class AcademicManagementSeeder extends Seeder
      */
     private function createAcademicStructure(): void
     {
-        $this->command->info('📚 Creating academic structure...');
+        $this->command->info('📚 Création de la structure académique...');
 
         $school = School::first();
-        $mainCampus = Campus::where('name', 'Main Campus')->first();
+        $mainCampus = Campus::where('name', 'Campus Principal')->first();
 
         // Create faculties
         $faculties = [
             [
-                'name' => 'Faculty of Science and Technology',
-                'description' => 'Leading research and education in science and technology',
+                'name' => 'Faculté des Sciences et Technologies',
+                'description' => 'Recherche et éducation de pointe en sciences et technologies',
             ],
             [
-                'name' => 'Faculty of Business and Economics',
-                'description' => 'Preparing future business leaders and economists',
+                'name' => 'Faculté des Affaires et de l\'Économie',
+                'description' => 'Préparation des futurs leaders d\'affaires et économistes',
             ],
             [
-                'name' => 'Faculty of Arts and Humanities',
-                'description' => 'Exploring creativity, culture, and human expression',
+                'name' => 'Faculté des Arts et Humanités',
+                'description' => 'Exploration de la créativité, de la culture et de l\'expression humaine',
             ],
         ];
 
@@ -221,23 +221,23 @@ class AcademicManagementSeeder extends Seeder
         // Create departments
         $departments = [
             [
-                'faculty_id' => Faculty::where('name', 'Faculty of Science and Technology')->first()->id,
-                'name' => 'Computer Science',
+                'faculty_id' => Faculty::where('name', 'Faculté des Sciences et Technologies')->first()->id,
+                'name' => 'Informatique',
                 'head_id' => User::where('email', 'sarah.johnson@yousch.edu')->first()->id,
             ],
             [
-                'faculty_id' => Faculty::where('name', 'Faculty of Science and Technology')->first()->id,
-                'name' => 'Mathematics',
+                'faculty_id' => Faculty::where('name', 'Faculté des Sciences et Technologies')->first()->id,
+                'name' => 'Mathématiques',
                 'head_id' => User::where('email', 'michael.chen@yousch.edu')->first()->id,
             ],
             [
-                'faculty_id' => Faculty::where('name', 'Faculty of Business and Economics')->first()->id,
-                'name' => 'Business Administration',
+                'faculty_id' => Faculty::where('name', 'Faculté des Affaires et de l\'Économie')->first()->id,
+                'name' => 'Administration des Affaires',
                 'head_id' => User::where('email', 'emily.rodriguez@yousch.edu')->first()->id,
             ],
             [
-                'faculty_id' => Faculty::where('name', 'Faculty of Arts and Humanities')->first()->id,
-                'name' => 'English Literature',
+                'faculty_id' => Faculty::where('name', 'Faculté des Arts et Humanités')->first()->id,
+                'name' => 'Littérature Anglaise',
                 'head_id' => User::where('email', 'david.thompson@yousch.edu')->first()->id,
             ],
         ];
@@ -249,28 +249,28 @@ class AcademicManagementSeeder extends Seeder
         // Create courses
         $courses = [
             [
-                'department_id' => Department::where('name', 'Computer Science')->first()->id,
-                'name' => 'Bachelor of Computer Science',
+                'department_id' => Department::where('name', 'Informatique')->first()->id,
+                'name' => 'Baccalauréat en Informatique',
                 'code' => 'BCS',
-                'description' => 'Comprehensive computer science program',
+                'description' => 'Programme complet d\'informatique',
             ],
             [
-                'department_id' => Department::where('name', 'Mathematics')->first()->id,
-                'name' => 'Bachelor of Mathematics',
+                'department_id' => Department::where('name', 'Mathématiques')->first()->id,
+                'name' => 'Baccalauréat en Mathématiques',
                 'code' => 'BMATH',
-                'description' => 'Advanced mathematics program',
+                'description' => 'Programme de mathématiques avancées',
             ],
             [
-                'department_id' => Department::where('name', 'Business Administration')->first()->id,
-                'name' => 'Bachelor of Business Administration',
+                'department_id' => Department::where('name', 'Administration des Affaires')->first()->id,
+                'name' => 'Baccalauréat en Administration des Affaires',
                 'code' => 'BBA',
-                'description' => 'Business management program',
+                'description' => 'Programme de gestion des affaires',
             ],
             [
-                'department_id' => Department::where('name', 'English Literature')->first()->id,
-                'name' => 'Bachelor of Arts in English',
+                'department_id' => Department::where('name', 'Littérature Anglaise')->first()->id,
+                'name' => 'Baccalauréat ès Arts en Anglais',
                 'code' => 'BAENG',
-                'description' => 'English literature and language program',
+                'description' => 'Programme de littérature et langue anglaise',
             ],
         ];
 
@@ -280,39 +280,130 @@ class AcademicManagementSeeder extends Seeder
 
         // Create subjects
         $subjects = [
+            // Computer Science Subjects
             [
                 'course_id' => Course::where('code', 'BCS')->first()->id,
-                'name' => 'Introduction to Programming',
+                'name' => 'Introduction à la Programmation',
                 'code' => 'CS101',
-                'description' => 'Basic programming concepts and practices',
+                'description' => 'Concepts et pratiques de programmation de base',
                 'coordinator_id' => User::where('email', 'sarah.johnson@yousch.edu')->first()->id,
             ],
             [
                 'course_id' => Course::where('code', 'BCS')->first()->id,
-                'name' => 'Data Structures and Algorithms',
+                'name' => 'Structures de Données et Algorithmes',
                 'code' => 'CS201',
-                'description' => 'Advanced programming concepts',
+                'description' => 'Concepts de programmation avancés',
                 'coordinator_id' => User::where('email', 'sarah.johnson@yousch.edu')->first()->id,
             ],
+            [
+                'course_id' => Course::where('code', 'BCS')->first()->id,
+                'name' => 'Bases de Données',
+                'code' => 'CS301',
+                'description' => 'Conception et gestion de bases de données',
+                'coordinator_id' => User::where('email', 'sarah.johnson@yousch.edu')->first()->id,
+            ],
+            [
+                'course_id' => Course::where('code', 'BCS')->first()->id,
+                'name' => 'Développement Web',
+                'code' => 'CS401',
+                'description' => 'Développement d\'applications web modernes',
+                'coordinator_id' => User::where('email', 'sarah.johnson@yousch.edu')->first()->id,
+            ],
+            [
+                'course_id' => Course::where('code', 'BCS')->first()->id,
+                'name' => 'Projet de Fin d\'Études',
+                'code' => 'CS501',
+                'description' => 'Projet intégrateur en informatique',
+                'coordinator_id' => User::where('email', 'sarah.johnson@yousch.edu')->first()->id,
+            ],
+            
+            // Mathematics Subjects
             [
                 'course_id' => Course::where('code', 'BMATH')->first()->id,
-                'name' => 'Calculus I',
+                'name' => 'Calcul I',
                 'code' => 'MATH101',
-                'description' => 'Fundamental calculus concepts',
+                'description' => 'Concepts fondamentaux du calcul',
                 'coordinator_id' => User::where('email', 'michael.chen@yousch.edu')->first()->id,
             ],
             [
+                'course_id' => Course::where('code', 'BMATH')->first()->id,
+                'name' => 'Algèbre Linéaire',
+                'code' => 'MATH201',
+                'description' => 'Algèbre linéaire et géométrie analytique',
+                'coordinator_id' => User::where('email', 'michael.chen@yousch.edu')->first()->id,
+            ],
+            [
+                'course_id' => Course::where('code', 'BMATH')->first()->id,
+                'name' => 'Statistiques et Probabilités',
+                'code' => 'MATH301',
+                'description' => 'Statistiques descriptives et inférentielles',
+                'coordinator_id' => User::where('email', 'michael.chen@yousch.edu')->first()->id,
+            ],
+            [
+                'course_id' => Course::where('code', 'BMATH')->first()->id,
+                'name' => 'Analyse Mathématique',
+                'code' => 'MATH401',
+                'description' => 'Analyse mathématique avancée',
+                'coordinator_id' => User::where('email', 'michael.chen@yousch.edu')->first()->id,
+            ],
+            
+            // Business Subjects
+            [
                 'course_id' => Course::where('code', 'BBA')->first()->id,
-                'name' => 'Principles of Management',
+                'name' => 'Principes de Gestion',
                 'code' => 'BUS101',
-                'description' => 'Basic management principles',
+                'description' => 'Principes de gestion de base',
                 'coordinator_id' => User::where('email', 'emily.rodriguez@yousch.edu')->first()->id,
             ],
             [
+                'course_id' => Course::where('code', 'BBA')->first()->id,
+                'name' => 'Marketing Fondamental',
+                'code' => 'BUS201',
+                'description' => 'Concepts et stratégies de marketing',
+                'coordinator_id' => User::where('email', 'emily.rodriguez@yousch.edu')->first()->id,
+            ],
+            [
+                'course_id' => Course::where('code', 'BBA')->first()->id,
+                'name' => 'Gestion Financière',
+                'code' => 'BUS301',
+                'description' => 'Gestion financière et comptabilité',
+                'coordinator_id' => User::where('email', 'emily.rodriguez@yousch.edu')->first()->id,
+            ],
+            [
+                'course_id' => Course::where('code', 'BBA')->first()->id,
+                'name' => 'Stratégie d\'Entreprise',
+                'code' => 'BUS401',
+                'description' => 'Stratégie et planification d\'entreprise',
+                'coordinator_id' => User::where('email', 'emily.rodriguez@yousch.edu')->first()->id,
+            ],
+            
+            // English Subjects
+            [
                 'course_id' => Course::where('code', 'BAENG')->first()->id,
-                'name' => 'Introduction to Literature',
+                'name' => 'Introduction à la Littérature',
                 'code' => 'ENG101',
-                'description' => 'Literary analysis and appreciation',
+                'description' => 'Analyse et appréciation littéraire',
+                'coordinator_id' => User::where('email', 'david.thompson@yousch.edu')->first()->id,
+            ],
+            [
+                'course_id' => Course::where('code', 'BAENG')->first()->id,
+                'name' => 'Écriture Avancée',
+                'code' => 'ENG201',
+                'description' => 'Techniques d\'écriture avancées',
+                'coordinator_id' => User::where('email', 'david.thompson@yousch.edu')->first()->id,
+            ],
+            [
+                'course_id' => Course::where('code', 'BAENG')->first()->id,
+                'name' => 'Littérature Moderne',
+                'code' => 'ENG301',
+                'description' => 'Étude de la littérature moderne',
+                'coordinator_id' => User::where('email', 'david.thompson@yousch.edu')->first()->id,
+            ],
+            [
+                'course_id' => Course::where('code', 'BAENG')->first()->id,
+                'name' => 'Critique Littéraire',
+                'code' => 'ENG401',
+                'description' => 'Méthodes de critique littéraire',
                 'coordinator_id' => User::where('email', 'david.thompson@yousch.edu')->first()->id,
             ],
         ];
@@ -321,16 +412,13 @@ class AcademicManagementSeeder extends Seeder
             Subject::create($subjectData);
         }
 
-        // Create labs for computer science subjects
-        $csSubject = Subject::where('code', 'CS101')->first();
-        Lab::create([
-            'subject_id' => $csSubject->id,
-            'name' => 'Programming Lab 1',
-            'description' => 'Computer lab for programming exercises',
-            'schedule' => 'Monday 2:00 PM - 4:00 PM',
-        ]);
+        // Create labs for various subjects
+        $this->createLabsForSubjects();
+        
+        // Create prerequisite relationships
+        $this->createPrerequisiteRelationships();
 
-        $this->command->info('✅ Academic structure created successfully');
+        $this->command->info('✅ Structure académique créée avec succès');
     }
 
     /**
@@ -338,9 +426,9 @@ class AcademicManagementSeeder extends Seeder
      */
     private function createClassesAndSubjects(): void
     {
-        $this->command->info('🏫 Creating classes and subject assignments...');
+        $this->command->info('🏫 Création des classes et affectations de matières...');
 
-        $mainCampus = Campus::where('name', 'Main Campus')->first();
+        $mainCampus = Campus::where('name', 'Campus Principal')->first();
         $courses = Course::all();
 
         // Create classes for each course
@@ -348,19 +436,19 @@ class AcademicManagementSeeder extends Seeder
             ClassRoom::create([
                 'campus_id' => $mainCampus->id,
                 'course_id' => $course->id,
-                'name' => $course->code . ' - Class A',
+                'name' => $course->code . ' - Classe A',
                 'capacity' => 30,
             ]);
 
             ClassRoom::create([
                 'campus_id' => $mainCampus->id,
                 'course_id' => $course->id,
-                'name' => $course->code . ' - Class B',
+                'name' => $course->code . ' - Classe B',
                 'capacity' => 25,
             ]);
         }
 
-        $this->command->info('✅ Classes and subject assignments created successfully');
+        $this->command->info('✅ Classes et affectations de matières créées avec succès');
     }
 
     /**
@@ -368,7 +456,7 @@ class AcademicManagementSeeder extends Seeder
      */
     private function createAcademicYearsAndTerms(): void
     {
-        $this->command->info('📅 Creating academic years and terms...');
+        $this->command->info('📅 Création des années académiques et trimestres...');
 
         $school = School::first();
 
@@ -384,19 +472,19 @@ class AcademicManagementSeeder extends Seeder
         // Create terms for current academic year
         $terms = [
             [
-                'name' => 'Fall Semester',
+                'name' => 'Semestre d\'Automne',
                 'start_date' => '2024-09-01',
                 'end_date' => '2024-12-20',
                 'is_active' => true,
             ],
             [
-                'name' => 'Spring Semester',
+                'name' => 'Semestre de Printemps',
                 'start_date' => '2025-01-15',
                 'end_date' => '2025-05-15',
                 'is_active' => false,
             ],
             [
-                'name' => 'Summer Session',
+                'name' => 'Session d\'Été',
                 'start_date' => '2025-06-01',
                 'end_date' => '2025-07-31',
                 'is_active' => false,
@@ -407,7 +495,7 @@ class AcademicManagementSeeder extends Seeder
             Term::create(array_merge($termData, ['academic_year_id' => $currentYear->id]));
         }
 
-        $this->command->info('✅ Academic years and terms created successfully');
+        $this->command->info('✅ Années académiques et trimestres créés avec succès');
     }
 
     /**
@@ -415,7 +503,7 @@ class AcademicManagementSeeder extends Seeder
      */
     private function createTimetables(): void
     {
-        $this->command->info('⏰ Creating timetables...');
+        $this->command->info('⏰ Création des emplois du temps...');
 
         $classes = ClassRoom::all();
         $subjects = Subject::all();
@@ -446,7 +534,7 @@ class AcademicManagementSeeder extends Seeder
                         'date' => $date->format('Y-m-d'),
                         'start_time' => '09:00:00',
                         'end_time' => '10:30:00',
-                        'room' => 'Room ' . ($index + 101),
+                        'room' => 'Salle ' . ($index + 101),
                     ]);
                     
                     Timetable::create([
@@ -456,13 +544,13 @@ class AcademicManagementSeeder extends Seeder
                         'date' => $date->format('Y-m-d'),
                         'start_time' => '14:00:00',
                         'end_time' => '15:30:00',
-                        'room' => 'Room ' . ($index + 101),
+                        'room' => 'Salle ' . ($index + 101),
                     ]);
                 }
             }
         }
 
-        $this->command->info('✅ Timetables created successfully');
+        $this->command->info('✅ Emplois du temps créés avec succès');
     }
 
     /**
@@ -470,7 +558,7 @@ class AcademicManagementSeeder extends Seeder
      */
     private function createExamsAndGrading(): void
     {
-        $this->command->info('📝 Creating exams and grading schemes...');
+        $this->command->info('📝 Création des examens et systèmes de notation...');
 
         $school = School::first();
         $subjects = Subject::all();
@@ -484,8 +572,8 @@ class AcademicManagementSeeder extends Seeder
 
         // Create grading scheme
         $gradingScheme = GradingScheme::create([
-            'name' => 'Standard Grading Scale',
-            'description' => 'Standard A-F grading scale',
+            'name' => 'Échelle de Notation Standard',
+            'description' => 'Échelle de notation standard A-F',
             'school_id' => $school->id,
             'is_active' => true,
             'min_score' => 0.00,
@@ -510,23 +598,23 @@ class AcademicManagementSeeder extends Seeder
 
         // Create exams for each subject
         foreach ($subjects as $subject) {
-            $examTypes = ['midterm', 'final', 'quiz'];
+            $examTypes = ['mi-parcours', 'final', 'quiz'];
             
             foreach ($examTypes as $type) {
                 $examType = ExamType::where('name', $type)->first();
                 if (!$examType) {
-                    $this->command->warn("Exam type '{$type}' not found, skipping...");
+                    $this->command->warn("Type d'examen '{$type}' non trouvé, passage...");
                     continue;
                 }
                 
                 Exam::create([
-                    'name' => ucfirst($type) . ' Exam - ' . $subject->name,
+                    'name' => 'Examen ' . ucfirst($type) . ' - ' . $subject->name,
                     'subject_id' => $subject->id,
                     'class_id' => $classes->where('course_id', $subject->course_id)->first()->id,
                     'exam_date' => now()->addDays(rand(30, 90)),
                     'start_time' => '09:00:00',
                     'end_time' => '11:00:00',
-                    'instructions' => 'Please read all questions carefully before answering.',
+                    'instructions' => 'Veuillez lire attentivement toutes les questions avant de répondre.',
                     'lab_id' => null, // No lab for general exams
                     'exam_type_id' => $examType->id,
                     'examiner_id' => $subject->coordinator_id,
@@ -535,7 +623,7 @@ class AcademicManagementSeeder extends Seeder
             }
         }
 
-        $this->command->info('✅ Exams and grading schemes created successfully');
+        $this->command->info('✅ Examens et systèmes de notation créés avec succès');
     }
 
     /**
@@ -543,7 +631,7 @@ class AcademicManagementSeeder extends Seeder
      */
     private function createEnrollmentsAndGrades(): void
     {
-        $this->command->info('📚 Creating student enrollments and grades...');
+        $this->command->info('📚 Création des inscriptions et notes des étudiants...');
 
         $school = School::first();
         $academicYear = AcademicYear::where('is_active', true)->first();
@@ -563,7 +651,7 @@ class AcademicManagementSeeder extends Seeder
                 'enrollment_date' => now()->subDays(rand(30, 60)),
                 'status' => 'active',
                 'enrolled_by' => User::where('email', 'admin@yousch.edu')->first()->id,
-                'notes' => 'Regular enrollment',
+                'notes' => 'Inscription régulière',
                 'school_id' => $school->id,
             ]);
         }
@@ -594,7 +682,7 @@ class AcademicManagementSeeder extends Seeder
                     'score' => $score,
                     'max_score' => 100,
                     'percentage' => $score,
-                    'remarks' => 'Good performance',
+                    'remarks' => 'Bonne performance',
                     'graded_by' => $subject->coordinator_id,
                     'graded_at' => now(),
                     'school_id' => $school->id,
@@ -602,7 +690,7 @@ class AcademicManagementSeeder extends Seeder
             }
         }
 
-        $this->command->info('✅ Student enrollments and grades created successfully');
+        $this->command->info('✅ Inscriptions et notes des étudiants créées avec succès');
     }
 
     /**
@@ -610,7 +698,7 @@ class AcademicManagementSeeder extends Seeder
      */
     private function createTeacherAssignments(): void
     {
-        $this->command->info('👨‍🏫 Creating teacher assignments...');
+        $this->command->info('👨‍🏫 Création des affectations d\'enseignants...');
 
         $school = School::first();
         $academicYear = AcademicYear::where('is_active', true)->first();
@@ -635,12 +723,12 @@ class AcademicManagementSeeder extends Seeder
                 'is_active' => true,
                 'assigned_by' => User::where('email', 'admin@yousch.edu')->first()->id,
                 'assignment_date' => now(),
-                'notes' => 'Primary teacher assignment',
+                'notes' => 'Affectation d\'enseignant principal',
                 'school_id' => $school->id,
             ]);
         }
 
-        $this->command->info('✅ Teacher assignments created successfully');
+        $this->command->info('✅ Affectations d\'enseignants créées avec succès');
     }
 
     /**
@@ -648,16 +736,16 @@ class AcademicManagementSeeder extends Seeder
      */
     private function createAnnouncements(): void
     {
-        $this->command->info('📢 Creating announcements...');
+        $this->command->info('📢 Création des annonces...');
 
         $school = School::first();
-        $mainCampus = Campus::where('name', 'Main Campus')->first();
+        $mainCampus = Campus::where('name', 'Campus Principal')->first();
         $classes = ClassRoom::limit(2)->get();
 
         $announcements = [
             [
-                'title' => 'Welcome to New Academic Year 2024-2025!',
-                'content' => 'We are excited to welcome all students to the new academic year. Classes begin on September 1st, 2024.',
+                'title' => 'Bienvenue à la Nouvelle Année Académique 2024-2025 !',
+                'content' => 'Nous sommes ravis d\'accueillir tous les étudiants à la nouvelle année académique. Les cours commencent le 1er septembre 2024.',
                 'scope' => 'school',
                 'priority' => 'high',
                 'school_id' => $school->id,
@@ -672,8 +760,8 @@ class AcademicManagementSeeder extends Seeder
                 'attachments' => [],
             ],
             [
-                'title' => 'Campus Maintenance Notice',
-                'content' => 'Scheduled maintenance will be conducted on the main campus this weekend. Please plan accordingly.',
+                'title' => 'Avis de Maintenance du Campus',
+                'content' => 'Une maintenance programmée sera effectuée sur le campus principal ce week-end. Veuillez planifier en conséquence.',
                 'scope' => 'campus',
                 'priority' => 'normal',
                 'school_id' => $school->id,
@@ -688,8 +776,8 @@ class AcademicManagementSeeder extends Seeder
                 'attachments' => [],
             ],
             [
-                'title' => 'Computer Science Lab Schedule Update',
-                'content' => 'The programming lab schedule has been updated. Please check your timetables.',
+                'title' => 'Mise à Jour du Planning du Laboratoire d\'Informatique',
+                'content' => 'Le planning du laboratoire de programmation a été mis à jour. Veuillez vérifier vos emplois du temps.',
                 'scope' => 'class',
                 'priority' => 'normal',
                 'school_id' => $school->id,
@@ -709,7 +797,7 @@ class AcademicManagementSeeder extends Seeder
             Announcement::create($announcementData);
         }
 
-        $this->command->info('✅ Announcements created successfully');
+        $this->command->info('✅ Annonces créées avec succès');
     }
 
     /**
@@ -717,49 +805,49 @@ class AcademicManagementSeeder extends Seeder
      */
     private function createSchoolCalendarEvents(): void
     {
-        $this->command->info('📅 Creating school calendar events...');
+        $this->command->info('📅 Création des événements du calendrier scolaire...');
 
         $school = School::first();
 
         $calendarEvents = [
             [
-                'title' => 'Academic Year Start',
+                'title' => 'Début de l\'Année Académique',
                 'type' => 'academic_year_start',
                 'start_date' => '2024-09-01',
                 'end_date' => '2024-09-01',
-                'description' => 'First day of the academic year',
+                'description' => 'Premier jour de l\'année académique',
                 'is_recurring' => false,
             ],
             [
-                'title' => 'Fall Break',
+                'title' => 'Vacances d\'Automne',
                 'type' => 'holiday',
                 'start_date' => '2024-11-25',
                 'end_date' => '2024-11-29',
-                'description' => 'Fall semester break',
+                'description' => 'Vacances du semestre d\'automne',
                 'is_recurring' => false,
             ],
             [
-                'title' => 'Winter Break',
+                'title' => 'Vacances d\'Hiver',
                 'type' => 'holiday',
                 'start_date' => '2024-12-23',
                 'end_date' => '2025-01-05',
-                'description' => 'Winter holiday break',
+                'description' => 'Vacances d\'hiver',
                 'is_recurring' => false,
             ],
             [
-                'title' => 'Spring Break',
+                'title' => 'Vacances de Printemps',
                 'type' => 'holiday',
                 'start_date' => '2025-03-17',
                 'end_date' => '2025-03-21',
-                'description' => 'Spring semester break',
+                'description' => 'Vacances du semestre de printemps',
                 'is_recurring' => false,
             ],
             [
-                'title' => 'Final Exams Week',
+                'title' => 'Semaine des Examens Finaux',
                 'type' => 'exam_period',
                 'start_date' => '2025-05-12',
                 'end_date' => '2025-05-16',
-                'description' => 'Final examinations for all courses',
+                'description' => 'Examens finaux pour tous les cours',
                 'is_recurring' => false,
             ],
         ];
@@ -768,7 +856,7 @@ class AcademicManagementSeeder extends Seeder
             SchoolCalendar::create(array_merge($eventData, ['school_id' => $school->id]));
         }
 
-        $this->command->info('✅ School calendar events created successfully');
+        $this->command->info('✅ Événements du calendrier scolaire créés avec succès');
     }
 
     /**
@@ -781,5 +869,145 @@ class AcademicManagementSeeder extends Seeder
         if ($score >= 70) return 'C';
         if ($score >= 60) return 'D';
         return 'F';
+    }
+
+    /**
+     * Create labs for various subjects
+     */
+    private function createLabsForSubjects(): void
+    {
+        $this->command->info('🔬 Création des laboratoires...');
+
+        $labs = [
+            // Computer Science Labs
+            [
+                'subject_code' => 'CS101',
+                'name' => 'Laboratoire de Programmation 1',
+                'description' => 'Laboratoire informatique pour exercices de programmation de base',
+                'schedule' => 'Lundi 14h00 - 16h00',
+            ],
+            [
+                'subject_code' => 'CS101',
+                'name' => 'Laboratoire de Programmation 2',
+                'description' => 'Laboratoire avancé pour projets de programmation',
+                'schedule' => 'Mercredi 10h00 - 12h00',
+            ],
+            [
+                'subject_code' => 'CS201',
+                'name' => 'Laboratoire de Structures de Données',
+                'description' => 'Laboratoire pour l\'implémentation de structures de données',
+                'schedule' => 'Mardi 14h00 - 16h00',
+            ],
+            [
+                'subject_code' => 'CS301',
+                'name' => 'Laboratoire de Base de Données',
+                'description' => 'Laboratoire pour la conception et manipulation de bases de données',
+                'schedule' => 'Jeudi 10h00 - 12h00',
+            ],
+            [
+                'subject_code' => 'CS301',
+                'name' => 'Laboratoire de Base de Données Avancé',
+                'description' => 'Laboratoire pour requêtes complexes et optimisation',
+                'schedule' => 'Vendredi 14h00 - 16h00',
+            ],
+            // Mathematics Labs
+            [
+                'subject_code' => 'MATH101',
+                'name' => 'Laboratoire de Calcul',
+                'description' => 'Laboratoire pour exercices pratiques de calcul',
+                'schedule' => 'Lundi 16h00 - 18h00',
+            ],
+            [
+                'subject_code' => 'MATH201',
+                'name' => 'Laboratoire d\'Algèbre Linéaire',
+                'description' => 'Laboratoire pour exercices d\'algèbre linéaire',
+                'schedule' => 'Mercredi 14h00 - 16h00',
+            ],
+            // Business Labs
+            [
+                'subject_code' => 'BUS101',
+                'name' => 'Laboratoire de Gestion',
+                'description' => 'Laboratoire pour simulations de gestion d\'entreprise',
+                'schedule' => 'Mardi 10h00 - 12h00',
+            ],
+            [
+                'subject_code' => 'BUS201',
+                'name' => 'Laboratoire de Marketing',
+                'description' => 'Laboratoire pour études de cas marketing',
+                'schedule' => 'Jeudi 14h00 - 16h00',
+            ],
+            // English Labs
+            [
+                'subject_code' => 'ENG101',
+                'name' => 'Laboratoire de Communication',
+                'description' => 'Laboratoire pour exercices de communication orale et écrite',
+                'schedule' => 'Vendredi 10h00 - 12h00',
+            ],
+        ];
+
+        foreach ($labs as $labData) {
+            $subject = Subject::where('code', $labData['subject_code'])->first();
+            if ($subject) {
+                Lab::create([
+                    'subject_id' => $subject->id,
+                    'name' => $labData['name'],
+                    'description' => $labData['description'],
+                    'schedule' => $labData['schedule'],
+                ]);
+            }
+        }
+
+        $this->command->info('✅ Laboratoires créés avec succès');
+    }
+
+    /**
+     * Create prerequisite relationships between subjects
+     */
+    private function createPrerequisiteRelationships(): void
+    {
+        $this->command->info('🔗 Création des prérequis...');
+
+        $prerequisites = [
+            // Computer Science Prerequisites
+            ['subject' => 'CS201', 'prerequisite' => 'CS101'],
+            ['subject' => 'CS301', 'prerequisite' => 'CS201'],
+            ['subject' => 'CS301', 'prerequisite' => 'MATH101'],
+            ['subject' => 'CS401', 'prerequisite' => 'CS301'],
+            ['subject' => 'CS401', 'prerequisite' => 'MATH201'],
+            
+            // Mathematics Prerequisites
+            ['subject' => 'MATH201', 'prerequisite' => 'MATH101'],
+            ['subject' => 'MATH301', 'prerequisite' => 'MATH201'],
+            
+            // Business Prerequisites
+            ['subject' => 'BUS201', 'prerequisite' => 'BUS101'],
+            ['subject' => 'BUS301', 'prerequisite' => 'BUS201'],
+            ['subject' => 'BUS301', 'prerequisite' => 'MATH101'],
+            
+            // English Prerequisites
+            ['subject' => 'ENG201', 'prerequisite' => 'ENG101'],
+            ['subject' => 'ENG301', 'prerequisite' => 'ENG201'],
+        ];
+
+        foreach ($prerequisites as $prereq) {
+            $subject = Subject::where('code', $prereq['subject'])->first();
+            $prerequisite = Subject::where('code', $prereq['prerequisite'])->first();
+            
+            if ($subject && $prerequisite) {
+                // Check if prerequisite relationship already exists
+                $existing = \App\Models\AdminAcademics\SubjectPrerequisite::where('subject_id', $subject->id)
+                    ->where('prerequisite_id', $prerequisite->id)
+                    ->first();
+                
+                if (!$existing) {
+                    \App\Models\AdminAcademics\SubjectPrerequisite::create([
+                        'subject_id' => $subject->id,
+                        'prerequisite_id' => $prerequisite->id,
+                    ]);
+                }
+            }
+        }
+
+        $this->command->info('✅ Prérequis créés avec succès');
     }
 } 

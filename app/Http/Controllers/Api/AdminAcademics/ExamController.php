@@ -94,7 +94,7 @@ class ExamController extends Controller
                 'end_time' => 'required|date_format:H:i|after:start_time',
                 'lab_id' => 'nullable|exists:labs,id',
                 'instructions' => 'nullable|string',
-                'status' => 'nullable|in:scheduled,completed,cancelled',
+                'status' => 'nullable|in:scheduled,ongoing,completed,cancelled',
             ]);
 
             // Check for time conflicts in the same class on the same date

@@ -19,6 +19,8 @@ use App\Http\Controllers\Api\AdminAcademics\{
     StudentEnrollmentController,
     StudentGradeController,
     TeacherAssignmentController,
+    LabController,
+    PrerequisiteController,
     AnnouncementController,
     AnalyticsController
 };
@@ -39,6 +41,8 @@ class AcademicRouteService
         self::registerExamRoutes();
         self::registerEnrollmentRoutes();
         self::registerTeacherRoutes();
+        self::registerLabRoutes();
+        self::registerPrerequisiteRoutes();
         self::registerAnnouncementRoutes();
         self::registerAnalyticsRoutes();
     }
@@ -296,7 +300,42 @@ class AcademicRouteService
             Route::get('/class/{class}', [AnalyticsController::class, 'classAnalytics'])->name('class');
             Route::get('/teacher-workload', [AnalyticsController::class, 'teacherWorkloadAnalytics'])->name('teacher-workload');
             Route::get('/student-performance', [AnalyticsController::class, 'studentPerformanceAnalytics'])->name('student-performance');
-            Route::get('/system', [AnalyticsController::class, 'systemAnalytics'])->name('system');
+        });
+    }
+
+    /**
+     * Register lab management routes.
+     */
+    private static function registerLabRoutes(): void
+    {
+        Route::prefix('labs')->name('labs.')->group(function () {
+            Route::get('/', [LabController::class, 'index'])->name('index');
+            Route::post('/', [LabController::class, 'store'])->name('store');
+            Route::get('/{lab}', [LabController::class, 'show'])->name('show');
+            Route::put('/{lab}', [LabController::class, 'update'])->name('update');
+            Route::delete('/{lab}', [LabController::class, 'destroy'])->name('destroy');
+            Route::get('/subject/{subject}', [LabController::class, 'bySubject'])->name('by-subject');
+            Route::post('/bulk-import', [LabController::class, 'bulkImport'])->name('bulk-import');
+            Route::post('/bulk-export', [LabController::class, 'bulkExport'])->name('bulk-export');
+        });
+    }
+
+    /**
+     * Register prerequisite management routes.
+     */
+    private static function registerPrerequisiteRoutes(): void
+    {
+        Route::prefix('prerequisites')->name('prerequisites.')->group(function () {
+            Route::get('/', [PrerequisiteController::class, 'index'])->name('index');
+            Route::post('/', [PrerequisiteController::class, 'store'])->name('store');
+            Route::get('/{prerequisite}', [PrerequisiteController::class, 'show'])->name('show');
+            Route::put('/{prerequisite}', [PrerequisiteController::class, 'update'])->name('update');
+            Route::delete('/{prerequisite}', [PrerequisiteController::class, 'destroy'])->name('destroy');
+            Route::get('/subject/{subject}', [PrerequisiteController::class, 'bySubject'])->name('by-subject');
+            Route::get('/required-by/{subject}', [PrerequisiteController::class, 'requiredBy'])->name('required-by');
+            Route::get('/chain/{subject}', [PrerequisiteController::class, 'prerequisiteChain'])->name('chain');
+            Route::post('/bulk-import', [PrerequisiteController::class, 'bulkImport'])->name('bulk-import');
+            Route::post('/bulk-export', [PrerequisiteController::class, 'bulkExport'])->name('bulk-export');
         });
     }
 } 

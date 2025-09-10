@@ -279,4 +279,142 @@ class TeacherPerformanceRepository extends BaseRepository implements TeacherPerf
 
         return $trends;
     }
+
+    /**
+     * Get excellent performance records
+     *
+     * @return Collection
+     */
+    public function getExcellentPerformance(): Collection
+    {
+        return $this->model->with(['teacher', 'evaluator'])
+            ->where('overall_rating', '>=', 4.5)
+            ->where('status', 'published')
+            ->orderBy('overall_rating', 'desc')
+            ->get();
+    }
+
+    /**
+     * Get good performance records
+     *
+     * @return Collection
+     */
+    public function getGoodPerformance(): Collection
+    {
+        return $this->model->with(['teacher', 'evaluator'])
+            ->whereBetween('overall_rating', [4.0, 4.49])
+            ->where('status', 'published')
+            ->orderBy('overall_rating', 'desc')
+            ->get();
+    }
+
+    /**
+     * Get satisfactory performance records
+     *
+     * @return Collection
+     */
+    public function getSatisfactoryPerformance(): Collection
+    {
+        return $this->model->with(['teacher', 'evaluator'])
+            ->whereBetween('overall_rating', [3.0, 3.99])
+            ->where('status', 'published')
+            ->orderBy('overall_rating', 'desc')
+            ->get();
+    }
+
+    /**
+     * Get performance records needing improvement
+     *
+     * @return Collection
+     */
+    public function getPerformanceNeedingImprovement(): Collection
+    {
+        return $this->model->with(['teacher', 'evaluator'])
+            ->where('overall_rating', '<', 3.0)
+            ->where('status', 'published')
+            ->orderBy('overall_rating', 'asc')
+            ->get();
+    }
+
+    /**
+     * Get recent performance records
+     *
+     * @param int $days
+     * @return Collection
+     */
+    public function getRecentPerformance(int $days = 365): Collection
+    {
+        $startDate = Carbon::now()->subDays($days)->startOfDay();
+        
+        return $this->model->with(['teacher', 'evaluator'])
+            ->where('evaluation_date', '>=', $startDate)
+            ->where('status', 'published')
+            ->orderBy('evaluation_date', 'desc')
+            ->get();
+    }
+
+    /**
+     * Get performance by date range
+     *
+     * @param string $startDate
+     * @param string $endDate
+     * @return Collection
+     */
+    public function getPerformanceByDateRange(string $startDate, string $endDate): Collection
+    {
+        return $this->model->with(['teacher', 'evaluator'])
+            ->whereBetween('evaluation_date', [$startDate, $endDate])
+            ->where('status', 'published')
+            ->orderBy('evaluation_date', 'desc')
+            ->get();
+    }
+
+    /**
+     * Evaluate a teacher
+     *
+     * @param int $teacherId
+     * @param array $evaluationData
+     * @return TeacherPerformance
+     */
+    public function evaluateTeacher(int $teacherId, array $evaluationData): TeacherPerformance
+    {
+        $evaluationData['teacher_id'] = $teacherId;
+        $evaluationData['evaluation_date'] = $evaluationData['evaluation_date'] ?? now();
+        $evaluationData['status'] = $evaluationData['status'] ?? 'draft';
+        
+        return $this->createPerformance($evaluationData);
+    }
+
+    /**
+     * Get paginated performance records (interface method)
+     *
+     * @param array $filters
+     * @return LengthAwarePaginator
+     */
+    public function getPaginatedPerformance(array $filters): LengthAwarePaginator
+    {
+        return $this->getPaginatedPerformances($filters);
+    }
+
+    /**
+     * Get performance by teacher (interface method)
+     *
+     * @param int $teacherId
+     * @return Collection
+     */
+    public function getPerformanceByTeacher(int $teacherId): Collection
+    {
+        return $this->getPerformancesByTeacher($teacherId);
+    }
+
+    /**
+     * Get performance by period (interface method)
+     *
+     * @param string $period
+     * @return Collection
+     */
+    public function getPerformanceByPeriod(string $period): Collection
+    {
+        return $this->getPerformancesByPeriod($period);
+    }
 } 

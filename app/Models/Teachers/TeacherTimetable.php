@@ -5,6 +5,7 @@ namespace App\Models\Teachers;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use App\Models\User;
 use App\Models\AdminAcademics\ClassRoom;
 use App\Models\AdminAcademics\Subject;
 use App\Models\AdminAcademics\Lab;
@@ -38,7 +39,7 @@ class TeacherTimetable extends Model
      */
     public function teacher(): BelongsTo
     {
-        return $this->belongsTo(Teacher::class);
+        return $this->belongsTo(User::class);
     }
 
     /**
