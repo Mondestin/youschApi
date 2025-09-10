@@ -42,7 +42,7 @@ class StudentApplicationController extends Controller
             return response()->json([
                 'success' => true,
                 'data' => $applications,
-                'message' => 'Student applications retrieved successfully'
+                'message' => 'Candidatures d\'étudiants récupérées avec succès'
             ]);
 
         } catch (\Exception $e) {
@@ -53,7 +53,7 @@ class StudentApplicationController extends Controller
 
             return response()->json([
                 'success' => false,
-                'message' => 'Unable to retrieve applications'
+                'message' => 'Impossible de récupérer les candidatures'
             ], 500);
         }
     }
@@ -65,6 +65,9 @@ class StudentApplicationController extends Controller
     public function store(Request $request): JsonResponse
     {
         try {
+            // Set locale to French for validation messages
+            app()->setLocale('fr');
+            
             $validated = $request->validate([
                 'school_id' => 'required|exists:schools,id',
                 'campus_id' => 'required|exists:campuses,id',
@@ -89,7 +92,7 @@ class StudentApplicationController extends Controller
 
                     return response()->json([
                         'success' => false,
-                        'message' => 'Email is already registered'
+                        'message' => 'Cet email est déjà enregistré'
                     ], 422);
                 }
             }
@@ -105,7 +108,7 @@ class StudentApplicationController extends Controller
 
             return response()->json([
                 'success' => true,
-                'message' => 'Application submitted successfully',
+                'message' => 'Candidature soumise avec succès',
                 'data' => $application->load(['school', 'campus'])
             ], 201);
 
@@ -117,7 +120,7 @@ class StudentApplicationController extends Controller
 
             return response()->json([
                 'success' => false,
-                'message' => 'Validation failed',
+                'message' => 'Échec de la validation',
                 'errors' => $e->errors()
             ], 422);
         } catch (\Exception $e) {
@@ -129,7 +132,7 @@ class StudentApplicationController extends Controller
 
             return response()->json([
                 'success' => false,
-                'message' => 'Unable to submit application'
+                'message' => 'Impossible de soumettre la candidature'
             ], 500);
         }
     }
@@ -146,7 +149,7 @@ class StudentApplicationController extends Controller
             if (!$application) {
                 return response()->json([
                     'success' => false,
-                    'message' => 'Application not found'
+                    'message' => 'Candidature non trouvée'
                 ], 404);
             }
 
@@ -169,7 +172,7 @@ class StudentApplicationController extends Controller
 
             return response()->json([
                 'success' => false,
-                'message' => 'Unable to retrieve application'
+                'message' => 'Impossible de récupérer la candidature'
             ], 500);
         }
     }
@@ -190,7 +193,7 @@ class StudentApplicationController extends Controller
 
                 return response()->json([
                     'success' => false,
-                    'message' => 'Cannot update non-pending application'
+                    'message' => 'Impossible de mettre à jour une candidature non en attente'
                 ], 422);
             }
 
@@ -216,7 +219,7 @@ class StudentApplicationController extends Controller
 
             return response()->json([
                 'success' => true,
-                'message' => 'Application updated successfully',
+                'message' => 'Candidature mise à jour avec succès',
                 'data' => $application->fresh()->load(['school', 'campus'])
             ]);
 
@@ -229,7 +232,7 @@ class StudentApplicationController extends Controller
 
             return response()->json([
                 'success' => false,
-                'message' => 'Validation failed',
+                'message' => 'Échec de la validation',
                 'errors' => $e->errors()
             ], 422);
         } catch (\Exception $e) {
@@ -242,7 +245,7 @@ class StudentApplicationController extends Controller
 
             return response()->json([
                 'success' => false,
-                'message' => 'Unable to update application'
+                'message' => 'Impossible de mettre à jour la candidature'
             ], 500);
         }
     }
@@ -263,7 +266,7 @@ class StudentApplicationController extends Controller
 
                 return response()->json([
                     'success' => false,
-                    'message' => 'Cannot delete non-pending application'
+                    'message' => 'Impossible de supprimer une candidature non en attente'
                 ], 422);
             }
 
@@ -279,7 +282,7 @@ class StudentApplicationController extends Controller
 
             return response()->json([
                 'success' => true,
-                'message' => 'Application deleted successfully'
+                'message' => 'Candidature supprimée avec succès'
             ]);
 
         } catch (\Exception $e) {
@@ -291,7 +294,7 @@ class StudentApplicationController extends Controller
 
             return response()->json([
                 'success' => false,
-                'message' => 'Unable to delete application'
+                'message' => 'Impossible de supprimer la candidature'
             ], 500);
         }
     }
@@ -303,6 +306,9 @@ class StudentApplicationController extends Controller
     public function approve(Request $request, StudentApplication $application): JsonResponse
     {
         try {
+            // Set locale to French for validation messages
+            app()->setLocale('fr');
+            
             $validated = $request->validate([
                 'reviewer_id' => 'required|exists:users,id',
             ]);
@@ -310,7 +316,7 @@ class StudentApplicationController extends Controller
             if ($application->status !== StudentApplication::STATUS_PENDING) {
                 return response()->json([
                     'success' => false,
-                    'message' => 'Application is not pending approval'
+                    'message' => 'La candidature n\'est pas en attente d\'approbation'
                 ], 422);
             }
 
@@ -324,7 +330,7 @@ class StudentApplicationController extends Controller
 
             return response()->json([
                 'success' => true,
-                'message' => 'Application approved successfully'
+                'message' => 'Candidature approuvée avec succès'
             ]);
 
         } catch (ValidationException $e) {
@@ -336,7 +342,7 @@ class StudentApplicationController extends Controller
 
             return response()->json([
                 'success' => false,
-                'message' => 'Validation failed',
+                'message' => 'Échec de la validation',
                 'errors' => $e->errors()
             ], 422);
         } catch (\Exception $e) {
@@ -349,7 +355,7 @@ class StudentApplicationController extends Controller
 
             return response()->json([
                 'success' => false,
-                'message' => 'Unable to approve application'
+                'message' => 'Impossible d\'approuver la candidature'
             ], 500);
         }
     }
@@ -361,6 +367,9 @@ class StudentApplicationController extends Controller
     public function reject(Request $request, StudentApplication $application): JsonResponse
     {
         try {
+            // Set locale to French for validation messages
+            app()->setLocale('fr');
+            
             $validated = $request->validate([
                 'reviewer_id' => 'required|exists:users,id',
                 'rejection_reason' => 'nullable|string|max:500',
@@ -369,7 +378,7 @@ class StudentApplicationController extends Controller
             if ($application->status !== StudentApplication::STATUS_PENDING) {
                 return response()->json([
                     'success' => false,
-                    'message' => 'Application is not pending approval'
+                    'message' => 'La candidature n\'est pas en attente d\'approbation'
                 ], 422);
             }
 
@@ -384,7 +393,7 @@ class StudentApplicationController extends Controller
 
             return response()->json([
                 'success' => true,
-                'message' => 'Application rejected successfully'
+                'message' => 'Candidature rejetée avec succès'
             ]);
 
         } catch (ValidationException $e) {
@@ -396,7 +405,7 @@ class StudentApplicationController extends Controller
 
             return response()->json([
                 'success' => false,
-                'message' => 'Validation failed',
+                'message' => 'Échec de la validation',
                 'errors' => $e->errors()
             ], 422);
         } catch (\Exception $e) {
@@ -409,7 +418,7 @@ class StudentApplicationController extends Controller
 
             return response()->json([
                 'success' => false,
-                'message' => 'Unable to reject application'
+                'message' => 'Impossible de rejeter la candidature'
             ], 500);
         }
     }
@@ -444,7 +453,7 @@ class StudentApplicationController extends Controller
 
             return response()->json([
                 'success' => false,
-                'message' => 'Unable to retrieve statistics'
+                'message' => 'Impossible de récupérer les statistiques'
             ], 500);
         }
     }

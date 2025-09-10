@@ -274,4 +274,15 @@ class StudentRepository extends BaseRepository implements StudentRepositoryInter
         
         return $query->exists();
     }
+
+    /**
+     * Generate a unique student number for a given school.
+     * 
+     * @param int $schoolId The school ID to generate the student number for
+     * @return string The generated student number
+     */
+    public function generateStudentNumber(int $schoolId): string
+    {
+        return $this->model::generateStudentNumber($schoolId);
+    }
 } 
