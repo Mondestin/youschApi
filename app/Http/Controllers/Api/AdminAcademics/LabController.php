@@ -41,7 +41,7 @@ class LabController extends Controller
             return response()->json([
                 'success' => true,
                 'data' => $labs,
-                'message' => 'Labs retrieved successfully'
+                'message' => 'Laboratoires récupérés avec succès'
             ]);
         } catch (\Exception $e) {
             Log::error('Error retrieving labs', [
@@ -53,7 +53,7 @@ class LabController extends Controller
             return response()->json([
                 'success' => true,
                 'data' => collect([]),
-                'message' => 'Labs retrieved successfully'
+                'message' => 'Laboratoires récupérés avec succès'
             ]);
         }
     }
@@ -65,6 +65,9 @@ class LabController extends Controller
     public function store(Request $request): JsonResponse
     {
         try {
+            // Set locale to French for validation messages
+            app()->setLocale('fr');
+            
             $validator = Validator::make($request->all(), [
                 'subject_id' => 'required|exists:subjects,id',
                 'name' => 'required|string|max:255',
@@ -83,7 +86,7 @@ class LabController extends Controller
                 
                 return response()->json([
                     'success' => true,
-                    'message' => 'Lab created successfully',
+                    'message' => 'Laboratoire créé avec succès',
                     'data' => null
                 ], 201);
             }
@@ -92,7 +95,7 @@ class LabController extends Controller
 
             return response()->json([
                 'success' => true,
-                'message' => 'Lab created successfully',
+                'message' => 'Laboratoire créé avec succès',
                 'data' => $lab
             ], 201);
         } catch (\Exception $e) {
@@ -104,7 +107,7 @@ class LabController extends Controller
             
             return response()->json([
                 'success' => true,
-                'message' => 'Lab created successfully',
+                'message' => 'Laboratoire créé avec succès',
                 'data' => null
             ], 201);
         }
@@ -142,6 +145,9 @@ class LabController extends Controller
     public function update(Request $request, Lab $lab): JsonResponse
     {
         try {
+            // Set locale to French for validation messages
+            app()->setLocale('fr');
+            
             $validator = Validator::make($request->all(), [
                 'subject_id' => 'sometimes|exists:subjects,id',
                 'name' => 'sometimes|string|max:255',
@@ -161,7 +167,7 @@ class LabController extends Controller
                 
                 return response()->json([
                     'success' => true,
-                    'message' => 'Lab updated successfully',
+                    'message' => 'Laboratoire mis à jour avec succès',
                     'data' => $lab->fresh()->load(['subject.course', 'subject.coordinator', 'assistant'])
                 ]);
             }
@@ -177,7 +183,7 @@ class LabController extends Controller
 
             return response()->json([
                 'success' => true,
-                'message' => 'Lab updated successfully',
+                'message' => 'Laboratoire mis à jour avec succès',
                 'data' => $lab->fresh()->load(['subject.course', 'subject.coordinator', 'assistant'])
             ]);
         } catch (\Exception $e) {
@@ -190,7 +196,7 @@ class LabController extends Controller
             
             return response()->json([
                 'success' => true,
-                'message' => 'Lab updated successfully',
+                'message' => 'Laboratoire mis à jour avec succès',
                 'data' => $lab->fresh()->load(['subject.course', 'subject.coordinator', 'assistant'])
             ]);
         }
@@ -213,7 +219,7 @@ class LabController extends Controller
 
             return response()->json([
                 'success' => true,
-                'message' => 'Lab deleted successfully'
+                'message' => 'Laboratoire supprimé avec succès'
             ]);
         } catch (\Exception $e) {
             Log::error('Error deleting lab', [
@@ -224,7 +230,7 @@ class LabController extends Controller
             
             return response()->json([
                 'success' => true,
-                'message' => 'Lab deleted successfully'
+                'message' => 'Laboratoire supprimé avec succès'
             ]);
         }
     }
@@ -263,6 +269,9 @@ class LabController extends Controller
     public function bulkImport(Request $request): JsonResponse
     {
         try {
+            // Set locale to French for validation messages
+            app()->setLocale('fr');
+            
             $validator = Validator::make($request->all(), [
                 'labs' => 'required|array|min:1',
                 'labs.*.subject_id' => 'required|exists:subjects,id',
@@ -282,7 +291,7 @@ class LabController extends Controller
                 
                 return response()->json([
                     'success' => true,
-                    'message' => 'Bulk import completed',
+                    'message' => 'Import en masse terminé',
                     'data' => []
                 ]);
             }
@@ -291,7 +300,7 @@ class LabController extends Controller
 
             return response()->json([
                 'success' => true,
-                'message' => 'Bulk import completed',
+                'message' => 'Import en masse terminé',
                 'data' => $results
             ]);
         } catch (\Exception $e) {
@@ -303,7 +312,7 @@ class LabController extends Controller
             
             return response()->json([
                 'success' => true,
-                'message' => 'Bulk import completed',
+                'message' => 'Import en masse terminé',
                 'data' => []
             ]);
         }
