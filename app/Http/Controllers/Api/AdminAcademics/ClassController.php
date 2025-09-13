@@ -45,7 +45,7 @@ class ClassController extends Controller
         return response()->json([
             'success' => true,
             'data' => $classes,
-            'message' => 'Classes retrieved successfully'
+            'message' => 'Classes récupérées avec succès'
         ]);
     }
 
@@ -56,6 +56,9 @@ class ClassController extends Controller
     public function store(Request $request): JsonResponse
     {
         try {
+            // Set locale to French for validation messages
+            app()->setLocale('fr');
+            
             $validated = $request->validate([
                 'campus_id' => 'required|exists:campuses,id',
                 'course_id' => 'required|exists:courses,id',
@@ -68,19 +71,19 @@ class ClassController extends Controller
             return response()->json([
                 'success' => true,
                 'data' => $class->load(['campus.school', 'course.department.faculty', 'subjects', 'teachers']),
-                'message' => 'Class created successfully'
+                'message' => 'Classe créée avec succès'
             ], 201);
 
         } catch (ValidationException $e) {
             return response()->json([
                 'success' => false,
-                'message' => 'Validation failed',
+                'message' => 'Échec de la validation',
                 'errors' => $e->errors()
             ], 422);
         } catch (\Exception $e) {
             return response()->json([
                 'success' => false,
-                'message' => 'Failed to create class',
+                'message' => 'Impossible de créer la classe',
                 'error' => $e->getMessage()
             ], 500);
         }
@@ -106,7 +109,7 @@ class ClassController extends Controller
         return response()->json([
             'success' => true,
             'data' => $class,
-            'message' => 'Class retrieved successfully'
+            'message' => 'Classe récupérée avec succès'
         ]);
     }
 
@@ -117,6 +120,9 @@ class ClassController extends Controller
     public function update(Request $request, ClassRoom $class): JsonResponse
     {
         try {
+            // Set locale to French for validation messages
+            app()->setLocale('fr');
+            
             $validated = $request->validate([
                 'campus_id' => 'sometimes|required|exists:campuses,id',
                 'course_id' => 'sometimes|required|exists:courses,id',
@@ -129,19 +135,19 @@ class ClassController extends Controller
             return response()->json([
                 'success' => true,
                 'data' => $class->fresh()->load(['campus.school', 'course.department.faculty', 'subjects', 'teachers']),
-                'message' => 'Class updated successfully'
+                'message' => 'Classe mise à jour avec succès'
             ]);
 
         } catch (ValidationException $e) {
             return response()->json([
                 'success' => false,
-                'message' => 'Validation failed',
+                'message' => 'Échec de la validation',
                 'errors' => $e->errors()
             ], 422);
         } catch (\Exception $e) {
             return response()->json([
                 'success' => false,
-                'message' => 'Failed to update class',
+                'message' => 'Impossible de mettre à jour la classe',
                 'error' => $e->getMessage()
             ], 500);
         }
@@ -159,7 +165,7 @@ class ClassController extends Controller
                 $class->studentEnrollments()->exists() || $class->teacherAssignments()->exists()) {
                 return response()->json([
                     'success' => false,
-                    'message' => 'Cannot delete class with related data. Please remove related records first.'
+                    'message' => 'Impossible de supprimer la classe avec des données liées. Veuillez d\'abord supprimer les enregistrements liés.'
                 ], 422);
             }
 
@@ -167,13 +173,13 @@ class ClassController extends Controller
 
             return response()->json([
                 'success' => true,
-                'message' => 'Class deleted successfully'
+                'message' => 'Classe supprimée avec succès'
             ]);
 
         } catch (\Exception $e) {
             return response()->json([
                 'success' => false,
-                'message' => 'Failed to delete class',
+                'message' => 'Impossible de supprimer la classe',
                 'error' => $e->getMessage()
             ], 500);
         }
@@ -186,6 +192,9 @@ class ClassController extends Controller
     public function assignSubject(Request $request, ClassRoom $class): JsonResponse
     {
         try {
+            // Set locale to French for validation messages
+            app()->setLocale('fr');
+            
             $validated = $request->validate([
                 'subject_id' => 'required|exists:subjects,id',
                 'teacher_id' => 'nullable|exists:users,id',
@@ -195,7 +204,7 @@ class ClassController extends Controller
             if ($class->subjects()->where('subject_id', $validated['subject_id'])->exists()) {
                 return response()->json([
                     'success' => false,
-                    'message' => 'Subject is already assigned to this class'
+                    'message' => 'Cette matière est déjà assignée à cette classe'
                 ], 422);
             }
 
@@ -206,19 +215,19 @@ class ClassController extends Controller
             return response()->json([
                 'success' => true,
                 'data' => $class->fresh()->load(['subjects.coordinator']),
-                'message' => 'Subject assigned to class successfully'
+                'message' => 'Matière assignée à la classe avec succès'
             ]);
 
         } catch (ValidationException $e) {
             return response()->json([
                 'success' => false,
-                'message' => 'Validation failed',
+                'message' => 'Échec de la validation',
                 'errors' => $e->errors()
             ], 422);
         } catch (\Exception $e) {
             return response()->json([
                 'success' => false,
-                'message' => 'Failed to assign subject to class',
+                'message' => 'Impossible d\'assigner la matière à la classe',
                 'error' => $e->getMessage()
             ], 500);
         }
@@ -235,13 +244,13 @@ class ClassController extends Controller
 
             return response()->json([
                 'success' => true,
-                'message' => 'Subject removed from class successfully'
+                'message' => 'Matière supprimée de la classe avec succès'
             ]);
 
         } catch (\Exception $e) {
             return response()->json([
                 'success' => false,
-                'message' => 'Failed to remove subject from class',
+                'message' => 'Impossible de supprimer la matière de la classe',
                 'error' => $e->getMessage()
             ], 500);
         }
@@ -254,6 +263,9 @@ class ClassController extends Controller
     public function assignTeacher(Request $request, ClassRoom $class): JsonResponse
     {
         try {
+            // Set locale to French for validation messages
+            app()->setLocale('fr');
+            
             $validated = $request->validate([
                 'subject_id' => 'required|exists:subjects,id',
                 'teacher_id' => 'required|exists:users,id',
@@ -275,19 +287,19 @@ class ClassController extends Controller
             return response()->json([
                 'success' => true,
                 'data' => $class->fresh()->load(['subjects.coordinator']),
-                'message' => 'Teacher assigned to class successfully'
+                'message' => 'Enseignant assigné à la classe avec succès'
             ]);
 
         } catch (ValidationException $e) {
             return response()->json([
                 'success' => false,
-                'message' => 'Validation failed',
+                'message' => 'Échec de la validation',
                 'errors' => $e->errors()
             ], 422);
         } catch (\Exception $e) {
             return response()->json([
                 'success' => false,
-                'message' => 'Failed to assign teacher to class',
+                'message' => 'Impossible d\'assigner l\'enseignant à la classe',
                 'error' => $e->getMessage()
             ], 500);
         }
@@ -311,7 +323,7 @@ class ClassController extends Controller
         return response()->json([
             'success' => true,
             'data' => $stats,
-            'message' => 'Class statistics retrieved successfully'
+            'message' => 'Statistiques de classe récupérées avec succès'
         ]);
     }
 } 

@@ -32,7 +32,7 @@ class PrerequisiteController extends Controller
         return response()->json([
             'success' => true,
             'data' => $prerequisites,
-            'message' => 'Prerequisites retrieved successfully'
+                'message' => 'Prérequis récupérés avec succès'
         ]);
     }
 
@@ -42,6 +42,9 @@ class PrerequisiteController extends Controller
      */
     public function store(Request $request): JsonResponse
     {
+        // Set locale to French for validation messages
+        app()->setLocale('fr');
+        
         $validator = Validator::make($request->all(), [
             'subject_id' => 'required|exists:subjects,id',
             'prerequisite_id' => 'required|exists:subjects,id|different:subject_id',
@@ -50,7 +53,7 @@ class PrerequisiteController extends Controller
         if ($validator->fails()) {
             return response()->json([
                 'success' => false,
-                'message' => 'Validation failed',
+                'message' => 'Échec de la validation',
                 'errors' => $validator->errors()
             ], 422);
         }
@@ -64,7 +67,7 @@ class PrerequisiteController extends Controller
         if ($existing) {
             return response()->json([
                 'success' => false,
-                'message' => 'This prerequisite relationship already exists'
+                'message' => 'Cette relation de prérequis existe déjà'
             ], 409);
         }
 
@@ -77,7 +80,7 @@ class PrerequisiteController extends Controller
         if ($circular) {
             return response()->json([
                 'success' => false,
-                'message' => 'Circular dependency detected. This would create an infinite prerequisite chain.'
+                'message' => 'Dépendance circulaire détectée. Cela créerait une chaîne de prérequis infinie.'
             ], 409);
         }
 
@@ -85,7 +88,7 @@ class PrerequisiteController extends Controller
 
         return response()->json([
             'success' => true,
-            'message' => 'Prerequisite created successfully',
+                'message' => 'Prérequis créé avec succès',
             'data' => $prerequisite
         ], 201);
     }
@@ -108,6 +111,9 @@ class PrerequisiteController extends Controller
      */
     public function update(Request $request, SubjectPrerequisite $prerequisite): JsonResponse
     {
+        // Set locale to French for validation messages
+        app()->setLocale('fr');
+        
         $validator = Validator::make($request->all(), [
             'subject_id' => 'sometimes|exists:subjects,id',
             'prerequisite_id' => 'sometimes|exists:subjects,id|different:subject_id',
@@ -116,7 +122,7 @@ class PrerequisiteController extends Controller
         if ($validator->fails()) {
             return response()->json([
                 'success' => false,
-                'message' => 'Validation failed',
+                'message' => 'Échec de la validation',
                 'errors' => $validator->errors()
             ], 422);
         }
@@ -135,7 +141,7 @@ class PrerequisiteController extends Controller
             if ($existing) {
                 return response()->json([
                     'success' => false,
-                    'message' => 'This prerequisite relationship already exists'
+                    'message' => 'Cette relation de prérequis existe déjà'
                 ], 409);
             }
 
@@ -148,7 +154,7 @@ class PrerequisiteController extends Controller
             if ($circular) {
                 return response()->json([
                     'success' => false,
-                    'message' => 'Circular dependency detected. This would create an infinite prerequisite chain.'
+                    'message' => 'Dépendance circulaire détectée. Cela créerait une chaîne de prérequis infinie.'
                 ], 409);
             }
         }
@@ -158,13 +164,13 @@ class PrerequisiteController extends Controller
         if (!$updated) {
             return response()->json([
                 'success' => false,
-                'message' => 'Failed to update prerequisite'
+                'message' => 'Impossible de mettre à jour le prérequis'
             ], 500);
         }
 
         return response()->json([
             'success' => true,
-            'message' => 'Prerequisite updated successfully',
+                'message' => 'Prérequis mis à jour avec succès',
             'data' => $prerequisite->fresh()->load(['subject.course', 'subject.coordinator', 'prerequisite.course', 'prerequisite.coordinator'])
         ]);
     }
@@ -180,13 +186,13 @@ class PrerequisiteController extends Controller
         if (!$deleted) {
             return response()->json([
                 'success' => false,
-                'message' => 'Failed to delete prerequisite'
+                'message' => 'Impossible de supprimer le prérequis'
             ], 500);
         }
 
         return response()->json([
             'success' => true,
-            'message' => 'Prerequisite deleted successfully'
+                'message' => 'Prérequis supprimé avec succès'
         ]);
     }
 
@@ -224,6 +230,9 @@ class PrerequisiteController extends Controller
      */
     public function bulkImport(Request $request): JsonResponse
     {
+        // Set locale to French for validation messages
+        app()->setLocale('fr');
+        
         $validator = Validator::make($request->all(), [
             'prerequisites' => 'required|array|min:1',
             'prerequisites.*.subject_id' => 'required|exists:subjects,id',
@@ -233,7 +242,7 @@ class PrerequisiteController extends Controller
         if ($validator->fails()) {
             return response()->json([
                 'success' => false,
-                'message' => 'Validation failed',
+                'message' => 'Échec de la validation',
                 'errors' => $validator->errors()
             ], 422);
         }
@@ -242,7 +251,7 @@ class PrerequisiteController extends Controller
 
         return response()->json([
             'success' => true,
-            'message' => 'Bulk import completed',
+                'message' => 'Import en masse terminé',
             'data' => $results
         ]);
     }

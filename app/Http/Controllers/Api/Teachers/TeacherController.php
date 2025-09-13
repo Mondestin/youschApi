@@ -35,12 +35,12 @@ class TeacherController extends Controller
             return response()->json([
                 'success' => true,
                 'data' => $teachers,
-                'message' => 'Teachers retrieved successfully'
+                'message' => 'Enseignants récupérés avec succès'
             ]);
         } catch (\Exception $e) {
             return response()->json([
                 'success' => false,
-                'message' => 'Failed to retrieve teachers: ' . $e->getMessage()
+                'message' => 'Impossible de récupérer les enseignants: ' . $e->getMessage()
             ], 500);
         }
     }
@@ -55,6 +55,9 @@ class TeacherController extends Controller
     public function store(Request $request): JsonResponse
     {
         try {
+            // Set locale to French for validation messages
+            app()->setLocale('fr');
+            
             $validator = Validator::make($request->all(), [
                 'first_name' => 'required|string|max:255',
                 'last_name' => 'required|string|max:255',
@@ -75,7 +78,7 @@ class TeacherController extends Controller
             if ($validator->fails()) {
                 return response()->json([
                     'success' => false,
-                    'message' => 'Validation failed',
+                    'message' => 'Échec de la validation',
                     'errors' => $validator->errors()
                 ], 422);
             }
@@ -85,12 +88,12 @@ class TeacherController extends Controller
             return response()->json([
                 'success' => true,
                 'data' => $teacher,
-                'message' => 'Teacher created successfully'
+                'message' => 'Enseignant créé avec succès'
             ], 201);
         } catch (\Exception $e) {
             return response()->json([
                 'success' => false,
-                'message' => 'Failed to create teacher: ' . $e->getMessage()
+                'message' => 'Impossible de créer l\'enseignant: ' . $e->getMessage()
             ], 500);
         }
     }
@@ -110,19 +113,19 @@ class TeacherController extends Controller
             if (!$teacher) {
                 return response()->json([
                     'success' => false,
-                    'message' => 'Teacher not found'
+                    'message' => 'Enseignant non trouvé'
                 ], 404);
             }
             
             return response()->json([
                 'success' => true,
                 'data' => $teacher,
-                'message' => 'Teacher retrieved successfully'
+                'message' => 'Enseignant récupéré avec succès'
             ]);
         } catch (\Exception $e) {
             return response()->json([
                 'success' => false,
-                'message' => 'Failed to retrieve teacher: ' . $e->getMessage()
+                'message' => 'Impossible de récupérer l\'enseignant: ' . $e->getMessage()
             ], 500);
         }
     }
@@ -143,10 +146,13 @@ class TeacherController extends Controller
             if (!$teacher) {
                 return response()->json([
                     'success' => false,
-                    'message' => 'Teacher not found'
+                    'message' => 'Enseignant non trouvé'
                 ], 404);
             }
 
+            // Set locale to French for validation messages
+            app()->setLocale('fr');
+            
             $validator = Validator::make($request->all(), [
                 'first_name' => 'sometimes|required|string|max:255',
                 'last_name' => 'sometimes|required|string|max:255',
@@ -172,7 +178,7 @@ class TeacherController extends Controller
             if ($validator->fails()) {
                 return response()->json([
                     'success' => false,
-                    'message' => 'Validation failed',
+                    'message' => 'Échec de la validation',
                     'errors' => $validator->errors()
                 ], 422);
             }
@@ -184,18 +190,18 @@ class TeacherController extends Controller
                 return response()->json([
                     'success' => true,
                     'data' => $teacher,
-                    'message' => 'Teacher updated successfully'
+                    'message' => 'Enseignant mis à jour avec succès'
                 ]);
             }
             
             return response()->json([
                 'success' => false,
-                'message' => 'Failed to update teacher'
+                'message' => 'Impossible de mettre à jour l\'enseignant'
             ], 500);
         } catch (\Exception $e) {
             return response()->json([
                 'success' => false,
-                'message' => 'Failed to update teacher: ' . $e->getMessage()
+                'message' => 'Impossible de mettre à jour l\'enseignant: ' . $e->getMessage()
             ], 500);
         }
     }
@@ -215,7 +221,7 @@ class TeacherController extends Controller
             if (!$teacher) {
                 return response()->json([
                     'success' => false,
-                    'message' => 'Teacher not found'
+                    'message' => 'Enseignant non trouvé'
                 ], 404);
             }
 
@@ -224,18 +230,18 @@ class TeacherController extends Controller
             if ($deleted) {
                 return response()->json([
                     'success' => true,
-                    'message' => 'Teacher deleted successfully'
+                    'message' => 'Enseignant supprimé avec succès'
                 ]);
             }
             
             return response()->json([
                 'success' => false,
-                'message' => 'Failed to delete teacher'
+                'message' => 'Impossible de supprimer l\'enseignant'
             ], 500);
         } catch (\Exception $e) {
             return response()->json([
                 'success' => false,
-                'message' => 'Failed to delete teacher: ' . $e->getMessage()
+                'message' => 'Impossible de supprimer l\'enseignant: ' . $e->getMessage()
             ], 500);
         }
     }
@@ -255,12 +261,12 @@ class TeacherController extends Controller
             return response()->json([
                 'success' => true,
                 'data' => $teachers,
-                'message' => 'Teachers retrieved successfully'
+                'message' => 'Enseignants récupérés avec succès'
             ]);
         } catch (\Exception $e) {
             return response()->json([
                 'success' => false,
-                'message' => 'Failed to retrieve teachers: ' . $e->getMessage()
+                'message' => 'Impossible de récupérer les enseignants: ' . $e->getMessage()
             ], 500);
         }
     }
@@ -280,12 +286,12 @@ class TeacherController extends Controller
             return response()->json([
                 'success' => true,
                 'data' => $teachers,
-                'message' => 'Teachers retrieved successfully'
+                'message' => 'Enseignants récupérés avec succès'
             ]);
         } catch (\Exception $e) {
             return response()->json([
                 'success' => false,
-                'message' => 'Failed to retrieve teachers: ' . $e->getMessage()
+                'message' => 'Impossible de récupérer les enseignants: ' . $e->getMessage()
             ], 500);
         }
     }

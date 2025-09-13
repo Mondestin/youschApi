@@ -54,7 +54,7 @@ class StudentDocumentController extends Controller
             return response()->json([
                 'success' => true,
                 'data' => $documents,
-                'message' => 'Student documents retrieved successfully'
+                'message' => 'Documents d\'étudiant récupérés avec succès'
             ]);
 
         } catch (\Exception $e) {
@@ -65,7 +65,7 @@ class StudentDocumentController extends Controller
 
             return response()->json([
                 'success' => false,
-                'message' => 'Unable to retrieve document records'
+                'message' => 'Impossible de récupérer les enregistrements de documents'
             ], 500);
         }
     }
@@ -77,6 +77,9 @@ class StudentDocumentController extends Controller
     public function store(Request $request): JsonResponse
     {
         try {
+            // Set locale to French for validation messages
+            app()->setLocale('fr');
+            
             $validated = $request->validate([
                 'student_id' => 'required|exists:students,id',
                 'document_type' => 'required|string|max:100',
@@ -97,7 +100,7 @@ class StudentDocumentController extends Controller
 
             return response()->json([
                 'success' => true,
-                'message' => 'Document record created successfully',
+                'message' => 'Enregistrement de document créé avec succès',
                 'data' => $document->load(['student'])
             ], 201);
 
@@ -109,7 +112,7 @@ class StudentDocumentController extends Controller
 
             return response()->json([
                 'success' => false,
-                'message' => 'Validation failed',
+                'message' => 'Échec de la validation',
                 'errors' => $e->errors()
             ], 422);
         } catch (\Exception $e) {
@@ -121,7 +124,7 @@ class StudentDocumentController extends Controller
 
             return response()->json([
                 'success' => false,
-                'message' => 'Unable to create document record'
+                'message' => 'Impossible de créer l\'enregistrement de document'
             ], 500);
         }
     }
@@ -167,6 +170,9 @@ class StudentDocumentController extends Controller
     public function update(Request $request, StudentDocument $document): JsonResponse
     {
         try {
+            // Set locale to French for validation messages
+            app()->setLocale('fr');
+            
             $validated = $request->validate([
                 'document_type' => 'sometimes|required|string|max:100',
                 'original_filename' => 'sometimes|string|max:255',
@@ -184,7 +190,7 @@ class StudentDocumentController extends Controller
 
             return response()->json([
                 'success' => true,
-                'message' => 'Document updated successfully',
+                'message' => 'Document mis à jour avec succès',
                 'data' => $document->fresh()->load(['student'])
             ]);
 
@@ -197,7 +203,7 @@ class StudentDocumentController extends Controller
 
             return response()->json([
                 'success' => false,
-                'message' => 'Validation failed',
+                'message' => 'Échec de la validation',
                 'errors' => $e->errors()
             ], 422);
         } catch (\Exception $e) {
@@ -210,7 +216,7 @@ class StudentDocumentController extends Controller
 
             return response()->json([
                 'success' => false,
-                'message' => 'Unable to update document record'
+                'message' => 'Impossible de mettre à jour l\'enregistrement de document'
             ], 500);
         }
     }
@@ -241,7 +247,7 @@ class StudentDocumentController extends Controller
 
             return response()->json([
                 'success' => true,
-                'message' => 'Document deleted successfully'
+                'message' => 'Document supprimé avec succès'
             ]);
 
         } catch (\Exception $e) {
@@ -253,7 +259,7 @@ class StudentDocumentController extends Controller
 
             return response()->json([
                 'success' => false,
-                'message' => 'Unable to delete document record'
+                'message' => 'Impossible de supprimer l\'enregistrement de document'
             ], 500);
         }
     }
@@ -265,6 +271,9 @@ class StudentDocumentController extends Controller
     public function upload(Request $request): JsonResponse
     {
         try {
+            // Set locale to French for validation messages
+            app()->setLocale('fr');
+            
             $validated = $request->validate([
                 'student_id' => 'required|exists:students,id',
                 'document_type' => 'required|string|max:100',
@@ -308,7 +317,7 @@ class StudentDocumentController extends Controller
 
             return response()->json([
                 'success' => true,
-                'message' => 'Document uploaded successfully',
+                'message' => 'Document téléchargé avec succès',
                 'data' => $document->load(['student'])
             ], 201);
 
@@ -320,7 +329,7 @@ class StudentDocumentController extends Controller
 
             return response()->json([
                 'success' => false,
-                'message' => 'Validation failed',
+                'message' => 'Échec de la validation',
                 'errors' => $e->errors()
             ], 422);
         } catch (\Exception $e) {
@@ -332,7 +341,7 @@ class StudentDocumentController extends Controller
 
             return response()->json([
                 'success' => false,
-                'message' => 'Unable to upload document'
+                'message' => 'Impossible de télécharger le document'
             ], 500);
         }
     }
@@ -352,7 +361,7 @@ class StudentDocumentController extends Controller
 
                 return response()->json([
                     'success' => false,
-                    'message' => 'Document file not found'
+                    'message' => 'Fichier de document non trouvé'
                 ], 404);
             }
 
@@ -419,7 +428,7 @@ class StudentDocumentController extends Controller
 
             return response()->json([
                 'success' => false,
-                'message' => 'Unable to retrieve document records'
+                'message' => 'Impossible de récupérer les enregistrements de documents'
             ], 500);
         }
     }
@@ -455,7 +464,7 @@ class StudentDocumentController extends Controller
 
             return response()->json([
                 'success' => false,
-                'message' => 'Unable to retrieve document records'
+                'message' => 'Impossible de récupérer les enregistrements de documents'
             ], 500);
         }
     }

@@ -52,7 +52,7 @@ class SubjectController extends Controller
         return response()->json([
             'success' => true,
             'data' => $subjects,
-            'message' => 'Subjects retrieved successfully'
+                'message' => 'Matières récupérées avec succès'
         ]);
     }
 
@@ -63,6 +63,9 @@ class SubjectController extends Controller
     public function store(Request $request): JsonResponse
     {
         try {
+            // Set locale to French for validation messages
+            app()->setLocale('fr');
+            
             $validated = $request->validate([
                 'course_id' => 'required|exists:courses,id',
                 'name' => 'required|string|max:255',
@@ -76,19 +79,19 @@ class SubjectController extends Controller
             return response()->json([
                 'success' => true,
                 'data' => $subject->load(['course.department.faculty.school', 'coordinator', 'labs']),
-                'message' => 'Subject created successfully'
+                'message' => 'Matière créée avec succès'
             ], 201);
 
         } catch (ValidationException $e) {
             return response()->json([
                 'success' => false,
-                'message' => 'Validation failed',
+                'message' => 'Échec de la validation',
                 'errors' => $e->errors()
             ], 422);
         } catch (\Exception $e) {
             return response()->json([
                 'success' => false,
-                'message' => 'Failed to create subject',
+                'message' => 'Impossible de créer la matière',
                 'error' => $e->getMessage()
             ], 500);
         }
@@ -114,7 +117,7 @@ class SubjectController extends Controller
         return response()->json([
             'success' => true,
             'data' => $subject,
-            'message' => 'Subject retrieved successfully'
+                'message' => 'Matière récupérée avec succès'
         ]);
     }
 
@@ -125,6 +128,9 @@ class SubjectController extends Controller
     public function update(Request $request, Subject $subject): JsonResponse
     {
         try {
+            // Set locale to French for validation messages
+            app()->setLocale('fr');
+            
             $validated = $request->validate([
                 'course_id' => 'sometimes|required|exists:courses,id',
                 'name' => 'sometimes|required|string|max:255',
@@ -138,19 +144,19 @@ class SubjectController extends Controller
             return response()->json([
                 'success' => true,
                 'data' => $subject->fresh()->load(['course.department.faculty.school', 'coordinator', 'labs']),
-                'message' => 'Subject updated successfully'
+                'message' => 'Matière mise à jour avec succès'
             ]);
 
         } catch (ValidationException $e) {
             return response()->json([
                 'success' => false,
-                'message' => 'Validation failed',
+                'message' => 'Échec de la validation',
                 'errors' => $e->errors()
             ], 422);
         } catch (\Exception $e) {
             return response()->json([
                 'success' => false,
-                'message' => 'Failed to update subject',
+                'message' => 'Impossible de mettre à jour la matière',
                 'error' => $e->getMessage()
             ], 500);
         }
@@ -167,7 +173,7 @@ class SubjectController extends Controller
             if ($subject->labs()->exists() || $subject->exams()->exists() || $subject->studentGrades()->exists()) {
                 return response()->json([
                     'success' => false,
-                    'message' => 'Cannot delete subject with related data. Please remove related records first.'
+                    'message' => 'Impossible de supprimer la matière avec des données liées. Veuillez d\'abord supprimer les enregistrements liés.'
                 ], 422);
             }
 
@@ -175,13 +181,13 @@ class SubjectController extends Controller
 
             return response()->json([
                 'success' => true,
-                'message' => 'Subject deleted successfully'
+                'message' => 'Matière supprimée avec succès'
             ]);
 
         } catch (\Exception $e) {
             return response()->json([
                 'success' => false,
-                'message' => 'Failed to delete subject',
+                'message' => 'Impossible de supprimer la matière',
                 'error' => $e->getMessage()
             ], 500);
         }
@@ -194,6 +200,9 @@ class SubjectController extends Controller
     public function assignCoordinator(Request $request, Subject $subject): JsonResponse
     {
         try {
+            // Set locale to French for validation messages
+            app()->setLocale('fr');
+            
             $validated = $request->validate([
                 'coordinator_id' => 'required|exists:users,id',
             ]);
@@ -203,19 +212,19 @@ class SubjectController extends Controller
             return response()->json([
                 'success' => true,
                 'data' => $subject->fresh()->load(['course.department.faculty.school', 'coordinator', 'labs']),
-                'message' => 'Subject coordinator assigned successfully'
+                'message' => 'Coordinateur de matière assigné avec succès'
             ]);
 
         } catch (ValidationException $e) {
             return response()->json([
                 'success' => false,
-                'message' => 'Validation failed',
+                'message' => 'Échec de la validation',
                 'errors' => $e->errors()
             ], 422);
         } catch (\Exception $e) {
             return response()->json([
                 'success' => false,
-                'message' => 'Failed to assign subject coordinator',
+                'message' => 'Impossible d\'assigner le coordinateur de matière',
                 'error' => $e->getMessage()
             ], 500);
         }
@@ -228,6 +237,9 @@ class SubjectController extends Controller
     public function addPrerequisites(Request $request, Subject $subject): JsonResponse
     {
         try {
+            // Set locale to French for validation messages
+            app()->setLocale('fr');
+            
             $validated = $request->validate([
                 'prerequisite_ids' => 'required|array',
                 'prerequisite_ids.*' => 'exists:subjects,id',
@@ -254,7 +266,7 @@ class SubjectController extends Controller
         } catch (ValidationException $e) {
             return response()->json([
                 'success' => false,
-                'message' => 'Validation failed',
+                'message' => 'Échec de la validation',
                 'errors' => $e->errors()
             ], 422);
         } catch (\Exception $e) {
@@ -302,7 +314,7 @@ class SubjectController extends Controller
         return response()->json([
             'success' => true,
             'data' => $subjects,
-            'message' => 'Subjects retrieved successfully'
+                'message' => 'Matières récupérées avec succès'
         ]);
     }
 
@@ -324,7 +336,7 @@ class SubjectController extends Controller
         return response()->json([
             'success' => true,
             'data' => $stats,
-            'message' => 'Subject statistics retrieved successfully'
+                'message' => 'Statistiques de matière récupérées avec succès'
         ]);
     }
 } 
