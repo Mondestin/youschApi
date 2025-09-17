@@ -14,6 +14,7 @@ use App\Http\Controllers\Api\AdminAcademics\{
     AcademicYearController,
     TermController,
     TimetableController,
+    VenueController,
     ExamController,
     GradingSchemeController,
     StudentEnrollmentController,
@@ -37,6 +38,7 @@ class AcademicRouteService
         self::registerFacultyRoutes();
         self::registerCourseRoutes();
         self::registerClassRoutes();
+        self::registerVenueRoutes();
         self::registerTimetableRoutes();
         self::registerExamRoutes();
         self::registerEnrollmentRoutes();
@@ -168,6 +170,23 @@ class AcademicRouteService
             Route::delete('/{class}/subjects/{subject}', [ClassController::class, 'removeSubject'])->name('remove-subject');
             Route::patch('/{class}/assign-teacher', [ClassController::class, 'assignTeacher'])->name('assign-teacher');
             Route::get('/{class}/statistics', [ClassController::class, 'statistics'])->name('statistics');
+        });
+    }
+
+    /**
+     * Register venue management routes.
+     */
+    private static function registerVenueRoutes(): void
+    {
+        Route::prefix('venues')->name('venues.')->group(function () {
+            Route::get('/', [VenueController::class, 'index'])->name('index');
+            Route::post('/', [VenueController::class, 'store'])->name('store');
+            Route::get('/{venue}', [VenueController::class, 'show'])->name('show');
+            Route::put('/{venue}', [VenueController::class, 'update'])->name('update');
+            Route::delete('/{venue}', [VenueController::class, 'destroy'])->name('destroy');
+            Route::get('/available/check', [VenueController::class, 'getAvailableVenues'])->name('available');
+            Route::patch('/{venue}/toggle-status', [VenueController::class, 'toggleStatus'])->name('toggle-status');
+            Route::get('/statistics/overview', [VenueController::class, 'getStats'])->name('statistics');
         });
     }
 

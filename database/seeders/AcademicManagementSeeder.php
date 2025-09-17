@@ -527,6 +527,9 @@ class AcademicManagementSeeder extends Seeder
                 for ($day = 0; $day < 5; $day++) { // Monday to Friday
                     $date = $currentDate->copy()->addDays($day);
                     
+                    // Get a random venue for the timetable entry
+                    $venue = \App\Models\AdminAcademics\Venue::inRandomOrder()->first();
+                    
                     Timetable::create([
                         'class_id' => $class->id,
                         'subject_id' => $subject->id,
@@ -534,7 +537,7 @@ class AcademicManagementSeeder extends Seeder
                         'date' => $date->format('Y-m-d'),
                         'start_time' => '09:00:00',
                         'end_time' => '10:30:00',
-                        'room' => 'Salle ' . ($index + 101),
+                        'venue_id' => $venue ? $venue->id : null,
                     ]);
                     
                     Timetable::create([
@@ -544,7 +547,7 @@ class AcademicManagementSeeder extends Seeder
                         'date' => $date->format('Y-m-d'),
                         'start_time' => '14:00:00',
                         'end_time' => '15:30:00',
-                        'room' => 'Salle ' . ($index + 101),
+                        'venue_id' => $venue ? $venue->id : null,
                     ]);
                 }
             }

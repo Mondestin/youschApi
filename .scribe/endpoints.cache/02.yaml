@@ -30,7 +30,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"success":true,"data":[{"id":7,"subject_id":7,"name":"Laboratoire d''Alg\u00e8bre Lin\u00e9aire","description":"Laboratoire pour exercices d''alg\u00e8bre lin\u00e9aire","schedule":"Mercredi 14h00 - 16h00","created_at":"2025-09-09T02:24:44.000000Z","updated_at":"2025-09-09T02:24:44.000000Z","subject":{"id":7,"course_id":2,"name":"Alg\u00e8bre Lin\u00e9aire","code":"MATH201","description":"Alg\u00e8bre lin\u00e9aire et g\u00e9om\u00e9trie analytique","coordinator_id":14,"created_at":"2025-09-09T02:24:44.000000Z","updated_at":"2025-09-09T02:24:44.000000Z","course":{"id":2,"department_id":2,"name":"Baccalaur\u00e9at en Math\u00e9matiques","code":"BMATH","description":"Programme de math\u00e9matiques avanc\u00e9es","created_at":"2025-09-09T02:24:44.000000Z","updated_at":"2025-09-09T02:24:44.000000Z"},"coordinator":{"id":14,"name":"Prof. Michael Chen","email":"michael.chen@yousch.edu","email_verified_at":"2025-09-09T02:24:42.000000Z","created_at":"2025-09-09T02:24:42.000000Z","updated_at":"2025-09-09T02:24:42.000000Z"}},"assistant":null},{"id":15,"subject_id":15,"name":"Laboratoire d''\u00c9criture Avanc\u00e9e","description":"Laboratoire pour techniques d''\u00e9criture avanc\u00e9es","schedule":"Jeudi 10h00 - 12h00","created_at":"2025-09-09T02:24:45.000000Z","updated_at":"2025-09-09T02:24:45.000000Z","subject":{"id":15,"course_id":4,"name":"\u00c9criture Avanc\u00e9e","code":"ENG201","description":"Techniques d''\u00e9criture avanc\u00e9es","coordinator_id":16,"created_at":"2025-09-09T02:24:44.000000Z","updated_at":"2025-09-09T02:24:44.000000Z","course":{"id":4,"department_id":4,"name":"Baccalaur\u00e9at \u00e8s Arts en Anglais","code":"BAENG","description":"Programme de litt\u00e9rature et langue anglaise","created_at":"2025-09-09T02:24:44.000000Z","updated_at":"2025-09-09T02:24:44.000000Z"},"coordinator":{"id":16,"name":"Prof. David Thompson","email":"david.thompson@yousch.edu","email_verified_at":"2025-09-09T02:24:42.000000Z","created_at":"2025-09-09T02:24:42.000000Z","updated_at":"2025-09-09T02:24:42.000000Z"}},"assistant":null},{"id":4,"subject_id":3,"name":"Laboratoire de Base de Donn\u00e9es","description":"Laboratoire pour la conception et manipulation de bases de donn\u00e9es","schedule":"Jeudi 10h00 - 12h00","created_at":"2025-09-09T02:24:44.000000Z","updated_at":"2025-09-09T02:24:44.000000Z","subject":{"id":3,"course_id":1,"name":"Bases de Donn\u00e9es","code":"CS301","description":"Conception et gestion de bases de donn\u00e9es","coordinator_id":13,"created_at":"2025-09-09T02:24:44.000000Z","updated_at":"2025-09-09T02:24:44.000000Z","course":{"id":1,"department_id":1,"name":"Baccalaur\u00e9at en Informatique","code":"BCS","description":"Programme complet d''informatique","created_at":"2025-09-09T02:24:44.000000Z","updated_at":"2025-09-09T02:24:44.000000Z"},"coordinator":{"id":13,"name":"Dr. Sarah Johnson","email":"sarah.johnson@yousch.edu","email_verified_at":"2025-09-09T02:24:42.000000Z","created_at":"2025-09-09T02:24:42.000000Z","updated_at":"2025-09-09T02:24:42.000000Z"}},"assistant":null},{"id":5,"subject_id":3,"name":"Laboratoire de Base de Donn\u00e9es Avanc\u00e9","description":"Laboratoire pour requ\u00eates complexes et optimisation","schedule":"Vendredi 14h00 - 16h00","created_at":"2025-09-09T02:24:44.000000Z","updated_at":"2025-09-09T02:24:44.000000Z","subject":{"id":3,"course_id":1,"name":"Bases de Donn\u00e9es","code":"CS301","description":"Conception et gestion de bases de donn\u00e9es","coordinator_id":13,"created_at":"2025-09-09T02:24:44.000000Z","updated_at":"2025-09-09T02:24:44.000000Z","course":{"id":1,"department_id":1,"name":"Baccalaur\u00e9at en Informatique","code":"BCS","description":"Programme complet d''informatique","created_at":"2025-09-09T02:24:44.000000Z","updated_at":"2025-09-09T02:24:44.000000Z"},"coordinator":{"id":13,"name":"Dr. Sarah Johnson","email":"sarah.johnson@yousch.edu","email_verified_at":"2025-09-09T02:24:42.000000Z","created_at":"2025-09-09T02:24:42.000000Z","updated_at":"2025-09-09T02:24:42.000000Z"}},"assistant":null},{"id":6,"subject_id":6,"name":"Laboratoire de Calcul","description":"Laboratoire pour exercices pratiques de calcul","schedule":"Lundi 16h00 - 18h00","created_at":"2025-09-09T02:24:44.000000Z","updated_at":"2025-09-09T02:24:44.000000Z","subject":{"id":6,"course_id":2,"name":"Calcul I","code":"MATH101","description":"Concepts fondamentaux du calcul","coordinator_id":2,"created_at":"2025-09-09T02:24:44.000000Z","updated_at":"2025-09-09T02:24:45.000000Z","course":{"id":2,"department_id":2,"name":"Baccalaur\u00e9at en Math\u00e9matiques","code":"BMATH","description":"Programme de math\u00e9matiques avanc\u00e9es","created_at":"2025-09-09T02:24:44.000000Z","updated_at":"2025-09-09T02:24:44.000000Z"},"coordinator":{"id":2,"name":"Adonis Johnson","email":"davonte.oconnell@example.net","email_verified_at":"2025-09-09T02:24:41.000000Z","created_at":"2025-09-09T02:24:41.000000Z","updated_at":"2025-09-09T02:24:41.000000Z"}},"assistant":null},{"id":10,"subject_id":14,"name":"Laboratoire de Communication","description":"Laboratoire pour exercices de communication orale et \u00e9crite","schedule":"Vendredi 10h00 - 12h00","created_at":"2025-09-09T02:24:44.000000Z","updated_at":"2025-09-09T02:24:44.000000Z","subject":{"id":14,"course_id":4,"name":"Introduction \u00e0 la Litt\u00e9rature","code":"ENG101","description":"Analyse et appr\u00e9ciation litt\u00e9raire","coordinator_id":4,"created_at":"2025-09-09T02:24:44.000000Z","updated_at":"2025-09-09T02:24:45.000000Z","course":{"id":4,"department_id":4,"name":"Baccalaur\u00e9at \u00e8s Arts en Anglais","code":"BAENG","description":"Programme de litt\u00e9rature et langue anglaise","created_at":"2025-09-09T02:24:44.000000Z","updated_at":"2025-09-09T02:24:44.000000Z"},"coordinator":{"id":4,"name":"Adonis D''Amore","email":"alphonso.crona@example.net","email_verified_at":"2025-09-09T02:24:41.000000Z","created_at":"2025-09-09T02:24:41.000000Z","updated_at":"2025-09-09T02:24:41.000000Z"}},"assistant":null},{"id":12,"subject_id":4,"name":"Laboratoire de D\u00e9veloppement Mobile","description":"Laboratoire pour le d\u00e9veloppement d''applications mobiles","schedule":"Mercredi 14h00 - 16h00","created_at":"2025-09-09T02:24:45.000000Z","updated_at":"2025-09-09T02:24:45.000000Z","subject":{"id":4,"course_id":1,"name":"D\u00e9veloppement Web","code":"CS401","description":"D\u00e9veloppement d''applications web modernes","coordinator_id":13,"created_at":"2025-09-09T02:24:44.000000Z","updated_at":"2025-09-09T02:24:44.000000Z","course":{"id":1,"department_id":1,"name":"Baccalaur\u00e9at en Informatique","code":"BCS","description":"Programme complet d''informatique","created_at":"2025-09-09T02:24:44.000000Z","updated_at":"2025-09-09T02:24:44.000000Z"},"coordinator":{"id":13,"name":"Dr. Sarah Johnson","email":"sarah.johnson@yousch.edu","email_verified_at":"2025-09-09T02:24:42.000000Z","created_at":"2025-09-09T02:24:42.000000Z","updated_at":"2025-09-09T02:24:42.000000Z"}},"assistant":null},{"id":11,"subject_id":4,"name":"Laboratoire de D\u00e9veloppement Web","description":"Laboratoire pour le d\u00e9veloppement d''applications web","schedule":"Lundi 10h00 - 12h00","created_at":"2025-09-09T02:24:45.000000Z","updated_at":"2025-09-09T02:24:45.000000Z","subject":{"id":4,"course_id":1,"name":"D\u00e9veloppement Web","code":"CS401","description":"D\u00e9veloppement d''applications web modernes","coordinator_id":13,"created_at":"2025-09-09T02:24:44.000000Z","updated_at":"2025-09-09T02:24:44.000000Z","course":{"id":1,"department_id":1,"name":"Baccalaur\u00e9at en Informatique","code":"BCS","description":"Programme complet d''informatique","created_at":"2025-09-09T02:24:44.000000Z","updated_at":"2025-09-09T02:24:44.000000Z"},"coordinator":{"id":13,"name":"Dr. Sarah Johnson","email":"sarah.johnson@yousch.edu","email_verified_at":"2025-09-09T02:24:42.000000Z","created_at":"2025-09-09T02:24:42.000000Z","updated_at":"2025-09-09T02:24:42.000000Z"}},"assistant":null},{"id":14,"subject_id":12,"name":"Laboratoire de Finance","description":"Laboratoire pour analyses financi\u00e8res et mod\u00e9lisation","schedule":"Mardi 16h00 - 18h00","created_at":"2025-09-09T02:24:45.000000Z","updated_at":"2025-09-09T02:24:45.000000Z","subject":{"id":12,"course_id":3,"name":"Gestion Financi\u00e8re","code":"BUS301","description":"Gestion financi\u00e8re et comptabilit\u00e9","coordinator_id":15,"created_at":"2025-09-09T02:24:44.000000Z","updated_at":"2025-09-09T02:24:44.000000Z","course":{"id":3,"department_id":3,"name":"Baccalaur\u00e9at en Administration des Affaires","code":"BBA","description":"Programme de gestion des affaires","created_at":"2025-09-09T02:24:44.000000Z","updated_at":"2025-09-09T02:24:44.000000Z"},"coordinator":{"id":15,"name":"Dr. Emily Rodriguez","email":"emily.rodriguez@yousch.edu","email_verified_at":"2025-09-09T02:24:42.000000Z","created_at":"2025-09-09T02:24:42.000000Z","updated_at":"2025-09-09T02:24:42.000000Z"}},"assistant":null},{"id":8,"subject_id":10,"name":"Laboratoire de Gestion","description":"Laboratoire pour simulations de gestion d''entreprise","schedule":"Mardi 10h00 - 12h00","created_at":"2025-09-09T02:24:44.000000Z","updated_at":"2025-09-09T02:24:44.000000Z","subject":{"id":10,"course_id":3,"name":"Principes de Gestion","code":"BUS101","description":"Principes de gestion de base","coordinator_id":3,"created_at":"2025-09-09T02:24:44.000000Z","updated_at":"2025-09-09T02:24:45.000000Z","course":{"id":3,"department_id":3,"name":"Baccalaur\u00e9at en Administration des Affaires","code":"BBA","description":"Programme de gestion des affaires","created_at":"2025-09-09T02:24:44.000000Z","updated_at":"2025-09-09T02:24:44.000000Z"},"coordinator":{"id":3,"name":"Noemi Roob I","email":"leif80@example.org","email_verified_at":"2025-09-09T02:24:41.000000Z","created_at":"2025-09-09T02:24:41.000000Z","updated_at":"2025-09-09T02:24:41.000000Z"}},"assistant":null},{"id":16,"subject_id":16,"name":"Laboratoire de Litt\u00e9rature","description":"Laboratoire pour analyse litt\u00e9raire et critique","schedule":"Mercredi 16h00 - 18h00","created_at":"2025-09-09T02:24:45.000000Z","updated_at":"2025-09-09T02:24:45.000000Z","subject":{"id":16,"course_id":4,"name":"Litt\u00e9rature Moderne","code":"ENG301","description":"\u00c9tude de la litt\u00e9rature moderne","coordinator_id":16,"created_at":"2025-09-09T02:24:44.000000Z","updated_at":"2025-09-09T02:24:44.000000Z","course":{"id":4,"department_id":4,"name":"Baccalaur\u00e9at \u00e8s Arts en Anglais","code":"BAENG","description":"Programme de litt\u00e9rature et langue anglaise","created_at":"2025-09-09T02:24:44.000000Z","updated_at":"2025-09-09T02:24:44.000000Z"},"coordinator":{"id":16,"name":"Prof. David Thompson","email":"david.thompson@yousch.edu","email_verified_at":"2025-09-09T02:24:42.000000Z","created_at":"2025-09-09T02:24:42.000000Z","updated_at":"2025-09-09T02:24:42.000000Z"}},"assistant":null},{"id":9,"subject_id":11,"name":"Laboratoire de Marketing","description":"Laboratoire pour \u00e9tudes de cas marketing","schedule":"Jeudi 14h00 - 16h00","created_at":"2025-09-09T02:24:44.000000Z","updated_at":"2025-09-09T02:24:44.000000Z","subject":{"id":11,"course_id":3,"name":"Marketing Fondamental","code":"BUS201","description":"Concepts et strat\u00e9gies de marketing","coordinator_id":15,"created_at":"2025-09-09T02:24:44.000000Z","updated_at":"2025-09-09T02:24:44.000000Z","course":{"id":3,"department_id":3,"name":"Baccalaur\u00e9at en Administration des Affaires","code":"BBA","description":"Programme de gestion des affaires","created_at":"2025-09-09T02:24:44.000000Z","updated_at":"2025-09-09T02:24:44.000000Z"},"coordinator":{"id":15,"name":"Dr. Emily Rodriguez","email":"emily.rodriguez@yousch.edu","email_verified_at":"2025-09-09T02:24:42.000000Z","created_at":"2025-09-09T02:24:42.000000Z","updated_at":"2025-09-09T02:24:42.000000Z"}},"assistant":null},{"id":1,"subject_id":1,"name":"Laboratoire de Programmation 1","description":"Laboratoire informatique pour exercices de programmation de base","schedule":"Lundi 14h00 - 16h00","created_at":"2025-09-09T02:24:44.000000Z","updated_at":"2025-09-09T02:24:44.000000Z","subject":{"id":1,"course_id":1,"name":"Introduction \u00e0 la Programmation","code":"CS101","description":"Concepts et pratiques de programmation de base","coordinator_id":1,"created_at":"2025-09-09T02:24:44.000000Z","updated_at":"2025-09-09T02:24:45.000000Z","course":{"id":1,"department_id":1,"name":"Baccalaur\u00e9at en Informatique","code":"BCS","description":"Programme complet d''informatique","created_at":"2025-09-09T02:24:44.000000Z","updated_at":"2025-09-09T02:24:44.000000Z"},"coordinator":{"id":1,"name":"Ivory Champlin DDS","email":"schumm.daren@example.com","email_verified_at":"2025-09-09T02:24:41.000000Z","created_at":"2025-09-09T02:24:41.000000Z","updated_at":"2025-09-09T02:24:41.000000Z"}},"assistant":null},{"id":2,"subject_id":1,"name":"Laboratoire de Programmation 2","description":"Laboratoire avanc\u00e9 pour projets de programmation","schedule":"Mercredi 10h00 - 12h00","created_at":"2025-09-09T02:24:44.000000Z","updated_at":"2025-09-09T02:24:44.000000Z","subject":{"id":1,"course_id":1,"name":"Introduction \u00e0 la Programmation","code":"CS101","description":"Concepts et pratiques de programmation de base","coordinator_id":1,"created_at":"2025-09-09T02:24:44.000000Z","updated_at":"2025-09-09T02:24:45.000000Z","course":{"id":1,"department_id":1,"name":"Baccalaur\u00e9at en Informatique","code":"BCS","description":"Programme complet d''informatique","created_at":"2025-09-09T02:24:44.000000Z","updated_at":"2025-09-09T02:24:44.000000Z"},"coordinator":{"id":1,"name":"Ivory Champlin DDS","email":"schumm.daren@example.com","email_verified_at":"2025-09-09T02:24:41.000000Z","created_at":"2025-09-09T02:24:41.000000Z","updated_at":"2025-09-09T02:24:41.000000Z"}},"assistant":null},{"id":13,"subject_id":8,"name":"Laboratoire de Statistiques","description":"Laboratoire pour analyses statistiques et probabilit\u00e9s","schedule":"Vendredi 10h00 - 12h00","created_at":"2025-09-09T02:24:45.000000Z","updated_at":"2025-09-09T02:24:45.000000Z","subject":{"id":8,"course_id":2,"name":"Statistiques et Probabilit\u00e9s","code":"MATH301","description":"Statistiques descriptives et inf\u00e9rentielles","coordinator_id":14,"created_at":"2025-09-09T02:24:44.000000Z","updated_at":"2025-09-09T02:24:44.000000Z","course":{"id":2,"department_id":2,"name":"Baccalaur\u00e9at en Math\u00e9matiques","code":"BMATH","description":"Programme de math\u00e9matiques avanc\u00e9es","created_at":"2025-09-09T02:24:44.000000Z","updated_at":"2025-09-09T02:24:44.000000Z"},"coordinator":{"id":14,"name":"Prof. Michael Chen","email":"michael.chen@yousch.edu","email_verified_at":"2025-09-09T02:24:42.000000Z","created_at":"2025-09-09T02:24:42.000000Z","updated_at":"2025-09-09T02:24:42.000000Z"}},"assistant":null},{"id":3,"subject_id":2,"name":"Laboratoire de Structures de Donn\u00e9es","description":"Laboratoire pour l''impl\u00e9mentation de structures de donn\u00e9es","schedule":"Mardi 14h00 - 16h00","created_at":"2025-09-09T02:24:44.000000Z","updated_at":"2025-09-09T02:24:44.000000Z","subject":{"id":2,"course_id":1,"name":"Structures de Donn\u00e9es et Algorithmes","code":"CS201","description":"Concepts de programmation avanc\u00e9s","coordinator_id":13,"created_at":"2025-09-09T02:24:44.000000Z","updated_at":"2025-09-09T02:24:44.000000Z","course":{"id":1,"department_id":1,"name":"Baccalaur\u00e9at en Informatique","code":"BCS","description":"Programme complet d''informatique","created_at":"2025-09-09T02:24:44.000000Z","updated_at":"2025-09-09T02:24:44.000000Z"},"coordinator":{"id":13,"name":"Dr. Sarah Johnson","email":"sarah.johnson@yousch.edu","email_verified_at":"2025-09-09T02:24:42.000000Z","created_at":"2025-09-09T02:24:42.000000Z","updated_at":"2025-09-09T02:24:42.000000Z"}},"assistant":null}],"message":"Labs retrieved successfully"}'
+        content: '{"success":true,"data":[{"id":7,"subject_id":7,"name":"Laboratoire d''Alg\u00e8bre Lin\u00e9aire","description":"Laboratoire pour exercices d''alg\u00e8bre lin\u00e9aire","schedule":"Mercredi 14h00 - 16h00","created_at":"2025-09-14T05:02:59.000000Z","updated_at":"2025-09-14T05:02:59.000000Z","assistant_id":null,"start_datetime":null,"end_datetime":null,"subject":{"id":7,"course_id":2,"name":"Alg\u00e8bre Lin\u00e9aire","code":"MATH201","description":"Alg\u00e8bre lin\u00e9aire et g\u00e9om\u00e9trie analytique","coordinator_id":14,"created_at":"2025-09-14T05:02:59.000000Z","updated_at":"2025-09-14T05:02:59.000000Z","course":{"id":2,"department_id":2,"name":"Baccalaur\u00e9at en Math\u00e9matiques","code":"BMATH","description":"Programme de math\u00e9matiques avanc\u00e9es","created_at":"2025-09-14T05:02:59.000000Z","updated_at":"2025-09-14T05:02:59.000000Z"},"coordinator":{"id":14,"name":"Prof. Michael Chen","email":"michael.chen@yousch.edu","email_verified_at":"2025-09-14T05:02:57.000000Z","created_at":"2025-09-14T05:02:57.000000Z","updated_at":"2025-09-14T05:02:57.000000Z"}},"assistant":null},{"id":18,"subject_id":9,"name":"Laboratoire d''Analyse Math\u00e9matique","description":"Laboratoire pour exercices d''analyse avanc\u00e9e","schedule":"Jeudi 16h00 - 18h00","created_at":"2025-09-14T05:03:01.000000Z","updated_at":"2025-09-14T05:03:01.000000Z","assistant_id":14,"start_datetime":"2025-01-25T16:00:00.000000Z","end_datetime":"2025-01-25T18:00:00.000000Z","subject":{"id":9,"course_id":2,"name":"Analyse Math\u00e9matique","code":"MATH401","description":"Analyse math\u00e9matique avanc\u00e9e","coordinator_id":14,"created_at":"2025-09-14T05:02:59.000000Z","updated_at":"2025-09-14T05:02:59.000000Z","course":{"id":2,"department_id":2,"name":"Baccalaur\u00e9at en Math\u00e9matiques","code":"BMATH","description":"Programme de math\u00e9matiques avanc\u00e9es","created_at":"2025-09-14T05:02:59.000000Z","updated_at":"2025-09-14T05:02:59.000000Z"},"coordinator":{"id":14,"name":"Prof. Michael Chen","email":"michael.chen@yousch.edu","email_verified_at":"2025-09-14T05:02:57.000000Z","created_at":"2025-09-14T05:02:57.000000Z","updated_at":"2025-09-14T05:02:57.000000Z"}},"assistant":{"id":14,"name":"Prof. Michael Chen","email":"michael.chen@yousch.edu","email_verified_at":"2025-09-14T05:02:57.000000Z","created_at":"2025-09-14T05:02:57.000000Z","updated_at":"2025-09-14T05:02:57.000000Z"}},{"id":15,"subject_id":15,"name":"Laboratoire d''\u00c9criture Avanc\u00e9e","description":"Laboratoire pour techniques d''\u00e9criture avanc\u00e9es","schedule":"Jeudi 10h00 - 12h00","created_at":"2025-09-14T05:03:01.000000Z","updated_at":"2025-09-14T05:03:01.000000Z","assistant_id":16,"start_datetime":"2025-01-18T10:00:00.000000Z","end_datetime":"2025-01-18T12:00:00.000000Z","subject":{"id":15,"course_id":4,"name":"\u00c9criture Avanc\u00e9e","code":"ENG201","description":"Techniques d''\u00e9criture avanc\u00e9es","coordinator_id":16,"created_at":"2025-09-14T05:02:59.000000Z","updated_at":"2025-09-14T05:02:59.000000Z","course":{"id":4,"department_id":4,"name":"Baccalaur\u00e9at \u00e8s Arts en Anglais","code":"BAENG","description":"Programme de litt\u00e9rature et langue anglaise","created_at":"2025-09-14T05:02:59.000000Z","updated_at":"2025-09-14T05:02:59.000000Z"},"coordinator":{"id":16,"name":"Prof. David Thompson","email":"david.thompson@yousch.edu","email_verified_at":"2025-09-14T05:02:57.000000Z","created_at":"2025-09-14T05:02:57.000000Z","updated_at":"2025-09-14T05:02:57.000000Z"}},"assistant":{"id":16,"name":"Prof. David Thompson","email":"david.thompson@yousch.edu","email_verified_at":"2025-09-14T05:02:57.000000Z","created_at":"2025-09-14T05:02:57.000000Z","updated_at":"2025-09-14T05:02:57.000000Z"}},{"id":17,"subject_id":5,"name":"Laboratoire d''Intelligence Artificielle","description":"Laboratoire pour projets d''IA et machine learning","schedule":"Lundi 14h00 - 16h00","created_at":"2025-09-14T05:03:01.000000Z","updated_at":"2025-09-14T05:03:01.000000Z","assistant_id":13,"start_datetime":"2025-01-22T14:00:00.000000Z","end_datetime":"2025-01-22T16:00:00.000000Z","subject":{"id":5,"course_id":1,"name":"Projet de Fin d''\u00c9tudes","code":"CS501","description":"Projet int\u00e9grateur en informatique","coordinator_id":13,"created_at":"2025-09-14T05:02:59.000000Z","updated_at":"2025-09-14T05:02:59.000000Z","course":{"id":1,"department_id":1,"name":"Baccalaur\u00e9at en Informatique","code":"BCS","description":"Programme complet d''informatique","created_at":"2025-09-14T05:02:59.000000Z","updated_at":"2025-09-14T05:02:59.000000Z"},"coordinator":{"id":13,"name":"Dr. Sarah Johnson","email":"sarah.johnson@yousch.edu","email_verified_at":"2025-09-14T05:02:57.000000Z","created_at":"2025-09-14T05:02:57.000000Z","updated_at":"2025-09-14T05:02:57.000000Z"}},"assistant":{"id":13,"name":"Dr. Sarah Johnson","email":"sarah.johnson@yousch.edu","email_verified_at":"2025-09-14T05:02:57.000000Z","created_at":"2025-09-14T05:02:57.000000Z","updated_at":"2025-09-14T05:02:57.000000Z"}},{"id":4,"subject_id":3,"name":"Laboratoire de Base de Donn\u00e9es","description":"Laboratoire pour la conception et manipulation de bases de donn\u00e9es","schedule":"Jeudi 10h00 - 12h00","created_at":"2025-09-14T05:02:59.000000Z","updated_at":"2025-09-14T05:02:59.000000Z","assistant_id":null,"start_datetime":null,"end_datetime":null,"subject":{"id":3,"course_id":1,"name":"Bases de Donn\u00e9es","code":"CS301","description":"Conception et gestion de bases de donn\u00e9es","coordinator_id":13,"created_at":"2025-09-14T05:02:59.000000Z","updated_at":"2025-09-14T05:02:59.000000Z","course":{"id":1,"department_id":1,"name":"Baccalaur\u00e9at en Informatique","code":"BCS","description":"Programme complet d''informatique","created_at":"2025-09-14T05:02:59.000000Z","updated_at":"2025-09-14T05:02:59.000000Z"},"coordinator":{"id":13,"name":"Dr. Sarah Johnson","email":"sarah.johnson@yousch.edu","email_verified_at":"2025-09-14T05:02:57.000000Z","created_at":"2025-09-14T05:02:57.000000Z","updated_at":"2025-09-14T05:02:57.000000Z"}},"assistant":null},{"id":5,"subject_id":3,"name":"Laboratoire de Base de Donn\u00e9es Avanc\u00e9","description":"Laboratoire pour requ\u00eates complexes et optimisation","schedule":"Vendredi 14h00 - 16h00","created_at":"2025-09-14T05:02:59.000000Z","updated_at":"2025-09-14T05:02:59.000000Z","assistant_id":null,"start_datetime":null,"end_datetime":null,"subject":{"id":3,"course_id":1,"name":"Bases de Donn\u00e9es","code":"CS301","description":"Conception et gestion de bases de donn\u00e9es","coordinator_id":13,"created_at":"2025-09-14T05:02:59.000000Z","updated_at":"2025-09-14T05:02:59.000000Z","course":{"id":1,"department_id":1,"name":"Baccalaur\u00e9at en Informatique","code":"BCS","description":"Programme complet d''informatique","created_at":"2025-09-14T05:02:59.000000Z","updated_at":"2025-09-14T05:02:59.000000Z"},"coordinator":{"id":13,"name":"Dr. Sarah Johnson","email":"sarah.johnson@yousch.edu","email_verified_at":"2025-09-14T05:02:57.000000Z","created_at":"2025-09-14T05:02:57.000000Z","updated_at":"2025-09-14T05:02:57.000000Z"}},"assistant":null},{"id":6,"subject_id":6,"name":"Laboratoire de Calcul","description":"Laboratoire pour exercices pratiques de calcul","schedule":"Lundi 16h00 - 18h00","created_at":"2025-09-14T05:02:59.000000Z","updated_at":"2025-09-14T05:02:59.000000Z","assistant_id":null,"start_datetime":null,"end_datetime":null,"subject":{"id":6,"course_id":2,"name":"Calcul I","code":"MATH101","description":"Concepts fondamentaux du calcul","coordinator_id":2,"created_at":"2025-09-14T05:02:59.000000Z","updated_at":"2025-09-14T05:03:00.000000Z","course":{"id":2,"department_id":2,"name":"Baccalaur\u00e9at en Math\u00e9matiques","code":"BMATH","description":"Programme de math\u00e9matiques avanc\u00e9es","created_at":"2025-09-14T05:02:59.000000Z","updated_at":"2025-09-14T05:02:59.000000Z"},"coordinator":{"id":2,"name":"Dannie Ondricka","email":"gregg.schamberger@example.net","email_verified_at":"2025-09-14T05:02:56.000000Z","created_at":"2025-09-14T05:02:56.000000Z","updated_at":"2025-09-14T05:02:56.000000Z"}},"assistant":null},{"id":10,"subject_id":14,"name":"Laboratoire de Communication","description":"Laboratoire pour exercices de communication orale et \u00e9crite","schedule":"Vendredi 10h00 - 12h00","created_at":"2025-09-14T05:02:59.000000Z","updated_at":"2025-09-14T05:02:59.000000Z","assistant_id":null,"start_datetime":null,"end_datetime":null,"subject":{"id":14,"course_id":4,"name":"Introduction \u00e0 la Litt\u00e9rature","code":"ENG101","description":"Analyse et appr\u00e9ciation litt\u00e9raire","coordinator_id":4,"created_at":"2025-09-14T05:02:59.000000Z","updated_at":"2025-09-14T05:03:00.000000Z","course":{"id":4,"department_id":4,"name":"Baccalaur\u00e9at \u00e8s Arts en Anglais","code":"BAENG","description":"Programme de litt\u00e9rature et langue anglaise","created_at":"2025-09-14T05:02:59.000000Z","updated_at":"2025-09-14T05:02:59.000000Z"},"coordinator":{"id":4,"name":"Judd Reinger PhD","email":"sboyer@example.com","email_verified_at":"2025-09-14T05:02:56.000000Z","created_at":"2025-09-14T05:02:56.000000Z","updated_at":"2025-09-14T05:02:56.000000Z"}},"assistant":null},{"id":12,"subject_id":4,"name":"Laboratoire de D\u00e9veloppement Mobile","description":"Laboratoire pour le d\u00e9veloppement d''applications mobiles","schedule":"Mercredi 14h00 - 16h00","created_at":"2025-09-14T05:03:01.000000Z","updated_at":"2025-09-14T05:03:01.000000Z","assistant_id":13,"start_datetime":"2025-01-17T14:00:00.000000Z","end_datetime":"2025-01-17T16:00:00.000000Z","subject":{"id":4,"course_id":1,"name":"D\u00e9veloppement Web","code":"CS401","description":"D\u00e9veloppement d''applications web modernes","coordinator_id":13,"created_at":"2025-09-14T05:02:59.000000Z","updated_at":"2025-09-14T05:02:59.000000Z","course":{"id":1,"department_id":1,"name":"Baccalaur\u00e9at en Informatique","code":"BCS","description":"Programme complet d''informatique","created_at":"2025-09-14T05:02:59.000000Z","updated_at":"2025-09-14T05:02:59.000000Z"},"coordinator":{"id":13,"name":"Dr. Sarah Johnson","email":"sarah.johnson@yousch.edu","email_verified_at":"2025-09-14T05:02:57.000000Z","created_at":"2025-09-14T05:02:57.000000Z","updated_at":"2025-09-14T05:02:57.000000Z"}},"assistant":{"id":13,"name":"Dr. Sarah Johnson","email":"sarah.johnson@yousch.edu","email_verified_at":"2025-09-14T05:02:57.000000Z","created_at":"2025-09-14T05:02:57.000000Z","updated_at":"2025-09-14T05:02:57.000000Z"}},{"id":11,"subject_id":4,"name":"Laboratoire de D\u00e9veloppement Web","description":"Laboratoire pour le d\u00e9veloppement d''applications web","schedule":"Lundi 10h00 - 12h00","created_at":"2025-09-14T05:03:01.000000Z","updated_at":"2025-09-14T05:03:01.000000Z","assistant_id":14,"start_datetime":"2025-01-15T10:00:00.000000Z","end_datetime":"2025-01-15T12:00:00.000000Z","subject":{"id":4,"course_id":1,"name":"D\u00e9veloppement Web","code":"CS401","description":"D\u00e9veloppement d''applications web modernes","coordinator_id":13,"created_at":"2025-09-14T05:02:59.000000Z","updated_at":"2025-09-14T05:02:59.000000Z","course":{"id":1,"department_id":1,"name":"Baccalaur\u00e9at en Informatique","code":"BCS","description":"Programme complet d''informatique","created_at":"2025-09-14T05:02:59.000000Z","updated_at":"2025-09-14T05:02:59.000000Z"},"coordinator":{"id":13,"name":"Dr. Sarah Johnson","email":"sarah.johnson@yousch.edu","email_verified_at":"2025-09-14T05:02:57.000000Z","created_at":"2025-09-14T05:02:57.000000Z","updated_at":"2025-09-14T05:02:57.000000Z"}},"assistant":{"id":14,"name":"Prof. Michael Chen","email":"michael.chen@yousch.edu","email_verified_at":"2025-09-14T05:02:57.000000Z","created_at":"2025-09-14T05:02:57.000000Z","updated_at":"2025-09-14T05:02:57.000000Z"}},{"id":14,"subject_id":12,"name":"Laboratoire de Finance","description":"Laboratoire pour analyses financi\u00e8res et mod\u00e9lisation","schedule":"Mardi 16h00 - 18h00","created_at":"2025-09-14T05:03:01.000000Z","updated_at":"2025-09-14T05:03:01.000000Z","assistant_id":15,"start_datetime":"2025-01-16T16:00:00.000000Z","end_datetime":"2025-01-16T18:00:00.000000Z","subject":{"id":12,"course_id":3,"name":"Gestion Financi\u00e8re","code":"BUS301","description":"Gestion financi\u00e8re et comptabilit\u00e9","coordinator_id":15,"created_at":"2025-09-14T05:02:59.000000Z","updated_at":"2025-09-14T05:02:59.000000Z","course":{"id":3,"department_id":3,"name":"Baccalaur\u00e9at en Administration des Affaires","code":"BBA","description":"Programme de gestion des affaires","created_at":"2025-09-14T05:02:59.000000Z","updated_at":"2025-09-14T05:02:59.000000Z"},"coordinator":{"id":15,"name":"Dr. Emily Rodriguez","email":"emily.rodriguez@yousch.edu","email_verified_at":"2025-09-14T05:02:57.000000Z","created_at":"2025-09-14T05:02:57.000000Z","updated_at":"2025-09-14T05:02:57.000000Z"}},"assistant":{"id":15,"name":"Dr. Emily Rodriguez","email":"emily.rodriguez@yousch.edu","email_verified_at":"2025-09-14T05:02:57.000000Z","created_at":"2025-09-14T05:02:57.000000Z","updated_at":"2025-09-14T05:02:57.000000Z"}},{"id":8,"subject_id":10,"name":"Laboratoire de Gestion","description":"Laboratoire pour simulations de gestion d''entreprise","schedule":"Mardi 10h00 - 12h00","created_at":"2025-09-14T05:02:59.000000Z","updated_at":"2025-09-14T05:02:59.000000Z","assistant_id":null,"start_datetime":null,"end_datetime":null,"subject":{"id":10,"course_id":3,"name":"Principes de Gestion","code":"BUS101","description":"Principes de gestion de base","coordinator_id":3,"created_at":"2025-09-14T05:02:59.000000Z","updated_at":"2025-09-14T05:03:00.000000Z","course":{"id":3,"department_id":3,"name":"Baccalaur\u00e9at en Administration des Affaires","code":"BBA","description":"Programme de gestion des affaires","created_at":"2025-09-14T05:02:59.000000Z","updated_at":"2025-09-14T05:02:59.000000Z"},"coordinator":{"id":3,"name":"Miss Rosalee Fay Jr.","email":"leo.champlin@example.net","email_verified_at":"2025-09-14T05:02:56.000000Z","created_at":"2025-09-14T05:02:56.000000Z","updated_at":"2025-09-14T05:02:56.000000Z"}},"assistant":null},{"id":16,"subject_id":16,"name":"Laboratoire de Litt\u00e9rature","description":"Laboratoire pour analyse litt\u00e9raire et critique","schedule":"Mercredi 16h00 - 18h00","created_at":"2025-09-14T05:03:01.000000Z","updated_at":"2025-09-14T05:03:01.000000Z","assistant_id":16,"start_datetime":"2025-01-17T16:00:00.000000Z","end_datetime":"2025-01-17T18:00:00.000000Z","subject":{"id":16,"course_id":4,"name":"Litt\u00e9rature Moderne","code":"ENG301","description":"\u00c9tude de la litt\u00e9rature moderne","coordinator_id":16,"created_at":"2025-09-14T05:02:59.000000Z","updated_at":"2025-09-14T05:02:59.000000Z","course":{"id":4,"department_id":4,"name":"Baccalaur\u00e9at \u00e8s Arts en Anglais","code":"BAENG","description":"Programme de litt\u00e9rature et langue anglaise","created_at":"2025-09-14T05:02:59.000000Z","updated_at":"2025-09-14T05:02:59.000000Z"},"coordinator":{"id":16,"name":"Prof. David Thompson","email":"david.thompson@yousch.edu","email_verified_at":"2025-09-14T05:02:57.000000Z","created_at":"2025-09-14T05:02:57.000000Z","updated_at":"2025-09-14T05:02:57.000000Z"}},"assistant":{"id":16,"name":"Prof. David Thompson","email":"david.thompson@yousch.edu","email_verified_at":"2025-09-14T05:02:57.000000Z","created_at":"2025-09-14T05:02:57.000000Z","updated_at":"2025-09-14T05:02:57.000000Z"}},{"id":9,"subject_id":11,"name":"Laboratoire de Marketing","description":"Laboratoire pour \u00e9tudes de cas marketing","schedule":"Jeudi 14h00 - 16h00","created_at":"2025-09-14T05:02:59.000000Z","updated_at":"2025-09-14T05:02:59.000000Z","assistant_id":null,"start_datetime":null,"end_datetime":null,"subject":{"id":11,"course_id":3,"name":"Marketing Fondamental","code":"BUS201","description":"Concepts et strat\u00e9gies de marketing","coordinator_id":15,"created_at":"2025-09-14T05:02:59.000000Z","updated_at":"2025-09-14T05:02:59.000000Z","course":{"id":3,"department_id":3,"name":"Baccalaur\u00e9at en Administration des Affaires","code":"BBA","description":"Programme de gestion des affaires","created_at":"2025-09-14T05:02:59.000000Z","updated_at":"2025-09-14T05:02:59.000000Z"},"coordinator":{"id":15,"name":"Dr. Emily Rodriguez","email":"emily.rodriguez@yousch.edu","email_verified_at":"2025-09-14T05:02:57.000000Z","created_at":"2025-09-14T05:02:57.000000Z","updated_at":"2025-09-14T05:02:57.000000Z"}},"assistant":null},{"id":1,"subject_id":1,"name":"Laboratoire de Programmation 1","description":"Laboratoire informatique pour exercices de programmation de base","schedule":"Lundi 14h00 - 16h00","created_at":"2025-09-14T05:02:59.000000Z","updated_at":"2025-09-14T05:02:59.000000Z","assistant_id":null,"start_datetime":null,"end_datetime":null,"subject":{"id":1,"course_id":1,"name":"Introduction \u00e0 la Programmation","code":"CS101","description":"Concepts et pratiques de programmation de base","coordinator_id":1,"created_at":"2025-09-14T05:02:59.000000Z","updated_at":"2025-09-14T05:03:00.000000Z","course":{"id":1,"department_id":1,"name":"Baccalaur\u00e9at en Informatique","code":"BCS","description":"Programme complet d''informatique","created_at":"2025-09-14T05:02:59.000000Z","updated_at":"2025-09-14T05:02:59.000000Z"},"coordinator":{"id":1,"name":"Adriana Frami","email":"ibrown@example.org","email_verified_at":"2025-09-14T05:02:56.000000Z","created_at":"2025-09-14T05:02:56.000000Z","updated_at":"2025-09-14T05:02:56.000000Z"}},"assistant":null},{"id":2,"subject_id":1,"name":"Laboratoire de Programmation 2","description":"Laboratoire avanc\u00e9 pour projets de programmation","schedule":"Mercredi 10h00 - 12h00","created_at":"2025-09-14T05:02:59.000000Z","updated_at":"2025-09-14T05:02:59.000000Z","assistant_id":null,"start_datetime":null,"end_datetime":null,"subject":{"id":1,"course_id":1,"name":"Introduction \u00e0 la Programmation","code":"CS101","description":"Concepts et pratiques de programmation de base","coordinator_id":1,"created_at":"2025-09-14T05:02:59.000000Z","updated_at":"2025-09-14T05:03:00.000000Z","course":{"id":1,"department_id":1,"name":"Baccalaur\u00e9at en Informatique","code":"BCS","description":"Programme complet d''informatique","created_at":"2025-09-14T05:02:59.000000Z","updated_at":"2025-09-14T05:02:59.000000Z"},"coordinator":{"id":1,"name":"Adriana Frami","email":"ibrown@example.org","email_verified_at":"2025-09-14T05:02:56.000000Z","created_at":"2025-09-14T05:02:56.000000Z","updated_at":"2025-09-14T05:02:56.000000Z"}},"assistant":null},{"id":13,"subject_id":8,"name":"Laboratoire de Statistiques","description":"Laboratoire pour analyses statistiques et probabilit\u00e9s","schedule":"Vendredi 10h00 - 12h00","created_at":"2025-09-14T05:03:01.000000Z","updated_at":"2025-09-14T05:03:01.000000Z","assistant_id":14,"start_datetime":"2025-01-19T10:00:00.000000Z","end_datetime":"2025-01-19T12:00:00.000000Z","subject":{"id":8,"course_id":2,"name":"Statistiques et Probabilit\u00e9s","code":"MATH301","description":"Statistiques descriptives et inf\u00e9rentielles","coordinator_id":14,"created_at":"2025-09-14T05:02:59.000000Z","updated_at":"2025-09-14T05:02:59.000000Z","course":{"id":2,"department_id":2,"name":"Baccalaur\u00e9at en Math\u00e9matiques","code":"BMATH","description":"Programme de math\u00e9matiques avanc\u00e9es","created_at":"2025-09-14T05:02:59.000000Z","updated_at":"2025-09-14T05:02:59.000000Z"},"coordinator":{"id":14,"name":"Prof. Michael Chen","email":"michael.chen@yousch.edu","email_verified_at":"2025-09-14T05:02:57.000000Z","created_at":"2025-09-14T05:02:57.000000Z","updated_at":"2025-09-14T05:02:57.000000Z"}},"assistant":{"id":14,"name":"Prof. Michael Chen","email":"michael.chen@yousch.edu","email_verified_at":"2025-09-14T05:02:57.000000Z","created_at":"2025-09-14T05:02:57.000000Z","updated_at":"2025-09-14T05:02:57.000000Z"}},{"id":19,"subject_id":13,"name":"Laboratoire de Strat\u00e9gie d''Entreprise","description":"Laboratoire pour simulations strat\u00e9giques","schedule":"Vendredi 14h00 - 16h00","created_at":"2025-09-14T05:03:01.000000Z","updated_at":"2025-09-14T05:03:01.000000Z","assistant_id":15,"start_datetime":"2025-01-26T14:00:00.000000Z","end_datetime":"2025-01-26T16:00:00.000000Z","subject":{"id":13,"course_id":3,"name":"Strat\u00e9gie d''Entreprise","code":"BUS401","description":"Strat\u00e9gie et planification d''entreprise","coordinator_id":15,"created_at":"2025-09-14T05:02:59.000000Z","updated_at":"2025-09-14T05:02:59.000000Z","course":{"id":3,"department_id":3,"name":"Baccalaur\u00e9at en Administration des Affaires","code":"BBA","description":"Programme de gestion des affaires","created_at":"2025-09-14T05:02:59.000000Z","updated_at":"2025-09-14T05:02:59.000000Z"},"coordinator":{"id":15,"name":"Dr. Emily Rodriguez","email":"emily.rodriguez@yousch.edu","email_verified_at":"2025-09-14T05:02:57.000000Z","created_at":"2025-09-14T05:02:57.000000Z","updated_at":"2025-09-14T05:02:57.000000Z"}},"assistant":{"id":15,"name":"Dr. Emily Rodriguez","email":"emily.rodriguez@yousch.edu","email_verified_at":"2025-09-14T05:02:57.000000Z","created_at":"2025-09-14T05:02:57.000000Z","updated_at":"2025-09-14T05:02:57.000000Z"}},{"id":3,"subject_id":2,"name":"Laboratoire de Structures de Donn\u00e9es","description":"Laboratoire pour l''impl\u00e9mentation de structures de donn\u00e9es","schedule":"Mardi 14h00 - 16h00","created_at":"2025-09-14T05:02:59.000000Z","updated_at":"2025-09-14T05:02:59.000000Z","assistant_id":null,"start_datetime":null,"end_datetime":null,"subject":{"id":2,"course_id":1,"name":"Structures de Donn\u00e9es et Algorithmes","code":"CS201","description":"Concepts de programmation avanc\u00e9s","coordinator_id":13,"created_at":"2025-09-14T05:02:59.000000Z","updated_at":"2025-09-14T05:02:59.000000Z","course":{"id":1,"department_id":1,"name":"Baccalaur\u00e9at en Informatique","code":"BCS","description":"Programme complet d''informatique","created_at":"2025-09-14T05:02:59.000000Z","updated_at":"2025-09-14T05:02:59.000000Z"},"coordinator":{"id":13,"name":"Dr. Sarah Johnson","email":"sarah.johnson@yousch.edu","email_verified_at":"2025-09-14T05:02:57.000000Z","created_at":"2025-09-14T05:02:57.000000Z","updated_at":"2025-09-14T05:02:57.000000Z"}},"assistant":null}],"message":"Laboratoires r\u00e9cup\u00e9r\u00e9s avec succ\u00e8s"}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -64,84 +64,8 @@ endpoints:
     cleanUrlParameters: []
     queryParameters: []
     cleanQueryParameters: []
-    bodyParameters:
-      subject_id:
-        name: subject_id
-        description: 'The <code>id</code> of an existing record in the subjects table.'
-        required: true
-        example: architecto
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: false
-        custom: []
-      name:
-        name: name
-        description: 'Must not be greater than 255 characters.'
-        required: true
-        example: 'n'
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: false
-        custom: []
-      description:
-        name: description
-        description: 'Must not be greater than 1000 characters.'
-        required: false
-        example: 'Animi quos velit et fugiat.'
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: true
-        custom: []
-      schedule:
-        name: schedule
-        description: 'Must not be greater than 255 characters.'
-        required: false
-        example: d
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: true
-        custom: []
-      assistant_id:
-        name: assistant_id
-        description: 'The <code>id</code> of an existing record in the users table.'
-        required: false
-        example: null
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: true
-        custom: []
-      start_datetime:
-        name: start_datetime
-        description: 'Must be a valid date.'
-        required: false
-        example: '2025-09-09T02:24:57'
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: true
-        custom: []
-      end_datetime:
-        name: end_datetime
-        description: 'Must be a valid date. Must be a date after <code>start_datetime</code>.'
-        required: false
-        example: '2051-10-03'
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: true
-        custom: []
-    cleanBodyParameters:
-      subject_id: architecto
-      name: 'n'
-      description: 'Animi quos velit et fugiat.'
-      schedule: d
-      start_datetime: '2025-09-09T02:24:57'
-      end_datetime: '2051-10-03'
+    bodyParameters: []
+    cleanBodyParameters: []
     fileParameters: []
     responses: []
     responseFields: []
@@ -188,7 +112,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"success":true,"data":{"id":1,"subject_id":1,"name":"Laboratoire de Programmation 1","description":"Laboratoire informatique pour exercices de programmation de base","schedule":"Lundi 14h00 - 16h00","created_at":"2025-09-09T02:24:44.000000Z","updated_at":"2025-09-09T02:24:44.000000Z","subject":{"id":1,"course_id":1,"name":"Introduction \u00e0 la Programmation","code":"CS101","description":"Concepts et pratiques de programmation de base","coordinator_id":1,"created_at":"2025-09-09T02:24:44.000000Z","updated_at":"2025-09-09T02:24:45.000000Z","course":{"id":1,"department_id":1,"name":"Baccalaur\u00e9at en Informatique","code":"BCS","description":"Programme complet d''informatique","created_at":"2025-09-09T02:24:44.000000Z","updated_at":"2025-09-09T02:24:44.000000Z"},"coordinator":{"id":1,"name":"Ivory Champlin DDS","email":"schumm.daren@example.com","email_verified_at":"2025-09-09T02:24:41.000000Z","created_at":"2025-09-09T02:24:41.000000Z","updated_at":"2025-09-09T02:24:41.000000Z"}},"assistant":null}}'
+        content: '{"success":true,"data":{"id":1,"subject_id":1,"name":"Laboratoire de Programmation 1","description":"Laboratoire informatique pour exercices de programmation de base","schedule":"Lundi 14h00 - 16h00","created_at":"2025-09-14T05:02:59.000000Z","updated_at":"2025-09-14T05:02:59.000000Z","assistant_id":null,"start_datetime":null,"end_datetime":null,"subject":{"id":1,"course_id":1,"name":"Introduction \u00e0 la Programmation","code":"CS101","description":"Concepts et pratiques de programmation de base","coordinator_id":1,"created_at":"2025-09-14T05:02:59.000000Z","updated_at":"2025-09-14T05:03:00.000000Z","course":{"id":1,"department_id":1,"name":"Baccalaur\u00e9at en Informatique","code":"BCS","description":"Programme complet d''informatique","created_at":"2025-09-14T05:02:59.000000Z","updated_at":"2025-09-14T05:02:59.000000Z"},"coordinator":{"id":1,"name":"Adriana Frami","email":"ibrown@example.org","email_verified_at":"2025-09-14T05:02:56.000000Z","created_at":"2025-09-14T05:02:56.000000Z","updated_at":"2025-09-14T05:02:56.000000Z"}},"assistant":null}}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -233,83 +157,8 @@ endpoints:
       id: 1
     queryParameters: []
     cleanQueryParameters: []
-    bodyParameters:
-      subject_id:
-        name: subject_id
-        description: 'The <code>id</code> of an existing record in the subjects table.'
-        required: false
-        example: null
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: false
-        custom: []
-      name:
-        name: name
-        description: 'Must not be greater than 255 characters.'
-        required: false
-        example: b
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: false
-        custom: []
-      description:
-        name: description
-        description: 'Must not be greater than 1000 characters.'
-        required: false
-        example: 'Et animi quos velit et fugiat.'
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: true
-        custom: []
-      schedule:
-        name: schedule
-        description: 'Must not be greater than 255 characters.'
-        required: false
-        example: d
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: true
-        custom: []
-      assistant_id:
-        name: assistant_id
-        description: 'The <code>id</code> of an existing record in the users table.'
-        required: false
-        example: null
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: true
-        custom: []
-      start_datetime:
-        name: start_datetime
-        description: 'Must be a valid date.'
-        required: false
-        example: '2025-09-09T02:24:57'
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: true
-        custom: []
-      end_datetime:
-        name: end_datetime
-        description: 'Must be a valid date. Must be a date after <code>start_datetime</code>.'
-        required: false
-        example: '2051-10-03'
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: true
-        custom: []
-    cleanBodyParameters:
-      name: b
-      description: 'Et animi quos velit et fugiat.'
-      schedule: d
-      start_datetime: '2025-09-09T02:24:57'
-      end_datetime: '2051-10-03'
+    bodyParameters: []
+    cleanBodyParameters: []
     fileParameters: []
     responses: []
     responseFields: []
@@ -398,7 +247,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"success":true,"data":[{"id":1,"subject_id":1,"name":"Laboratoire de Programmation 1","description":"Laboratoire informatique pour exercices de programmation de base","schedule":"Lundi 14h00 - 16h00","created_at":"2025-09-09T02:24:44.000000Z","updated_at":"2025-09-09T02:24:44.000000Z","subject":{"id":1,"course_id":1,"name":"Introduction \u00e0 la Programmation","code":"CS101","description":"Concepts et pratiques de programmation de base","coordinator_id":1,"created_at":"2025-09-09T02:24:44.000000Z","updated_at":"2025-09-09T02:24:45.000000Z","course":{"id":1,"department_id":1,"name":"Baccalaur\u00e9at en Informatique","code":"BCS","description":"Programme complet d''informatique","created_at":"2025-09-09T02:24:44.000000Z","updated_at":"2025-09-09T02:24:44.000000Z"},"coordinator":{"id":1,"name":"Ivory Champlin DDS","email":"schumm.daren@example.com","email_verified_at":"2025-09-09T02:24:41.000000Z","created_at":"2025-09-09T02:24:41.000000Z","updated_at":"2025-09-09T02:24:41.000000Z"}},"assistant":null},{"id":2,"subject_id":1,"name":"Laboratoire de Programmation 2","description":"Laboratoire avanc\u00e9 pour projets de programmation","schedule":"Mercredi 10h00 - 12h00","created_at":"2025-09-09T02:24:44.000000Z","updated_at":"2025-09-09T02:24:44.000000Z","subject":{"id":1,"course_id":1,"name":"Introduction \u00e0 la Programmation","code":"CS101","description":"Concepts et pratiques de programmation de base","coordinator_id":1,"created_at":"2025-09-09T02:24:44.000000Z","updated_at":"2025-09-09T02:24:45.000000Z","course":{"id":1,"department_id":1,"name":"Baccalaur\u00e9at en Informatique","code":"BCS","description":"Programme complet d''informatique","created_at":"2025-09-09T02:24:44.000000Z","updated_at":"2025-09-09T02:24:44.000000Z"},"coordinator":{"id":1,"name":"Ivory Champlin DDS","email":"schumm.daren@example.com","email_verified_at":"2025-09-09T02:24:41.000000Z","created_at":"2025-09-09T02:24:41.000000Z","updated_at":"2025-09-09T02:24:41.000000Z"}},"assistant":null}]}'
+        content: '{"success":true,"data":[{"id":1,"subject_id":1,"name":"Laboratoire de Programmation 1","description":"Laboratoire informatique pour exercices de programmation de base","schedule":"Lundi 14h00 - 16h00","created_at":"2025-09-14T05:02:59.000000Z","updated_at":"2025-09-14T05:02:59.000000Z","assistant_id":null,"start_datetime":null,"end_datetime":null,"subject":{"id":1,"course_id":1,"name":"Introduction \u00e0 la Programmation","code":"CS101","description":"Concepts et pratiques de programmation de base","coordinator_id":1,"created_at":"2025-09-14T05:02:59.000000Z","updated_at":"2025-09-14T05:03:00.000000Z","course":{"id":1,"department_id":1,"name":"Baccalaur\u00e9at en Informatique","code":"BCS","description":"Programme complet d''informatique","created_at":"2025-09-14T05:02:59.000000Z","updated_at":"2025-09-14T05:02:59.000000Z"},"coordinator":{"id":1,"name":"Adriana Frami","email":"ibrown@example.org","email_verified_at":"2025-09-14T05:02:56.000000Z","created_at":"2025-09-14T05:02:56.000000Z","updated_at":"2025-09-14T05:02:56.000000Z"}},"assistant":null},{"id":2,"subject_id":1,"name":"Laboratoire de Programmation 2","description":"Laboratoire avanc\u00e9 pour projets de programmation","schedule":"Mercredi 10h00 - 12h00","created_at":"2025-09-14T05:02:59.000000Z","updated_at":"2025-09-14T05:02:59.000000Z","assistant_id":null,"start_datetime":null,"end_datetime":null,"subject":{"id":1,"course_id":1,"name":"Introduction \u00e0 la Programmation","code":"CS101","description":"Concepts et pratiques de programmation de base","coordinator_id":1,"created_at":"2025-09-14T05:02:59.000000Z","updated_at":"2025-09-14T05:03:00.000000Z","course":{"id":1,"department_id":1,"name":"Baccalaur\u00e9at en Informatique","code":"BCS","description":"Programme complet d''informatique","created_at":"2025-09-14T05:02:59.000000Z","updated_at":"2025-09-14T05:02:59.000000Z"},"coordinator":{"id":1,"name":"Adriana Frami","email":"ibrown@example.org","email_verified_at":"2025-09-14T05:02:56.000000Z","created_at":"2025-09-14T05:02:56.000000Z","updated_at":"2025-09-14T05:02:56.000000Z"}},"assistant":null}]}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -432,97 +281,8 @@ endpoints:
     cleanUrlParameters: []
     queryParameters: []
     cleanQueryParameters: []
-    bodyParameters:
-      labs:
-        name: labs
-        description: 'Must have at least 1 items.'
-        required: true
-        example:
-          - []
-        type: 'object[]'
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: false
-        custom: []
-      'labs[].subject_id':
-        name: 'labs[].subject_id'
-        description: 'The <code>id</code> of an existing record in the subjects table.'
-        required: true
-        example: architecto
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: false
-        custom: []
-      'labs[].name':
-        name: 'labs[].name'
-        description: 'Must not be greater than 255 characters.'
-        required: true
-        example: 'n'
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: false
-        custom: []
-      'labs[].description':
-        name: 'labs[].description'
-        description: 'Must not be greater than 1000 characters.'
-        required: false
-        example: 'Animi quos velit et fugiat.'
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: true
-        custom: []
-      'labs[].schedule':
-        name: 'labs[].schedule'
-        description: 'Must not be greater than 255 characters.'
-        required: false
-        example: d
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: true
-        custom: []
-      'labs[].assistant_id':
-        name: 'labs[].assistant_id'
-        description: 'The <code>id</code> of an existing record in the users table.'
-        required: false
-        example: null
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: true
-        custom: []
-      'labs[].start_datetime':
-        name: 'labs[].start_datetime'
-        description: 'Must be a valid date.'
-        required: false
-        example: '2025-09-09T02:24:57'
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: true
-        custom: []
-      'labs[].end_datetime':
-        name: 'labs[].end_datetime'
-        description: 'Must be a valid date. Must be a date after <code>labs.*.start_datetime</code>.'
-        required: false
-        example: '2051-10-03'
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: true
-        custom: []
-    cleanBodyParameters:
-      labs:
-        -
-          subject_id: architecto
-          name: 'n'
-          description: 'Animi quos velit et fugiat.'
-          schedule: d
-          start_datetime: '2025-09-09T02:24:57'
-          end_datetime: '2051-10-03'
+    bodyParameters: []
+    cleanBodyParameters: []
     fileParameters: []
     responses: []
     responseFields: []

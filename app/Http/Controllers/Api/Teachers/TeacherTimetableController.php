@@ -61,7 +61,7 @@ class TeacherTimetableController extends Controller
                 'day_of_week' => 'required|in:monday,tuesday,wednesday,thursday,friday,saturday,sunday',
                 'start_time' => 'required|date_format:H:i',
                 'end_time' => 'required|date_format:H:i|after:start_time',
-                'room_number' => 'nullable|string|max:50',
+                'venue_id' => 'nullable|exists:venues,id',
                 'academic_year_id' => 'required|exists:academic_years,id',
                 'term_id' => 'required|exists:terms,id',
                 'is_active' => 'boolean',
@@ -167,7 +167,7 @@ class TeacherTimetableController extends Controller
                 'day_of_week' => 'sometimes|required|in:monday,tuesday,wednesday,thursday,friday,saturday,sunday',
                 'start_time' => 'sometimes|required|date_format:H:i',
                 'end_time' => 'sometimes|required|date_format:H:i|after:start_time',
-                'room_number' => 'nullable|string|max:50',
+                'venue_id' => 'nullable|exists:venues,id',
                 'is_active' => 'boolean',
                 'notes' => 'nullable|string|max:1000'
             ]);

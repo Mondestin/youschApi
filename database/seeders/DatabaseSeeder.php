@@ -21,6 +21,7 @@ class DatabaseSeeder extends Seeder
         User::factory(10)->create();
         // Seed exam types first
         $this->call(ExamTypeSeeder::class);
+        $this->call(VenueSeeder::class);
         
         // Seed academic management data
         $this->call(AcademicManagementSeeder::class);

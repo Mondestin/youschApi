@@ -20,7 +20,7 @@ class TimetableController extends Controller
     */
     public function index(Request $request): JsonResponse
     {
-        $query = Timetable::with(['classRoom.campus.school', 'subject.course', 'teacher']);
+        $query = Timetable::with(['classRoom.campus.school', 'subject.course', 'teacher', 'venue']);
 
         // Filter by class if provided
         if ($request->has('class_id')) {
@@ -78,7 +78,7 @@ class TimetableController extends Controller
                 'date' => 'required|date',
                 'start_time' => 'required|date_format:H:i',
                 'end_time' => 'required|date_format:H:i|after:start_time',
-                'room' => 'nullable|string|max:50',
+                'venue_id' => 'required|exists:venues,id',
             ]);
 
             // Check for time conflicts in the same class on the same date
@@ -121,11 +121,31 @@ class TimetableController extends Controller
                 ], 422);
             }
 
+            // Check for venue conflicts on the same date and time
+            $venueConflict = Timetable::where('venue_id', $validated['venue_id'])
+                ->where('date', $validated['date'])
+                ->where(function($query) use ($validated) {
+                    $query->whereBetween('start_time', [$validated['start_time'], $validated['end_time']])
+                          ->orWhereBetween('end_time', [$validated['start_time'], $validated['end_time']])
+                          ->orWhere(function($q) use ($validated) {
+                              $q->where('start_time', '<=', $validated['start_time'])
+                                ->where('end_time', '>=', $validated['end_time']);
+                          });
+                })
+                ->exists();
+
+            if ($venueConflict) {
+                return response()->json([
+                    'success' => false,
+                    'message' => 'Venue is already booked at this time'
+                ], 422);
+            }
+
             $timetable = Timetable::create($validated);
 
             return response()->json([
                 'success' => true,
-                'data' => $timetable->load(['classRoom.campus.school', 'subject.course', 'teacher']),
+                'data' => $timetable->load(['classRoom.campus.school', 'subject.course', 'teacher', 'venue']),
                 'message' => 'Timetable entry created successfully'
             ], 201);
 
@@ -153,7 +173,8 @@ class TimetableController extends Controller
         $timetable->load([
             'classRoom.campus.school',
             'subject.course.department.faculty',
-            'teacher'
+            'teacher',
+            'venue'
         ]);
 
         return response()->json([
@@ -177,18 +198,19 @@ class TimetableController extends Controller
                 'date' => 'sometimes|required|date',
                 'start_time' => 'sometimes|required|date_format:H:i',
                 'end_time' => 'sometimes|required|date_format:H:i|after:start_time',
-                'room' => 'nullable|string|max:50',
+                'venue_id' => 'sometimes|required|exists:venues,id',
             ]);
 
-            // Check for conflicts if time/date/class/teacher is being changed
+            // Check for conflicts if time/date/class/teacher/venue is being changed
             if (isset($validated['date']) || isset($validated['start_time']) || isset($validated['end_time']) || 
-                isset($validated['class_id']) || isset($validated['teacher_id'])) {
+                isset($validated['class_id']) || isset($validated['teacher_id']) || isset($validated['venue_id'])) {
                 
                 $date = $validated['date'] ?? $timetable->date;
                 $startTime = $validated['start_time'] ?? $timetable->start_time;
                 $endTime = $validated['end_time'] ?? $timetable->end_time;
                 $classId = $validated['class_id'] ?? $timetable->class_id;
                 $teacherId = $validated['teacher_id'] ?? $timetable->teacher_id;
+                $venueId = $validated['venue_id'] ?? $timetable->venue_id;
 
                 // Check for time conflicts in the same class on the same date
                 $timeConflict = Timetable::where('class_id', $classId)
@@ -231,13 +253,34 @@ class TimetableController extends Controller
                         'message' => 'Teacher has a conflicting timetable entry at this time'
                     ], 422);
                 }
+
+                // Check for venue conflicts on the same date and time
+                $venueConflict = Timetable::where('venue_id', $venueId)
+                    ->where('date', $date)
+                    ->where('id', '!=', $timetable->id)
+                    ->where(function($query) use ($startTime, $endTime) {
+                        $query->whereBetween('start_time', [$startTime, $endTime])
+                              ->orWhereBetween('end_time', [$startTime, $endTime])
+                              ->orWhere(function($q) use ($startTime, $endTime) {
+                                  $q->where('start_time', '<=', $startTime)
+                                    ->where('end_time', '>=', $endTime);
+                              });
+                    })
+                    ->exists();
+
+                if ($venueConflict) {
+                    return response()->json([
+                        'success' => false,
+                        'message' => 'Venue is already booked at this time'
+                    ], 422);
+                }
             }
 
             $timetable->update($validated);
 
             return response()->json([
                 'success' => true,
-                'data' => $timetable->fresh()->load(['classRoom.campus.school', 'subject.course', 'teacher']),
+                'data' => $timetable->fresh()->load(['classRoom.campus.school', 'subject.course', 'teacher', 'venue']),
                 'message' => 'Timetable entry updated successfully'
             ]);
 
@@ -286,7 +329,7 @@ class TimetableController extends Controller
     public function classTimetable(ClassRoom $class, Request $request): JsonResponse
     {
         $query = $class->timetables()
-                      ->with(['subject.course', 'teacher']);
+                      ->with(['subject.course', 'teacher', 'venue']);
 
         // Filter by date range if provided
         if ($request->has('start_date')) {
@@ -315,7 +358,7 @@ class TimetableController extends Controller
     public function teacherTimetable(User $teacher, Request $request): JsonResponse
     {
         $query = Timetable::where('teacher_id', $teacher->id)
-                         ->with(['classRoom.campus.school', 'subject.course']);
+                         ->with(['classRoom.campus.school', 'subject.course', 'venue']);
 
         // Filter by date range if provided
         if ($request->has('start_date')) {
@@ -352,7 +395,7 @@ class TimetableController extends Controller
                 'subjects.*.day_of_week' => 'required|integer|between:1,7',
                 'subjects.*.start_time' => 'required|date_format:H:i',
                 'subjects.*.end_time' => 'required|date_format:H:i|after:subjects.*.start_time',
-                'subjects.*.room' => 'nullable|string|max:50',
+                'subjects.*.venue_id' => 'nullable|exists:venues,id',
             ]);
 
             $weekStart = \Carbon\Carbon::parse($validated['week_start_date']);
@@ -379,7 +422,7 @@ class TimetableController extends Controller
                             'date' => $date,
                             'start_time' => $subjectData['start_time'],
                             'end_time' => $subjectData['end_time'],
-                            'room' => $subjectData['room'] ?? null,
+                            'venue_id' => $subjectData['venue_id'] ?? null,
                         ]);
 
                         $generatedEntries[] = $timetable;

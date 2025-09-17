@@ -229,7 +229,7 @@ class TeacherTimetableRepository extends BaseRepository implements TeacherTimeta
                 'teacher' => $timetable->teacher,
                 'subject' => $timetable->subject,
                 'class' => $timetable->classRoom,
-                'room' => $timetable->room
+                'venue' => $timetable->venue
             ];
         }
 
@@ -263,7 +263,7 @@ class TeacherTimetableRepository extends BaseRepository implements TeacherTimeta
                 'end_time' => $timetable->end_time,
                 'teacher' => $timetable->teacher,
                 'subject' => $timetable->subject,
-                'room' => $timetable->room
+                'venue' => $timetable->venue
             ];
         }
 

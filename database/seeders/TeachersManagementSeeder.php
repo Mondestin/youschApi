@@ -572,6 +572,9 @@ class TeachersManagementSeeder extends Seeder
             $term = $terms->first();
             
             if ($subject) {
+                // Get a random venue for the timetable entry
+                $venue = \App\Models\AdminAcademics\Venue::inRandomOrder()->first();
+                
                 TeacherTimetable::create([
                     'teacher_id' => $teacher->id,
                     'class_id' => $class->id,
@@ -579,7 +582,7 @@ class TeachersManagementSeeder extends Seeder
                     'date' => now()->addDays(rand(1, 30)),
                     'start_time' => '09:00:00',
                     'end_time' => '10:30:00',
-                    'room' => 'Salle ' . rand(101, 120),
+                    'venue_id' => $venue ? $venue->id : null,
                     'lab_id' => null,
                 ]);
             }
