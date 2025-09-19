@@ -9,6 +9,7 @@ use App\Models\User;
 use App\Models\AdminAcademics\ClassRoom;
 use App\Models\AdminAcademics\Subject;
 use App\Models\AdminAcademics\Lab;
+use App\Models\AdminAcademics\Venue;
 
 class TeacherTimetable extends Model
 {
@@ -25,7 +26,7 @@ class TeacherTimetable extends Model
         'date',
         'start_time',
         'end_time',
-        'room',
+        'venue_id',
     ];
 
     protected $casts = [
@@ -64,6 +65,14 @@ class TeacherTimetable extends Model
     public function lab(): BelongsTo
     {
         return $this->belongsTo(Lab::class);
+    }
+
+    /**
+     * Get the venue for this timetable entry.
+     */
+    public function venue(): BelongsTo
+    {
+        return $this->belongsTo(Venue::class);
     }
 
     /**

@@ -122,7 +122,7 @@ endpoints:
         name: date
         description: 'Must be a valid date.'
         required: true
-        example: '2025-09-09T02:24:58'
+        example: '2025-09-14T05:03:07'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -132,7 +132,7 @@ endpoints:
         name: status
         description: ''
         required: true
-        example: excused
+        example: late
         type: string
         enumValues:
           - present
@@ -157,8 +157,8 @@ endpoints:
       class_id: architecto
       subject_id: architecto
       timetable_id: architecto
-      date: '2025-09-09T02:24:58'
-      status: excused
+      date: '2025-09-14T05:03:07'
+      status: late
       remarks: 'n'
     fileParameters: []
     responses: []
@@ -259,7 +259,7 @@ endpoints:
         name: status
         description: ''
         required: false
-        example: late
+        example: absent
         type: string
         enumValues:
           - present
@@ -280,7 +280,7 @@ endpoints:
         nullable: true
         custom: []
     cleanBodyParameters:
-      status: late
+      status: absent
       remarks: b
     fileParameters: []
     responses: []
@@ -571,7 +571,7 @@ endpoints:
         name: start_date
         description: 'Must be a valid date.'
         required: true
-        example: '2025-09-09T02:24:58'
+        example: '2025-09-14T05:03:07'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -581,15 +581,15 @@ endpoints:
         name: end_date
         description: 'Must be a valid date. Must be a date after or equal to <code>start_date</code>.'
         required: true
-        example: '2051-10-03'
+        example: '2051-10-08'
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanBodyParameters:
-      start_date: '2025-09-09T02:24:58'
-      end_date: '2051-10-03'
+      start_date: '2025-09-14T05:03:07'
+      end_date: '2051-10-08'
     fileParameters: []
     responses: []
     responseFields: []
@@ -635,14 +635,14 @@ endpoints:
         name: date
         description: 'Must be a valid date.'
         required: true
-        example: '2025-09-09T02:24:58'
+        example: '2025-09-14T05:03:07'
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanBodyParameters:
-      date: '2025-09-09T02:24:58'
+      date: '2025-09-14T05:03:07'
     fileParameters: []
     responses:
       -
@@ -700,7 +700,7 @@ endpoints:
         name: start_date
         description: 'Must be a valid date.'
         required: true
-        example: '2025-09-09T02:24:58'
+        example: '2025-09-14T05:03:07'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -710,15 +710,15 @@ endpoints:
         name: end_date
         description: 'Must be a valid date. Must be a date after or equal to <code>start_date</code>.'
         required: true
-        example: '2051-10-03'
+        example: '2051-10-08'
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanBodyParameters:
-      start_date: '2025-09-09T02:24:58'
-      end_date: '2051-10-03'
+      start_date: '2025-09-14T05:03:07'
+      end_date: '2051-10-08'
     fileParameters: []
     responses:
       -
@@ -776,7 +776,7 @@ endpoints:
         name: start_date
         description: 'Must be a valid date.'
         required: true
-        example: '2025-09-09T02:24:58'
+        example: '2025-09-14T05:03:07'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -786,15 +786,15 @@ endpoints:
         name: end_date
         description: 'Must be a valid date. Must be a date after or equal to <code>start_date</code>.'
         required: true
-        example: '2051-10-03'
+        example: '2051-10-08'
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanBodyParameters:
-      start_date: '2025-09-09T02:24:58'
-      end_date: '2051-10-03'
+      start_date: '2025-09-14T05:03:07'
+      end_date: '2051-10-08'
     fileParameters: []
     responses:
       -
@@ -1020,7 +1020,7 @@ endpoints:
         name: date
         description: 'Must be a valid date.'
         required: true
-        example: '2025-09-09T02:24:58'
+        example: '2025-09-14T05:03:07'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -1030,7 +1030,7 @@ endpoints:
         name: status
         description: ''
         required: true
-        example: late
+        example: present
         type: string
         enumValues:
           - present
@@ -1054,8 +1054,8 @@ endpoints:
       class_id: architecto
       subject_id: architecto
       timetable_id: architecto
-      date: '2025-09-09T02:24:58'
-      status: late
+      date: '2025-09-14T05:03:07'
+      status: present
       remarks: 'n'
     fileParameters: []
     responses: []
@@ -1467,7 +1467,7 @@ endpoints:
         name: start_date
         description: 'Must be a valid date.'
         required: true
-        example: '2025-09-09T02:24:58'
+        example: '2025-09-14T05:03:07'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -1477,15 +1477,15 @@ endpoints:
         name: end_date
         description: 'Must be a valid date. Must be a date after or equal to <code>start_date</code>.'
         required: true
-        example: '2051-10-03'
+        example: '2051-10-08'
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanBodyParameters:
-      start_date: '2025-09-09T02:24:58'
-      end_date: '2051-10-03'
+      start_date: '2025-09-14T05:03:07'
+      end_date: '2051-10-08'
     fileParameters: []
     responses: []
     responseFields: []
@@ -1531,14 +1531,14 @@ endpoints:
         name: date
         description: 'Must be a valid date.'
         required: true
-        example: '2025-09-09T02:24:58'
+        example: '2025-09-14T05:03:07'
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanBodyParameters:
-      date: '2025-09-09T02:24:58'
+      date: '2025-09-14T05:03:07'
     fileParameters: []
     responses:
       -
@@ -1596,7 +1596,7 @@ endpoints:
         name: start_date
         description: 'Must be a valid date.'
         required: true
-        example: '2025-09-09T02:24:58'
+        example: '2025-09-14T05:03:07'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -1606,15 +1606,15 @@ endpoints:
         name: end_date
         description: 'Must be a valid date. Must be a date after or equal to <code>start_date</code>.'
         required: true
-        example: '2051-10-03'
+        example: '2051-10-08'
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanBodyParameters:
-      start_date: '2025-09-09T02:24:58'
-      end_date: '2051-10-03'
+      start_date: '2025-09-14T05:03:07'
+      end_date: '2051-10-08'
     fileParameters: []
     responses:
       -
@@ -1672,7 +1672,7 @@ endpoints:
         name: start_date
         description: 'Must be a valid date.'
         required: true
-        example: '2025-09-09T02:24:58'
+        example: '2025-09-14T05:03:07'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -1682,15 +1682,15 @@ endpoints:
         name: end_date
         description: 'Must be a valid date. Must be a date after or equal to <code>start_date</code>.'
         required: true
-        example: '2051-10-03'
+        example: '2051-10-08'
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanBodyParameters:
-      start_date: '2025-09-09T02:24:58'
-      end_date: '2051-10-03'
+      start_date: '2025-09-14T05:03:07'
+      end_date: '2051-10-08'
     fileParameters: []
     responses:
       -
@@ -1903,7 +1903,7 @@ endpoints:
         name: date
         description: 'Must be a valid date.'
         required: true
-        example: '2025-09-09T02:24:58'
+        example: '2025-09-14T05:03:07'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -1933,7 +1933,7 @@ endpoints:
       student_id: architecto
       class_id: architecto
       subject_id: architecto
-      date: '2025-09-09T02:24:58'
+      date: '2025-09-14T05:03:07'
       reason: 'n'
     fileParameters:
       document: null
@@ -2343,7 +2343,7 @@ endpoints:
         name: start_date
         description: 'Must be a valid date.'
         required: true
-        example: '2025-09-09T02:24:58'
+        example: '2025-09-14T05:03:07'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -2353,15 +2353,15 @@ endpoints:
         name: end_date
         description: 'Must be a valid date. Must be a date after or equal to <code>start_date</code>.'
         required: true
-        example: '2051-10-03'
+        example: '2051-10-08'
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanBodyParameters:
-      start_date: '2025-09-09T02:24:58'
-      end_date: '2051-10-03'
+      start_date: '2025-09-14T05:03:07'
+      end_date: '2051-10-08'
     fileParameters: []
     responses: []
     responseFields: []
@@ -2706,7 +2706,7 @@ endpoints:
         name: start_date
         description: 'Must be a valid date.'
         required: true
-        example: '2025-09-09T02:24:58'
+        example: '2025-09-14T05:03:07'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -2716,15 +2716,15 @@ endpoints:
         name: end_date
         description: 'Must be a valid date. Must be a date after or equal to <code>start_date</code>.'
         required: true
-        example: '2051-10-03'
+        example: '2051-10-08'
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanBodyParameters:
-      start_date: '2025-09-09T02:24:58'
-      end_date: '2051-10-03'
+      start_date: '2025-09-14T05:03:07'
+      end_date: '2051-10-08'
     fileParameters: []
     responses:
       -
@@ -2851,7 +2851,7 @@ endpoints:
         name: date
         description: 'Must be a valid date.'
         required: true
-        example: '2025-09-09T02:24:58'
+        example: '2025-09-14T05:03:07'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -2881,7 +2881,7 @@ endpoints:
       teacher_id: architecto
       class_id: architecto
       subject_id: architecto
-      date: '2025-09-09T02:24:58'
+      date: '2025-09-14T05:03:07'
       reason: 'n'
     fileParameters:
       document: null
@@ -3291,7 +3291,7 @@ endpoints:
         name: start_date
         description: 'Must be a valid date.'
         required: true
-        example: '2025-09-09T02:24:58'
+        example: '2025-09-14T05:03:07'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -3301,15 +3301,15 @@ endpoints:
         name: end_date
         description: 'Must be a valid date. Must be a date after or equal to <code>start_date</code>.'
         required: true
-        example: '2051-10-03'
+        example: '2051-10-08'
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanBodyParameters:
-      start_date: '2025-09-09T02:24:58'
-      end_date: '2051-10-03'
+      start_date: '2025-09-14T05:03:07'
+      end_date: '2051-10-08'
     fileParameters: []
     responses: []
     responseFields: []
@@ -3654,7 +3654,7 @@ endpoints:
         name: start_date
         description: 'Must be a valid date.'
         required: true
-        example: '2025-09-09T02:24:58'
+        example: '2025-09-14T05:03:07'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -3664,15 +3664,15 @@ endpoints:
         name: end_date
         description: 'Must be a valid date. Must be a date after or equal to <code>start_date</code>.'
         required: true
-        example: '2051-10-03'
+        example: '2051-10-08'
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanBodyParameters:
-      start_date: '2025-09-09T02:24:58'
-      end_date: '2051-10-03'
+      start_date: '2025-09-14T05:03:07'
+      end_date: '2051-10-08'
     fileParameters: []
     responses:
       -
@@ -3770,7 +3770,7 @@ endpoints:
         name: 'attendance_data[].date'
         description: 'Must be a valid date.'
         required: true
-        example: '2025-09-09T02:24:58'
+        example: '2025-09-14T05:03:07'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -3780,7 +3780,7 @@ endpoints:
         name: 'attendance_data[].status'
         description: ''
         required: true
-        example: absent
+        example: late
         type: string
         enumValues:
           - present
@@ -3807,8 +3807,8 @@ endpoints:
           class_id: architecto
           subject_id: architecto
           timetable_id: architecto
-          date: '2025-09-09T02:24:58'
-          status: absent
+          date: '2025-09-14T05:03:07'
+          status: late
           remarks: 'n'
     fileParameters: []
     responses: []
@@ -3976,7 +3976,7 @@ endpoints:
         name: 'attendance_data[].date'
         description: 'Must be a valid date.'
         required: true
-        example: '2025-09-09T02:24:58'
+        example: '2025-09-14T05:03:07'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -4012,7 +4012,7 @@ endpoints:
           class_id: architecto
           subject_id: architecto
           timetable_id: architecto
-          date: '2025-09-09T02:24:58'
+          date: '2025-09-14T05:03:07'
           status: absent
           remarks: 'n'
     fileParameters: []
@@ -4070,7 +4070,7 @@ endpoints:
         name: 'attendance_data[].status'
         description: ''
         required: false
-        example: present
+        example: absent
         type: string
         enumValues:
           - present
@@ -4093,7 +4093,7 @@ endpoints:
       attendance_data:
         -
           id: architecto
-          status: present
+          status: absent
           remarks: 'n'
     fileParameters: []
     responses: []
@@ -4296,7 +4296,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"success":true,"data":{"total_records":170,"present_count":133,"absent_count":19,"late_count":18,"excused_count":0,"present_percentage":78.24,"absent_percentage":11.18,"late_percentage":10.59,"excused_percentage":0}}'
+        content: '{"success":true,"data":{"total_records":175,"present_count":125,"absent_count":29,"late_count":21,"excused_count":0,"present_percentage":71.43,"absent_percentage":16.57,"late_percentage":12,"excused_percentage":0}}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -4336,7 +4336,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"success":true,"data":{"total_records":3400,"present_count":2552,"absent_count":529,"late_count":319,"present_percentage":75.06,"absent_percentage":15.56,"late_percentage":9.38}}'
+        content: '{"success":true,"data":{"total_records":3400,"present_count":2534,"absent_count":532,"late_count":334,"present_percentage":74.53,"absent_percentage":15.65,"late_percentage":9.82}}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json

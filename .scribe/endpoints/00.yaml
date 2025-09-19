@@ -71,7 +71,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"status":"healthy","timestamp":"2025-09-09T02:24:56.395777Z","version":"1.0.0"}'
+        content: '{"status":"healthy","timestamp":"2025-09-14T05:03:05.927136Z","version":"1.0.0"}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -112,6 +112,516 @@ endpoints:
       -
         status: 200
         content: '{"version":"1.0.0","laravel_version":"12.25.0","php_version":"8.4.1"}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/admin/academics/venues
+    metadata:
+      groupName: General
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Display a listing of venues.'
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"success":true,"data":[{"id":7,"name":"Amphith\u00e9\u00e2tre 301","description":"Grand amphith\u00e9\u00e2tre avec si\u00e8ges en gradins","capacity":60,"location":"B\u00e2timent Principal - Troisi\u00e8me \u00c9tage","type":"classroom","is_active":true,"created_at":"2025-09-14T05:02:56.000000Z","updated_at":"2025-09-14T05:02:56.000000Z"},{"id":41,"name":"Ancien Laboratoire 1","description":"Laboratoire obsol\u00e8te en cours de r\u00e9novation","capacity":10,"location":"Ancien B\u00e2timent - Rez-de-chauss\u00e9e","type":"laboratory","is_active":false,"created_at":"2025-09-14T05:02:56.000000Z","updated_at":"2025-09-14T05:02:56.000000Z"},{"id":35,"name":"Atelier d''Art 1","description":"Atelier d''art avec chevalets, tables de dessin et rangement","capacity":18,"location":"B\u00e2timent des Arts - Premier \u00c9tage","type":"other","is_active":true,"created_at":"2025-09-14T05:02:56.000000Z","updated_at":"2025-09-14T05:02:56.000000Z"},{"id":36,"name":"Atelier d''Art 2","description":"Atelier de c\u00e9ramique et sculpture avec four","capacity":12,"location":"B\u00e2timent des Arts - Premier \u00c9tage","type":"other","is_active":true,"created_at":"2025-09-14T05:02:56.000000Z","updated_at":"2025-09-14T05:02:56.000000Z"},{"id":30,"name":"Centre de Fitness","description":"Centre de fitness avec \u00e9quipement d''exercice","capacity":15,"location":"Complexe Sportif","type":"gymnasium","is_active":true,"created_at":"2025-09-14T05:02:56.000000Z","updated_at":"2025-09-14T05:02:56.000000Z"},{"id":40,"name":"Centre M\u00e9dia","description":"Centre m\u00e9dia avec \u00e9quipement de montage vid\u00e9o et fond vert","capacity":16,"location":"B\u00e2timent Technologique - Deuxi\u00e8me \u00c9tage","type":"laboratory","is_active":true,"created_at":"2025-09-14T05:02:56.000000Z","updated_at":"2025-09-14T05:02:56.000000Z"},{"id":19,"name":"Grand Auditorium","description":"Grand auditorium avec sc\u00e8ne, syst\u00e8me audio et \u00e9cran de projection","capacity":200,"location":"B\u00e2timent Principal - Rez-de-chauss\u00e9e","type":"auditorium","is_active":true,"created_at":"2025-09-14T05:02:56.000000Z","updated_at":"2025-09-14T05:02:56.000000Z"},{"id":27,"name":"Gymnase Principal","description":"Grande salle de sport pour cours d''\u00e9ducation physique et \u00e9v\u00e9nements","capacity":50,"location":"Complexe Sportif","type":"gymnasium","is_active":true,"created_at":"2025-09-14T05:02:56.000000Z","updated_at":"2025-09-14T05:02:56.000000Z"},{"id":13,"name":"Laboratoire de Biologie 1","description":"Laboratoire de biologie avec microscopes et stockage d''\u00e9chantillons","capacity":20,"location":"B\u00e2timent des Sciences - Deuxi\u00e8me \u00c9tage","type":"laboratory","is_active":true,"created_at":"2025-09-14T05:02:56.000000Z","updated_at":"2025-09-14T05:02:56.000000Z"},{"id":14,"name":"Laboratoire de Biologie 2","description":"Laboratoire de biologie avanc\u00e9 avec \u00e9quipement de biologie mol\u00e9culaire","capacity":14,"location":"B\u00e2timent des Sciences - Deuxi\u00e8me \u00c9tage","type":"laboratory","is_active":true,"created_at":"2025-09-14T05:02:56.000000Z","updated_at":"2025-09-14T05:02:56.000000Z"},{"id":11,"name":"Laboratoire de Chimie 1","description":"Laboratoire de chimie avec hottes aspirantes et \u00e9quipement de s\u00e9curit\u00e9","capacity":18,"location":"B\u00e2timent des Sciences - Premier \u00c9tage","type":"laboratory","is_active":true,"created_at":"2025-09-14T05:02:56.000000Z","updated_at":"2025-09-14T05:02:56.000000Z"},{"id":12,"name":"Laboratoire de Chimie 2","description":"Laboratoire de chimie avanc\u00e9 avec instruments d''analyse","capacity":16,"location":"B\u00e2timent des Sciences - Premier \u00c9tage","type":"laboratory","is_active":true,"created_at":"2025-09-14T05:02:56.000000Z","updated_at":"2025-09-14T05:02:56.000000Z"},{"id":39,"name":"Laboratoire de Langues","description":"Laboratoire de langues avec \u00e9quipement audio-visuel","capacity":24,"location":"Centre de Langues - Premier \u00c9tage","type":"laboratory","is_active":true,"created_at":"2025-09-14T05:02:56.000000Z","updated_at":"2025-09-14T05:02:56.000000Z"},{"id":9,"name":"Laboratoire de Physique 1","description":"Laboratoire de physique avec \u00e9quipement exp\u00e9rimental et \u00e9quipement de s\u00e9curit\u00e9","capacity":15,"location":"B\u00e2timent des Sciences - Premier \u00c9tage","type":"laboratory","is_active":true,"created_at":"2025-09-14T05:02:56.000000Z","updated_at":"2025-09-14T05:02:56.000000Z"},{"id":10,"name":"Laboratoire de Physique 2","description":"Laboratoire de physique avanc\u00e9 avec instruments sp\u00e9cialis\u00e9s","capacity":12,"location":"B\u00e2timent des Sciences - Premier \u00c9tage","type":"laboratory","is_active":true,"created_at":"2025-09-14T05:02:56.000000Z","updated_at":"2025-09-14T05:02:56.000000Z"},{"id":18,"name":"Laboratoire R\u00e9seaux","description":"Laboratoire de r\u00e9seaux avec \u00e9quipement Cisco et serveurs","capacity":12,"location":"B\u00e2timent Technologique - Premier \u00c9tage","type":"laboratory","is_active":true,"created_at":"2025-09-14T05:02:56.000000Z","updated_at":"2025-09-14T05:02:56.000000Z"},{"id":20,"name":"Petit Auditorium","description":"Auditorium de taille moyenne pour pr\u00e9sentations et s\u00e9minaires","capacity":100,"location":"B\u00e2timent Principal - Rez-de-chauss\u00e9e","type":"auditorium","is_active":true,"created_at":"2025-09-14T05:02:56.000000Z","updated_at":"2025-09-14T05:02:56.000000Z"},{"id":28,"name":"Petit Gymnase","description":"Petit gymnase pour activit\u00e9s d''\u00e9ducation physique sp\u00e9cialis\u00e9es","capacity":25,"location":"Complexe Sportif","type":"gymnasium","is_active":true,"created_at":"2025-09-14T05:02:56.000000Z","updated_at":"2025-09-14T05:02:56.000000Z"},{"id":1,"name":"Salle 101","description":"Salle de classe standard avec tableau blanc et projecteur, climatis\u00e9e","capacity":30,"location":"B\u00e2timent Principal - Premier \u00c9tage","type":"classroom","is_active":true,"created_at":"2025-09-14T05:02:56.000000Z","updated_at":"2025-09-14T05:02:56.000000Z"},{"id":2,"name":"Salle 102","description":"Salle de classe standard avec tableau interactif et syst\u00e8me audio","capacity":25,"location":"B\u00e2timent Principal - Premier \u00c9tage","type":"classroom","is_active":true,"created_at":"2025-09-14T05:02:56.000000Z","updated_at":"2025-09-14T05:02:56.000000Z"},{"id":3,"name":"Salle 103","description":"Petite salle de classe pour cours sp\u00e9cialis\u00e9s","capacity":20,"location":"B\u00e2timent Principal - Premier \u00c9tage","type":"classroom","is_active":true,"created_at":"2025-09-14T05:02:56.000000Z","updated_at":"2025-09-14T05:02:56.000000Z"},{"id":4,"name":"Salle 201","description":"Grande salle de classe pour cours avanc\u00e9s avec \u00e9quipement multim\u00e9dia","capacity":40,"location":"B\u00e2timent Principal - Deuxi\u00e8me \u00c9tage","type":"classroom","is_active":true,"created_at":"2025-09-14T05:02:56.000000Z","updated_at":"2025-09-14T05:02:56.000000Z"},{"id":5,"name":"Salle 202","description":"Salle de classe standard avec tableau blanc et projecteur","capacity":35,"location":"B\u00e2timent Principal - Deuxi\u00e8me \u00c9tage","type":"classroom","is_active":true,"created_at":"2025-09-14T05:02:56.000000Z","updated_at":"2025-09-14T05:02:56.000000Z"},{"id":6,"name":"Salle 203","description":"Salle de classe avec disposition en table ronde pour discussions","capacity":15,"location":"B\u00e2timent Principal - Deuxi\u00e8me \u00c9tage","type":"classroom","is_active":true,"created_at":"2025-09-14T05:02:56.000000Z","updated_at":"2025-09-14T05:02:56.000000Z"},{"id":8,"name":"Salle 302","description":"Salle de classe standard avec tableau interactif","capacity":30,"location":"B\u00e2timent Principal - Troisi\u00e8me \u00c9tage","type":"classroom","is_active":true,"created_at":"2025-09-14T05:02:56.000000Z","updated_at":"2025-09-14T05:02:56.000000Z"},{"id":31,"name":"Salle d''\u00c9tude A","description":"Salle d''\u00e9tude silencieuse dans la biblioth\u00e8que avec bureaux individuels","capacity":8,"location":"B\u00e2timent Biblioth\u00e8que - Deuxi\u00e8me \u00c9tage","type":"library","is_active":true,"created_at":"2025-09-14T05:02:56.000000Z","updated_at":"2025-09-14T05:02:56.000000Z"},{"id":32,"name":"Salle d''\u00c9tude B","description":"Salle d''\u00e9tude de groupe avec grande table et tableau blanc","capacity":12,"location":"B\u00e2timent Biblioth\u00e8que - Deuxi\u00e8me \u00c9tage","type":"library","is_active":true,"created_at":"2025-09-14T05:02:56.000000Z","updated_at":"2025-09-14T05:02:56.000000Z"},{"id":33,"name":"Salle d''\u00c9tude C","description":"Salle d''\u00e9tude silencieuse avec carrels individuels","capacity":6,"location":"B\u00e2timent Biblioth\u00e8que - Troisi\u00e8me \u00c9tage","type":"library","is_active":true,"created_at":"2025-09-14T05:02:56.000000Z","updated_at":"2025-09-14T05:02:56.000000Z"},{"id":21,"name":"Salle de Conf\u00e9rence","description":"Salle de conf\u00e9rence professionnelle avec \u00e9quipement de visioconf\u00e9rence","capacity":80,"location":"B\u00e2timent Administration - Rez-de-chauss\u00e9e","type":"auditorium","is_active":true,"created_at":"2025-09-14T05:02:56.000000Z","updated_at":"2025-09-14T05:02:56.000000Z"},{"id":34,"name":"Salle de Lecture","description":"Grande salle de lecture avec si\u00e8ges confortables","capacity":40,"location":"B\u00e2timent Biblioth\u00e8que - Premier \u00c9tage","type":"library","is_active":true,"created_at":"2025-09-14T05:02:56.000000Z","updated_at":"2025-09-14T05:02:56.000000Z"},{"id":37,"name":"Salle de Musique 1","description":"Salle de musique avec piano et \u00e9quipement audio","capacity":15,"location":"B\u00e2timent des Arts - Deuxi\u00e8me \u00c9tage","type":"other","is_active":true,"created_at":"2025-09-14T05:02:56.000000Z","updated_at":"2025-09-14T05:02:56.000000Z"},{"id":38,"name":"Salle de Musique 2","description":"Salle de r\u00e9p\u00e9tition avec instruments et syst\u00e8me audio","capacity":20,"location":"B\u00e2timent des Arts - Deuxi\u00e8me \u00c9tage","type":"other","is_active":true,"created_at":"2025-09-14T05:02:56.000000Z","updated_at":"2025-09-14T05:02:56.000000Z"},{"id":22,"name":"Salle de R\u00e9union 1","description":"Petite salle de r\u00e9union pour discussions de groupe et pr\u00e9sentations","capacity":12,"location":"B\u00e2timent Administration - Premier \u00c9tage","type":"meeting_room","is_active":true,"created_at":"2025-09-14T05:02:56.000000Z","updated_at":"2025-09-14T05:02:56.000000Z"},{"id":23,"name":"Salle de R\u00e9union 2","description":"Salle de r\u00e9union moyenne avec \u00e9quipement de visioconf\u00e9rence","capacity":20,"location":"B\u00e2timent Administration - Premier \u00c9tage","type":"meeting_room","is_active":true,"created_at":"2025-09-14T05:02:56.000000Z","updated_at":"2025-09-14T05:02:56.000000Z"},{"id":25,"name":"Salle de S\u00e9minaire A","description":"Salle de s\u00e9minaire avec disposition en U","capacity":25,"location":"B\u00e2timent Principal - Rez-de-chauss\u00e9e","type":"meeting_room","is_active":true,"created_at":"2025-09-14T05:02:56.000000Z","updated_at":"2025-09-14T05:02:56.000000Z"},{"id":26,"name":"Salle de S\u00e9minaire B","description":"Salle de s\u00e9minaire avec si\u00e8ges en style th\u00e9\u00e2tre","capacity":30,"location":"B\u00e2timent Principal - Rez-de-chauss\u00e9e","type":"meeting_room","is_active":true,"created_at":"2025-09-14T05:02:56.000000Z","updated_at":"2025-09-14T05:02:56.000000Z"},{"id":42,"name":"Salle de Stockage A","description":"Salle de stockage temporaire, non disponible pour les cours","capacity":5,"location":"B\u00e2timent Principal - Sous-sol","type":"other","is_active":false,"created_at":"2025-09-14T05:02:56.000000Z","updated_at":"2025-09-14T05:02:56.000000Z"},{"id":24,"name":"Salle du Conseil","description":"Salle du conseil ex\u00e9cutif avec mobilier haut de gamme et \u00e9quipement AV","capacity":16,"location":"B\u00e2timent Administration - Deuxi\u00e8me \u00c9tage","type":"meeting_room","is_active":true,"created_at":"2025-09-14T05:02:56.000000Z","updated_at":"2025-09-14T05:02:56.000000Z"},{"id":15,"name":"Salle Informatique A","description":"Laboratoire informatique avec 20 postes de travail et internet haut d\u00e9bit","capacity":20,"location":"B\u00e2timent Technologique - Rez-de-chauss\u00e9e","type":"laboratory","is_active":true,"created_at":"2025-09-14T05:02:56.000000Z","updated_at":"2025-09-14T05:02:56.000000Z"},{"id":16,"name":"Salle Informatique B","description":"Laboratoire informatique avec 25 postes de travail et logiciels sp\u00e9cialis\u00e9s","capacity":25,"location":"B\u00e2timent Technologique - Rez-de-chauss\u00e9e","type":"laboratory","is_active":true,"created_at":"2025-09-14T05:02:56.000000Z","updated_at":"2025-09-14T05:02:56.000000Z"},{"id":17,"name":"Salle Informatique C","description":"Laboratoire informatique avanc\u00e9 avec postes de travail Mac","capacity":15,"location":"B\u00e2timent Technologique - Premier \u00c9tage","type":"laboratory","is_active":true,"created_at":"2025-09-14T05:02:56.000000Z","updated_at":"2025-09-14T05:02:56.000000Z"},{"id":29,"name":"Studio de Danse","description":"Studio de danse avec miroirs et syst\u00e8me audio","capacity":20,"location":"Complexe Sportif","type":"gymnasium","is_active":true,"created_at":"2025-09-14T05:02:56.000000Z","updated_at":"2025-09-14T05:02:56.000000Z"}],"message":"Venues retrieved successfully"}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/admin/academics/venues
+    metadata:
+      groupName: General
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Store a newly created venue.'
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      name:
+        name: name
+        description: 'Must not be greater than 255 characters.'
+        required: true
+        example: b
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      description:
+        name: description
+        description: ''
+        required: false
+        example: 'Eius et animi quos velit et.'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        custom: []
+      capacity:
+        name: capacity
+        description: 'Must be at least 1.'
+        required: false
+        example: 16
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        custom: []
+      location:
+        name: location
+        description: 'Must not be greater than 255 characters.'
+        required: false
+        example: d
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        custom: []
+      type:
+        name: type
+        description: ''
+        required: true
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      is_active:
+        name: is_active
+        description: ''
+        required: false
+        example: true
+        type: boolean
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanBodyParameters:
+      name: b
+      description: 'Eius et animi quos velit et.'
+      capacity: 16
+      location: d
+      type: architecto
+      is_active: true
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/admin/academics/venues/{id}'
+    metadata:
+      groupName: General
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Display the specified venue.'
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the venue.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"success":true,"data":{"id":1,"name":"Salle 101","description":"Salle de classe standard avec tableau blanc et projecteur, climatis\u00e9e","capacity":30,"location":"B\u00e2timent Principal - Premier \u00c9tage","type":"classroom","is_active":true,"created_at":"2025-09-14T05:02:56.000000Z","updated_at":"2025-09-14T05:02:56.000000Z","timetables":[{"id":121,"class_id":3,"subject_id":8,"teacher_id":15,"date":"2025-09-08T00:00:00.000000Z","start_time":"2025-09-14T09:00:00.000000Z","end_time":"2025-09-14T10:30:00.000000Z","venue_id":1,"created_at":"2025-09-14T05:03:00.000000Z","updated_at":"2025-09-14T05:03:00.000000Z"},{"id":122,"class_id":3,"subject_id":8,"teacher_id":15,"date":"2025-09-08T00:00:00.000000Z","start_time":"2025-09-14T14:00:00.000000Z","end_time":"2025-09-14T15:30:00.000000Z","venue_id":1,"created_at":"2025-09-14T05:03:00.000000Z","updated_at":"2025-09-14T05:03:00.000000Z"},{"id":203,"class_id":5,"subject_id":12,"teacher_id":15,"date":"2025-09-09T00:00:00.000000Z","start_time":"2025-09-14T09:00:00.000000Z","end_time":"2025-09-14T10:30:00.000000Z","venue_id":1,"created_at":"2025-09-14T05:03:00.000000Z","updated_at":"2025-09-14T05:03:00.000000Z"},{"id":204,"class_id":5,"subject_id":12,"teacher_id":15,"date":"2025-09-09T00:00:00.000000Z","start_time":"2025-09-14T14:00:00.000000Z","end_time":"2025-09-14T15:30:00.000000Z","venue_id":1,"created_at":"2025-09-14T05:03:00.000000Z","updated_at":"2025-09-14T05:03:00.000000Z"},{"id":223,"class_id":6,"subject_id":10,"teacher_id":13,"date":"2025-09-09T00:00:00.000000Z","start_time":"2025-09-14T09:00:00.000000Z","end_time":"2025-09-14T10:30:00.000000Z","venue_id":1,"created_at":"2025-09-14T05:03:00.000000Z","updated_at":"2025-09-14T05:03:00.000000Z"},{"id":224,"class_id":6,"subject_id":10,"teacher_id":13,"date":"2025-09-09T00:00:00.000000Z","start_time":"2025-09-14T14:00:00.000000Z","end_time":"2025-09-14T15:30:00.000000Z","venue_id":1,"created_at":"2025-09-14T05:03:00.000000Z","updated_at":"2025-09-14T05:03:00.000000Z"},{"id":423,"class_id":2,"subject_id":4,"teacher_id":16,"date":"2025-09-09T00:00:00.000000Z","start_time":"2025-09-14T09:00:00.000000Z","end_time":"2025-09-14T10:30:00.000000Z","venue_id":1,"created_at":"2025-09-14T05:03:00.000000Z","updated_at":"2025-09-14T05:03:00.000000Z"},{"id":424,"class_id":2,"subject_id":4,"teacher_id":16,"date":"2025-09-09T00:00:00.000000Z","start_time":"2025-09-14T14:00:00.000000Z","end_time":"2025-09-14T15:30:00.000000Z","venue_id":1,"created_at":"2025-09-14T05:03:00.000000Z","updated_at":"2025-09-14T05:03:00.000000Z"},{"id":541,"class_id":5,"subject_id":12,"teacher_id":15,"date":"2025-09-08T00:00:00.000000Z","start_time":"2025-09-14T09:00:00.000000Z","end_time":"2025-09-14T10:30:00.000000Z","venue_id":1,"created_at":"2025-09-14T05:03:00.000000Z","updated_at":"2025-09-14T05:03:00.000000Z"},{"id":542,"class_id":5,"subject_id":12,"teacher_id":15,"date":"2025-09-08T00:00:00.000000Z","start_time":"2025-09-14T14:00:00.000000Z","end_time":"2025-09-14T15:30:00.000000Z","venue_id":1,"created_at":"2025-09-14T05:03:00.000000Z","updated_at":"2025-09-14T05:03:00.000000Z"},{"id":593,"class_id":6,"subject_id":13,"teacher_id":16,"date":"2025-09-09T00:00:00.000000Z","start_time":"2025-09-14T09:00:00.000000Z","end_time":"2025-09-14T10:30:00.000000Z","venue_id":1,"created_at":"2025-09-14T05:03:00.000000Z","updated_at":"2025-09-14T05:03:00.000000Z"},{"id":594,"class_id":6,"subject_id":13,"teacher_id":16,"date":"2025-09-09T00:00:00.000000Z","start_time":"2025-09-14T14:00:00.000000Z","end_time":"2025-09-14T15:30:00.000000Z","venue_id":1,"created_at":"2025-09-14T05:03:00.000000Z","updated_at":"2025-09-14T05:03:00.000000Z"},{"id":651,"class_id":8,"subject_id":15,"teacher_id":14,"date":"2025-09-08T00:00:00.000000Z","start_time":"2025-09-14T09:00:00.000000Z","end_time":"2025-09-14T10:30:00.000000Z","venue_id":1,"created_at":"2025-09-14T05:03:00.000000Z","updated_at":"2025-09-14T05:03:00.000000Z"},{"id":652,"class_id":8,"subject_id":15,"teacher_id":14,"date":"2025-09-08T00:00:00.000000Z","start_time":"2025-09-14T14:00:00.000000Z","end_time":"2025-09-14T15:30:00.000000Z","venue_id":1,"created_at":"2025-09-14T05:03:00.000000Z","updated_at":"2025-09-14T05:03:00.000000Z"}]},"message":"Venue retrieved successfully"}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - PUT
+    uri: 'api/admin/academics/venues/{id}'
+    metadata:
+      groupName: General
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Update the specified venue.'
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the venue.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      name:
+        name: name
+        description: ''
+        required: false
+        example: null
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      description:
+        name: description
+        description: ''
+        required: false
+        example: 'Eius et animi quos velit et.'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        custom: []
+      capacity:
+        name: capacity
+        description: 'Must be at least 1.'
+        required: false
+        example: 16
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        custom: []
+      location:
+        name: location
+        description: 'Must not be greater than 255 characters.'
+        required: false
+        example: d
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        custom: []
+      type:
+        name: type
+        description: ''
+        required: true
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      is_active:
+        name: is_active
+        description: ''
+        required: false
+        example: false
+        type: boolean
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanBodyParameters:
+      description: 'Eius et animi quos velit et.'
+      capacity: 16
+      location: d
+      type: architecto
+      is_active: false
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - DELETE
+    uri: 'api/admin/academics/venues/{id}'
+    metadata:
+      groupName: General
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Remove the specified venue.'
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the venue.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/admin/academics/venues/available/check
+    metadata:
+      groupName: General
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Get available venues for a specific time slot.'
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      date:
+        name: date
+        description: 'Must be a valid date.'
+        required: true
+        example: '2025-09-14T05:03:06'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      start_time:
+        name: start_time
+        description: 'Must be a valid date in the format <code>H:i</code>.'
+        required: true
+        example: '05:03'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      end_time:
+        name: end_time
+        description: 'Must be a valid date in the format <code>H:i</code>. Must be a date after <code>start_time</code>.'
+        required: true
+        example: '2051-10-08'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      type:
+        name: type
+        description: ''
+        required: false
+        example: meeting_room
+        type: string
+        enumValues:
+          - classroom
+          - laboratory
+          - auditorium
+          - meeting_room
+          - gymnasium
+          - library
+          - other
+        exampleWasSpecified: false
+        nullable: true
+        custom: []
+    cleanBodyParameters:
+      date: '2025-09-14T05:03:06'
+      start_time: '05:03'
+      end_time: '2051-10-08'
+      type: meeting_room
+    fileParameters: []
+    responses:
+      -
+        status: 422
+        content: '{"message":"The end time field must match the format H:i.","errors":{"end_time":["The end time field must match the format H:i."]}}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - PATCH
+    uri: 'api/admin/academics/venues/{venue_id}/toggle-status'
+    metadata:
+      groupName: General
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Toggle venue active status.'
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      venue_id:
+        name: venue_id
+        description: 'The ID of the venue.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      venue_id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/admin/academics/venues/statistics/overview
+    metadata:
+      groupName: General
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Get venue statistics.'
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"success":true,"data":{"total_venues":42,"active_venues":40,"inactive_venues":2,"by_type":{"classroom":8,"laboratory":13,"auditorium":3,"meeting_room":5,"gymnasium":4,"library":4,"other":5},"total_capacity":"1201"},"message":"Venue statistics retrieved successfully"}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json

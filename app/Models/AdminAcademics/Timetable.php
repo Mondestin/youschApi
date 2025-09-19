@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use App\Models\AdminAcademics\ClassRoom;
 use App\Models\AdminAcademics\Subject;
+use App\Models\AdminAcademics\Venue;
 
 class Timetable extends Model
 {
@@ -25,7 +26,7 @@ class Timetable extends Model
         'date',
         'start_time',
         'end_time',
-        'room',
+        'venue_id',
     ];
 
     /**
@@ -61,5 +62,13 @@ class Timetable extends Model
     public function teacher(): BelongsTo
     {
         return $this->belongsTo(User::class, 'teacher_id');
+    }
+
+    /**
+     * Get the venue for this timetable entry.
+     */
+    public function venue(): BelongsTo
+    {
+        return $this->belongsTo(Venue::class);
     }
 } 
