@@ -41,6 +41,9 @@ class DatabaseSeeder extends Seeder
         // Seed labs and prerequisites data
         $this->call(LabSeeder::class);
         $this->call(PrerequisiteSeeder::class);
+        
+        // Seed realistic timetables (needs all other data first)
+        $this->call(TimetableSeeder::class);
 
         $this->command->info('✅ Seeder Principal de la Base de Données terminé avec succès !');
         $this->command->info('🎉 Toutes les données de test ont été créées avec succès !');
