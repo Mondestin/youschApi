@@ -156,6 +156,9 @@ class RepositoryServiceProvider extends ServiceProvider
         $this->app->bind(\App\Repositories\ExamsGradings\StudentGPARepositoryInterface::class, \App\Repositories\ExamsGradings\StudentGPARepository::class);
         $this->app->bind(\App\Repositories\ExamsGradings\ReportCardRepositoryInterface::class, \App\Repositories\ExamsGradings\ReportCardRepository::class);
 
+        // Bind Role Repository Interface
+        $this->app->bind(\App\Repositories\RoleRepositoryInterface::class, \App\Repositories\RoleRepository::class);
+
         // Bind Lab Repository
         $this->app->bind(LabRepository::class, function ($app) {
             return new LabRepository(new Lab());

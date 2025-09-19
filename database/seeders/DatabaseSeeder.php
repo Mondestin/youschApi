@@ -19,12 +19,18 @@ class DatabaseSeeder extends Seeder
         // $this->clearExistingData();
          
         User::factory(10)->create();
-        // Seed exam types first
+        // Seed roles first
+        $this->call(RoleSeeder::class);
+        
+        // Seed exam types
         $this->call(ExamTypeSeeder::class);
         $this->call(VenueSeeder::class);
         
         // Seed academic management data
         $this->call(AcademicManagementSeeder::class);
+        
+        // Assign roles to users (needs users and roles first)
+        $this->call(UserRoleSeeder::class);
         
         // Seed students management data
         $this->call(StudentsManagementSeeder::class);

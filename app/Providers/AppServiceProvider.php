@@ -19,6 +19,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        //
+        // Register role management routes
+        \App\Services\RoleRouteService::registerRoutes();
     }
 }
