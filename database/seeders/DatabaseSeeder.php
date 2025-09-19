@@ -19,12 +19,18 @@ class DatabaseSeeder extends Seeder
         // $this->clearExistingData();
          
         User::factory(10)->create();
-        // Seed exam types first
+        // Seed roles first
+        $this->call(RoleSeeder::class);
+        
+        // Seed exam types
         $this->call(ExamTypeSeeder::class);
         $this->call(VenueSeeder::class);
         
         // Seed academic management data
         $this->call(AcademicManagementSeeder::class);
+        
+        // Assign roles to users (needs users and roles first)
+        $this->call(UserRoleSeeder::class);
         
         // Seed students management data
         $this->call(StudentsManagementSeeder::class);
@@ -41,6 +47,9 @@ class DatabaseSeeder extends Seeder
         // Seed labs and prerequisites data
         $this->call(LabSeeder::class);
         $this->call(PrerequisiteSeeder::class);
+        
+        // Seed realistic timetables (needs all other data first)
+        $this->call(TimetableSeeder::class);
 
         $this->command->info('✅ Seeder Principal de la Base de Données terminé avec succès !');
         $this->command->info('🎉 Toutes les données de test ont été créées avec succès !');
